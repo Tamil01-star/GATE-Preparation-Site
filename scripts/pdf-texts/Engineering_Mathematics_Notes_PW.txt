@@ -1,0 +1,9834 @@
+=== FILE: Engineering_Mathematics_Notes_PW.pdf ===
+=== PAGES: 66 ===
+
+
+
+EngineeringEngineering
+MathematicsMathematics
+Engineering
+Mathematics
+
+Published By: 
+ 
+  Physics Wallah 
+ISBN: 978-93-94342-39-2 
+Mobile App: Physics Wallah (Available on Play Store) 
+  
+Website: www.pw.live 
+Email: support@pw.live 
+ 
+Rights 
+All  rights  will be  reserved  by  Publisher.  No  part  of  this  book  may  be  used  or  reproduced  in  any  manner 
+whatsoever without the written permission from author or publisher. 
+In the interest of student's community: 
+Circulation of soft copy of Book(s) in PDF or other equivalent format(s) through any social media channels, 
+emails,  etc.  or  any  other  channels  through  mobiles,  laptops  or  desktop  is  a  criminal  offence.  Anybody 
+circulating, downloading, storing, soft copy of the book on his device(s) is in breach of Copyright Act. Further 
+Photocopying of this book or any of its material is also illegal. Do not download or forward in case you come 
+across any such soft copy material. 
+ 
+Disclaimer 
+A team of PW experts and faculties with an understanding of the subject has worked hard for the books. 
+While  the  author  and  publisher  have  used  their  best  efforts  in  preparing  these  books.  The  content  has  been 
+checked for accuracy. As the book is intended for educational purposes, the author shall not be responsible for 
+any errors contained in the book. 
+The publication is designed to provide accurate and authoritative information with regard to the subject matter 
+covered. 
+This book and the individual contribution contained in it are protected under copyright by the publisher. 
+(This Module shall only be Used for Educational Purpose.) 
+
+ 
+ 
+ 
+Design Against Static Load 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Basic Calculus .......................................................................................................................    1.1 –  1.16 
+2. Ordinary Differential Equation .............................................................................................   1.17  –  1.25 
+3. Vector Calculus .....................................................................................................................   1.26 –  1.34 
+4. Linear Algebra ......................................................................................................................   1.35 –  1.46 
+5. Probability and Statistics ......................................................................................................   1.47 –  1.58 
+6. Complex Calculus .................................................................................................................   1.59  –  1.63 
+ENGINEERING 
+MATHEMATICS 
+GATE-O-PEDIA ELECTRONICS & COMMUNICATION ENGINEERING 
+INDEX 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+1.1 
+1 
+BASIC CALCULUS 
+1.1.  Introduction 
+1.1.1 Limits, Continuity and Differentiability 
+(a)  As x tends to a (x → a)    x is moving towards a  
+ A value l is said to be limit of a function f(x) at x → a if f(x) → l as x → a.  
+ It is mathematically defined as  
+      푙푖푚
+푥→푎
+푓
+(
+푥
+)
+=푙=푙푖푚
+푥→푎
+−
+푓
+(
+푥
+)
+=푙푖푚
+푥→푎
++
+푓
+(
+푥
+)
+  
+ That is, Limit exist at any point, if LHL = RHL   
+ A function f(x) is said to be continuous at x = a, if 
+  푙푖푚
+푥→푎
+푓
+(
+푥
+)
+=푙=푓
+(
+푎
+)
+=푓
+(
+푥
+)|
+푥=푎
+ 
+        That is, for a function to be continuous at any point, RHL = LHL = Value of function at point x = a. 
+Note: • For 푙푖푚
+푥→푎
+ 푓(푥) to exist, the function need not be continuous at x = a. 
+  • But for f(x) to be continuous at x = a, 푙푖푚
+푥→푎
+푓(푥) should exist. 
+ 
+• Continuity from Left :
+()()
+lim
+xa
+f   xf   a
+−
+→
+=
+ 
+• Continuity from Right : If 
+lim(  )(  )
+xa
+f  xf  a
++
+→
+=
+ 
+Continuity in an Open Interval 
+ A function ‘f ’ is said to be continuous in open interval (a, b), if it is continuous at each point of open interval. 
+Continuity in a Closed Interval 
+ Let ‘f ’ be a function defined on the closed interval (a, b) then ‘f ’ is said to be continuous on the closed interval [a, b], if 
+it is : 
+ 1. Continuous from the right at a and 
+ 2. Continuous from the left at b and  
+ 3. Continuous on the open interval (a, b). 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.2 
+Engineering Mathematics 
+ 
+Fig. 1.1 
+(b)  Concept of differentiability  
+ A continuous function f(x) is said to be differentiable at x = a, if  푙푖푚
+푥→푎
+푓(푥)−푓(푎)
+푥−푎
+ exists, that is, RHL and LHL exist at a point 
+under consideration in 푓′(푥). 
+ 푓′(푥)
+|
+푥=푎
+=푓′(푎)=푙푖푚
+푥→푎
+푓(푥)−푓(푎)
+푥−푎
+     
+ 푓′(푎)=푡푎푛휃, where 휃 is the angle made by the tangent to the curve at x=a with x – axis. 
+(c)  Some Standard Derivatives   
+ (i)  
+푑
+푑푥
+(
+푥
+푛
+)
+=푛.푥
+푛−1
+  
+ (ii)  
+푑
+푑푥
+(
+푠푖푛푥
+)
+=푐표푠푥 
+ (iii)  
+푑
+푑푥
+(푐표푠푥)=−푠푖푛푥 
+ (iv)  
+푑
+푑푥
+(푡푎푛푥)=푠푒푐
+2
+푥 
+ (v)  
+푑
+푑푥
+(푐표푡푥)=−푐표푠푒푐
+2
+푥 
+(vi)  
+푑
+푑푥
+(푠푒푐푥)=푠푒푐푥.푡푎푛푥 
+ (vii)  
+푑
+푑푥
+(
+푐표푠푒푐 푥
+)
+= –푐표푠푒푐 푥푐표푡푥 
+ (viii) 
+푑
+푑푥
+(푠푖푛
+−1
+푥)=
+1
+√
+1−푥
+2
+;−1<푥<1 
+ (ix)  
+푑
+푑푥
+(
+푐표푠
+−1
+푥
+)
+=
+−1
+√
+1−푥
+2
+,−1<푥<1 
+ (x)  
+푑
+푑푥
+(푡푎푛
+−1
+푥)=
+1
+1+푥
+2
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.3 
+Engineering Mathematics 
+ (xi)  
+푑
+푑푥
+(푐표푡
+−1
+푥)=
+−1
+1+푥
+2
+ 
+ (xii)  
+푑
+푑푥
+(
+푠푒푐
+−1
+푥
+)
+=
+1
+|푥|
+√
+푥
+2
+−1
+ 
+ (xiii) 
+푑
+푑푥
+(푐표푠푒푐
+−1
+ 푥)=
+−1
+|푥|
+√
+푥
+2
+−1
+ ; |x| > 1  
+ (xiv) 
+푑
+푑푥
+(푙표푔
+푎
+푥)=
+1
+푥푙표푔
+푒
+푎
+ 
+ (xv)  
+푑
+푑푥
+(푙표푔
+푒
+푥)=
+1
+푥
+ 
+ (xvi) 
+푑
+푑푥
+(푎
+푥
+)=푎
+푥
+.푙표푔
+푒
+푎 
+ (xvii) 
+푑
+푑푥
+(
+푒
+푥
+)
+=푒
+푥
+ 
+ (xviii)  
+푑
+푑푥
+(
+|푥|
+)
+=
+|푥|
+푥
+,
+(
+푥≠0
+)
+ 
+ (xix) 
+푑
+푑푥
+(
+푥
+푥
+)
+=푥
+푥
+(
+1+푙표푔
+푒
+푥
+)
+ 
+ (xx)  
+푑
+푑푥
+(
+푠푖푛ℎ푥
+)
+=푐표푠ℎ푥 
+(d)  Product rule of differentiation  
+ (i) 
+푑
+푑푥
+(푓
+(
+푥
+)
+.푔
+(
+푥
+)
+)=푓
+(
+푥
+)
+.푔′
+(
+푥
+)
++푓′
+(
+푥
+)
+.푔
+(
+푥
+)
+  
+ (ii) 푑
+(
+푢푣푤
+)
+=푢푣푤′+푢푣′푤+푢′푣푤  
+(e) Quotient rule of differentiation 
+ 
+푑
+푑푥
+(
+푓
+(
+푥
+)
+푔
+(
+푥
+)
+)
+=
+푔
+(
+푥
+)
+.푓′
+(
+푥
+)
+−푓
+(
+푥
+)
+.푔′
+(
+푥
+)
+(푔
+(
+푥
+)
+)
+2
+,
+(
+푔
+(
+푥
+)
+≠0
+)
+ 
+(f) Logarithmic differentiation: 
+ Taking  log  might  help  in  differentiation  of  a  function.  For  example  if 
+u
+yv=
+ then  we  can  take  log  both  side  and 
+differentiable to get 
+dy
+dx
+ 
+(g) Differentiation in parametric from : 
+ If we write x and y in term of find variable ‘t’ that is x = f(t), y = (t), then 
+/
+/
+dydy   dt
+dxdx   dt
+=
+ 
+(h)  Greatest Integer function / step function / integer part function  
+ 푓
+(
+푥
+)
+=
+[
+푥
+]
+=푛,∀ 푛≤푥<푛+1where, 푛∈푍                                       
+ 푙푖푚
+푥→푎
+[푥]=∄  if a is an integer ( ∄ = do not exist) 
+ L.H.L. = 푙푖푚
+푥→푎
+−
+[푥]=푎−1 
+ R.H.L. = 푙푖푚
+푥→푎
++
+[푥]=푎 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.4 
+Engineering Mathematics 
+ 
+Fig.1.2. Greatest Integer 
+(i)  Properties of Limits 
+ (i) 푙푖푚
+푥→푎
+(푓
+(
+푥
+)
+±푔
+(
+푥
+)
+)=푙푖푚
+푥→푎
+푓(푥)±푙푖푚
+푥→푎
+푔
+(
+푥
+)
+ 
+ (ii) 푙푖푚
+푥→푎
+(푓
+(
+푥
+)
+.푔
+(
+푥
+)
+)=푙푖푚
+푥→푎
+푓
+(
+푥
+)
+.푙푖푚
+푥→푎
+푔
+(
+푥
+)
+ 
+ (iii) 푙푖푚
+푥→푎
+푓
+(
+푥
+)
+푔
+(
+푥
+)
+=
+푙푖푚
+푥→푎
+푓
+(
+푥
+)
+푙푖푚
+푥→푎
+푔
+(
+푥
+)
+,
+(
+푙푖푚
+푥→푎
+푔
+(
+푥
+)
+≠0
+)
+ 
+ (iv) If 푙푖푚
+푥→푎
+푓
+(
+푥
+)
+ exists and 푙푖푚
+푥→푎
+푔
+(
+푥
+)
+=∄, then 푙푖푚
+푥→푎
+푓
+(
+푥
+)
+.푔
+(
+푥
+)
+ may exist  
+Example: Let 푓
+(
+푥
+)
+=푠푖푛푥, 푔
+(
+푥
+)
+=
+1
+푥
+, 푙푖푚
+푥→0
+푓
+(
+푥
+)
+=0,  푙푖푚
+푥→0
+1
+푥
+=∄  
+   But  푙푖푚
+푥→0
+푠푖푛푥.
+1
+푥
+=1  
+ (v) Indeterminate form III (0
+0
+, 1
+
+, 
+0
+) 
+  If 
+
+()
+lim(  )
+x
+xa
+yf  x
+
+→
+=
+ 
+  Then, 
+
+loglim   (  ) log(  )
+xa
+yxf  x
+→
+=
+ 
+  Thus 0
+0
+, 1
+
+, 
+0
+ will convert into ×0 from which can be solved easily. 
+ (vi) If  푙푖푚
+푥→푎
+푓
+(
+푥
+)
+푔
+(
+푥
+)
+=
+0
+0
+(
+or
+)
+∞
+∞
+, then 푙푖푚
+푥→푎
+푓
+(
+푥
+)
+푔
+(
+푥
+)
+=푙푖푚
+푥→푎
+푓′
+(
+푥
+)
+푔′
+(
+푥
+)
+≠
+(
+0
+0
+)
+ 
+  If 푙푖푚
+푥→푎
+푓′
+(
+푥
+)
+푔′(푥)
+=
+0
+0
+(or)
+∞
+∞
+, then 푙푖푚
+푥→푎
+푓′
+(
+푥
+)
+푔′
+(
+푥
+)
+=푙푖푚
+푥→푎
+푓′′
+(
+푥
+)
+푔′′
+(
+푥
+)
+and so on  
+ (vii)  If 푙푖푚
+푥→푎
+(푓
+(
+푥
+)
+.푔
+(
+푥
+)
+)=0×∞⇒푙푖푚
+푥→푎
+푓
+(
+푥
+)
+(
+1
+푔
+(
+푥
+)
+)
+=
+0
+0
+ (Apply L- Hospital Rule again) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.5 
+Engineering Mathematics 
+(j)  Some Standard Limits 
+ (i)  푙푖푚
+푥→0
+푠푖푛푥
+푥
+=1 
+ (ii)  푙푖푚
+푥→0
+푡푎푛푥
+푥
+=1 
+ (iii)  푙푖푚
+푥→0
+1−푐표푠푎푥
+푥
+2
+=
+푎
+2
+2
+ 
+ (iv)  푙푖푚
+푥→∞
+푠푖푛푥
+푥
+=0 
+ (v)  푙푖푚
+푥→∞
+푐표푠푥
+푥
+=0 
+ (vi)  푙푖푚
+푥→0
+(
+1+푎푥
+)
+푏/푥
+=푒
+푎푏
+ 
+ (vii)  푙푖푚
+푥→∞
+(
+1+
+푎
+푥
+)
+푏푥
+=푒
+푎푏
+ 
+ (viii) 푙푖푚
+푥→0
+(
+푎
+푥
++푏
+푥
+2
+)
+1/푥
+=
+√
+푎푏 
+ (ix)  푙푖푚
+푥→0
+(
+1
+푥
++2
+푥
++3
+푥
++....+푛
+푥
+푛
+)
+1/푥
+=
+√
+푛!
+푛
+ 
+ (x)  푙푖푚
+푥→0
+푎
+푥
+−1
+푥
+=푙표푔
+푒
+푎;푙푖푚
+푥→0
+푒
+푥
+−1
+푥
+=1 
+ (xi)  푙푖푚
+푥→0
+푥.푠푖푛
+(
+1
+푥
+)
+=0 
+1.2  Mean Value Theorems 
+1.2.1 Lagrange’s Mean Value Theorem (LMVT):  
+ If 푓
+(
+푥
+)
+ is continuous in [a, b] and it is differentiable in (a, b) then ∃ at least one point ‘c’ such that c   (a, b) and  
+푓′
+(
+푐
+)
+=
+푓(푏)−푓(푎)
+푏−푎
+ 
+ Here 푓′
+(
+푐
+)
+  slope of tangent to f(x) at x = c. 
+ Tangent at x = c is parallel to the line connecting the points A and B  
+ 
+Fig.1.3. LMVT 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.6 
+Engineering Mathematics 
+ 1.2.2  Rolle’s Mean Value Theorem 
+If 푓(푥) is continuous in [a, b] and differentiable in (a, b) and f(a) = f(b) then  at least one-point c  (a, b) such that 푓′(푐)=0.                    
+ 
+Fig. 1.4. Rolle’s mean value 
+1.2.3  Cauchy’s Mean Value Theorem 
+If f(x)  and g(x)  are  continuous  in  [a, b]  and  differentiable  in  (a, b)  then  at  least one value of ‘c’ such that c  (a, b)  and 
+  
+푔′
+(
+퐶
+)
+푓′
+(
+퐶
+)
+=
+푔
+(
+푏
+)
+−푔
+(
+푎
+)
+푓
+(
+푏
+)
+−푓
+(
+푎
+)
+ 
+1.3  Increasing and Decreasing Functions 
+1.3.1 Increasing Functions  
+A function f(x) is said to be increasing, if 푓
+(
+푥
+1
+)
+<푓
+(
+푥
+2
+)
+ ∀ 푥
+1
+<푥
+2
+ 
+   Or 
+A function f(x) is said to be increasing, if f(x) increases as x increases.  
+ For a function 푓(푥) to be increasing at the point x=a, 푓
+′
+(
+푎
+)
+>0. 
+Example:  
+ e
+x
+, log 
+e
+x   →  Monotonically increasing functions 
+ sin x in (0, /2) → non-monotonic functions 
+1.3.2 Decreasing Functions 
+ A function f(x) is said to be a decreasing function, if 푓
+(
+푥
+1
+)
+>푓
+(
+푥
+2
+)
+∀푥
+1
+<푥
+2
+ 
+ A function 푓
+(
+푥
+)
+ is said to be decreasing function, if 푓
+(
+푥
+)
+ decreases as x increases.  
+ Example: 푒
+−푥
+ →Monotonically decreasing function, sin푥 in 
+(
+휋
+2
+,휋
+)
+  
+1.4.  Concept of Maxima and Minima 
+Let f(x) be a differentiable function, then to find the maximum (or) minimum of f(x). 
+(1)  Find f (x) and equate to zero. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.7 
+Engineering Mathematics 
+(2) Solve the resulting equation for x. Let its roots be a
+1
+, a
+2
+, . . . then f(x) is stationary at x = a
+1
+, a
+2
+, . . . . . . Thus x = a
+1
+, a
+2
+, . . . 
+. . . are the only points at which f(x) can be maximum or a minimum. 
+(3) Find f (x) and substitute in it by terms x = a
+1
+, a
+2
+, . . . . . . wherever f (x) is negative, we have a maximum and wherever 
+f (x) is positive, we have a minimum. 
+(4) If f (a
+1
+) = 0, find f (x) put x = a
+1
+ in it. If f (a
+1
+)  0, there is neither a maximum nor a minimum at x = a
+1
+. If f (a
+1
+) = 0, 
+find f 
+iv
+(x) and put x = a
+1
+ in it. If f 
+iv
+(a
+1
+) is negative, we have maximum at x = a
+1
+, if it is positive there is a minimum at 
+x = a
+1
+. If f 
+iv
+(a
+1
+) is zero, we must find f 
+v
+(x), and so on. Repeat the above process for each root of the equation f (x) = 0. 
+Example:  x = 0 is a critical point of f(x) = x
+3
+ 
+ 
+Fig. 1.5. Graph of 풙
+ퟑ
+ 
+푓
+(
+푥
+)
+=푥
+3
+ 
+   푓′
+(
+푥
+)
+=3푥
+2
+=0       x = 0 
+  푓′′
+(
+푥
+)
+=6푥⇒ 푓′′
+(
+0
+)
+=6
+(
+0
+)
+=0 
+• Global maxima and minima : 
+ We first find local maxima and minima and then calculate the value of ‘f’ at boundary points of interval given e.g. (a, b) 
+we find f(a) and f(b) and compare it with the values of local maxima and minima. The absolute maxima and minima can 
+be decided then. 
+1.5. Taylor Series  
+ If f(x) is continuously differentiable 
+(
+푓′
+(
+푥
+)
+,푓"
+(
+푥
+)
+,푓′′′(푥),..... exists
+)
+ then the Taylor series expansion of f(x) about the 
+point x = a is given by 
+ 푓
+(
+푥
+)
+=푓
+(
+푎
+)
++
+푓′
+(
+푎
+)
+1!
+(
+푥−푎
+)
++
+푓′′
+(
+푎
+)
+2!
+(
+푥−푎
+)
+2
++
+푓′′′
+(
+푎
+)
+3!
+(
+푥−푎
+)
+3
+.+...∞ 
+ If a = 0, then 푓
+(
+푥
+)
+=푓
+(
+0
+)
++
+푓′
+(
+0
+)
+1!
+푥+
+푓′′
+(
+0
+)
+2!
+푥
+2
++
+푓′′′
+(
+0
+)
+3!
+푥
+3
++.....∞ (Remember that Mc-Lauren Series is same as Taylor 
+Series if a = 0) 
+ The coefficient of (x – a)
+n
+ in the Taylor series expansion of f(x) is 
+푓
+푛
+(
+푎
+)
+푛!
+. 
+ The general expansion of Taylor series is given by 푓
+(
+푥+ℎ
+)
+=푓
+(
+푥
+)
++ℎ.
+푓′
+(
+푥
+)
+1!
++ℎ
+2
+.
+푓′′
+(
+푥
+)
+2!
++ℎ
+3
+.
+푓′′′
+(
+푥
+)
+3!
++......∞   
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.8 
+Engineering Mathematics 
+• Finding the expansion of e
+x
+ about x = 0  
+ 푓
+(
+푥
+)
+=푒
+푥
+⇒푓
+(
+0
+)
+=푒
+0
+=1  
+ 푓′
+(
+푥
+)
+=푒
+푥
+⇒푓′
+(
+0
+)
+=푒
+0
+=1;푓"
+(
+0
+)
+=푓′′′
+(
+0
+)
+=푓′′′′
+(
+0
+)
+=.....=1  
+ 푓
+(
+푥
+)
+=푒
+푥
+=1+
+(
+푥−0
+)
+1
+1!
++
+(
+푥−0
+)
+2
+.
+1
+2!
++
+(
+푥−0
+)
+3
+.
+1
+3!
++......   
+  푒
+푥
+=1+
+푥
+1!
++
+푥
+2
+2!
++
+푥
+3
+3!
++.....  
+1.6  Integral Calculus  
+ If F(x)  is  anti-derivative  of f(x).  That  is, continuous  and  differentiable  in  (a, b),  then  we  write 
+∫
+푓
+(
+푥
+)
+푥=푏
+푥=푎
+푑푥=퐹
+(
+푏
+)
+−
+퐹
+(
+푎
+)
+. Here f(x) is integrand 
+ If 푓
+(
+푥
+)
+>0 ∀푎≤푥≤푏,푡ℎ푒푛 
+∫
+푓
+(
+푥
+)
+ 푑푥
+푏
+푎
+ represents the shaded area in the given figure. 
+y = fx()
+x=ax=b
+ 
+Fig.1. 6. Integration of continuous function 
+1.6.1 Mean Value Theorem of Integration  
+ If f(x) is continuous in [a, b] and differentiable in (a, b) then ‘’ atleast one-point c (a, b) such that   
+ 푓
+(
+푐
+)
+=
+∫
+푓
+(
+푥
+)
+푏
+푎
+푑푥
+(
+푏−푎
+)
+  
+ 
+Fig. 1.7. Mean value of integration 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.9 
+Engineering Mathematics 
+1.7.  Newton-Leibnitz Rule  
+If f(x) is continuously differentiable and (x), (x) are two functions for which the 1
+st
+ derivative exists, then  
+푑
+푑푥
+(
+∫
+푓
+(
+푥
+)
+푑푥
+휓
+(
+푥
+)
+휙
+(
+푥
+)
+)=푓(휓
+(
+푥
+)
+).휓′
+(
+푥
+)
+−푓(휙
+(
+푥
+)
+).휙′
+(
+푥
+)
+ 
+Example:  
+푑
+푑푥
+(
+∫
+푠푖푛푥
+푥
+2
+푥
+푑푥
+)
+=푠푖푛
+(
+푥
+2
+)
+.2푥−푠푖푛푥.1=2푥푠푖푛
+(
+푥
+2
+)
+−푠푖푛푥  
+1.8.  Some Standard Integrals  
+1. 
+∫
+푥
+푛
+푑푥=
+푥
+푛+1
+푛+1
++퐶,
+(
+푛≠−1
+)
+ 
+2. 
+∫
+1
+푥
+푑푥=푙표푔
+푒
+|푥|+퐶 
+3. 
+∫
+푠푖푛푥푑푥=−푐표푠푥+퐶 
+4. 
+∫
+푐표푠푥푑푥=푠푖푛푥+퐶 
+5. 
+∫
+푓′
+(
+푥
+)
+푓
+(
+푥
+)
+푑푥=푙표푔
+푒
+|
+푓
+(
+푥
+)|
++퐶 
+6. 
+∫
+푡푎푛푥푑푥=−
+∫
+−
+푠푖푛푥
+푐표푠푥
+푑푥=−푙표푔
+푒
+|
+푐표푠푥
+|
++퐶 
+  
+∫
+푡푎푛푥푑푥=푙표푔
+푒
+|푠푒푐푥|+퐶 
+7. 
+∫
+푐표푡푥푑푥=
+∫
+푐표푠푥
+푠푖푛푥
+푑푥=푙표푔
+푒
+|
+푠푖푛푥
+|
++퐶=−푙표푔
+푒
+|
+푐표푠푒푐 푥
+|
++퐶 
+8. 
+∫
+푠푒푐푥푑푥=
+∫
+푠푒푐푥
+(
+푠푒푐푥+푡푎푛푥
+)
+(
+푠푒푐푥+푡푎푛푥
+)
+푑푥 = 푙표푔
+푒
+|
+푠푒푐푥+푡푎푛푥
+|
++퐶 
+9. 
+∫
+푐표푠푒푐 푥푑푥=푙표푔
+푒
+|
+푐표푠푒푐 푥−푐표푡푥
+|
++퐶 
+10. 
+∫
+푎
+푥
+푑푥=
+푎
+푥
+푙표푔
+푒
+푎
++퐶 
+11. 
+∫
+1
+푥.푙표푔
+푒
+푎
+푑푥=푙표푔
+푎
+푥+퐶 
+12. 
+∫
+푥
+푥
+(
+1+푙표푔
+푒
+푥
+)
+푑푥=푥
+푥
++퐶 
+13. 
+∫
+푓
+(
+푥
+)
+.푓′
+(
+푥
+)
+푑푥=
+1
+2
+(푓
+(
+푥
+)
+)
+2
++퐶 
+14. 
+∫
+푓′
+(
+푥
+)
+√푓
+(
+푥
+)
+푑푥=2.
+√
+푓
+(
+푥
+)
++퐶 
+15. If f(x), g(x) are two functions. that are differentiable, then  
+ 
+∫
+푓
+(
+푥
+)
+ 푔
+(
+푥
+)
+푑푥=푓
+(
+푥
+)
+.
+∫
+푔
+(
+푥
+)
+푑푥−
+∫
+[푓′
+(
+푥
+)
+푔
+(
+푥
+)
+]푑푥+퐶 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.10 
+Engineering Mathematics 
+ Before integrating the product, the functions f(x) and g(x) are to be arranged according to the ILATE Principle.  
+ Here, ILATE stands for INVERSE LOGARITHMIC ALGEBRAIC TRIGONOMETRIC EXPONENTIAL.   
+1.9 Properties of Definite Integrals  
+1. If f(x) is differentiable in interval (a, b), then  
+∫
+푓
+(
+푥
+)
+푏
+푎
+푑푥=−
+∫
+푓
+(
+푥
+)
+푎
+푏
+푑푥   
+2. If  a point c  (a, b) such that f(x) is not differentiable, then  
+ 
+∫
+푓
+(
+푥
+)
+푏
+푎
+푑푥=
+∫
+푓
+(
+푥
+)
+푐
+푎
+푑푥+
+∫
+푓
+(
+푥
+)
+푏
+푐
+푑푥  
+3. If f(x) is continuously differentiable function,  
+ 
+∫
+푓
+(
+푥
+)
+푎
+−푎
+푑푥=2×
+∫
+푓
+(
+푥
+)
+푎
+0
+푑푥;if 푓
+(
+−푥
+)
+=푓
+(
+푥
+)
+, (“f(x) is even function”) 
+               = 0; if 푓
+(
+−푥
+)
+=−푓
+(
+푥
+)
+,
+(
+"푓
+(
+푥
+)
+ is odd function"
+)
+   
+4. 
+∫
+푓
+(
+푥
+)
+2푎
+0
+푑푥=2×
+∫
+푓
+(
+푥
+)
+푎
+0
+푑푥, if 푓
+(
+2푎−푥
+)
+=푓
+(
+푥
+)
+ 
+5. 
+∫
+푓
+(
+푥
+)
+푏
+푎
+푑푥=
+∫
+푓
+(
+푎+푏−푥
+)
+푏
+푎
+푑푥       
+6. 
+∫
+푓
+(
+푥
+)
+푓
+(
+푥
+)
++푓
+(
+푎+푏−푥
+)
+푏
+푎
+=
+(
+푏−푎
+2
+)
+ 
+Example: 
+ (i) 
+∫
+푠푖푛푥
+푠푖푛푥+푐표푠푥
+=
+휋
+4
+휋/2
+0
+ 
+ (ii) 
+∫
+1
+1+
+√
+푡푎푛푥
+푑푥=
+∫
+1
+1+(
+√
+푠푖푛푥
+√
+푐표푠푥
+)
+푑푥=
+∫
+√
+푐표푠푥
+√
+푐표푠푥+
+√
+푠푖푛푥
+푑푥=
+휋
+4
+휋/2
+0
+휋/2
+0
+휋/2
+0
+ 
+ (iii) 
+∫
+√
+푥
+√
+푥+
+√
+5−푥
+3
+2
+=
+(
+3−2
+2
+)
+=
+1
+2
+ 
+ (iv) 
+∫
+√
+푡푎푛푥
+√
+푡푎푛푥+
+√
+푐표푡푥
+휋/2
+0
+푑푥=
+휋
+4
+ 
+7. 
+∫
+푠푖푛
+푚
+푥
+휋/2
+0
+푑푥=
+∫
+푐표푠
+푚
+푥 푑푥
+휋/2
+0
+=
+(
+푚−1
+)
+×
+(
+푚−3
+)
+×
+(
+푚−5
+)
+푚×
+(
+푚−2
+)
+×
+(
+푚−4
+)
+×...
+(
+1
+2
+)
+(
+or
+)
+2
+3
+×퐾 
+ Where K = /2 if m is even  
+    = 1 if m is odd.  
+8. 
+∫
+푑푥
+푎
+2
+푐표푠
+2
+푥+푏
+2
+푠푖푛
+2
+푥
+휋
+0
+=
+휋
+푎푏
+ 
+9. 
+∫
+푑푥
+푎
+2
+푐표푠
+2
+푥+푏
+2
+푠푖푛
+2
+푥
+휋/2
+0
+=
+휋
+2푎푏
+ 
+1.10 Length of a Curve  
+ (a) The length of the arc of the curve y = f(x) between the points where x = a and x = b is 
+2
+1
+b
+a
+dy
+sdx
+dx
+
+
+=+
+
+
+
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.11 
+Engineering Mathematics 
+ 
+ 
+Fig.1.8. Length of the curve  
+ 
+  (b) The length of the arc of the curve 
+()xf   y=
+ between the points where y = a and y = b, is 
+2
+1
+b
+a
+dx
+sdy
+dy
+
+
+
+=+
+
+
+
+
+
+ 
+  (c) The  length  of  the  arc  of  the  curve 
+( ),( )xf  t   yf  t==
+ between  the  points  where  t  =  a  and  t  =  b,  is 
+22
+b
+a
+dxdy
+sdt
+dtdt
+      
+=+
+      
+      
+
+ 
+  (d)  The length of the arc of the curve 
+(  ),rf=
+ between the points where  =  and  = , is 
+2
+2
+dr
+srd
+d
+
+
+
+
+=+
+
+
+
+
+
+
+
+ 
+1.11  Surface Area of Solid generated by revolving a curve about a fixed axis.  
+Elemental Surface Area  
+푑퐴=2휋푦×푑푠=2휋푦푑푠  
+ Total surface area = A = 
+∫
+2휋푦
+푥=푏
+푥=푎
+√
+1+
+(
+푑푦
+푑푥
+)
+2
+푑푥  
+ 
+Fig.1.9. Surface area 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.12 
+Engineering Mathematics 
+1.12 Volume of the solid 
+A. The volume of the solid obtained by revolving the curve y = f (x) between the lines x = a and x = b is given by  
+  푉≈
+∫
+휋푦
+2
+푑푥
+푥=푏
+푥=푎
+ 
+ 
+Fig. 1.10. Volume of the solid 
+ 
+B. Revolution about the y-axis. Interchanging x and y in the above formula, we see that the volume of the solid generated 
+by the revolution, about y-axis, of the area, bounded by the curve 
+(  ),xf   y=
+ the y-axis and the abscissa y = a, y = b is 
+2
+b
+a
+x  dy
+
+. 
+1.13 Gamma Function  
+The integral 
+∫
+푒
+−푥
+.푥
+푛−1
+∞
+0
+푑푥,
+(
+푛>0
+)
+ is called Gamma function of n. It is denoted by Γ푛=
+∫
+푒
+−푥
+푥
+푛−1
+푑푥
+∞
+0
+ . 
+Note :  
+/2
+0
+11
+22
+sincos
+2
+2
+2
+mn
+mn
+xxdx
+mn
+
+++
+     
+
+     
+     
+=
+++
+
+
+
+
+
+ 
+ Where (x) is called the gamma function. 
+1.13.1 Properties of Gamma Function     
+(i) Γ푛=
+(
+푛−1
+)
+!        (ii) Γ
+(
+푛+1
+)
+=
+(
+푛
+)
+! 
+(iii) Γ(푛+1)=푛Γ푛        (iv) Γ
+(
+1
+2
+)
+=
+√
+휋  
+1.14 Beta Function 
+The function  (m, n) = 
+∫
+푥
+푚−1
+.
+(
+1−푥
+)
+푛−1
+1
+0
+푑푥 (m, n > 0) is called  function of m and n.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.13 
+Engineering Mathematics 
+1.14.1 Properties of  function 
+(i) 훽(푚,푛)=
+Γ푚.Γ푛
+Γ(m+푛)
+ 
+(ii) 훽(푚,푛)=훽(푛,푚) 
+(iii) 훽(푚,푛)=
+∫
+푥
+푚−1
+(1+푥)
+푚+푛
+∞
+0
+푑푥 
+ 훽(푛,푚)=
+∫
+푥
+푛−1
+(1+푥)
+푚+푛
+∞
+0
+푑푥 
+(iv) 푠푖푛
+푝
+휃.푐표푠
+푞
+휃푑푥=
+1
+2
+훽
+(
+푝+1
+2
+,
+푞+1
+2
+)
+,
+(
+푝,푞>−1
+)
+   
+1.15 Area between the curves 
+If the function f(x) > g(x) for all values of x between x=a and x=b then  
+ 퐴=
+∫
+푓
+(
+푥
+)
+푑푥
+푏
+푎
+−
+∫
+푔
+(
+푥
+)
+푑푥
+푏
+푎
+ ⇒ 퐴=
+∫
+(푓
+(
+푥
+)
+−푔
+(
+푥
+)
+)
+푏
+푎
+푑푥  
+ 
+ 
+Fig. 1.11. Area under curve 
+Note : Area bounded by curve 
+()rf=
+ between 
+=
+ and  is 
+2
+1
+2
+rd
+
+
+
+
+ 
+1.16. Multi Variable Calculus 
+(a)  Continuity of a function  
+A function f(x, y) is said to be continuous at (a, b), if 푙푖푚
+푥→푎
+푦→푏
+푓
+(
+푥,푦
+)
+=푓
+(
+푎,푏
+)
+   
+(b) Differentiation of a two-variable function  
+ If f(x, y) is a continuous function, then the derivative of f(x, y) with respect to x treating y as constant is given by  
+          p = 
+휕푓
+휕푥
+=푙푖푚
+ℎ→0
+푓
+(
+푥+ℎ,푦
+)
+−푓
+(
+푥,푦
+)
+ℎ
+  
+ The derivative of f(x, y) with respect to y treating x as constant is given by 
+푞=
+휕푓
+휕푦
+=푙푖푚
+푘→0
+푓
+(
+푥,푦+푘
+)
+−푓
+(
+푥,푦
+)
+푘
+ 
+(c)  Homogenous Function  
+ A function f (x, y) is said to be homogenous function of degree ‘n’ if 푓
+(
+푘푥,푘푦
+)
+=푘
+푛
+.푓
+(
+푥,푦
+)
+.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.14 
+Engineering Mathematics 
+Example:  푓
+(
+푥,푦
+)
+=푥
+3
+−3푥
+2
+푦+3푥푦
+2
++푦
+3
+ 
+  푓
+(
+푘푥,푘푦
+)
+=
+(
+푘푥
+)
+3
+−3
+(
+푘푥
+)
+2
+(
+푘푦
+)
++3
+(
+푘푥
+)
+.
+(
+푘푦
+)
+2
++
+(
+푘푦
+)
+3
+ 
+  =  푘
+3
+(
+푥
+3
+−3푥
+2
+푦+3푥푦
+2
++푦
+3
+)
+ 
+  = 푘
+3
+.푓
+(
+푥,푦
+)
+    푓
+(
+푥,푦
+)
+ is a homogenous function of degree ‘3’.  
+(d) Euler’s Theorem 
+ If f (x, y) is a homogeneous function of degree ‘n’ then  
+ (i) 푥.
+휕푓
+휕푥
++푦.
+휕푓
+휕푦
+=푛푓  
+ (ii) 푥
+2
+.
+휕
+2
+푓
+휕푥
+2
++2푥푦
+휕
+2
+푓
+휕푥휕푦
++푦
+2
+휕
+2
+푓
+휕푦
+2
+=푛
+(
+푛−1
+)
+푓 
+  If f(x, y) = g(x, y) + h(x, y) + (x, y) where g (x, y), h (x, y) and (x, y) are homogenous functions of degrees m, n and 
+p respectively, then  
+  푥.
+휕푓
+휕푥
++푦.
+휕푓
+휕푦
+=푚.푔
+(
+푥,푦
+)
++푛.ℎ
+(
+푥,푦
+)
++푝.휙
+(
+푥,푦
+)
+  
+  푥
+2
+.
+휕
+2
+푓
+휕푥
+2
++2푥푦.
+휕
+2
+푓
+휕푥휕푦
++푦
+2
+.
+휕
+2
+푓
+휕푦
+2
+=푚
+(
+푚−1
+)
+.푔
+(
+푥,푦
+)
++푛
+(
+푛−1
+)
+.ℎ
+(
+푥,푦
+)
++푝
+(
+푝−1
+)
+.휙
+(
+푥,푦
+)
+  
+(e) Total derivative: 
+ (i)  If u = f(x, y) and if x = (t), y = v(t) then 
+..
+duu  dxu  dy
+dtx  dty  dt
+
+=+
+
+ 
+ (ii) If u be a function of x and y, where y is a function of x, then 
+.
+duuu  dy
+dxxy  dx
+
+=+
+
+ 
+ (iii) If u = f(x, y) and 
+1   1   2
+(  ,   )xf   t   t=
+ and 
+2   1   2
+(  ,   ),yf   t   t=
+ then  
+  
+111
+..
+uuxuy
+tx    ty    t
+          
+=+
+          
+ and 
+222
+..
+uuxuy
+tx    ty    t
+          
+=+
+          
+ 
+ (iv) If x and y are connected by an equation of the form f(x, y) = 0, then 
+/
+/
+dyfx
+dxfy
+
+=−
+
+ 
+(f) Concept of Maxima and Minima in Two Variables 
+ If f(x, y) is a two-variable differentiable function, then to find the maxima (or) minima. 
+Step-1: Calculate 푝=
+휕푓
+휕푥
+ and 푞=
+휕푓
+휕푦
+ and equate p = 0, q = 0 
+  Let (x
+0
+, y
+0
+) be a stationary point. 
+Step-2: Calculate r, s, t where 푟=
+휕
+2
+푓
+휕푥
+2
+|
+(
+푥
+0
+,푦
+0
+)
+;  푠=
+휕
+2
+푓
+휕푥.휕푦
+|
+(
+푥
+0
+,푦
+0
+)
+; 푡=
+휕
+2
+푓
+휕푦
+2
+|
+(
+푥
+0
+,푦
+0
+)
+  
+Case (i):  If 푟푡−푠
+2
+>0 and r > 0, then the function f (x, y) has minimum at (x
+0
+, y
+0
+) and the minimum value is f(x
+0
+, y
+0
+). 
+Case (ii):  If 푟푡−푠
+2
+>0 and r < 0, then the function f (x, y) has maximum at (x
+0
+, y
+0
+) and the maximum value is 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.15 
+Engineering Mathematics 
+    f(x
+0
+, y
+0
+). 
+Case (iii): If 푟푡−푠
+2
+<0 ; then we cannot comment on the existence of maxima and minima.  
+   Such stationary points where 푟푡−푠
+2
+=0  are called saddle points.        
+(g)  Concept of Constraint Maxima and Minima (Method of Lagrange’s unidentified multipliers). 
+ If f(x, y, z)  is  a  continuous  and  differentiable  function,  such  that  the  variables x, y and z are  related/constrained  by  the 
+equation (x, y, z) = C then to calculate the extreme value of f(x, y, z) using Lagrange’s Method of unidentified multipliers.  
+Step-1: Form the function F(x, y, z) = f(x, y, z) + {(x, y, z) – C}, where 휆 is a multiplier. 
+Step-2:  Calculate 
+휕퐹
+휕푥
+, 
+휕퐹
+휕푦
+ and 
+휕퐹
+휕푧
+ and equate them to zero  
+Step-3:  Equate the values of  from the above 3 equations and obtain the relation between the variables x, y and z.  
+Step-4:  Substitute the relation between x, y and z in (x, y, z) = C and get the values of x, y, z. Let they be (x
+0
+, y
+0
+, z
+0
+). 
+Step-5:  Calculate f(x
+0
+, y
+0
+, z
+0
+) 
+  The value f(x
+0
+, y
+0
+, z
+0
+) is the extreme value of f(x, y, z). 
+(h) Multiple Integrals 
+ If f(x, y) is continuous and differentiable at every point within a region ‘R’ bounded by some curves is given by  
+ 퐼=
+∫∫
+푓
+(
+푥,푦
+)
+푅
+푑푥푑푦   
+ If there is a double integral, 
+ 퐼=
+∫∫
+푓
+(
+푥,푦
+)
+푑푦푑푥
+푦=휓(푥)
+푦=휙(푥)
+푥=푏
+푥=푎
+   [Let (x) > (x)]   
+ Then I = area of the region bounded by the curves, y = (x); y = (x), x = a and x = b if f(x, y) = 1 
+ Value of x – co-ordinate of centroid of the region bounded by y = (x); y = (x); x = a, x = b if f(x, y) = x 
+(i) Change of Orders of Integration 
+ 퐼=
+∫∫
+푓
+(
+푥,푦
+)
+푑푦푑푥
+푦=휓(푥)
+푦=휙(푥)
+푥=푏
+푥=푎
+   →  퐼=
+∫∫
+푓
+(
+푥,푦
+)
+푑푥푑푦
+푥=ℎ(푦)
+푥=푔(푦)
+푦=푑
+푦=푐
+ 
+ In change of order of Integration, the order of the Integrating variables changes and the limits as well. 
+Note : When limits are constants, the order of integration does not matter,  
+   
+(  ,   )(  ,   )
+y  dy  d
+x  bx  b
+y  c   x  ax  a    y  c
+f  x  y  dxdyf  x  y dydx
+==
+==
+=   ==   =
+=
+    
+ 
+1.17 Jacobian of the Transformation 
+(i) The Jacobian of the transformation, 
+()
+12
+,    ,(  ,  )xf   u v   yf   u v==
+ is defined as, 
+ 
+(  ,   )
+(  ,  )
+uv
+uv
+xx
+xy
+J
+yy
+uv
+
+==
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.16 
+Engineering Mathematics 
+(ii) The Jacobian of the transformation,  
+ 
+123
+(  ,  ,   ),(  ,  ,   ),(  ,  ,   )xf   u v w   yf   u v w   zf   u v w===
+ is defined as 
+ 
+(  ,  ,  )
+(  ,  ,   )
+uvw
+uvw
+uvw
+xxx
+x  y  z
+Jyyy
+u v w
+zzz
+
+==
+
+ 
+1.18 Change of Variables Formula 
+(i) 
+12
+(  ,   )(   (  ,  ),(  ,  ) |    |
+RR
+f  x  y dx dyf   f   u v   f   u v    J  du dv=
+
+ 
+(ii) 
+123
+(  ,   ,  )(   (  ,  ,   ),    (  ,  ,   ),(  ,  ,   )) |    |
+RR
+f  x  y  z  dxdydzf   f   u v w   f   u v w   f   u v wJ  du dv dw=
+
+ 
+1.19 Change of Variables 
+(i) Cartesian to polar co-ordinates : 
+  
+cosxr=
+ 
+  
+sinyr=
+ 
+  J = r 
+ 
+dx dy    rdrd=
+ 
+(ii) Cartesian to cylindrical polar co-ordinate : 
+  
+cosxr=
+ 
+  
+sinyr=
+  
+  z = z 
+  J = r 
+ 
+dxdydz    rdr d   dz=
+ 
+(iii) Cartesian to spherical polar co-ordinates : 
+  
+sin   cosx=     
+ 
+  
+sin   siny=    
+ 
+  
+cosz=   
+ 
+  
+2
+sinJ=   
+ 
+ 
+2
+sindx dy dzd   d   d=      
+ 
+❑❑❑
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.17 
+Engineering Mathematics 
+2 
+ORDINARY DIFFERENTIAL 
+EQUATION 
+ 
+2.1 Differential Equation 
+The equation involving differential coefficients is called a Differential Equation (DE).  
+1.  푥
+2
+.
+푑푦
+푑푥
++푦
+2
+=0  
+2.  
+휕
+2
+푇
+휕푥
+2
+=푘⋅
+휕푇
+휕푥
+  
+3. 푥
+2
+.
+휕
+2
+푢
+휕푥
+2
++푦
+2
+.
+휕
+2
+푢
+휕푦
+2
+=0  
+2.1.1 Ordinary Differential Equations (ODE) 
+The DEs involving only one independent variable is called ordinary differential equation.  
+Example: 
+ (1) 푥
+2
+푑푦
+푑푥
++푦
+2
+=0;   
+ (2) 푒
+−푥
+⋅
+푑푦
+푑푥
++푦
+2
+=푒
+푥
+ 
+2.1.2 Partial Differential Equations  
+ The DEs involving two (or) more independent variables are called Partial Differential Equations (PDEs).  
+Example: 
+ 
+휕
+2
+푢
+휕푥
+2
+=퐶
+2
+⋅
+휕
+2
+푢
+휕푡
+2
+ 
+ 
+휕
+2
+푢
+휕푥
+2
++
+휕
+2
+푢
+휕푦
+2
+=
+1
+퐾
+⋅
+휕푢
+휕푡
+ 
+ 
+휕
+2
+푢
+휕푥
+2
++
+휕
+2
+푢
+휕푦
+2
+=0 
+2.1.3 Order of a Differential Equation 
+The order of the highest derivative that occurs in a DE is called order of a DE. 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.18 
+Engineering Mathematics 
+Example:  
+ (1) 
+푑
+2
+푦
+푑푥
+2
++
+(
+푑푦
+푑푥
+)
+3
+−푦=0   → Order = 2 
+ (2) 
+푑푦
+푑푥
++2⋅
+푑
+2
+푦
+푑푥
+2
++
+푑
+3
+푦
+푑푥
+3
+−3푥
+2
+=푒
+푥
+  → Order = 3 
+ (3) 
+휕
+2
+푢
+휕푥
+2
+=
+1
+퐶
+2
+.
+휕
+2
+푢
+휕푡
+2
+     → Order = 2 
+ (4) 
+휕
+2
+푢
+휕푥
+2
+=
+1
+훼
+휕푢
+휕푡
+     → Order = 2 
+2.1.4 Degree of a Differential Equation 
+The Degree of the highest order derivative that occurs in a DE, when the DE is free from fractional (or) radical powers. 
+Example: 
+(1) The Degree of the DE 
+(
+푑
+2
+푦
+푑푥
+2
+)
+1
++2
+(
+푑푦
+푑푥
+)
+3
+−3푦=0 is 1. 
+(2) The Degree of the DE 
+(
+푑
+2
+푦
+푑푥
+2
+)
+1
++
+√
+(
+푑푦
+푑푥
+)
+3
++4푦=0 is 2 
+  
+(
+푑
+2
+푦
+푑푥
+2
+)
+2
+=(−
+√
+(
+푑푦
+푑푥
+)
+3
++4푦)
+2
+ 
+  
+(
+푑
+2
+푦
+푑푥
+2
+)
+2
+=
+(
+푑푦
+푑푥
+)
+3
++4푦 
+(3) It is not possible every time that we can find the degree of a given differential equation. The degree of any differential 
+equation can be found, when it is in the form of a polynomial; otherwise, the degree cannot be defined. 
+ Example degree of the DE is not defined 
+ 
+22
+22
+cos5
+d  yd  y
+x
+dxdx
++=
+ 
+2.2. Formation of Differential Equations 
+If a solution y = f(x) contains n arbitrary constants in it, then differentiate y for n times and calculate 푦′,푦",푦′′′,....푦
+(푛)
+ So, from 
+the (n + 1) equations available, try to eliminate the arbitrary constants in y = f(x) 
+• The different equation formed for the solution, 푦=퐶
+1
+푒
+퐾
+1
+푥
++퐶
+2
+푒
+퐾
+2
+푥
+ where C
+1
+, C
+2
+ are arbitrary constants is 
+ 
+푑
+2
+푦
+푑푥
+2
+−
+(
+퐾
+1
++퐾
+2
+)
+푑푦
+푑푥
++
+(
+퐾
+1
+.퐾
+2
+)
+푦  
+• If  the  solution  is 푦=퐶
+1
+푒
+퐾
+1
+푥
++퐶
+2
+푒
+퐾
+2
+푥
++퐶
+3
+푒
+퐾
+3
+푥
+ where C
+1
+, C
+2
+, C
+3
+ are  arbitrary  constants,  then  the  DE  is 푦′′′−
+(
+퐾
+1
++퐾
+2
++퐾
+3
+)
+푦"+
+(
+퐾
+1
+퐾
+2
++퐾
+2
+퐾
+3
++퐾
+3
+퐾
+1
+)
+푦′−
+(
+퐾
+1
+퐾
+2
+퐾
+3
+)
+푦=0 
+2.2.1 First Order DE 
+The general form of a 1
+st
+ order DE is given by 
+푑푦
+푑푥
+=푓
+(
+푥,푦
+)
+ 
+ If  
+푑푦
+푑푥
+=−
+푀(푥,푦)
+푁(푥,푦)
+=푓
+(
+푥,푦
+)
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.19 
+Engineering Mathematics 
+• 푁(푥,푦)푑푦+푀(푥,푦)푑푥=0  
+• 푀푑푥+푁푑푦=0 where M, N are functions of x and y.  
+2.2.2 Linear ODE: 
+An ODE    is    said    to    be    linear, if    it    do    not    contains    the    higher    power    terms    of    dependent    variable 
+(
+푦
+2
+,푦
+3
+,푦
+4
+,....,
+(
+푑푦
+푑푥
+)
+2
+,
+(
+푑푦
+푑푥
+)
+3
+,....
+)
+ and  also  the  terms  containing  the  product  of  dependent  variable  and  its  differential 
+coefficient 
+(
+푦.
+푑푦
+푑푥
+,푦
+2
+푑푦
+푑푥
+,푦
+(
+푑푦
+푑푥
+)
+2
+,.....
+)
+ 
+Example: 
+(1) 푥
+2
+.
+푑
+2
+푦
+푑푥
+2
+−5푥
+푑푦
+푑푥
++6푦=0 
+(2) 
+푑푦
+푑푥
+ –5푦=푠푖푛푥 
+• 
+푑
+2
+푦
+푑푥
+2
+−5.
+푑푦
+푑푥
++푠푖푛푦=0  → Non-linear DE  
+o Here, 푠푖푛푦=푦−
+푦
+3
+3!
++
+푦
+5
+5!
+.... 
+• 
+푑
+2
+푦
+푑푥
+2
+−5.
+푑푦
+푑푥
++푠푖푛푥=4푦  → Linear DE 
+2.3 Solving of Differential Equations  
+2.3.1 Solving of 1st Order DE 
+(i)  Variable-separable form 
+ If the 1
+st
+ order DE is given by 
+푑푦
+푑푥
+=휙(푥).휓(푦) 
+  
+∫
+1
+훹(푦)
+푑푦=
+∫
+휙(푥)푑푥 
+ On integrating we have solution of the given DE 
+(ii)  Homogenous 1st Order 
+ If the 1
+st
+ order DE is of the form 
+푑푦
+푑푥
+=
+푀(푥,푦)
+푁(푥,푦)
+ 
+ Such that both M(x, y) and N(x, y) are homogenous functions of same degree, then we say that the DE is homogeneous. 
+Example: 
+ (1) 
+푑푦
+푑푥
+=
+푥
+2
++푦
+2
+푥푦
+ 
+ (2) 
+푑푦
+푑푥
+=
+푎푥+푏푦
+푎′푥+푏′푦
+ 
+  (a and b are not zero at the same time) 
+  If  the  DE 
+푑푦
+푑푥
+=
+푀(푥,푦)
+푁(푥,푦)
+ is  a  homogeneous  DE,  then  the  equation  can  be  converted  to  Variable  Separable  form  if  we 
+substitute y = Vx ; 
+dydV
+Vx
+dxdx
+=+
+   
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.20 
+Engineering Mathematics 
+2.3.2 Exact Differential Equations  
+The DE  푀푑푥+푁푑푦=0 where M, N are functions of x and y is said to be an Exact Differential Equation, if there exist a 
+function f(x,y) such that 푀푑푥+푁푑푦=푑(푓
+(
+푥,푦
+)
+) 
+ Mathematical condition to check the Exactness of a differential equation is  
+ 
+휕푁
+휕푥
+=
+휕푀
+휕푦
+   
+(i)  Solution of an Exact DE 
+If M(x, y) dx + N (x, y) dy = 0 is an Exact differential Equation, then the solution of the DE is given by 
+∫
+푀(푥,푦)푑푥
+푦=const
++
+∫
+(
+terms not containing  x in 푁
+)
+푑푦=퐶  
+(ii)  Integrating Factor   
+ The function which, when multiplied to a non-exact DE converts the DE to exact DE.  
+Example: 
+ (1) 
+1
+푦
+2
+ is an integrating factor of 푦푑푥−푥푑푦=0 
+ (2) 
+1
+푦
+ is an integrating factor of 푥
+2
+푑푦−푥푦푑푥=0 
+2.3.3 Methods of Writing the Integrating Factors (I.F.) 
+(i)  If M(x, y)dx + N(x, y)dy = 0 is a homogeneous DE, then I.F.  =  
+1
+푀푥+푁푦
+ , 
+(
+푀푥+푁푦≠0
+)
+ 
+(ii) If 푀푑푥+푁푑푦=0 is of the form 푦푓
+(
+푥푦
+)
+푑푥+푥푔
+(
+푥푦
+)
+푑푦=0 then I.F. = 
+1
+푀푥−푁푦
+, 
+(
+푀푥−푁푦≠0
+)
+ 
+(iii) For a DE, 푀푑푥+푁푑푦=0, If 
+1
+푁
+(
+휕푀
+휕푦
+−
+휕푁
+휕푥
+)
+=푓
+(
+푥
+)
+, then 푒
+∫
+푓
+(
+푥
+)
+푑푥
+ is the integrating factor. 
+(iv) For the DE, 푀푑푥+푁푑푦=0, if 
+1
+푀
+(
+휕푁
+휕푥
+−
+휕푀
+휕푦
+)
+=푔
+(
+푦
+)
+ then 푒
+∫
+푔
+(
+푦
+)
+푑푦
+ is the integrating factor.  
+2.3.4 Leibnitz Linear Equation 
+The DE of the form 
+푑푦
+푑푥
++푃푦=푄, where P, Q are functions of x alone, is called Leibnitz Linear Equation 
+Integrating factor of the equation is 푒
+∫
+푃푑푥
+ 
+Solution of the Differential Equation is  : 푦.푒
+∫
+푃푑푥
+=
+∫
+푄.(푒
+∫
+푃푑푥
+)푑푥+ C, where C is arbitrary constant. 
+2.3.5. Non-linear Equations Convertible to Leibnitz Linear Form 
+Bernoullis Equation  
+ 
+푑푦
+푑푥
++푃푦=푄.푦
+푛
+,
+(
+푛>1,푛≠1
+)
+  
+ (P, Q are functions of x alone) 
+  
+1
+푦
+푛
+푑푦
+푑푥
++
+1
+푦
+푛
+푃푦=
+푄푦
+푛
+푦
+푛
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.21 
+Engineering Mathematics 
+  푦
+−푛
+⋅
+푑푦
+푑푥
++푦
+1−푛
+푃=푄  
+  Let  푦
+1−푛
+=푧 
+  
+푑푧
+푑푥
++
+(
+1−푛
+)
+푃푧=
+(
+1−푛
+)
+푄    [Leibnitz Linear Equation] 
+2.3.6 Applications of 1st order DE 
+Newton’s Law of Cooling 
+The  rate  of  change  of  temperature of  a  body  placed  in  an  ambience  of  temperature  T
+
+ is  directional  proportional  to  the 
+temperature difference between the body and the ambience.  
+ 
+푑푇
+푑푡
+∝−
+(
+푇−푇
+∞
+)
+  where T
+
+ → Ambient Temperature (T > T
+
+)  
+ 
+푑푇
+푑푡
+∝
+(
+푇
+∞
+−푇
+)
+ 
+ 
+푑푇
+푑푡
+=−퐾
+(
+푇−푇
+∞
+)
+ 
+Radioactive Growth / Decay 
+The rate of growth/decay on any radioactive substance at any instant is directly proportional to concentration of the substance 
+that is available at that instant.  
+  
+• 
+푑푁
+푑푡
+∝푁  → For growth  
+  
+푑푁
+푑푡
+=퐾푁 
+  
+∫
+1
+푁
+푑푁=
+∫
+퐾푑푡 
+• 
+푑푁
+푑푡
+∝−푁   → For decay 
+  
+푑푁
+푑푡
+=−퐾푁 
+  푙표푔
+푒
+푁=퐾푡+퐶 
+  푁=푒
+퐾푡
+퐶 
+2.4 Higher Order Differential Equations 
+The general form of Higher order Differential Equations is given by  
+       퐾
+1
+푑
+푛
+푦
+푑푥
+푛
++퐾
+2
+푑
+푛−1
+푦
+푑푥
+푛−1
++퐾
+3
+푑
+푛−2
+푦
+푑푥
+푛−2
++....+퐾
+푛
+푦=푋     ...(1) 
+• If K
+1
+, K
+2
+, K
+3
+, K
+4
+, ....K
+n
+, X are functions of x alone then (1) is called Linear Higher Order Linear DE with variable coefficients.  
+• If K
+1
+, K
+2
+, K
+3
+, K
+4
+, ....K
+n
+ are constants and X is a function of ‘x’ alone, then (1) is called Higher Order Linear DE with constant 
+coefficients.   
+2.5 Higher Order Linear Differential Equations with Constant Coefficients  
+The DE 퐾
+1
+푑
+푛
+푦
+푑푥
+푛
++퐾
+2
+푑
+푛−1
+푦
+푑푥
+푛−1
++퐾
+3
+푑
+푛−2
+푦
+푑푥
+푛−2
++....+퐾
+푛
+푦=푋 .... (1) is said to be a higher order linear DE with constant coefficients 
+if K
+1
+, K
+2
+, K
+3
+, K
+4
+, ....K
+n
+ are constants and ‘X’ is a function of x alone. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.22 
+Engineering Mathematics 
+If X = 0, then (1) is called Homogeneous DE   
+If X  0, then (1) is called Non-Homogeneous DE.  
+2.5.1 Solution of Higher Order Linear Differential Equation 
+ Y =y
+c
+ + y
+p
+  
+  푦
+푐
+ → Complimentary function;  푦
+푝
+ → Particular Integral  
+ (Solution of homogeneous part; (X = 0); (Solution of Non-Homogeneous Part; (X  0)) 
+ If 퐾
+1
+푑
+푛
+푦
+푑푥
+푛
++퐾
+2
+푑
+푛−1
+푦
+푑푥
+푛−1
++....+퐾
+푛−1
+푑푦
+푑푥
++퐾
+푛
+푦=푋 .... (1) is a linear DE with constant coefficients.  
+2.5.2 Rules for Writing the Complete Solution of (풇
+(
+푫
+)
+)풚=푿: 
+(i) Form the auxiliary equation of (푓
+(
+퐷
+)
+)푦=푋 i.e. 푓
+(
+푀
+)
+=0    
+(ii) Depending on the roots of the auxiliary equation 
+(
+푓
+(
+푀
+)
+=0
+)
+, we write the complimentary function.  
+(iii) Calculate the Particular Integral, 푦
+푃
+=
+1
+(푓
+(
+퐷
+)
+)
+푋. 
+(iv) Write the total solution of the equation 푦=푦
+퐶
++푦
+푃
+. 
+2.5.3 Rules for Writing the Complementary Function 
+(i) If the roots of 푓
+(
+푀
+)
+=0 are 푀
+1
+,푀
+2
+,푀
+3
+, .... (푀
+1
+,푀
+2
+,푀
+3
+, ...   Rational) 
+ Then 푦
+퐶
+=퐶
+1
+푒
+푀
+1
+푥
++퐶
+2
+푒
+푀
+2
+푥
++퐶
+3
+푒
+푀
+3
+푥
++..... where C
+1
+, C
+2
+, C
+3
+,.... Are arbitrary constants)   
+(ii) If the roots of 푓
+(
+푀
+)
+=0 are 푀
+1
+,푀
+1
+,푀
+3
+......
+(
+푀
+1
+,푀
+3
+......∈ Rational
+)
+ 
+ Then 푦
+퐶
+=
+(
+퐶
+1
+푥+퐶
+2
+)
+푒
+푀
+1
+푥
++퐶
+3
+.푒
+푀
+3
+푥
++...... Where C
+1
+, C
+2
+, C
+3
+, .... are arbitrary constants). 
+(iii) If the roots of 푓
+(
+푀
+)
+=0 are 푀
+1
+,푀
+1
+,푀
+1
+,푀
+4
+.... (Where  푀
+1
+,푀
+4
+.....∈Rational) 
+ Then 푦
+퐶
+=
+(
+퐶
+1
+푥
+2
++퐶
+2
+푥+퐶
+3
+)
+푒
+푀
+1
+푥
++퐶
+4
+푒
+푀
+4
+푥
++...... (where C
+1
+, C
+2
+, C
+3
+ .... Are arbitrary constants) 
+(iv) If the roots of 푓
+(
+푀
+)
+=0 are 훼+푖훽,훼−푖훽,푀
+3
+,푀
+4
+..... then, 푦
+퐶
+=푒
+훼푥
+(
+퐶
+1
+푐표푠훽푥+퐶
+2
+푠푖푛훽푥
+)
++퐶
+3
+푒
+푀
+3
+푥
++
+퐶
+4
+푒
+푀
+4
+푥
++..... 
+(v) If the roots of 푓
+(
+푀
+)
+=0 are 훼+푖훽,훼−푖훽,훼+푖훽,훼−푖훽,푀
+5
+,푀
+6
+,.... then   
+ 푦
+푐
+=푒
+훼푥
+(
+(퐶
+1
+푥+퐶
+2
+)푐표푠훽푥+(퐶
+3
+푥+퐶
+4
+)푠푖푛훽푥
+)
++퐶
+5
+푒
+푀
+5
+푥
++퐶
+6
+푒
+푀
+6
+푥
++..... 
+(vi) If the roots of 푓
+(
+푀
+)
+=0 are 훼+
+√
+훽, 훼−
+√
+훽, M
+3
+, M
+4
+, .... then  푦
+퐶
+=푒
+훼푥
+{
+퐶
+1
+푠푖푛ℎ
+√
+훽푥+퐶
+2
+푐표푠ℎ
+√
+훽푥
+}
++퐶
+3
+푒
+푀
+3
+푥
++
+퐶
+4
+푒
+푀
+4
+푥
++..... 
+(vii) If the roots of 푓
+(
+푀
+)
+=0 are 훼+
+√
+훽,훼−
+√
+훽,훼+
+√
+훽,훼−
+√
+훽,푀
+5
+,푀
+6
+,.... then 푦
+퐶
+=푒
+훼푥
+{
+(
+퐶
+1
+푥+퐶
+2
+)
+푠푖푛ℎ
+√
+훽푥+
+(
+퐶
+3
+푥+퐶
+4
+)
+푐표푠ℎ
+√
+훽푥
+}
++퐶
+5
+푒
+푀
+5
+푥
++퐶
+6
+.푒
+푀
+6
+푥
++.... 
+2.5.4 Rules for writing the Particular Integral  
+(i)  If 푋=푒
+푎푥
+,  
+ 푦
+푃
+=
+1
+푓
+(
+퐷
+)
+푒
+푎푥
+=
+1
+푓
+(
+푎
+)
+푒
+푎푋
+,
+(
+if 푓
+(
+푎
+)
+≠0
+)
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.23 
+Engineering Mathematics 
+ If 푓
+(
+푎
+)
+=0, then 푦
+푃
+=푥
+1
+푓′
+(
+푎
+)
+푒
+푎푥
+ (if 푓′
+(
+푎
+)
+≠0) 
+ If 푓′
+(
+푎
+)
+=0, then 푦
+푝
+=푥
+2
+.
+1
+푓"
+(
+푎
+)
+푒
+푎푥
+ (if 푓"
+(
+푎
+)
+≠0) and so on. 
+ Solve 
+푑
+2
+푦
+푑푥
+2
+−5.
+푑푦
+푑푥
++6푦=푒
+2푥
+ 
+ Sol. Aux. Eqn → 푀
+2
+−5푀+6=0⇒푀=2,3   
+ 푦
+퐶
+=퐶
+1
+푒
+2푥
++퐶
+2
+푒
+3푥
+  
+ 푦
+푃
+=
+1
+퐷
+2
+−5퐷+6
+푒
+2푥
+  푠푖푛푐푒 푓
+(
+2
+)
+=0  
+  푦
+푃
+=푥
+1
+(
+2퐷−5
+)
+푒
+2푥
+=푥.
+1
+(
+2
+(
+2
+)
+−5
+)
+푒
+2푥
+  
+  
+푥
+−1
+푒
+2푥
+=−푥.푒
+2푥
+ 
+(ii)  If 푋=푠푖푛
+(
+푎푥+푏
+)(
+표푟
+)
+ cos
+(
+푎푥+푏
+)
+  
+ 푦
+푃
+=
+1
+푓
+(
+퐷
+)
+푠푖푛
+(
+푎푥+푏
+)
+  
+ Replace D
+2
+ by –a
+2
+ in f(D)  
+ If the denominator is the form cD + d then rationalize the denominator and replace D
+2
+ by –a
+2
+   
+ Solve 
+푑
+2
+푦
+푑푥
+2
+−5
+푑푦
+푑푥
++6푦=푠푖푛
+(
+2푥+3
+)
+ 
+   푦
+푝
+=
+1
+퐷
+2
+−5퐷+6
+⋅푠푖푛
+(
+2푥+3
+)
+ 
+  a = 2   – a
+2 
+= – 4 
+  푦
+푝
+=
+1
+−4−5퐷+6
+푠푖푛
+(
+2푥+3
+)
+ 
+  푦
+푝
+=
+1
+2−5퐷
+×
+2+5퐷
+2+5퐷
+.푠푖푛
+(
+2푥+3
+)
+ 
+  푦
+푝
+=
+2+5퐷
+4−25퐷
+2
+푠푖푛
+(
+2푥+3
+)
+=
+2+5퐷
+4−25(−4)
+sin(2푥+3)=
+1
+104
+(2.sin
+(
+2푥+3
+)
++10.cos (2푥+3)) 
+(iii) If  푋=푥
+푚
+  
+ 푦
+푃
+=
+1
+푓
+(
+퐷
+)
+푥
+푚
+   
+  푦
+푃
+=
+[
+푓
+(
+퐷
+)
+]
+−1
+푥
+푚
+  
+ Calculate 푦
+푃
+ for the DE 
+푑
+2
+푦
+푑푥
+2
+−5
+푑푦
+푑푥
++6푦=푥
+2
+  
+ 푦
+푃
+=
+1
+퐷
+2
+−5퐷+6
+푥
+2
+ 
+ =
+1
+6(1+(
+퐷
+2
+−5퐷
+6
+))
+푥
+2
+ 
+ =
+1
+6
+(1+
+(
+퐷
+2
+−5퐷
+6
+)
+)
+−1
+푥
+2
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.24 
+Engineering Mathematics 
+ = 
+1
+6
+.{1−
+(
+퐷
+2
+−5퐷
+6
+)
++
+(
+퐷
+2
+−5퐷
+6
+)
+2
+−
+(
+퐷
+2
+−5퐷
+6
+)
+3
++......}푥
+2
+ 
+ = 
+1
+6
+{푥
+2
+−
+1
+6
+(2−5
+(
+2푥
+)
+)+
+1
+36
+{
+25
+(
+2
+)
+}
+} 
+ = 
+1
+6
+푥
+2
+−
+1
+18
++
+5푥
+18
++
+25
+108
+ 
+ = 
+1
+6
+푥
+2
++
+5푥
+18
++
+19
+108
+ 
+(iv) If 푋=푒
+푎푥
+푉, then  
+ 푦
+푃
+=
+1
+푓
+(
+퐷
+)
+⋅푒
+푎푥
+⋅푉=푒
+푎푥
+1
+푓
+(
+퐷+푎
+)
+푉  
+2.6 Euler Cauchy Equation (Higher order linear DE with Variable Coefficients) 
+ The     DE     of     the     form 푥
+푛
+푑
+푛
+푦
+푑푥
+푛
++퐾
+1
+⋅푥
+푛−1
+⋅
+푑
+푛−1
+푦
+푑푥
+푛−1
++퐾
+2
+⋅푥
+푛−2
+⋅
+푑
+푛−2
+푦
+푑푥
+푛−2
++.....+퐾
+푛−1
+⋅푥⋅
+푑푦
+푑푥
++퐾
+푛
+푦=푋 Where 
+퐾
+1
+,퐾
+2
+,퐾
+3
+,....퐾
+푛
+ are constants is called Euler-Cauchy Equation  
+2.6.1 Procedure to solve Euler Cauchy Equations   
+ Let 푥
+푛
+푑
+푛
+푦
+푑푥
+푛
++퐾
+1
+푥
+푛−1
+푑
+푛−1
+푦
+푑푥
+푛−1
++퐾
+2
+ 푥
+푛−2
+푑
+푛−2
+푦
+푑푥
+푛−2
++.....+퐾
+푛−1
+ 푥
+푑푦
+푑푥
++퐾
+푛
+푦=푋 ...(1) 
+ 
+(
+푥
+푛
+푑
+푛
+푑푥
+푛
++퐾
+1
+푥
+푛−1
+푑
+푛−1
+푑푥
+푛−1
++퐾
+2
+ 푥
+푛−2
+푑
+푛−2
+푑푥
+푛−2
++.....+퐾
+푛−1 
+푥
+푑
+푑푥
++퐾
+푛
+)
+푦=푋 
+ Let 푥=푒
+푧
+    푧=log
+푒
+푥  
+ 푥
+푑
+푑푥
+=
+푑
+푑푧
+=퐷  
+ 푥
+2
+⋅
+푑
+2
+푑푥
+2
+=
+푑
+푑푧
+(
+푑
+푑푧
+−1
+)
+=퐷
+(
+퐷−1
+)
+  
+ 푥
+3
+⋅
+푑
+3
+푑푥
+3
+=퐷
+(
+퐷−1
+)(
+퐷−2
+)
+ and so, on 
+ (1)   
+{
+퐷
+(
+퐷−1
+)(
+퐷−2
+)
+.......(퐷−
+(
+푛−1)
+)
++퐾
+1
+퐷
+(
+퐷−1
+)(
+퐷−2
+)
+.....(퐷−
+(
+푛−2
+)
+) +.....퐾
+푛−1
+퐷+퐾
+푛
+}
+푦=푋 
+  Where 퐷=
+푑
+푑푧
+ 
+   (푓
+(
+퐷
+)
+)푦=푧 → Higher order linear DE with constant  
+   푓
+(
+퐷
+)
+  →  Polynomial in terms of D with constant coefficients. 
+ (2) If the differential equation is of form 
+  
+()()()
+1
+1
+11
+1
+...
+nn
+nn
+n
+nn
+d  ydy
+ax   bk   ax   bkax   b
+dxdx
+−
+−
+−
+−
+   
+++++  ++
+   
+   
+   
+()
+n
+dy
+k  yf   x
+dx
+
++=
+
+
+ 
+  i.e., 
+1
+11
+1
+()()....()(  )
+n
+nnnn
+n
+ax   b   Dk  ax   bDkax   b D   kyf  x
+−
+−−
+
+++++  ++   +=
+
+ 
+  where, f(x) is a function of ‘x’. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+1.25 
+Engineering Mathematics 
+ It can be reduced to linear differential equations with constant coefficients, by putting
+()
+z
+ax   be+=
+ 
+ Or z = log (ax + b) 
+ Then, (ax + b) Dy = aD
+1
+y 
+ 
+()()
+2
+22
+11
+1ax   b    D  y    a  D   Dy+=−
+ 
+ 
+()()()
+3
+33
+111
+12ax   b    D  y    a  D   DDy+=−−
+  
+ Where, 
+d
+D
+dx
+=
+ and 
+1
+d
+D
+dz
+=
+ 
+❑❑❑ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+1.26 
+3 
+VECTOR CALCULUS 
+ 
+3.1 Basics of Vectors  
+1. Equality of Vectors: If two vectors have equal length and same direction then they are equal. 
+2. Vector between two points P, Q : Initial point P : 
+()
+1    1    1
+,,x   y   z
+ and terminal point 
+()
+222
+:,    ,Q   x   y   z
+ the three numbers, 
+ (a) 
+121221321
+,,axx   ayy   azz=  −=  −=  −
+: are called the components of the vector a with respect to that coordinate system, 
+and we write simply 
+123
+[   ,,    ].aa   a   a=
+ 
+ (b) 
+222
+123
+aaaa=    +  +
+ 
+ (c) Position vector: The vector with origin as start point and A (x, y, z) as end point. 
+3. Vector addition and multiplication: 
+ (a) Addition of vector: 
+  
+ab+
+ of two vector 
+
+123
+,,aa  a   a=
+ and 
+
+1    2    3
+,,bb  b   b=
+ 
+  
+
+112233
+,,a   bab  ab   ab+  =   +++
+ 
+ (b) Vector addition is commutative i.e., 
+a    bb    a+  =  +
+ 
+ (c) Vector addition is associative i.e., 
+()()
+a    bcab    c+  +  =  +  +
+ 
+4.  Unit vector : Unit vector along 
+,
+||
+A
+A
+A
+=
+ this vector is in direction of 
+A
+ but has unit magnitude 
+Note : Length and Direction of Vectors 
+  Any vector 
+a
+ may be written as a product of its length and direction as follows : 
+  
+a
+aa
+a
+
+=
+
+
+
+ 
+  Here 
+a
+ is the length of vector and 
+a
+a
+ is a unit vector in direction of ‘
+a
+’. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.27 
+Engineering Mathematics 
+3.2 Vector Product / Cross Product 
+If 푎⃗ and 푏
+⃗⃗
+ are two vectors, then the cross product of the two vectors is denoted by 푎⃗×푏
+⃗⃗
+ and it is given by 푎⃗×푏
+⃗⃗
+=
+|
+푎⃗
+|
+⋅|푏
+⃗⃗
+|⋅
+푠푖푛휃⋅푛̂ 
+ 
+Fig. 3.1. Cross product 
+ 푛̂ → unit  vector passes  through  the  intersection  point  of  intersection  of 푎 and 푏 and  lies perpendicular  to  the  plane 
+containing 푎⃗ and 푏
+⃗⃗
+.  
+ If   푎⃗=푎
+1
+푖̂+푎
+2
+푗̂+푎
+3
+푘
+̂
+ and 푏
+⃗⃗
+=푏
+1
+푖̂+푏
+2
+푗̂+푏
+3
+푘
+̂
+, then, 푎⃗×푏
+⃗⃗
+=|
+푖̂푗̂푘
+̂
+푎
+1
+푎
+2
+푎
+3
+푏
+1
+푏
+2
+푏
+3
+| 
+Properties : 
+ (a) 
+()
+a   bb   a  = −  
+ not commutative rather anti commutative 
+ (b) 
+()()
+ab   ca   bc        
+ 
+Note : 
+• Area of triangle 
+11
+22
+OABOA   OBa   b=   =   
+ 
+ 
+• Area of rectangle or parallelogram 
+ab=
+ 
+ 
+• If 
+,,a b  c
+ are the vectors then, volume of parallelepiped 
+,,abc
+
+=
+
+ = 푎⃗⋅(푏
+⃗⃗
+×푐⃗)=[푎⃗푏
+⃗⃗
+푐⃗] 
+3.3 Dot / Scalar Product: 
+(i)  If 푎⃗ and 푏
+⃗⃗
+ are two vectors, then the dot /scalar product of the two vectors is denoted by 푎⃗.푏
+⃗⃗
+ and it is given by  푎⃗.푏
+⃗⃗
+=
+|
+푎⃗
+|
+⋅
+|푏
+⃗⃗
+|⋅푐표푠휃 where 휃is the angle between the vectors 푎⃗ 푎푛푑 푏
+⃗⃗
+. 
+Note: 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.28 
+Engineering Mathematics 
+ |(푎⃗⋅푏
+⃗⃗
+)|
+2
++|푎⃗×푏
+⃗⃗
+|
+2
+=
+|
+푎⃗
+|
+2
+⋅|푏
+⃗⃗
+|
+2
+.푐표푠
+2
+휃+
+|
+푎⃗
+|
+2
+⋅|푏
+⃗⃗
+|
+2
+⋅푠푖푛
+2
+휃=
+|
+푎⃗
+|
+2
+⋅|푏
+⃗⃗
+|
+2
+ 
+ If 푎⃗=푎
+1
+푖̂+푎
+2
+푗̂+푎
+3
+푘
+̂
+ 
+ 푏
+⃗⃗
+=푏
+1
+푖̂+푏
+2
+푗̂+푏
+3
+푘
+̂
+ 
+  푐⃗=푐
+1
+푖̂+푐
+2
+푗̂+푐
+3
+푘
+̂
+ then 푎⃗⋅(푏
+⃗⃗
+×푐⃗)=[푎⃗푏
+⃗⃗
+푐⃗]   [푎⃗푏
+⃗⃗
+푐⃗]=|
+푎
+1
+푏
+1
+푐
+1
+푎
+2
+푏
+2
+푐
+2
+푎
+3
+푏
+3
+푐
+3
+| 
+(ii)  
+1 12  23  3
+.a b   a ba ba b=   +   +
+ 
+(iii)  If 
+.0ab=
+, then the two vectors are orthogonal 
+(iv) Properties of dot product: 
+ (a) 
+()
+...a    b   ca c    b c+    =   +
+   (Distributive) 
+ (b) 
+..a bb a=
+     (Symmetry) 
+ (c) 
+.0aa
+      (Positive-definiteness) 
+ (d) 
+.0aa=
+ if and only if a = 0  
+ (e) 
+.a ba  b
+     (Schwarz inequality) 
+ (f) 
+a    bab+    +
+    (Triangle inequality) 
+ (g) 
+222
+2
+2a    ba    bab
+
++   +  −   =+
+
+
+ (Parallelogram equality) 
+(v)  Projection of vector 
+A
+ on 
+B
+ is 
+.
+.
+||
+AB
+B
+B
+
+
+
+ 
+3.4 Scalar/ Vector triple product 
+Scalar Triple Product 
+ • 
+()
+123
+123
+123
+.,  ,
+aaa
+a  b   ca b cbbb
+ccc
+
+  ==
+
+ 
+ • 
+()
+()
+()
+..a  b   cb   c   ac  a   b  =      =   
+ 
+ • 
+,  ,,  ,,  ,,  ,a b  cb  a cc b  aa c b
+         
+= −= −= −
+         
+ 
+ • 
+.()a  b   c
+ = volume of parallelepiped created by 
+,,a b  c
+.  
+ • If 
+.()   0a  b   c=
+ then the three vectors are coplanar 
+ • If 
+.()   0a  b   c=
+ then the three vectors are linearly dependent. 
+Vector triple product: 
+ 
+()
+.(  .  ).a   b   c    b  a cc  a b  =−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.29 
+Engineering Mathematics 
+3.5 Differentiation of Vector Point functions 
+If 푅
+⃗⃗
+(
+푡
+)
+ is a vector point function, then the derivative of 푅
+⃗⃗
+(
+푡
+)
+ is given by   
+   
+푑푅
+⃗⃗
+(
+푡
+)
+푑푡
+=푙푖푚
+훥푡→0
+푅
+⃗⃗
+(
+푡+훥푡
+)
+−푅
+⃗⃗
+(
+푡
+)
+훥푡
+  
+ If  푅
+⃗⃗
+(
+푡
+)
+=푓
+(
+푡
+)
+ 푖̂+푔
+(
+푡
+)
+ 푗̂  then 
+푑푅
+⃗⃗
+(
+푡
+)
+푑푡
+=푓′
+(
+푡
+)
+푖̂+푔′
+(
+푡
+)
+푗̂ 
+Example: 
+ If 푅
+⃗⃗
+(
+푡
+)
+=푠푖푛푡푖̂+푐표푠푡푗̂  
+푑푅
+⃗⃗
+(
+푡
+)
+푑푡
+=푐표푠푡푖̂−푠푖푛푡푗̂  
+ 
+Fig. 3.2 
+3.5.1. Differentiation of Product of two vectors 
+ 
+푑
+푑푡
+(
+푎⃗
+(
+푡
+)
+⋅푏
+⃗⃗
+(
+푡
+)
+)
+=푎⃗
+(
+푡
+)
+⋅
+푑푏
+⃗⃗
+(
+푡
+)
+푑푡
++
+푑푎
+⃗⃗
+(
+푡
+)
+푑푡
+.푏
+⃗⃗
+(
+푡
+)
+  
+ 
+푑
+푑푡
+(
+푎⃗
+(
+푡
+)
+×푏
+⃗⃗
+(
+푡
+)
+)
+=푎⃗
+(
+푡
+)
+×
+푑푏
+⃗⃗
+(
+푡
+)
+푑푡
++
+푑푎
+⃗⃗
+(
+푡
+)
+푑푡
+×푏
+⃗⃗
+(
+푡
+)
+  
+ If 퐹
+⃗
+(
+푡
+)
+ is a vector point function with constant magnitude, then 퐹
+⃗
+(
+푡
+)
+⋅
+푑
+푑푡
+퐹
+⃗
+(
+푡
+)
+=0. 
+        If 퐹
+⃗
+(
+푡
+)
+ is a vector point function with constant direction, then 퐹
+⃗
+(
+푡
+)
+×
+푑
+푑푡
+퐹
+⃗
+(
+푡
+)
+=0
+⃗⃗
+. 
+3.6  Dell operator 
+ The Vector operator 
+∂
+∂푥
+푖⃗+
+∂
+∂푦
+푗⃗+
+∂
+∂푧
+푘
+⃗⃗
+ is called the differential operator in vector and it is denoted as Del (or) ∇ 
+ ∇=
+∂
+∂푥
+푖⃗+
+∂
+∂푦
+푗⃗+
+∂
+∂푧
+푘
+⃗⃗
+.  
+3.6.1 Gradient of a Scalar Point function: 
+ If 휙(푥,푦,푧) is a Scalar Point function, then the gradient (change) of  휙
+(
+푥,푦,푧
+)
+ is denoted by grad 휙(표푟)∇휙 and it is given 
+by 
+ ∇휙=
+(
+∂
+∂푥
+푖⃗+
+∂
+∂푦
+ 푗⃗+
+∂
+∂푧
+푘
+⃗⃗
+)
+휙=
+∂휙
+∂푥
+푖⃗+
+∂휙
+∂푦
+푗⃗+
+∂휙
+∂푧
+푘
+⃗⃗
+.  
+ ∇휙=
+∂휙
+∂푥
+푖⃗+
+∂휙
+∂푦
+푗⃗+
+∂휙
+∂푧
+푘
+⃗⃗
+. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.30 
+Engineering Mathematics 
+Note:  If 퐹
+⃗
+(
+푥,푦,푧
+)
+ is an irrotational vector field (∇×퐹
+⃗
+=0
+⃗⃗
+), then definitely there exists a scalar point function 
+∅(푥,푦,푧) such that 퐹
+⃗
+(
+푥,푦,푧
+)
+=푔푟푎푑 ∅. 
+If 휙(푥,푦,푧)=푐 is a level surface then ∇휙
+|
+푃
+(
+푥
+0
+,푦
+0
+,푧
+0
+)
+ gives the gradient of 휙(푥,푦,푧) at Point ' 푃 '. 
+ |∇휙|
+푃
+∣=
+√
+(
+∂휙
+∂푥
+|
+푃
+)
+2
++
+(
+∂휙
+∂푦
+|
+푃
+)
+2
++
+(
+∂휙
+∂푧
+|
+푃
+)
+2
+.   
+ 
+Fig. 3.3 
+ →∇휙
+|
+푝
+ gives the change of 휙(푥,푦,푧) in the direction Normal to the surface 휙(푥,푦,푧)=푐 at 푃(x, y, z). 
+Note:  
+ • Angle between two surfaces: 
+  Let 
+1
+(  ,   ,  )f  x  y  zC=
+ and 
+2
+(  ,   ,  )g  x  y  zC=
+ and  be  two  surfaces  and  ‘’  be  the  angle  between  them,  then 
+.
+cos.
+fg
+fg
+
+=
+
+ 
+ • The directional derivative of 
+(  ,   ,  )f  x  y  z
+ is maximum in the direction of f. 
+ • Maximum value of directional derivative 
+(  ,  ,  )f  x y zf=
+. 
+ • Gradient of a scalar field is normal to the surface given by scalar field. 
+ • If  any  vector 
+A=
+ Gradient  of  scalar  field 
+(  ,  ,  ),f  x  y  z
+ then 
+(  ,   ,  )f  x  y  z
+ is  called  potential  of 
+A
+.  Vector 
+A
+ is  called 
+conservative field. 
+3.7 Directional Derivative:  
+ If 휙(푥,푦,푧)=푐 is a level surface, then the derivative of 휙(푥,푦,푧) at Point ' 푃 ' in the direction of 푎⃗ is called Directional 
+Derivative of 휙(푥,푦,푧) in the direction of 푎⃗.  
+ It is given by  
+ Direction Derivative = ∇휙
+|
+푝
+⋅푎ˆ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.31 
+Engineering Mathematics 
+        
+cos
+cos
+pp
+p
+a
+a
+aa
+
+=     =     =      
+
+   
+ The directional Derivative of 휙(푥,푦,푧) at 푃 in the direction of 푎⃗ is 
+ 
+Fig. 3.4 
+ Directional derivative 
+ 퐷퐷=|∇휙|
+푝
+∣⋅cos 휃 where ' 휃 ' is the angle between ∇휙|
+푝
+ and 푎⃗.  
+ For 퐷irectional derivative to be maximum cos휃=1⇒휃=0° 
+   The change of 휙(푥,푦,푧) at Point ' 푃 ' is Maximum in the direction of Normal to 휙(푥,푦,푧) 
+ Maximum Change of 휙(푥,푦,푧) at  ′푝′=
+|
+∇휙
+|
+푝
+| 
+3.8.  Del operated-on Vector Point functions 
+If 퐷푒푙 is a differential operator and  퐹
+⃗
+(
+푥,푦,푧
+)
+ is a vector Point function then the Del operator is operated on 퐹
+⃗
+(
+푥,푦,푧
+)
+ in two 
+Ways. 
+(i) 훻⋅퐹
+⃗
+→ Divergence  
+(ii) 훻×퐹
+⃗
+→Curl 
+(i) Divergence of a Vector Point function: 
+ If 퐹
+⃗
+(
+푥,푦,푧
+)
+ is  a  Vector  Point  function,  then  the  divergence  of 퐹
+⃗
+(
+푥,푦,푧
+)
+ is  denoted  by div 퐹
+⃗
+(
+or
+)
+∇⋅퐹
+⃗
+ and  for  any 
+퐹
+⃗
+(
+푥,푦,푧
+)
+=퐹
+푥
+푖⃗+퐹
+푦
+푗⃗+퐹
+푧
+푘
+⃗⃗
+ the divergence is given by  
+div⋅퐹
+⃗
+=
+(
+휕
+휕푥
+푖⃗+
+휕
+휕푦
+푗⃗+
+휕
+휕푧
+푘
+⃗⃗
+)
+⋅(퐹
+푥
+푖⃗+퐹
+푦
+푗⃗+퐹
+푧
+푘
+⃗⃗
+)=
+휕퐹
+푥
+휕푥
++
+휕퐹
+푦
+휕푦
++
+휕퐹
+푧
+휕푧
+ 
+ If div⋅퐹
+⃗
+=0, then 퐹
+⃗
+(
+푥,푦,푧
+)
+ is called a Solenoidal (or) Incompressible flow Vector. 
+(ii)  Curl of a Vector Point Function: 
+ If 퐹
+⃗
+(
+푥,푦,푧
+)
+ is  a  Vector  Point  function,  then  the  curl  of   퐹
+⃗
+(
+푥,푦,푧
+)
+ is  denoted  by 퐶푢푟푙 퐹
+⃗
+(표푟)훻×퐹 
+⃗⃗⃗⃗
+and  for  any        
+퐹
+⃗
+(
+푥,푦,푧
+)
+=퐹
+푥
+푖⃗+퐹
+푦
+푗⃗+퐹
+푧
+푘
+⃗⃗
+, the curl of 퐹
+⃗
+(
+푥,푦,푧
+)
+is given by  
+ curl 퐹
+⃗
+=훻×퐹
+⃗
+=
+(
+휕
+휕푥
+푖⃗+
+휕
+휕푦
+푗⃗+
+휕
+휕푧
+푘
+⃗⃗
+)
+×(퐹
+푥
+푖⃗+퐹
+푦
+푗⃗+퐹
+푧
+푘
+⃗⃗
+)=
+|
+푖⃗푗⃗푘
+⃗⃗
+휕
+휕푥
+휕
+휕푦
+휕
+휕푧
+퐹
+푥
+퐹
+푦
+퐹
+푧
+|
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.32 
+Engineering Mathematics 
+ If curl 퐹
+⃗
+=0
+⃗⃗
+; then 퐹
+⃗
+ is called Irrotational Flow Vector.  
+ 
+Note :  Geometric interpretation of divergence:  
+  Divergence (div) is the amount of flux per unit volume entering or leaving. 
+  (i) 
+.0F
+ at point P, then P is source. 
+   When the divergence is positive it gives the rate at which fluid is flowing away from the point per unit volume. 
+  (ii) 
+.0F
+ at point P, then P is sink. 
+   When the divergence is negative it gives the rate at which fluid is flowing towards the point per unit volume. 
+  (iii) 
+.0F=
+ at point P, then P is neither source or sink. 
+(iii) Properties of div, Curl & Grad: 
+ If 휙(푥,푦,푧) and 퐹
+⃗
+(푥,푦,푧) are a scalar point function and a vector point function respectively, then  
+ (a)  curl (grad 휙)=0
+⃗⃗
+ 
+ (b)  div(curl 퐹
+⃗
+)=0 
+ (c)  div(grad 휙)=
+휕
+2
+휙
+휕푥
+2
++
+휕
+2
+휙
+휕푦
+2
++
+휕
+2
+휙
+휕푧
+2
+=훻
+2
+휙  
+Note : Curl measures the rotatory effects of the vector field. 
+ (i) If curl F > 0 rotation is anticlockwise direction. 
+ (ii) If curl F < 0 rotation is clockwise direction. 
+ (iii) If there is no rotation of fluid anywhere then, 
+0F  =
+. Such a vector field is said to be irrotational or conservative. 
+ (iv) Angular velocity 
+1
+curl
+2
+v=
+ 
+(iv) Angle between two Intersecting Surfaces:  
+ If 휙
+1
+(
+푥,푦,푧
+)
+=푐
+1
+ & 휙
+2
+(
+푥,푦,푧
+)
+=푐
+2
+ are two surfaces intersecting at ‘P’, then the angle of Intersection ‘’ is given by  
+ 푐표푠휃=
+훻휙
+1
+|
+푝
+⋅훻휙
+2
+|
+푝
+|훻휙
+1
+|
+푝
+|⋅|훻휙
+2
+|
+푝
+|
+  
+ 3.9  Vector Integration:  
+3.9.1 Line Integrals 
+If 퐹
+⃗
+(
+푥,푦,푧
+)
+=퐹
+푥
+푖⃗+퐹
+푦
+푗⃗+퐹
+푧
+푘
+⃗⃗
+ is a continuous & differentiable Vector Point function at every point along the path C, then the 
+Integral of 퐹
+⃗
+(푥,푦,푧) from Point ‘A’ to point ‘B’ along a path is given by 
+∫
+퐹
+⃗
+⋅푑푟⃗
+퐵
+퐴,퐶
+  
+where 푟⃗=푥푖⃗+푦푗⃗+푧푘
+⃗⃗
+. 
+∫
+퐹
+⃗
+⋅푑푟⃗=
+퐵
+퐴,퐶
+∫
+(퐹
+푥
+푖⃗+퐹
+푦
+푗⃗+퐹
+푧
+푘
+⃗⃗
+)
+퐵
+퐴,퐶
+⋅(푑푥푖⃗+푑푦푗⃗+푑푧푘
+⃗⃗
+) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.33 
+Engineering Mathematics 
+ 
+Fig. 3.5. Line Integral 
+If 퐹
+⃗
+(푥,푦,푧) is an Irrotational Vector Point Function, (i.e., Curl 퐹
+⃗
+=0
+⃗⃗
+), then 
+B
+A
+F   d r
+
+is independent of the path between 
+points A and B. 
+ If 퐹
+⃗
+(푥,푦,푧) is an Irrotational Vector Point Function, then  
+ 
+∫
+퐹
+⃗
+⋅푑푟⃗=
+∫
+훻휙⋅푑푟⃗  where퐹
+⃗
+=훻휙
+퐵
+퐴
+퐵
+퐴
+ 
+   =휙
+|
+퐵
+−휙
+|
+퐴
+  
+3.9.2 Surface Integral 
+ If 퐹
+⃗
+(
+푥,푦,푧
+)
+=퐹
+푥
+푖⃗+퐹
+푦
+푗⃗+퐹
+푧
+푘
+⃗⃗
+ is a continuous & differentiable Vector Point function at every point on a surface ‘S’, then 
+the surface integral of 퐹
+⃗
+(푥,푦,푧) on the surface ‘S’ is given by 
+∫
+퐹
+⃗
+⋅푑푠⃗
+ 
+푆
+  
+ Where 푑푠⃗=푑푠.푛̂ and 푛̂ is the outward unit normal vector to the surface at 푑푠 and  
+ 푑푠= 
+푑푥.푑푦
+|푛
+̂
+.푘|
+̂
+=
+푑푦.푑푧
+|푛
+̂
+.푖|
+̂
+=
+푑푥.푑푧
+|푛
+̂
+.푗|
+̂
+: 
+3.9.3 Volume Integral 
+ If 퐹
+⃗
+(
+푥,푦,푧
+)
+=퐹
+푥
+푖⃗+퐹
+푦
+푗⃗+퐹
+푧
+푘
+⃗⃗
+ is a continuous & differentiable Vector Point function at every point over a volume V, then 
+the volume integral of 퐹
+⃗
+(푥,푦,푧) on the volume ‘V’ is given by 
+∫
+퐹
+⃗
+⋅푑푣
+ 
+푉
+. 
+ 
+3.9.4 Greens Theorem: (Connects closed line Integral to surface Integral) 
+ If 퐹
+⃗
+(
+푥,푦
+)
+=퐹
+푥
+푖⃗+퐹
+푦
+푗⃗ and if the first order derivatives of 퐹
+푥
+& 퐹
+푦
+are continuous at every point with in a region ‘R’ bounded 
+by a closed path ‘C’, then  
+∳
+퐹
+⃗
+푑푟⃗
+퐶
+=
+∮
+퐹
+푥
+푑푥+퐹
+푦
+푑푦=
+∫∫
+(
+휕퐹
+푦
+휕푥
+−
+휕퐹
+푥
+휕푦
+)푑푥푑푦
+푅퐶
+ 
+∳
+(
+푀푑푥+푁푑푦
+)
+=
+∫∫(
+휕푁
+휕푥
+−
+휕푀
+휕푦
+)
+푑푥푑푦
+푅퐶
+ 
+3.9.5 Gauss – Divergence Theorem: (Connects closed surface integral to a Volume Integral) 
+ If ‘S’ is a closed surface enclosing a volume ‘V’ and 퐹
+⃗
+ is continuous and differentiable at every point on the closed surface 
+‘S’, then the closed surface integral 
+∮
+퐹
+⃗
+.푑푠⃗
+ 
+푠
+= 
+∫∫∫
+푑푖푣 퐹
+⃗
+.푑푉
+ 
+푉
+ 
+3.9.6 Stokes Theorem: (Connect Closed line integral to surface Integral) 
+ If 퐹
+⃗
+  is continuous and differentiable at every point with in a region ‘R’ (on a surface S) bounded by a closed path ‘C’, 
+then 
+∳
+퐹
+⃗
+푑푟⃗
+퐶
+=
+∫∫
+푐푢푟푙 퐹
+⃗
+ 
+푅
+.푑푆
+⃗
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.34 
+Engineering Mathematics 
+3.10 Properties of Position Vector 
+Position vector of a point (x, y, z) in space 
+ˆ
+ˆˆ
+rxiyj    zk=  +  +
+. 
+    Length : 
+222
+rxyz=    +   +
+ 
+Results : 
+(a) (i) 
+rx
+xr
+
+=
+
+  (ii) 
+ry
+yr
+
+=
+
+ (iii) 
+rz
+zr
+
+=
+
+ 
+(b)  
+grad(  )
+r
+rr
+r
+=  =
+ 
+(c)  
+div(  ).3rr=  =
+ 
+(d)  
+curl(  )0rr= =
+ 
+(e)  
+(  )'(  )f  rf   rr   =    
+ 
+(f) 
+n
+Fr=
+ if and only if 
+1n
+Frr
+−
+=
+ 
+(g) 
+()
+.0
+n
+rr=
+ if n = –3 
+❑❑❑ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+1.35 
+4 
+LINEAR ALGEBRA 
+   Matrix 
+An array of elements in horizontal lines (Rows) and Vertical Lines (Columns) is called a Matrix. 
+Example: 퐴= 
+[
+푖푛푑푖푎
+푗푎푝푎푛
+]
+  
+4.1.1 Size of Matrix  
+ If a matrix has 'm' rows and 'n' columns, then we say that the size of the matrix is m × n (read as m by n) 
+ 퐴=
+[
+ 
+ 
+ 
+ 
+푎
+11
+푎
+12
+푎
+13
+.........푎
+1푛
+푎
+21
+푎
+22
+푎
+23
+.........푎
+2푛
+....
+....
+푎
+푚1
+푎
+푚2
+푎
+푚3
+.........푎
+푚푛
+]
+ 
+ 
+ 
+ 
+ ;  퐴=[푎
+푖푗
+]
+푚×푛
+  such that 1≤푖≤푚,1≤푗≤푛  and 푎
+푖푗
+=푓(푖,푗)  
+4.1.2 Addition of Matrices: 
+(i) Two matrices 퐴=[푎
+푖푗
+]
+푚×푛
+ & 퐵=[푏
+푖푗
+]
+푝×푞
+can be added only if m = p & n = q. 
+(ii) Matrix Addition is commutative (A + B = B + A) 
+(iii) Matrix Addition is Associative.  A + (B + C) = (A + B) + C 
+(iv) Existence of additive identity : If O be m × n matrix each of whose elements are zero. Then, A + O = A = O + A for every 
+m × n matrix A. 
+(v) Existence  of  additive  inverse  :  Let 
+ij
+mn
+Aa
+
+
+=
+
+then  the  negative  of  matrix  A  is  defined  as  matrix 
+ij
+mn
+a
+
+
+−
+
+ and  is 
+denoted by –A. 
+  Matrix –A is additive inverse of A. Because (–A) + A = O = A + (–A). Here O is null matrix of order m × n. 
+(vi) Cancellation laws holds good in case of addition of matrices, which is X = –A. 
+  A + X = B + X  A = B 
+ X + A = X + B  A = B 
+(vii) The equation A + X = 0 has a unique solution in the set of all m × n matrices. 
+4.1.3 Multiplication of Matrices:  
+The multiplication of two matrices 퐴=[푎
+푖푗
+]
+푚×푛
+ and 퐵=[푏
+푖푗
+]
+푝×푞
+ (⇒퐴퐵
+푚×푞
+) is feasible only if n = P. 
+ 퐴
+푚×푛
+⋅퐵
+푝×푞
+=퐶  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.36 
+Engineering Mathematics 
+ A = [
+푎
+11
+푎
+12
+푎
+13
+푎
+21
+푎
+22
+푎
+23
+푎
+31
+푎
+32
+푎
+33
+]
+3×3
+   퐵=[
+푏
+11
+푏
+12
+푏
+21
+푏
+22
+푏
+31
+푏
+32
+]
+3×2
+   퐴
+3×3
+× 퐵
+3×2
+  
+ ⇒ [
+푎
+11
+.푏
+11
++푎
+12
+⋅푏
+21
++푎
+13
+.푏
+31
+푎
+11
+푏
+12
++푎
+12
+푏
+22
++푎
+13
+푏
+32
+푎
+21
+.푏
+11
++푎
+22
+.푏
+21
++푎
+23
+.푏
+31
+푎
+21
+푏
+12
++푎
+22
+푏
+22
++푎
+23
+푏
+32
+푎
+31.
+푏
+11
++푎
+32
+⋅푏
+21
++푎
+33
+⋅푏
+31
+푎
+31
+푏
+12
++푎
+32
+푏
+22
++푎
+33
+푏
+32
+]
+3×2
+  
+4.1.4 Properties of Multiplication of Matrices: 
+(i) Matrix Multiplication Need not be commutative. 
+(ii) Matrix Multiplication is Associative (A(BC)) = ((AB)C) 
+(iii) Matrix Multiplication is distributive A(B + C) = (AB + AC) 
+(iv) The product of two Matrices 퐴
+푚×푛
+,퐵
+푛×푞
+ (i.e. 퐴퐵
+푚×푞
+) can be a zero matrix even if 퐴≠푂&퐵≠푂. 
+ Example:  퐴=
+[
+30
+00
+]
+;퐵=
+[
+00
+04
+]
+⇒퐴퐵=
+[
+00
+00
+]
+ 
+• For the multiplication of two matrices 퐴
+푚×푛
+ & 퐵
+푛×푞
+  
+  (i)  The No. of Multiplications required = m n q 
+  (ii)  The number of Additions required = m (n –1) q   
+4.2 Types of Matrices: 
+(1) Upper triangular Matrix: A matrix 퐴=[푎
+푖푗
+];1≤푖,푗≤푛 is said to be an upper triangular matrix if  
+      푎
+푖푗
+=0 ∀ 푖>푗  
+(2) Lower Triangular Matrix: A matrix 퐴=[푎
+푖푗
+]
+푛×푛
+;1≤푖,푗≤푛 is said to be a lower Triangular Matrix  
+      if 푎
+푖푗
+=0 ∀ 푖<푗 
+(3) Diagonal Matrix: A matrix 퐴=[푎
+푖푗
+],∀ 1≤푖,푗≤푛 is said to be a diagonal matrix if 푎
+푖푗
+=푂 ∀ 푖≠푗 
+ Example: 퐴=[
+푑
+1
+00
+0푑
+2
+0
+00푑
+3
+]. The diagonal Matrix is also denoted as 퐴=푑푖푎푔 
+[
+푑
+1
+,푑
+2
+,푑
+3
+]
+ 
+(4) Scalar Matrix: A Matrix 'A' = [푎
+푖푗
+] ;  1≤푖,푗≤푛  is said to be a scalar Matrix if 푎
+푖푗
+={
+퐾;푖=푗
+0;1≠푗
+  
+  If K = 1, then A → Identity Matrix,   
+  If K = 0, then A → Null Matrix. 
+(5) Idempotent Matrix: 
+ A Matrix '퐴
+푛×푛
+' is said to be an idempotent matrix if 퐴
+2
+=퐴. 
+ Example: 퐴=
+[
+4−1
+12−3
+]
+ 
+ ⇒퐴⋅퐴=
+[
+4−1
+12−3
+][
+4−1
+12−3
+]
+=
+[
+4−1
+12−3
+]
+=퐴 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.37 
+Engineering Mathematics 
+(6) Nilpotent Matrix: A matrix A is said to be nilpotent of class x or index if A
+x
+ = 0 and A
+x– 1
+  0 i.e. x is the smallest index 
+which makes A
+x
+ = 0. 
+ Example: The matrix A = 
+113
+526
+213
+
+
+
+
+−  −  −
+
+ is nilpotent class 3, since A  0 and A
+2
+  0, but A
+3
+ = 0. 
+(7) Orthogonal Matrix: A matrix A is said to be orthogonal if A.A
+T
+=I 
+ Example: 
+[
+cos휃−sin휃
+sin휃cos휃
+]
+ 
+(8) Involutory Matrix: A matrix A is said to be involutory if A
+2
+=I 
+ Example: 
+[
+23
+−1−2
+]
+ 
+4.3 Transpose of a Matrix: 
+ For  a  given  matrix =[푎
+푖푗
+]; 1≤푖≤푚,1≤푗≤푛,  we can say  that  'B'  where 퐵=[푏
+푖푗
+], 푖≤푖≤푛   푖≤푗≤푚  is  the 
+transpose of the Matrix 'A' if 푎
+푖푗
+=푏
+푗푖
+ 
+4.3.1 Properties of Transpose of a Matrix: 
+ (i) (퐴
+푇
+)
+푇
+=퐴  
+ (ii) (퐴퐵)
+푇
+=퐵
+푇
+⋅퐴
+푇
+ 
+ (iii) (퐾퐴)
+푇
+=퐾퐴
+푇
+ where 'K' is a scalar. 
+4.4 Conjugate of a matrix 
+ The matrix obtained by replacing each element of matrix by its complex conjugate. 
+4.4.1 Properties of conjugate matrix 
+ (a) 
+(A)A=
+ (b) 
+()A   BA   B+  =  +
+ 
+ (c) 
+()KAK A=
+ (d) 
+()ABAB=
+ 
+ (e) 
+AA=
+ if A is real matrix 
+  
+AA=−
+ if A is purely imaginary matrix 
+4.5 Transposed Conjugate of a Matrix 
+ The transpose of conjugate of a matrix is called transposed conjugate. It is represented by A
+
+. 
+ (a) 
+()AA
+
+=
+       (b) 
+()A   BAB
+        
++   =   +
+   
+ (c) (KA)
+
+ = 
+KA
+
+ (K : Complex number)  (d) 
+()ABB  A
+      
+=
+ 
+4.6 Trace of a Matrix  
+Trace is simply sum of all diagonal elements of a matrix.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.38 
+Engineering Mathematics 
+4.6.1 Properties of Trace of a matrix 
+Let A and B be two square matrices of order  and  is scalar then 
+1.  
+()(   )TrATr   A  =
+ 
+2.  
+()(   )(   )Tr  A   BTr  ATr  B+  =+
+ 
+3.  
+()()Tr  ABTr  BA=
+ [If both AB and BA are defined] 
+4.7.  Type of Real Matrix 
+(a) Symmetric matrix : (A)
+T
+ = A 
+(b) Skew symmetric matrix : (A
+T
+) = –A 
+(c) Orthogonal matrix : (A
+T
+ = A
+–1
+, AA
+T
+ = I) 
+Note : (a) If A and B are symmetric, then (A + B) and (A – B) are also symmetric. 
+  (b) For any matrix AA
+T
+ is always symmetric. 
+ (c) For any matrix, 
+2
+T
+AA
+
++
+
+
+
+ is symmetric and 
+2
+T
+AA
+
+−
+
+
+
+ is skew symmetric. 
+ (d) For orthogonal matrices, |A| =  1 
+ (e) We can write any matrix A as a sum of symmetric and skew symmetric matrix 
+22
+TT
+A    AA    A
+A
++−
+=+
+ 
+4.8. Type of complex matrix 
+ (a)  Hermitian matrix : (A
+
+ = A) 
+ (b)  Skew-Hermitian matrix: A
+
+ = –A 
+ (c)  Unitary matrix : (A
+
+ = A
+–1
+, AA
+
+ = I) 
+Note : (a) 
+2
+AA
+
++
+ is Hermitian and 
+2
+AA
+
+−
+ is skew Hermitian matrix. 
+  (b) We can write any matrix as a sum of Hermitian and skew Hermitian matrix 
+22
+A    AA    A
+A
+
++−
+=+
+ 
+4.9.  Determinant  
+The summation of the product of elements of a row(or) column of a matrix with their corresponding Co-factors. 
+퐴⋅푎푑푗(퐴)=|퐴|⋅I 
+Determinant can be calculated only if matrix is a square matrix. 
+Suppose, we need to calculate a 3 × 3 determinant, 
+      
+333
+112233
+111
+()()()
+jjjjjj
+jjj
+a   cof  aa   cof  aa   cof  a
+===
+ ===
+
+ 
+ We can calculate determinant along any row or column of the matrix. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.39 
+Engineering Mathematics 
+4.9.1 Properties of Determinants 
+(i)  If 'A' is a Square Matrix of size ' 푛×푛 ' and 'k' is a Scalar then 
+ 
+|
+퐾⋅퐴
+푛×푛
+|
+=퐾
+푛
+⋅
+|
+퐴
+푛×푛
+|
+ 
+(ii)  |푎푑푗(퐴)|=|퐴|
+(푛−1)
+ 
+(iii)  |푎푑푗(푎푑푗
+(
+퐴
+)
+)|=
+(
+|퐴|
+)
+(
+푛−1
+)
+2
+ 
+(iv)  |퐴퐵|=|퐴|⋅|퐵| 
+(v) 
+|
+(퐴퐵)
+푇
+|
+=
+|
+퐵
+푇
+|
+⋅
+|
+퐴
+푇
+|
+ 
+(vi) If two rows (or) two columns of a determinant are interchanged, then the determinant changes its sign. 
+(vii) The determinant of an upper triangular Matrix/a lower triangular Matrix/a diagonal Matrix is the product of the 
+principal  diagonal elements of the Matrix. 
+(viii)  The determinant of Every Skew-Symmetric Matrix of odd order (퐴
+푛×푛
+)(′푛′
+′
+푖푠 표푑푑) is zero. 
+(ix) The determinant of an orthogonal Matrix 퐴
+푛×푛
+ is ±1 
+(x) The determinant of an Idempotent Matrix is either 0 (or) 1. 
+(xi) The determinant of an Involuntary Matrix is ±1  
+(xii) The determinant of a Nilpotent Matrix is always zero. 
+(xiii) If the product of two Non-zero Matrices 퐴
+푛×푛
+≠0;퐵
+푛×푛
+≠0 is a zero Matrix 
+(
+(퐴퐵)
+푛×푛
+=0
+)
+, then both 
+|
+퐴
+|
+=0 & 
+|퐵|=0.  
+(xiv) If two rows (or) two columns of a Matrix are either equal or Proportional, then the determinant of the Matrix is equal to 
+zero. 
+(xv) The number of terms in the general expansion of an 'n × n' determinant is 푛! 
+(xvi) Value of the determinant is invariant under row and column interchange i.e., 
+T
+AA=
+ 
+(xvii) If any row or column is completely zero, then |A| = 0. 
+(xviii) If any single row or column of the matrix is multiplied by k then the determinant the of new matrix = K|A| 
+(xix) In a determinant the sum of the product of the element of any row or column with its cofactor gives a determinant of 
+the matrix. 
+(xx)  In determinant the sum of the product of the element of any row or column with a cofactor of another row or column 
+will give zero. 
+(xxi) |AB| = |A| × |B| 
+(xxii) Elementary operations don’t effect the determinant that is 
+iij
+R   R   KR
+AB
+=+
+⎯⎯⎯⎯⎯→
+ then |A| = |B|  
+  
+iij
+C   C   KC
+AB
+=+
+⎯⎯⎯⎯⎯→
+ then |A| = |B| 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.40 
+Engineering Mathematics 
+4.10. Minors, Cofactor and Adjoint of a Matrix 
+Minor of an element is equal to the determinant of the remaining elements of the matrix, after excluding the row and column 
+containing the particular element. The cofactor of an element can be calculated from the minor of the element. The cofactor of 
+an element is equal to the product of the minor of the element, and -1 to the power of position values of row and column of the 
+element. 
+   Cofactor of an Element 
+()
+1
+ij+
+= −    
+ Minor of an Element 
+Here i and j are the positional values of the row and column of the element. 
+Example : 
+ If   
+111213
+212223
+313233
+aaa
+aaa
+aaa
+=
+ 
+ Minor of element 
+21
+a
+: 
+1213
+21
+3233
+aa
+M
+aa
+=
+ 
+ Co-factor of an element, 
+()
+1
+ij
+ijij
+aM
++
+=−
+ 
+ • To design co-factor matrix, we replace each element by its co-factor. 
+ • Adjoint of a matrix = transpose of cofactor matrix 
+ • 
+1
+()
+||
+Adj  A
+A
+A
+−
+=
+ 
+4.11 Inverse of a matrix 
+Inverse of a matrix only exists for square matrices. 
+      
+()
+1
+()Adj  A
+A
+A
+−
+=
+ and 
+0A
+ 
+Properties: 
+ (a)  
+11
+AAA   A    I
+−−
+==
+ 
+ (b)  
+111
+()ABB   A
+−−  −
+=
+ 
+ (c)  
+1111
+()ABCC   B   A
+−−  −  −
+=
+ 
+ (d)  
+11
+()()
+TT
+AA
+−−
+=
+ 
+ (e)  The inverse of 2 × 2 matrix should be remembered, 
+  
+()
+1
+1
+a    bdb
+c    dca
+ad    bc
+−
+−
+    
+=
+    
+−
+−
+    
+ 
+  (i)  Interchange the diagonal elements and put negative sign on the rest. 
+  (ii)  Divide by determinant. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.41 
+Engineering Mathematics 
+4.12. Rank of a Matrix 
+•  The rank of the matrix refers to the number of linearly independent rows or columns in the matrix. ρ(A) is used to denote 
+the rank of matrix A.   
+•  A matrix is said to be of rank zero when all of its elements become zero.  
+•  The rank of the matrix is the dimension of the vector space obtained by its columns.  
+•  The rank of a matrix cannot exceed more than the number of its rows or columns. The rank of the null matrix is zero. 
+•  The nullity of a matrix is defined as the number of vectors present in the null space of a given matrix. In other words, it 
+can be defined as the dimension of the null space of matrix A called the nullity of A. Rank + Nullity is the number of all 
+columns in matrix A. 
+ A real Number 'r' is said to be the rank of a matrix '퐴
+푚×푛
+' if  
+(1)  There is at least one square sub-matrix of A of order r whose determinant is not equal to zero.   
+(2)  If the matrix A contains any square sub-matrix of order (r + 1) and above, then the determinant of such a matrix 
+should be zero. 
+ It is mathematically denoted by 휌(퐴)=푟  
+4.12.1 Properties of Rank of a Matrix: 
+(i) 휌(퐴
+푚×푛
+)≤(푚,푛) 
+(ii) 휌(퐴퐵)≤푚푖푛
+{
+휌(퐴),휌(퐵)
+}
+ 
+(iii) Rank of transpose of matrix is equal to rank of matrix  
+(iv) Elementary operations do-not affect the rank the matrix  
+(v) 휌(퐴+퐵)≤
+{
+휌
+(
+퐴
+)
++휌(퐵)
+}
+ 
+4.12.2 Row Echelon Form 
+A Matrix 퐴
+푚×푛
+ is said to be in row-echelon form if  
+(i) Number of zeroes before the 1
+st
+ Non-zero element in any row is less than the number of such zeroes in its succeeding row. 
+(ii) Zero rows (if any) should lie at the bottom of the Matrix. 
+ 휌(퐴
+푚×푛
+)= Number of non-zero rows in the Row-Echelon form of A. 
+  System of Equations: 
+The given system of equations 
+   푎
+11
+푥
+1
++푎
+12
+푥
+12
++푎
+13
+푥
+3
+=푏
+1
+  
+   푎
+21
+푥
+1
++푎
+22
+푥
+2
++푎
+23
+푥
+3
+=푏
+2
+    
+   푎
+31
+푥
+1
++푎
+32
+푥
+2
++푎
+33
+푥
+3
+=푏
+3
+  
+can be written in Matrix form as 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.42 
+Engineering Mathematics 
+ [
+푎
+11
+푎
+12
+푎
+13
+푎
+21
+푎
+22
+푎
+23
+푎
+31
+푎
+32
+푎
+33
+][
+푥
+1
+푥
+2
+푥
+3
+]=[
+푏
+1
+푏
+2
+푏
+3
+] 
+ [
+푎
+11
+푎
+12
+푎
+13
+푎
+21
+푎
+22
+푎
+23
+푎
+31
+푎
+32
+푎
+33
+][
+푥
+1
+푥
+2
+푥
+3
+]=[
+푏
+1
+푏
+2
+푏
+3
+] 
+                  Ax = B 
+              Coefficient           Variable     Constants 
+          Matrix               Matrix         Matrix  
+ The system Ax = B is said to be a homogeneous system if B = 0. 
+ The system of Ax = B is said to be a non-homogeneous system if 퐵≠0. 
+4.13.1 Consistency of a non-homogeneous system of Equations: 
+For the above system of non – homogeneous equations, Ax = B; Augmented Matrix = [A/B] = [
+푎
+11
+푎
+12
+푎
+13
+푏
+1
+푎
+21
+푎
+22
+푎
+23
+푏
+2
+푎
+31
+푎
+32
+푎
+33
+푏
+3
+] 
+(i) If 휌(퐴)=휌(퐴/퐵)= Number of unknowns, then the system Ax = B has a unique solution. 
+(ii) If 휌(퐴)=휌(퐴/퐵)< Number of unknowns, then the system has infinitely many solutions. 
+(iii) If 휌(퐴)≠휌(퐴/퐵), then the system has no solution.  
+ Number of linearly independent solutions for a system of 'n' equations given by Ax = B is 푛−휌(퐴) 
+4.13.2 Consistency of Homogeneous System of Equations: 
+ 푎
+11
+푥+푎
+12
+푦+푎
+13
+푧=0  
+ 푎
+21
+푥+푎
+22
+푦+푎
+23
+푧=0  
+ 푎
+31
+푥+푎
+32
+푦+푎
+33
+푧=0  
+      Ax = 0⇒[
+푎
+11
+푎
+12
+푎
+13
+푎
+21
+푎
+22
+푎
+23
+푎
+31
+푎
+32
+푎
+33
+]
+[
+푥
+푦
+푧
+]
+=[
+0
+0
+0
+] [퐴/퐵]=[
+푎
+11
+푎
+12
+푎
+13
+0
+푎
+21
+푎
+22
+푎
+23
+0
+푎
+31
+푎
+32
+푎
+33
+0
+]
+3×4
+ 
+ If 휌(퐴)=휌(퐴/퐵)=푛 (푖.푒 |퐴|≠0); the system has a unique solution.  
+ (Trivial solution; x = 0, y = 0, z = 0)  
+ If 휌(퐴)=휌(퐴/퐵)<푛(|퐴|=0); the system has infinitely many solutions  (Non-trivial solution exists for the system). 
+4.14 Linear Combination of Vectors: 
+If 푥
+1
+,푥
+2
+,푥
+3
+,......,푥
+푛
+ are  'n'  rows  vectors,  then  the  combination 푘
+1
+푥
+1
++푘
+2
+푥
+2
++푘
+3
+푥
+3
++.....+푘
+푛
+푥
+푛
+ is  called  a  linear   
+combination of 푥
+1
+,푥
+2
+,....,푥
+푛
+(푘
+1
+,푘
+2
+,푘
+3
+,.....푘
+푛
+ are scalars) 
+(1)  The linear combination 푘
+1
+푥
+1
++푘
+2
+푥
+2
++푘
+3
+푥
+3
++.....+푘
+푛
+푥
+푛
+is said to be linearly dependent if 푘
+1
+푥
+1
++푘
+2
+푥
+2
++
+푘
+3
+푥
+3
++.....+푘
+푛
+푥
+푛
+=0 when 푘
+1
+,푘
+2
+,푘
+3
+,.....,푘
+푛
+ (NOT All zeroes).  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.43 
+Engineering Mathematics 
+ If 푥
+1
+=
+[
+푎
+1
+푏
+1
+푐
+1
+]
+;푥
+2
+[
+푎
+2
+푏
+2
+푐
+2
+]
+;푥
+3
+=
+[
+푎
+3
+푏
+3
+푐
+3
+]
+, then the vectors 푥
+1
+,푥
+2
+,푥
+3
+are said to be linearly dependent if 
+|
+푎
+1
+푏
+1
+푐
+1
+푎
+2
+푏
+2
+푐
+2
+푎
+3
+푏
+3
+푐
+3
+|=0. 
+(2)  The combination 푘
+1
+푥
+1
++푘
+2
+푥
+2
++......+푘
+푛
+푥
+푛
+is said to be linearly independent if 푘
+1
+푥
+1
++푘
+2
+푥
+2
++........+푘
+푛
+푥
+푛
+=0 when 
+푘
+1
+=푘
+2
+=푘
+3
+=.....푘
+푛
+=0 
+ 4.14.1 Eigen Values and Eigen Vectors 
+For any square Matrix 퐴
+푛×푛
+, the equation |퐴−휆퐼|=0 where '' is a scalar is called the characteristic equation. 
+ The roots of the characteristic equation of a Matrix are called Eigen Values. 
+4.14.2 Properties of Eigen Values 
+(i) If 휆
+1
+,휆
+2
+,휆
+3
+,......,휆
+푛
+are 'n' Eigen Values of 퐴
+푛×푛
+, then  
+ (a)  Sum of Eigen Values of 'A' = 휆
+1
++휆
+2
++휆
+3
++....+휆
+푛
+=
+∑
+휆
+푖
+=푡푟푎푐푒(퐴)
+푛
+푖=1
+ = Sum of Principal diagonal elements 
+ (b)  Product of all the Eigen Values of 'A' = 휆
+1
+⋅휆
+2
+⋅휆
+3
+⋅......휆
+푛
+=
+∏
+휆
+푖
+=|퐴|
+푛
+푖=1
+ 
+ (c)   Eigen Values of  퐴
+푚
+ are 휆
+1
+푚
+,휆
+2
+푚
+,휆
+3
+푚
+,......휆
+푛
+푚
+ 
+ (d)  Eigen Values of adj(A) are 
+|퐴|
+휆
+1
+,
+|퐴|
+휆
+2
+,
+|퐴|
+휆
+3
+,......,
+|퐴|
+휆
+푛
+ 
+ (e)  Eigen Values of A & A
+T
+ 
+are the same. 
+ (f)  Eigen Values of 푘
+1
+퐴+푘
+2
+퐼 (Where 푘
+1
+and 푘
+2
+are scalar) are  
+푘
+1
+휆
+1
++푘
+2
+,푘
+1
+휆
+2
++푘
+2
+,푘
+1
+휆
+3
++푘
+2
+,푘
+1
+휆
+4
++푘
+2
+,........푘
+1
+휆
+푛
++푘
+2
+ 
+(ii) '0' is always an Eigen Value of an odd-order Skew-Symmetric Matrix. 
+(iii) Eigen Values of a Real Symmetric Matrix are always real. 
+(iv) Eigen Values of the Skew-Symmetric Matrix are either zero (or) purely Imaginary. 
+(v) The Eigen values of an Orthogonal Matrix are of unit modulus. 
+(vi) If the sum of all the elements in a row (or Column) is constant (= k) for all the rows (or columns) in the matrix 
+respectively, then 'k' is an Eigen Value of the Matrix. 
+ Example: If 퐴=[
+푎
+1
+푏
+1
+푐
+1
+푎
+2
+푏
+2
+푐
+2
+푎
+3
+푏
+3
+푐
+3
+] and if 푎
+1
++푏
+1
++푐
+1
+=푎
+2
++푏
+2
++푐
+2
+=푎
+3
++푏
+3
++푐
+3
+=푘,   
+ then 'k' is an Eigen Value of 'A'. 
+(vii) The Eigen Values of an upper triangular Matrix, a lower triangular Matrix, a diagonal Matrix are the Principal diagonal 
+elements of the Matrix. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.44 
+Engineering Mathematics 
+   Eigen Vector 
+A non-zero column vector 푋
+푛×1
+ is said to be an Eigen Vector of 퐴
+푛×푛
+ corresponding to the Eigen Value '',  
+if 퐴푋=휆푋(푋≠0). 
+4.15.1 Properties of Eigen Vectors: 
+(i) Eigen Vectors of A & A
+T
+ are not the same. 
+(ii) Eigen Vectors of A & A
+M
+ are same. 
+(iii) The Eigen Vectors of a Real Symmetric Matrix are always orthogonal. 
+(iv) The number of linearly independent Eigen Vectors of '퐴
+푛×푛
+' is equal to the number of distinct Eigen Values of '퐴
+푛×푛
+'. 
+4.15.2 Cayley Hamilton Theorem: 
+Every Matrix satisfies its characteristic equation. 
+This means that, if 
+1
+011
+...0
+n
+nn
+cccc
+−
+−
+ +   +  +   +  =
+is the characteristic equation of a square matrix A of order n, then 
+1
+011
+...0
+nn
+nn
+c  Ac AcA   c I
+−
+−
+++  ++   =
+ ...(i) 
+Note: When 휆 is replaced by A in the characteristic equation, the constant term c
+n
+ should be replaced by c
+n
+I to get the result 
+of the Cayley-Hamilton theorem, where I is the unit matrix of order n. 
+  Also, 0 in the R.H.S. of (i) is a null matrix of order n. 
+4.16.  Subspace (Basis of Dimensions) 
+4.16.1 Vector 
+An ordered n-tuple of numbers is called an n-vector. 
+4.16.2 Linearly Independent and Dependent Vector 
+Let X
+1
+ and X
+2
+ be the non-zero vectors: 
+• {x
+1
+, x
+2
+, ...., x
+k
+} are linearly independent if r
+1
+x
+1
+ + r
+2
+x
+2
+ + ... + r
+k
+ x
+k
+ = 0 only for r
+1
+ = r
+2
+ = ... + r
+k 
+ = 0. 
+• The vectors x
+1
+, r
+2
+, ...., x
+k
+ = are linearly dependent if they are not linearly independent; that is, if there exist scalars r
+1
+, r
+2
+, 
+... , r
+k
+ which are not all zero such that 
+ r
+1
+x
+1
+ + r
+2
+x
+2
+ + .... + r
+k 
+x
+k
+ = 0 
+Note:  Let X
+1
+, X
+2
+.......X
+n
+ be ‘n’ vector of matrix A. 
+  • If rank (A) = number of vectors then vector X
+1
+, X
+2
+.....X
+n
+ are linearly independent. 
+  • If rank (A) ≠ number of vectors then vector X
+1
+, X
+2
+ ..... X
+n
+ are linearly dependent.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.45 
+Engineering Mathematics 
+4.16.3 Vector Space R
+n
+: 
+If n positive integer, then an ordered n-tuple is a sequence of n real numbers (α
+1
+, α
+2
+,.... α
+n
+). the set of all ordered n-tuples is 
+called n-space and is denoted by ℝ
+n
+. 
+4.16.4 Subspaces of an N-vector space V
+n 
+A non-empty set S, of vectors of V
+n
+(F) ,is called a subspace of V
+n
+(F), if 
+• 휉
+1
+, 휉
+2
+ are any two members of S, then ξ
+1
+ + ξ
+2
+ is also a member of S; and 
+• 휉 is a member of S, and k is a scalar then kξ is also a member of S. 
+ Briefly, we may say that a set S of vectors V
+n
+(F) is a subspace of V
+n
+(F) it closed w.r.t. the compositions of “addition” and 
+"multiplication with scalars". 
+ Every subspace of V
+n
+ contains the zero vector; being the product of any vector with the scalar zero. 
+4.16.5 Construction of Subspaces 
+• A subspace Spanned by a Set of Vectors: A subspace that arises as a set of all linear combinations of any given set of 
+vectors is said to be spanned by the given set of vectors. 
+• Basis of a subspace: A set of vectors is said to be a basis of a subspace, if 
+➢ The subspace is spanned by the set, and 
+➢ The set is linearly independent. 
+Note: If we have N vectors and they are independent then they span N-dimension space. But if they are dependent then they 
+span only a subspace of N-dimension space. 
+4.16.6 Orthogonality of Vectors 
+• Two vectors are orthogonal if each is non-zero and 
+12
+0
+T
+XX=
+ 
+• If n vectors X
+1
+, X
+2
+ .... X
+n
+ each of n dimensions is orthogonal then they are surely linearly independent and form the basis 
+for n-dimension space. 
+• The set of the vector is orthonormal if they are orthogonal and have unit magnitude. 
+4.17.  Similar Matrices 
+• Two matrix A and B are similar if there exist a non singular matrix P such that B = P
+–1
+AP 
+• Similar matrix has same eigen valves 
+• If A is similar to B then B is also similar to A 
+• If A is similar to B and B is similar to C then A is similar to C. 
+4.18. Diagonalization of a matrix: 
+Finding a matrix D which is a diagonal matrix and which is similar to A is called diagonalization i.e., we wish to find a non-
+singular matrix M such that A = M
+–1
+DM where D is a diagonal matrix. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.46 
+Engineering Mathematics 
+ Condition for a Matrix to be Diagonalizable 
+1. A  necessary  and  sufficient  condition  for  a  matrix  A
+n  ×  n
+ to  be  diagonalizable  is  that  the  matrix  must  have  n  linearly 
+independent eigen vectors. 
+2. A sufficient (but not necessary) condition for a matrix A
+n × n
+ to be diagonalizable is that the matrix must have n linearly 
+independent eigen values. 
+ This is because if a matrix has n linearly independent eigen values then it surely has n linearly independent eigen vectors 
+(although the converse of this is not true). 
+ 
+❑❑❑ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.47 
+Engineering Mathematics 
+5 
+PROBABILITY 
+AND STATISTICS 
+5.1.  Random Experiment:  
+The experiment in which the outcome is uncertain is called a Random Experiment (RE). 
+Example: Flipping a coin, rolling a pair of dice, Picking a ball from a bag. 
+5.1.1 Sample Space 
+The set contains all the possible outcomes of a random experiment. It is denoted by 'S'. 
+If RE is flipping a coin, S = {Head, Tail} 
+If RE is rolling a dice, S = {1,2,3,4,5,6} 
+5.2.  Event 
+Any subset of sample space 'S' is called an Event. 
+Example:  If RE is flipping a coin, then the occurring of a Head is an Event. 
+    If RE is rolling a dice, then getting an odd number is an Event.   
+5.2.1 Probability of an Event: 
+If 'A' is any event with in the sample space 'S' of a Random experiment, then the probability of event 'A' is given by   
+     
+()
+()
+()
+No. of outcomes favouring event 'A' to happen
+Total number of elements in 'S'
+nA
+PA
+nS
+==
+  
+Probability of getting an Even Number when a dice is rolled. 
+   P(Even Number) = 
+3
+6
+=0.5 
+        S = {1,2,3,4,5,6},   
+        A = {2,4,6} 
+Note: Probability can also be expressed as odds if favour and odds against an event: 
+  •  Odds is favour of an event: 
+   Odds in favour of an event = Number of successes : Number of failures = m: (n – m). 
+  •  Odds against an event: 
+   Odds against an event = Number of failures : Number of successes = (n – m) : m. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.48 
+Engineering Mathematics 
+5.2.2 Axioms Probability: 
+(i)  If 'A' is any event with in the sample space 'S' of a RE, then 0≤푃(퐴)≤1 
+ 
+0n(A)n(S)
+n(S)n(S)n(S)
+
+
+ 
+ 0≤푃(퐴)≤1  
+(ii) P(S) = 1 
+ When a RE is conducted the experiment yields a possible outcome. 
+5.2.3 Types of Events: 
+(i)  Mutually Exclusive Events: 
+ If A, B are two events within a sample space 'S', then A & B are said to be mutually exclusive if A∩B = . 
+Example: If  'A'  is  the  event  of getting  a  prime  number  when  a  dice is  rolled  and  'B'  is  the  event  of getting  a  composite 
+number when a dice is rolled then  
+   S = {1,2,3,4,5,6}, A = {2,3,5},B = {4,6}  A  B =   P(A  B) = 0 
+ 
+Fig. 5.1. Mutually exclusive event 
+(ii) Mutually Exhaustive Events: 
+ If 'A', and 'B' are two events within a sample space 'S', then 'A' & 'B' are said to be mutually   exhaustive if A  B = S   
+Example:  If 'A' is the event of getting an odd number when a dice is rolled and 'B' is the event of getting an Even 
+Number, then 
+         = S  
+       S = {1,2,3,4,5,6} 
+       A = {1,3,5}, B ={2,4,6}                   
+         B = S 
+ 
+Fig. 5.2. Mutually exhaustive event 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.49 
+Engineering Mathematics 
+(iii) Independent Events: 
+ Two events 'A' & 'B' within the sample space 'S' (or) within two different sample spaces 'S
+1
+' & 'S
+2
+' are said to be independent 
+if P(  ) = P(A)  P(B). 
+ 
+Fig. 5.3. Independent Event 
+(iv) Impossible Event (): 
+ The event with zero probability is called an Impossible Event P() = 0. 
+5.3.  Addition Theorem of Probability 
+If A, and B are two events with a sample space 'S' of a Random Experiment, then 
+    P(  ) = P(A) + P(B) – P(  ) 
+    
+n(A    B)n(A)    n(B)    n(A    B)
+n(S)n(S)n(S)n(S)
+
+=+
+−
+ 
+ 
+Fig. 5.4. Addition theorem 
+     P(A  B) = P(A) + P(B) – P(A  B)   
+ When  A, and B are mutually exclusive events, A  B = . 
+      P(A  B) = 0 
+     P(  ) = P(A) + P(B) 
+• If E
+1
+, E
+2
+, E
+3
+,.......E
+n
+ are mutually exclusive events (E
+i 
+ 
+j 
+= ), then P(E
+1
+  E
+2
+  E
+3
+  .......  E
+n
+ ) = 
+∑
+푃
+(
+퐸
+푖
+)
+푛
+푖=1
+ 
+ = P(E
+1
+) + P(E
+2
+) + P(E
+3
+) + ...... p(E
+n
+) 
+ 5.3.1.   De Morgan’s Law 
+ • 
+()
+C
+CC
+ABAB    =   
+ 
+ • 
+()
+C
+CC
+ABAB    =   
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.50 
+Engineering Mathematics 
+ 5.3.2. Union and Intersection properties 
+For any two events A and B:   
+(a) 
+()(   )(   )()P  ABP  AP BP  AB  =+−   
+ 
+(b) 
+()   1()
+cc
+P  ABP  A    B   = −   
+ 
+For any three events A, B and C: 
+(a) 
+()(   )(   )(   )()()()()P  AB    CP  AP BP CP  ABP B    CP CAP  AB    C    =++−     −     −     +     
+ 
+(b) 
+()   1()
+ccc
+P  ABCP  A    B    C     = −     
+ 
+5.3.3 Conditional Probability:  
+The probability of the happening of event 'A' when it is known that event 'B' has already occurred is given by P(A/B) 
+푃(퐴/퐵)=
+푃(퐴∩퐵)
+푃(퐵)
+=
+푛(퐴∩퐵)
+푛(퐵)
+ 
+5.3.4 Joint Probability: 
+ 
+➢ f(x, y) is the joint probability of two RV’S x, y. 
+➢ If the two RV are Independent then 
+ f(x, y) = f(x) ⋅ f(y) 
+➢ 
+(,)(  ,   )
+bd
+ac
+P a    x    b  cy    df  x  y dydx         =
+
+ 
+➢ 
+(  )(  ,   )f  xf  x  y  dy
+
+−
+=
+
+ 
+➢ 
+(  )(  ,   )f   yf  x  y  dx
+
+−
+=
+
+ 
+5.3.5 Multiplication Theorem of Probability: 
+If A, and B are two events within a sample space 'S', then P(A/B)  P(B) = P(B/A)  P(A) 
+ P(A/B) = 
+푃(퐴∩퐵)
+푃(퐵)
+⇒푃(퐴∩퐵)=푃(퐴/퐵)⋅푃(퐵)→(1)   
+ P(B/A) = 
+푃(퐵∩퐴)
+푃(퐴)
+⇒푃(퐵∩퐴)=푃(퐵/퐴)⋅푃(퐴)→(2) 
+ From (1) & (2)  
+ 푃(퐴/퐵)⋅푃(퐵)=푃(퐵/퐴)⋅푃(퐴)  
+5.3.6 Total Theorem of Probability: 
+ If  E
+1
+,  E
+2
+,  E
+3
+,......E
+n
+ are  'n'  mutually  exclusive (퐸
+푖
+∩퐸
+푗
+=휙;∀푖≠푗) and  collectively  exhaustive  event (E
+1
+  E
+2
+  E
+3
+ 
+ ......  E
+n
+ = S) and 'A' is any event with in the sample space 'S', then 
+ 푃(퐴)=푃(퐸
+1
+)⋅푃(퐴/퐸
+1
+)+푃(퐸
+2
+)⋅푃(퐴/퐸
+2
+)+......+푃(퐸
+푛
+)⋅푃(퐴/퐸
+푛
+) 
+1
+(   )(    )    (   /)
+n
+ii
+i
+P  AP E    P  A   E
+=
+=
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.51 
+Engineering Mathematics 
+5.3.7. Baye's Theorem: 
+If  E
+1
+,E
+2
+,E
+3
+,......E
+n
+ are  mutually  exclusive (퐸
+푖
+∩퐸
+푗
+=휙∀푖≠푗) and  collectively  exhaustive  event (퐸
+1
+∪퐸
+2
+∪퐸
+3
+∪.......∪
+퐸
+푛
+=푆) and 'A' is any event with in the sample space 'S', then 
+  
+푃(퐸
+푖
+/퐴)=
+푃(퐸
+푖
+)⋅푃(퐴/퐸
+푖
+)
+∑
+푃(퐸
+푖
+)⋅푃(퐴/퐸
+푖
+)
+푛
+푖=1
+ 
+ 
+Fig. 5.5. Baye’s theorem 
+5.3.8.  Use of permutation and combination 
+What is combination? 
+A combination of ‘n’ objects taken ‘r’ at a time (r-combination of ‘n’ objects is an unordered selection of ‘r’ of the objects). 
+Number of ways of combining of ‘r’ object out of ‘n’ objects without repetition 
+      
+!
+()!  !
+r
+n
+C
+n   r   r
+
+=
+−
+ 
+What is permutation? 
+A combination of ‘n’ objects taken ‘r’ at a time (r-combination of ‘n’ objects is an ordered selection of ‘r’ of the objects). 
+Number of ways of selection of r object out of n objects without repetition 
+      
+!
+()!
+r
+n
+P
+nr
+
+=
+−
+ 
+ Result : 
+(i) 
+nn
+rn  r
+CC
+−
+=
+ 
+(ii)  
+012
+....2
+nnnnn
+n
+CCCC+   +   +  +   =
+ 
+(iii)  
+1
+024
+....2
+nnnn
+CCC
+−
++   +   +  +=
+ 
+(iv)  
+1
+135
+....2
+nnnn
+CCC
+−
++   +   +  +=
+ 
+(v)  
+1
+012
+0.1.2.......2
+nnnnn
+n
+CCCn  Cn
+−
++++  +=
+ 
+Permutations with Repetition  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.52 
+Engineering Mathematics 
+The number of permutations of n objects, where p objects are of one kind, q objects are of another kind and the rest, if any, are 
+of a different kind is 
+!!
+n
+r
+P
+pq
+.  
+Combination with Repetition 
+Number of combinations of ‘n’ distinct things taking ‘r’ at a time when each thing may be repeated any number of times is 
+given by
+1nr
+r
+C
+−+
+. 
+5.4 . STATISTICS 
+Statistics → Collection and  Analysis of Data 
+ 
+5.4.1.   Analysis of Ungrouped Data: 
+If x
+1
+, x
+2
+, x
+3
+, .......,x
+n
+ are 'n' observations, then  
+(1)  The range of the data = R = max{x
+1
+, x
+2
+, .......,x
+n
+} – min{x
+1
+, x
+2
+, x
+3
+, ....., x
+n
+}  
+(2)  Arithmetic mean : Mean of the data is equal to sum of observaions divided by the total number of observations. 
+푥̄(표푟)휇=
+푥
+1
++푥
+2
++......+푥
+푛
+푛
+=
+∑
+푥
+푖
+푛
+푖=1
+푛
+=푥̄=휇 
+• The mean of 1
+st
+ 'n' natural numbers = 
+(
+푛(푛+1)
+2
+)
+푛
+=
+푛+1
+2
+ 
+• The mean of 1
+st
+ 'n' odd numbers = 
+푛
+2
+푛
+=푛 
+• The mean of 1
+st
+ 'n' even numbers = n +1 
+5.4.2 Median: 
+The middle most observation of the data 
+(
+푥
+1
+,푥
+2
+,푥
+3
+,.....푥
+푛
+)
+ When the data is arranged in either ascending or descending order. 
+If 푥
+1
+,푥
+2
+,푥
+3
+,푥
+4
+,.......푥
+푛
+ are 'n' observations that are arranged in ascending/descending order then 
+(i)  Median of the Data = 
+(
+푛+1
+2
+)
+푡ℎ
+observation, if 'n' is odd. 
+(ii)  Median of the Data = Mean of 
+(
+푛
+2
+)
+푡ℎ
+&
+(
+푛
+2
++1
+)
+푡ℎ
+observations, if 'n' is even. 
+5.4.3 Mode: 
+The observation with highest frequency is called mode. 
+Any Data with two Modes is called → Bimodel Data 
+If 푥
+1
+,푥
+2,
+푥
+3
+,......,푥
+푛
+ are 'n' data points, 푥̄=휇=
+푥
+1
++푥
+2
++.......+푥
+푛
+푛
+  
+Mean Deviation of the observation (푥
+푖
+)=푑
+푖
+=푥
+푖
+−푥̄ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.53 
+Engineering Mathematics 
+ 
+Fig. 5.6. Discrete data 
+Sum of derivations of all the observations = 훴푑
+푖
+=(푥
+1
+−푥̄)+(푥
+2
+−푥̄)+......0+(푥
+푛
+−푥̄) 
+=훴푑
+푖
+=(푥
+1
++푥
+2
++.....+푥
+푛
+)−푛푥̄ 
+훴푑
+푖
+=0 
+The sum of mean deviations of all the observations is equal to zero. 
+5.4.4 Absolute Mean Deviation: 
+If x
+1
+, x
+2
+, x
+3
+,.......,x
+n
+ are 'n' data points with Mean = 푥̄, then the absolute mean deviation of 푥
+푖
+ about 푥̄ is given by |푑
+푖
+|=|푥−푥̄| 
+The sum of absolute mean derivations of given data is not zero. 
+(
+훴|푑
+푖
+|≠0
+)
+⇒
+(
+|푥
+1
+−푥̄|+|푥
+2
+−푥̄|+........+|푥
+푛
+−푥̄|≠0
+)
+ 
+5.4.5 Standard Deviation:  
+If x
+1
+, x
+2
+, x
+3
+,......,x
+n
+ ('n' is very large), then the standard deviation of the data is given by 
+Population Standard Deviation 휎=
+√
+1
+푛
+훴(푥
+푖
+−푥̄)
+2
+  ,  n → size of population 
+Sample Standard derivation: 휎=
+√
+1
+(푛−1)
+훴(푥
+푖
+−푥̄)
+2
+ , n→ size of sample  
+Generally (n > 29 → population) (n < 29 →sample) 
+ 
+Note: Measures of skewness (The degree of asymmetry) 
+  A lack of symmetry is skewness. 
+ • For symmetric distribution mean (M) = Median (M
+d
+) = Mode (M
+e
+) 
+ • For negatively skewed distribution mean (M) < Median (M
+d
+) < Mode (M
+e
+) 
+ • For positively skewed distribution Mean (M) > Median (M
+d
+) > Mode M
+e
+). 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.54 
+Engineering Mathematics 
+5.5.  Random Variables 
+The variable that connects the outcome of a Random Experiment to a real number. 
+Example: 'x' is the value of the number that a dice shows when it is rolled. 
+   Discrete RV      → The RV whose value is obtained by counting, defined by PMF 
+   Random Variable 
+   Continuous RV → The RV whose value is obtained by Measuring, defined by PDF 
+ 
+• If a data consists of 'f
+1
+' data points with value ′푥
+1
+′,′푓
+2
+′ data points with value ′푥
+2
+′......′푓
+푛
+′ data point with value ′푥
+푛
+′
+, then  
+ (i)  Expectation of 'x'  =퐸(푥)=
+∑
+푥
+푖
+푃(푥=푥
+푖
+)
+푛
+푖=1
+ 
+(ii)  Variance of ‘x’ = 휎
+2
+=퐸(푥
+2
+)−(퐸(푥))
+2
+ and σ is the standard deviation. 
+5.5.1 Probability Mass Function (PMF) 
+ The PMF p(x) of a discrete random variable X taking values 
+12
+,,.....
+n
+x   xx
+ is defined such that, 
+ (i) 
+(   )    0
+i
+px
+ 
+ (ii) 
+1
+(   )   1
+n
+i
+i
+px
+=
+=
+
+ 
+ (iii) 
+(   )()
+ii
+p  xp  Xx==
+ 
+5.5.2 Probability Density Function (PDF) 
+ The pdf f(x) of a continuous random variable X is defined such that, 
+ (i) 
+(  )    0fx
+ 
+ (ii) 
+(  )1f  x dx
+
+−
+=
+
+ 
+ (iii) 
+()(  )
+b
+a
+P a    X    bf  x dx    =
+
+ 
+5.5.3 Expected Value 
+1. Expected value of a random variable X, E [X], is defined as, 
+
+(  );X is discrete rv
+(  )    ;    X is continuous rv
+xp  x
+EX
+xf  x dx
+
+−
+
+
+
+
+
+
+
+ 
+2. Expected value of X
+2
+ is,  
+     
+2
+2
+2
+(  );X is discrete rv
+[]
+(  )    ;   X is continuous rv
+x  p  x
+EX
+x  f  x dx
+
+−
+
+
+
+=
+
+
+
+
+
+
+ 
+ Note: 
+[]
+n
+EX
+ is called nth moment.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.55 
+Engineering Mathematics 
+5.5.4 Mean of Random Variable ‘X’ 
+  Mean 
+[]EX= =
+ 
+5.5.5 Variance of a Random Variable ‘X’ 
+ Var 
+2
+(   )[()  ]XE   X=−
+ 
+Or,  Var 
+22
+(   )[]XE X=−
+ 
+5.5.6 Properties of Expectation  
+ (i) E[c] = c, c is a constant. 
+ (ii) E[ax] = aE[X] 
+ (iii) E(aX + b) = aE(X) + b 
+ (iv) If X and Y are random variable E[X  Y] = E(x)  E(Y). 
+ (v) If X and Y are random variables E(X. Y) = E(X). E(Y / X). 
+ (vi) If X and Y independent random variables E(X. Y) = E(X). E (Y). 
+5.5.7 Properties of Variance 
+ (i) Var[C] = 0, C is constant. 
+ (ii) Var (aX) = a
+2
+V(X) where X is random variable and ‘a’ constant. 
+  Var(–X) = (–1)
+2
+ Var(X) = Var(X) Variance is always positive. 
+ (iii) Var(ax + b) = a
+2
+ Var(X) + 0 
+ (iv) If X and Y are independent random variables. 
+  Var(X + Y) = Var(X) + Var(Y) 
+  Var(X – Y) = Var(X) + Var(Y) 
+ (v) Var(ax + by) = a
+2
+ v(x) + b
+2
+ v(y) + 2ab Cov (x, y) 
+ (vi) Cov (x, y) = E(x, y) – E(x) E(y) 
+ (vii) For independent random variables Cov(x, y) = 0 
+5.5.8 Continuous RV 
+The value of the Random Variable is obtained by Measuring. 
+5.6.  Probability Distribution Function (PDF)  
+A continuous & differentiable function P(x) is said to be a probability distribution/density function of a continuous random 
+variable 'x' if 푃(푎≤푥≤푏)=
+∫
+푃(푥)푑푥
+푏
+푎
+   
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.56 
+Engineering Mathematics 
+5.6.1 Mean (or) Expectation 
+If P(x) is a probability distribution/density function of a continuous Random Variable 'x' then the Mean of 'x' = E(x)  = 
+∫
+푥⋅
+∞
+−∞
+푃(푥)푑푥  
+5.6.2 Median  
+The value of 'x' for which the total probability is exactly divided into two equal halves is called Median. 
+5.6.3 Mode  
+The valueof 'x' at which P(x) is maximum is called mode. 
+5.6.4 Variance  
+ = 휎
+2
+=퐸(푥
+2
+)−(퐸(푥))
+2
+ 
+()()
+(
+)
+2
+22
+x    P  x  dxx  P  x  dx
+
+−−
+   =−
+
+
+ 
+ 
+Fig. 5.7. Continuous random variables 
+5.7.  Continous RV distributions 
+(1) Gaussian/Normal Distributon: 
+ If 'x' is a continuous Random variable with mean '' and standard deviation '', then the probability distribution/density 
+function of normally distributed variable 'x' is given by  
+ 
+Fig. 5.8. Normal distribution 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.57 
+Engineering Mathematics 
+Mean = Median = Mode =  
+푃(휇−휎≤푥≤휇+휎)=0.6828 
+푃(휇−2휎≤푥≤휇+2휎)=0.9544 
+푃(휇−3휎≤푥≤휇+3휎)=0.9973 
+푃(푥)=
+1
+휎⋅
+√
+2휋
+.푒
+−
+(
+푥−휇
+)
+2
+2휎
+2
+ 
+(2)  Standard Normal Distribution: 
+ Assuming 푧=
+푥−휇
+휎
+;휇=0;휎=1, 푃(푧)=
+1
+√
+2휋
+⋅푒
+−푧
+2
+2
+ 
+푃(−1≤푧≤1)=0.6828 
+푃(−2≤푧≤2)=0.9544 
+푃(−3≤푧≤3)=0.9973 
+Note: 
+1. The normal distribution curve is bell shaped curve 
+2. The points of infelection of the normal distribution curve are at 푥=휇+휎 푎푛푑 푥=휇−휎. 
+3. The cumulative function graph is of ‘S’ Shape. 
+4. For a given normal distribution, Mean = median = Mode 
+(3)  Uniform Distribution: 
+ If 'x' is a uniformly distrbuted random variable such that 푎≤푥≤푏 then the Pdf is given by 
+푃(푥)=
+1
+(푏−푎)
+ 
+ Mean = 
+∫
+푥⋅푃(푥)푑푥=
+푏
+푎
+∫
+푥⋅
+1
+푏−푎
+푑푥=
+1
+(푏−푎)
+푏
+푎
+∫
+푥⋅푑푥
+푏
+푎
+ 
+Mean
+2
+ba+
+
+=
+
+
+ 
+  푉푎푟푖푎푛푐푒=휎
+2
+=
+(푏−푎)
+2
+12
+  
+  Std. deviation = 휎=
+(푏−푎)
+√
+12
+  
+ 
+Fig. 5.9. Uniform Distribution 
+5.7.1 Properties of Mean and Variance: 
+퐸(푎푥+푏푦)=푎⋅퐸(푥)+푏⋅퐸(푦)  
+푉
+(
+푎푥+푏푦
+)
+=푎
+2
+⋅푉
+(
+푥
+)
++푏
+2
+⋅푉
+(
+푦
+)
+−2푎푏퐶푂푉
+(
+푥,푦
+)
+ 
+where 퐶푂푉(푥,푦)=퐸(푥푦)−퐸(푥)⋅퐸(푦)  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.58 
+Engineering Mathematics 
+If x,y are indpendent random variables, then 퐸(푥푦)=퐸(푥)⋅퐸(푦)⇒퐶푂푉(푥,푦)=0 
+(1) Exponential Dirtibution: 
+If 'x' is a continous random variable with mean as 
+1
+휆
+ then the exponential distribution of 'x' is 
+given by the function  
+     푓(푥)={
+휆⋅푒
+−휆푥
+;푥≥0
+0:표푡ℎ푒푟푤푖푠푒
+ 
+     Mean = 
+1
+휆
+ 
+         휎
+2
+=
+1
+휆
+2
+ 
+ Mean = Standard Deviation = 
+1
+휆
+ 
+5.8.  Discrete Random Variable Distributions 
+If a Random experiment has only two Possible outcomes, (one is Success & other is failure) and the Probability of Success 
+doesn't depend on time, then the probability of occuring of exactly 'r-successes' in 'n-trials' is given by  
+    푃(푋=푟)=
+푛
+퐶
+푟
+⋅푃
+푟
+⋅푞
+푛−푟
+  
+Where, P → Probability of Success,  
+           q → Probability of Failure 
+      p + q = 1 
+Mean = np,Variance = npq = 
+2
+, standard deviation = 
+npq=
+ 
+ 5.8.1 Poisson Distribution: 
+If a random experiment has only two possible outcomes, and the average number of successes in a given time 't' is , then the 
+probability that exactly 'r' successes occur within the same time 't' given by 
+ 푃(푥=푟)
+푒
+−휆
+⋅휆
+푟
+푟!
+  
+ Mean = . 
+ Mean = Variance = 휆  
+ ⇒ 휎=
+√
+휆  
+❑❑❑  
+Fig. 5.10. Exponential distribution 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.59 
+Engineering Mathematics 
+6 
+COMPLEX CALCULUS 
+ 
+A number of the form z = x + iy where x, y  R is called a complex number. 
+x is called real part of z, x = Re(z) 
+y is called imaginary part of z, y = Im(z) 
+6.1.  Modulus – Amplitude form of a Complex Number 
+Every Complex number z = x + iy can be written as z = r.e
+i
+
+ where 
+        r   =    
+22
+xy+
+ is called the modulus of the complex number and 
+      = 
+1
+tan
+y
+x
+−
+
+
+
+ is called the amplitude (or) argument of the complex number. 
+     e
+i
+
+ = cos  + i.sin  and 
+     e
+–i
+
+ = cos  – i.sin  
+6.2 .  Arithmetic Operations with Complex Numbers 
+If z
+1
+ = x
+1
+ + iy
+1
+ and z
+2
+ = x
+2
+ + iy
+2
+ are two complex numbers then 
+(i) z
+1
+ ± z
+2
+ = (x
+1
+ ± x
+2
+) + i(y
+1
+ ± y
+2
+)    
+(ii) z
+1
+  z
+2
+ = (x
+1
+ x
+2
+ – y
+1
+ y
+2
+) + i(x
+1
+y
+2
+ + x
+2
+y
+1
+) 
+(iii) 
+1
+2
+z
+z
+ = 
+1  21   22  11   2
+22
+22
+()()x xy yi  x  yx y
+xy
+++−
++
+ 
+(iv) |z
+1
+ + z
+2
+|  |z
+1
+| + |z
+2
+| 
+(v) |z
+1
+ – z
+2
+|  
+12
+||   ||zz−
+    
+(vi) |z
+1
+ + z
+2
+|
+2
+ + |z
+1
+ – z
+2
+|
+2
+ = 2(|z
+1
+|
+2
+ + |z
+2
+|
+2
+) 
+ If r
+1
+, 
+1
+ are the modulus and angle of a complex number z
+1
+ and r
+2
+, 
+2
+ are the modulus and angle of a complex number z
+2
+  
+respectively, then  
+(i) The modulus of z
+1
+  z
+2
+ is r
+1
+  r
+2
+ and the angle of z
+1
+  z
+2
+ is 
+1
+ +  
+2
+ 
+(ii) The modulus of 
+1
+2
+z
+z
+ is 
+1
+2
+r
+r
+ and the angle of 
+1
+2
+z
+z
+ is 
+1
+ –  
+2
+. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.60 
+Engineering Mathematics 
+ If z = x + iy is a complex number, then the conjugate of the complex number is given by z
+*
+ (or) 
+z
+ = x – iy. 
+   Re(z) = 
+*
+2
+zz+
+ and  Img(z) = 
+*
+2
+zz
+i
+−
+  
+    z  z
+*
+ = |z|
+2 
+• n
+th
+ root of unity : 
+ 
+()
+1/
+1
+n
+Z=
+ We write 
+2
+1
+jk
+e
+
+=
+ 
+ Thus we get nth root of unity equal to
+231
+1,   ,,....
+n−
+    
+. Here 
+2/in
+e
+
+=
+ 
+Properties :  
+ 1. n
+th
+ root of unity form a GP 
+ 2. Sum of all nth root of unity = 0 
+ 3.  Product of all n
+th
+ root of unity is (–1)
+n–1
+ 
+ 4.  n
+th
+ root of unity lie on circle of unit radius 
+log
+e
+ of a complex number 
+ If z = x + iy, to find 
+log  (  )
+e
+z
+ we write z in polar form so 
+,log  (  )   log  ()   log.
+ji
+eee
+z    rezrer   i
+
+===+ 
+ 
+ Since angle 
+2n=+  
+ 
+ So 
+log(  )    log(2)
+e
+zr    in=+ +  
+ 
+6.3.  De-moivre’s Theorem  
+For any complex number x and any integer n, 
+  (r(cos  + i sin ))
+n 
+= r
+n
+(cos(n) + i sin (n)) 
+The cube roots of unity when plotted on an argand plane form an equilateral triangle. 
+6.4.  Standard Complex Functions 
+If z = x + iy is a complex number, then 
+(i) ln z = 
+221
+1
+ln()tan
+2
+y
+xyi
+x
+−
+
++   + 
+
+
+ 
+(ii) exp (z) = e
+x
+  (cos y + i sin y) 
+6.5.  Periodic function 
+A complex function f(z) is a periodic function if there exists a complex number ‘k’ such that f(z) = f(z + k) 
+Example:  The function f(z) = e
+z
+ is a periodic function with period 2i. 
+6.5.1 Analytic Functions 
+A function f(z) is said to be analytic at a point z = z
+0
+ if the fucntion f(z) is differentiable at the pount z = z
+0
+ and also at every 
+point in the neighbourhood of z
+0
+. 
+The mathematical conditions for a function f(z) = u(x, y) + i.v(x, y) to be analytic at a point z
+0
+ = x
+0
+ + i y
+0
+ is  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.61 
+Engineering Mathematics 
+ (i) 
+,,,
+uuvv
+xyxy
+      
+      
+ are continuous and differentiable at (x
+0
+, y
+0
+) 
+ (ii) 
+and
+uvuv
+xyyx
+       
+== −
+       
+. These set of equations are called Cauchy – Riemann (C-R) Equations . 
+Note: If the function f(z) = u(x, y) + i.v(x, y) is analytic then  
+  (i) Both  u(x, y) and v(x, y) satisfy laplace equation. 
+   i.e.   
+22
+22
+uu
+xy
+
++
+
+ = 0 
+   and   
+22
+22
+vv
+xy
+
++
+
+ = 0 
+  (ii) The family of curves u(x, y) = c
+1
+ and v(x, y) = c
+2
+ are orthogonal to each other. 
+Cauchy – Riemann Equations in polar form for the function f(z) = u(x, y) + i.v(x, y) are given by 
+   
+u
+r
+
+
+ = 
+1v
+r
+
+
+
+ and  
+u
+
+ = 
+v
+r
+r
+
+−
+
+ 
+6.6.  Complex Integration 
+If f(z) = u + iv is continuous and differentiable at every point along a path ‘C’ , then the evaluation of f(z) along the pathe ‘C’ 
+is given by  
+    
+()
+c
+f  z  dz
+
+ =  
+() ()()()
+ccc
+u    iv   dx   idyu dx   v dyiu dy    v dx++   =−++
+
+ 
+Note: If  the  function f(z)  is  analytic,  then  the  integral 
+2
+1
+()
+z
+z
+f  z dz
+
+ is  independent  of  the  path  connecting  the  complex 
+numbers z
+1
+ and z
+2
+. 
+6.6.1 Cauchy Integral Theorem: 
+If the function f(z) is analytic at everypoint with in a closed path ‘C’ then 
+()
+C
+f  z  dz
+
+ = 0. 
+Parametric integration of complex function: 
+Consider a contour C parameterized by z(t) = x(t) + iy(t) for a  t  b. We defined the integral of the complex function along C 
+to be the complex number 
+(  )(  ( ))  '( )
+b
+Ca
+f  z dzf  z t   z  t  dt=
+
+. 
+Note : If F(z) is an analytic function then the integration 
+()
+b
+a
+F  z dz
+
+ is independent of path followed to move from point a to b 
+6.7.  Taylor Series and Laurentz Series  
+(i) Taylor series:  If the function f(z) is analytic at every point with in a circle with centre at z = z
+0
+, then for any point z with 
+in the circle, 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Engineering Mathematics 
+1.62 
+Engineering Mathematics 
+    f(z) = 
+0
+0
+()
+n
+n
+n
+az    z
+
+=
+−
+
+ 
+ Where  a
+n
+ = 
+1
+0
+1(  )
+2
+()
+C
+n
+fz
+dz
+i
+zz
++
+
+
+
+
+
+−
+
+ 
+(ii) Laurentz Series: If the function f(z) is analytic at every point with in a region bounded by two concetric circles C and C
+1
+ 
+with radii r, r
+1
+ respectively (r > r
+1
+)  with centre at z = z
+0
+, then for any point z with in the region, 
+    f(z) = 
+00
+01
+()()
+nn
+nn
+nn
+az    zbz    z
+
+−
+==
+  −    +  −
+
+ 
+ where  a
+n
+ = 
+1
+0
+1(  )
+2
+()
+n
+C
+fz
+dz
+i
+zz
++
+
+
+
+
+
+−
+
+ 
+ and    b
+n
+ = 
+1
+0
+1(  )
+2
+()
+n
+C
+fz
+dz
+i
+zz
+−+
+
+
+
+
+
+−
+
+ 
+Note: All the formulaes above for the cyclic integrals are for counter clockwise case by default, if the questions are asked 
+for clockwise case, the answer evaluted using above formulaes should be written with sign change. 
+6.8.  Residue Theorems 
+6.8.1.  Cauchy Residue Theorem: 
+If f(z) is analytic in closed curve C except at a finite number of singular points within C, 
+then 
+(  )2(Sum of the residue at the singular points within    )
+C
+f  z dziC=
+
+ 
+Note: In above formula the Contour is anti-clockwise. If the Contour is clockwise then we put a –ve sign in RHS of 
+above equation.  
+Applying Cauchy theorem we have 
+12
+12
+(  )(  )(  )....(  )2   [Res[   (   )]   Res[   (    )]   ....   Res[   (    )]]
+n
+n
+CCCC
+f  z dzf  z dzf  z dzf  z dzif  af  af  a
+
+=++  += ++  +
+ 
+ 
+6.8.2 Methods of Evaluating Residues 
+• If f(z) has a simple pole at z = 0 then 
+Res[   (  )]   lim()   (  )
+za
+f  az   a  f  z
+→
+=−
+ 
+• If 
+()
+()
+()
+z
+fz
+z
+
+
+=
+ where Ψ(z) = (z – a) f(z), f(a) ≠ 0 
+       
+()
+Res   (  )
+()
+a
+fa
+a
+
+=
+
+
+ 
+• If f(z) has a pole of order n at z = a, then Res 
+1
+1
+1
+(  )[()(  )]
+(1)!
+n
+n
+n
+Za
+d
+f  az    af  z
+ndz
+−
+−
+=
+
+=−
+
+−
+
+ 
+6.9.  Singularities of an Analytic function and It’s Type 
+A point at which the function ceases to be analytic is called singular point of functions. 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Engineering Mathematics 
+1.63 
+Engineering Mathematics 
+6.9.1.  Type of Singularities 
+• Removable singularity: A removable singularity is a singular point z
+0
+ of a function f(z) for which it is possible to assign 
+a complex number in such a way that f(z) becomes analytic. A more precise way of defining a removable singularity is as 
+a   singularity   z
+0
+ of   a   function   f(z)   about   which   the   function   f(z)   is   bounded.   For   example,   the   point 
+x
+0
+ = 0 is a removable singularity in the sin c function sin c(x) = sin x/x, since this function satisfies sin c(0) = 1. 
+• Isolated  singularity: A  point  a  in  the  domain  D  of  function  f(z)  is  said  to  be  a  point  of  isolated  singularity,  if  f(z)  is 
+analytic at each point in some neighbourhood |z – a| < R of a, except not being analytic at a. 
+• Pole: Pole is another kind of singularity defined as if there exist a positive integer m such that z → a(z – a)
+m
+ f(z) ≠ 0, then 
+z = a is called a pole of order m. 
+ For example, let f(z) = 1/(z – 5)
+3
+, then 
+     
+3
+3
+1
+5(
+5)
+1    0
+(
+5)
+zz
+z
+→   −
+= 
+−
+ 
+• Isolated Essential Singularity: The definition of isolated essential singularity is, if their does not exist a finite value m 
+such that z → (z – a)
+m
+ f(z) = k, where k is a non-zero finite constant. The point z = a is called an isolated essential singularity. 
+ For example, let f(z) = sin[1/(z – a)] where sin[1/(z – a)] = 1/(z – a) – 1/(z – a)
+3
+ 3! + 1/(z – a)
+5
+5!–.... 
+ Here the function has infinite terms in negative power of (z – a), so it is not possible to find a finite value of m. 
+❑❑❑ 
+For more questions, kindly visit the library section: Link for web: https://smart.link/sdfez8ejd80if  
+PW Mobile APP: https://smart.link/7wwosivoicgd4  

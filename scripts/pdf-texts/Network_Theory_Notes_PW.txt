@@ -1,0 +1,5392 @@
+=== FILE: Network_Theory_Notes_PW.pdf ===
+=== PAGES: 65 ===
+
+
+
+NetworkNetwork
+TheoryTheory
+Network
+Theory
+
+Published By: 
+ 
+  Physics Wallah 
+ISBN: 978-93-94342-39-2 
+Mobile App: Physics Wallah (Available on Play Store) 
+  
+Website: www.pw.live 
+Email: support@pw.live 
+ 
+Rights 
+All  rights  will be  reserved  by  Publisher.  No  part  of  this  book  may  be  used  or  reproduced  in  any  manner 
+whatsoever without the written permission from author or publisher. 
+In the interest of student's community: 
+Circulation of soft copy of Book(s) in PDF or other equivalent format(s) through any social media channels, 
+emails,  etc.  or  any  other  channels  through  mobiles,  laptops  or  desktop  is  a  criminal  offence.  Anybody 
+circulating, downloading, storing, soft copy of the book on his device(s) is in breach of Copyright Act. Further 
+Photocopying of this book or any of its material is also illegal. Do not download or forward in case you come 
+across any such soft copy material. 
+ 
+Disclaimer 
+A team of PW experts and faculties with an understanding of the subject has worked hard for the books. 
+While  the  author  and  publisher  have  used  their  best  efforts  in  preparing  these  books.  The  content  has  been 
+checked for accuracy. As the book is intended for educational purposes, the author shall not be responsible for 
+any errors contained in the book. 
+The publication is designed to provide accurate and authoritative information with regard to the subject matter 
+covered. 
+This book and the individual contribution contained in it are protected under copyright by the publisher. 
+(This Module shall only be Used for Educational Purpose.) 
+
+ 
+ 
+ 
+Design Against Static Load 
+ 
+ 
+ 
+ 
+ 
+1. Basic Concepts of Networks .................................................................................................  2.1 – 2.19 
+2. Two Port Networks ............................................................................................................... . 2.20 – 2.29 
+3. Network Theorem  ............................................................................................................... . 2.30 – 2.34 
+4. Transient Analysis .................................................................................................................  2.35 – 2.43 
+5. Sinusoidal Steady State Analysis  ..........................................................................................  2.44 – 2.46 
+6. Resonance ............................................................................................................................  2.47 – 2.53 
+7. Complex Power ....................................................................................................................  2.54 – 2.57 
+8. Magnetic Coupling ...............................................................................................................  2.58 – 2.61 
+ 
+ 
+NETWORK THEORY 
+INDEX 
+GATE-O-PEDIA ELECTRONICS AND COMMUNICATION ENGINEERING 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+2.1 
+1 
+BASIC CONCEPTS 
+OF NETWORKS 
+1.1 Introduction 
+Network theory is the study of solving the problems of electric circuits or electric networks.  
+An electric circuit contains a closed path for providing a flow of electrons from a voltage source or current source. 
+The elements present in an electric circuit will be in series connection, parallel connection, or in any combination 
+of series and parallel connections  and an  electric network need  not contain  a closed path  for providing  a flow of 
+electrons from a voltage source or current source. Hence, we can conclude that “all electric circuits are electric 
+networks” but the converse need not be true. 
+1.1.1. Types of Network Elements 
+Different types of network elements are 
+1. Linear Elements and Non-linear Elements.  
+2. Bilateral Elements and Unilateral Elements. 
+3. Active Elements and Passive Elements. 
+4. Time Invariant and Time Variant Elements.  
+5. Lumped and Distributed Elements.  
+1.  Linear Elements  
+  Characteristics of linear elements always passes through the origin in the form of straight line. 
+ 
+  Linear 
+Example of linear elements: 
+ 
+All basic electrical elements are linear (R, L, C). 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.2 
+Network Theory 
+2.  Non-Linear Elements  
+ 
+   Non linear Non linear  
+Example of non-linear elements : 
+ 
+ All electronic devices are non-linear (Diode, MOSFET, JFET). 
+ 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.3 
+Network Theory 
+2.  Bilateral and Unilateral Elements 
+ (i) In case of V-I plane, characteristics of bilateral elements offer same impedance throughout the 
+characteristics. 
+ (ii) In case of V-I plane, characteristics of unilateral elements offer different impedance in different 
+origin. 
+ (iii) In case of generalized plane, characteristics of bilateral elements is always symmetrical about origin. 
+Characteristics are same in either I and III quadrant or II and IV quadrant. 
+ 
+                      
+  (a) odd function (b) odd function 
+                             
+  (c) even function (d) even function 
+                                       
+(e) odd function 
+   Note: L = Linear,  NL = Non-linear, B = Bilateral, U = Unilateral 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.4 
+Network Theory 
+All linear elements are bilateral but reverse is not true. 
+Network element Bilateral/Unilateral  Device Element Bilateral/Unilateral 
+R Bilateral  Diode Unilateral 
+L Bilateral  BJT Unilateral 
+C Bilateral  JFET Unilateral 
+3.  Active and Passive Elements  
+ (i) In  case of V-I plane, characteristics of passive element  always have positive impedance where as  active 
+element offeres negative impedance. 
+ (ii) Passive elements  absorb the energy whereas active elements deliver the energy. 
+ (iii) Active element controls, the flow of energy whereas passive elements dissipate or store the energy. 
+(iv) Elements having capability of delivering the energy is referred as active elements. 
+Examples of active elements :  
+ (a) Voltage source 
+ (b) Current source 
+ (c) Generator 
+ (d) Biased Transistors  
+ (e) Operational Amplifier 
+Note: All dependent sources are considers as an active element. 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.5 
+Network Theory 
+ Generally, inductors and capacitors are passive elements. As they can not deliver the energy independently for 
+long time? They can give energy only at the time of discharge. 
+ 
+4.  Lumped and Distributed Elements  
+ 
+ (i) Physically separated elements in a network is referred as lumped elements. 
+ (ii) If elements are distributed along the line, then it is referred as distributed elements. 
+ (iii) Concept of circuit theory is based on lumped elements. 
+ (iv) Concept of field theory is based on distributed elements.  
+Network Elements Passive Condition Active Condition 
+R 
+R  0 
+R < 0 
+L 
+L  0 
+L < 0 
+C 
+C  0 
+C < 0 
+ 
+R = 2        (Passive) 
+R = 4 k      (Passive) 
+R = –6 k    (NP) 
+L = 1 mH    (Passive) 
+L = –2 H    (NP) 
+Network Theory 
+R  0 
+L  0 
+C  0 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.6 
+Network Theory 
+ 
+5.  Time Invariant and Time Variant Element  
+ (i) If characteristics of elements is varied with time, then it is called Time Variant. 
+ (ii) If characteristics of elements is not varied with time, then it is called Time Invariant. 
+ 
+ 
+Network Element TI/TV 
+R TI 
+L TI 
+C TI 
+1.2. Analysis of Passive Elements 
+Resistor :  
+The main functionality of Resistor is either opposes or restricts the flow of electric current. 
+Relationship between resistance and resistivity is given by, 
+      
+l
+R
+A
+
+=
+ 
+  
+=
+ resistivity of the material 
+  
+l=
+ length of wire 
+  
+A=
+ area of cross section of the wire 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.7 
+Network Theory 
+According to Ohm’s law, the voltage across resistor is the product of current flowing through it and the resistance 
+of that resistor, provided the temperature is constant. 
+Mathematically, it can be represented as 
+       
+VIR=
+ 
+       
+V
+I
+R
+=
+  
+Where, R is the resistance of a resistor and unit of R is ohm (). 
+From field theory of ohm’s law, (Microscopic form of Ohm's Law) 
+        
+JE
+ 
+        
+JE=
+ 
+ 
+J=
+ Current density 
+ 
+E=
+Electric field intensity 
+ 
+=
+Conductivity of materials 
+R
+ can range from zero to infinity, the two extreme possible values. An element with 
+0R=
+ is called as short circuit, 
+as shown in figure. For a short circuit, 
+0VIR==
+. 
+ 
+Fig. (A) A short-circuit (R = 0)                      Fig. (b) An open circuit (R = ) 
+Similarly, an element with resistance 
+=R
+ is known as an open circuit, as shown in figure (b).  
+For an open circuit, 
+     
+0
+V
+I
+R
+==
+ 
+Network Condition I V R 
+SC 
+sc
+I
+ 
+0 0 
+OC 0 
+sc
+V
+ 
+ 
+Current : 
+The current “I” flowing through a conductor is nothing but the time rate of flow of positive charge. Mathematically, 
+it can be written as, 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.8 
+Network Theory 
+      
+()
+dQ
+it
+dt
+=
+ [C/sec = Amp] 
+      
+()Qi t  dt=
+
+ 
+ Q is the charge and its unit is Coulomb. 
+ t is the time and its unit is Second. 
+ I is the current and its unit is Ampere. 
+Voltage/Potential : 
+The voltage “V” is nothing but an electromotive force that causes the charge (electrons) to flow.  
+      
+dW
+V
+dQ
+=
+  
+      
+()WV  Q dQ=
+
+ 
+ W is the potential energy and its unit is Joule. 
+ Q is the charge and its unit is Coloumb. 
+ V is the voltage and its unit is Volt. 
+Power : 
+ The power “P” is nothing but the time rate of flow of electrical energy. Mathematically, it can be written as 
+     
+dW
+P
+dt
+=
+ 
+     
+dWdW    dQ
+P
+dtdQdt
+=    =   
+ 
+     
+P   VI=
+ 
+Concept of Absorbed and Delivered Power :  
+ 1. If current enters into the positive terminal of voltage source, then it is referred as absorbed power (i.e. power 
+is absorbed by voltage source). 
+ 2. If current leaves from positive terminal of voltage source, then it is referred as delivered power (i.e. power 
+is delivered by voltage source). 
+Examples :       
+ (i) 
+  
+    (ii)
+ 
+ 
+   
+2  10
+absorbed
+P=
+20 watt=
+   
+25
+delivered
+P=
+10 watt=
+ 
+   
+20 watt
+delivered
+P=−
+    
+10 watt
+absorbed
+P=−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.9 
+Network Theory 
+ (iii)
+   
+  (iv)
+ 
+       
+   
+34
+delivered
+P=
+12 watt=
+   
+42
+absorbed
+P=
+8 watt=
+ 
+   
+12 watt
+absorbed
+P=−
+    
+8 watt
+delivered
+P=−
+ 
+Series Equivalent Circuit : 
+ 
+     R
+eq
+=R
+1
++R
+2
++R
+3
+ 
+Concept : 
+(i) 
+123
+IIII=  =  =
+ 
+(ii) 
+123eq
+RRRR=  +  +
+ 
+(iii) 
+maxeq
+RR
+ 
+Parallel Equivalent circuit : 
+ 
+        
+123
+1111
+eq
+RRRR
+=  +   +
+ 
+Concept : 
+(i) 
+123
+VVVV=  =  =
+ 
+(ii) 
+1    23
+1    2231    3
+eq
+R R R
+R
+R RR RR R
+=
+++
+ 
+(iii) 
+mineq
+RR
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.10 
+Network Theory 
+Inductor : 
+ Inductance is the property of inductor which opposes the change of current. 
+    
+(0  )(0 )(0)
+LLL
+III
++−
+==
+ 
+       
+( )( )ti t
+ 
+            
+Li=
+ 
+           
+L
+i
+
+=
+  
+           
+N =  
+ 
+ 
+Total magnetic flux=
+(Flux linkage of a coil)  
+ 
+N=
+Number of turns in coil 
+ 
+=
+flux per turn 
+    
+N
+L
+i
+
+=
+   
+    휙=
+MMF
+Reluctance
+=
+푁푖
+푙/퐴휇
+ 
+    퐿=
+푁
+2
+퐴휇
+푙
+ 
+    
+2
+LN
+ 
+    
+()
+d
+Vt
+dt
+
+=
+ 
+         
+Li=
+ 
+    
+()
+()
+di t
+V  tL
+dt
+=
+   
+    
+1
+( )( )i  tV  t  dt
+L
+=
+
+ 
+Energy in inductors : 
+Energy,    
+()WP  t  dt=
+
+ 
+    
+2
+1
+Joule (J)
+2
+WLi=
+ 
+Note :  
+1. Inductor stores the energy in the form of magnetic fields. 
+2. It is referred as absorbing element like resistor. 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.11 
+Network Theory 
+Series Equivalent Circuit : 
+ 
+     
+123
+=  +  +
+eq
+LLLL
+ 
+Parallel Equivalent circuit : 
+ 
+     
+123
+1111
+eq
+LLLL
+=  +  +
+ 
+Concept : 
+(i) 
+123
+VVVV=  =  =
+ 
+(ii) 
+1    2    3
+1    22    33   1
+eq
+L L L
+L
+L LL LL L
+=
+++
+ 
+(iii) 
+mineq
+LL
+ 
+Capacitor : 
+Capacitance is the property of capacitor that opposes the change of voltage 
+(0 )(0 )VV
+−+
+=
+ of the movement time. 
+    
+qV
+ 
+    
+q    CV=
+ 
+    
+Columb (C)
+or Farad (F)
+Volt    (V)
+q
+C
+V
+
+=
+
+
+ 
+    
+()
+dq
+it
+dt
+=
+ 
+    
+()
+()=
+dV  t
+i  tC
+dt
+ 
+Kirchoff’s Current Law (KCL) :  
+• In DC circuit KCL states that the algebraic sum of currents entering a node (or a closed boundary) is zero. 
+• Mathematically, KCL implies that 
+   
+1
+0
+N
+n
+n
+i
+=
+=
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.12 
+Network Theory 
+ 
+Applying KCL at node P, 
+    
+12345
+0IIIII− −  −  +  +  =
+ 
+    
+12345
+IIIII+  +  =  +
+  
+Sum of incoming currents = Sum of outgoing currents 
+Nodal Analysis : 
+• It is combination of KCL and Ohm’s law (KCL + Ohm’s law). 
+• In Nodal analysis, we will consider the node voltages with respect to Ground. Hence, Nodal analysis is also called 
+as Node-voltage method. 
+Kirchoff’s Voltage Law (KVL) : 
+• KVL states that the algebraic sum of all voltages around a closed path (or loop) is zero. 
+• Mathematically, KVL states that 
+     
+1
+0
+M
+m
+m
+v
+=
+=
+
+ 
+ 
+ Applying KVL in the above circuit, 
+    
+12
+0
+s
+V    V    V−  −  =
+ 
+    
+12s
+VV    V=+
+ 
+ Sum of voltage drops = Sum of voltage rises 
+Voltage Division Rule [VDR] 
+ 
+I
+5
+I
+4
+I
+3
+I
+2
+I
+1
+P
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.13 
+Network Theory 
+It is used in series equivalent circuit for distribution of voltage. 
+       
+1
+1
+12
+VZ
+V
+ZZ
+
+=
++
+  
+       
+2
+2
+12
+VZ
+V
+ZZ
+
+=
++
+  
+Voltage division rule for Resistor : 
+       
+11
+[]Z RR=
+   
+22
+[]Z RR=
+ 
+
+       
+1
+1
+12
+VR
+V
+RR
+
+=
++
+   
+2
+2
+12
+VR
+V
+RR
+
+=
++
+ 
+Voltage division rule for Inductor :  
+       
+11
+[]Z Lj  L=
+   
+22
+[]Z Lj  L=
+ 
+
+             
+1
+1
+12
+Vj   L
+V
+j   Lj   L
+
+=
+  + 
+  
+2
+2
+12
+Vj   L
+V
+j   Lj   L
+
+=
+  + 
+ 
+             
+1
+1
+12
+VL
+V
+LL
+
+=
++
+   
+2
+2
+12
+VL
+V
+LL
+
+=
++
+ 
+Voltage division rule for Capacitor: 
+       
+1
+1
+1
+[]ZC
+jC
+=
+
+   
+2
+2
+1
+[]ZC
+jC
+=
+
+ 
+
+                                
+1
+1
+12
+1
+11
+V
+jC
+V
+j   Cj   C
+
+
+=
++
+
+      
+2
+2
+12
+1
+11
+V
+jC
+V
+j   Cj   C
+
+
+=
++
+
+ 
+            
+2
+1
+12
+VC
+V
+CC
+
+=
++
+       
+1
+2
+12
+VC
+V
+CC
+
+=
++
+ 
+Current Division Rule [CDR] 
+CDR is applicable when passive elements and connected in parallel. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.14 
+Network Theory 
+ 
+       
+21
+12
+1212
+,
+I   ZI   Z
+II
+ZZZZ
+
+==
+++
+ 
+Current division rule for Resistor : 
+       
+11
+[]Z RR=
+   
+22
+[]Z RR=
+ 
+
+       
+2
+1
+12
+IR
+I
+RR
+
+=
++
+   
+1
+2
+12
+IR
+I
+RR
+
+=
++
+ 
+Current division rule for Inductor : 
+       
+11
+[]Z Lj  L=
+   
+22
+[]Z Lj  L=
+ 
+
+       
+2
+1
+12
+Ij   L
+I
+j   Lj   L
+
+=
+  + 
+  
+1
+2
+12
+Ij   L
+I
+j   Lj   L
+
+=
+  + 
+ 
+       
+2
+1
+12
+IL
+I
+LL
+
+=
++
+   
+1
+2
+12
+IL
+I
+LL
+
+=
++
+ 
+Current division rule for Capacitor : 
+       
+1
+1
+1
+[]ZC
+jC
+=
+
+   
+2
+2
+1
+[]ZC
+jC
+=
+
+ 
+
+       
+2
+1
+12
+1
+11
+I
+jC
+I
+j   Cj   C
+
+
+=
++
+
+  
+1
+2
+12
+1
+11
+I
+jC
+I
+j   Cj   C
+
+
+=
++
+
+ 
+       
+1
+1
+12
+IC
+I
+CC
+
+=
++
+   
+2
+2
+12
+IC
+I
+CC
+
+=
++
+ 
+Star to Delta Conversion [Y to ] or [T to ]  Conversion 
+Star to Delta conversion [T to ] : 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.15 
+Network Theory 
+ 
+      Fig. Star network                       Fig. Delta network 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.16 
+Network Theory 
+Or 
+ 
+              Fig. T - network                                  Fig. - network 
+ 
+  
+12231    3
+12
+3
+Z ZZ ZZ Z
+Z
+Z
+++
+=
+              
+12231    3
+23
+1
+Z ZZ ZZ Z
+Z
+Z
+++
+=
+           
+12231    3
+13
+2
+Z ZZ ZZ Z
+Z
+Z
+++
+=
+ 
+If  
+123
+ZZZZ=  =  =
+ then 
+122313
+3ZZZZ=   =   =
+ 
+ 
+3
+eq
+ZZ=
+  
+3
+eq
+RR=
+ 
+3
+eq
+LL=
+     
+/3
+eq
+CC=
+ 
+Delta to Star Conversion [ to Y ] or [ to T ] Conversion 
+Delta to Star conversion [ to T] :  
+ 
+           Fig. Delta network                                Fig. Star network 
+ 
+  
+        Fig.- network                                Fig. T - network 
+  
+12    13
+1
+122313
+ZZ
+Z
+ZZZ
+=
+++
+    
+1223
+2
+122313
+ZZ
+Z
+ZZZ
+=
+++
+       
+23    13
+3
+122313
+ZZ
+Z
+ZZZ
+=
+++
+ 
+ If 
+122313
+ZZZZ=   =   =
+ then 
+123
+3
+Z
+ZZZ=  =  =
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.17 
+Network Theory 
+In case of same impedance, delta to star conversion decreases the impedance by factor of 3. (Increases if the element 
+is capacitance by the same factor of 3). 
+  
+3
+eq
+Z
+Z=
+  
+3
+eq
+R
+R=
+ 
+3
+eq
+L
+L=
+     
+3
+eq
+CC=
+ 
+Sources 
+1. Ideal Voltage Source : 
+ An ideal voltage source is a device which has a constant voltage independent of current delivered by it. Ideally, it has zero 
+internal resistance. 
+   
+  Fig. Ideal voltage source  Fig. V-I characteristics  Fig. I-V characteristics 
+2. Practical Voltage Source : 
+ An practical voltage source is a device which has a constant voltage with non-zero internal resistance dependent on the 
+current supplied by the source. Practically its internal resistance should be as small as possible. 
+  
+  Fig. Practical voltage source     Fig. V-I characteristics 
+3. Ideal Current Source : 
+ An ideal current source is a device which delivers a constant current to any load independent of the voltage across it.  
+  
+  Fig. ideal voltage source              Fig. V-I characteristics      Fig. I-V characteristics 
+4. Practical Current Source : 
+ A practical current source is a device which delivers a constant current to any load independent of the voltage across the 
+source. A practical current source has finite internal resistance.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.18 
+Network Theory 
+   
+  Fig. Practical current source  Fig. I-V characteristics 
+Dependent Source : 
+1. A voltage controlled voltage source (VCVS) : 
+    
+x
+VAV=
+   
+2. A current controlled voltage source (CCVS) : 
+    
+x
+VAi=
+   
+3. A voltage controlled current source (VCCS) : 
+    
+x
+IAV=
+   
+4. A current controlled current source (CCCS) : 
+    
+x
+IAi=
+   
+Here, A is unitless  
+Unit of A is Ohm. 
+unitless  
+Here, A is unitless  
+Unit of A is Mho. 
+unitless  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.19 
+Network Theory 
+Source/device Practically Internal resistance  Ideally Internal Resistance  
+1. Voltage source  
+small=
+s
+R
+ 
+0=
+s
+R
+ 
+2. Current source  
+high=
+s
+R
+ 
+=
+s
+R
+ 
+3. Voltmeter  
+high=
+m
+R
+ 
+=
+m
+R
+ 
+4. Ammeter 
+small=
+m
+R
+ 
+0=
+m
+R
+ 
+Source Transformation 
+Practical voltage source into a practical current source : 
+• It states that an independent voltage source 
+s
+V
+ in series with a resistance 
+s
+R
+ is equivalent to an independent current 
+source, 
+(/)
+sss
+IV   R=
+ in parallel with a resistance 
+s
+R
+.  
+ 
+Practical current source into a practical voltage source : 
+ 
+Note: Source transformation is not possible in Ideal Source. 
+Average and RMS Value of Periodic Waveform 
+Average Value / DC value / Mean value : 
+    Average 
+
+0
+1
+( )( )
+T
+x  tx t  dt
+T
+=
+
+ 
+Average value can be defined with the help of area,  
+    Average 
+()
+()
+Area in one period
+Time period 
+xt
+T
+
+=
+
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.20 
+Network Theory 
+RMS value / Effective value : 
+   RMS 
+[  ( )]xt=
+ Effective [
+()xt
+] 
+2
+0
+1
+()
+T
+x   t  dt
+T
+=
+
+ 
+1. Average value can be negative, positive or zero but RMS value is always a positive number. 
+2. 
+()()
+sin/    cos/    sin 2/    cos 2/    sin/    cos/
+0
+sin/    cos
+At   At   At   At   An  t   An  t
+Avg
+An  t   nAn  t   n
+
+
+=
+
+    
+
+ 
+3. 
+()()
+sin/    cos/    sin 2/    cos 2/    sin/    cos/
+sin/    cos
+2
+At   At   At   At   An  t   An  t
+A
+RMS
+An  t   nAn  t   n
+
+
+=
+
+    
+
+ 
+4. If 
+( )sin=   +x tDC    ACt
+ 
+          
+
+2
+2
+( )()
+2
+AC
+RMS  x tDC
+
+=+
+
+
+ 
+❑❑❑ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+2.20 
+2 
+TWO PORT 
+NETWORK 
+ 
+ 
+2.1. One Port Network 
+One port network is a two terminal electrical network in which, current enters through one terminal and leaves through 
+another terminal. i.e. Resistors, inductors and capacitors are the one port network.  
+Example: Motor, Generator etc. 
+ 
+Two Port Network :  
+ 
+Maximum number of possible parameters for analysis of any port network is given by: 
+1. Z parameter (impedance parameter) 
+2. Y parameter (admittance parameter) 
+3. h-parameter (Hybrid parameter) 
+4. g-parameter (Inverse Hybrid parameter) 
+5. ABCD parameter (Transmission parameter) 
+6. [ABCD]
+–1
+ parameter (Inverse transmission parameter) 
+Z Parameter (Impedance Parameter) 
+In Z-parameter, voltage (
+12
+,VV
+) is the dependent variable and current (
+12
+,II
+) is the independent variable, the equations of Z 
+– parameter can be written by, 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.21 
+Network Theory 
+      
+111  112   2
+VZ  IZ  I=+
+      ...(i) 
+      
+221  122   2
+VZ  IZ  I=+
+    ...(ii) 
+Circuit diagram of Z parameter, 
+  
+From equation (i) & (ii), 
+Case (i) When output port is open circuit, i.e. I
+2
+ = 0,  
+    
+2
+1
+11
+1
+0I
+V
+Z
+I
+=
+==
+ Driving point input impedance (
+
+) 
+    
+2
+2
+21
+1
+0I
+V
+Z
+I
+=
+==
+ Transfer output impedance (
+
+) 
+Case (ii) When input port is open circuit, i.e. I
+1
+ = 0, 
+    
+1
+1
+12
+2
+0I
+V
+Z
+I
+=
+==
+ Transfer input impedance (
+
+) 
+    
+1
+2
+22
+2
+0I
+V
+Z
+I
+=
+==
+ Driving point output impedance (
+
+) 
+ Equation (i) & (ii) can be written in the matrix form, 
+          
+111121
+221222
+2  12  22  1
+VZZI
+VZZI
+
+        
+=
+        
+        
+ 
+             
+2 12  22 1
+[  ][  ]    [  ]VZI
+
+=
+ 
+                  
+1112
+22
+2122
+[]
+ZZ
+Z
+ZZ
+
+
+=
+
+
+  
+ Condition for Symmetry: 
+1122
+ZZ=
+ 
+ Condition for Reciprocity: 
+1221
+ZZ=
+ 
+ 
+Z-parameter is referred as open circuit impedance parameter. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.22 
+Network Theory 
+Standard Z Parameter Expression for T Network: 
+ 
+Hence,      
+122
+223
+[]
+ZZZ
+Z
+ZZZ
++
+
+=
+
++
+
+ 
+Standard Z Parameter Expression for Single Series and Shunt Element: 
+   
+(i)
+  
+(ii)
+  
+ 
+    
+[]
+
+=
+
+
+ZZ
+Z
+ZZ
+    
+[]Z
+
+
+=
+
+
+
+ 
+Standard Z Parameter Expression for Symmetric Lattice Network : 
+  
+       
+1221
+2112
+22
+[]
+22
+ZZZZ
+Z
+ZZZZ
++−
+
+
+=
+
+−+
+
+
+
+ 
+Y Parameter (Admittance Parameter) 
+In Y-parameter, current (
+12
+,II
+) is the dependent variable and voltage (
+12
+,VV
+) is the independent variable, the equations of Y 
+– parameter can be written by, 
+      
+111  112   2
+IY V    Y V=+
+ ...(i) 
+      
+221  122   2
+IY V    Y  V=+
+ ...(ii) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.23 
+Network Theory 
+Circuit diagram of Y parameter, 
+ 
+From equation (i) & (ii), 
+ Case (i) When output port is short circuit, i.e. V
+2
+ = 0,  
+     
+2
+1
+11
+1
+0=
+==
+V
+I
+Y
+V
+Driving point input admittance () 
+     
+2
+2
+21
+1
+0=
+==
+V
+I
+Y
+V
+ Transfer output admittance () 
+ Case (ii) When input port is short circuit, i.e. V
+1
+ = 0, 
+      
+1
+1
+12
+2
+0=
+==
+V
+I
+Y
+V
+ Transfer input admittance () 
+     
+1
+2
+22
+2
+0=
+==
+V
+I
+Y
+V
+ Driving point output admittance () 
+ Equation (i) & (ii) can be written in the matrix form, 
+     
+111121
+221222
+2  12  22  1
+        
+=
+        
+        
+IYYV
+IYYV
+ 
+     
+
+2  12  22  1
+=IYV
+  
+     
+
+1112
+22
+2122
+
+
+=
+
+
+YY
+Y
+YY
+ 
+Condition for Symmetry: 
+1122
+YY=
+ 
+Condition for Reciprocity: 
+1221
+YY=
+ 
+Relationship between Z and Y Parameter: 
+ The relation between Z and Y parameter is given by, 
+    
+1
+[  ]   [  ]
+−
+=ZY
+ 
+    
+1
+[  ]   [  ]
+−
+=YZ
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.24 
+Network Theory 
+Standard Y Parameter for -Network: 
+ 
+ Hence,    
+
+122
+22
+223
+Y    YY
+Y
+YYY
+
++−
+
+=
+
+−+
+
+ 
+Standard Y Parameter for Single Series and Shunt Element: 
+  
+(i) 
+  
+(ii)
+  
+    
+
+22
+1/1/
+1/1/
+ZZ
+Y
+ZZ
+
+−
+
+=
+
+−
+
+    
+Y
+
+
+=
+
+
+
+ 
+h-parameter (Hybrid Parameter) 
+In h-parameter, 
+12
+,VI
+ are the dependent variables and 
+12
+,IV
+ are the independent variables, the equations of h – parameter can 
+be written by, 
+      
+111  112   2
+Vh  Ih V=+
+ ...(i) 
+      
+221  122   2
+Ih  Ih  V=+
+ ...(ii) 
+Circuit diagram of h-parameter, 
+   
+ Case (i) When output port is short circuit, i.e. V
+2
+ = 0,  
+      
+2
+1
+11
+1
+0=
+==
+V
+V
+h
+I
+ Input impedance (
+
+) 
+      
+2
+2
+21
+1
+0=
+==
+V
+I
+h
+I
+ Forward current gain  
+ Case (ii) When input port is open circuit, i.e. I
+1
+ = 0,  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.25 
+Network Theory 
+      
+1
+1
+12
+2
+0=
+==
+I
+V
+h
+V
+ Reverse voltage gain  
+      
+1
+2
+22
+2
+0=
+==
+I
+I
+h
+V
+ Output admittance () 
+Equation (i) & (ii) can be written in the matrix form, 
+     
+111121
+221222
+2  12  22  1
+VhhI
+IhhV
+
+        
+=
+        
+        
+ 
+Condition of reciprocity and symmetricity in h-parameter is: 
+Reciprocity:    
+1221
+=−hh
+ 
+Symmetricity:   
+1=h
+  
+h-Parameter in Terms of Z and Y Parameter: 
+Sr. Z-Parameter Y-Parameter h-parameter 
+1. 
+2
+1
+11
+1
+0I
+V
+Z
+I
+=
+=
+ 
+2
+1
+11
+1
+0V
+I
+Y
+V
+=
+=
+ 
+2
+1
+11
+111
+0
+1
+V
+V
+h
+IY
+=
+==
+ 
+2. 
+1
+1
+12
+2
+0I
+V
+Z
+I
+=
+=
+ 
+1
+1
+12
+2
+0V
+I
+Y
+V
+=
+=
+ 
+1
+112
+12
+222
+0I
+VZ
+h
+VZ
+=
+==
+ 
+3. 
+2
+2
+21
+1
+0I
+V
+Z
+I
+=
+=
+ 
+2
+2
+21
+1
+0V
+I
+Y
+V
+=
+=
+ 
+2
+221
+21
+111
+0V
+IY
+h
+IY
+=
+==
+ 
+4. 
+1
+2
+22
+2
+0I
+V
+Z
+I
+=
+=
+ 
+1
+2
+22
+2
+0V
+I
+Y
+V
+=
+=
+ 
+1
+2
+22
+222
+0
+1
+I
+I
+h
+VZ
+=
+==
+ 
+g-Parameter  
+ In  g-parameter, 
+12
+,IV
+are  the  dependent  variables  and   
+12
+,VI
+are  the  independent  variables,  the  equations  of  g – 
+parameter can be written by, 
+     
+111  112   2
+Ig  Vg  I=+
+ ...(i) 
+     
+221  122   2
+Vg  Vg  I=+
+ ...(ii) 
+Circuit diagram of g parameter, 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.26 
+Network Theory 
+ Case (i) When output port is open circuit, i.e. I
+2
+ = 0,  
+    
+2
+1
+11
+1
+0
+Input
+=
+==
+I
+I
+g
+V
+ admittance () 
+    
+2
+2
+21
+1
+0=
+==
+I
+V
+g
+V
+Forward voltage gain  
+ Case (ii) When input port is short circuit, i.e. V
+1
+ = 0, 
+    
+1
+1
+12
+2
+0=
+==
+V
+I
+g
+I
+Reverse current gain   
+    
+1
+2
+22
+2
+0
+Output
+=
+==
+V
+V
+g
+I
+impedance (
+
+) 
+ Equation (i) & (ii) can be written in the matrix form, 
+    
+111121
+221222
+2  12  22  1
+IggV
+VggI
+
+        
+=
+        
+        
+ 
+Relationship between h and g Parameter: 
+ The relation between h and g parameter is given by, 
+    
+1
+[  ]   [  ]hg
+−
+=
+ 
+    
+1
+[  ]   [  ]gh
+−
+=
+ 
+ Condition for Symmetry: 
+1g=
+ 
+ Condition for Reciprocity: 
+1221
+=−gg
+ 
+ABCD Parameter (Transmission Parameter) 
+ In  ABCD-parameter, 
+11
+,VI
+ are  the  dependent  variable  and 
+22
+,VI−
+ is  the  independent  variable,  the  equations  of 
+ABCD – parameter can be written by, 
+    
+122
+=−VAVBI
+ ...(i) 
+    
+122
+=−ICVDI
+ ...(ii)  
+Circuit diagram of T parameter cannot be drawn as both dependent variables are at input port. 
+ Case (i) When output port is open circuit, i.e. I
+2
+ = 0,  
+   
+2
+1
+2
+0I
+V
+A
+V
+=
+=
+ = Reverse voltage gain  
+   
+2
+1
+2
+0I
+I
+C
+V
+=
+=
+= Transfer admittance () 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.27 
+Network Theory 
+Case (ii) When output port is short circuit, i.e. V
+2
+ = 0, 
+   
+2
+1
+2
+0V
+V
+B
+I
+=
+−
+=
+ = Transfer impedance (
+
+) 
+   
+2
+1
+2
+0V
+I
+D
+I
+=
+−
+=
+= Reverse current gain 
+  Equation (i) & (ii) can be written in the matrix form, 
+        
+12
+12
+22
+2  12  1
+VV
+AB
+II
+CD
+
+
+   
+
+=
+   
+
+−
+
+   
+ 
+ Condition for Symmetry: 
+AD=
+ 
+ Condition for Reciprocity: 
+1AD   BC−=
+ 
+Inverse ABCD or Inverse T Parameter ([ABCD]
+–1
+/[T]
+–1
+)  
+In  inverse  ABCD-parameter, 
+22
+,VI
+are  the  dependent  variable  and 
+11
+,VI−
+ is  the  independent  variable,  the  equations  of 
+inverse ABCD – parameter can be written by, 
+    
+211
+=−VaV    bI
+ ...(i) 
+    
+211
+=−IcV    dI
+ ...(ii) 
+ Case (i) When input port is open circuit, i.e. I
+1
+ = 0,  
+    
+1
+2
+1
+0I
+V
+a
+V
+=
+=
+= Forward voltage gain  
+    
+1
+2
+1
+0I
+I
+c
+V
+=
+=
+= Transfer admittance () 
+ Case (ii) When input port is short circuit, i.e. V
+1
+ = 0,  
+    
+1
+2
+1
+0V
+V
+b
+I
+=
+=−
+= Transfer impedance (
+
+) 
+    
+1
+2
+1
+0V
+I
+d
+I
+=
+=−
+= Forward current gain  
+  Equation (i) & (ii) can be written in the matrix form, 
+    
+21
+21
+22
+2  12  1
+VV
+ab
+II
+cd
+
+
+    
+
+=
+    
+
+−
+
+    
+ 
+ Condition for Symmetry: 
+ad=
+ 
+ Condition for Reciprocity: 
+1ad   bc−=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.28 
+Network Theory 
+Interconnection of Two Port Network 
+1. Series - series Connection: 
+ 
+    
+1111121211121112
+1112
+2121222221222122
+2122
+ababaabb
+ababaabb
+ZZZZZZZZ
+ZZ
+ZZZZZZZZ
+ZZ
+++
+    
+
+==+
+    
+
+++
+
+    
+  
+    
+[  ]   [  ][  ]=+
+ab
+ZZZ
+ 
+ In case of series – series connection individual Z parameters are added. Care should be taken for series connection that 
+some current should leave from second terminal of input and output port. 
+2. Parallel - parallel Connection: 
+ 
+    
+11
+1111121211121112
+12
+21
+2121222221222122
+22
+ababaabb
+ababaabb
+Y
+YYYYYYYY
+Y
+Y
+YYYYYYYY
+Y
+++
+
+    
+==+
+
+    
+++
+    
+
+ 
+    
+[  ]   [  ][  ]=+
+ab
+YYY
+ 
+ In case of parallel - parallel connection individual Y parameters are added. 
+3. Series Parallel Connection: 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.29 
+Network Theory 
+    
+1111121211121112
+1112
+2121222221222122
+2122
+ababaabb
+ababaabb
+hhhhhhhh
+hh
+hhhhhhhh
+hh
+++
+    
+
+==+
+    
+
+++
+
+    
+ 
+    
+[  ]   [  ][  ]=+
+ab
+hhh
+ 
+ In case of series - parallel connection individual h parameters are added. 
+4. Parallel Series Connection : 
+ 
+    
+1111121211121112
+1112
+2121222221222122
+2122
+ababaabb
+ababaabb
+gggggggg
+gg
+gggggggg
+gg
+++
+    
+
+==+
+    
+
+++
+
+    
+ 
+    
+[  ]   [  ][  ]=+
+ab
+ggg
+ 
+ In case of parallel - series connection individual g parameters are added. 
+5. Cascade Connection : 
+ 
+    
+
+
+=
+
+
+
+
+aabb
+aabb
+ABAB
+AB
+CDCD
+CD
+ 
+    
+[]   [] []=
+ab
+ABCDABCD    ABCD
+ 
+ In case of cascade connection individual T parameters matrix are multiplied. 
+Conclusion : 
+Interconnection of two port network Equivalent parameter 
+Series connection  
+[  ]   [  ][  ]
+ab
+ZZZ=+
+ 
+Parallel connection 
+[  ]   [  ][  ]
+ab
+YYY=+
+ 
+Series - parallel connection 
+[  ]   [  ][  ]
+ab
+hhh=+
+ 
+Parallel - series connection 
+[  ]   [  ][  ]
+ab
+ggg=+
+ 
+Cascade connection 
+[  ]   [  ] [  ]
+ab
+TT    T=
+ 
+❑❑❑ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+2.30 
+3 
+NETWORK 
+THEOREM 
+ 
+3.1. Thevenin's Theorem 
+Thevenin’s theorem states that a linear two terminal circuit can be replaced by an equivalent circuit consisting of a voltage 
+source 
+th
+V
+ (Thevenin’s voltage) in series with a resistance 
+th
+R
+ (Thevenin’s resistance). 
+ 
+  Fig.(a) General network   Fig.(b) Thevenin’s equivalent 
+ 
+=
++
+th
+thL
+V
+I
+RR
+ 
+Case 1 : Circuit having only independent sources 
+  Calculate the thevenin’s resistance at load terminals by replacing all independent voltage sources by short circuit 
+or by their internal resistance and all independent current sources by open circuit or by their internal resistances. 
+       
+theq
+RR=
+ 
+Case 2 : Circuit having only dependent sources 
+  By Keeping unchanged dependent sources 
+       
+dc
+th
+dc
+V
+R
+I
+=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.31 
+Network Theory 
+where,  
+dc
+V=
+ Value of voltage source applied across load terminals 
+    
+dc
+I=
+ Direct current supplied by DC voltage source 
+In this case, put thevenin’s voltage,(V
+th
+)=0. (due to absence of independent source). 
+Example: 
+         
+    
+Th
+AB
+ThL
+V
+I
+RR
+=
++
+ 
+    
+ThL
+ABAB   L
+ThL
+VR
+VI   R
+RR
+
+==
++
+ 
+Case 3 : Circuit having dependent as well as independent sources 
+Calculate the thevenin’s resistance at load terminals by replacing all independent voltage sources by short circuit or 
+by their internal resistance and all independent current sources by open circuit or by their internal resistances. 
+    
+dc
+th
+dc
+V
+R
+I
+=
+ 
+where, 
+dc
+V=
+ Value of DC voltage applied across load terminals 
+    
+dc
+I=
+ Direct current supplied by DC voltage source 
+3.2. Norton’s Theorem 
+Norton’s theorem states that a linear two terminal circuit can be replaced by an equivalent current source 
+N
+I
+ (Norton’s current) 
+in parallel with a resistance 
+N
+R
+ (Norton’s resistance). 
+ 
+  Fig.(a) General network   Fig.(b) Norton’s equivalent 
+Relation between 
+()
+or
+OCth
+VV
+,
+()
+or
+SCN
+II
+ and 
+th
+Z
+ 
+  
+OCOCth
+SCth
+thSCN
+VVV
+IZ
+ZII
+==   =
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.32 
+Network Theory 
+3.2.1. Maximum Power Transfer Theorem 
+ 
+Power dissipated to load as a function of 
+L
+R
+ is given by, 
+ 
+Maximum power transferred to the load is given by, 
+    
+22
+44
+thth
+L
+thL
+VV
+P
+RR
+==
+  
+      
+
+thL
+RR=
+ 
+Maximum Power Transfer: 
+     DC  
+2
+max
+4
+=
+th
+th
+V
+P
+R
+  
+• 
+,=
+Lth
+RR
+ if 
+L
+R
+ varying  
+• 
+0,=
+th
+R
+ if 
+L
+R
+ constant 
+th
+R
+ vary 
+AC   
+Case 1 : 
+*
+,,=== −
+LSLththL
+ZZRRXX
+ 
+Case 2 :  If only 
+L
+R
+ is variable, then 
+→
+L
+X
+ constant 
+    
+22
+()()=+   +
+LthLth
+RRXX
+ 
+ Then   
+2
+max
+22
+()()
+
+=
++    +    +
+thL
+thLthL
+VR
+P
+RRXX
+ 
+Case 3 : If 
+L
+R
+ is variable 
+(0) or==
+LLL
+XZR
+ 
+    
+22
+=   =+
+LSthth
+RZRX
+ 
+      Then,  
+2
+max
+22
+()
+
+=
+++
+thL
+Lthth
+VR
+P
+R    RX
+ 
+L
+P
+max
+P
+th
+R
+L
+R
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.33 
+Network Theory 
+3.3. Superposition Theorem 
+Superposition  theorem  states that  in  any  linear bilateral  network  containing  two  or  more  independent  sources,  the  resultant 
+current or voltage in any branch is the algebraic sum of currents or voltages caused by each independent source acting along 
+with all are other independent sources being replaced by their internal resistances. 
+Note: 
+1.  This Theorem is not valid for Non-linear quantities. 
+2. 
+()
+2
+12
+PPP=+
+ 
+The dissipation of total power across any load,when two sources are working simultaneously. 
+3.4. Reciprocity Theorem 
+Reciprocity theorem states that in any linear bilateral network, if a source produces a certain current in any other branch, then 
+the same source acting on the second branch produces the same current in the first branch. 
+ 
+     
+12
+12
+VV
+II
+=
+ 
+3.5. Tellegen’s Theorem 
+Tellegen’s theorem states that an instantaneous power in an electrical network is zero. 
+Mathematically it is given by, 
+    
+1
+0
+n
+K
+K
+P
+=
+=
+
+ 
+    
+1
+0
+n
+KK
+K
+VI
+=
+=
+
+ 
+We point out it as Power Conservation theorem.
+ 
+3.6. Millman’s Theorem 
+Millman’s theorem states that a number of voltage sources with internal resistance connected in parallel can be replaced by a 
+single equivalent voltage source V in series with equivalent resistance R. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.34 
+Network Theory 
+ 
+3.6.1. Dual of Millman’s Theorem 
+Dual of Millman’s theorem state that a number of current sources with internal resistance connected in series can be replaced 
+by a single equivalent current source in parallel with resistance. 
+ 
+ 
+❑❑❑ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+2.35 
+4 
+TRANSIENT ANALYSIS 
+ 
+4.1. Introduction 
+• Transient analysis is the analysis of the circuits during the time it changes from one steady-state condition to another 
+steady-state condition  
+• The transient analysis will reveal how the currents and voltages are changing during the transient period.  
+• Transient will occur when at least one energy storage element is present in circuit. 
+4.2. Common Aspects of RC and RL Circuits  
+While doing transient analysis on simple RC and RL circuits, we need remember two facts: 
+1. The voltage across a capacitor as well as the current in an inductor cannot have a discontinuity i.e. the capacitor voltage 
+must be continuous at time t = 0 and hence 
++
+C(0  )C(0  )
+vv
+−
+=
+ and the inductor current must be continuous at time t = 0 
+and hence 
++
+L(0  )L(0  )
+ii
+−
+=
+.  
+2. With DC excitation, at a steady state, the capacitor will act as an open circuit and the inductor will act as a short circuit.  
+4.2.1 Time Constant 
+It is the time required for the response to delay by a factor 1/e or 36.8% of its initial value. It is represented by τ. 
+• For a RC circuit,  
+RC=
+ 
+• For a RL circuit,  
+L
+R
+=
+ 
+R is the Thevenin resistance across inductor or capacitor terminals. 
+4.2.2 General Method of Analysis 
+()()
+()
+()
+()
+0
+/
+0
+,  0
+tt
+x  txx  txet
+
+
+−−
++
+
+=+−
+
+ 
+If switching is done at 
+0
+tt=
+, 
+()
+()
+()()
+00
+   Initial value of  at 
+    Final value of  at 
+x  tx  tt    t
+xx  tt
++
+==
+==
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.36 
+Network Theory 
+Follow these steps to solve numerical: 
+Step 1: Choose any voltage and current in the circuit which has to be determined. 
+Step 2: Assume circuit has reached steady state before switch was thrown at 
+0
+tt=
+.  
+Step 3: Draw the circuit at 
+0
+tt=
+ with capacitor replaced by open circuit and inductor replaced by short circuit. Solve for 
+()
+0c
+Vt
+−
+ and 
+()
+0L
+it
+−
+. 
+Step 4: Voltage across capacitor and inductor current cannot change instantaneously, 
+ 
+()()
+()
+()()
+()
+000
+000
+ccc
+LLL
+V   tV   tV   t
+i   ti   ti   t
++−
++−
+==
+==
+ 
+Step 5: Draw the circuit for 
+0
+tt
++
+=
+with switches in new position.  
+Step 6: Replace a capacitor with a voltage source of value 
+()()
+00
+vv
+cc
+tt
+−+
+=
+and inductor with a current source of value 
+()()
+00LL
+i    ti    t
++−
+=
+. Solve for initial value of variable 
+()
+0
+xt
++
+. 
+Step 7:  Draw the circuit for 
+t=
+, in a similar manner as step- 2 and calculate 
+()
+x
+. Calculate time constant of circuit 
+Step 8:  
+thth
+C or/RL  R==
+ 
+Step 9: Substitute all value to calculate 
+()
+xt
+. 
+4.3. Source Free RC Circuit 
+A source free RC circuit occurs when its DC source is suddenly disconnected. The energy already stored in the capacitor 
+is released to the resistors. 
+ 
+ 
+(a)                                           (b)  
+State variable = V 
+Let,   V(0) = V
+0 
+Apply KCL in Fig (b)  
+c
+dV
+V
++ C0
+Rdt
+
+=
+
+
+ 
+c
+c
+dV
+V
+C
+dtR
+dV
+dt
+dtRC
+
+=−
+
+
+=−
+
+ 
+C
+C
+RR
+V
+S
+1
+S
+2
+i
+c
+V
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.37 
+Network Theory 
+c
+t
+ln(V)ln(A)
+RC
+V
+t
+ln
+ARC
+= −   +
+
+=−
+
+
+ 
+-t/RC
+c
+00
+V (t)    Ae
+V = VA=V
+=
+
+ 
+But at t = 0, 
+/
+c0
+V (t)   V e
+t  RC−
+=
+  
+for 
+5t
+, circuit will be in transient state and for 
+5t
+, circuit will be in steady state. Sometimes 
+4
+ is also considered 
+as settling time. 
+ 
+Expression for current through capacitor, 
+()
+-t/RC
+C
+c0
+dV
+d
+i  = C = CV e
+dtdt
+ 
+  
+()
+/
+0
+A
+t
+c
+V
+i   te
+R
+−
+
+=−
+
+
+ 
+and  
+-t/τ
+R0
+V  (t) = V e    V
+ 
+ 
+4.3.1 RC Circuit with Source: 
+Again, consider the circuit shown in below Figure. Let us say that the switch was in position 
+2
+S
+ long enough so that 
+()
+c
+v   t0=
+ and i
+c
+(t) 
+0=
+ i.e. all the energy in the capacitor is dissipated and the circuit is at rest. Now, the switch is moved to 
+position 
+1
+S
+.  
+V(t)
+0.367%
+0.135%
+Final value
+Initial value
+f
+
+2
+3
+–V/R
+0
+0
+t
+i(t)
+C
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.38 
+Network Theory 
+ 
+ 
+()()
+cc
+v   0v   00
++−
+==
+ 
+The voltage through the capacitor is calculated as: 
+1
+–
+RC
+c
+v (t)   V 1 – e
+t
+
+
+=
+
+
+ 
+The current through the capacitor is calculated as: 
+()
+1
+t
+C
+RC
+C
+dv
+V
+i    tC
+dtR
+e
+−
+==
+ 
+ 
+4.4 Source Free RL Circuit 
+A  source  free  RL  circuit  occurs  when  its  dc  source  is  suddenly  disconnected.  The  energy  already  stored  in  the  inductor  is 
+released to the resistors. 
+ 
+(a)    (b)  
+Let,   i(0) = i
+0
+ 
+Apply KVL, in Fig (b)  
+   
+di
+iR+ L0
+dt
+=
+ 
+          
+di
+LiR
+dt
+=−
+ 
+       
+diR
+dt
+iL
+
+=−
+
+
+
+ 
+      
+iR
+lnt
+At
+       
+=−
+       
+       
+    
+C
+C
+RR
+V
+V
+S
+1
+S
+2
+i
+c
+V
+
+t
+t
+i(t)
+C
+V/R
+0
+v(t)
+C
+0.632V
+V
+0
+LL
+RRRR
+VV
+S
+1
+S
+1
+S
+2
+S
+2
+i
+L
+i
+L
+VV
+LL
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.39 
+Network Theory 
+But at t = 0,      
+00
+i = IA = I
+ 
+   
+()
+/(   /   )
+0
+i  tIA
+t   L  R
+e
+−
+=
+ 
+                               
+L
+R
+=
+(Time constant of R-L Circuit)  
+4.4.1 With Source 
+Consider the circuit shown in Fig After the circuit has attained the steady state with the switch in position 푆
+2
+, the switch 
+is moved to position 푆
+1
+ at time 푡=0. We like to find the inductor current for time 푡>0.  
+ 
+The current through the capacitor is calculated as: 
+   
+()
+R
+–t
+L
+L
+V
+i    t  =1   e
+R
+
+−
+
+
+ 
+The voltage through the capacitor is calculated as: 
+   
+R
+–t
+L
+L
+di
+v  (t)    LVe
+dt
+==
+ 
+4.5.  Comparison Table 
+RC Circuit RL Circuit 
+1. τ = RC (Time constant) 
+1.  
+L
+R
+=
+  (Time constant) 
+2. With DC, at steady state capacitor acts as open 
+circuit 
+2. With DC, at steady state inductor acts as short 
+circuit 
+3. If v
+C
+(0)   0; v
+C
+(∞)  = 0 Then  
+()()
+1
+t
+RC
+CC
+0v    tve
+−
+=
+ 
+3. If i
+L
+(0)   0; i
+L
+(∞)  = 0 Then  
+()()
+t
+L
+L
+R
+L
+0i    tie
+−
+=
+ 
+4. If v
+C
+(0)  = 0; v
+C
+(∞)   0 Then  
+()()
+1
+t
+RC
+CC
+v    tve
+−
+=
+ 
+4. If i
+L
+(0) = 0; i
+L
+(∞)  0 Then 
+ 
+()()
+t
+L
+L
+R
+L
+i    tie
+−
+=
+ 
+5. If v
+C
+(0)   0; v
+C
+(∞)   0 Then  
+()()()()
+1
+t
+RC
+CCCC
+v    tvvv0e
+−
+
+=−+
+
+
+ 
+5. If i
+L
+(0)   0; i
+L
+(∞)  0 Then 
+()()()()
+t
+L
+CC
+R
+CC
+iii0tie
+−
+
+=+−
+
+
+ 
+L
+RRRR
+VV
+S
+1
+S
+1
+S
+2
+S
+2
+i
+L
+i
+L
+VV
+LL
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.40 
+Network Theory 
+4.6. Series RLC Circuit  
+Without source: 
+The voltage across Capacitor in the circuit shown below can be given as; 
+    
+0
+0
+1
+V(0)i(t)dt = V
+C
+−
+=
+
+ 
+ 
+Characteristic equation of series RLC circuit is given as: 
+2
+R1
+s   +  s +  = 0
+LLC
+ 
+2
+1
+RR1
+S
+2L2LLC
+
+= −   +−
+
+
+ 
+2
+2
+RR1
+S
+2L2LLC
+
+= −   −−
+
+
+ 
+22
+120
+0
+S , S = – α ±  α  ω ; 
+R1
+α =   ; ω = 
+2L
+LC
+– 
+ 
+1. If 
+0
+
+ roots are real and unequal (over-damped), 
+()
+12
+sts
+t
+i  t   = A e   + Be
+ 
+2. If 
+0
+=
+ roots are real and equal (critically damped), 
+()()
+–t
+i  t  =  A + Bt  e
+
+ 
+3. If 
+0
+
+, roots are complex conjugate (under damped), 
+()()
+–t
+dd
+22
+d0
+i  t  = eAcosω t + Bsinω t
+ω = ω– α
+
+ 
+With a source: 
+()
+()
+()
+12
+s
+t
+st
+s
+v  t   = VA e   + BeOver-damped+
+ 
+()()
+–t
+s
+(  ritically damped)v  t  =  VA + Bt  eC+
+
+ 
+()()
+–t
+sdd
+v  t  = V  + eAcosω t + Bsinω t(Underdamped)
+
+ 
+i(t)
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.41 
+Network Theory 
+4.7 Parallel RLC Circuit  
+Without source: 
+     
+0
+1
+i(0)v(t)dt
+L
+−
+=
+
+ 
+Characteristic equation of parallel RLC circuit is given as: 
+ 
+2
+11
+s   +  s +  = 0
+RCLC
+ 
+ 
+22
+120
+0
+S , S = – α ±  α  ω ; 
+1
+α =    ; ω = 
+2RC
+LC
+– 
+1
+ 
+1. If 
+0
+
+ roots are real and unequal (over-damped), 
+   
+()
+12
+sts
+t
+v  t   = A e   + Be
+ 
+2. If 
+0
+=
+ roots are real and equal (critically damped), 
+   
+()()
+–t
+v  t  =  A + Bt  e
+
+ 
+3. If 
+0
+
+, roots are complex conjugate (under damped), 
+       
+()()
+–t
+dd
+22
+d0
+v  t  = eAcosω t + Bsinω t
+ω = ω– α
+
+ 
+With step input: 
+ 
+()
+()
+()
+12
+s
+t
+st
+s
+i  t   = IA e   + BeOver-damped+
+ 
+ 
+()()
+–t
+s
+(Critically damped)i  t  = IA + Bt  e+
+
+ 
+ 
+()()
+–t
+sdd
+i  t   =  I  + eAcosω t + Bsinω t(Underdamped)
+
+ 
+4.8  Representation of Circuit Elements in s-domain 
+Resistor: 
+ 
+1. In Time domain V(t) = R.i(t) 
+2. In s-domain V(s) = R.I(s) 
+R
+R
+v(t)
+V(s)
++
++
+–
+–
+i(t)
+Is()
+Time domains-domain
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.42 
+Network Theory 
+Inductor ‘L’ with initial current ‘I
+0
+’ 
+In time domain:  
+ 
+In frequency domain:  
+ 
+0
+0
+I
+V(s)
+V(s) = sLI(s) – LI   or    I(s) =     + 
+sLs
+ 
+Capacitor ‘C’ with initial Voltage ‘V
+0
+’ 
+In time domain:  
+ 
+In frequency domain: 
+ 
+0
+0
+V
+I(s)
+I(s) = sCV(s) – CV  or    V(s) =    + 
+sCs
+ 
+4.9 Transient Analysis using Laplace Transform 
+Laplace Transform Method: 
+Step 1: Choose any voltage and current in the circuit which has to be determined. 
+Step 2: Assume circuit has reached steady state before switch was thrown at 
+0
+tt=
+.  
+L
+L
+v(t)
+v(t)
+++
+––
+i(t)i(t)
+I
+0
+I
+0
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.43 
+Network Theory 
+Step 3: Draw the circuit at 
+0
+tt=
+ with capacitor replaced by open circuit and inductor replaced by short circuit. Solve for 
+()
+0c
+Vt
+−
+ and 
+()
+0L
+it
+−
+. 
+Step 4: Laplace-transform a circuit, including components with non-zero initial conditions. 
+Step 5: Analyze a circuit in the s-domain and  Check the s-domain answers using the initial value theorem (IVT) and final 
+value theorem (FVT). 
+Step 6: Inverse Laplace-transform the result to get the time domain solutions. 
+Following equations can be used to find response of RL and RC circuits after switching: 
+1. If the switching occurs at 
+0t=
+.  
+    
+()()
+/
+( )(0)
+t
+i tiiie
+−
+=   +    −  
+
+
+ 
+()()
+/
+( )(0)
+t
+v tvvve
+−
+=   +−  
+
+
+ 
+2. If the switching occurs at 
+0
+tt=
+.  
+    
+()()
+()
+0
+/
+0
+( )(   )
+tt
+i tii tie
+− −   
+=   +−  
+
+
+ 
+()()
+()
+0
+/
+0
+( )(  )
+tt
+v tvv tve
+− −   
+=   +−  
+
+
+ 
+4.10. Limitations of Transient Equation 
+1. It is not applicable in circuits having two energized capacitors in series. 
+2. It is not applicable in circuits having two energized inductors in parallel. 
+3. If time dependent source is present in the circuit then transient equation is not applicable. 
+4. For inductor or capacitor if excitation is impulse signal then transient equation is not applicable. 
+5. If the source is sinusoidal in nature, transform domain approach is not valid. 
+Behavior of R, L and C at 
+0  ,0  &ttt
+−+
+=    == 
+: 
+ 
+❑❑❑ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+2.44 
+5 
+SINUSOIDAL STEADY 
+STATE ANALYSIS 
+ 
+5.1. Introduction 
+• When we apply sinusoidal across any reactive network or complex network, then all responses either current or voltage 
+are referred as sinusoidal steady state response or steady state response or sinusoidal response.  
+• These is no concept of open circuit and short circuit for sinusoidal input. 
+• In case of dc source, at steady state, capacitor is replaced by open circuit and inductor is replaced by short circuit.  
+• The sinusoidal varying voltage can be written as,  
+   
+( )cos()
+m
+V tVt= +
+  
+• To aid discussion of the parameters of the sinusoidal voltage equation, below is the figure. 
+ 
+where,  
+m
+V=
+ Amplitude  
+          
+=
+ Phase angle 
+ 
+=
+ Angular frequency which is related to time period T as
+2
+T
+
+=
+. The argument 
+t
+changes
+2
+radians (
+0
+360
+) 
+in one period. 
+Example : Series RL circuit, 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.45 
+Network Theory 
+ 
+    
+()
+1
+22   2
+costan
+R
+m
+t
+L
+tr
+L
+V
+R
+i    te
+RL
+−
+−
+
+
+−
+
+
+=−
++
+                [Transient response, dies out as 
+t→
+] 
+    
+()
+1
+22   2
+costan
+m
+ss
+V
+L
+i    tt
+R
+RL
+−
+
+
+= − +−
+
+
++
+ 
+[Steady state response, lasts even 
+t→
+] 
+5.2. Phasor  
+The phasor is a constant complex number that carries the amplitude and phase angle information of a sinusoidal function. 
+A sinusoidal function can be represented by the real part of a phasor times the “Complex carrier”. 
+    
+
+()
+cos ()ReRe  ()
+jtjj  t
+mmm
+VtVeV   e    e
+ +    
+ + ==
+ 
+            
+Re
+Phasor  Carrier
+jt
+Ve
+
+
+
+=
+
+
+ 
+(i) Polar form  
+      
+j
+mm
+V   V eV
+
+==  
+ 
+(ii) Rectangular form  
+         
+cossin
+mm
+V   VjV=+
+ 
+      
+222
+real +ImgH=
+ 
+      
+22222
+cossin
+mm
+HVV=+
+ 
+      
+2222
+(cossin    )
+m
+HV=+   
+ 
+      
+m
+HV=
+ 
+Impedances of the Passive Circuit Element 
+1. Generalize resistance to impedance. 
+2. Impedance of R, L, C 
+3. In phase and quadrature. 
+ (i) In a resistor, the ratio of voltage 
+()Vt
+ to the current 
+()it
+ is a real constant R. 
+       
+()
+()
+Vt
+R
+it
+=
+ ...(Resistance) 
+ (ii) For two terminals of a linear circuit driven by sinusoidal source, the ratio of voltage phasor V to the current phasor 
+I is a complex constant Z. 
+       
+V
+Z
+I
+=
+ ...(Impedance) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.46 
+Network Theory 
+Relation between i, v and Impedance of a Capacitor : 
+Let us take,      
+( )cos ()
+mv
+V tVt= +
+ 
+     
+The time 푡
+0
+ is referred as switching time or transient free time 
+()
+in
+Vt
+ 
+ 
+Condition of transient free 
+sin ()
+m
+Vt +
+ 
+ 
+1
+tan0
+L
+R
+−
+
+−=
+         
+L
+R
+
+=
+
+
+ 
+RC=
+ for RC circuit 
+1
+tan0RC
+−
+−       =
+ 
+sin ()
+m
+Vt +
+ 
+ 
+1
+0
+tan0
+L
+t
+R
+−
+
+ +−=
+ 
+cos ()
+m
+Vt +
+ 
+ 
+1
+tan
+2
+L
+R
+−
+
+−=
+ 
+cos ()
+m
+Vt +
+ 
+ 
+1
+0
+tan
+2
+L
+t
+R
+−
+
+ +−=
+ 
+      
+()
+1
+0
+tan
+/
+rad
+L
+R
+t
+rad   sec
+−
+
+−
+=
+
+ (sin excitation) 
+      
+1
+0
+tan
+2
+L
+R
+t
+−
+
++−
+=
+
+(cosine excitation) 
+1. Transient free response is only possible for ac excitation. It is not possible for dc excitation.  
+2. Transient free response is not applicable for series RLC as well as parallel RLC network (2
+nd
+ order network)  
+3. Consider 2
+nd
+ order system with complex conjugate roots 푠=−훼±푗훽
+ 
+    
+()
+
+r
+Stea  y
+1
+12
+2
+2
+Tn
+dt
+as
+s ate
+ient
+1
+cossinsintan
+1
+t
+m
+V
+C
+teKt    KttL
+R
+RL
+C
+−−
+
+
+
+
+
+= + + +− −
+
+
+
+
+
++  −
+
+
+
+  
+For Transient part to be 0, 퐾
+1
+푐표푠훽푡+퐾
+2
+푠푖푛훽푡 should be 0, which is not possible at same time because of sin and cos. 
+Transient free response is possible only for series and parallel first order RL and RC circuits, with ac excitation. 
+❑❑❑ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+2.47 
+6 
+RESONANCE 
+ 
+6.1 Resonance 
+A.C Circuits made up of resistors, inductors and capacitors are said to be resonant circuits when the current drawn from the 
+supply is in phase with the applied sinusoidal voltage. Then  
+1. The resultant Reactance or Susceptance is zero.  
+2. The circuit behaves as a resistive circuit.  
+3.  The power factor is unity. 
+6.2. Series Resonance 
+Figure represents a series resonant circuit. Resonance can be achieved by  
+1.  Varying frequency ω  
+2.  Varying the inductance L  
+3.  Varying the capacitance C 
+ 
+The current in the circuit is 
+ I = 
+()
+LC
+EE
+Rj  XXRjX
+=
++−+
+ 
+At resonance. X is zero. If 
+0
+ is the frequency at which resonance occurs, then 
+00
+0
+11
+orL
+C
+LC
+  = =
+
+ = resonant frequency. 
+The current at resonance is 
+m
+V
+I
+R
+=
+= maximum current. 
+The phasor diagram for this condition is shown in Fig. (a). 
+The variation of current with frequency is shown in Fig. (b). 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.48 
+Network Theory 
+ 
+(a)             (b) 
+Points to be remembered: 
+At Series Resonance,  
+• The voltage across inductor and capacitor are equal in magnitude i.e. |V
+L
+| = |V
+C
+| and 180
+o 
+out of phase.  
+• Imaginary part of input impedance is equal to zero. 
+• The net impedance is Minimum i.e.
+()
+0
+|R  Minimum
+in
+Z
+=
+=
+
+ 
+• The net current flow in the circuit is Maximum i.e.
+()
+0
+|Maximum
+S
+V
+I
+R
+=
+=
+
+ 
+Impedance of a Series Resonant Circuit:  
+The impedance of a series RLC circuit is given by,  
+     
+1
+ZRjL
+C
+
+=  +   −
+
+
+
+ 
+2
+2
+1
+ZRL
+C
+
+=    +  −
+
+
+
+     
+Variation of impedance with change in frequency is shown in figure below, 
+ 
+Fig. Impedance vs frequency curve for series RLC circuit 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.49 
+Network Theory 
+6.1.1 3dB Frequency 
+The range of frequencies at which the current drawn by network becomes 0.707 or 
+1
+2
+ times of its maximum value. 
+Higher and lower 3dB cut off frequencies of series RLC circuit are given by, 
+       
+2
+1
+rad/sec
+22
+H
+RR
+LLLC
+
+ =   ++
+
+
+   ...(i) 
+       
+2
+1
+22
+L
+RR
+LLLC
+−
+
+ =   ++
+
+
+ rad/sec   ...(ii) 
+Quality factor (Q-factor): 
+• The “sharpness” of the resonance in a resonant circuit is measured quantitatively by the quality factor Q 
+• The Q factor is also known as the voltage amplification factor OR current amplification factor and it’s value must be 
+high for any tuned circuit. 
+• Q-factor describes the energy storage capability of inductor and capacitor in RLC network. 
+     
+Energystored byinductor
+[  ]   2
+Energydissipated by resistance per cycle
+QL= 
+ 
+     
+2
+0
+2
+0
+0
+1
+2π
+2
+[]
+2
+LI
+QL
+IR
+T
+
+=
+
+   
+        Q[L ]
+0
+1
+L
+L
+RR   C
+
+==
+  
+ Similarly,  
+Energystored bycapacitor1
+[   ]    2
+Energydissipated by resistance per cycle
+L
+QC
+RC
+= =
+ 
+ The relationship between bandwidth, frequency of resonance and quality factor is given by,  
+      
+0
+BW
+Q
+
+=
+ 
+Note:  
+For any tuned network the Q-factor must be high and the bandwidth should be small and therefore the resistance used in 
+the network should be small as 
+1
+&QBWR
+BW
+
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.50 
+Network Theory 
+6.1.2 Parallel RLC Resonance Circuit 
+The Dual of a series resonant circuit is often considered as a parallel resonant circuit and it is as shown in figure. 
+ 
+Fig. A parallel resonance circuit 
+The voltage across the parallel combination of RLC is given by, 
+      
+11
+s
+I
+V
+jC
+RL
+=
+
++    −
+
+
+
+ 
+22
+11
+s
+I
+V
+C
+RL
+=
+    
++   −
+    
+
+    
+   
+The value of 
+
+ that satisfies the condition of parallel resonance is called resonant frequency. 
+      
+0
+1
+rad/sec
+LC
+=
+    
+ 
+At resonance, 
+1/LC =  
+, the admittance will be minimum and voltage will be maximum as given below, 
+         
+Rs
+VI   R=
+      
+ 
+Fig. Voltage variation in a parallel resonant circuit 
+Admittance of the parallel RLC circuit given by, 
+       
+11
+YjC
+RL
+
+=  +   −
+
+
+
+ 
+From  above  equation,  admittance  is  dominated  by  inductive  term  at  lower  frequencies  and  by  capacitive  term  at  higher 
+frequencies. The plot of Y against frequency is shown below. 
+ 
+Fig. Admittance vs frequency curve in parallel RLC circuit 
+
+
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.51 
+Network Theory 
+3dB Bandwidth  
+3 dB Bandwidth is given by, 
+      
+BW
+HL
+= −
+ 
+1
+BWrad/sec
+RC
+=
+ 
+1
+BW Hz
+2RC
+=
+
+ 
+To obtain the relationship between bandwidth and frequency of resonance, multiply equation (i) and (ii), 
+
+       
+1
+.
+HL
+LC
+  =
+  
+2
+0
+.
+HL
+  =
+ 
+
+      
+0
+.rad/sec
+HL
+ =  
+ 
+3dB Frequencies 
+Higher 3dB cut frequencies of parallel RLC circuit are given by, 
+      
+2
+111
+rad/sec
+22
+H
+RCRCLC
+
+ =++
+
+
+  ...(i) 
+Lower 3dB cut frequencies of parallel RLC circuit are given by, 
+      
+2
+111
+rad/sec
+22
+L
+RCRCLC
+−
+
+ =++
+
+
+   ...(ii) 
+3 dB Frequency in terms of bandwidth is given by 
+      
+2
+2
+0
+BWBW
+22
+H
+
+ =    ++
+
+
+   
+2
+2
+0
+BWBW
+22
+L
+
+ = −    ++
+
+
+ 
+Quality factor for parallel RLC circuit: 
+• The “sharpness” of the resonance in a resonant circuit is measured quantitatively by the quality factor Q 
+• Q-factor describes the energy storage capability of inductor and capacitor in RLC network. 
+      
+[  ][   ]
+C
+L
+RR
+I
+I
+C
+Q  LQ CR
+IIL
+=   ==   =
+ 
+ The relationship between bandwidth and quality factor is given by,  
+ Quality factor,   
+0
+BW
+Q
+
+=
+ 
+6.1.3 Resonance in Series RLC vs Parallel RLC  
+Parallel  resonant  circuit  is  the DUAL of  the  series  resonant  circuit  and  hence the  results  of  parallel  resonant  circuit can  be 
+obtained just by following replacement in the results of series resonant circuit,  
+   
+1
+R
+R
+→
+ 
+   L → C, C → L 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.52 
+Network Theory 
+The key differences between series resonance and parallel resonance are given in the following table − 
+Parameters Series Resonance Parallel Resonance 
+Circuit Diagram 
+  
+Impedance 
+The  impedance  of  a  series  RLC  circuit 
+becomes minimum at series resonance.  
+The imaginary part of the impedance is 0 
+i.e. 
+X
+L
+ – X
+C
+ = 0 
+X
+L
+ = X
+C
+ 
+The impedance of a parallel RLC circuit 
+becomes maximum at parallel resonance. 
+Admittance 
+Series resonance has maximum admittance. Parallel resonance has minimum admittance. 
+The imaginary part of the impedance is 0 i.e. 
+Y
+L
+ – Y
+C
+ = 0 
+Y
+L
+ = Y
+C
+ 
+Phasor 
+Diagrams 
+ 
+ 
+Upper cut-off 
+frequency 
+2
+1
+rad/sec
+22
+H
+RR
+LLLC
+
+  =   ++
+
+
+ 
+2
+111
+rad/sec
+22
+H
+RCRCLC
+
+  =++
+
+
+ 
+Lower cut-off 
+frequency 
+2
+1
+rad/sec
+22
+L
+RR
+LLLC
+
+
+
+ = −   ++
+
+
+
+
+ 
+2
+111
+rad/sec
+22
+H
+RCRCLC
+
+
+
+  = −++
+
+
+
+
+ 
+Bandwidth 
+BWrad/sec
+HL
+R
+L
+= − =
+ 
+1
+BWrad/sec
+HL
+RC
+= − =
+ 
+Behave of the 
+circuit 
+It acts as a voltage amplifier circuit or 
+acceptor circuit. 
+It acts as current amplifier circuit or rejector 
+circuit. 
+Current 
+The series resonance results in the 
+maximum current through the circuit. 
+The current in circuit at parallel resonance is 
+minimum. 
+Filter 
+Characteristics 
+It works as a Band Pass Filter It works as a Band Stop Filter and Band 
+Reject Filter. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.53 
+Network Theory 
+Parameters Series Resonance Parallel Resonance 
+Magnification 
+Feature 
+The series resonance magnifies the voltage 
+in the circuit. 
+The parallel resonance magnifies the current 
+in the circuit. 
+Equation of 
+effective 
+impedance 
+The effective impedance is given by, 
+Z = R 
+The effective impedance is given by, 
+Z = L/CR 
+Quality factor 
+(Q-factor) 
+
+0
+1
+L
+L
+QL
+RR   C
+
+==
+ 
+
+0
+RC
+Q  LR
+LL
+==
+
+ 
+Applications 
+The series resonance is widely used in 
+tuning, oscillator circuits, voltage 
+amplifiers, high-frequency filters, etc. 
+The parallel resonance is used in current 
+amplifiers, induction heating, filters, radio-
+frequency amplifiers, etc. 
+ 
+   
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+2.54 
+7 
+COMPLEX 
+POWER 
+ 
+7.1. Introduction 
+Complex power is “the complex sum of real and reactive powers”, it is also termed as apparent power, measured in terms of 
+volt-amps (or), in kilo volt-amps (KVA). 
+The rectangular form of complex power is given below, 
+       
+SPjQ=+
+ 
+       
+221
+tan
+Q
+SPQ
+P
+−
+
+=    +  
+
+
+ 
+       
+*
+S    VI=
+ 
+where, 
+*
+I
+ is the complex conjugate of current. 
+In case of AC circuit, complex power is given by, 
+*
+rms  rms
+S   VI=
+ VA. 
+7.2. Analysis of Complex Power 
+Consider the AC load figure in below. 
+ 
+   
+*
+rms  rms
+S   VI=
+ 
+   
+2
+m
+rmsrmsvv
+V
+VV=    =   
+ 
+The expression of RMS current in phasor form is given by; 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.55 
+Network Theory 
+   
+2
+m
+rmsrmsii
+I
+II=    =   
+ 
+   
+*
+2
+m
+rmsrmsii
+I
+II=   − =   −
+ 
+   
+rms  rmsvi
+S    VI= −
+  [in polar form] 
+   
+()
+vi
+j
+rms  rms
+S   VIe
+ −
+=
+  [in exponential form] 
+   
+cos ()sin ()
+rms  rmsvirms  rmsvi
+S    VIjVI= − + −
+ 
+   
+cossin
+22
+m  mm  m
+V  IV  I
+Sj=+
+ 
+   
+vi
+ = −
+ 
+7.3. Real Power or Reactive Power 
+The complex power may be expressed in terms of the load impedance Z.  
+The load impedance Z may be written as, 
+    
+rmsrms
+vi
+rmsrms
+VV
+V
+Z
+III
+=  =    =     −
+ 
+    
+rmsrms
+VZ    I=
+ 
+     
+2
+2*
+*
+rms
+rmsrms  rms
+V
+SIZVI
+Z
+==    =
+  
+Since,    
+ZRjX=+
+ 
+    
+2
+()
+rms
+S    IR    jXP    jQ=+   =  +
+ 
+    
+2
+()
+rms
+S    IRjX=+
+ 
+    
+2
+()
+rms
+S    P    jQ    IR    jX=  +   =+
+ 
+where P and Q are the real and imaginary parts of the complex power, that is 
+    
+2
+Re(  )
+rms
+PSIR==
+ 
+    
+2
+Im(  )
+rms
+QSIX==
+ 
+• P is the average or real power and if depend S on the loads resistance R.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.56 
+Network Theory 
+• Q depend on the loads reactance X and is called the reactive (or quadrature) power. 
+Comparing equations (i) and (ii), we notice that, 
+    
+cos ()
+rms  rmsvi
+P   VI= −
+ 
+    
+sin ()
+rms  rmsvi
+Q   VI= −
+ 
+Points to be Remembered: 
+• The  real  power P is  the  average  power  in  watts  delivered  to  a  load,  it  is  the  only  useful  power,  it  is  actual  power 
+dissipated by the load.  
+• The reactive power Q is a measure of the energy exchange between the source and the reactive part of the load. 
+The nature of reactive power for different types of loads: 
+ 
+ 
+ 
+ 
+ 
+ 
+7.4. Power Triangle 
+  
+   Fig.(a)    Fig.(b) 
+         
+22
+SPQ=+
+ 
+   
+cos
+P
+S
+ =  =
+ Power factor. 
+   
+sin
+Q
+S
+ =  =
+ Reactive factor 
+  
+Reactive Power 
+Power factor Load Types 
+Q = 0  
+Unity Resistive 
+Q < 0 
+Leading Capacitive 
+Q > 0 
+Lagging Inductive 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.57 
+Network Theory 
+Note: 
+ 
+1. 
+=P   VI
+ (In DC circuit) 
+2. 
+cos=P    VI
+ (In single phase AC circuit) 
+3. 
+3cos=
+LL
+PV  I
+ (In three phase AC circuit) 
+4. 
+22
+()=−PSQ
+ 
+5. 
+22
+(VA)(VAR)=−P
+ 
+6. 
+sin=Q   VI
+ 
+7. Reactive power 
+22
+Apparent power)(True pow   )(er=−
+ 
+8. 
+22
+=−QSP
+ 
+9. 
+22
+KVAR(KVA)(KW)=−
+ 
+Where: 
+=P
+ Power in watt 
+ 
+=V
+ Voltage in volt 
+ 
+=I
+ Current in amperes 
+ 
+cos=
+ Power factor (phase angle difference) 
+ 
+=
+L
+V
+ Line voltage 
+ 
+=
+L
+I
+ Line current 
+ 
+=S
+ Apparent power in VA (volt ampere) 
+ 
+=Q
+ Reactive power in VAR (volt ampere reactive). 
+ 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.58 
+Network Theory 
+8 
+MAGNETIC 
+COUPLING 
+ 
+8.1 Introduction 
+When two loops with or without contacts between them affect each other through the magnetic field generated by one of them, 
+they  are  said  to  be  magnetically  coupled.  Whenever  a  current  flows  through  a  conductor,  a  magnetic  field  is  generated 
+(magnetic flux). When time varying magnetic field generated by one loop penetrates a second loop, a voltage induced between 
+the ends of the second wire. 
+8.1.1 Important Points to Remember 
+Magnetic Aiding: 
+If a current enters the dotted terminal of one coil, the reference polarity of the mutual voltage in the second coil is positive at 
+the dotted terminal of the second coil. 
+ 
+Magnetic Opposition: 
+If a current leaves the dotted terminal of one coil, the reference polarity of the mutual voltage in the second coil is negative at 
+the dotted terminal of the second coil. 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.59 
+Network Theory 
+Coupled inductors in series: 
+(i) Aiding  
+ 
+  L = L
+1
+ + L
+2
+ + 2M     (Series-aiding connection) 
+(ii)  Opposing 
+ 
+  L = L
+1
+ + L
+2
+ – 2M      (Series-opposing connections) 
+Coupled inductors in parallel: 
+(i) Aiding  
+ 
+ 
+(ii) Opposing 
+ 
+8.2. Coupling Coefficient, k 
+• A measure of the amount of magnetic coupling between two inductors 
+   0 ≤ k ≤ 1 
+• k = 0: completely un-coupled inductors 
+• k = 1: perfect coupling – all magnetic flux generated by one inductor penetrates the coil of the other inductor. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.60 
+Network Theory 
+• Relationship to mutual inductance, M: 
+         
+12
+M    k  L L=
+ 
+8.1.2 Energy of Coupled Coil            
+Case (i): Magnetic Opposing Circuit 
+ 
+22
+1  12  21  2
+11
+22
+WL IL IMI I=++
+ 
+Case (ii): Magnetic Adding Circuit 
+ 
+22
+1  12  21  2
+11
+22
+WL IL IMI I=+−
+ 
+8.1.3 Dot Convention in Transformer  
+ Transformation ratio or turn ratio is given by,  
+         
+1
+2
+N
+n
+N
+=
+ 
+Case 1: 
+ 
+1112
+2221
+vNiN
+vNiN
+== −
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+2.61 
+Network Theory 
+Case 2: 
+ 
+1
+1
+1
+2
+2
+2
+2
+1
+v
+N
+i
+N
+v
+N
+i
+N
+==
+ 
+Case 3: 
+ 
+1
+1
+1
+2
+2
+2
+2
+1
+v
+N
+i
+N
+v
+N
+i
+N
+= −
+=
+ 
+Case 4: 
+ 
+1
+1
+1
+2
+2
+2
+2
+1
+v
+N
+i
+N
+v
+N
+i
+N
+= −
+= −
+ 
+ 
+ 
+ 
+For more questions, kindly visit the library section: Link for web: https://smart.link/sdfez8ejd80if  
+PW Mobile APP: https://smart.link/7wwosivoicgd4  

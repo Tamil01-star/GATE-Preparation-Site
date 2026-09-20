@@ -1,0 +1,3311 @@
+=== FILE: Quantitative_Aptitude_Handbook.pdf ===
+=== PAGES: 102 ===
+
+
+
+IBPS SBI UPSC RBI RRB SSC 
+BSNL NTPC BHEL TNEB NLC CBI 
+TANCET GATE CAT 
+MAT
+XAT SAT 
+POLICE ARMY GMAT GRE POST IPM 
+All Central and State Government Exams 
+Campus Recruitment Tests
+ 
+
+Table of Contents 
+Ratio and Proportion 
+Partnership Mixtures 
+and Allegation Average 
+Percentage       Profit, 
+Loss and Discount 
+Problems on Ages Time, 
+Speed and Distance 
+Trains 
+Boats      Time 
+and Work Pipes 
+and Cisterns 
+Simple and Compound Interest 
+Number System           HCF 
+and LCM Heights and 
+Distances Progressions 
+Calendar 
+Clocks 
+Permutation and Combination 
+Probability 
+www.iascgl.com
+
+Shortcut # 1 - Ratio and Proportion 
+Splitting a number in the given ratio. 
+1.Divide 720 in the ratio 2: 3.
+Solution 1: 
+Total parts = 2 + 3 = 5 
+First number = (2/5) 720 = 288 
+Second number = (3/5) 720 = 432 
+Solution 2: 
+2x + 3x = 720; 5x = 720; x = 144 
+2x = 2(144) = 288; 3x = 3(144) = 432 
+2.Divide 720 in the ratio 2: 3: 4.
+Solution 1: 
+Total parts = 2 + 3 + 4 = 9 
+First number = (2/9) 720 = 160; Second number = (3/9) 720 = 240; Third 
+number = (4/9)720 = 320 
+Solution 2: 
+2x + 3x + 4x= 720; 9x = 720; x = 80 
+2x = 2(80) = 160; 3x = 3(80) = 240; 4x = 4(80) = 320 
+
+Shortcut # 2 – Ratio and Proportion 
+Direct Proportion. 
+When two parameters are in direct proportion if one parameter 
+increases the other one will also increase and if one parameter decreases 
+the other one will also decrease. 
+If the parameters A and B are in direct proportion they will satisfy the 
+below equation. 
+Question: 
+Price of diamond is directly proportional to its weight. If 2 grams of diamond 
+costs $ 45,000 then what is the price of a diamond that weighs 6 grams? 
+Answer: 
+Weight of diamond in first case, 
+A
+1
+= 2 
+Weight of diamond in second case, 
+A
+2
+= 6 
+Price of diamond in first case, 
+B
+1
+= 45000 
+Price of diamond in second case, 
+According to the equation, 
+B
+2
+=? 
+2/6 = 45000/B
+2
+B
+2 
+= 45000 x (6/2) 
+B
+2 
+= 135,000 
+
+ 
+ 
+ 
+ 
+Shortcut # 3 – Ratio and Proportion 
+Inverse Proportion. 
+ 
+When two parameters are in inverse proportion if   one parameter 
+increases the other one will decrease and if   one parameter decreases the 
+other one will decrease. 
+If the parameters A and B are in inverse proportion they will 
+satisfy the below equation. 
+ 
+Question: 
+Mileage and Engine capacity  are  inversely  proportional.  A  bike with  100cc  
+engine capacity gives a mileage of 80 km. What will be the mileage given by a 
+bike with 150cc engine capacity? 
+Answer: 
+ 
+Engine capacity of first bike, 
+A
+1
+ 
+= 100 
+Engine capacity of second bike, 
+A
+2
+ 
+= 150 
+Mileage of first bike, 
+B
+1
+ 
+= 80 
+Mileage of second bike, 
+ 
+According to the equation, 
+B
+2
+ 
+=? 
+100/150 = B
+2
+/80 
+B
+2 
+= 100(80)/150 
+B
+2 
+= 53.33 km 
+  
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 4 – Ratio and Proportion 
+Finding A: C from A: B and B: C 
+ 
+Question: 
+The ratio between salary of A and B is  4: 5. The ratio between salary of B and 
+C is    3: 4. Find the salary of C if A   is    earning $3600. 
+Answer: 
+ 
+A: C = 12: 20 = 3: 5 
+A/C = 3/5 
+3600/C = 3/5; C = 6000 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 5 – Ratio and Proportion 
+Finding A: D from A: B, B: C and C: D 
+ 
+Question: 
+Ratio between salary of A and B is    3: 5, B and C is    4: 5, C and D is 6: 7. If the 
+salary of A is $ 7200, find the salary of D. 
+ 
+Answer: 
+A: D = 72: 175 
+7200/D = 72/175 
+D = 17500 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 6 – Ratio and Proportion 
+Usage of Common Factor x 
+ 
+Question: 
+Two numbers are in the ratio 4: 5. Sum of their squares is 1025. Find the 
+numbers. 
+Answer: 
+Substitute the common factor x to    the ratio 4: 5 
+Assume the actual numbers as 4x and 5x 
+Given, 
+(4x) 
+2 
++ (5x) 
+2 
+= 1025 
+16x
+2  
++ 25x
+2 
+= 1025;  41x
+2 
+= 1025 
+x
+2  
+= 25; x = 5 
+Substitute x = 5 in 4x and 5x to find the numbers 
+The numbers are, 20 and 25. 
+Question: 
+Two numbers are in the ratio 3: 2. Cube of their difference is 125. Find the 
+numbers. 
+Answer: 
+(3x – 2x) 
+3 
+= 125 
+x
+3 
+= 125 
+x = 5 
+The numbers are 15 and 10. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 7 – Ratio and Proportion 
+Finding number of Coins in a bag. 
+Question: 
+A bag contains 5 paise, 10 paise and 20 paise coins in the ratio 2:4:5. Total 
+amount in the bag is    Rs. 4.50. How many coins are there in 20 paise? 
+Answer: 
+T = (2 x 5) + (4 x 10) + (5 x 20) 
+= 150 paise 
+= Rs. 1.50 
+X = 4.50/1.50 
+X = 3 
+Quantity of 20 paise coins 
+= 5 x 3 
+= 15 coins. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 8 – Ratio and Proportion 
+Adding and removing quantities. 
+ 
+Question: 
+ 
+Container 1 has milk and water in the ratio 2 : 5. After adding 4 liters of pure 
+water  from  container 2, the ratio  between  milk and water  in container 1 
+became 1 : 3. Find the quantity of milk in the container. 
+ 
+Answer: 
+Let us assume the actual quantity of milk and water as 2x and 5x. 
+New quantity of water = 5x + 4 
+2x/(5x + 4) = 1/3 
+6x = 5x + 4 
+x = 4 
+Quantity of milk = 2x 
+= 2(4) 
+= 8 liters. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 9 – Partnership 
+Finding ratio of the profit  share. 
+ 
+ 
+Income (or) Profit share from a business is    determined using two parameters – 
+Investment and Duration. 
+Profit share is directly proportional to the duration of investment and the 
+amount invested. 
+P
+1 
+: P
+2 
+: P
+3 
+= Ratio between profits 
+T
+1
+, T
+2
+, T
+3 
+= Respective time of investment 
+I
+1
+, I
+2
+, I
+3 
+= Respective investment 
+Question: 
+A  started  a  business  investing  Rs.  5000.  After 1  year B  joined  him investing 
+Rs.  6000.  After  another  year C  joined  them investing Rs.  9000.  What is the 
+ratio between their profit shares at the end of 3 years? 
+Answer: 
+P
+1 
+: P
+2 
+: P
+3 
+= 5000 x 3 : 6000 x 2 : 9000 x 1 
+P
+1 
+: P
+2 
+: P
+3 
+= 15000 : 12000 x 9000 
+P
+1 
+: P
+2 
+: P
+3 
+= 5 : 4 : 3 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 10 – Mixtures and Allegation 
+Finding average price of a mixture. 
+ 
+A
+p 
+= Average price of the mixture. 
+A
+1 
+= Price of the first variety. 
+A
+2 
+= Price of the second variety. 
+N
+1 
+= Quantity of the first variety. 
+N
+2 
+= quantity of the second variety. 
+ 
+Question: 
+Two varieties of rice with prices Rs. 30 per kg and Rs. 40 per kg are mixed in 
+the ratio 2 : 3. Find the mean price. 
+ 
+ 
+Answer: 
+N
+1 
+= 2; N
+2 
+= 3 
+A1 
+= 30; A
+2 
+= 40 
+Substitute the values in the above equation. 
+Mean price = Rs. 36 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 11 – Mixtures and Allegation 
+Allegation Rule. 
+ 
+Question: 
+In what ratio two varieties of rice worth Rs. 40 per kg and Rs. 60 per kg 
+should be mixed to    give a variety worth Rs. 46 per kg? 
+ 
+Answer: 
+The two mixtures have to be mixed in the ratio 7 : 3 to get Rs. 46 mixture. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 12 – Mixtures and Allegation 
+Successive removal and replacement type. 
+ 
+I – Initial quantity; R – Removal quantity; 
+F – Final quantity; N –   Number of processes. 
+ 
+Question: 
+A  container  has  1000  liters  of  wine.  100  liters  of  wine  is  drawn  from  the  
+container and filled with water. This process is done two more times. What is 
+the ratio between wine and water in the final mixture? 
+ 
+Answer: 
+Number of draws n = 3 
+FQ = 1000 [1-(100/1000)]
+3 
+= 1000(0.9)
+3 
+= 729 
+Present quantity of wine = 729 
+Present quantity of water = 1000 – 729 = 271 
+Ratio between wine and water = 729 : 271 
+(Or) 
+                     729 = final quantity of wine. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 13 – Average 
+Common increase or decrease for all the elements. 
+ 
+If al the elements in a  series  are  increased  or decreased  
+or multiplied or divided by  a  certain  number, the old average 
+should also be added or  subtracted  or  multiplied or divided 
+respectively to get the new average. 
+ 
+Question: 
+Average age of a family of four members is 34. What is the average age of the 
+family after 4 years? 
+Answer: 
+Since every ones age is increased by four in 4 years, the average will also 
+increase by 4 
+The new average = 34 + 4 = 38 
+ 
+ 
+ 
+Proof: 
+Total age of the family before 4 years = 34 x 4 = 136 
+Total increased age for four members = 4 x 4 = 16 
+New total age = 136 + 16 = 152 
+New average 
+= 152/4 
+= 38 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 14 – Average 
+Adding or removing or replacing an element. 
+ 
+A
+1
+N
+1
+ ~  A
+2
+N
+2
+ 
+Question 1: 
+Average age of 5 students was 18. After adding teacher’s age the average 
+became 20. What is the age of the teacher? 
+ 
+Answer = (18 x 5) ~ (20 x 6) = 30 
+ 
+Question 2: 
+Average age of 5 students and a teacher was 21. After removing the teacher’s 
+age the average became 18. What is the age of the teacher? 
+ 
+Answer = (21 x 6) ~ (18 x 5) = 36 
+ 
+Question 3: 
+Average weight of 40 bags is 20kg. After removing 1 bag the average became 
+19.5. What is the weight of removed bag? 
+ 
+Answer = (20 x 40) ~  (19.5 x 39) = 39.5 
+ 
+Question 4: 
+Average weight of 40 bags is 20kg. After replacing a bag by another bag the 
+average became 39. What is the difference between the weights of those two 
+bags? 
+ 
+Answer = (20 x 40) ~ (20 x 39) = 20 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 15 – Average 
+Weighted Average 
+ 
+ 
+Question: 
+Average  marks  scored  by  students in three classes  are  40,  50,  and 60. If   there 
+are 10, 20 and 30 students in the classes respectively, find the overall average 
+of the three classes. 
+ 
+ 
+Answer: 
+A
+1  
+= 40; A
+2  
+= 50; A
+3  
+= 60 
+N
+1  
+= 10; N
+2  
+= 20; N
+3  
+= 30 
+Substitute in the above formula. We get, 
+=[(40x10) + (50x20) + (60x30)]/[10+20+30] 
+=[400 + 1000 + 1800]/60 
+= 53.33 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 16 - Average 
+Finding the middle subject mark, if the middle subject overlaps. 
+ 
+ 
+Question: 
+Average  marks  scored  by  Sai  in 11 subjects is 60. Average    marks    scored  by  
+her in first 6 subjects is    50 and average marks scored by her in last 6 subjects 
+is    62. Find the mark scored by Sai in 6
+th 
+subject. 
+Answer: 
+A
+o 
+= 60; N
+o 
+= 11 
+A
+1  
+= 50; N
+1  
+= 6 
+A
+2  
+= 62; N
+2  
+= 6 
+Substituting the values in the formula, we get 
+M = 50x6 + 62x6 – 60x11 
+= 300 + 372 – 660 
+= 12 
+Marks scored by Sai in 6
+th 
+subject = 12 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 17 - Average 
+Finding the middle subject mark if   the middle subject is 
+left out. 
+ 
+ 
+Question: 
+The average marks scored by Shradha in 9 subjects is    75. The  average marks 
+in first  4  subjects is 69 and average marks in last  4  subjects is 78. Find the 
+marks scored by her in 5
+th 
+subject. 
+Answer: 
+A
+o  
+= 75; N
+o  
+= 9 
+A
+1  
+= 69; N
+1  
+= 4 
+A
+2  
+= 78; N
+1  
+= 4 
+Substituting the above values in the formula, we get 
+M = 75x9 – 69x4 – 78x4 
+= 675 – 276 – 312 
+= 87 
+Marks scored by Sradha in 5
+th 
+subject = 87 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 18 – Percentage 
+Percentage Calculation 
+ 
+ 
+ 
+V
+c 
+= Value to be compared 
+V
+b 
+= Value to which it has to be compared, base value. 
+Question: 
+What is the percentage of marks scored by Sai in final exam, if she has scored 
+1102 out of 1200? 
+Answer: 
+V
+c  
+= 1102 
+V
+b  
+= 1200 
+Percentage = (1102/1200) x 100 
+= 91.83% 
+ 
+Question: 
+ 
+Out of 65000 population, men are 39000. What is the percentage of women? 
+ 
+Answer: 
+Women = 65000 – 39000 = 26000 
+Percentage of women = (26000/65000) x 100 
+= (2/5) 100 = 40 % 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 19 – Percentage 
+Percentage increase or decrease. 
+ 
+ 
+ 
+From – the value from which the change is happening 
+To –   the value to    which the change has happened. 
+ 
+If From value is less than To value, it is % increase 
+If From value is more than To value, it is % decrease. 
+Question: 
+Sradha’s monthly salary is Rs. 40000. If an increment of Rs. 5000 is provided, 
+what is the percentage increase in her salary? 
+Answer: 
+From = 40000; To = 45000. 
+Substituting the values in the above formula, we get 
+% increase = [(45000 – 40000)/40000] x 100 
+= (5000/40000)x 100 
+= 12.5 % increase 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 20 – Percentage 
+Net change in percentage when two changes are made. 
+ 
+ 
+a = first percentage change 
+b = second percentage change 
+Question: 
+Salary of Sai was Rs. 20000. If the salary is decreased by 10 percent and then 
+increased by 30 percent, what is the new salary of Sai? 
+Answer: 
+a = -10 
+b = 30 
+Net change = -10 + 30 + [(-10)(30)/100] 
+= 20 – 3 = +17% (positive value = % increase) 
+New salary of Sai 
+= 20000 + (17/100)20000 
+= 23400 
+ 
+Note: 
+If the net change value is negative, it means percentage decrease. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 21 – Percentage 
+Final value after multiple percentage changes. 
+ 
+ 
+(a, b and c) are the percentage changes. 
+The formula can be expanded or reduce according to    the number of changes 
+given in the question. 
+Substitute ‘+’ for percentage increase. 
+Substitute ‘- ‘for percentage decrease. 
+ 
+Question: 
+Salary of Shradha is  Rs. 30000. It is  increased by 10%, then decreased by 
+20% and again increased by 30%. What is    her final salary? 
+Answer: 
+a = +10; b = -20; c = +30 
+Substitute the values in the above formula, we get 
+Final Value 
+= (11/10)(8/10)(13/10) x 30000 
+= 34320 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 22 – Percentage 
+Net percentage change when (a %) increase and (a %) decrease. 
+ 
+Question: 
+Price of a watch was Rs. 1000. The price is increased by 10% and then 
+decreased by 10%. What is the price of the watch now? 
+Answer: 
+a = 10 
+Net change in percentage = 10
+2
+/100 = 1% decrease. 
+New price of watch = 1000 – (1/100)1000 
+= 1000 – 10 
+= 990 
+Question: 
+Price of a product increased by 20% and the sales was reduced by 20%. By 
+what percentage the income has reduced? 
+Answer: 
+a = 20% 
+Percentage reduction in income 
+= 20
+2
+/100 
+= 4% 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 23 – Percentage 
+Steady percentage increase or decrease. 
+ 
+ 
+ 
+a – steady rate of percentage increase or decrease. 
+Substitute ‘+’ for percentage increase. 
+Substitute ‘-‘for percentage decrease. 
+n – Number of times the percentage change occurs. 
+ 
+Question: 
+The  population of a  city is  200000. The population increases by 10% every 
+year. What will be the population of the city after 3 years? 
+Answer: 
+a = + 10 
+Initial Value = 200000 
+Substitute the values in the above equation, we get 
+Final Value = 200000[1.1]
+3
+ 
+Final Value = 266200 
+Population of the city after three years 
+ 
+= 266200 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 24 – Profit, Loss and Discount 
+Profit or Loss Percentage. 
+ 
+S.P – Selling Price. 
+C.P – Cost Price. 
+Question: 
+A bike worth Rs. 40000 is sold for Rs. 46000. What is the profit percentage? 
+Answer: 
+S.P = 46000; C.P = 40000 
+Substitute the values in the above equation, we get 
+P% = [(46000-40000)/40000]x100 = 15% profit 
+Question: 
+A mobile phone worth Rs. 9900 is sold for Rs. 9000. What is  the percentage 
+loss? 
+Answer: 
+S.P = 9000; C.P = 9900 
+Substitute the values in the above equation, we get 
+L%  = [(9900-9000)/9900] x 100; L% = 9.09% loss 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 25 – Profit, Loss and Discount 
+Net Profit or Loss Percentage when two changes are made. 
+ 
+a = percentage profit or loss in the first case. 
+b = percentage profit or loss in the second case. 
+ 
+Substitute ‘+’ for profit percentage. 
+Substitute ‘- ‘ for loss percentage. 
+ 
+Question: 
+A product worth $ 3000 is sold for 10% profit and then for 20% loss. What is 
+the overall profit or loss percentage in the sale? 
+ 
+Answer: 
+Net change = 10 – 20 + [(10)(-20)/100] 
+ 
+= -12 
+ 
+The value obtained is negative. 
+ 
+This indicates that a loss is incurred in the sale. 
+12% loss. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 26 – Profit, Loss and Discount 
+Finding selling price after multiple changes. 
+ 
+(a, b and c) are the profit or loss percentages. 
+The formula can be expanded or reduce according to    the number of changes 
+given in the question. 
+Substitute ‘+’ for profit percentage. 
+Substitute ‘- ‘ for loss percentage. 
+Question: 
+A watch worth Rs. 5000 is sold by A to B at 10% loss. B sold it to C at 30% 
+loss.  C  sold  it  to  D  at  40%  profit.  What  is  the  price  at  which  D  bought  the  
+watch? 
+Answer: 
+a = -10; b = -30; c = 40 
+C.P = 5000 
+Substitute the values in the above equation, we get 
+S.P = (9/10)(7/10)(14/10) x 5000 
+S.P = 4410 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 27 – Profit, Loss and Discount 
+Steady Profit or Loss. 
+ 
+ 
+a – steady rate of profit or loss percentage. 
+Substitute ‘+’ for profit percentage. 
+Substitute ‘-‘ for loss percentage. 
+n – Number of times the percentage change occurs. 
+ 
+Question: 
+The price of a laptop decreases by 20% every year. It the laptop was bought  
+for Rs. 45000, at what price will it be sold after 2 years? 
+Answer: 
+a = -20 
+C.P = 45000 
+Substitute the values in the above equation, we get 
+S.P = 45000[0.8]
+2
+ 
+S.P = 28800 
+Selling price after two years 
+ 
+= Rs. 28800 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 28 – Profit, Loss and Discount 
+Net gain or loss percentage when (a %) profit and (a %) loss occurs. 
+ 
+a – percent loss and percentage gain. 
+ 
+Question: 
+ 
+Two laptops were sold for the same selling price. The first one is    sold at 50% 
+profit and the second one is sold  at  50%  loss.  Due to  this  sale    what  is the  
+profit or loss percentage incurred by the seller? 
+ 
+Answer: 
+Assume that the selling price of each laptop = Rs. 150 
+Cost price of first laptop: 
+150 = (150/100)CP 
+C.P
+1 
+= 100 
+Cost price of second laptop: 
+150 = (50/100)CP 
+C.P
+2 
+= 300 
+Total cost price = 100 + 300 = 400 
+Total selling price = 150 + 150 = 300 
+Loss % = (100/400)100 = 25% 
+(Or) 
+(a
+2
+/100)% loss = (50
+2
+/100)%loss = 25% loss. 
+ 
+Note: 
+Shortcut applicable only when selling price of both products are equal. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 29 – Profit, Loss and Discount 
+Discount, Marked Price and Selling Price. 
+ 
+ 
+d – Discount percentage 
+ 
+M.P = Marked price or Market price of the product 
+Question: 
+A product is marked Rs. 450 by the seller. If he sells at a price of Rs. 330, 
+what is the discount provided in percentage? 
+Answer: 
+M.P = 450 
+S.P = 330 
+Substitute the values in the above equation, we get 
+D% = [(450-330)/450]x100 
+D% = 26.67% 
+Discount provided in percentage = 26.67% 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 30 – Problems on ages 
+One variable  linear equation. 
+ 
+Question: 
+Age of father is    twice that of son at present. After 5 years, sum of their ages 
+will be 100. What is    the present age of father? 
+Answer: 
+Assume age of son = S 
+Age of father = 2S 
+Age of father after 5 years = 2S + 5 
+Age of son after 5 years = S + 5 
+Given, 
+(2S + 5) + (S + 5) = 100 
+3S + 10 = 100 
+S = 30 
+Present age of father = 2S = 60 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 31 – Problems on ages 
+One variable  quadratic equation. 
+ 
+Question: 
+Sum of the ages of father and son is    45. Product of their ages is 350. What is 
+the difference between their ages? 
+Answer: 
+Age of father = F; Age of son = S 
+F + S = 45; F = 45 – S --- Equ (1) 
+F x S = 350 --- Equ (2) 
+Sub Equ (1) in (2) 
+(45 – S)S = 350 
+45S – S
+2 
+= 350 
+S
+2 
+– 45S + 350 = 0 
+By solving this quadratic equation, we get 
+S = 10, 35. (Neglect 35 since son’s age cannot be greater than father’s.) 
+From (1) Father’s age = 35 
+Difference between their ages = 35 -10 = 25 
+Formula to find roots of a quadratic equation: 
+ 
+A –   Coefficient of x
+2
+; b - coefficient of x; c – constant 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 32 – Problems on ages 
+Simultaneous equations. 
+ 
+Question: 
+Sum of ages of father and son at present is 40. After 5 years the ratio between 
+their ages become 7 : 3. Find the present ages of father and son. 
+Answer: 
+Assume present age of father = F 
+Assume present age of son = S 
+Given, F + S = 40 --- Equ (1) 
+Father’s age after 5 years = F + 5 
+Son’s age after 5 years = S + 5 
+Given, (F + 5)/(S + 5) = 7/3, which gives 
+3F + 15 = 7S + 35 
+3F – 7S = 20 --- Equ (2) 
+By solving Equ (1) and (2), we get 
+Age of son, S = 10 
+Age of father, F = 30 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 33 – Problems on ages 
+Solution using common factor ‘x’. 
+ 
+Question: 
+Age of MS and VK were in the ratio 4 : 3 five years back. Their ages  will be 
+in the ratio 5 : 4 in two years. Find their present ages. 
+ 
+Answer: 
+Difference between the two compared years = 7. 
+Difference in ratio = 1 
+x = 7/1 = 7 
+Age of MS and VK 5 years ago = 4x and 3x 
+4x = 4(7) = 28 
+3x = 3(7) = 21 
+Age of MS at present = 28 + 5 = 34 
+Age of VK at present = 21 + 5 = 26 
+Note: 
+This method is    applicable only when ‘d’ is equal on both sides. 
+The ratios can be modified to get ‘d’ same in both sides. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 34 – Time, Speed and Distance 
+Relative Speed – Same direction 
+ 
+When two objects are moving we have to    take relative speed for the 
+calculation. 
+Relative speed of two objects moving in same direction 
+= S
+1 
+~  S
+2
+ 
+Relative speed of two objects moving in opposite direction 
+= S
+1  
++ S
+2
+ 
+ 
+Question: 
+ 
+A    thief standing 50 away from a dog starts running away from it   at a    speed of 2 
+m/s. The dog suddenly starts chasing him at a speed of 3m/s. How long will the 
+dog take to    catch the thief? 
+Answer: 
+D = 50m; S
+1 
+= 3; S
+2 
+= 2 
+Time taken, T = 50/(3-2) = 50 seconds 
+Distance travelled by the thief = Speed x Time to catch 
+= 2 x 50 = 100 m 
+Distance travelled by the dog = 3 x 50 = 150 m 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 35 – Time, Speed and Distance 
+Relative Speed – Opposite direction 
+ 
+When two objects are moving we have to    take relative speed for the 
+calculation. 
+Relative speed of two objects moving in same direction 
+= S
+1 
+~  S
+2
+ 
+Relative speed of two objects moving in opposite direction 
+= S
+1  
++ S
+2
+ 
+ 
+Question: 
+Two friends start from their home 300 m apart and walk towards each other at 
+a speed of 2mps and 3mps. How long (in minutes) will they take to meet each 
+other? 
+ 
+Answer: 
+D = 300m 
+S
+1 
+= 2mps; S
+2 
+= 3mps 
+T = 3000/(2+3) = 60 seconds 
+Time taken in minutes = 60/60 = 1 minute. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Question: 
+Shortcut # 36 – Time, Speed and Distance 
+Average Speed – Different distance and time 
+ 
+ 
+A man travels from a point to other. The first 100 km he travels at a speed of 
+25 kmph. The next 80 km he travels at a speed of 40 kmph. The last 120 km he 
+travels at a speed of 20 kmph. What is    the average speed of his journey? 
+ 
+ 
+Answer: 
+ 
+= 300/12 
+ 
+= 25 kmph 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 37 – Time, Speed and Distance 
+Average Speed – Distance is same. 
+ 
+General formula when distance is same in all the cases. 
+Formula for 2 cases with same distance. 
+(Or)  
+ 
+ 
+Question: 
+Sai travels from her house to    office at a speed of 50kmph. She suddenly returns 
+home at a speed of 60kmph. What is    her average speed? 
+ 
+Answer: 
+S
+1 
+= 50; S
+2 
+= 60 
+S
+a 
+= 2(50x60)/(50+60) 
+= 6000/110 = 54.54 kmph 
+Note: Distance value is unnecessary. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Question: 
+Shortcut # 38 – Time, Speed and Distance 
+Average Speed – Time taken is same in all the cases. 
+ 
+ 
+A man travels from a point to other. The first 100 km he travels at a speed of 
+50 kmph. The next 80 km he travels at a speed of 40 kmph. The last 120 km he 
+travels at a speed of 60 kmph. What is    the average speed of his journey? 
+ 
+Answer: 
+Time taken in the first case = 100/50 = 2 hours 
+Time taken in the second case = 80/40 = 2 hours 
+Time taken in the third case = 120/60 = 2 hours 
+ 
+Time taken is same in all the cases. So, average speed can be calculated by 
+directly taking the average of the speeds in each case. 
+ 
+Average speed = (50 + 40 + 60)/3 
+= 50 kmph 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 39 – Time, Speed and Distance 
+Circular race – Time in which the runners meet at the starting point 
+ 
+D –   Circumference of the race track. 
+S
+1
+, S
+2
+, ... , S
+n 
+– Speed of the individual runners. 
+T
+1
+, T
+2 
+, ... , T
+n 
+–   Time taken by the respective runners to complete one round 
+the track. 
+ 
+Question: 
+ 
+Answer: 
+ 
+Three  persons  participate  in  a  race  on  a  circular  
+track  of  length  400m.  They  can  run  at  a  speed  of  
+2mps,  4mps  and  5mps  respectively.  How  long  will  
+they  take  to  meet  in  the  starting  point  for  the  first  
+time? 
+Time taken by each person to    complete one circle 
+Person 1 = 400/2 = 200 seconds = T
+1
+ 
+Person 2 = 400/4 = 100 seconds = T
+2 
+Person 3 = 400/5 = 80 seconds = T
+3 
+LCM(T
+1
+, T
+2
+, T
+3
+) = 400 seconds 
+Time taken by them to meet at starting point for the first time = 400 seconds. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 40 – Trains 
+Train crossing a stationary object with negligible width. 
+ 
+L
+t 
+–   Length of the train 
+S
+t 
+– Speed of the train 
+ 
+Question: 
+A train of length 450m is travelling at a speed of 54kmph. How long will it 
+take to cross a pole? 
+ 
+Answer: 
+Speed of train S
+T 
+in m/s = 54x(5/18) 
+= 15mps 
+Length of train = L
+T 
+= 450m 
+Time taken to cross = 450/15 
+= 30 seconds 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 41 – Trains 
+Train crossing a stationary object with considerable length. 
+ 
+L
+t   
+– Length of    the train; L
+p 
+– Length of the platform 
+S
+t 
+– Speed of the train 
+ 
+Question: 
+A train of length 200m crosses a platform of length 150m at a speed of 
+72kmph. How long will the train take to cross the platform? 
+ 
+Answer:  
+L
+t 
+= 200m 
+L
+p 
+= 150m 
+S
+t 
+= 72x(5/18) = 20mps 
+Time taken to cross the platform = (200+150)/20 
+= 17.5 seconds 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 42 – Trains 
+Two trains crossing in the opposite directions. 
+ 
+L
+1  
+– Length of the train 1;   L
+2 
+– Length of train 2 
+S
+1  
+–   Speed of the train 1; S
+2 
+– Speed of train 2 
+ 
+Question: 
+Two trains A and B  of  length 200m and 300  are  travelling  at  a  speed  of  
+54kmph and 36kmph respectively in opposite  directions.  How  long  will they 
+take to    cross each other? 
+ 
+Answer: 
+L
+1 
+= 200; L
+2 
+= 300 
+S
+1 
++ S
+2 
+= 66 + 24 = 90 kmph = 25 mps. 
+Substitute the values in the above equation, we get 
+T = (200+300)/(25) 
+= 20 seconds 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 43 – Trains 
+Train crossing another train from the same direction. 
+ 
+L
+1  
+– Length of the train 1;   L
+2 
+– Length of train 2 
+S
+1  
+–   Speed of the train 1; S
+2 
+– Speed of train 2 
+ 
+Question: 
+Two trains A and B  of  length 200m and 300  are  travelling  at  a  speed  of  66  
+kmph and 30 kmph respectively in same directions. How long will they take to 
+cross each other? 
+ 
+Answer: 
+L
+1 
+= 200; L
+2 
+= 300 
+S
+1 
+~ S
+2 
+= 66 – 30 = 36 kmph = 10 mps 
+Substitute the values in the above equation, we get 
+T = (200+300)/(10) 
+= 50 seconds 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 44 – Trains 
+Train crossing a man sitting on another train travelling in opposite 
+direction. 
+ 
+L
+1 
+– Length of the train which is crossing the man 
+S
+1  
+–   Speed of the train 1; S
+2 
+– Speed of train 2 
+ 
+Question: 
+Two trains A and B  of  length 300m and 400  are  travelling  at  a  speed  of  
+72kmph and 36kmph respectively in opposite  directions.  How  long  will train 
+A take to cross a man travelling in train B? 
+ 
+Answer: 
+L
+1 
+= 300, (Length of train crossing the man) 
+S
+1 
++ S
+2 
+= 72 + 36 = 108 kmph = 30 mps 
+Substitute the values in the above equation, we get 
+T = (300)/(30) 
+= 10 seconds 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 45 – Trains 
+Train crossing a man sitting on another train travelling in same direction. 
+L
+1 
+– Length of the train which is crossing the man 
+S
+1  
+–   Speed of the train 1; S
+2 
+– Speed of train 2 
+ 
+Question: 
+Two trains A and B  of  length 100m and 200  are  travelling  at  a  speed  of  
+72kmph and 54kmph respectively in same directions. How  long  will train  A  
+take to    cross a man travelling in train B? 
+ 
+Answer: 
+L
+T 
+= 100, (Length of train crossing the man) 
+S
+1 
+= 72kmph = 72(5/18) mps = 20mps 
+S
+2 
+= speed of the man travelling in train B 
+S
+2 
+= 54kmph = 36(5/18) mps = 10mps 
+Substitute the values in the above formula, we get 
+T = (100)/(20-10) 
+= 10 seconds 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 46 – Boats 
+Time taken to row upstream. 
+ 
+ 
+D
+us 
+– Distance travelled upstream. 
+S
+b 
+– Speed of the boat in still water. 
+S
+r 
+– Speed of the river flow (or) stream (or) current. 
+ 
+Question: 
+The speed of boat in still water is 40kmph. How long will the boat take to    row 
+175 km upstream in a river of speed 5kmph? 
+ 
+Answer: 
+D = 175km 
+S
+b 
+= 40kmph, (speed of boat in still water) 
+S
+r 
+= 5kmph, (speed of river water) 
+S
+b 
+– S
+r 
+= 35kmph, (Upstream speed of boat) 
+Substitute the values in the above formula, we get 
+T = 175/35 
+= 5 hours 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 47 – Boats 
+Time taken to row downstream. 
+ 
+D
+ds 
+– Distance travelled downstream. 
+S
+b 
+– Speed of the boat in still water. 
+S
+r 
+– Speed of the river flow (or) stream (or) current. 
+ 
+Question: 
+The speed of boat in still water is 30kmph. How long will the boat take to    row 
+96 km downstream in a river of speed 2kmph? 
+ 
+Answer: 
+D = 96km 
+S
+b 
+= 30kmph, (speed of boat in still water) 
+S
+r 
+= 2kmph, (speed of river water) 
+S
+b 
++ S
+r 
+= 32kmph, (Downstream speed of boat) 
+Substitute the values in the above formula, we get 
+T = 96/32 
+= 3 hours 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 48 – Boats 
+Finding speed of the boat when upstream and downstream speed are 
+known. 
+ 
+ 
+S
+b 
+– Speed of the boat in still water. 
+S
+us 
+-  Upstream speed. 
+S
+ds 
+– Downstream speed. 
+Question: 
+Time taken by a boat to row 40km upstream in 4 hours. It  took 2 hours to return 
+back to    the starting point. Find the speed of the boat. 
+ 
+Answer: 
+Step 1: Find the speed upstream and downstream. 
+S
+us 
+= 40/4 = 10kmph 
+S
+ds  
+= 40/2 = 20kmph 
+Step 2: Find the speed of boat. 
+S
+b 
+= (10 + 20)/2 = 15kmph 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 49 – Boats 
+Finding speed of the river when upstream and downstream speed are 
+known. 
+ 
+S
+b 
+– Speed of the boat in still water. 
+S
+us 
+-  Upstream speed. 
+S
+ds 
+– Downstream speed. 
+ 
+Question: 
+Time taken by a boat to row 40km upstream in 4 hours. It  took 2 hours to return 
+back to    the starting point. Find the speed the river. 
+ 
+Answer: 
+Step 1: Find the speed upstream and downstream 
+S
+us 
+= 40/4 = 10kmph 
+S
+ds  
+= 40/2 = 20kmph 
+Step 2: Find the speed of the river 
+S
+r 
+= (20 – 10)/2 = 5kmph 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 50 – Time and Work 
+Work is directly proportional to time. 
+ 
+W
+1 
+– Work done in first case. 
+T
+1 
+– Time taken in first case. 
+W
+2 
+– Work done in second case. 
+T
+2 
+– Time taken in second case. 
+ 
+Question: 
+It took 40 days to build 10 buildings. How long will it take to build 50 
+buildings using same number of employees? 
+ 
+Answer: 
+W
+1 
+= 10; W
+2 
+= 50 
+T
+1 
+= 40; T
+2 
+= ? 
+Substitute the values in the above formula, we get 
+10/50 = 40/T
+2
+ 
+T
+2  
+= 200 days 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 51 – Time and Work 
+Work is directly proportional to Resource. 
+ 
+ 
+Question: 
+40 men are required to complete 20 buildings. How many men are required to 
+build 50 buildings in the same time? 
+ 
+Answer: 
+R
+1 
+= 40; R
+2 
+= ? 
+W
+1 
+= 20; W
+2 
+= 50 
+Substitute the values in the above formula, we get 
+40/R
+2 
+= 20/50 
+R
+2 
+= 100 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 52 – Time and Work 
+Time is inversely proportional to Resource. 
+ 
+ 
+Question: 
+If 20 men can do the work in 40 days, how many men are required to do the 
+same work in 10 days? 
+ 
+Answer: 
+R
+1 
+= 20; R
+2 
+= ? 
+T
+1 
+= 40; T
+2 
+= 10 
+Substitute the values in the above formula, we get 
+20/R
+2 
+= 10/40 
+R
+2 
+= 80 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 53 – Time and Work 
+Comparison of Time, Work and Resource. 
+ 
+ 
+Question: 
+If 10 men can cut 40 trees in 4 days, how many trees can be cut by 40 men 6 
+days? 
+ 
+Answer: 
+R
+1  
+= 10; R
+2  
+= 40 
+T
+1 
+= 4; T
+2 
+= 6 
+W
+1  
+= 40; W
+2  
+= ? 
+Substitute the values in the above formula, we get 
+40/W
+2 
+= (10 x 4)/(40 x 6) 
+W
+2 
+= 240 trees 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 54 – Time and Work 
+When the number of working hours per day is included in the question. 
+ 
+Question: 
+30 men working 6 hours day for 50 days can make 2000 toys. How many hours 
+per day should 40 men work for 60 days to    make 3000 toys? 
+ 
+Answer: 
+R
+1 
+= 30; R
+2 
+= 40, (Resources in each case) 
+T
+1 
+= 50; T
+2 
+= 60, (Days in each case) 
+W
+1 
+= 2000; W
+2 
+= 3000, (Work in each case) 
+H
+1 
+= 6; H
+2 
+= ?, (Hours per day in each case) 
+Substitute the values in the above formula, we get 
+2000/3000 = (30 x 50 x 6)/(40 x 60 x H
+2
+) 
+H
+2 
+= 5(5/8) hours = 5 hours 32 minutes 30 seconds 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 55 – Time and Work 
+Two resources working together. 
+ 
+ 
+Question: 
+A can complete a work in 40 days. B can complete the same work in 60 days. 
+How long will they take to complete the work if they are working together? 
+ 
+Answer: 
+A = 40 
+B = 60 
+Substitute the values in the above formula, we get 
+Time taken together = (40 x 60)/(40 + 60) 
+= 24 days 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 56 – Time and Work 
+Three resources working together. 
+ 
+ 
+ 
+Question: 
+A can do a work in 40 days, B in 50 days and C in 60 days. If they work 
+together, how long will they take to complete the work? 
+ 
+Answer: 
+A = 40 
+B = 50 
+C = 60 
+Substitute the values in the above formula, we get 
+Time taken together = (40 x 50 x 60)/(40 + 50 + 60) 
+= 16.21 days 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 57 – Time and Work 
+Work done. 
+ 
+ 
+Question: 
+A can do a piece of work in 40 days. What is the fraction of work done by him 
+in 25 days? 
+Answer: 
+Per day work of A = 1/40 
+Number of days for which A worked = 25 
+Work done = (1/40) x 25 
+=     
+ 
+Question: 
+A can do a piece of work in 30 days. What is the fraction of work done by him 
+in 45 days? 
+Answer: 
+Per day work of A = 1/30 
+Number of days for which A worked = 45 
+Work done = (1/30) x 45 
+=  
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 58 – Time and Work 
+Remaining work. 
+ 
+ 
+Question: 
+A can do a work in 30 days, B in 40 days. A works for 9 days and the 
+remaining work is done by B. What is the fraction of work done by B? 
+Answer: 
+Remaining work for B = 1 – Work done by A 
+Work done by A = (1/30) x 9 = 3/10 
+Remaining work for B = 1 – (3/10) = 7/10 
+ 
+Question: 
+A can do a work in 40 days, B in 60 days. A works for 24 days and the 
+remaining work is done by B. What is the fraction of work done by B? 
+Answer: 
+Remaining work for B = 1 – Work done by A 
+Work done by A = (1/40) x 24 = 6/10 
+Remaining work for B = 1 – (6/10) = 4/10 
+= 2/5 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 59 – Time and Work 
+Time taken to do the remaining work. 
+ 
+ 
+Question: 
+A  can  do  a  work in 30 days, B in 40 days. A  works  for 9  days  and the 
+remaining work is    done by B. What is  the total number of days to complete the 
+work? 
+Answer: 
+Time taken to complete the work 
+= Remaining work x time to    finish full work 
+Remaining work for B = 1 – Work done by A 
+Work done by A = (1/30) x 9 = 3/10 
+Remaining work for B = 1 – 3/10 = 7/10 
+Time taken by B to complete the remaining work 
+= 7/10 x 40 
+= 28 days 
+Total time taken 
+= 28 + 9 
+= 37 days 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 60 – Time and Wok 
+Salary ratio of resources working together. 
+ 
+Salary of a resource is directly proportional to the per day work. 
+ 
+Question: 
+A can do a work in 20 days and B can do the same work in 40 days. They both 
+work together and get a combined salary of Rs. 3000. What is  the salary of A? 
+Answer: 
+S
+A  
+= Salary of A; S
+B 
+= Salary of B 
+A = 20; B = 40 
+S
+A 
+: S
+B 
+= 40 : 20 = 2 : 1 
+S
+A 
+= [2/(2+1)] x 3000 = 2000 
+ 
+Question: 
+A can do a work in 30 days B in 40 days and C in 50 days. If they all work 
+together, what will the ratio between their salaries? 
+Answer: 
+A = 30; B = 40; C = 50 
+S
+A 
+: S
+B 
+: S
+C 
+= (1/30) : (1/40) : (1/50) = 20 : 15 : 12 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 61 – Pipes and Cisterns 
+One pipe fills the tank and the other empties the tank. 
+ 
+The pipe which empties the tank is doing negative work. So we have to assign 
+‘- ‘symbol for the work done by that pipe. 
+T – Total time taken to fill the tank. 
+ 
+Question: 
+Pipe A can fill a tank in 4 hours and pipe B can empty the tank in 5 hours. If 
+both pipes are opened together, how long will they take to    fill a complete tank? 
+ 
+Answer: 
+A = 4; B = 5 
+Substitute the values in the above equation, we get 
+Time taken to fill the tank = (4 x 5)/(-4 + 5) 
+= 20 hours 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 62 – Pipes and Cisterns 
+Two pipes fill a tank and another pipes empties the tank. 
+ 
+Question: 
+Pipes A and B can fill a tank in 10 hours and 12 hours respectively. Pipe C can 
+empty a  tank in 20 hours. If  all the pipes  are  opened together, how long will 
+they take to fill a complete tank? 
+ 
+Answer: 
+A = 10; B = 12; C = 20 
+Substitute the values in the above equation, we get 
+Time taken to fill the tank 
+= (10 x 12 x 20 )/[(-10 x 12) + (12 x 20) + (10 x 20)] 
+= 7. 5  hours = 7 hours 30 minutes 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 63 – Interest – Simple and Compound 
+Simple Interest 
+ 
+ 
+P = Principle amount invested or borrowed 
+R = Rate of interest per term 
+N = Number of terms 
+Term = duration for which interest is calculated 
+Question: 
+A man invested Rs. 10000 at 4% per annum simple interest. 
+1. What is    the interest he will get at   the end of 3 years? 
+2. What is    the total amount earned after 3   years? 
+Answer: 
+P = 10000; N = 3; R = 4 
+Substitute the values in the above equation, we get 
+SI = 10000 x 3 x 4/100 
+= 1200 
+Amount = Principle + Interest 
+Amount = 10000 + 1200 = 11200 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 64 – Interest – Simple and Compound 
+Compound Interest. 
+ 
+ 
+Question: 
+What is    the compound interest obtained for Rs. 16000 at 2% per annum for 
+three years? 
+Answer: 
+Amount at   the end of 1
+st  
+year =  x 16000 = 16320 
+Amount at   the end of 2
+nd  
+year =  x 16320 = 16646.4 
+Amount at   the end of 3
+rd 
+year =  x 16646.4 = 16979.328 
+Interest obtained at   the end of three years: 
+ 
+Interest = Amount – Principle 
+ 
+Interest = 16979.328 – 16000 = 979.328 
+ 
+Note: 
+In simple interest, the interest is    calculated only for the principle. In compound 
+interest, the interest is calculated for the principle  as  well as the interest 
+obtained till the last term. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 65 – Number Systems 
+Divisibility. 
+ 
+Divisibility rule for composite numbers: 
+If a number is    a multiple of ‘x’ and ‘y’, then it is divisible by LCM of (x, y). 
+30 is    the LCM of (2, 3 and 5). So all the multiples of 30 are divisible by 2, 3 
+and 5. 
+ 
+Question: 
+Which of the following numbers is divisible by both 5 and 9? 
+1115, 11115, 111115, 1111115 
+Answer: 
+11115 – It is divisible by 5 and 9. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 66 – Number Systems 
+Finding largest four digit number that is divisible by certain numbers. 
+ 
+ 
+Question: 
+ 
+Find the largest number that leaves 
+1. Remainder 0 when divided by 12, 15 and 20. 
+2. Remainder 2 when divided by 12, 15 and 20. 
+3. Remainder 9, 12 and 17 when divided by 12, 15 and 20 
+respectively. 
+ 
+Answer: 
+ 
+1. Remainder 0: 
+LCM(12, 15, 20) = 60 
+Remainder(10000/60) = 40 
+10000 – 40 = 9960. 
+The largest number that leaves remainder 0 = 9960 
+ 
+2. Remainder 2: 
+9960 + 2 = 9962 is the largest 4 digit number that leaves remainder 2 when 
+divided by 12, 15 and 20. 
+ 
+3. Remainder 9, 12 and 17: 
+Difference between divisor and remainder =  3. 
+9960 – 3 = 9957 is the largest 4 digit number that leaves remainder 9, 12 and 
+17 when divided by 12, 15 and 20. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 67 – Number Systems 
+Finding unit digit of a number with certain power. 
+ 
+The expression will be in the form X
+Y 
+= Z 
+ 
+ 
+ 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 68 – Number Systems 
+Remainder Concept. 
+ 
+ 
+This concept is    also applicable if the numbers in the numerator are added or 
+subtracted. 
+ 
+Question: 
+Find the remainder when 212 x 313 x 414 is divided by 5. 
+Answer: 
+Using the above concept we can find the remainder for each term and then we 
+can multiply. 
+R(212/5) = 2 
+R(313/5) = 3 
+R(414/5) = 4 
+2 x 3 x 4 = 24 
+The value we got is    still greater than 5, so again divide it and find the 
+remainder. 
+R(24/5) = 4 
+The remainder of the expression is = 4 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 69 – HCF and LCM 
+Finding both HCF and LCM using single L-Division. 
+ 
+While  doing  the  L-Division  method,  initially  divide  only  using  the  prime  
+numbers which are common factors for all the numbers, then divide using the 
+prime numbers which are not common. 
+ 
+Question: 
+ 
+Find LCM, and HCF for the numbers 240, 450 and  570. 
+ 
+ 
+ 
+2 240, 450, 570 
+120, 225, 285 
+24, 45, 57 
+8, 15, 19 
+8, 15, 1 
+8, 3, 1 
+8, 1, 1 
+4, 1 , 1 
+2, 1, 1 
+1, 1, 1 
+5 
+3 
+19 
+5 
+3 
+2 
+2 
+2 
+ 
+ 
+The common factors for the three numbers are 2, 3 and 5. 
+Variation between common factors and the others is shown by using different 
+font. 
+Multiply only the common factors to get the HCF 
+HCF = 2 x 3 x 5 = 30 
+Multiply all the factors to get LCM 
+LCM = 2 x 3 x 5 x 19 x 5 x 3 x 2 x 2 x 2 
+= 2
+4 
+x 3
+2 
+x 5
+2 
+x 19
+1
+ 
+= 68400 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 70 – HCF and LCM 
+Application problem using HCF. 
+ 
+There will be different sets of elements with different quantities in each. They 
+have to be arranged based on the following conditions. 
+1. Every group should have equal number of elements. 
+2. Every group should have same kind of elements. 
+Under these conditions one must find  out: 
+1. The maximum number of elements per group. 
+2. The minimum number of groups required. 
+ 
+HCF of the numbers of elements in all the groups will give the maximum 
+number of elements per group. 
+ 
+Total number of elements divided by HCF will give the minimum number of 
+groups required. 
+ 
+Question: 
+There are 40 apples and 32 oranges. They have to  be packed in boxes such that 
+each box will have one kind of fruit and every box will have equal number of 
+fruits. Under this condition, what is the: 
+1. Maximum number of fruits per box? 
+2. Minimum number of boxes required? 
+ 
+ 
+Answer: 
+Maximum number of fruits per box = HCF(40, 32) = 8 
+Minimum number of boxes required = (40 + 32)/8 = 9 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 71 – HCF and LCM 
+Application problem using HCF. 
+ 
+For three or more  numbers,  the HCF of the difference between the 
+successive numbers arranged in ascending order is    the largest number that 
+can divide the given numbers and leave same remainder. 
+ 
+Question: 
+ 
+What is    the largest number that can divide 212, 254, 310 and 338 and leave the 
+same remainder? 
+ 
+Answer: 
+The difference between the numbers = 42, 56 and 28. 
+HCF (42, 56, 28) = 14 
+Remainder (212/14) = 2 
+Remainder (254/14) = 2 
+Remainder (310/14) = 2 
+Remainder (338/14) = 2 
+14 is the largest number that can divide the given numbers and leave the same 
+remainder. 
+Question: 
+ 
+What is the largest number that can divide 34, 52 and 88 and leave the same 
+remainder? 
+ 
+Answer: 
+Difference between the numbers = 18 and 36 
+HCF (18, 36) = 18 
+ 
+18 is    the largest number  that can divide 34, 52 and 88 and leave same 
+remainder. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 72 – HCF and LCM 
+Application problem using LCM. 
+ 
+When different events occur in different intervals of  their  own and if    all 
+the events are started  at  the same time, at some point of time    all    the 
+events will again occur  together. To find the   duration between two 
+common occurrences, LCM of the   intervals   of each  event has to be 
+calculated. 
+ 
+Question: 
+ 
+There are three  different bells. The first  bell  rings every  4  hour,  the    second  
+bell rings every 6 hours and the third bell rings every 15 hours. If  all the three 
+bells  are  rung at same  time,  how long will it  take for them to    ring together 
+again at the same time? 
+Answer: 
+Take LCM of 4, 6, 15 
+LCM (4,6,15) = 60 
+All the three bells will ring after 60 hours. 
+Question: 
+ 
+There are three different alarms. The first  alarm  rings every  2  minutes, the 
+second alarm rings every 3 minutes and the third alarm rings every 5 minutes.  
+If all the three alarms are rung at  6  am  together, at  what  time the three alarms 
+will ring together for the next time? 
+ 
+Answer: 
+LCM (2, 3, 5) = 30. After 30 minutes = 06:30 am. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 73 – Heights and Distances 
+Solution using tan Ɵ . 
+ 
+ 
+Question: 
+Jack Sparrow from a boat saw a lighthouse of height 100m at an angle of 
+elevation, 60
+o
+. What is the distance between Jack Sparrow and the tower? 
+ 
+Answer: 
+tan Ɵ =  
+tan 60
+o 
+=  = √ 3 = = x = 57.7 m 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 74 – Heights and Distances 
+Solution using Pythagoras theorem. 
+ 
+ 
+Question: 
+A man looks at the top of a tower which is 400m height. The minimum distance 
+between him and top of the tower is 500m. What is the distance between him 
+and the base of the tower? 
+ 
+ 
+Answer: 
+ 
+hyp
+2 
+= opp
+2 
++ adj
+2 
+500
+2 
+= 400
+2 
++ x
+2
+ 
+x
+2 
+= 90000 
+x = 300 m 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 75 – Arithmetic Progression. 
+Finding n
+th 
+term of an Arithmetic Progression. 
+ 
+ 
+Parameters: 
+a - first term of the series. 
+d - common difference between successive terms. a
+2 
+– a
+1
+ 
+n - the number position of the term. 
+t
+n 
+-  the term that has to found out. 
+Question: 
+ 
+What is the 100
+th 
+term of the series? 
+1. 2, 7, 12, 17, 22, ... 
+2. 501, 497, 493, 489, 485, ... 
+ 
+Answer: 
+ 
+1. a = 2; d = 5; n = 100 
+t
+n 
+= 2 + (100 – 1)5 
+t
+n 
+= 2 + 495 = 497 
+t
+100 
+= 497 
+2. a = 501; d = - 4; n = 100 
+t
+n 
+= 501 + (100 – 1)(- 4) 
+t
+n 
+= 105 
+t
+100 
+= 105 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 76 – Arithmetic Progression 
+Number of terms in an Arithmetic Progression. 
+ 
+                     -  Last term of the series. 
+ 
+Question: 
+ 
+Find the number of terms in the series: 
+1. 2, 7, 12, 17, 22, ... 382 
+2. 501, 497, 493, 489, 485, ... 201 
+ 
+Answer: 
+ 
+1. n =   + 1 
+n = 77 
+ 
+2. n =   + 1 
+n = 76 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 77 – Arithmetic Progression 
+Sum of the terms in an Arithmetic Progression. 
+ 
+ 
+l - Last term of the arithmetic series. 
+ 
+Question: 
+ 
+Find the sum of the series: 
+1. 2, 7, 12, 17, 22, ... 497 
+2. 501, 497, 493, 489, 485, ... 105 
+ 
+Answer: 
+1. Number of terms, n =   + 1 
+n = 100 
+Sum = (2 + 497)(100/2) 
+S  = 24950 
+3. Number of terms, n =    + 1 
+n = 100 
+Sum = (501 + 105)(100/2) 
+S  = 30300 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 78 – Geometric Progression 
+Finding nth term of a Geometric Progression. 
+ 
+t
+n 
+- n
+th 
+term. 
+a - first term of the series. 
+r - common ratio between the successive terms. (a
+2
+/a
+1
+) 
+n  - number position of the term in the series. 
+ 
+Question: 
+ 
+Find 8
+th 
+term of the series 3, 6, 12, ... 
+ 
+Answer: 
+n = 8; a = 3; r = (6/3) = 2 
+t
+8 
+= 3(2)
+8-1
+ 
+t
+8 
+= 3(128) = 384 
+Question: 
+ 
+Find 6
+th 
+term of the series 400, 200, 100, ... 
+ 
+Answer: 
+n = 6; a = 400; r = (200/400) = 01/2 
+t
+6 
+= 400(1/2)
+6-1
+ 
+t
+6 
+= 400(1/32) = 12.5 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 79 – Geometric Progression 
+Sum of the terms of a finite series where r > 1. 
+ 
+ 
+S
+n 
+-  Sum of n terms of the series. 
+Question: 
+ 
+Find the sum of the series 3, 6, 12, 24, ... up to 10 terms. 
+ 
+Answer: 
+a = 3 
+n = 10 
+r = (6/3) = 2; here r > 1. 
+Sn =                     = 3069 
+ 
+ 
+Question: 
+ 
+Find the sum of the series 10, 30, 90, 270, ... up to 8 terms. 
+ 
+Answer: 
+a = 10 
+n = 8 
+r = (30/10) = 3; here r > 1. 
+Sn =                     = 32800 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Question: 
+Shortcut # 80 – Geometric Progression 
+Sum of the terms of a finite series where r <  1. 
+ 
+ 
+Find the sum of the series 600, 300, 150, ... up to 6 terms. 
+ 
+Answer: 
+ 
+a = 600 
+n = 6 
+r = (300/600) = 1/2; here r < 1 
+Sn =   = 1181.25 
+ 
+Question: 
+ 
+Find the sum of the series 128, 64, 32, ... up to 10 terms. 
+ 
+Answer: 
+ 
+a = 128; n = 10; r = 64/128 = ½ (r < 1) 
+Sn =   = 255.75 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Question: 
+Shortcut # 81 – Geometric Progression 
+Sum of the terms of an infinite series where r < 1. 
+ 
+ 
+A  ball  is thrown up in the air for 400 m. every time the ball hits the ground it 
+will bounce back one third of the height it went the last time. The ball repeats 
+this bounce as long as it rests in the ground. What is    the total distance covered 
+by the ball? 
+ 
+Answer: 
+ 
+Distance travelled in the first throw = 450 + 450 = 900. 
+(450 + 450 is because the total distance is    both up and down distance 
+covered). 
+ 
+Distance covered in the first bounce = (1/3)900 = 300 
+Distance covered in second bounce = (1/3)300 = 100 
+The series is    900, 300, 100, ... infinite terms. 
+Sum = 900/[1 – (1/3)] 
+Sum = 1350 m 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 82 – Calendar 
+Finding day of a date using a reference day. 
+ 
+Question: 
+Find the day of birth of MS Dhoni (7 July, 1981), if   31 Dec 1999 is    Friday 
+Answer: 
+Step 1: Number of days after 7/7/1981 in 1981  = 177 
+Step 2: Number of years between 1981 and 1999 = 17 
+Step 3: Number of leap years between 1981 and 1999 = 4 
+Step 4: Number of days in 1999 till Dec 31 = 365 
+Step 5: 177 + 17 + 4 + 365 = 563 
+Step 6: Remainder of (563/7) = 3 
+Our reference day is Friday and the remainder is 3. 
+Step 7: 3 days before Friday is Tuesday. 
+MSD was born on Tuesday. 
+Note: 
+If there are no years in between the day in the question and reference day, step 
+2 and step 3 will be = 0 
+If a date in the future is asked, remainder number of days after the reference  
+day will be the answer. 
+If remainder is 0, the day to be found out is the same day as the reference day. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 83 – Clocks 
+Angle between the hour hand and the minute hand. 
+ 
+ 
+H - Hour value 
+M - Minute value 
+ 
+Question: 
+ 
+What is the angle between minute hand and hour hand at 05:40? 
+ 
+Answer: 
+ 
+H = 5 
+M = 40 
+Angle = [30(5) + (40/2)] ~ 6(40) 
+= 170 ~  240 
+= 70` 
+Note: 
+If the value is above 180`, subtract it from 360 to get refract angle. 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 84 – Clocks 
+Time at which the two hands overlap. 
+ 
+ 
+H - Least hour between ‘H’ and ‘H+1’ hour 
+ 
+Question: 
+ 
+At what time between 3 o’ clock and 4 o’ clock the two hands of the clock will 
+overlap? 
+ 
+Answer: 
+ 
+Time = [12/11][5(3)] 
+= 180/11 minutes past 3 ‘o’ clock 
+= 16.36 minutes past 3 ‘o’ clock 
+= 16 minutes 22 seconds past 3 
+= 03 : 16 : 22 
+ 
+Question: 
+ 
+At what time between 10 o’ clock and 11 o’ clock the two hands of the clock 
+will overlap? 
+ 
+Answer: 
+ 
+Time = [12/11][5(10)] 
+= 600/11 minutes past 10 ‘o’ clock 
+= 54.54 minutes past 10 ‘o’ clock 
+= 54 minutes 32 seconds past 10 
+= 10 : 54 : 32 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 85 – Clocks 
+Time at which the two hands face opposite directions. 
+ 
+Case 1: H < 6 
+Question: 
+At what time between 1 o’ clock and 2 o’ clock the two hands will be facing 
+opposite direction? 
+Answer: 
+Time = 12/11[5(1) + (180/6)] 
+= 12/11[5(1) + 30] 
+= 420/11 minutes past 1 ‘o’ clock 
+= 38.18 minutes past 1 ‘o’ clock 
+= 38 minutes 11 seconds past 1 
+= 01 : 38 : 11 
+ 
+Case 2: H > 6 
+Question: 
+At what time between 9 o’ clock and 10 o’ clock the two hands will be facing 
+opposite directions? 
+Answer: 
+Time = 12/11[5(9) - (180/6)] 
+= 12/11[5(9) - 30] 
+= 180/11 minutes past 9 ‘o’ clock 
+= 16.36 minutes past 9 ‘o’ clock 
+= 16 minutes 22 seconds past 9 
+= 09 : 16 : 22 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 86 – Clocks 
+Time at which the two hands will be certain angle apart. 
+ 
+ 
+There are two different time at which the hands will be certain degrees apart. 
+T
+1 
+and T
+2
+. 
+Question: 
+ 
+At what time between 4 o’ clock and 5 o’ clock the two hands of the clock will 
+be 60 degrees apart? 
+ 
+Answer: 
+ 
+T
+1 
+= 12/11[5(4) + (60/6)] 
+= 360/11 minutes past 4 ‘o’ clock 
+= 32.72 minutes past 4 ‘o’ clock 
+= 32 minutes 44 seconds past 4 
+= 04 : 32 : 44 
+ 
+T
+2 
+= 12/11[5(4) –   (60/6)] 
+= 120/11 minutes past 4 ‘o’ clock 
+= 10.9 minutes past 4 ‘o’ clock 
+= 10 minutes 54 seconds past 4 
+= 04 : 10 : 54 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 87 – Clocks 
+Time at which the two hands will be certain minute spaces apart. 
+ 
+ 
+There are two different time at which the hands will be certain degrees apart. 
+T
+1 
+and T
+2
+. 
+Question: 
+ 
+At what time between 7 o’ clock and 8 o’ clock the two hands of the clock will 
+be 15 minutes apart? 
+ 
+Answer: 
+ 
+T
+1 
+= 12/11[5(7) + 15] 
+= 600/11 minutes past 7 ‘o’ clock 
+= 54.54 minutes past 7 ‘o’ clock 
+= 54 minutes 33 seconds past 7 
+= 07 : 54 : 33 
+ 
+T
+2 
+= 12/11[5(7) – 15] 
+= 240/11 minutes past 7 ‘o’ clock 
+= 21.81 minutes past 7 ‘o’ clock 
+= 21 minutes 48 seconds past 7 
+= 07 : 21 : 48 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 88 – Permutation Combination and Probability 
+Dependent and Independent Events. 
+ 
+Dependent events – Multiplication; Key word – AND 
+Independent events - Addition;  Key word –   OR 
+ 
+Question: 
+There 3 busses from city A to city B and there are 5 busses from city B to city 
+C. In how many ways a person can travel from city A to C through B? 
+Answer: 
+Choosing a bus from city B depends on choosing a bus from city A. 
+Number of ways = 3 x 5 = 15 
+ 
+Question: 
+There 3 busses from city A to city B and there are 5 busses from city A to  city 
+C. In how many ways a person can travel from city A to C or B? 
+Answer: 
+Choosing a bus to city B or C are not dependent. 
+Number of ways = 3 + 5 = 8 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Question: 
+Shortcut # 89 - Permutation Combination and Probability 
+Permutation – Arrangement with repetition. 
+ 
+n
+n 
+In how many ways the letters of the word “ORANGE” can be arranged with 
+repetition? 
+Answer: 
+n = 6   (n = total number of elements) 
+Since all the elements are taken, 
+Number of arrangements = 6
+6
+ 
+n
+r 
+Question: 
+In how many ways three letters from the word “ORANGE” can be arranged 
+with repetition? 
+Answer: 
+n = 6; r = 3 (r = number of elements taken for arrangement) 
+Number of arrangements = 6
+3 
+= 216 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 90 - Permutation Combination and Probability 
+Permutation – Arrangement without repetition. 
+ 
+n! 
+Question: 
+In how many ways the letters of the word “MANGO” can be arranged without 
+repetition? 
+Answer: 
+n = 5 
+Since all the elements are taken for arrangement, 
+Number of elements = n!   = 5! = 120 
+ 
+ 
+ 
+ 
+ 
+ 
+Question: 
+n
+P
+r
+ = 
+In how many ways any three letters of the word ‘MANGO” can be arranged 
+without repetition? 
+Answer: 
+n= 5; r = 3 
+n
+P
+r 
+= 5!/(5 – 3)! = 120/2 = 60 ways 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 91 - Permutation Combination and Probability 
+Permutation – Elements occurring together. 
+ 
+If two elements occur together 
+2!(n –   1)! 
+If three elements occurtogther 
+3!(n –   2)! 
+If four elements occur together 
+4!(n –   3)! 
+and so on 
+ 
+Question: 
+In how many ways letters of the word “ORANGE” arranged so that the vowels 
+will always occur together? 
+Answer: 
+n = 6 
+Three letters ‘O, A and E’ should occur together. 
+Since three letters occur together 
+3! x (6 – 2)! = 6 x 24 = 144 
+Note: 
+If there are 4 letters occurring together, the answer is 
+4!(6 – 3)! 
+If there are 5 letters occurring together, the answer is 
+5!(6 – 4)! 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 92 - Permutation Combination and Probability 
+Permutation – When similar kind of elements occur. 
+ 
+ 
+ 
+Question: 
+In how many ways the letters of the word “ENVIRONMENT” can be 
+arranged? 
+Answer: 
+n = 11 
+Let, a = 2 (E is repeated twice) 
+Let, b = 3 (N is repeated thrice) 
+Number of arrangements = 11!/(2! x 3!) 
+= 277200 
+ 
+ 
+Question: 
+ 
+In how many ways the letters of the word “PIIZZZAAAA” can be rearranged? 
+ 
+Answer: 
+ 
+n = 10 
+a = 2 (I is repeated twice) 
+b = 3 (Z is repeated thrice) 
+c = 4 (A is repeated four times) 
+Number of arrangements = 10!/(2! x 3! x 4!) 
+= 12600 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 93 - Permutation Combination and Probability 
+Permutation – Circular arrangement. 
+ 
+(n – 1)! 
+Question: 
+In how many ways 6 persons can be arranged in a circle? 
+ 
+Answer: 
+n = 6 
+Number of arrangements = (6 – 1)! = 5! = 120 
+ 
+ 
+ 
+Question: 
+In how many ways 8 persons can be arranged in a circle? 
+ 
+ 
+Answer: 
+n = 8 
+Number of arrangements = (8 – 1)! = 7! = 5040 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 94 - Permutation Combination and Probability 
+Permutation – Elements occurring together in a circle. 
+ 
+If two elements occur together 
+2!(n –   2)! 
+If three elements occur together 
+3!(n –   3)! 
+If four elements occur together 
+4!(n –   4)! 
+and so on 
+ 
+Question: 
+In how many ways 8 persons can be seated around a circular table with two 
+persons always sitting together? 
+ 
+Answer: 
+2! x (8 – 2)! = 2 x 720 = 1440 
+Note: 
+If three persons are sitting together, the answer is 
+3! x (8 – 3)! 
+If four persons are sitting together, the answer is 
+4! x (8 – 4)! 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 95 - Permutation Combination and Probability 
+Permutation – Arrangement of Necklace. 
+ 
+(n – 1)!/2 
+Question: 
+In how many ways a necklace with 8 different colored beads can be arranged? 
+ 
+Answer: 
+n = 8 
+Number of arrangements = (8 – 1)!/2 = 2520 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 96 - Permutation Combination and Probability 
+Combination 
+ 
+ 
+ 
+ 
+ 
+Question: 
+n
+C
+r
+ = 
+In how many ways 2 shirts and 3 pants can be selected from 5 shirts and 7 
+pants? 
+Answer: 
+Selecting 2 shirts out of 5 = 
+5
+C
+2 
+= 5!/[2!(5 –  2)!] = 10 
+Selecting 3 shirts out of 7 = 
+7
+C
+3 
+= 7!/[3!(7 –  3)!] = 35 
+Since the two events are dependent, 
+Total ways of selecting = 10 x 35 = 350 
+ 
+ 
+ 
+Question: 
+In how many ways 2 shirts or 3 pants can be selected from 5 shirts and 7 
+pants? 
+Answer: 
+Selecting 2 shirts out of 5 = 
+5
+C
+2 
+= 5!/[2!(5 –  2)!] = 10 
+Selecting 3 shirts out of 7 = 
+7
+C
+3 
+= 7!/[3!(7 –  3)!] = 35 
+Since the two events are  independent, 
+Total ways of selecting = 10 + 35 = 45 
+www.iascgl.com
+
+ 
+ 
+ 
+ 
+Shortcut # 97 - Permutation Combination and Probability 
+Probability. 
+ 
+Probability =  
+ 
+ 
+Question: 
+What is the probability of selecting 2 spades from a pack of 52 cards? 
+Answer: 
+Total number of ways of selecting 2 cards from 52 = 
+52
+C
+2 
+= 1275 
+Total ways of selecting 2 spades from 13 spades = 
+13
+C
+2 
+= 78 
+Probability = 78/1275 
+ 
+ 
+Question: 
+What is    the probability of selecting 2 students from a class of 10 boys and 8 
+girls, where both the selected students are boys? 
+Answer: 
+Total number of ways of selecting 2 students from 18 
+= 
+18
+C
+2 
+= 153 
+Total ways of selecting 2 boys from 10 boys 
+= 
+10
+C
+2 
+= 45 
+Probability = 45/153 
+www.iascgl.com
+
+ 
+ 
+ 
+Probability = 
+ 
+Question: 
+ 
+What is the probability of getting 4 heads when 7 coins are tossed? 
+ 
+Answer: 
+ 
+Total number of results = 2 x 2 x 2 x 2 x 2 x 2 x 2 = 2
+8 
+= 128 
+ 
+When the required results need 4 heads, the remaining three will be tails. 
+The results will be the different arrangement of the following: 
+ 
+“ H H H H T T T ” 
+ 
+The number of ways in which the above can be arranged is 
+= 7!/(4! x 3!) 
+ 
+= 5040/144 
+ 
+= 35 
+ 
+Probability = 35/128 
+www.iascgl.com
+
+ 
+ 
+ 
+Probability = 
+ 
+ 
+ 
+Question: 
+ 
+What is    the probability of getting a sum which is  equal to prime number from 
+the results obtained by throwing two dice with six faces numbered 1 to    6 on the 
+faces? 
+ 
+Answer: 
+The above table shows the different sums obtained from different results. 
+Total number of results = 36. 
+Expecting result = 15. (Highlighted with the shade). 
+Probability = 15/36 
+www.iascgl.com
+
+ 
+ 
+ 
+Probability = 
+ 
+Question: 
+ 
+What is    the probability of selecting 4 balls from a bag that has 5 red balls and 
+6 black balls where the selection has at least 1 red ball? 
+ 
+ 
+Answer: 
+ 
+The different cases are: 
+ 
+1 red and 3 black 
+= 
+5
+C
+1 
+x 
+6
+C
+3
+ 
+= 100 
+2 red and 2 black 
+= 
+5
+C
+2 
+x 
+6
+C
+2
+ 
+= 150 
+3 red and 1 black 
+= 
+5
+C
+3 
+x 
+6
+C
+1
+ 
+= 60 
+4 red 
+= 
+5
+C
+4
+ 
+= 5 
+ 
+Number of ways of selecting 4 balls with at least 1 red ball: 
+= 100 + 150 + 60 + 5 = 315 
+ 
+Total ways of selecting 4 balls without any condition: 
+= 
+11
+C
+4 
+= 330 
+Probability = 315/330 
+ 
+Alternate method: 
+ 
+Probability = 1 – probability of selecting no red balls 
+= 1 – probability of selecting 4 black balls 
+Probability = 1 – (
+6
+C
+4
+/
+11
+C
+4
+) 
+= 1 – (15/330) 
+= 315/330 
+www.iascgl.com

@@ -1,0 +1,6934 @@
+=== FILE: Electronic_Devices_Circuits_Notes_PW.pdf ===
+=== PAGES: 82 ===
+
+
+
+ElectronicsElectronics
+DeviceDevice
+and Circuitsand Circuits
+Electronics
+Device
+and Circuits
+
+Published By: 
+ 
+  Physics Wallah 
+ISBN: 978-93-94342-39-2 
+Mobile App: Physics Wallah (Available on Play Store) 
+  
+Website: www.pw.live 
+Email: support@pw.live 
+ 
+Rights 
+All  rights  will be  reserved  by  Publisher.  No  part  of  this  book  may  be  used  or  reproduced  in  any  manner 
+whatsoever without the written permission from author or publisher. 
+In the interest of student's community: 
+Circulation of soft copy of Book(s) in PDF or other equivalent format(s) through any social media channels, 
+emails,  etc.  or  any  other  channels  through  mobiles,  laptops  or  desktop  is  a  criminal  offence.  Anybody 
+circulating, downloading, storing, soft copy of the book on his device(s) is in breach of Copyright Act. Further 
+Photocopying of this book or any of its material is also illegal. Do not download or forward in case you come 
+across any such soft copy material. 
+ 
+Disclaimer 
+A team of PW experts and faculties with an understanding of the subject has worked hard for the books. 
+While  the  author  and  publisher  have  used  their  best  efforts  in  preparing  these  books.  The  content  has  been 
+checked for accuracy. As the book is intended for educational purposes, the author shall not be responsible for 
+any errors contained in the book. 
+The publication is designed to provide accurate and authoritative information with regard to the subject matter 
+covered. 
+This book and the individual contribution contained in it are protected under copyright by the publisher. 
+(This Module shall only be Used for Educational Purpose.) 
+
+ 
+ 
+ 
+Design Against Static Load 
+ 
+ 
+ 
+ 
+ 
+1. Semiconductor Device Physics .............................................................................................  6.1  –  6.15 
+2. Compensated Semiconductors ............................................................................................  6.16  – 6.20 
+3. Fermi Levels and Heat Measurement ..................................................................................  6.21 – 6.28 
+4. PN Junction ...........................................................................................................................  6.29 – 6.39 
+5. Special Diodes ......................................................................................................................  6.40 – 6.48 
+6. Opto-Electronics and Quasi Fermi Levels .............................................................................  6.49 – 6.52 
+7. Bipolar Junction Transistor ...................................................................................................  6.53 – 6.61 
+8. MOS Capacitor ......................................................................................................................  6.62 – 170 
+9. MOSFET (Metal Oxide Semiconductor Field Effect Transistor) ............................................  6.71 – 6.78 
+ELECTRONICS DEVICES 
+ELECTRONIC DEVICES 
+INDEX 
+GATE-O-PEDIA ELECTRONICS & COMMUNICATION HANDBOOK 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+6.1 
+1 
+SEMICONDUCTOR 
+DEVICE PHYSICS 
+ 
+1.1. Introduction 
+1.1.1. Energy Gap 
+Difference between the lower energy level of conduction band E
+c
+ and upper energy level of valence band E
+v
+. 
+  
+GGo0
+EEB T eV=−
+ 
+  
+Where, E
+Go
+ = Energy Gap at 0K   
+ E
+G
+ = Energy Gap at T = TK 
+ B
+0
+ = Material constant (eV/K) 
+ T = Temperature in Kelvin 
+• Energy Gap decrease with increase in the temperature i.e. 
+G
+1
+E
+Temp
+
+ 
+• For Si Energy Gap is 
+()
+4
+GT
+E1.21   3.6  10   T
+−
+=   −  
+ 
+• For Ge Energy Gap is 
+()
+4
+GT
+E0.785   2.23  10   T
+−
+=−   
+ 
+1.1.2. Conductivity 
+• The current carrying capacity of any material is defined as its conductivity. 
+• It is the reciprocal of resistivity Unit :– 
+1
+cm
+→ 
+cm
+ 
+• Conductivity denotes current carrying capacity of material or device 
+Conductivitycarrier conc.    chargemobility=
+ 
+• Conductivity depends on carrier conc, charge and mobility. 
+• For metal :– 
+n
+nq =  
+ 
+• In metal conductivity decrease with increase in temperature. 
+• In metals as temperature increase, mobility of charge carrier decrease and therefor conductivity decreases. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.2 
+ 
+For semiconductor :   
+np
+nqpq=   +  
+ 
+• In semiconductor, conductivity increases with increase in temperature. 
+• In a semiconductor, conductivity mainly depends on carrier concentration. 
+• Semiconductor means by default it is intrinsic semiconductor 
+ 1.1.3. Effective Mass 
+• The effective mass is a quantity that is used to simplify band structure by modeling the behavior of a free particle with 
+the mass. 
+• Effective mass takes into account the particle mass & also effects due to internal forces 
+• Consider an electron in an atom 
+total
+extint ernal
+FFF=+
+  where, 
+ext
+Fm  a
+*
+=
+ 
+and 
+internal
+F
+is due to scattering of charges in the structure 
+• The effective mass is parameter that relates the quantum mechanism results to the classical force equation 
+2
+1
+222
+2
+11
+*
+==
+C
+dE
+m
+h   d Kh
+ 
+Where,  , is plank’s constant 
+  K is wave number 
+  C
+1
+, is constant 
+  m* is effective mass 
+• Higher the energy lower will be the effective mass 
+                                   
+ 
+ 
+Where,  mp* = effective mass of hole 
+  mp* = 
+()
+2/3
+3/23/2
+lpnp
+mm+
+ 
+  mlp = effective mass of light hole 
+  mnp = effective mass of heavy hole 
+For Si : mlp = 0.16 m
+0
+, mnp = 0.49 m
+0
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.3 
+1.1.3. Energy Band Diagrams 
+Conductors: 
+• All metals are very good conductors of current so they allow high flow of current through them. 
+• In metal current is only due to electrons i.e. metals are unipolar 
+• In metals free electron conc is independent of temperature 
+Where CB = conduction Band and  
+ VB = valance Band 
+ 
+• At 300 K : 
+  
+• When temperature is increased then over lapping of CB & VB also increase but there is free carrier concentration 
+available in CB. Hence conductors have Finite amount of conductivity at 300K. 
+Semi-conductors: 
+• In semiconductor, the energy gap is small i.e., E
+G
+ → 0.7eV to 1.5eV 
+• At T = 0K free carrier conc. are zero there by conduction band is empty hence conductivity is zero. 
+  
+• All semiconductors are insulators at 0K. 
+• At T = 300 K, some covalent bonds are broken & free carriers are generated in CB & holes in VB. 
+So, semiconductor has finite amount of conductivity at T = 300 K. 
+G
+1
+E
+temp
+
+ 
+ 
+• Common semiconductor elements are Si, Ge 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.4 
+ 1.3.4. Insulator 
+• Due to larger energy gap insulator requires high energy to produce conductivity. 
+• E
+G
+ required is larger  
+• For ideal insulator conductivity (
+
+) is zero 
+ 
+ 1.3.5. Mobility : () 
+• Moving ability of the charge carriers is called as mobility  
+d
+V
+E
+=
+ 
+ 
+where ,  
+d
+V
+= drift velocity 
+And   
+E
+ = field intensity 
+ Unit of 
+
+ = cm
+2
+/V sec 
+ e
+–
+  mobility 
+n
+
+= 3800 cm
+2
+ / V sec for Ge 
+1300 cm
+2
+ / V sec for Si 
+ Hole mobility 
+p
+
+= 1800cm
+2
+ / V sec for Ge 
+ 500 cm
+2
+ / V sec  for Si 
+• e
+–
+ mobility is always greater then hole mobility so e
+–
+'s can travel faster. 
+• Variation of Mobility w.r.t temperature:  
+  
+• Impurity scattering  takes  place  till  300  K  due  to  which  carriers  are  generated  and  the 
+carrier starts moving then drift velocity increases due to which mobility increases. 
+• Lattice scattering takes place at temp larger than 300 K. In which no. of collisions in e
+–
+s generated increases & relaxation time decrease due to which mobility decreases. 
+• In general 
+m
+T
+−
+
+ 
+In Ge, m = 1.66 for e
+–
+    and   m = 2.33 for hole 
+In Si. m = 2.5 for e
+–
+      and   m = 2.7  for hole 
+ 
+• Variation of drift velocity w.r.t 
+E
+– field :– 
+• Here V
+d
+ (drift velocity) increases linearly then sublinearly then enters into saturation region. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.5 
+ 
+• Variation of mobility w.r.t 
+E
+ field : 
+ 
+ 
+• For small field Region: E↑ → Vd↑ (linearly) 
+↑V
+d
+ = 
+E
+ 
+
+ = constant 
+• Mobility for charge carriers will remain constant  
+• Drift velocity linearly increases with the field 
+()
+E
+ 
+• For medium field region drift velocity (V
+d
+) increases sublinearly and mobility decreases slowly 
+d
+VE  =  
+ 
+• For high field region drift velocity (V
+d
+) remain constant and mobility decreases as increase of electric field intensity. 
+Constant → 
+d
+VE= 
+ 
+ 1.3.6. Electric field along the length of SC bar :– 
+ 
+• If length of semiconductor bar is  and applying voltage V then, 
+  
+()
+1
+x
+x
+VV
+l
+
+=−
+
+
+ 
+And      
+V
+E=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.6 
+Current : 
+• The rate of flow of charge is called current. 
+ 
+dQ
+I
+dt
+=
+ 
+ 
+d
+InqV  A=
+ 
+where,  n → no. of charge carrier per unit volume (carrier conc) 
+  V
+d
+ → drift velocity 
+  q = charge 
+  A = Area 
+1.3.7. Variation of Conductivity w.r.t Temperature 
+Metal: 
+• The carrier conc is independent of temp but generally mobility decreases with increase in temp. so conductivity 
+decreases. 
+ 
+T →
+ 
+ 
+T →
+ 
+Semiconductors: 
+• In semiconductor as temperature increases, then free e
+–
+ concentration in CB & hole conc in VB ↑es by large amount and 
+mobility of e
+–
+ & holes decreases wrt temperature by smaller amount. Thus overall the conductivity of SC increases with 
+increases in temperature. 
+np
+nqpq =   +   
+ 
+ 1.3.8. Resistivity : ( – m) 
+• It is the ability of material to resist the current that passes through it. 
+1
+=
+
+ 
+• For metal :    
+1
+n
+nq
+=
+
+ 
+• For semiconductors  
+1
+np
+nqpq
+=
+ +  
+ 
+Resistance : (R)   
+l
+R
+A
+=
+ 
+Where,   = Resistivity 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.7 
+ 
+• For metal : As increases of temp mobility decreases and Resistivity increases thus overall Resistance increases. 
+• For semiconductor : As increases of temp carrier concentration increases and mobility decreases thus overall resistance  
+decreases. 
+1.2. Carrier Transport Phenomenon 
+1.2.1. Drift  
+• The migration of charge carrier under the influence of external forces which is electric field intensity is called as drift. 
+• Drift is not natural, It always requires external force. 
+Diffusion : 
+• The migration of charge carrier from their higher concentration to lower concentration is called diffusion. 
+• It is natural process no needs of external forces. 
+• It occurs due to the concentration gradient. 
+Drift current Density :– (J
+d
+) 
+  
+d
+JE=
+ 
+• For metal :– In metal drift current density in only due to e
+–
+s 
+  
+dn
+Jnq    E=
+ 
+• For semiconductor :– In SC drift current density is due to both electrons as well as concentration of holes 
+  
+dnp
+JnqEpqE=    +  
+ 
+Where,  n = no. of electrons present per cubic meter 
+ p = no. of holes present per cubic meter 
+ q = charge 
+Diffusion Current Density: 
+• The diffusion current density depends on diffusion constant or diffusivity 
+• Diffusion current flows only in semiconductors. 
+• e
+–
+ diffusion current density 
+where D
+n
+ = e
+–
+ diffusivity and 
+dn
+dx
+= concentration gradient of e
+–
+ 
+  
+2
+/
+nn
+dn
+JqDA  cm
+dx
+=+
+ 
+• Hole diffusion current density 
+  
+2
+/
+pp
+dp
+JqDA  cm
+dx
+=−
+ 
+Where  D
+p
+ = hole diffusivity 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.8 
+and   
+dp
+dx
+ = conc gradient of hole 
+Total current Density 
+• The total current density in a semiconductor  
+  
+2
+/cm
+np
+JJJA=+
+ 
+Where  Jn = Jn (Diff) + Jn (Drift) 
+  
+2
+A/cm
+nnn
+dn
+JqDnq    E
+dx
+=+  
+ 
+  J
+p
+ = J
+p
+(drift) + J
+p
+(Diff) 
+  
+2
+A/cm
+ppp
+dp
+JpqE    qD
+dx
+=    −
+ 
+1.2.2. Einstein's Relation 
+• It states that the ratio of diffusivity & mobility at a particular temp is always constant 
+  
+D
+
+= constant 
+  
+T
+D
+V=
+
+  
+ where V
+T
+ = thermal voltage 
+  
+11600
+T
+T
+VVolts=
+ 
+where T is temperature, at room temperature, V
+T
+ = 25.8mV  26 mV  
+1.3. Mass Action Law  
+It states that, In a semiconductor under thermal equilibrium the product of electrons and holes will be always constant and is 
+given by square of intrinsic concentration. 
+  
+2
+i
+np    n=
+ 
+• This law is mainly used to calculate minority carrier conc. 
+For n-type semiconductor For t-type semiconductor 
+2
+i
+n
+n
+n
+p
+n
+=
+ 
+2
+i
+p
+p
+n
+n
+p
+=
+ 
+Where,  n
+n
+ ⟹ majority carrier are e
+–
+s 
+  p
+p
+ ⟹ majority carrier are holes 
+  p
+n
+ ⟹ minority  carrier are holes 
+  n
+p
+  =  minority carrier are e
+–
+s 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.9 
+Intrinsic carrier conc :  (n
+i
+) 
+• It is the conc. available in the pure semiconductor at a given temperature 
+  
+i
+np    n==
+ 
+  
+/2
+Go
+EkT
+icv
+nN N   e
+−
+=
+  
+Intrinsic concentration in a semiconductor depends on  
+(i) Temperature 
+(ii) Energy Gap 
+• In Ge intrinsic concentration is more as compare Si due to smaller energy gap at zero kelvin  
+For Ge, n
+i
+ = 2.5 × 10
+13
+/cm
+3
+ 
+For Si, n
+i
+ = 1.5 × 10
+10
+ / cm
+3
+ 
+Classification of semiconductors : 
+(i) Elemental & compounded type SC 
+(ii) Direct & Indirect band gap SC 
+(iii) Intrinsic & Extrinsic SC 
+1.3.1. Recombination 
+• In which an e
+–
+ after loosing its energy is migrated from conduction band to valence band & acquires a vacancy 
+(hole) in a broken covalent bond & the covalent bond is reformed. This process is called Recombination. 
+Carrier Life Time ()  
+• It is the average lifetime of the charge carriers. 
+• It is the average time taken from generation to recombination. 
+• It is two types : 
+(i) e
+–
+ carrier life time 
+(ii) hole carrier life time 
+Direct and Indirect bandgap SC 
+• In Indirect bandgap SC, during recombination most of the energy is released in the form of heat because of 
+collision of e
+–
+s to each others. 
+• In direct band gap SC, during the migration, the value of K is fixed so no. of collision with another e– is very small, 
+so most of energy released in the form of light. 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.10 
+1.3.2. Intrinsic & Extrinsic SC 
+Intrnsic SC 
+• Also known as pure semiconductor or natural semiconductor or non-degenerate semiconductor  
+• The maximum no. of valency e
+–
+s are 8 
+ 
+• In one covalent bond there will be two valency electron 
+• At 0k all valency e’s are imperfect covalent bonding  
+• Intrinsic semiconductor will act as insulator at 0k. 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.11 
+• When a covalent bond is broken, it will give one e
+–
+ & hole (e
+–
+ will be jump from VB to CB) and because a free e– 
+and hole will remains in the valency band. 
+• For intrinsic semiconductor  
+i
+np    n==
+ 
+• Variation in intrinsic concentration w.r.t temperature :– 
+ 
+13
+22
+iG
+i
+dnE
+n
+dTTKT
+
+=+
+
+
+ 
+For Ge at 300 K 
+  
+300
+0.076at 300K
+%7.6%300K
+i
+i
+i
+i
+K
+dn
+n
+dT
+dn
+of  n
+dT
+=
+=
+ 
+Note: In Si, n
+i
+ increases approximately 8% for 1° rising temp at 300K, As well as the conductivity increases by 8% 
+(approx.) for 1° rising temp 
+Instrinsic conductivity : (
+i
+) 
+  
+()
+/cm
+iinp
+nq =    +
+ 
+• With increases of temperature intrinsic conductivity will also increases  
+  
+3/2
+i
+T
+ 
+Intrinsic Resistivity (
+i
+) 
+It is reciprocal of intrinsic conductivity 
+  
+1
+i
+i
+=
+
+ 
+  
+1
+cm
+i
+in
+nq
+
+ =
+
+ +
+
+ 
+Generation of e
+–
+ hole pair : 
+• The creation of e
+–
+ hole pair by Breaking of covalent bond is called generation of EHP (e– - hole pair) 
+Recombination : 
+• Pairing of free e– with hole is called as recombination 
+• During Recombination the free e–s holes will be lost in pair and covalent bond is created  
+Carrier life time : 
+• It is the avg lifetime of the charge carriers. 
+• It is the avg time taken from generation to recombination. 
+Doping : 
+• The process of adding impurities to the semiconductor is called doping 
+• Doping increases the carrier concentration and therefore increases the conductivity 
+• For an tetravalent atom, there are two types of dopants available 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.12 
+(i) Trivalent dopants : (B, Al, Ga, In) → Valency – 3 
+(ii) Pentavalent dopants :  (P, As, Sn, Bi) → Valency – 5 
+Standard Doping concentration : 
+(i) Moderate Doping → 1 : [10
+6
+ to 10
+8
+] → P  N 
+(ii) Lightly Doped → 1: 10
+11
+ → P
+–
+ N
+–
+ 
+(iii) Highly/Heavily doped → 1 : 10
+3
+ → P
++
+ N
++
+ 
+• A highly doped SC with 1 : 10
+3
+ doping is called degenerate SC. 
+• Non-degenerate SC means moderately doped SC  
+• The impurity atoms are added to SC are called dopants or impurity profiles  
+ 1.3.4. Extrinsic SC 
+(i) n-type SC 
+• When pentavalent impurities or donor type impurities are added in the pure SC then it is called as n-type SC 
+At T = 0K 
+ 
+• DONOR energy level is a discrete energy level which is created Just below the conduction band. 
+• At 0K, the fifth e– of all the impurity atom will be existing in the donor energy level 
+• N-type semiconductor at 0K will be working as a insulator 
+5
+th
+ e
+–
+ = 5 × 10
+22
+ atoms/cm
+3
+ × 
+8
+1
+10
+ 
+                                       = 5 × 10
+14
+ atoms/cm
+3
+ (for Si) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.13 
+ At T = 300 K 
+  
+ 
+• As temperature increases from (0 to 300K) because of that Donor level ionization the 5
+th
+ e– will be moving from donor 
+energy level into CB and they become free e– and at the same time because of temp large no. of covalent bonds will be 
+broken and (EHP) are generated. 
+• It overall results in larger e– concentration in CB & hole concentration in VB & the S.C will have finite amount of 
+conductivity 
+For n-type SC, N
+A
+ = 0 
+  n + N
+A
+ = p  + N
+D
+ 
+  
+D
+np    N=+
+ 
+For, n-type SC 
+np
+ 
+Where   
+2
+i
+D
+n
+p
+N
+=
+ 
+Hence,   
+22
+4
+2
+DDi
+NNn
+n
+++
+=
+ 
+• Conductivity :–  = 
+n
+ + 
+p
+ 
+  = nq
+n
+ + pq
+p
+ 
+
+p
+ is very small for n-type 
+  
+n
+nq =  
+ 
+If N
+D
+ is very large 
+  
+Dn
+Nq =
+     
+ 
+(ii) p-type semi-conductor : 
+• When trivalent impurities are added into the pure SC then the SC will become p-type 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.14 
+ 
+At T = 0 K 
+ 
+• Acceptor energy level is a discreate energy level created Just above the valence band. 
+• Acceptor energy level denotes energy level of all the trivalent atoms added to the pure semiconductor. 
+• P-type semiconductor at 0K will be work as a insulator. 
+At T = 300 K 
+ 
+• At 300K Acceptor level ionization takes place & some covalent bonds are broken therefore, there is finite free e
+–
+ 
+concentration in CB & hole concentration in the VB so SC will have finite conductivity at 300 K  
+ For p-type SC :– N
+D
+ = 0 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.15 
+ 
+A
+p    n    N=+
+ 
+Where   
+2
+ni
+n
+p
+=
+ 
+Hence,   
+22
+4
+2
+AAi
+NNn
+p
+++
+=
+ 
+• Conductivity : 
+np
+= +
+ 
+Where 
+n 
+is very small for p-type SC 
+  
+p
+=
+ 
+  
+p
+pq=  
+ 
+  
+Ap
+Nq=   
+    doping concentration 
+ 
+Note :  Minimum conductivity of extrinsic SC, 
+min
+2
+ipn
+qn  = 
+ 
+Doping Ratio or Doping Profile: 
+It is defined as the ratio of total no. of dopant atoms & total no. of atoms (atomic density) per unit volume in an extrinsic SC. 
+  Doping ratio = 
+()
+3
+Doping concentration
+Atomic density  atoms/cm
+ 
+• 1 : 10
+3
+ → High Doping 
+• 1 : (10
+6
+ to 10
+8
+) → Moderate doping 
+• 1 : (10
+10
+ to 10
+11
+) → Light doping 
+ 
+❑❑❑ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+6.16 
+2 
+COMPENSATED 
+SEMICONDUCTORS 
+ 
+ 
+2.1. Introduction 
+Compensated semiconductor:- 
+• A semiconductor in which both donor & accepter impurities are added are called compensated SC. 
+• If trivalent atoms are added into n-type SC or pentavalent atoms are added into the p-type SC we get compensated SC. 
+In an intrinsic semiconductor:- 
+(i) If N
+A
+ = N
+D
+ then it is general compensated semiconductor   
+(ii) If N
+D
+ > N
+A
+ then it is n-type compensated semiconductor  
+   
+22
+n
+DA
+N   -N
+ii
+n
+n
+nn
+pp
+n
+=    =
+ 
+(iii) If N
+A
+ > N
+D
+ then it is p-type compensated SC 
+   
+22
+AD
+N   -N
+ii
+p
+p
+nn
+n
+p
+==
+ 
+ 2.1.1. Procedure to calculate majority & minority concentration in the Compensated Semiconductor 
+(1) N-type – compensated SC 
+Condition – A: 
+• If (N
+D
+ >> N
+A
+) or (N
+D
+ > 10 N
+A
+) or (N
+D
+ – N
+A
+) >> n
+i
+ or is not given in the problem then, 
+ minority carrier conc
+n  
+ 
+22
+DA
+N   -N
+ii
+n
+n
+nn
+p
+n
+=
+ 
+  majority carrier conc
+n
+.   n
+n
+ ~ N
+D
+ 
+Condition – B: 
+ • If N
+D
+ is very close to n
+i
+ 
+  N
+D
+ – N
+A
+ is very close to n
+i
+ 
+  N
+D
+ is very close to N
+A
+ 
+ then, majority carrier conc
+n
+. (n
+n
+), will be  
+    
+2
+2
+DADA
+N   -N(N   -N   )
+24
+ni
+nn=++
+ 
+ and minority carrier conc
+n
+ will be 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.17 
+    
+2
+i
+n
+n
+n
+p
+n
+=
+ 
+Note : Special Case:   Let N
+D
+ is applied and N
+A
+ = 0 
+ then   
+2
+2
+DD
+NN
+24
+ni
+nnn=  =    ++
+ 
+(2)  p-type compensated SC :- 
+Condition A:- 
+ • If N
+A
+ >> N
+D
+ or N
+A
+ > 10 N
+D
+ or (N
+A
+ – N
+D
+) >> n
+i
+ or n
+i
+ is not given 
+  p
+p
+ ~ N
+A
+ – N
+D
+  
+    p
+p
+ ~ N
+A
+ 
+and minority carrier conc
+n
+. 
+    
+22
+AD
+N   -N
+ii
+p
+p
+nn
+n
+p
+==
+ 
+Condition B:- 
+• If N
+A
+ is very close to n
+i
+ or (N
+A
+ – N
+D
+) is very close to n
+i
+ or N
+A
+ is very close to N
+D
+ then, majority carrier conc
+n
+. 
+    
+2
+2
+22
+ADAD
+pi
+NNNN
+pn
+−−
+
+=++
+
+
+ 
+Note: Special case: 
+If N
+A
+ is applied & N
+D
+ = 0 
+then                                    
+2
+2
+22
+AA
+pi
+NN
+ppn
+
+=  =   ++
+
+
+ 
+and    
+2
+i
+p
+p
+n
+n
+p
+=
+ 
+Carrier Generation & Carrier Recombination:-  
+Generation is the process in which force electron & holes are generated and Recombination is the process in which electrons 
+& holes are annihilated.   
+Carrier Generation & Carrier Recombination: 
+• In thermal equilibrium the conc
+n
+ of e
+–
+ & hole in CB & VB respectively are time independent & mass action law holds 
+and also Recombination process annihilates both the e
+–
+ & hole.   
+• Since the net carrier conc
+n
+. are independent of time in thermal equilibrium, the rate of e
+–
+ and hole generated & the rate 
+of which they annihilates must be equal. 
+In thermal equilibrium 
+  G
+no
+ = G
+po
+ = R
+no
+ = R
+po 
+ Excess carrier generation & Recombination:-  
+• When a high energy photons are incident on a SC. e
+–
+ in  the valence band may be excited to the CB. At the same time, 
+Q hole is also created in the VB. Thus  EHP (electron – hole. pair) is generated.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.18 
+     
+    g n ́ = g p ́ 
+         
+    Excess carrier Generation 
+ where gn ́ = excess e
+–
+ generation rate  
+           gp ́ = excess hole generation rate
+ 
+ 
+Excess carrier recombination    Rn ́ = Rp ́  
+Where,   Rn ́, Rp ́ → Excess e
+–
+ & hole recombination rate  
+Case – I : Source applied for –  to 0 
+The net rate of change of e
+–
+ concentration. 
+    
+2
+2
+()
+nL
+n
+d    n tdnn
+DG
+dt
+dx
+   
+=−   +
+
+ 
+Approximation  
+(i)  p
+o
+ >> n
+o
+   (ii)  low level injection 
+  then,  
+/
+( )(  )
+o
+tn
+nn
+to  e
+−
+   =
+ 
+ For n-type, excess minority carrier concentration. 
+      
+/
+( )(  )
+o
+tp
+pn
+to  e
+−
+   = 
+ 
+where, 
+no
+, 
+po
+ → excess lifetime of e
+–
+ & hole. 
+Recombination rate of excess carrier: 
+ •  Recombination rate of excess carrier is equals to negative of net rate of change of excess carrier. 
+ •  For p-type,   
+()
+''
+np
+n
+nt
+RR
+
+==
+
+ 
+ •  For n-type,     
+()
+''
+np
+p
+pt
+RR
+
+==
+
+ 
+Case – II :  
+Consider a homogenous n-type SC with zero applied electric field, assume that for t < 0 the SC is in thermal equilibrium & that 
+for t > 0, a uniform generation rate exist in the crystal. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.19 
+ 
+    
+po
+/
+( )'(1)
+t
+po
+p tge
+−
+   =      −
+ 
+   p(t)/max =  p() 
+    
+( ) | max'
+po
+p tg=  
+  
+  for p-type,   
+/
+( )'1
+no
+t
+no
+n tge
+−
+
+   =     −
+
+  
+Case – III :  Excess minority carrier concentration with length. 
+• In this we generate excess carrier at x = 0 so for x < 0 & x > 0 
+It will be decayed (diffused). 
+ 
+• For at any ‘x’ excess minority carrier concentration. 
+ Let n-type :-   
+(  )(  )
+x
+Lp
+p  xp o  e
+−
+    = 
+   For (x > 0) 
+ where, L
+p
+ → diffusion length for hole 
+ for    x < 0   
+/
+(  )(  )
+x  Lp
+p  xp o  e= 
+ 
+ Let p-type  
+/
+(  )(  )
+−
+= 
+x  Ln
+n  xn o  e
+ for (x > 0) 
+   
+/
+(  )(  )= 
+x  Ln
+n  xn o  e
+ for (x < 0) 
+ where  L
+n
+ → diffusion length for e
+–
+ 
+ Case – II :  Dielectric Relaxation time constant:-   
+• Consider a n-type S.C & let P holes are injected in a portion of that n-type SC. Now we want to find behaviour of 
+those injected excess holes inside the S.C. 
+ 
+( )(0)
+t
+vv
+te
+
+−
+
+   = 
+ 
+ Let   
+/
+( )(  )
+−
+
+ =    = 
+
+t
+vv
+to  e
+ 
+ Relation time constant for dielectric 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.20 
+Continuity Equation: 
+• Continuity  equation  describes  the  distribution  of  electrons  and holes when  there is  excess  carrier  generation, 
+recombination and carrier movement. 
+• As per law of conservation of charge, rate of charge of number of e
+–
+ inside the semiconductors is equal to no of e
+–
+ 
+entering per second minus no. of e
+–
+ leaving per second plus no. of e
+–
+ generated for second by generation process minus 
+no. of electrons lost per second by recombination process.  
+ 
+• Consider a volume in which carrier flux into/out – of 
+ 
+   
+
+1
+(  )()
+nnnn
+n
+AdxJ    x   A    Jx   dx  AG  Adx    R   Adx
+tq
+
+
+= −−++−
+
+
+
+ 
+   
+()
+()(  )
+
++   =+
+
+n
+nn
+Jx
+Jx    dxJ    xdx
+x
+ 
+ 
+.(  )
+1
+
+
+=−
+
+n
+n
+Jx
+n
+R
+tqx
+ 
+   
+nL
+pL
+()
+1
+RG
+()
+1
+RG
+n
+p
+Jx
+n
+tqx
+Jx
+p
+tqx
+
+
+=−   +
+
+
+
+= −−   +
+
+ 
+ Continuity equation. 
+• The minority carrier diffusion equations are derived from the continuity equation, 
+   
+2
+n
+nL
+2
+DR  +  G
+pp
+nn
+t
+x
+  
+=−
+
+
+ 
+   
+2
+pL
+2
+RG
+nn
+p
+pp
+D
+t
+x
+  
+=−   +
+
+
+ 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+6.21 
+3 
+FERMI LEVELS AND 
+HEAT MEASUREMENT 
+ 
+3.1. Fermi Characteristic  
+(a) Fermi-Dirac Distribution: f(E) 
+   
+()
+1
+1
+F
+EE
+KT
+fE
+e
+−
+=
++
+ 
+Where, E = Energy possessed by the e
+–
+ in eV  
+  K = Boltzmann constant 
+  E
+F
+ = Fermi energy level   
+• Indicates the probability of existing e
+–
+ in a given energy state 
+• It is also called as fermi – Dirac probability function  
+• At T = 0 K 
+(i) E > E
+F
+, 
+()
+11
+0,
+1
+1
+fE
+e
++
+===
++
++
+this indicates no e
+–
+ are available in the SC with energy E > E
+f
+ 
+(ii) E < E
+F
+, 
+()
+11
+1
+10
+1
+fE
+e
+−
+==    =
++
++
+ 
+ Here probability is 1 it indicates at T = 0 K, elements are available in the semiconductor with energies E < E
+f
+ 
+• At T  0 K 
+   E = E
+F
+,   
+()
+0
+11
+2
+1
+fE
+e
+==
++
+ or 50%  
+• Fermi level is the characteristic level with 50% probability of being filled if no forbidden band exist  
+• For metal f(E) will be 1   
+• For SC if probability of e
+–
+ existing f(E) then probability of hole existing in SC will be [1 – f(E)] 
+(b) Fermi Energy (E
+F
+)  
+• Fermi energy is defined as the maximum energy possessed by the e
+–
+ at 0K  
+   E
+F
+ = Max kinetic Energy 
+   
+2
+max
+1
+2
+F
+Emv=
+ 
+ Where, m = rest mass of e
+–
+ = 9.1 × 10
+–31
+ kg 
+ and   
+2
+m/s
+F
+max
+E
+V
+m
+=
+  
+• Fermi energy is also defined as the energy possessed by fastest moving e
+–
+ at 0K 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.22 
+(c) Fermi Energy Level in Intrinsic semiconductor (E
+Fi
+)  
+• In Intrinsic SC,   n = p = n
+i
+ 
+ Where,   n = N
+c
+ 
+()
+cFi
+EE
+e
+KT
+−−
+ 
+   p = N
+v 
+
+()
+Fiv
+EE
+KT
+e
+−−
+ 
+   
+()()
+cFiFiv
+cv
+EEEE
+N   eN   e
+KTKT
+−   −−    −
+=   
+ 
+ by solving 
+   
+ln
+22
+cvv
+Fi
+c
+EEN
+KT
+E
+N
+
++
+=+
+
+
+ 
+ Where 
+2
+cv
+EE+
+=
+E
+midgap 
+ and   N
+v 
+ (m
+p
+*)
+3/2 
+   N
+c 
+ (m
+n
+*)
+3/2
+   
+   
+midgap
+*
+3
+ln
+4*
+p
+Fi
+n
+m
+EEKT
+m
+
+=+
+
+
+  
+• If m
+p
+* = m
+n
+* then E
+Fi
+ = E
+midgap
+, Intrinsic fermi – energy level lies at the midgap 
+• If m
+p
+* > m
+n
+* then E
+Fi
+ > E
+midgap
+, E
+fi
+ lies just above midgap 
+• If m
+p
+* < m
+n
+* then E
+Fi
+ < E
+midgap
+, E
+fi
+ lies just below the midgap 
+Effect of Temperature: 
+1. AT T = 0 K, In intrinsic SC at 0 K, fermi level is existing at the centre of energy gap 
+   
+2
+cc
+F
+EE
+E
++
+=
+  
+ Note : Fermi level will be exactly at the centre of energy gap 
+ (i)  m
+n
+* = m
+p
+*  
+ (ii) N
+c
+ = N
+v
+  
+ (iii) At T = 0 K 
+ 
+2. AT T = 300 K, In intrinsic semiconductor at room temperature, the fermi level will 
+be passing through centre of energy gap. 
+   
+log
+22
+cvc
+Fe
+v
+EEN
+KT
+E
+N
+
++
+=−
+
+
+ 
+ here e
+–
+ conc. = hole conc. 
+(d) Fermi level in n–type semiconductor (E
+Fn
+) : 
+• In n-type SC : 
+D
+nN
+ 
+   
+D
+nN
+= N
+c
+
+()
+cFn
+EE
+KT
+e
+−
+−
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.23 
+    
+KT ln
+D
+Fn
+C
+N
+EEc
+N
+
+−=
+
+
+ 
+• It indicates the position of fermi level below the conduction band 
+• In n-type semiconductor, fermi level is a function of temperature and doping conc. 
+Effect of Temperature: 
+(i) At T = 0 K, E
+F
+ = E
+c
+ E
+f
+ is coincides with the edge of conduction band. 
+ Donor energy level is always nearer to conduction band as compare to centre 
+ 
+(ii) At T = 300 K  
+• At room temperature, in n-type semiconductor fermi level exist just below CB Energy level  
+• At T = 0 K 
+ Semiconductor is non-degenerated i.e. (N
+D
+ < N
+C
+)  
+ Here E
+Fn
+ < E
+c
+, means fermi level lies below CB 
+ If semiconductor is degenerate, i.e. (N
+D
+ > N
+C
+) here E
+Fn
+ > E
+c
+, mean fermi level lies in conduction band. 
+(e) Effect of Doping : 
+• Shift in position of E
+F
+ due to Doping  
+• Shift in position of E
+F
+ w.r.t to E
+Fi 
+   
+ (Shift)
+D
+n
+i
+N
+KT  neV
+n
+= +
+ 
+(f) Fermi -Energy level in p-type semiconductor (E
+Fp
+) 
+• on p-type SC, p  N
+A 
+  p = N
+A 
+= N
+v
+()
+Fpv
+EE
+KT
+e
+−−
+ 
+  E
+Fp 
+= E
+v
+ + KTn 
+v
+A
+N
+N
+  
+• It indicates the position of fermi level above the valence band in the p-type semiconductor  
+• Fermi level is a function of temperature and doping  
+• At T = 0 K, E
+Fp
+ = E
+v 
+, E
+Fp
+ coincides with the edge of VB 
+→ At 0 K, carrier conc. Are zero and therefore  = 0, so p-type SC at 0 K behave as insulator. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.24 
+ 
+• At T = 300 K : 
+ E
+Fp
+ = E
+v
+ + KT log
+e
+v
+A
+N
+N
+, In p-type semiconductor at 300 K fermi level exist just above the accepter energy level 
+at T > 0 K, if N
+A
+ < N
+v 
+means E
+Fp
+ > E
+v
+ here fermi energy level lies above VB (Non degenerated SC) 
+If N
+A
+ > N
+v
+ means E
+Fp
+ < E
+v
+ (generated SC) 
+Here fermi energy level lies above VB. 
+Effect of Doping : 
+• In p-type semiconductor as doping (N
+A
+) increases then E
+F
+ moves towards the VB. 
+• As E
+F
+ moves away from the centre energy gap so  increases with doping    
+• Shift in the position of E
+F
+ due to doping  
+  
+ShifteV
+A
+i
+N
+KT  n
+n
+=−
+ 
+(g) Effect on fermi level when two different SC brought together: 
+In thermal equilibrium, the fermi energy level is constant through the system  
+Consider a SC A Whose e
+
+ are distributes  in the energy 
+state of an allowed band.  
+  
+Consider  a  SC  B Whose  e
+
+ are  distributes  are  the 
+energy state of an allowed band.  
+ 
+ 
+ 
+• It there two material are brought togethers into intimate contact then the 
+e
+
+ in n-type system will tend to seek the lowest possible energy level. 
+• In those above case, e
+
+ will flow from material A to lowest energy state 
+of material and until thermal equilibrium reach. 
+• Thermal  equilibrium  is  only  reached  when  distribution  of electron  is  a 
+function  of  energy  is  same  in  both  material.  It  occour  when  fermi  level 
+will equal in both system 
+ Let E
+FA
+ > E
+FB
+, In thermal equilibrium  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.25 
+3.2. Hall Effect 
+It  states  that  if  a  specimen  (metal  or SC)  currying  the  current  I  is  placed  in  transverse  magnetic  field  and  an  electric  field 
+intensity E is induces in perpendicular direction of both ‘I’ and ‘B’  
+ 
+ 
+where, w = width of specimen  
+ d = height of specimen  
+ current in X – direction  I
+X 
+ Magnetic field in Z – direction = B
+Z 
+ Field intensity in Y – direction = E
+Y
+  
+• The specimen must be square shape or rectangular shape. 
+• From the hall effect we can identify. 
+I. Whether the given specimen is a metal or SC (n-type or P-type) 
+II. The carrier concern in the specimen. 
+III. The mobility of charge caries.  
+IV. Magnetic field intensity ‘H’ 
+V. To measure the signal power in the electromagnetic wave. 
+ 
+ 
+• Hall voltage is induced voltage. 
+• Electric field intensity.  
+  
+V/m
+H
+V
+E
+d
+=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.26 
+Hall voltage V
+H
+:  
+   
+volt
+H
+VEd=
+ 
+   
+=
+
+H
+BI
+V
+w
+ 
+ where,  is charge density. 
+   
+1
+=
+
+H
+R
+ 
+ where, R
+H
+ is hall coefficient. 
+   
+H
+H
+BI R
+Vvolt
+W
+=
+ 
+ Where,    B → applied magnetic field   
+              W → width of specimen  
+• By hall experiment, mobility is given by   
+  
+8
+3
+ =   
+
+H
+R
+  
+Where,  = mobility of charge carriers  
+  = conductivity of metrical   
+Application:  
+I. Magnetic field meter. 
+II. Hall effect multiplier. 
+Hall voltage depends upon carrier concentration:  
+In metal,  V
+H
+ = –ve 
+In n-type semiconductor,  V
+H
+  = –ve  
+In P-type semiconductor,  V
+H
+ = +ve   
+For intrinsic semiconductor,  V
+H
+ = 0 
+Note : Charge density () = charge × carrier conc. C/m
+3
+ 
+ 
+Hall coefficient (R
+H
+):  
+   
+3
+11
+/
+charge   carrier conc.
+H
+Rmc==
+
+ 
+• In metal and n-type semiconductor R
+H
+ = –ve   
+• In p-type SC,  R
+H
+ = +ve 
+• In intrinsic SC, R
+H
+ is very large 
+• In intrinsic semiconductor carrier concentration are very small and so Hall coefficient will by very large  
+   = R
+H
+  
+So,   
+H
+R
+
+
+
+ 
+Since,   V
+H
+  R
+H 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.27 
+Since,   
+1
+H
+V
+
+  
+• In metal V
+H
+ is small because of in metal  is very large.  
+• In semiconductor V
+H
+ is large because of semiconductor  is small. 
+• In extrinsic SC, R
+H
+ is independent of temperature.  
+   
+1
+carrier concentration
+H
+R
+q
+=
+
+ 
+• 
+=
+H
+H
+VW
+R
+BI
+, since all parameter are constant so, hall coefficient is independent of temperature. 
+• 
+H
+R
+
+=
+
+, in intrinsic semiconductor, hall coefficient decreases with in temperature. 
+• 
+1
+H
+R
+q   corrier conc
+=
+
+, As in intrinsic semiconductor for carrier conc. increases with temperature so R
+H
+ decreases with 
+temperature.  
+ 
+Hall coefficient (R
+H
+):  
+ 
+  
+• Increases of intrinsic SC, current will be produces by both e
+-
+ and holes because of no majority and minority. Increase 
+of  intrinsic  SC  due  to  which  both  change  carrier  will  have  magnetic  force  in  (-gy)  dissection  deposited  on  bottom 
+surface. 
+ 
+For n-type SC:  
+  
+ 
+• For n-type SC bottom plate will be positively charge. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.28 
+Half angle:  
+• Hall angle is defined as the angle made by the resultant 
+E
+field with applied 
+F
+field.  
+ 
+ 
+ 
+   
+()
+tan
+H
+H
+applied
+E
+E
+=
+ 
+   
+,.
+H
+Happlied
+V
+I
+EJE
+dA
+==  =
+ 
+ So, 
+applied
+I
+E
+A
+=
+
+ 
+   
+()
+tan
+.
+  =   
+H
+VH
+A
+dI
+ 
+   
+()
+.
+tan
+.
+
+=
+
+H
+H
+R    IBA
+w d   I
+ 
+   
+()
+tan
+
+  =    
+HH
+H
+RB
+R
+ 
+         
+()
+1
+tan
+H
+B
+−
+  =
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+6.29 
+4 
+PN JUNCTION  
+ 
+4.1. PN Junction 
+(a) PN Junction 
+• A pn – junction can be formed only when a bonding force is created in between p – type and n – type semiconductor 
+• Modern diodes are fabricated with using any one of the following methods 
+ (a) Alloy – junction method 
+ (b) Diffusion method 
+ (c) Grown junction technique 
+ (d) Epitaxial method  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.30 
+For Ge diode,  V
+0   
+= 0.1 v to 0.5 V 
+Typical value – 0.2 V 
+For Si diode,  V
+0
+ = 0.6 v to 0.98 v and typical value = 0.7 v 
+• Depletion layer is called as space charge region or transition region 
+• Depletion layer is created due to diffusion of majority carrier across junction 
+• In depletion layer mobile charge carrier are zero and contains immobile charge carrier 
+• Contains large no. of covalent bonds & Ions 
+• Depletion layer consist of (–ve) charges and positive charges on either side of the junction  
+• Depletion region not oppose minority carrier in crossing the junction  
+1
+ 
+Doping concentration
+w
+  
+Where , w is width of depletion region 
+▪ By increasing doping concentration on both sides of the p – n junction or on one side of the junction, the 
+width of depletion region will be reduced 
+▪ In Pn junction , v
+0
+ is  
+o Contact potential 
+o Barrier potential 
+o Diffusion voltage 
+o Built in voltage  
+▪ In any type of PN  junction field intensity is always directed from n – side to p – side 
+▪ In pn – junction field intensity is always maximum at the junction 
+ 
+ 
+Equation for width of depletion layer () 
+0
+211
+=
+AD
+wv
+q   NN
+
+
++
+
+
+  
+Where,   = permittivity in F/m ⇒ ( = 
+0
+
+r
+) 
+ 
+0
+ = permittivity in free space 
+And   
+r
+ = Absolute permittivity 
+Note:      
+0
+ = 8.84 × 10
+–12
+F/m 
+  
+r
+(Si) = 11.7, 
+r
+(Ge) = 16 
+         = 11.7 
+0
+ = 8.85 × 10
+–14
+ F/cm 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.31 
+Equation for contact potential of PN junction diode 
+ 
+ V
+0
+  =  V
+bi
+ 
+AD
+0T
+2
+i
+NN
+VV   n
+n
+=
+ 
+• Contact potential is always (+v) for p – n junction diode  
+• Contact potential decreases with the temperature for increase in 1°C, v
+0
+ is decrease by 2.5 mV 
+Equation for maximum field intensity in the p – n junction  
+ 
+Maximum intensity is given by poison's equation 
+maxpeakND
+q
+Eor Ew  N
+−
+=
+
+   = 
+pA
+q
+wN−
+
+ 
+When w
+n
+ or x
+n
+ is width of n – side depletion layer and w
+p
+ or x
+p
+ is width of p – side depletion layer  
+Special Case:  
+Assuming 
+E
+ is linear with the depletion layer to calculate appproximate peak E – field intensity 
+ 
+00
+max
+v2v
+E
+W/2W
+−−
+==
+ v/m 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.32 
+Equation for width of depletion layer (w) :  
+Using 
+maxnD
+q
+Ew  N
+−
+=
+
+ or 
+pA
+q
+wN−
+
+ 
+A
+n
+AD
+WN
+w
+NN
+=
++
+  
+D
+p
+AD
+WN
+w
+NN
+=
++
+ 
+0
+AD
+211
+wv
+q    NN
+
+
+=+
+
+
+ 
+Current components in p – n junction diode 
+ 
+4.2. Law of Electrical Neutrality  
+ 
+In + qA w
+p
+N
+P
+ and –qA w
+n
+WD
+D
+ (Coulomb) 
+The charge density in the depletion region of N side and P side are +qw
+n
+N
+D
+ C/m
+2
+ and – qw
+p
+N
+A
+ C/m
+2
+ 
+Or 
+  w
+p
+N
+A
+ = w
+n
+N
+D
+ 
+or,                                                    
+p
+D
+nA
+w
+N
+wN
+=
+ 
+Note :  
+• Ratio of depletion layer width of p – side & n – side depends on their doping concentration called charge equality equation 
+• Depletion layer will penetrate more into lightly doped region 
+• In a  p – j junction if doping concentration are 10 : 1 then their depletion layer will be 1 : 10 ratio 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.33 
+Energy Band diagram 
+ 
+Built in potential,  
+AD
+bi
+2
+i
+NN
+KT
+Vn
+qn
+
+=
+
+
+ 
+And Barrier energy         
+AD
+0bi
+2
+i
+NN
+EqVKT  n
+n
+
+==
+
+
+ 
+Reverse Bias : or blocking bias 
+ 
+If we apply 0 potential difference between p & N region such that the n – side is at higher potential or +ve potential as compared 
+to p – side, then the applied bias is called as reverse bias 
+Under the reverse bias the width of the depletion layer is increased 
+ 
+Here , (w
+2
+ > w
+1
+) 
+Here majority carriers of p – n junction will be moving away from the junction there by the region of immobile charges 
+↑ es. That width of depletion layer is increased 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.34 
+ 
+• Both have same direction E
+s
+ & E
+ov
+  
+• Under RB, the barrier voltage is increase by |V
+RB
+| 
+4.2.1 Space Charge width & Electric Field 
+ 
+Where, 
+E
+ = 
+E
+ Field that exist in depletion region already 
+On space charge region  
+  
+netapp
+EE   E=+
+ 
+The 
+E
+ field originates from the +ve charges & terminates on – ve charges, this means the no. of +ve & –ve charge must 
+↑ ses if 
+E
+ field increases 
+w ↑ es with an increasing reverse voltage V
+R
+ 
+Here,    V
+total 
+ = V
+bi
+ + V
+R
+ 
+(i) 
+()
+AD
+biR
+AD
+NN
+2
+WVV
+qN  N
++
+
+=+
+ 
+(ii) 
+()
+()
+A
+nbiR
+DAD
+N
+21
+xVV.
+qNNN
+
+=+
++
+ 
+(iii) 
+()
+()
+D
+PbiR
+AAD
+N
+21
+xVV.
+qNNN
+
+=+
++
+ 
+
+ field in depletion region 
+   
+
+A
+Pp
+qN
+Ex    x   ;   xx    0
+−
+=+   −    
+
+ 
+   E = 
+
+D
+nn
+qN
+xx  ;0    x    x
+−
+−      
+
+ 
+   
+()
+biR
+max
+2  VV
+E
+W
+−+
+=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.35 
+4.3. Junction Capacitance 
+We have a separation of +ve & –ve changes in the depletion reason therefore a capacitance is associated with p – N junction, 
+this capacitance is called as junction capacitance or depletion layer capacitance 
+ 
+   
+()
+A
+D
+DADbiR
+N
+11
+C    qN  A,
+2q  NNNVV
+
+=
+++
+ 
+   
+biR
+1
+C
+vv
+
++
+ 
+   
+AD
+ADbiR
+NN
+Cq1
+C
+A2  NNVV
+
+
+=  =
+++
+ (Capacitance per unit area) 
+   
+E
+C'
+W
+=
+ V/cm
+2
+ & 
+AE
+C
+W
+=
+F 
+Note : Where V
+R
+ = 0 ⇒ C = C
+0
+ → max depletion capacitance 
+0Rbi
+C1
+C1   V  / V
+=
++
+ 
+Under revers bias the current due to majority is low 
+• It is blocking the flow of majority carrier in R.B, so, the crossing of junction become block, hence reverse bias is also 
+called blocking bias 
+• Under RB only minority carries will be falling from the barrier potential and they contribution majority carrier current 
+(I
+0
+) 
+ I
+0
+ = thermally generated or minority carrier current or reverse saturation current or leakage current 
+  I
+0
+ = μ A( for Ge) 
+  I
+0
+ = nA(For Si diode) 
+Highly sensitive to temp (I
+0
+ inverse with temp. increase) 
+I
+0
+ is independent of the applied reverse bias voltage that is I
+0
+ is saturated w.r.t applied V
+RB
+ and hence called saturation current  
+I
+0
+ is reverse current flow from n to p. 
+As temp increase minority carrier are generated 
+For 1°C increase in temp = I
+0
+ increase by 7% 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.36 
+I
+0
+ is a drift current because thus current is due to the field intensity, which is passing through junction 
+   
+jj
+Peak
+V2V
+E
+w / 2w
+−−
+==
+ 
+   
+0RB
+Peak
+2  VV
+E
+W
+
++
+
+=
+ 
+   
+peak
+AD
+11
+WE
+q   NN
+
+
+=+
+
+
+ depletion width in terms of E
+Peak
+  
+Forward Bias (FB)  
+When a positive potential is applied on p – side w.r.t  n – side then applied bias is called as forward bias  
+ 
+When any type of p – n junction is forward biased limiting resistance must be connected in series with the diode, the 
+limiting resistance and diode working as potential divider network  
+ 
+Forward voltage, across the diode is V
+D
+ 
+  V
+D 
+≤ 0.5 V for Ge 
+  V
+D 
+≤ 0.9 V for Si 
+  V = V
+R
+ + V
+D
+ 
+  V = I
+f
+ R
+s
+ + I
+f
+ R
+f
+ 
+Where, I
+f  
+= diode current/forward bias current 
+The majority carriers of P & n regions will be moving towards the junction and neutralize the immobile ions so that the region 
+of immobile charges gets reduced that is width of the depletion layer is reduced 
+E
+s
+ and E
+v
+ are in opposite direction  
+Experimentally found resultant is directed from n to p. 
+The potential barrier is reduced by |V
+d
+| under forward bias 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.37 
+  V
+j 
+= V
+0
+ – |V
+D
+| 
+Case I : 
+V
+D
+ < V
+0
+ , the diode is in forward biased and non conducting state and its is “Off state” or “zero state” 
+Case II : 
+V
+D
+ = V
+0 
+, effect of Barriers is “Nullified “ 
+Case III:  
+More  majority  carriers  will  be  crossing  the  junction and  the junction  and  the  forward  current  is  large  and  the  forward 
+current will be exponentially increasing with V
+d
+. 
+Excess Majority Carrier in Both Side 
+In normal equilibrium 
+bi
+T
+00
+V
+V
+pn
+nne
+−
+=
+      
+biT
+0
+V  /V
+np
+pp  e
+−
+=
+ 
+Where, 
+0
+n
+n
+ →  e
+-
+ concentration on n – side (majority carrier) 
+  
+0
+p
+n
+→  e
+-
+ concentration of p – side (minority carrier) 
+After application of forward bias, as due to barrier potential 
+   
+0T0T
+00
+V /VV /V
+ppnn
+nn  epP  e
+−
+==
+ 
+Where, n
+p
+ = e
+–
+ concentration at the edge of depletion region on p – side 
+And p
+n
+ = hole concentration at the edge of depletion region on n – side 
+Forward Bias Current  
+  I
+f 
+= Diffusion current (P to n) 
+   
+dT
+V  /   V
+f0
+II    e1
+
+
+=−
+
+ 
+Where, V
+d
+ = voltage across diode (p to n) forward bias) 
+ N = utility or ideality factor 
+ V
+T
+ = thermal voltage ; KT/q 
+  = 1 = for large currents, eq : Ge 
+  = 2 = for small current , eq : Si 
+Default value of  = 1 
+  I
+0 
+= Reverse saturation current (Drift current) 
+  
+2
+2
+pi
+ni
+0
+PDnA
+AqD n
+AqD n
+I
+L  NL N
+
+=+
+
+
+
+ 
+  I
+F 
+= I
+diff
+ = 
+dd
+2
+TT
+VV
+2
+p
+vV
+ini
+PPnA
+AqD n
+AqD n
+e1e1
+L  NL  N
+
+
+−  +−
+
+
+
+ 
+  I
+diff 
+= I
+p diff
+ + I
+n Diff 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.38 
+  
+()()
+dTdT
+2
+2
+pi
+V  /   VV  /   v
+ni
+diff
+PDnA
+AqD n
+qD n
+Ie1e1
+L  NL  N
+
+=−  +−
+ 
+Forward  current  is  always  independent  of  temperature  because  this  current  is  carried  by  majority  carrier &  minority  carrier 
+concentration is always independent of temperature.  
+   
+dT
+V  /   V
+F0
+II    e1
+
+
+=−
+
+ 
+  V
+d 
+= forward bias across p – n junction 
+  0 ≤ V
+d
+ ≤ V
+bi 
+                         
+bia
+wVV−
+ 
+For V
+bi
+ > V
+a
+, w will comes to be imaginary which is not possible 
+  
+f
+DT
+0
+I
+VV   n
+I
+
+=
+
+
+ 
+   
+d
+dV
+– 2.5mV / C
+dt
+=
+ 
+VI Characteristics of p – n junction diode : 
+ 
+When p – n junction is reverse biased the reverse voltage must be always less than breakdown voltage of the device otherwise 
+the diode will be destroyer  
+  Breakdown voltage = V
+BR
+ or B
+V
+ 
+  
+BR
+1
+V
+Doping concentration
+
+ 
+  
+()
+2
+BR
+E
+V
+2q  Doping concentration
+
+=
+ 
+Cut in Voltage (V
+
+) :  
+• Also called offset voltage (in FET’s) or called threshold voltage (in tubes) 
+• Min voltage required so that the forward current just passes into diode 
+  V
+ 
+= 0.1 v to 0.5 v [typical = 0.2] 
+  min V
+ 
+= 0.1v or 100 mv 
+cut in voltage decrease with increase in temperature 
+v
+y
+ reduced by 2.5 volt for 1° c increase in temperature 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.39 
+4.4. Small Signal Equivalent Circuit of Diode 
+Diode Resistance 
+In reverse biased : Ideally current is zero then R = ∞ , open circuit practically I = I
+0 
+, R is very large 
+In forward biased 
+   
+d
+T
+V
+1
+V
+F0
+II    e
+−
+
+
+=
+
+
+
+ 
+FF
+d
+dII
+dVVT
+=
+
+  admittance of diode (g) 
+T
+f
+F
+V
+l
+r
+gI
+
+==
+ forward resistance or dynamic resistance 
+Diffusion Capacitance (C
+D
+) 
+C
+D
+ = Rate of change of injected minority charges w.r.t changes in forward voltage 
+C
+D
+ is due to a change in injected minority charge 
+C
+D
+ is the junction capacitance in a forward biased 
+  C
+D 
+= C
+j
+ = A/W 
+  C
+D 
+∝ A 
+  C
+D 
+∝ 1/W 
+  
+D
+CDoping concentration
+ 
+  C
+D 
+=   g  
+Where g = dynamic conductance or reciprocal of dynamic resistance 
+If g = 1/r
+f
+ = I
+f 
+/ VT 
+Then, 
+D
+f
+C
+r
+
+=
+    
+f
+D
+T
+.I
+C
+v
+
+=
+
+ forward C
+D
+ ∝ I
+f
+ 
+Transition capacitance (C
+T
+) 
+TJ
+ADRB
+O
+AD0
+A
+CC
+NNV
+2
+V1
+qN  NV
+==
+
+
++
++
+
+
+
+
+
+
+ 
+
+AD
+0AD
+TJ
+RB
+0
+q   N  N
+A
+2V   NN
+CC
+V
+1
+V
+
++
+==
++
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+6.40 
+5 
+SPECIAL DIODES 
+ 
+5.1. Varactor Diode 
+As the larger variations, in the diode capacitance. The varactor diode is always operates under reverse bias conditions. 
+It is variable capacitance diode with linearly doped P and N regions. It is voltage variable capacitance.  
+  
+0
+1/
+1
+T
+T
+n
+RB
+bi
+C
+C
+V
+V
+=
+
++
+
+
+ 
+n = 2 for step graded Junction  
+n = 3 for lineally graded Junction.  
+In  linearly graded junction the junction the doping profile is defined as :   
+    
+()
+0
+=
+x
+NN  x
+ 
+For P region : N
+a
+(x) = N
+ao
+x  
+For N region : N
+d
+(x) = N
+do
+x 
+ 
+Symbol: 
+ 
+  New for varactor diode :  
+0
+1/3
+1
+T
+T
+RB
+bi
+C
+C
+V
+V
+=
+
++
+
+
+  
+It is use in voltage-controlled oscillators (VCO), Radio frequency fitters and frequency and phase modulators.  
+It is also use in automatic frequency control devices self-balancing of AC bridges.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.41 
+5.2. Photo Diode 
+It converts light energy into electrical energy. Photo diode has lightly doped P and N region, so the depletion region will have 
+slightly larger depletion width (W), The advantage of larger W is, it will absorb larger number of photons from the light energy 
+near the junction. So that both side by minority will be created near the junction. 
+The falling photons will break the co-valent bonds and create minority carious of both side. Impact on the reverse bias 
+current hence photo diode is always operates under reverse bias. 
+ 
+To absorbed more photons, photo sensitive material ZnS or CaS is coated over the depletion region. 
+In reverse bias :   
+ I = I
+0
+, when no light falls. 
+ 
+I
+optical
+ → Current due to excess carriers generated due to optical energy. (Diffusion current) 
+Short Circuit Current: 
+As there is no reverse voltage (I
+0
+ = 0) 
+                        
+V = IR, The voltage V start bias the PN junction as forward bias, hence current I :  
+  I = I
+optical
+ - I
+f 
+/
+1
+T
+V  nV
+opticalo
+IIIe
+
+=−−
+
+ 
+Open Circuit Voltage:   
+  I = I
+optical
+ – I
+f
+ = 0   
+                                         
+=
+oc
+VV
+ 
+II = I + I
+0
+optical
+P
+–
+N
+–
+Light
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.42 
+ 
+  
+/
+optical0
+10
+ocT
+VV
+II    e
+
+
+−−  =
+
+ 
+  
+optical
+1
+ocT
+o
+I
+VV   n
+I
+
+= +
+
+
+ 
+  
+1
+sc
+ocT
+o
+I
+VV   n
+I
+
+=+
+
+
+ 
+Characteristics :  
+ 
+It is a light operated switch with switching time is in  seconds, and it is almost 1000 times faster than the normal diode. 
+ 
+ 
+As it converts optical energy into electrical energy, it is widely use in satellite communication as a transformer.  
+The only disadvantage of photo diode is, it has smaller power handing capacity. lubrication of PIN photo diode, which has 
+larger power handling capacity.  
+P
+–
+N
+–
+Light
+I
++–
+V
+0c
+I
+f
+ 
+I
+optical
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.43 
+Quantum Efficiency :  [Q
+e
+] 
+  
+No. of electrons collected
+No. of incident photons
+e
+e
+p
+r
+Q
+r
+==
+ 
+  
+optical
+0
+100%
+e
+hv
+I
+q
+Q
+P
+
+=
+ 
+  P
+o
+ = incident power.  
+  
+.=
+e
+hv
+QR
+q
+ 
+Responsivity :  [R] 
+  
+output currentoptical current
+=
+incident power    Incident power
+R=
+ 
+  
+/==
+optical
+P
+oo
+I
+I
+RA  watt
+PP
+ 
+  
+eee
+QqQqQ
+R
+hv
+hvhc
+q
+
+=   =    =
+ 
+3. PIN Photo Diode :  
+PIN diode has intrinsic region sandwiched between P and N region. 
+Which offers high resistivity and provide larger power handling capacity.  
+ 
+Because of intrinsic region ideal PIN Diode does not have any PN 
+Junction.  
+To create PN Junction ‘I” region is replaced by lightly doped P 
+region.  Which  is  called  as −region  or  I-region  is  replaced  by  lightly 
+doped N-region. Which is called V-region.  
+In this overall  region is swap out and covered by depletion region.  
+   
+=
+RBswap out
+VV
+   
+   
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.44 
+PVN Photon Diode :  
+In this overall v-region is swap out and covered by depletion region. 
+  
+=
+RBswap out
+VV
+ 
+Both PN and PN diodes operate after swapping out of  and  region in order to get larger current. 
+PIN diode is as faster switch than the photo diode and the switching time is in nS (nano seconds) 
+Due to larger power handling capacity PIN diode is used in microwave applications.  
+4. Solar Cell :  
+The working principle of solar cell is similar to the photo diodes.  
+Consider a PN Junction with resistive load. 
+ 
+This drop v will bias PN Junction, in forward bias.  
+   
+opticalf
+III=−
+ 
+ 
+   I = I
+sc
+ - I
+f 
+  
+1
+
+
+= +
+
+
+optical
+ocT
+O
+VV   n
+I
+ 
+  
+1
+
+= +
+
+
+sc
+ocT
+O
+I
+VV   n
+I
+ 
+  
+11
+12
+22
+scsc
+ococTT
+scsc
+IJ
+VVV   nV   n
+IJ
+       
+−    ==
+       
+       
+       
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.45 
+Characteristics :      
+ 
+Maximum power delivered (p) 
+  
+.P    I V=
+ 
+  
+()
+/
+optical
+1
+T
+VV
+o
+PII    eV
+
+
+=−−  
+
+ 
+  For 
+0=
+dP
+dV
+ 
+At this, the value of V will give maximum power. That value of V and corresponding value of I is known as operating 
+point, i.e. V
+m
+ and I
+m
+. 
+  
+maxm
+I.=
+m
+PV
+ 
+Responsivity,  
+/.=
+optical
+in
+I
+RA  watt
+P
+ 
+Conversion efficiency :  [] 
+  
+Electrically genrated power
+Incidert optical power
+=
+ 
+  
+outm
+in
+I
+m
+in
+PV
+PP
+=    =
+ 
+  
+m
+hv
+V
+q
+=
+ 
+  
+.
+
+==
+
+optical
+in
+Ihv
+hc
+R
+Pqq
+ 
+  
+()
+1.24
+=
+
+R
+in   m
+ 
+Fill factor : [FF] 
+It is the ratio of operating power and the maximum theoretical power.  
+  
+m
+I
+=
+m
+sc   oc
+V
+FF
+IV
+ 
+5. LED (Light Emitting Diode) :  
+LED works on the principle of electro luminescence. It is the property by which light energy comes out due to electron 
+hole recombination.  
+It always operates under forward bias, so that large recombination happen at the junction and produce light.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.46 
+Light Intensity [I]  I
+f
+. (forward current). 
+LEDs are fabricated by direct Band Gap semiconductors.   
+  GaAs → Infrared light   
+  GaA → Blue light 
+  GaAsP → Red or yellow light  
+  GaP → Red or Green  
+                        
+Characteristics:  
+   
+ 
+()
+1.24
+. =
+g
+m
+E    ev
+ 
+max
+min
+   =
+   =
+red
+violet
+ 
+
+R
+ > 
+0
+ > 
+Y
+ > 
+G
+ > 
+B
+ > 
+I
+ > 
+V
+  
+E
+gR
+ < E
+g0
+ < E
+gY
+ < E
+gG
+ < E
+gB
+ < E
+gI
+ < E
+gV
+  
+V
+biR
+ < V
+biO
+ < V
+biY
+ < V
+biG
+ < V
+biB
+ < V
+biI
+ < V
+biV
+    
+Also V
+r
+  V
+bi
+ Built in voltage    
+  V
+r 
+=  Cutin voltage 
+  V
+bi 
+= Built in voltage    
+Internal Efficiency : [
+int
+] 
+ 
+int
+111
+;
+r
+rnr
+
+  ==   +
+        
+ 
+ = total recombination carrier lifetime  
+
+r
+ = Radiative recombination carrier lifetime. 
+
+nr
+ = Non-radiative recombination carrier lifetime. 
+Internal Power : [P
+int
+] 
+  
+int
+int
+.watt
+hCI
+P
+q
+=
+
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.47 
+Emitting Power : [P
+e
+] 
+  
+2
+int
+2
+.
+4
+x
+PF
+Pe
+
+=
+
+ 
+F → Transmission factor between LED material and medium.  
+ → Refractive index of the medium. 
+
+x
+ → Refractive index of the material.  
+ 
+External power Efficiency : 
+ep
+  
+  
+100%  =   
+ep
+Pe
+P
+ 
+P = input Power. 
+Power conversion or coupling power efficiency : [
+cp
+] 
+  
+100%  =  
+c
+cp
+P
+P
+ 
+  
+100%
+c
+cp
+P
+IV
+  =   
+ 
+Zener Diode :  
+It is slightly highly doped diode, specially designed to operate under breakdown region. 
+Breakdown is a phenomena in which, large number of covalent bonds will be broken and this 
+will change the minority carrier concentration significantly. Hence breakdown occurs in reverse bias. 
+In forward bias only majority carriers will present and due to this breakdown is not possible in forward 
+bias. 
+Breakdown are of two types: 
+1.  Zener breakdown 
+2.  Avalanche breakdown 
+Zener Breakdown 
+In Zener breakdown both P and N region are highly doped, due to that barrier energy will be large and depletion width 
+will be smaller and when we applied reverse bias voltage, the 
+E
+-field in the depletion region will be increasing and at reverse 
+bias voltage equals to the breakdown voltage, the electric field will become very large and called as critical 
+E
+-field 
+()
+crit
+E
+dut to that covalent bonds at the junction will be broken and current abruptly increases. It is negative temperature coefficient 
+• Zener breakdown is due to longer(E) field intensity in the depletion region 
+• Zener breakdown occurs at low voltages.  
+• When temp will increase covalent bonds will be broken current will start increasing due to that the breakdown occurs 
+at low voltages.  
+   
+z
+dv
+ve
+dt
+=
+→  ve temp. coefficient  
+# This indicates Zener breakdown is ve temp. coefficient 
+5.3. Avalanche Breakdown 
+Avalanche lockdown occurs in lightly doped diode due to that the barrier is very small and depletion width  will be larger due 
+that e
+
+ will spend more time when move for p region → n
+–
+ region and due to larger K.E. e
+–
+ will be strike on the covalent bond 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.48 
+will be broken and one e
+
+ will be generated again the unmuted e
+
+ will impact on the another covalent bond and further e
+
+ will 
+be generated. After impact the e
+
+ will be migrated into the n-region. 
+Breaking of covalent bond due to impact energy in called as impact ionization which gives e
+
+ multiplication 
+  T → μ → V
+d
+  →
+1
+2
+mV
+d
+2
+ 
+   
+  For qVRB → 
+1
+2
+mV
+d
+2
+ 
+# when temp will increase mobility will decrease due to lattice scattering which make V
+d
+ smaller and the K.E. of e
+
+ will 
+be  small  and  for  breakdown of the  diode equal high    R.B  voltage  when  temp  () breakdown  voltage  in  avalanche 
+breakdown() 
+  
+z
+dV
+ve
+dt
+=
+ 
+This indicates ve temp coefficient of avalanche breakdown. 
+Characteristics : (Zener Diode)  
+ 
+Dynamic resistance,   
+z
+z
+z
+V
+r
+I
+
+=
+
+= dynamic resistance of Zener diode.  
+  V
+
+ = 0.7 V (Zener Diode is always laid of Si) 
+  r
+z
+ → very small (1 – 10) 
+The min current required for a Zener diode to be operate in R.B. Region is known current 
+  r
+z 
+= 
+0
+z
+z
+V
+I
+
+=
+
+ 
+  r
+z 
+= 0   
+If V
+RB
+ < V
+z
+  
+ 
+Normal diode in RB 
+If V
+RB
+ > V
+z
+  Zener diode in Breakdown region (conducting) 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+6.49 
+6 
+OPTO-ELECTRONICS AND 
+QUASI FERMI LEVELS 
+ 
+6.1. Opto-Electronics and Quasi Fermi Levels 
+ 
+ 
+ 
+When Light falls at 
+Junction  type  of  sensors  or  bulk  type  of  sensors  then  due  to  absorption  of  photon.  The  Covalent  bonds  will  be broken and 
+Electron – Hole pairs will generate. Multiple photons will generate multiple EHP’s 
+To generate EHP 
+  Photon energy = h 
+h = planks constant = 6.62 × 10
+–34
+ J – sec. 
+v = frequency (Hz) 
+  
+()
+()
+Speed of light
+Hz.
+wave length
+=
+
+c
+v
+ 
+Emitters 
+Opto - Electronics 
+Sensors 
+Bulk Type 
+LDR (Light Dependent 
+Resistor) 
+Junction Type 
+Normal Photo 
+diode 
+Avalanche 
+Photodiode 
+PIN Photodiode 
+Photo BJT 
+Photo Diode (PD) 
+LED 
+LCD (Liquid crystal 
+Display) 
+LASER 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices  
+6.50 
+hv  ≥ E
+g
+ (energy band gap) 
+     
+
+
+g
+hc
+E
+ 
+     
+
+g
+hc
+E
+ 
+     
+34
+6.62   10
+−
+
+=h
+q
+ ev-sec. = 
+3
+19
+6.62   10
+1.6   10
+−
+−
+
+
+ ev  - sec 
+     c = 3 × 10
+8
+ m/sec. 
+     
+()
+1.24
+m 
+g
+E    ev
+ 
+  Critical wave length 
+()
+1.24
+ =
+c
+g
+m
+E   ev
+ 
+Generation rate (G
+L
+) due to irradiation of light :  
+     
+Excess minority carrier concentration
+G
+Minority carrier life time
+=
+L
+ 
+When light falls equal number of e
+–
+ and holes will be created 
+Beer-Lambert Law 
+This states that, if light passes through the sample then some part of light will get absorbed and rest will be transmitted through 
+the sample. This transmitted part of light depends on the absorption coefficient ().  
+  I
+t 
+= 
+t
+o
+Ie
+−
+ 
+I
+t
+ →  Transmitted Intensity 
+I
+o
+ →  Incident Intensity  
+ →  Absorption coefficient (cm
+–1
+) 
+t →  thickness of the sample 
+Absorbed Intensity = I
+o
+ – I
+t
+ 
+Absorption  coefficient  (),  depends  on  the  material  and  associated 
+wavelength () of light. 
+1.24
+()
+c
+g
+m
+E   eV
+ =
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices  
+6.51 
+Let n – type SC :  
+Before  illumination : n
+no 
+= N
+D
+  
+              
+0
+0
+22
+ii
+n
+nD
+nn
+p
+nN
+==
+ 
+After illumination :  n
+n 
+= n
+n
+0
+ + ∆n
+n
+ 
+  p
+n 
+= p
+n
+0
+ + ∆p
+n 
+  ∆n
+n 
+= ∆p
+n
+  
+∆n
+n
+ → Excess e
+–
+ concentration 
+∆P
+n
+ → Excess hole concentration 
+   
+00
+nn
+L
+PP
+Δn ΔP
+G  ==
+ττ
+ m
+3
+/sec or cm
+–3
+ s
+–1
+ 
+ 
+Before Illumination:  
+ Φ
+fn
+ → Fermi potential for electrons 
+  
+no
+D
+fn
+ii
+n
+N
+KTKT
+=n=n
+qnqn
+      
+
+      
+      
+ 
+  
+D
+fn
+i
+N
+q=  KT  n
+n
+eV
+
+
+
+
+ 
+ f
+n
+ = Quasi fermi level of e
+–
+ 
+ f
+P
+ = Quasi fermi level of hole 
+When we starts illuminating light over the semiconductor (n – type), due to EHP generation. There will be significant change 
+in hole concentration and almost insignificant change in e
+–
+ concentration. Due to that that there will be change in Quasi fermi 
+level of holes (f
+p
+) and almost no change in quasi fermi levels of e
+–
+ (f
+n
+) 
+After illumination :  
+ 
+More illumination gives more shift in F
+P
+ 
+  
+n
+ni
+i
+n
+fEKT  neV
+n
+
+−=
+
+
+ 
+  
+n
+ip
+i
+P
+EfKT  neV
+n
+
+−=
+
+
+ 
+f
+n
+ and φ
+fn
+ is consider to be negative as it goes upwards than E
+i
+(Fermi level of intrinsic) and f
+p
+ and φ
+FP
+ is consider to be positive 
+as it goes down wards than E
+i
+. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices  
+6.52 
+Similarly for P – type SC: 
+Before illumination :              p
+p0
+ = N
+A
+ 
+  
+0
+0
+2
+2
+1
+i
+p
+pA
+n
+n
+n
+pN
+==
+  
+After illumination :  p
+p 
+= p
+p0
+ + ∆p
+p
+ 
+ n
+P 
+= n
+p0
+ + ∆n
+p
+ 
+  = n
+p
+ = ∆p
+p
+ 
+ 
+pp
+L
+nono
+nP
+G
+
+==
+
+ cm
+–3
+s
+–
+1 
+Before Illumination :  
+ 
+Φ
+fP
+ → fermi potential for holes 
+   
+P
+PO
+A
+f
+ii
+P
+N
+KTKT
+nn
+qnqn
+      
+  ==
+      
+      
+ 
+   
+ln
+P
+A
+f
+i
+N
+qKTeV
+n
+
+=
+
+
+ 
+Here due to EHP generation the change in e
+–
+ concentration will be significant and 
+change  in  hole  concentration  will  be insignificant.  Hence  change  in  f
+n
+ will  be 
+significant and f
+P
+ will be insignificant 
+After illumination: 
+More illumination gives more shift in f
+n
+. 
+   
+P
+ni
+i
+n
+fEKT  neV
+n
+
+−=
+
+
+ 
+   
+P
+iP
+i
+p
+EfKT  neV
+n
+
+−=
+
+
+ 
+Conductivity due to illumination:  
+  
+  =   +  
+optnp
+nqPq
+ 
+/cm
+ 
+Where,    ∆n = change in e
+–
+ concentration 
+∆P → change in hole concentration 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+1.53 
+7 
+BIPOLAR JUNCTION 
+TRANSISTOR 
+ 
+ 
+7.1. BJT (Bipolar Junction Transistor) 
+• Transistor  is  a  multijunction  semiconductor  device  that  together  with  other  circuit  element  is  capable  of  current  gain, 
+voltage gain and signal power gain, therefore it is an active device whereas diode is passive device.  
+• The basic transition action is the control of current at one terminal by the voltage applied across other two terminal of the 
+device. 
+7.1.1. Basic Structure of BJT 
+ 
+• BJT has 3 separately doped region and 2 p-n Junction, 3-terminal connection are emitter, base and collector. 
+• The width of the base region is small as compared to the minority carrier diffusion length. 
+• The emitter region has the largest doping concentration region and base region has the smallest. 
+• Bipolar Junction transistor is not a symmetrical device.  
+7.1.2. Basic Operation of BJT 
+• Forward active mode 
+ Where, EB Junction is forward Bias 
+ And CB junction is in reverse Bias 
+
+ 
+ 
+GATE  WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+1.54 
+ 
+• Distribution of minority carriers in npn transistor in forward active mode. 
+• The BE junction is forward biased and CB junction is reverse biased. This configuration is called the forward active 
+operating mode. 
+• The electron from the emitter are injected across the base-emitter junction into the base. These injected electrons create 
+an excess concentration of minority carrier in base. 
+• Similarly holes from the base injected across the base-emitter junction into the emitter. 
+• These  injected  electrons  and  holes  create  an  excess  concentration  of  minority  carrier  in  the  base  and  emitter 
+respectively. 
+• The base collector junction is reverse biased so the minority carrier electron concentration at the edge of base collector 
+voltage and the two close enough junction are said to be interacting p-n junction.  
+7.3. Simplified Current Relation in BJT 
+(1) Collector Current: 
+• Assuming ideal linear electron distribution in base, then collector current can be written as diffusion current. 
+   
+·
+cBE
+dn
+IqDnA
+dx
+=
+ 
+   
+/
+·
+BE    T
+VV
+cs
+II  e=
+ 
+ where,  
+n
+BE    BO
+s
+B
+qD A   n
+I
+x
+=
+ 
+ A
+BE
+ → Base emitter junction Area 
+ N
+BO
+ → Thermal equilibrium electron concentration in base region 
+ x
+B
+ → Neutral base width (not considering space charge region) 
+(2) Emitter Current: 
+• 
+1
+E
+I=
+It is due to the flow of electron injected from emitter to base, thus ideally it is equal to collector current. 
+• 
+2
+E
+I=
+ Base – Emitter junction is forward based majority carrier holes of base injected across the base emitter junction 
+into the emitter. 
+   
+22
+/
+·
+BET
+VV
+ES
+II   e=
+ 
+ Where 
+2
+S
+I
+→ it includes minority carrier hole parameters in emitter region. 
+
+ 
+ 
+GATE  WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+1.55 
+• Now,   
+12
+EEE
+III=+
+ 
+   
+()
+2
+/
+BET
+VV
+ESS
+IIIe=+
+ 
+ 
+C
+E
+I
+I
+=
+ → Common-Base current gain factor 
+ 
+CE
+II=
+  as, I
+E
+ > I
+C
+ so  < 1 
+Note: 
+• Since 
+2
+E
+I
+ is  not  a  part  of  the  basic  transistor  action  we  would  like  to  be  this 
+component  as  small  as  possible  in  order  to  make  common  base  current  gain 
+close to unity. 
+• Ideally  I
+C
+ is  independent  of  V
+CB
+ as  long  as  collector  base  junction  is  reverse 
+bias so we can say BJT act as constant current source 
+• Ideal BJT I-V characteristics in common base configuration. 
+(3) Base Current: 
+• The emitter current 
+2
+E
+I
+is a base emitter junction current so that this current is also a component of base current. 
+• Since majority carrier holes in the base are disappearing, they must by resupplied by a flow of positive charge into the 
+base terminal, this flow of charge is I
+Bb
+.  
+• The total base current is the sum of I
+Ba 
+and I
+Bb
+. 
+   
+BBaBb
+III=+
+ 
+ 
+• The ratio of i
+c
+ and i
+b
+ is also a constant 
+   
+C
+CB
+B
+I
+II
+I
+=  =
+ 
+ Where,  = common-emitter current gain factor. 
+Note: Applying kCL 
+   
+ECB
+III=+
+ 
+  
+• 
+C
+CB
+B
+I
+II
+I
+=  =
+  
+ 7.3.1. Other Operating Models of BJT 
+ 
+  
+
+ 
+ 
+GATE  WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+1.56 
+BE Junction CB Junction 
+FB 
+RB  → Forward active mode 
+RB 
+RB  → Cut-off mode 
+FB 
+FB  → Saturation mode 
+RB 
+FB  → Inverse Active mode 
+Common Emitter Configuration: 
+ 
+ If V
+CB
+ > 0, then Reverse Bias 
+ IF V
+BE
+ > 0, then Forward Bias 
+  V
+CC
+ – I
+C
+R
+C
+ –V
+CE 
+= 0 
+  V
+CC 
+= V
+CE
+ +V
+RC
+ 
+  V
+CE 
+= V
+CB
+ + V
+BE 
+ If V
+BE
+ es → I
+C
+  → V
+RC
+ → V
+CE
+ → V
+CB
+ es 
+• If V
+CC
+ is large enough and V
+RC 
+is small enough the V
+CB
+ > 0 therefore base collector junction is RB and BE junction is 
+FB already, this condition is of forward active region of operation. 
+• At a certain point of V
+BE
+, I
+C
+ become large enough to make V
+CB
+ = 0, Beyond this point if I
+C
+ is slightly increased the V
+CB
+ 
+become negative and CB junction becomes FB and IC is no longer controlled by BE voltage i.e., the relation I
+C
+ = I
+B
+ 
+will no longer hold. 
+• O/P characteristics 
+ 
+  V
+CC 
+= I
+C
+R
+C
+ +V
+CE
+ 
+Work as an amplifier or current source 
+
+ 
+ 
+GATE  WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+1.57 
+For npn: 
+ 
+Expression for ‘’: (Current gain factor) 
+   
+1
+2
+··
+2
+PBBB
+nEPnon
+D   N    xx
+D   N   Lp
+−
+
+=+
+
+
+
+ 
+Here x
+B
+ is very small and N
+E
+ ≫ N
+B
+ 
+• The current gain factor , depends on two factors 
+ (i) Effective Base width (x
+B
+) 
+ (ii) Ratio of doping concentration in Base and Emitter Region (N
+B
+/N
+E
+) 
+• Prismatic and non-prismatic 
+Relation between  and : 
+   
+1
+
+=
++
+and 
+1
+
+=
+−
+ 
+ increases by large amount for small increase in ‘’. 
+ 7.3.2. Reverse Current (I
+CBO
+ and I
+CEO
+): [Leakage Current] 
+• The current I
+CBO
+ is the reverse current flowing from collector to base with emitter open circuit. 
+• The current I
+CEO
+ is the collector to emitter leakage current when base is open circuited. 
+   
+Input Output Common Terminal 
+B C Emitter (Common Emitters) 
+B E Collector (Common Collector) 
+E C Base (Common Base) 
+ 
+For common base: 
+   
+CECBO
+III=   +
+ 
+   
+()
+1
+DSCBO
+III=  + +
+ 
+
+ 
+ 
+GATE  WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+1.58 
+For Common Emitter: 
+   
+E
+B
+I
+I
+=
+ common collector current gain factor 
+   I
+E
+ = v
+IB
+  I
+E
+ = v (I
+E
+ – I
+C
+) 
+   
+C
+E
+I
+–1
+I
+
+=    =
+
+ 
+   
+1
+1
+1–
+ == +
+
+ 
+Current gain contributing factors: 
+1. DC common base current gain:- 
+   
+nc
+CGPCO
+0
+EnEPER
+IJJJ
+IJJJ
+++
+ =   =
+++
+ 
+where, J
+nC
+:  It is due to the diffusion of minority carrier e
+
+in the base at x = x
+b
+   
+  J
+G 
+:  It is due to the generation of carriers in the R
+B
+ in the base – collector junction 
+  J
+PCO
+: It is due to the flow of minority carries in the R
+B
+ in the base collector junction 
+  J
+nE
+ : due to diffusion of minority carries e
+
+ in the base at x = 0  
+  J
+PE
+ : due to diffusion of minority carrier hole in the base at x’ = 0 
+  J
+R
+ :  due to recombination of carrier in the F
+B
+ base-emitter junction. 
+For AC sinusoidal i/p : 
+   
+C
+E
+I
+I
+
+=
+
+nC
+nEPER
+J
+JJJ
+=
+++
+ 
+Change in I
+C
+ corresponding to change in I
+f   
+and J
+G
+ & J
+PCO
+ are independent of emitter current 
+  s =   T
+
+  
+where,         
+nE
+nEPE
+J
+JJ
+=
++
+→ Emitter injection efficiency 
+   
+nC
+nE
+J
+T
+J
+=
+ → Base transport factor  
+   
+nEPE
+nEPER
+JJ
+JJJ
++
+=
+++
+→ Recombination factor  
+• 
+T
+,  & s are contributing factors, ideally all values are 1 but partially its close to 1. 
+• Distribution of minority carriers in npn transistor in forward active mode. 
+Base Width Modulation: 
+• The process where the effective base width of the transistor is altered by varying collector junction voltage is called 
+base width modulating. 
+• It is also called as early effect 
+
+ 
+ 
+GATE  WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+1.59 
+ 
+• As  the  base-callector  RB voltage es which reduced the neutral base width W’B by increasing  the  base,  collector 
+space charge region width. 
+• As W’B reduces, It will increase  
+• The early effect produces a non-zero slope in o/p chrematistics & gives rise to a finite o/p conductance 
+ 
+ 
+ Slope,  
+C
+0
+CE
+I
+V
+g
+
+=
+
+ 
+    I
+C
+ = g
+o
+ (V
+CE
+ + V
+A
+)  
+ Where,  
+C
+0
+CEA
+I
+VV
+g=
++
+ 
+ 7.3.4. Breakdown phenomena’s in BJT 
+(1) Punch through breakdown: 
+• As the reverse bias base-collector voltage increases, the base-collector space charge region widens & enters further 
+into the neutral base, It is possible for the base-collector depletion region to penetrate complete the base & reach the 
+base emitter space charge region, the effect called punch through. 
+• The lowering of the potential barrier at the base-Emmiter junction, produces a large ing current with the very small 
+decreasing in the collector base voltage, this effect is called punch through breakdown phenomenan. 
+ 
+ Let the depletion width for BE junction is negligible for breakdown  
+ total neutral base width = X
+B0 
+
+ 
+ 
+GATE  WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+1.60 
+  x
+dB 
+= x
+BO
+ 
+ and, x
+dB 
+= 
+()
+C
+biCB
+BCB
+N
+21
+vV.
+qNNN
+
+
++
+
++
+
+ 
+ At break down :- x
+dB
+ = x
+BO
+ & V
+CB
+ = V
+PT
+ (negligible V
+bi
+) 
+ Then,  
+()
+2
+dBBCB
+PT
+C
+xq NNN
+V
+2N
++
+=
+
+ 
+(2) Avalanche Breakdown: 
+• When a high reverse voltage is applied across the diode then avalanche breakdown takes place. 
+• When emitter is open then current (I
+CBO
+) will flow from the collector to base & then by V
+CC
+ 
+by applying V
+CC
+.
+  
+ 
+ 
+ 
+In B – C RB minority carrier of collector will flow to base then base will positively charged the E – B is FB. 
+  I
+CEO 
+= I
+CBO 
++
+ 
+I
+CEO
+  
+  I
+CEO 
+= 
+CBO
+I
+I−
+   I
+CEO 
+= (1 + B)I
+CBO 
+    
+()
+CEOCBO
+I1I=  +
+ 
+ 
+  Breakdown occurs when I = MI
+CBO 
+Where, M → multiplication factor 
+
+ 
+ 
+GATE  WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+1.61 
+Empirical formula for M 
+            
+n
+CB
+CBO
+1
+M
+V
+1
+BV
+=
+
+−
+
+
+ 
+Where, BV → breakdown voltage 
+n → emphatical constant 
+BV
+CBO
+ = Breakdown voltage (V
+CB
+) in open Emitter configuration 
+i.e  For Breakdown V
+CD 
+= BV
+CBO 
+ 7.3.5. In Open Base Configuration 
+ 
+I
+CEO 
+= M[I
+CBO 
++ I
+CEO
+] 
+I
+CEO 
+= 
+CBO
+M
+I
+1M
+
+−
+ 
+For B.D :  M = 1 
+  M = 
+n
+CB
+CBO
+1
+V
+1
+BV
+
+−
+
+
+ , at 
+CBCE
+VV=
+ 
+n
+CEO
+CB
+M1
+BV
+1
+BV
+
+==
+
+−
+
+
+ 
+BV
+CEO 
+= BV
+CB
+ (1 – )
+l/n
+    
+BV
+CEO 
+= 
+CEO
+l/n
+BV
+()
+ 
+The breakdown voltage in the open base configuration is smaller then the actual avalanche junction breakdown voltage. 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+6.62 
+8 
+MOS CAPACITOR 
+8.1. MOS Capacitor  
+MOS → Metal oxide semiconductor  
+Oxide used is (SiO
+2
+) →Insulator. 
+ 
+MOS capacitor Operates in 3 – modes: 
+(1) Accumulation.    
+(2) Depletion.  
+(3) Inversion.  
+(1) Accumulation. 
+ 
+This E field is very strong so that it penetrates in p – type S.C.  
+Also, the holes of S.C. P – type get forced and accumulate at surface. 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.63 
+(2) Depletion mode: 
+ 
+ 
+(3) Inversion Process: 
+ 
+ 
+Inversion process:  
+• In this on metal the ions are there and in p – type holes are forced in the direction of 
+E
+field and this is created a depletion 
+ region. 
+• When a MOS capacitor with a p-type SC substrate is biased such that the top metal gate is at a (–ve) voltage w.r.t. the 
+ S.C. substrate. 
+• An accumulation layer of hole is created at the oxide S.C. interface corresponds to the (+V) charge on the bottom plate 
+ of the MOS capacitor. 
+Strong Inversion    
+• Now consider the same MOS capacitor in which the polarity of applied voltage is opposite of 1’
+st
+ case. 
+• A positive case charge exists on the top’ of metal plate and the induced E-field is in the direction from metal to S.C. 
+Energy Band Diagram: (p-type S.C substrate)  
+(1) No gate bias:  
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.64 
+(2) Gate at Negative Voltage: 
+  
+ 
+• Here, V
+B
+ is more nearer to fermi level than bulk so it is more p-type surface then bulk.  
+• “E
+f
+” is constant, because it is in thermal equilibrium.  
+(3) Gate at positive voltage: (moderate) 
+ 
+• In this case bulk is more p-type then surface and holes are depleted towards bulk and there is depletion region at surface. 
+ (Thermal equilibrium is also there) surface starts to become n-type.  
+(4) Inversion: 
+ 
+• – ve charge in a MOS capacitor implies a larger induced space charged region and more bonding  
+• The intrinsic fermi level at the surface is now below the fermi level. 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.65 
+n-type: (Energy Band diagram) 
+ 
+(1) 
+ 
+(2) 
+ 
+(3) 
+ 
+ φs = surface potential  
+ qφ
+s
+ = E
+fi
+ Bulk – E
+fi
+ surface.  
+• At inversion point → Surface is as much n-type as bulk is p-type.  
+   
+()()
+/–/
+c
+ffif
+E    EKTEEKT
+c
+i
+n    N  en e
+−   −−
+==
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.66 
+   
+()()
+/–/
+fvffi
+EEKTEEKT
+v
+i
+p    N  en  e
+−   −−
+==
+ 
+Electron concentration at bulk S.C. 
+  
+()
+/
+.
+ffi
+EEKT
+ei
+pN e
+−−
+=
+ for 
+s
+B
+np=
+ 
+  
+fisfffiB
+EEEE
+
+−=−
+
+ → inversion  
+ for Inversion: 
+2
+fp
+s
+ = 
+ 
+ 
+Maximum depletion region thickness. 
+  
+ln
+A
+fpT
+i
+N
+V
+n
+
+=
+
+
+ 
+ 
+A
+N⎯⎯→
+Acceptor concentration in p-type substrate.  
+ 
+s
+ ⎯⎯→
+surface potential (potential deft. Across depletion region) 
+   
+1/2
+2
+s
+d
+A
+x
+qN
+
+
+
+=⎯⎯→
+
+
+ Like a one sided. 
+Maximum depletion region width occurs at  
+   
+2.
+sfp
+ = 
+ 
+   
+1/2
+4
+fn
+dT
+D
+x
+qN
+
+
+=
+
+
+ 
+   
+ln
+D
+fnT
+i
+N
+V
+n
+
+=
+
+
+ 
+• At the surface, potential 
+2
+sfp
+ = 
+ 
+• The fermi level at the surface is as for above the intrinsic level in the bulk S.C. 
+• This condition is known as the ‘threshold inversion point’. 
+• The applied gate voltage operating this condition is known as the threshold voltage. 
+Flat Band Voltage: 
+This is a applied gate voltage such that is no band bending in the S.C. and as a result there is zero net space charge in this 
+region.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.67 
+ 
+    
+s
+Gox
+VV=    + 
+ 
+At flat – Band,   
+GFB
+VV=
+ 
+    
+()()
+oxo
+FBoxsso
+VVV=   −    +  −
+ 
+We know:    
+()
+ox
+o
+o
+sms
+V−  =
+ 
+    
+fBox
+mss
+VV=  +   +
+ 
+Also, at flat bond    
+0;
+s
+=
+ 
+    
+.
+ox
+fBms
+VV=  +
+ 
+Charge distribution in MOS cap at FB voltage  
+ 
+For conservation of charge:  
+     
+''''
+0;
+mssmss
+QQQ +   ==−
+ 
+Across oxide voltage drop = V
+OX
+ → Voltage drop across capacitance.  
+     
+''
+–
+mss
+ox
+ox
+ox
+QQ
+V
+CC
+==
+ 
+     
+'
+–
+ss
+ms
+FB
+ox
+Q
+V
+C
+=   +
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.68 
+ 
+  
+ 
+fB
+V⎯⎯→
+ flat Band voltage. 
+ 
+G
+V⎯⎯→
+ Gate Voltage. 
+ 
+T
+V⎯⎯→
+ Threshold voltage. 
+MOS Capacitor can operate in 3-modes Accumulation, Depletion, Inversion, which is explained earlier.   
+     
+2
+ox
+d
+f
+msi
+T
+ox
+ox
+QQ
+VQ
+CC
+=           
+ 
+(I) Accumulation 
+ 
+ 
+(II) Depletion 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.69 
+(III) Inversion  
+ 
+Boundary Condition: 
+   
+12
+NN
+DD=
+ 
+   
+oxoxsis
+EE=
+ 
+Where,  
+11.7
+sio
+ =   
+ 
+    
+3.9
+oxo
+ =   
+ 
+Then,   
+ox
+sox
+si
+EE
+
+=
+
+ 
+   
+2
+||
+/
+s
+ox
+ox
+Q
+Ec   cm=
+
+ 
+   
+2
+||
+/
+s
+s
+si
+Q
+Ec   cm=
+
+ 
+   
+2
+s
+s
+d
+E
+w
+
+=
+ 
+   
+oxox
+ox
+VE   t=
+ 
+Flat band capacitance: 
+   
+1
+1
+FB
+D
+s
+ox
+C
+L
+C
+=
++
+
+ 
+    L
+D  
+= Debye length 
+   L
+D
+ = 
+St
+A
+qN
+
+ 
+
+t
+ → Thermal voltage 
+  
+FB
+C
+
+ = 
+2
+F/cm
+ox
+oxs   t
+ox
+sA
+t
+qN
+
+    
++
+
+ 
+The flat band capacitance of the MOS structure at flat band is obtained by calculating the series connection of the  oxide 
+capacitance and the capacitance of the semiconductor   
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.70 
+Energy Band Diagram: 
+For N-sub MOS capacitor:  
+ Ideal case:  (1)  
+0
+m
+Si=
+ 
+   (2)  
+0
+ox
+Q=
+ 
+(i) Flat band: (V
+G
+ = 0) 
+ 
+(ii) Accumulation → 
+0
+G
+V
+  
+(iii) Depletion  mode 
+0
+G
+V
+ 
+❑❑❑ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+6.70 
+9 
+MOSFET 
+(METAL OXIDE SEMICONDUCTOR 
+FIELD EFFECT TRANSISTOR) 
+9.1. MOSFET 
+ 
+• Source : terminal through which majority charge carrier enters into the SC bar.  
+• Drain : terminal through which majority charge carriers leaves the SC bar.  
+• Channel: path between source & drain by which majority carrier travel from source to drain 
+• Gate : Terminal to control the flow of charge carrier from source to drain 
+ 
+      
+     No initial channel between ‘S’ & ‘D’ at     Channel is initially present in between ‘S’ & ‘D’ 
+      zero gate voltage         at zero gate voltage 
+(a)  n - channel (N-mos)          (a)   n - channel  
+(b)  p - channel (P-mos)          (b)   p - channel  
+• Depletion type MOSFET, the already created channel is either of following two types 
+(i)  Internally doped  
+(ii) A mos device with applied threshold voltage.  
+Enhancement type 
+MOSFET
+Depletion type 
+MOSFET
+MOSFET
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.71 
+9.2. Operation of Enhancement Mode N-MOS : 
+ (I)  
+  
+• There is no flow of ‘S’ carrier to drain  
+Here, v
+th
+ = threshold voltage  +ve for N-channel MOS 
+    –ve for P-channel MOS  
+(II) 
+    
+l
+g
+channel conductance 
+• Source carrier (e
+–
+) will flow from S to D, therefore channel & a current will flow from ‘D’ to ‘S’ 
+• For small V
+D
+,    
+DSd   DS
+Ig  v=
+ 
+|' |
+dn
+gQ
+, where 
+n
+Q→
+ Inversion charge  
+    
+|' |
+noxth
+Qvv−
+ 
+Potential difference across oxide layer  
+    
+()
+|' |
+nGSxTH
+Qvvv
+
+=    −   −
+
+ 
+Where, 
+()x
+v
+→
+ potential at any point in channel at source : x = 0 
+    
+()o
+vov=
+ 
+and    
+()LDS
+vv=
+  
+()
+()xDS
+o   vv
+   
+• For 
+DS
+v
+ very small   
+    
+oxGSTH
+vvv−
+ 
+Then  
+|' |
+nGSTH
+Qvv−
+ 
+dGS
+gv→
+ Basic MOSFET action (modulation of channel cond by applying gate val) 
+S
+G (v < v)
+Gth
+D
+n
++
+n
++
+S
+G (v < v)
+Gth
+v> 0 (small)
+D
+n
++
+n
++
+n – channel
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.72 
+ 
+(III) 
+ 
+•  At small 
+,|' |
+DSnGSTH
+vQvv−
+ 
+•  Inversion charge density at the channel, i const.   
+    
+              
+ 
+For v
+GS 
+> v
+TH
+ : 
+• For small value of v
+DS
+ the charge density is const along the entire channel length therefore drain current es linearly 
+with v
+DS
+.    
+• If v
+DS
+ es, the voltage drop across one oxide layer near the drain terminal decreases, which means the incremental 
+conductance of the channel at the drain decreases which means slope of I
+D
+ vs V
+DS
+ will decreases 
+• When v
+DS
+ increase to (v
+GS
+ – v
+TH
+) then the slope of I
+D
+ v/s v
+DS
+ curve will zero.   
+v>v
+GS2 GS1 
+v>v
+GS th 
+v>v
+GS th 
+v
+DS
+I
+D
+G (v < v)
+GSth
+n
++
+n
++
+(v > v)
+GSth
+v
+DS
+Inversion charge
+ v=(
+GSxth
+ –vv
+()
+ –)
+v
+DS
+I
+D
+(v > v)
+DSth
+v
+DS
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.73 
+ 9.2.1. In depletion mode MOSFET   
+• If the n-channel region is actually induced an inversion layer of e
+–
+ created by the metal SC work function diff. & the 
+fixed charge in the oxide, the current voltage characteristics is same as above, only except v
+th
+ is negative quantity.  
+• If the n-channel region is actually an n-type SC region & Q –ve gate voltage will induced a depletion region under the 
+oxide,  reducing  the  thickness  of  the  n-channel  region,  reduced  thickness  decreases  the  channel  conductance  which 
+reduces the drain current. 
+• In order to be able of to turn the device off, the channel thickness must be less than the maximum charge width (xdT)   
+Derivation of I-V characteristics :   
+  
+d
+Q→
+ Charge carrier/length along the direction of flow of current 
+v→
+  Velocity of charge carrier 
+Total charge = 
+Qdv
+  
+P-channel Depletion Type MOSFET : 
+ 
+Output Characteristic :  
+    
+I
+J
+v
+P
++
+P
++
++
++
++
++
++++++
++
++
++++++
++
++
++
++++++
++
++
++
+v
+GS
+–+
+D
+I
+D
+Body
+v
+DS
+o
+N-substrate
+o
+v
+DS
+Cutt of 
+v>v
+GSTH
+v
+DS
+(sat)
+ v-v=
+asTH
+o
+I
+D
+I
+DSS
+  Drain to source saturation →
+           current at (=0)v
+GS
+D
+e
+p
+l
+e
+t
+i
+o
+n
+E
+n
+h
+a
+n
+c
+e
+m
+e
+n
+t
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.74 
+• If 
+0
+GS
+v
+ & v
+DS
+ (vary) 
+- Depletion charge Q
+D
+ increases 
+- Less holes available in channel i.e. I
+D
+ decrease  
+- Channel depleted     
+• If V
+GS
+ < 0 & V
+DS
+ (vary) 
+- Depletion charge Q
+b
+ in creases 
+- More holes available i.e. I
+D
+ will increases  
+- Channel – Enhance  
+• In linear region :  
+     
+()
+2
+1
+2
+DnGSTH
+W
+ICoxvv
+L
+
+=  −
+
+
+ 
+Symbol :  
+   or   
+• N-channel Enhancement type MOSFET : 
+  
+()
+2
+1
+22
+DS
+DnGSTHDS
+v
+W
+ICoxvvv
+L
+
+=  −−
+
+
+ 
+MOSFET works as voltage variable resistor  
+Trans Conductance :     
+• It is a figure of merit indicates that how well a transistor convert the voltage to the current 
+   
+const.
+D
+mDS
+GS
+I
+gV
+V
+
+==
+
+ 
+• In triode region :  
+  
+(const.)
+D
+DSmnDS
+GS
+I
+W
+VgCoxv
+VL
+
+==   =
+
+ 
+• In saturation region : 
+   
+DSGSTH
+vvv=−
+ 
+            
+
+2
+sat
+1
+2
+DnoxDSTH
+W
+ICvv
+L
+=  −
+ 
+and   
+
+mnoxGSTH
+W
+gCvv
+L
+=−
+ 
+B
+S
+D
+D
+B
+S
+G
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.75 
+   
+2
+D sat
+m
+GSTH
+I
+g
+vv
+=
+−
+ 
+   
+2
+mnoxD
+W
+gCI
+L
+
+=
+
+
+   
+ 
+•   When, 
+DSGSTH
+vvv−
+ (the Triode region) 
+     
+GSTHov
+vvv=
+ (over drive voltage) 
+• The channel is pinched off at 
+DSov
+vv=
+. The drain current reaches its maximum value & if we further increases 
+DS
+v
+, 
+a const current flow because of the pinched off channel side 
+d
+Qo→
+ & velocity of carrier increases. 
+In triode Region :    
+     
+()
+2
+ox
+2
+DS
+DnGSTHDS
+v
+W
+ICvvv
+L
+
+=−−
+
+
+ 
+Let 
+()
+2
+GSTHD
+vvv−   
+ 
+Then it is deep triode region  Linear Region   
+     
+()
+oxDnGSTHDS
+W
+I  ICvvv
+L
+−
+ 
+     
+DDSDd    DS
+IvIg  v     =
+ (channel conductivity) 
+     
+()
+oxdnGSTH
+W
+gCvv
+L
+=−
+ 
+     
+()
+CH
+ox
+1
+nGSTH
+R
+W
+Cvv
+L
+=
+−
+ 
+In deep triode region MOSFET work as a linear resistor which can be varied by v
+GS
+ therefore in deep triode region, we can 
+say that it is working as a voltage variable resistor.  
+I
+D
+v
+DS
+I
+D max
+v-v
+GSTH
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.76 
+ 2
+nd
+ order effects :  
+1.   Body - Bias effect : (N-MOS) 
+• If v
+B
+ < 0 
+ 
+Then, attracts more holes towards body terminal hence depletion charge increase before on set of inversion.     
+• The  gate  charge  must  mirror Q
+d
+ before  an  inversion  layer  is  formed. Therefore, v
+GS
+ is  a  function  of total charge  in 
+depletion region.  
+• If v
+B
+ is increased, then Q
+o
+ will increase and then v
+m
+ will increase 
+    
+22
+THTHooxSBF
+vvC    v
++
+=   + −  
+ 
+      
+2
+sub
+ox
+qN
+v
+C
+
+=
+ 
+Body effect coefficient 
+2. Channel length Modulation:     
+ 
+Where, L 
+→
+ Actual length of channel  
+   L 
+→
+ Depleted channel length 
+       L’ = L – L 
+→
+ Un-depleted length or effective channel length 
+     
+()
+
+2
+1
+1()
+2
+DnGSTHDSDS
+W
+ICoxvvvvsat
+L
+
+
+=  −+    −
+
+
+
+ 
+If  
+()DSDS  sat
+vv
+  
+     
+()
+
+2
+1
+1
+2
+DnGSTHDS
+W
+ICoxvvv
+L
+
+=  −+ 
+
+
+ 
+Where,   
+→
+ channel length modulation parameter  
+       unit = volt
+–1
+ 
+       
+–1
+1
+(volt   )
+A
+v
+=
+ 
+Where, 
+A
+v→
+ Early voltage 
+S
+G
+
+n
++
+n
++
+L
+L
+L
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.77 
+     
+•  
+()
+o
+ror
+ 
+11
+A
+DD
+v
+rd
+slopeII
+==   =
+
+ 
+    
+1
+A
+o
+DD
+v
+r
+II
+==
+
+ output resistance 
+• Symbol N-channel enhancement type (NMOS) : 
+    or  
+9.3. Short Channel Effects 
+The MOSFET is consider to be short channel device when the channel length is in the same order of the depletion width of 
+source and drain junction.  
+1. Velocity Saturation 
+2. Drain-induced barrier lowering (DIBL) 
+3. Impact Ionization 
+4. Hot electron 
+1. Velocity Saturation: 
+By using previous study we can state:   
+  
+()
+dC
+vE  EE=    
+      
+  
+()
+maxddC
+vvEE=
+ 
+But the variations in v
+d
+ near the critical 
+E
+ field cannot be modelled using the above equation. This is the region in which 
+v
+d
+ changes with 
+E
+, sub linearly.  
+ 
+  Proposed model for velocity saturation. 
+     
+max
+/
+cm/s
+1
+C
+dd
+C
+EE
+vv
+E
+E
+=
++
+ 
+This model gives the actual v
+d
+ versus 
+E
+.   
+I
+D
+–v
+A
+v(sat) = v-v
+DSGST
+v
+DS
+(
+–
+v
+/
+o
+A
+)
+D
+A
+I
+slope
+v
+=
+B
+S
+D
+D
+S
+G
+vcm/s
+d
+ ()
+v
+dmax
+C
+E
+
+(/)Evcm
+
+C
+E→
+
+Critical Electric Field
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electronic Devices 
+6.78 
+2. Drain Induced Barrier Lowering 
+When we apply positive voltage at the drain in n-channel MOSFET having short channel, then its threshold voltage (v
+T
+) 
+will decrease due to depletion region of drain region. This effect can be reduce by increasing substrate doping.  
+3. Impact Ionization 
+In short channel devices the 
+E
+field in the channel will be high and due to that the e
+–
+ velocity will be high which impact 
+on Si atoms and generate electron hole pair, this is called as impact Ionization.     
+4. Hot Electron 
+This is also due to high 
+E
+field in the channel which give rise to high energy of e
+–
+ and that can enter into the oxide and 
+will be treated as trapped oxide charge. This will increase the threshold voltage (v
+T
+). 
+ 
+Library:-    https://smart.link/sdfez8ejd80if 
+PW Mobile APP:-   https://smart.link/7wwosivoicgd4 

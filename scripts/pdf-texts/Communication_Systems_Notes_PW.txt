@@ -1,0 +1,11865 @@
+=== FILE: Communication_Systems_Notes_PW.pdf ===
+=== PAGES: 89 ===
+
+
+
+CommunicationCommunication
+SystemSystem
+Communication
+System
+
+Published By: 
+ 
+  Physics Wallah 
+ISBN: 978-93-94342-39-2 
+Mobile App: Physics Wallah (Available on Play Store) 
+  
+Website: www.pw.live 
+Email: support@pw.live 
+ 
+Rights 
+All  rights  will be  reserved  by  Publisher.  No  part  of  this  book  may  be  used  or  reproduced  in  any  manner 
+whatsoever without the written permission from author or publisher. 
+In the interest of student's community: 
+Circulation of soft copy of Book(s) in PDF or other equivalent format(s) through any social media channels, 
+emails,  etc.  or  any  other  channels  through  mobiles,  laptops  or  desktop  is  a  criminal  offence.  Anybody 
+circulating, downloading, storing, soft copy of the book on his device(s) is in breach of Copyright Act. Further 
+Photocopying of this book or any of its material is also illegal. Do not download or forward in case you come 
+across any such soft copy material. 
+ 
+Disclaimer 
+A team of PW experts and faculties with an understanding of the subject has worked hard for the books. 
+While  the  author  and  publisher  have  used  their  best  efforts  in  preparing  these  books.  The  content  has  been 
+checked for accuracy. As the book is intended for educational purposes, the author shall not be responsible for 
+any errors contained in the book. 
+The publication is designed to provide accurate and authoritative information with regard to the subject matter 
+covered. 
+This book and the individual contribution contained in it are protected under copyright by the publisher. 
+(This Module shall only be Used for Educational Purpose.) 
+
+ 
+ 
+ 
+Design Against Static Load 
+ 
+ 
+ 
+ 
+ 
+1. Amplitude Modulation  ........................................................................................................  8.1  –  8.10 
+2. Angle Modulation  ................................................................................................................  8.11  – 8.18 
+3. Random Variable and Random Process  ...............................................................................  8.19 – 8.45 
+4. Digital Communication  ........................................................................................................  8.46 – 8.55 
+5. Digital Receiver  ....................................................................................................................  8.56 – 8.70 
+6. Information Theory  .............................................................................................................  8.71 – 8.81 
+7. Miscellaneous   .....................................................................................................................  8.82 – 8.86 
+COMMUNICATION SYSTEM  
+INDEX 
+GATE-O-PEDIA ELECTRONICS & COMMUNICATION ENGINEERING 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+8.1 
+1 
+AMPLITUDE 
+MODULATION 
+ 
+ 
+1.1. Introduction 
+Band limiting : Bandun limited to bandlimited (LPF) 
+Base band signal : Message signals, low cut off fre = 0 Hz or very close to 0 Hz.  
+Bandpass signal : By shifting baseband signal to very high freq.  
+•
+ 
+Wideband signal : 
+1
+H
+L
+f
+f
+
+ 
+(Base band signal) 
+•
+ 
+Narrowband signal : 
+1
+H
+L
+f
+f
+
+  
+(Bandpass signal) 
+Modulated Signal: 
+      
+( )cos ()cos
+cccc
+C  tAtAt= + =
+ 
+ Carrier signal  
+ (carrier before modulation) 
+  
+Amplitude Modulation:   
+ DSB-FC (Double side band full carrier) 
+ 
+( )cos
+cc
+C tAt=
+carrier before modulation  
+ 
+( )cos( ) cos( )   [( )]cos
+AMcccAMcc
+StAt    m  ttStAm  tt= + =   +
+carrier after modulation 
+ Modulation Index 
+[   ( )]
+max
+c
+mt
+A
+=
+ 
+ (1)  < 1 (under modulation) 
+  
+1
+m
+c
+A
+A
+ =   
+ 
+()()cos[()]
+c
+StAttt=+
+Instantaneous
+amplitude 
+Instantaneous
+frequency
+Modulated signal
+Instantaneous phase
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.2 
+  
+maxmin
+maxmin
+[   ( )][   ( )]
+[   ( )][   ( )]
+E  tE  t
+E  tE  t
+−
+=
++
+ 
+ 
+  
+1,    ( )    0,    ( )( )A tE tA t =
+ 
+  Recovery through E, D possible.  
+  
+maxmax
+( )( ) |(1)
+c
+S  tE tA==    +
+ 
+  
+minmin
+( )( ) |(1)
+c
+S  tE tA==    −
+ 
+ (2) Critical Modulation:- 
+1,   ( )    0At =
+, 
+( )( )E tA t=
+, m(t) can be recovered with envelope detector . 
+ (3) Over modulation: 
+1,   ( )    0,   ( )   |   ( ) |,A tE tA t =
+
+not possible by E.D 
+Frequency Related Parameters 
+ (1)  
+ (2) 
+max
+()
+m
+C tff→=
+ 
+ (3)  
+ ➢ 
+AMCSB
+PPP=+
+ 
+  
+4
+m
+USBLSB
+P
+PP==
+ 
+Modulation efficiency  
+ 
+/2
+2
+SBm
+m
+AM
+c
+PP
+P
+P
+P
+==
++
+ 
+ Share of sideband power in total power  
+ ➢ k
+a
+ [Amplitude sensitivity of amplitude modulator] 
+  
+1
+a
+c
+k
+A
+=
+ (per volt),  
+  
+( )[1( )]
+ca
+A tAk  m  t=+
+ 
+  A (t) > 0, E. D. Applicable  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.3 
+   
+For single tone sinusoidal signal  
+     
+2
+max
+,0Hz,
+2
+m
+mm
+A
+ff    BWP===
+→ for message signal 
+      
+m
+c
+A
+A
+=
+ 
+           
+( )   [cos 2]cos 2
+AMcmmc
+StAAf  tf  t=   +
+ 
+           
+[1cos 2]cos 2
+cmc
+Af  tf  t=    +    
+ 
+     
+( )cos 2cos[2  ()  ]cos[2  () ]
+22
+cc
+AMcccmcm
+carrierUSBLSB
+AA
+StAf tfftff    t
+
+
+=  +   ++   −
+ 
+ 
+     
+22
+2
+1
+2222
+c
+mcc
+AMccSB
+P
+PAP
+PPPP
+
+
+
+
+=  +   =+    =  +→
+
+
+
+ 
+         
+2
+2
+22
+2
+%100%
+2
+2
+c
+c
+c
+P
+P
+P
+
+
+=  =
++
++
+ 
+ ➢  If k
+a
+ given 
+→
+max
+|    ( ) |
+a
+k    m  t=
+ 
+  If k
+a
+ not given →
+max
+|    ( ) |
+c
+mt
+A
+=
+ 
+Important Points: 
+ = 0  = 1 
+% Change 
+AMc
+PP=
+ 
+1.5
+AMc
+PP=
+ 
+50 % 
+0=
+ 
+1
+33.33 %
+3
+=  =
+ 
+0 % to 33.33 % 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.4 
+  
+ (2) 
+ → 
+ 
+ (3) 
+AM
+P→
+Will be constant if 
+and
+c
+P    
+ 
+ If 
+()mt
+is multiple single tone signal- 
+     
+12
+12
+( )1cos 2cos 2cos 2
+mm
+cmmc
+cc
+AA
+S  tAf   tf    tf  t
+AA
+
+=+   +
+
+
+ 
+         
+12
+1212
+,
+mm
+cc
+AA
+AA
+ =     =    − 
+ 
+ 
+122
+max
+( ),
+mmm
+m tffff→→    =
+ 
+  
+21
+mm
+ff
+       
+21
+mm
+BWff=−
+ 
+  
+()
+c
+S  tf=
+  BW = 2 × Max. Freq. component of 
+()mt
+ 
+ 
+Power Related Parameters 
+         
+12
+22
+22
+mm
+m
+AA
+P=+
+ 
+      
+2
+22
+12
+1
+2222
+mc
+AMc
+PA
+PP
+
+
+=  +   =+   +
+
+
+
+ 
+      
+1122
+22
+12
+,
+22
+cc
+USBLSBUSBLSB
+PP
+PPPP
+
+====
+ 
+      
+1122
+22
+12
+,
+44
+cc
+USBLSBUSBLSB
+PP
+PPPP
+
+====
+ 
+             
+2
+2
+2
+SB
+T
+AM
+T
+P
+P
+
+==
++
+ 
+           
+222
+123T
+ = + + +−−−−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.5 
+Important Points: 
+m(t) (volt)  P
+AM
+ P
+rod
+ 
+(1) Sinusoidal 
+2
+1
+2
+c
+P
+
+
++
+
+
+
+ 
+2
+1
+2
+c
+P
+R
+
+
++
+
+
+
+ 
+(2) Square wave 
+2
+(1)
+c
+P+
+ 
+2
+(1)
+c
+P
+R
++
+ 
+(3) Triangular wave 
+2
+1
+3
+c
+P
+
+
++
+
+
+
+ 
+2
+1
+3
+c
+P
+R
+
+
++
+
+
+
+ 
+  
+     
+22
+1,1
+22
+AMcAMc
+VVII
+
+=+=    +
+for sinusoidal  
+DSB- FC [AM] Modulator 
+(1) Square law Modulator: 
+ 
+    
+22
+2
+11
+001
+( )( )cos 2( )cos 42   ( )cos 2
+22
+(1)(2)(3)(4)(5)(6)
+cc
+ccccc
+a Aa A
+y ta m  ta  Af  t    a m   tf  tm  t  Af  t=+  +++  +
+ 
+  ➢ Only (2) and (6) are desirable  
+      
+1
+0
+0
+2
+( )cos 21( )
+cc
+a
+Z  ta  Af tm  t
+a
+
+=    +
+
+
+ DSB –FC 
+      
+'
+( )[1( )]cos 2
+cac
+Z tAk  m tf t=   +
+only when 
+3(2   1)
+cm   cm
+ff   ff  +
+ 
+      
+1
+0max
+0
+2
+'
+,,|    ( ) |
+ccaa
+a
+Aa  A   kk    m t
+a
+== =
+ 
+(2) Switching Modulator: 
+     
+4
+( )1( ) cos 2
+2
+c
+c
+c
+A
+Z  tm  tf  t  DSB    FC
+A
+
+=+−
+
+
+
+ 
+     
+'
+( )[1( )]cos 2
+cac
+Z  tAk  m tf t=    +
+ 
+     
+4
+'
+,
+2
+c
+ca
+c
+A
+Ak
+A
+==
+
+ 
+max
+|    ( ) |
+a
+k    m  t=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.6 
+DSB- FC Demodulator-  
+(1) Square law demodulator-  
+     
+22
+11
+1
+( )cos 2cos 4
+44
+mm
+c   mmm
+a Aa A
+Y  ta A Af  tf  t=  ++
+ 
+     
+01020
+( )coscos 2Y  tBBt    Bt=   +  +
+ 
+ ➢
+ 
+2
+nd
+ harmonic distortion 
+2
+2
+1
+4
+B
+D
+B
+
+==
+ 
+  
+2  max
+()%    25%D=
+ 
+ ➢
+ 
+Practically not used  
+ ➢
+ 
+min
+2S
+I
+
+=
+
+
+
+ 
+Envelope Detector: 
+      
+2222
+cos.
+c
+ABtE DAB+ →→    +
+ 
+(1) 
+22
+00
+( )cossin( )x  tAt    BtE tAB= +     →    =    +
+ 
+(2) 
+22
+00
+( )cos ()sin( )2sinx  tAtBtE tABAB= + +     →    =    +   −
+ 
+(3) 
+( )( ) cos( )   |   ( ) |
+c
+x  tA ttE tA t=  →    =
+ 
+(4) 
+( )    (( )) cos( )   |( ) |
+ccc
+x  tAm  ttE tAm  t=   +  →    =   +
+ 
+Important Points: 
+ ➢
+ 
+Used only when   1 
+ ➢
+ 
+1
+,
+cS
+c
+TR C
+f
+=    
+ (charging time constant) 
+ ➢
+ 
+1
+cS
+c
+TR C
+f
+=       →
+ Peaks are not detected.  
+ ➢
+ 
+Diagonal clipping 
+→
+1
+L
+m
+RC
+f
+=
+ 
+ ➢
+ 
+To avoid diagonal clipping 
+2
+1
+1
+,
+LL
+mm
+R  CR  C
+f
+−
+
+
+ 
+ ➢
+ 
+1
+aL
+c
+TR C
+f
+=
+fluctuation is output  
+ ➢
+ 
+To remove fluctuation 
+1
+L
+c
+RC
+f
+
+ 
+ ➢
+ 
+Proper choice of discharging time constant 
+L
+RC
+-  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.7 
+  No fluctuation   No diagonal clipping 
+ (7) m(t): Multitone 
+maxm
+ff→=
+Max. freq. component of m(t)  
+1.2. Synchronous Detector 
+   
+Recovery 
+= 0 
+0
+ 
+(21)
+2
+n
+
++
+ 
+✓  
+= 0 
+0
+ 
+(21)
+2
+n
+
+=+
+ 
+Q.N.E 
+0
+ 
+= 0 = 0 
+
+ 
+= 0 = 0 = 0 ✓  
+DSB-SC :  
+     
+( )( )(cos 2)
+DSB  SCcc
+Stm  t  Af  t
+−
+=
+ 
+( )   |    ( ) |  |( ) |
+c
+E tA tA m  t==
+ 
+ ➢ 
+.2BW=
+max. freq. component of 
+()mt
+ 
+ ➢ 
+22
+SBm   c
+DSBm   cSBUSBLSB
+PP  P
+PP  PPPP==   →==   +
+ 
+  
+2
+2
+c
+DSBSB
+P
+PP
+
+==
+ 
+ ➢ Single tone modulation.  
+  
+( )cos[2  ()  ]cos[2  () ]
+22
+c   mc   m
+cmcm
+A AA A
+S  tfftff    t=   ++   −
+ 
+  
+22
+4
+cm
+DSBm  c
+AA
+PP  P==
+ 
+  Multiline 
+12
+22
+2
+222
+mm
+c
+DSBc   m
+AA
+A
+PP P
+
+
+==+
+
+
+ 
+  Square wave - 
+2
+2
+2
+c
+DSBc   mm
+A
+PP PA
+
+==
+
+
+
+ 
+  Triangular wave 
+22
+23
+cm
+DSBc   m
+AA
+PP Pa
+      
+==
+      
+      
+      
+ 
+  Saw-toothed wave-
+22
+23
+cm
+DSBc   m
+AA
+PP P
+      
+==
+      
+      
+      
+ 
+ (1) Balanced Modulator- 
+( )    2( ) cos
+DSBc   ac
+StA k  m  tf  t=
+ 
+ (2) Ring Modulator- 
+( )( ) cos
+c
+y  tm  tt
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.8 
+  
+0,0,( )    0   QNEyt=   =
+ 
+  
+'
+0,0,( )( )cos()
+2
+cC
+AA
+y  tm tt  ==
+→
+distorted
+()mt
+ 
+   
+'
+0,0,( )( )
+2
+cC
+AA
+y  tm  t=   ==→
+Attenuated  
+Hilbert Transformation. 
+       
+1
+()ht
+t
+=
+
+,   
+ 
+               
+1
+( )( )mh  tm  t
+t
+=
+
+ 
+       
+0
+(  )sgn (  )00
+0
+j
+Hj
+j
+−
+
+
+ = − ==
+
+
+
+
+ 
+ ➢ 
+(   )(   )[sgn (   )]
+h
+MfM   fjf=−
+ 
+ ➢ 
+.
+.  [cos   ( )]   sin   ( )cos   ( )
+HT
+H Tttt  =    ⎯⎯⎯→−  
+ 
+ ➢ Non causal LTI system.  
+ ➢ 
+..
+( )( )
+HT
+h
+x tx   t⎯⎯→
+ 
+  
+..
+( )( )
+HT
+h
+x   tx t⎯⎯→−
+ 
+ ➢ Magnitude spectrum of x(t) and 
+()
+h
+xt
+will be same  
+ ➢ If x(t): Band limited then 
+()
+h
+xt
+is also bandlimited.  
+ ➢ If x(t) is non periodic then
+()
+h
+xt
+is also non periodic 
+ ➢ x(t) and 
+()
+h
+xt
+are orthogonal signal.  
+Drawback of DSB-SC 
+ ➢ 2 sideband Txed.  
+ ➢  If receiver is designed in such a way that it may recover the complete message signal from single SB then DSB-SC 
+S/S becomes impractical.  
+SSB- SC (Single sideband suppressed carrier) 
+ (1) Point to point communication  
+ (2) Two methods of generation     
+Phase derserimination
+Frequency discrimination
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.9 
+(a) Phase Discrimination: 
+      
+( )( )
+( )cos 2sin 2
+22
+cc    h
+SSBcc
+A m tA m   t
+S  tf  tf  t=  
+LSB
+USB
++
+−
+ 
+ 
+Problem Solving 
+(1) Identify the phase descrimination setup  
+(2) Phase descrimination setup  
+(3) Phase descrimination setup:  
+ 
+()
+()
+DSB
+DSB
+StLSB
+StUSB
++→
+−→
+ 
+Spectral gap in D.S.B BPF Signal 
+0 Hz Ideal SSB-SC 
+0 Hz Practical VSB-SC 
+0Hz
+ 
+Ideal SSB -SC 
+0Hz
+ 
+Practical 
+ 
+  
+ ➢ SSB- SC can be demodulated by Synchronous detection.  
+  (1) 
+0,0,   ( )mt=   
+recovery not possible 
+→
+freq. synchronization  
+  (2) 
+00  =
+,
+()mt
+ recovery not possible
+→
+Phase synchronization 
+  (3) Perfect syne, 
+0,0 =  =
+can be recovered  
+  (4) 
+0,No QNE
+2
+
+=   =  →
+ 
+Note:  
+(1)  When video signal is transmitted through SSB- SC modular VSB- SC is generated. 
+(2) Synchronous detector can not recover 
+()mt
+ video signal from the above generated   VSB- SC.  
+depends on 
+practical BPF
+SB
+VSC−
+SSBSC−
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.10 
+Percentage Power Saved 
+(1) % power saved in DSB- SC as compare to DSB-FC.  
+      % 
+100%
+saved
+saved
+Total
+P
+P
+P
+=
+ 
+      % 
+2
+2
+2
+(1)
+2
+1
+2
+c
+saved
+c
+P
+P
+P
+===  −
+
++
+
++
+
+
+
+ 
+(2) % power saved in SSB- SC as compare to DSB-FC-  
+      % 
+2
+2
+4
+42
+saved
+P
++
+=
++
+ 
+(3) % power saved in SSB-SC as compared to DSB-SC.  
+      % 
+50%
+saved
+P=
+ 
+Modulation B.W Power Application 
+(1) 
+DSB-FC 
+max
+2f
+ 
+CSB
+PP+
+ 
+Broadcatting 
+(2) 
+DSB- SC 
+max
+2f
+ 
+SB
+P
+ 
+
+ 
+(3) 
+SSB-SC 
+max
+f
+ 
+2
+SB
+P
+ 
+Point to point voice 
+communication 
+(4) 
+VSB-SC 
+maxmax
+2fff
+ 
+2
+SB
+VSBSB
+P
+PP
+ 
+Point to point video 
+communication. 
+Pre envelope and Complex Envelope 
+(1) Pre Envelope calculated for both baseband and bandpass signal.  
+ Let  
+()xt
+is real signal.  
+     
+()xt
++
+=
+Pre envelope of 
+()xt
+ 
+     
+ˆ
+( )( )( )x    tx  tj x t
++
+=+
+ 
+       
+ˆ
+( )[  ( )]x  tHT   x  t=
+ 
+           
+
+(  )(  ) 1   sgn(  )xfx  ff
++
+=+
+ 
+ Complex Envelope: For bandpass only but result in low pass only  
+ 
+()xt→
+Bandpass signal.  
+ Step-1. Calculate 
+ˆ
+( )( )( )x    tx  tj x t
++
+=+
+ 
+ Step 2.  
+( )( )
+(   )()
+c
+jt
+c
+cc
+x   tx   t  e
+XfXff
+−
++
++
+=
+=+
+left shift of pre envelope by 
+c
+f
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.11 
+2 
+ANGLE 
+MODULATION 
+ 
+2.1. Introduction  
+Signal = x(t)  |x (t)|
+max
+ 
+(1) 
+00
+coscosAt    Bt  +
+ 
+AB+
+ 
+(2) 
+00
+sinsinAt    Bt  +    
+ 
+AB+
+ 
+(3) 
+00
+sincosAt    Bt  +
+ 
+22
+AB+
+ 
+(4) 
+12
+coscosAt    Bt +
+ 
+AB+
+ 
+(5) 
+12
+sinsinAt    Bt +    
+ 
+AB+
+ 
+(6) 
+12
+cossinAt    Bt +    
+ 
+ 
+2.1.1. Instantaneous Angle and Instantaneous frequency-  
+         
+( )cos[   ( )]
+ci
+S  tAt=
+ 
+()
+i
+t→
+Instantaneous angle (rad) 
+        
+()
+()
+i
+i
+dt
+t
+dt
+
+=    →
+instantaneous angular frequency.  
+          
+( )( )
+1
+( )or( )
+22
+ii
+ii
+dtt
+f   tf   t
+dt
+
+==
+
+ 
+         
+( )( )
+t
+ii
+tt
+−
+   =  
+
+ 
+• Angle Modulation : 
+ ➢ Frequency Modulation 
+ ➢ Phase Modulation 
+• Frequency Modulation : 
+ 
+( )cos[( )]
+anglecc
+StAtt= +
+ 
+ifABAB+=
+ifABAB+
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.12 
+ If angle Modulation is FM, 
+()
+()
+dt
+mt
+dt
+
+
+ 
+       
+()
+( ),
+f
+dt
+K  m t
+dt
+
+=
+f
+K=
+ frequency sensitivity of frequency modulator 
+          
+( )( )
+icf
+tK  m t  = +
+   
+
+  
+frequency
+deviation
+( )( )
+ic
+tt
+
+   =  + 
+ 
+          
+( )( )
+t
+icf
+tK  m t  dt
+−
+   = +
+
+  
+( )( )
+f
+tK  m t  =
+ 
+         
+()
+()
+dt
+t
+dt
+
+  =
+ 
+Few Important Results 
+For Important Results 
+For 
+f
+rad
+K:
+V - sec
+ 
+f
+Hz
+K:
+Volt
+ 
+1.  Instantaneous frequency 
+( )( )
+icf
+tt    K  m t  = +
+ 
+( )( )
+icf
+f  tfK  m t=+
+ 
+2.  Instantaneous frequency  deviation 
+( )( )
+f
+tK  m t  =
+ 
+( )( ) Hz
+f
+f  tK  m t=
+ 
+3.  Frequency deviation in +ve direction 
+maxmax
+[( )][   ( )]
+f
+tK   m t=
+ 
+maxmax
+[][   ( )]
+f
+fK   m t=
+ 
+4.  Frequency deviation in –ve direction 
+minmin
+[( )][   ( )]
+f
+tK   m t=
+ 
+minmin
+[    ( )][   ( )]
+f
+f  tK   m t=
+ 
+5.  Maximum value of instantaneous frequency 
+maxmax
+[    ( )][( )]
+ic
+tt=  + 
+ 
+maxmax
+[   ( )][( )]
+ic
+f   tff  t=  + 
+ 
+6.  Minimum value of instantaneous frequency 
+minmin
+[    ( )][( )]
+ic
+tt=  + 
+ 
+minmin
+[   ( )][( )]
+ic
+f   tff  t=  + 
+ 
+7.  Peak to peak frequency deviation 
+maxmin
+[][   ( )][   ( )]
+p   pii
+tt
+−
+   = − 
+ 
+maxmin
+[    ][  ( )][  ( )]
+pp
+ff  tf  t
+−
+=−
+ 
+8.  Maximum frequency deviation 
+  
+9.  Modulation index or deviation ratio of FM  
+max
+max
+( )[   ( )]
+f
+tK   m t=
+ 
+max
+max
+( )[   ( )]
+f
+f  tK   m t=
+ 
+Maximum frequency deviation
+Maximum frequency component of    ( )
+FM
+B
+mt
+=
+ 
+max
+max
+()
+f
+FM
+K    m t
+B=
+
+ 
+max
+max
+()
+f
+FM
+K    m t
+B
+f
+=
+ 
+ 
+Important Phase Calculation 
+rad
+V-sec
+f
+K
+
+
+
+ 
+Hz
+:
+Volt
+f
+K
+ 
+1.  Instantaneous phase deviation in FM 
+( )(  )
+t
+f
+tKmd
+−
+  =  
+
+ 
+( )    2(  )
+t
+f
+tKmd
+−
+  =   
+
+ 
+2.  Maximum phase deviation in FM 
+max
+( )(  )
+t
+f
+tKmd
+−
+=  
+
+ 
+max
+2(  )
+t
+f
+Kmd
+−
+  
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.13 
+General expression for FM  
+ 
+rad
+:
+V-sec
+f
+K
+ 
+       
+( )cos(  )
+t
+angleccf
+StAtK  md
+−
+
+= +  
+
+
+
+
+ 
+ For 
+Hz
+:
+Volt
+f
+K
+ 
+       
+cos2(  )
+t
+FMccf
+SAtKmd
+−
+
+= +   
+
+
+
+ 
+ For 
+( )cos2
+mm
+m tAf  t=
+ – 
+       
+maxmax
+,[   ( )],
+mm
+ffm tA==+
+min
+[   ( )],
+m
+m tA=−
+max
+()
+m
+m tA=
+ 
+         
+
+( )cos( )sin (2)
+FMccFMm
+StAtBf  t=  +
+ 
+ For 
+1122
+( )cos 2cos 2
+mmmm
+m tAf  t    Af   t=  +
+ – 
+       
+12
+maxmax
+(,)
+mm
+fff=
+ 
+          
+12
+12
+( )cos( )sin 2sin 2
+FMccmm
+StAtBf  t    Bf   t
+
+=   +  +
+
+ 
+           
+12
+12
+12
+,
+fmfm
+mm
+K  AK  A
+BB
+ff
+==
+ 
+Phase Modulation – 
+       
+( )( )tm t  
+ 
+       
+rad
+Volt
+( )( )
+p
+tK  m t
+
+
+  =
+ 
+ 
+:
+p
+K
+ Phase sensitivity of phase modulator 
+         
+rad
+Volt
+p
+K=
+ 
+Phase Calculation :  
+ 
+: rad/Volt
+p
+K
+ 
+       
+( )( )
+icp
+tt    K m t  = +
+ 
+ 1. Instantaneous phase deviation 
+( )( )
+p
+tK  m t=   =
+ 
+ 2. Maximum phase deviation 
+maxmax
+( )( )
+p
+tK   m t= =
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.14 
+Frequency Calculation  
+ 
+()
+ic
+tt  = +
+ 
+ ➢  
+()
+()
+p
+dm t
+tK
+dt
+  =
+  
+ ➢  
+max
+max
+()
+()
+p
+dm t
+tK
+dt
+=
+ 
+ ➢  
+min
+min
+()
+()
+p
+dm t
+tK
+dt
+=
+ 
+ ➢  
+max
+max
+( )[( )]
+ic
+tt= + 
+ 
+ ➢  
+min
+min
+( )[( )]
+ic
+tt= + 
+ 
+ ➢  
+maxmin
+[   ( )][   ( )]
+p   pii
+tt
+−
+  = − 
+ 
+ ➢  
+max
+max
+()
+()
+p
+dm t
+tK
+dt
+=
+ 
+ ➢  
+maxmax
+maxmax
+()
+()
+p
+FM
+dm t
+K
+t
+dt
+
+  ==
+
+ 
+   
+
+( )cos( )( )
+FMccPM
+StAtKt=  +
+ 
+   When 
+( )cos2
+mm
+m tAf  t=
+ 
+   
+max
+max
+( ),,
+mm
+m tA   ff==
+( )sin
+pmmm
+tK  At  = −       
+ 
+ ➢  
+max
+[( )]
+p    mm
+tK  A=    
+ 
+ ➢  
+min
+{  ( )}
+p    mm
+tK  A=−    
+ 
+ ➢  
+max
+[   ( )],
+icpmm
+tK  A= +    
+min
+[   ( )]
+icp    mm
+tK  A= −    
+ 
+ ➢  
+()2
+p   ppmm
+KA
+−
+   =
+ 
+ ➢  
+max
+()
+pmm
+tK  A=
+ 
+ ➢  
+max
+()
+pm
+K  At== 
+ 
+   
+
+( )cos( )cos 2
+PMccPMm
+StAtf  t=  +
+ 
+   
+12
+12
+( )cos( )cos 2cos 2
+PMccmm
+StAtf   tf   t
+
+=   +  +
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.15 
+Types of FM – 
+ ➢ Narrow Band 
+(1) 
+ 
+ ➢ Wide Band  
+     
+CarrierUSBLSB
+( )cos 2( )cos[2  ()  ]cos[2  ()  ]
+22
+cc
+FMcccmcm
+AA
+StAf   tff    tff    t
+
+
+=   +   +−   −
+ 
+     
+( )( )
+FMNBFM
+StSt=
+ 
+ ➢ B.W 
+2
+m
+f=
+ 
+ ➢ 
+2
+1
+2
+NBFMC
+PP
+
+
+=+
+
+
+ 
+2
+1,1  
+ 
+     
+2
+2
+c
+NBFMC
+A
+PP=
+ 
+Relation between DSB-FC and NBFM – 
+       
+( )cos 2( )cos[2  () ]cos[2  () ]
+22
+cc
+AMcccmcm
+AA
+StAf   tff    tff    t
+
+=   +  ++  −
+  
+    
+( )cos 2( )cos[2  () ]cos[2  () ]
+22
+cc
+NBFMcccmcm
+AA
+StAf   tff    tff    t
+
+=   +  +−  −
+ 
+1.  
+Frequency Component Strength AM Strength NBFM 
+c
+f
+ 
+2
+c
+A
+ 
+2
+c
+A
+ 
+cm
+ff+
+ 
+4
+c
+A
+ 
+4
+c
+A
+ 
+cm
+ff−
+ 
+4
+c
+A
+ 
+4
+c
+A−
+ 
+2. 
+( )( )   SSB-SCUSB-FC
+NBFMAM
+StSt+=→
+ 
+ 
+( )( )   SSB-SCLSB-FC
+AMNBFM
+StSt−=→
+ 
+3. LSB in NBFM is 
+0
+180
+ inverted w.r.t to LSB in AM 
+ ➢ 
+( )(  ) cos[2  ()  ]
+FMcncm
+n
+StAJfnf    t
+
+=−
+=  +
+
+ 
+  For aby value of 
+
+ 
+ ➢ 
+(  )    (  1)(  )
+n
+nn
+JJ = −
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.16 
+ ➢ 
+2
+(  )   1
+n
+n
+J
+
+=−
+=
+
+ 
+ ➢ 
+0
+(  )   0,2.4,5.5,8.6,11.8J =  =
+ 
+ ➢ as 
+,(  )
+n
+nJ →   
+ 
+  
+1:   ( )St →
+ 1 Carrier + 2 SB      NB Angle Modulation 
+  If 
+1:   ( ) :St 
+1 Carrier + Infinite SB     Wide Band Angle Modulation 
+  Ideal BW of WBFM 
+=
+ 
+Carson’s Rule – 
+      
+(1)2
+m
+BWf= +
+ 
+PM
+
+ for PM 
+ 
+FM
+
+ for FM 
+ ➢ Power of Carrier before modulation 
+2
+2
+c
+c
+A
+P==
+ 
+ ➢ Power of Carrier after modulation 
+222
+012
+2(    (  )(  )
+c
+P    P   JJJ
+
+=+ +    +
+
+ 
+ ➢ Power of Carrier component in modulated signal  
+2
+0
+()
+c
+PJ=
+ 
+ ➢ 
+22
+12
+2(  )(  )
+SBc
+PP   JJ
+
+= +    +
+
+ 
+ ➢ 
+222
+012
+(  )   2 ((  )(  ))
+SB
+Totalc
+P
+PP   JJJ
+=
+
+→ + +    +
+
+ 
+  If 
+0
+(  )   0J=
+ then 
+100%=
+ 
+ ➢ For Infinite sidebands 
+WBc
+PP=
+ 
+For Non sinusoidal –  
+  
+
+cos  2  ()
+FMcncmn
+n
+SACfnf    tC
+
+=−
+=   ++
+
+ 
+  
+()mt
+    BW 
+ Singletone sinusoidal   
+⎯⎯→
+  
+(1) 2
+m
+f+
+  
+ Non sinusoidal   
+⎯⎯→
+  
+(1) 2    ,
+mm
+ff+=
+ fundamental frequency 
+ periodic signal 
+ Other Cases        
+⎯⎯→
+  
+max
+(1)2f+
+ 
+ 
+m
+BW   (1)2f=  +
+ or 
+max
+2()ff+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.17 
+Frequency Mixture and Multiplier 
+Mixture/Multiplier Input Mixture Output  (Multiplied by n) Multiplier Output 
+c
+A
+ 
+'
+c
+A
+ 
+'
+c
+A
+ 
+c
+f
+ 
+'
+ or 
+CLCLC
+fffff−+  =
+ 
+c
+nf
+ 
+
+ 
+
+ 
+n
+ 
+m
+f
+ 
+m
+f
+ 
+m
+f
+ 
+f
+ 
+f
+ 
+nf
+ 
+BW BW 
+(1)2
+m
+nf+
+ 
+Spactral spacing 
+m
+f
+ 
+m
+f
+ 
+Frequency components 
+'''
+,,2
+ccmcm
+f    ff    ff
+ 
+,,2
+ccmcm
+nf   nff   nff
+ 
+Wideband Angle Modulation generation – 
+      
+()
+[   ( )]
+dm t
+PM  m tFM
+dt
+
+=
+
+
+ If 
+pf
+KKK==
+ 
+      
+[   ( )](  )
+t
+FM  m tPMmd
+−
+
+=  
+
+
+
+ 
+ 
+ 
+Wideband FM Generation Methods 
+1. Armstrong Method (Indirect Method) 
+2. Direct Method 
+ • VCO (Voltage Controlled Oscillator is used). It is modified version of Hartley oscillator 
+  
+0
+2
+c
+C
+C
+  
+=
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.18 
+FM Demodulator 
+1. Theoretical method 
+2. Practical method.    PLL (Phase Locked Loop) 
+ 
+ (1) 
+( )( )
+f
+V
+K
+v tm t
+K
+=
+ 
+ (2) Lock mode 
+→
+ Frequency lock 
+  Capture mode 
+→
+ Phase lock  
+ (3) 
+L.R    C.R
+  
+Super Hetrodyne Receiver  
+ 
+L
+f=
+ Local oscillator frequency 
+ 
+S
+f=
+ Desired frequency 
+ 
+Si
+f=
+ Frequency of image station 
+ Case 1 : If relation between 
+l
+f
+ and 
+s
+f
+ is not mentioned. 
+ Assume : 
+ls
+ff
+ 
+ 1.  
+ls
+ffIF=+
+ 
+ 2. 
+Sil
+ffIF=+
+ 
+ 3.   
+2
+Sis
+ffIF=+
+ 
+ Case 2 : When relation between 
+i
+f
+ and 
+s
+f
+ is given 
+ If 
+Sils
+fff
+  If 
+'Sssl
+fff
+ then Case 1 
+ then  1.  
+sl
+ffIF=+
+ 
+   2.  
+lSi
+ffIF=+
+ 
+   3.  
+2
+sSi
+ffIF=+
+ 
+Image Rejection Ratio 
+      
+22
+IRR1PQ=+
+ 
+ 
+:Q
+ Quality factor of Oscillator 
+           
+22
+Sis
+Si    s
+ff
+P
+ff
+−
+=
+ 
+Sis
+ff
+    
+22
+1PQ
+  
+                    IRR 
+PQ=
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.19 
+3 
+RANDOM VARIABLE AND 
+RANDOM PROCESS 
+  
+3.1. Introduction 
+Random variable → Real and complex  
+• R.V. is a function performing mapping from sample space of R.E. to real line.  
+• 
+(  ) :X
+Random variable  
+• Domain of R.V. 
+→
+ (Sample point) 
+• Range of R.V. 
+→
+Subset of real line  
+• One to one or many to one mapping  
+• 
+{}P  Xa
+→
+Probability of set in which all the comes satisfy
+()xa
+. 
+CDF of R.V.  
+ Let random variable X, 
+x→
+Values taken by R.V.  
+ (1) 
+(  ){}   1{}
+X
+F    xP  XxP  Xx=      = −    
+ 
+ (2) 
+(  ){}   1{}
+X
+F    aP  XaP  Xa=  = −
+ 
+ (3) 
+||
+(  ){||}{}
+X
+FyP   XyP    y    Xy=  =  −   
+ 
+Properties  
+ (1) 
+(   )   1
+X
+F=
+  
+ (2) 
+()    0
+X
+F− =
+  
+ (3)  
+(   )()   1
+XX
+FF +   − =
+ 
+ (4) 
+(  ){}0(  )   1
+XX
+FxP  XxFx=       
+ 
+  (a) CDF always non negative.  
+  (b) Lower bound: 
+(  )    0
+X
+Fx=
+, upper Bound = 1 
+ (5) CDF is monotonically non decreasing function of 
+()
+0
+X
+dF    x
+x
+dx
+
+
+
+
+ 
+ (6) Graph of CDF is always amplitudes continuous from right.  
+• Key point : 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.20 
+ (1)  
+{}(    )(    )
+XX
+P a    x   bF   bF    a
+++
+   =−
+ 
+ (2) 
+{}(    )(    )
+XX
+P a    X    bF   bF    a
++−
+    =−
+  
+ (3) 
+{}(    )()
+XX
+P a    X    bF   bF    a
+−+
+    =−
+ 
+ (4) 
+{}(    )(    )
+XX
+P a    X    bF   bF    a
+−−
+    =−
+ 
+ 
+Probability Density Function 
+Random variable X 
+   x →Variable taken by R.V.  
+  
+()
+X
+fx→
+Symbol  
+     
+()
+()
+X
+X
+dFx
+fx
+dx
+=
+   
+     
+(  )(  )
+x
+XX
+fxfx  dX
+−
+=
+
+ 
+     
+(  )(  )
+a
+XX
+fxfd
+−
+=  
+
+ 
+Properties :  
+ (1) 
+(  )    0
+X
+fx→
+Non negative  
+ 
+(2)
+  
+ (3) 
+(   )(  )1
+XX
+Ffx  dx
+
+−
+ ==
+
+ 
+ (4) Graph of PDF can be even or NENO but cannot be odd.  
+ (5) 
+{}(  )
+x
+X
+PXxfd
+−
+−    =  
+
+ 
+ (6) 
+{}(  )
+b
+X
+a
+P aXbfx  dx
++
++
+    =
+
+ 
+()Pxa=
+CDF is continuous at 
+xa=
+{}()()
+XX
+PxaFaFa
++−
+==−
+{}0Pxa==
+CDF is continuousatxa=
+{}()()
+XX
+PxaFafa
++−
+==−
+0
+{}Pxa==
+Size of Jump
+0()
+X
+fx
+Lower bound
+Upper bound
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.21 
+ (7) 
+{}(  )
+b
+X
+a
+P aXbfx  dx
++
+−
+    =
+
+ 
+ (8) 
+{}(  )
+b
+X
+a
+P aXbfx  dx
+−
++
+    =
+
+ 
+ 
+Discrete Random Variable:  
+(1) PDF should have impulses only.  
+(2) CDF should have staircase only.  
+ (1) Probability mass function of DRV : Let X
+ 
+is D.R.V. 
+   
+(  )()
+X
+P    xP  Xx==
+ 
+probability such that X = x 
+   ➢
+ 
+0(  )   1
+X
+Px=
+ 
+   ➢
+ 
+(  )   1
+X
+x
+Px=
+ 
+ (2) PDF of a D.R.V : Let X is O.R.V. 
+      
+(  )(   )   ()()   ()
+XXiiii
+ii
+fxP    xx    xP  x    xx    x=   −   =    =    −
+ 
+ (3) CDF of a D.R.V. : Let X is D.R.V.  
+      
+(  )(  )
+x
+XX
+F    xfx  dx
+−
+=
+
+ 
+      
+(  ){}  {}
+Xii
+x
+FxP  Xx   u  x    x=     =−
+ 
+ (4) 
+{}P  Xa=
+ may or may not be zero. 
+Continuous Random Variable 
+Maps sample point to continuous range of values on real axis.  
+(1) PDF of C.R.V should not contain impulses at all.  
+(2) CDF of C.R.V  
+ ➢
+ 
+Should not contain jump type discontinuity  
+ ➢
+ 
+It should be amplitude continuous every where  
+(3) PMF not defined for C.R.V because for CRV 
+{}P  Xa=
+will always be zero.  
+()Pxa=
+Graph having impulse at 
+xa=
+{0}()()
+XX
+PxFaFa
++−
+==−
+{}()
+a
+Y
+a
+Pxafxdx
++
+−
+==
+
+No impulse 
+atxa=
+{}0Pxa==
+Totalarea=
+{}()
+a
+Y
+a
+Pxafxdx
++
+−
+==
+
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.22 
+       
+()
+(   /   )
+()
+P  AB
+P  A  B
+PB
+
+=→
+Conditional probability of A given B.  
+     
+()(   )   (   /   )(   )
+B
+P  ABP B P  A  BP  A P
+A
+
+  ===
+
+
+Joint probability.  
+Expectation operator : Performs operations on R.V. only.  
+Linear Operator 
+        
+22
+[   ],[]E CC   E CC==
+ 
+(  ):
+()
+{}:
+X
+ii
+i
+xfx  dxX   CRV
+EX
+x P  XxX   DRV
+
+−
+
+
+
+=
+
+
+=
+
+
+
+ 
+     
+[][   ]E  aXa E  X=
+ 
+      
+[][   ][  ]E  aX    ba E  XE b+  =+
+ 
+     
+[(   )(  ))[  (  )][   (  )]E  ag  XbH  ya E  g  xb E  H  y+=+
+ 
+     
+22
+[](  )
+X
+E  Xx  fx  dx
+
+−
+=
+
+ 
+         
+
+(  )(  )(  )
+X
+E  g  xg  x  fx  dx
+
+−
+=
+
+ 
+Gaussian Random Variable  
+CRV X is having Gaussian or random distribution.  
+X is having Gaussian PDF, X is called G.R.V.  
+        
+2
+[   ],    [()  ]
+Xx
+E  XE   X=−   =
+Variance 
+2
+X
+=
+ 
+  
+2
+{,}
+XX
+XN
+ 
+2
+2
+()
+2
+2
+1
+()
+2
+x
+X
+x
+X
+X
+fxe
+−  −
+
+=
+
+  
+x− 
+ 
+Key Point : 
+ (1) 
+2
+2
+()
+2
+2
+1
+1
+2
+X
+X
+x
+X
+edx
+−  −
+
+
+−
+=
+
+
+ 
+ (2) 
+2
+2
+()
+2
+2
+1
+[]
+2
+X
+X
+x
+X
+X
+edxE  X
+−  −
+
+
+−
+=   =
+
+
+ 
+ (3) 
+2
+2
+()
+2
+2
+2
+22
+()
+111
+2
+2
+22
+X
+X
+X
+X
+x
+X
+X
+XX
+x
+edxedx
+−  −
+
+
+
+−
+−  −
+==
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.23 
+Zero mean Gaussian distribution- 
+   
+22
+,
+()[0,][   ]   0
+XXX
+X   NXNE  X       =
+ 
+       
+2
+2
+2
+2
+1
+()
+2
+X
+x
+X
+X
+fxe
+−
+
+=
+
+ 
+ 
+Zero Mean, unit variance : 
+ 
+(0.1)XN
+ 
+2
+2
+1
+(  ),
+2
+x
+y
+f    xe
+−
+=
+
+ 
+2
+2
+0
+11
+2
+2
+x
+edx
+−
+
+=
+
+
+ 
+Q- function : 
+    
+2
+/2
+0
+1
+()
+2
+z
+Q  xedz
+
+−
+=
+
+
+  as 
+,    (  )xQ  x
+ 
+    
+(   )    0,()   1,(0)    0.5,    (  )()   1QQQQ xQ    x =− ==+  −  =
+ 
+       
+[](   )
+X
+X
+z
+P  XzQ  PQ
+
+−
+  ==
+
+
+
+ 
+    
+(  )()   1()   1
+X
+X
+X
+z
+fzP  XzP  XzQ
+
+−
+=      = −      = −
+
+
+
+ 
+Statistical averages of a R.V. 
+ n
+th
+ order moment about origin- 
+    
+(  ):
+[(0)  ][]
+{}:
+n
+X
+nn
+n
+ii
+i
+x  fx  dxX   CRV
+E   XE  X
+x  P  XxX   DRV
+
+−
+
+
+
+−   ==
+
+
+=
+
+
+
+ 
+1
+st
+ order moment about origin  
+     
+[   ](  ){}
+Xii
+i
+E  Xxfx dxx P  Xx
+
+−
+===
+
+ 
+     
+[]
+Xi
+E  XXmdc=  =   =   →
+value, avg. value Mean value  
+2
+[   [   ]]. .E  Xd c→
+power  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.24 
+ 
+2
+nd
+ order moment about origin-  
+    
+2
+222
+(  ):
+[(0)  ][]
+{}:
+X
+ii
+i
+x  fxX   CRV
+E   XE  XX
+x P  XxX   DRV
+
+−
+
+
+−   ==
+
+
+=
+
+
+ 
+     
+2
+[]EX=
+Mean square value of R.V. X = Total power of R.V. x 
+1
+st
+ order moment about mean -
+[()]   0
+X
+EX−   =
+ 
+2
+nd
+ order moment about mean 
+222
+[()  ][]
+XX
+E   XE X−    −    =−
+ 
+    
+Important point:  
+ (1)  
+222
+0,    []
+XX
+EX  
+ 
+ (2)  If X is zero mean R.V.  
+     
+22
+[], MSV(   )(   )
+X
+E XXVar  X==
+ 
+ (3)  Standard deviation  
+   
+2
+Variance
+XX
+=    = 
+ 
+ (4)  
+Y    aX    b=+
+ 
+    
+2222
+[][]2[   ]E Ya  E  Xbab E  X=+  +
+ 
+  
+22   2
+YX
+a =  
+ 
+Standard Distribution of R.V. 
+ (1) Uniform distribution 
+[  ,  ]X    U  a b
+ 
+     
+1
+()
+()
+0otherwise
+X
+aXb
+ba
+fx
+
+
+
+−
+=
+
+
+
+ 
+ 
+222
+[]
+XX
+EXu=−
+ A.C. 
+Power
+Total
+Power
+   dc 
+Power
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.25 
+     
+222
+22
+()
+[   ],[],
+2312
+X
+a   bababb   a
+E  XE  X
+++  +−
+==  =
+ 
+ (2) Triangular distribution  
+  
+tri (  ,   ,  )Xa m b
+ 
+     
+[]
+3
+a    m   b
+EX
+++
+=
+ 
+ 
+ (3) Rayleigh Distribution  
+  
+XCRV→
+ 
+     
+2
+2
+2
+2
+0
+()
+0else
+X
+x
+X
+X
+x
+ex
+fx
+−
+
+
+
+
+
+=
+
+
+
+
+
+   
+        
+2
+2
+2
+2
+0
+1
+X
+x
+X
+x
+edx
+−
+
+
+=
+
+
+ 
+  If X and Y are two G.R.V. Then 
+22
+ZXY=+
+ will have reyleigh distribution. 
+ (4) Exponential Distribution :  If CRV has exponential distribution then it will have PDF  
+      
+0
+()
+00
+x
+X
+ex
+fx
+x
+−
+
+
+
+=
+
+
+
+
+   
+0
+1
+x
+edx
+
+−
+=
+
+ 
+  Laplacian Distribution  
+  
+XCRV→
+ 
+ 
+      
+||
+()
+bx
+X
+fxae
+−
+=
+x− 
+ 
+  If 
+1
+a
+b
+
+=
+,  
+0,0ab
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.26 
+      
+0
+()
+0
+bx
+X
+bx
+aex
+fx
+aex
+−
+
+
+
+=
+
+
+
+
+ 
+Discrete Random variable-Binomial, Position distribution  
+Binomial distribution necessary condition:-  
+ (1)  The no of trials n showed be finite.  
+ (2)  Trials are independent 
+ (3)  Each trials should result in 2 outcomes success or failure.  
+ (4)  Prob of success in each trial should be constant.  
+PMF:     
+{success}
+r
+nr
+cr
+P  Xrn   p q
+−
+==
+ 
+      
+[   ]{}
+iip
+i
+E  Xx p  Xxn= =   =
+ 
+2
+X
+npq=
+ 
+           
+22
+[](    )E  Xnpqnp=+
+ 
+  Std deviation 
+X
+npq  = 
+ 
+Position Distribution 
+Specific type of binomial distribution where 
+n→
+ 
+    
+n→
+very large, 
+p→
+very small, 
+np→
+ finite 
+np=
+ 
+    
+{}
+!
+r
+e
+p  Xr
+r
+  −
+==
+probability of 
+Xr=
+ (success) 
+         
+2
+[   ],
+X
+EX=   =
+ 
+ 
+ If 
+()Yg  X=
+is having monotonic 
+X
+T
+.  
+ Given 
+()
+PDF
+X
+Xfx⎯⎯⎯→
+,  
+     
+[  ][  ]function of y
+YX
+dx
+f    yfx
+dy
+
+
+=
+
+
+
+ 
+        
+ (1) case a > 0
+  
+      
+1
+[  ],(  )
+YXYX
+y   by   b
+F   yFf    yf
+aaa
+−−
+        
+==
+        
+        
+ 
+ (2) 
+0YaX    b    a= −   +
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.27 
+      
+1
+(  )   1,(  )
+YXYX
+y   by   b
+F   yFf    yf
+aaa
+−−
+        
+= −=
+        
+−−
+        
+ 
+Monotonic linear T
+X
+:
+ 
+ 
+y    aXb=+
+ 
+ 
+12
+[,]XU  m   m
+→
+12
+[,]Y    U  amb amb++
+ 
+ 
+123
+[,,]Xm  m   m
+→
+123
+[,,]Yamb amb amb    +++
+ 
+ 
+22
+[,][,]
+XXYy
+XNYN    →  
+ 
+ 
+22
+[,]
+XX
+YN ab a  +   
+ 
+Monotonic Non-Linear T
+X
+:  
+ 
+()
+X
+Xfx→
+ 
+ 
+3
+,(  )   ?
+Y
+YX    f    y→=
+ 
+ 
+(  )(  )
+YX
+dx
+fyfx
+dy
+
+
+=
+
+
+
+ 
+ 
+1/3
+2/3
+1
+(  )()
+3
+YX
+fyfy
+y
+=
+ 
+Non - Monotonic T
+X
+: 
+ 
+1
+,   (   ),(  )Yy g  Xy  Xgy
+−
+==    =
+ 
+ 
+1
+2
+3
+x
+x
+x
+→
+
+
+→
+
+
+→
+
+ 
+ 
+12
+12
+(  )(   )(   )
+YXX
+dxdx
+f    yfxfx
+dydy
+=++−−−−
+ 
+2D Random variable : 
+    
+,
+,
+(  ,   )    Joint CDF
+(   ,   )2 DR.V.(  ,   )    Joint PDF
+(   ,    )    Joint PMF
+XY
+XY
+XYii
+Fx  y
+X  Yfx  y
+Px   y
+→=
+
+
+→→=
+
+
+→=
+
+ 
+ If A and B are independent  
+   
+(   ),(   ),()(   )   (   )
+AB
+PP  APP BP  A    BP  A P B
+BA
+    
+==  =
+    
+    
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.28 
+  
+If X and Y are independent R.V.  
+ 
+(  ,   )(  )(  )
+XYXY
+Fx  yfx  fy=
+ 
+ ➢ 
+(  ,   )(  )(  )
+XYXYYX
+XY
+yx
+fx  yfx  ffy  f
+xy
+
+
+==
+
+
+
+
+ 
+ If X and Y are independent R.V.  
+ 
+(  ,   )(  )(  )
+XYXY
+fx  yfx  fy=
+ 
+ ➢  
+(   ,)(   )(    )
+j
+i
+XYijXiYYjX
+ij
+XY
+y
+x
+Px   yP    x   PP   y   P
+xy
+
+
+==
+
+
+
+
+
+ 
+ If X and Y are independent R.V.  
+ 
+(   ,)(   )    (    )
+XYijXiYj
+Px   yP   x  P   y=
+ 
+ Joint CDF = Let 
+(   ,   )XY
+are BIVARIATE R.V. 
+ 
+(  ,   ){)(){;}
+XY
+Fx  yP  XxYyP  Xx  Yy=      =    
+ 
+Properties:  
+ (1) 
+0(  ,   )   1
+XY
+Fx  y
+ 
+ (2)  
+(,   ){()()}   0
+XY
+FyP   XYy−   = −      =
+ 
+ (3)  
+(  ,)    0
+XY
+Fx− =
+ 
+ (4) 
+(,)    0
+XY
+F− − =
+ 
+ (5) 
+(   ,   )   1
+XY
+F  =
+ 
+ (6) 
+1111
+(   ,    ){()()}
+XY
+Fx   yP   XxYy=     
+ 
+ (7) 
+1212
+{()()}P   xXxyYy          
+ 
+  
+11221221
+(    .    )(    ,)(    ,)(    ,)
+XYXYXYXY
+Fx   yFx    yFx    yFx    y
++  ++  ++  ++  +
+=+−−
+ 
+ (8) 
+(  ,   )(  )(  )
+XYXYYX
+XY
+yx
+Fx  yFx  FF    y  F
+xy
+
+
+==
+
+
+
+
+ 
+ (9) X and Y are independent R.V.  
+  
+(  ,   )(  )(  )
+XYXY
+Fx  yFx  F    y=
+  
+ (10) 
+(  ,   )(  ,   ),(  )(   ,   )
+XXYYXY
+Fx  yFxF    yFy==    
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.29 
+Conditional CDF   
+    
+(  ,   )
+()
+XY
+X
+Y
+Y
+Fx  y
+x
+F
+yF    y
+
+=
+
+
+   of  
+(  )    0
+Y
+Fy
+ 
+    
+[()()]
+[()()]
+X
+Y
+xP   XxYy
+F
+yP   XYy
+
+    
+=
+
+    
+
+ 
+Joint PDF  
+        
+2
+(  ,  )
+(  ,  )
+XY
+XY
+Fx  y
+fx  y
+XY
+
+=
+
+ 
+        
+(  ,  )(  ,  )
+y
+x
+XYXY
+Fx  yfu v du dv
+−−
+=
+
+ 
+        
+(  ,   )(  ,   )1
+XYXY
+Fx  yfx  y dx dy
+
+−−
+==
+
+ 
+Marginal PDF  
+ (1) 
+(  )(  ,  )    ,(  )(  ,  )
+XXYYXY
+fxfx  y dy   f    yfx  y dx
+
+−−
+==
+
+ 
+  If X and Y are independent 
+(  ,   )(  )(  )
+XYXY
+fx  yfx  fy=
+ 
+     
+(  ,   )(  )(  )
+XYXYYX
+XY
+yx
+fx  yfx  ffy  f
+xy
+
+
+==
+
+
+
+
+ 
+Conditional PDF  
+      
+(  ,   )
+(  ,   )
+(  ,   )
+()
+(  ,   )
+y
+x
+XY
+XY
+XY
+Y
+XY
+fx  y dxdy
+fx  y
+fx  y
+fy
+fx  y dx
+−−
+
+−
+==
+
+
+ 
+Probability Calculation in 2-D region  
+Given Joint PDF   
+    
+ 
+{()()}   ?P   a    Xbc    y    d           =
+ 
+ 
+1
+:R
+Region in which probability has to be calculated.  
+Method:  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.30 
+ 
+1
+(   ,)(  ,   )
+XY
+R
+P  X  Y    Rfx  y dxdy=
+
+   
+12
+()R    RR=
+ 
+(1) X and Y not independent R.V.  
+ 
+1,
+(   ,)(  )(  )
+r
+X YY
+R
+P  X Y   Rfx  f   Y  dxdy=
+
+  
+12
+()RRR=
+ 
+  (Central Limit Theorem) 
+  If X and Y are D.R.V 
+  
+(   ,)   1
+XYij
+ij
+Px   y=
+ 
+  
+(   ,    ){()    ()}
+XYijij
+Px  yP   XxYy==    =
+ 
+  Joint PMF  
+Marginal PMF :  
+       
+(   )(   ,)
+XiXYij
+j
+P   xPx   y=
+ 
+       
+(    )(   ,)
+YjXYij
+i
+P   yPx   y=
+ 
+Minimum of 2 independent R.V.  
+X, Y are two I.R.V 
+     
+min (   ,   )()()X  YZXZYZ  =       
+ 
+      
+[min (   ,   )][]   [](  ,   )
+XY
+R
+PX  YZP  XZ  P YZfx  y dxdy  =  =
+
+ 
+       
+[min (   ,   )]   1[min (   ,   )]PX  YZPX  YZ  = −
+ 
+      
+[min (   ,   )](  )(  )
+XY
+R
+R
+PX YZfx  f    y dxdy=
+
+ 
+Let 
+Max (   ,   )R.V.ZX  Y=→
+ 
+ CDF of Z  
+(   )(   )(   )
+ZXY
+F   ZF    Z    F   Z=
+ 
+ PDF of Z  
+(   )(   )(   )(   )(   )
+ZXYYX
+f    ZF    Z  f    ZF   Z  fZ=+
+ 
+Let 
+min[   ,   ]R.V.ZX  Y=→
+ 
+ CDF of Z  
+(   )(   )(   )(   )(   )
+ZXYYX
+F   ZfZg    Zf    Z  F    Z=++
+ 
+ PDF of Z  
+(   )(   )(   )(   )(   )(   )(   )
+ZXYXYYX
+f    ZfZf    ZF    Z  f    ZF   Z  fZ=+−−
+ 
+Statistical parameters of 2D R.V. 
+ (1) 
+(  ,  )
+th
+kr
+order joint moment about origin 
+[]
+kr
+E  X  Y
+(1,1)
+st
+order joint moment about origin.  
+  
+11
+[,    ][]
+XY
+E  X   YE  XYR==   →
+Cross correlation between R.V. X and V.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.31 
+  ➢ 
+[]0
+XY
+E  XYR=    =  →
+R.V. X and Y are orthogonal.  
+ (2) 
+(  ,  )
+th
+kr
+order joint moment about mean-  
+  
+[()  ()  ]
+kr
+E   XXY   Y−−
+ 
+  
+(1,1)
+st
+order joint Moment about mean-  
+  
+[()()][]cov (   ,   )E   XX   Y    YE  XYXYX  Y−−   =−   =
+ 
+  
+cov(   ,   )[][   ]   [  ]
+XYXYxy
+X YE  XYE  X  E YR=  =−=   − 
+ 
+  When 2 R.V. X and Y are uncorrelated-  
+  
+cov(   ,   )    0XY=
+, 
+[   ,   ][   ]   [  ]E  X  YE  X  E Y=
+ 
+  ➢  
+[][]  [    ],
+k    rkr
+E  X  YE  X    E YX Y==
+are independent.  
+  ➢  If 2 R.V. are independent then they has to be uncorrelated but converse is not necessarily true. 
+One function of two R.V.    
+       
+W    aX    bY=+
+ 
+(1) 
+[   ][   ][  ]E Wa E  XbE Y=+
+ 
+(2) 
+22222
+[][][]   2
+XY
+E Wa  E  Xb  E Yab R=++
+ 
+(3) 
+22   22   2
+2    cov(   ,   )
+WXY
+ababX Y  =    +   +
+ 
+One function of Three R.V. 
+123
+WaXbXcX=   +    +
+ 
+ (1) 
+123
+[]
+XXX
+E Waba=   +   + 
+ 
+ (2) 
+222222
+1231    22    31    3
+[]222E Wa  XbXc  XabX XbcX  XcaX X=+   ++++
+  
+ (3) 
+123
+22   22   22   2
+122313
+2cov(,)    2    cov(,)    2    cov(,)
+WXXX
+abcabX   XbcX    XcaX   X  =    +    +    +++
+ 
+  Var (X + Y) = Var (X – Y)  
+  Only when X, Y are → uncorrelated and independent  
+Correlation coefficient  
+      
+cov(   ,   )
+(   ,   )
+(Std.dev.of)   (std.dev.of   )
+XY
+XY
+XY
+XY
+XY
+
+==
+ 
+ 
+ ➢
+ 
+11− 
+ 
+ ➢
+ 
+(   ,    )   1,XX=
+ 
+(   ,)1XX   −  = −
+ 
+ ➢ X, Y are independent 
+(   ,   )    0XY=
+ 
+Let X, Y are two R.V.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.32 
+      
+()
+()
+Y
+X
+g Yy
+Eg  y  fdy
+Xxx
+
+−
+  
+=
+
+
+=
+  
+
+ 
+      
+()
+()
+X
+Y
+g  Xx
+Eg  x  fdx
+Yyy
+
+−
+  
+=
+
+
+=
+  
+
+ 
+Calculation of probability in n-D region 
+Theorem -1  
+ If 
+123
+,,
+n
+X   X    XX−−−
+are statistically independent random variables.  
+Let 
+12n
+ZXXX=   +   − − − −
+ 
+      
+12
+(  )(  )(  )
+n
+XXX
+fzfzfz
+
+ 
+     
+12
+(  )(  ) *(  )*(  )
+n
+ZXXX
+f    zfzfzfz=−−−−
+ 
+ When and only when all the R.V. are statistically independent.  
+ ➢ R.V. are linearly combined.  
+Theorem-2 
+ 
+123
+,,
+n
+X   X    XX−−−
+are statically independent non Gaussian R.V.  
+ 
+123n
+ZXXXX=   +   +   −−−−
+ 
+ 
+12
+(  )(  ) *(  )*(  )
+n
+ZXXX
+f    zfzfzfz=−−−−
+ 
+ If 
+n→
+()
+Z
+fz=
+Gaussian irrespective of nature of 
+1
+()
+n
+ii
+X
+=
+ 
+Theorem-3 
+ 
+123
+,,
+n
+X   X    XX−−−
+are statistically independent G.R.V.  
+ 
+12n
+ZXXX=   +   − − − +
+ 
+ 
+12
+(  )(  )(  )(  )
+n
+ZXXX
+f    zfzfzfz=++−−−−
+ 
+ n → Finite| infinite, → Z: GRV 
+Problem Solving Technique :  
+ Case 1 :  
+12
+,
+n
+X   XX−−−−
+are statistically independent G.R.V.  
+   
+123
+[]()(  )1(  )
+a
+ZZ
+a
+Non GRV
+P  XXXaP Z    af    z dzf    z dz
+
+
+−
++   +     =      == −
+
+ 
+   Where 
+123
+ZXXX=   +   +
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.33 
+   
+123
+(  )(  )(  )(  )
+ZXXX
+f    zfzfzfz=
+ 
+ Case 2 :  If 
+123
+,,X   X   X
+are statistically independent G.R.V.  
+   
+123
+()[]
+z
+z
+a
+P  XXXaP  Z    aQ
+
+−
++   +     =      =
+
+
+
+ 
+   
+123
+ZXXX=   +   +
+ 
+   
+123123
+2222
+2
+,
+XXXzXXX
+ =  +  +    =   +  +
+ 
+Note :  If 
+123
+,,
+n
+X   X    XX−−−−
+ are I.I.D. random variables  
+  P (one of them is largest) 
+1
+n
+=
+ 
+  P (one of them is smallest) 
+1
+n
+=
+  
+Random Process  
+  
+ 
+11
+(    ,   )Xt
+ → sample value, values taken by R.V. When R.P. is observed at 
+1
+tt=
+ 
+ C.T.R.P → It maps the sample points onto continuous time sample function, collection of continuous time sample function.  
+ 
+1
+010 1
+( )cos()(  )cos()
+tt
+X  tAtX  tAt
+=
+= + ⎯⎯⎯→    =  +
+ 
+            C.T.R.P             R.V., D.R.V. 
+ t → Continuous time, A → Constant, 
+0
+→
+constant  
+ 
+[,  ]CRVU    −  →
+ 
+ Any typical R.P can be understood as 
+( )( ,  )x tf  t=
+ 
+ (Function of time and R.V.)         
+(  )(  ,  )x nf  n=
+ 
+Statistical parameter of R.P.  
+ Case 1 :    
+   
+0
+0(   )
+[   (   )](  )
+Xt
+E  X  tx fx  dx
+
+−
+=
+
+ 
+   
+0
+22
+0(   )
+[    (   )](  )
+Xt
+E  x   tx   fx  dx
+
+−
+=
+
+,    
+0
+222
+(   )00
+[(   )]   9   (   (   ))  ]
+Xt
+E  X    tE  X  t    =−
+ 
+ Case 2 :    
+12
+(,){(,),(,)}XtXtXt=
+Collection of sample function 
+of 
+Euemble of sample function 
+Random process or Random signal
+or stochastic signal
+()Xt
+0
+()CRVXt−
+0
+tt=
+()Xt
+0
+()DRVXt−
+0
+tt=
+CTRP
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.34 
+   
+0
+0(   )0
+[   (   )](   ){   (   ))
+i   X  tiii
+ii
+E  X  tx Pxx P  X  tx= = =
+ 
+   
+0
+222
+0(   )0
+[    (   )](   ){   (   ))
+i    X  tiii
+ii
+E x   tx  Pxx  P  X  tx===
+ 
+   
+0
+222
+(   )00
+[(   )]   (   [   [   ])
+Xt
+E  X    tE  X  t    =−
+ 
+ Case 3 : DTRP → CRV  
+   
+0
+22
+00()
+[   (    )],   [    (    )],
+Xn
+E  X  nE  x   n→
+ 
+Some as case 1, replace to by n
+0
+  
+ Case 4 :  DTRP → DRV 
+   
+0
+22
+00()
+[   (    )],   [    (    )],
+Xn
+E  X  nE  x   n→
+ 
+Same as case-2, Replace to by n
+0
+ 
+CTR.P   
+       
+     
+12
+12(  )   (   )1   2
+[   (  )   (   )](  ,   )
+X  t   X  tXX
+E  X  t   X  tRRt  t==
+ 
+ Auto correlation of RP X(t)  
+     
+ Then 
+1
+[   (  )   ()]( ,)
+XX
+E  X  t   X  tRt t+  =+ 
+ 
+ Cov 
+121212
+(   (  )   (   ))[   (  )   (   )][   (  )]  [   (   )]]X  t   X  tE  X  t   X  tE  X  t    E  X  t=−
+ 
+ 
+12
+1   21   2(  )(   )
+(  ,   )(  ,   )
+XXXXX  tX  t
+t  tRt  t=−   
+ 
+ Auto covariance of R.P. 
+()Xt
+ 
+ 
+( )()
+( ,)( ,)
+XXXXX  tX  t
+t tRt t
++
++ =+ −  
+ 
+Cross Correlation  
+    
+12
+12
+..
+..
+( )(  ),   ( )(   )
+t  tt  t
+R PR P
+R VR V
+X  tX  tY  tY  t
+==
+⎯⎯⎯→⎯⎯⎯→
+ 
+    
+121   2
+[   (  )  (   )](  ,   )
+XY
+E  X  t  Y  tRt   t=
+ 
+(1) If 
+1   21
+(  ,   )    0 VTR( ) and    ( )  .  .
+XY
+Rt   ttX  tY  t  R P=
+will  
+ 
+2
+TRt
+ Become orthogonal.  
+(2) Cov
+12
+121   2(  )(   )
+[   (  ),   (   )](  ,   )
+XYX  tX  t
+X  t   Y tRt  t=−   
+ 
+ 
+1
+2
+0   VTR
+TR
+t
+t
+=
+
+ 
+()Xt
+1
+()Xt
+2
+()Xt
+1
+tt=
+2
+tt=
+()Xt
+()Xt
+()Xt+
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.35 
+ RP 
+( ) and   ( )X  tY  t
+are uncorrelated.  
+ If 
+12
+(  ) and    (   )X  tX  t
+are independent  
+  
+1212
+12
+2
+112
+[   (  )   [   (   )]
+[   (  )   (   )]
+[(  )]
+E  X  t   E  X  ttt
+E  X  t   X  t
+E  X    ttt
+
+
+
+
+=
+
+
+ 
+  Same for DRV, replace t by n.  
+Types of R.P. 
+ (1) Strict sense stationary R.P. → R.P. should be independent of time shift  
+     
+12
+(  )   (   )(   )
+()
+..
+k
+X  t   X  tX  t
+Xt
+kR V
+−−−
+→
+ 
+K
+th 
+order Joint PDF- 
+     
+12
+(   ,)
+k
+x   xx−−−
+          ...(i) 
+    
+12
+(  )   (   )(   )
+Xk
+ft   X  tX  t−−−
+ 
+  
+12
+(),    ()()
+( ) :
+R.V.
+k
+X  tX  tX  t
+Xt
+k
+++ −−−    +
+ 
+K
+th
+ order Joint PDF-  
+    
+12
+(   ,)
+k
+x   xx−−−
+           ...(ii) 
+   
+12
+()   ()()
+k
+X  tX  tX  t
+f
+++ −−−    +
+ 
+(i) = (ii) →
+()Xt
+ is solid to be SSSRP.  
+    
+12
+(  )()
+(  )(  )
+X  tX  t
+fxfx
++
+=
+  
+independent of time 
+2
+nd
+ order joint PDF is independent of time shift.  
+122   1
+(  )   (   )1    2(0)   ()1    2
+(   ,    )(   ,    )
+X  t   X  tXX  t    t
+fx  xfx  x
+−
+→
+ 
+ ➢
+ 
+Does not depend on individual sampling instances 
+12
+andtt
+ 
+ ➢
+ 
+Depends on time difference between sampling instances 
+12
+andtt
+ 
+  
+12211   2
+[   (  )   (   )][   (0)   ()(  ,   )
+XX
+E  X  t   X  tE  XX  ttRt   t=−  =
+ 
+  
+211212
+[   (0)   ()](0,)()
+XXXX
+E  XX  ttRttRtt−   =−   =
+ 
+  
+2
+1212
+()()
+XXXXX
+ttRtt=−
+ 
+ WSSRP → There are stationary RP which are stationary at least upto 2
+nd
+ order.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.36 
+ 
+ (1) 
+[   ( )]
+X
+E  X  t=
+Constant  
+ (2) 
+2
+[( )]E  X    t=
+Constant  
+ (3) 
+2
+()Xt
+
+= Constant  
+  
+E[RP]    E[RV]=
+ 
+  
+MSV(RP)    MSV(RV)=
+ 
+  
+Var (RP) = Var (RV)
+ 
+ (4) 
+1212
+[   (  )   (   )]()
+XX
+E  X  t   X  tRtt=
+ 
+  
+[   ()   ( )](    )
+XX
+E  X  tX  tR+ =−
+ 
+  
+[   ( )   ()](  )
+XX
+E  X  t  X  tR+  =
+ 
+  
+(  )(    )
+X
+XXX
+RR =    −
+ 
+  
+22
+()
+(0)
+X  tXXX
+R   =−
+ 
+  Cov 
+2
+[   ( )   ()](  )
+X
+XX
+X  t  X  tR+ = −
+ 
+ (5) 
+2
+[( )](0)0
+XX
+E X    tR==
+ 
+ (6) 
+2
+2
+[   ( )]  [   ()](0)
+[   ( )   ()](  )ACF
+[( )](0)(0)
+X
+XX
+XX
+E  X  t   E  X  t
+E  X  t  X  tR
+E  X    tR
+
++  =     
+
++  ==
+
+= =
+
+
+ 
+ (7) 
+cov[   ( )   ()]( ,)( )()
+XXXX
+X  t  X  tRt ttt+  =+  −      + 
+ 
+  
+2
+2
+00
+(  )(  )
+(0)0
+XXXXX
+XXX
+CR
+R
+
+
+
+ = −  =
+
+−    =
+
+
+ 
+  
+2
+0
+()
+(0)0
+X
+X
+X
+X
+X
+R
+R
+
+ 
+
+=
+
+=
+
+
+ 
+Important point : 
+ (1) If X(t) is zero mean WSSRP.  
+  E [X (t) = 0 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.37 
+  
+22
+()
+[( )]
+Xt
+E  X    t=
+ 
+  Var 
+[   ( )]   MSV{   ( )}X  tX  t=
+ 
+  Var 
+11
+{   ()}    MSV{   ()}X  t    tX  t    t=   ==
+ 
+ (2) If X (k) is zero mean WSSRP  
+  
+[   (  )]   0E  X  k=
+ 
+22
+()
+[(  )]
+Xk
+E  X    k=
+ 
+  Var 
+[   (  )]    MSV[   (  )]X  kX  k=
+ 
+  ➢ 
+( ) : WSSRP + IIDRPXt
+ 
+   
+2
+[   ( )],    [   ()],   [( )](0)
+XXXX
+E  X  tE X  tE X   tR=+ ===
+Constant  
+   
+2
+()Xt
+=
+Constant  
+   Let  
+( )()Y  tX  at    b=+
+ 
+   
+2
+[  ( ),   [    ( )](0)
+XXX
+E Y tE y   tR==
+ 
+   
+22
+()
+(0)
+Y  tXXX
+R   =−
+ 
+   
+[  ( )  ()](    )(  )
+XXYY
+E Y  t Y  tRaR+  = =    
+ 
+   Cov 
+2
+[  ( )  ()](  )(   )
+YYXXX
+Y t Y tCRa+ =     = −
+ 
+   For  
+Constant
+( ),   ( )WSSRP
+(  )(    )
+YX
+YYXX
+Y  tY  t
+RRa
+→ =  =
+
+→→
+
+ =
+
+ 
+  ➢ Time shift, Time reversal, time scaling does not affect stationary nature of R.P. 
+   Let 
+( )( ),( )Y  taX  tb  X  t=+
+is WSSRP  
+   
+[  ( )]
+X
+E Y  tab=   +  =
+Constant 
+   
+222
+[( )](0)2
+XXX
+E Y   ta  Rbab=+  +     =
+Constant  
+   
+222
+(  )(  )Y  tX  t
+a  =  
+  
+   Cov 
+2
+[  ( )  ()](  )
+YYY
+Y  t Y  tR+ =     −
+ 
+   
+22
+[  ( )  ()](  )   2(  )
+XXXYY
+E Y t Y ta  RabbR+ = +     +  =    
+ 
+   
+( )WSSRPyt→
+ 
+  ➢
+ 
+Linear transformation of WSSRP does not change its stationarity.  
+  ➢
+ 
+If WSSRP passed through LTI system, output is also a WSSRP.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.38 
+ 
+  
+[  ( )]    ()
+X
+E Y  ta    b=  +  
+ 
+  
+222
+0
+[( )](0)(0)   2(   )
+XXXXXX
+E Y   ta  Rb  RabR=++
+ 
+  
+22222
+( )( )0
+()2    [(   )]
+Y  tX  tXXX
+abab  RT   =   +      +−
+ 
+  
+22
+00
+(  )   ()(  )()()
+YYXXXXXX
+Rab   RabRTabRT =   + +−   ++
+ 
+  
+222
+00
+(  )(  )(  )()()   2
+YYXXXXXXXXX
+Ca Cb CabRTabRTab = + +−   ++   −   
+ 
+  
+[   (  )   ()][  ](  )
+XX
+E  X  n  X  n    kkRk+   =   =
+IIDRP  
+  
+2
+[   (  )   ()][(  ))(0)E  X  n X  n   kE  X    n    k+   ==
+ 
+    
+ A, 
+0
+→
+constant, 
+(0, 2  ) OR[,  ]UU       − 
+ 
+        
+0
+( )cos ()X  tAt=  +
+ 
+ 
+0
+[   cos ()]    0E  At  + =
+ 
+ 
+0
+[   cos ()]   0E  At ++  =
+ 
+ 
+22
+22
+()
+[( )],
+22
+Xt
+AA
+E  X    t=      =
+ 
+ 
+2
+0
+[   ( )   ()]cos(  )
+2
+XX
+A
+E  X  t  X  tR+ = =    
+ 
+ Cov 
+2
+0
+[   ( )   ()]cos
+2
+A
+X  t  X  t+ = 
+ 
+ 
+( ) : WSSRPXt+
+periodic with 
+0
+→()
+XX
+R
+will also be periodic with same T.P. 
+ERGODIC Random Process :  
+Time Avg = Statistical Aug.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.39 
+    
+1
+( )[   ( )]X  t  dtE  X  t
+T
+=
+
+ 
+ 
+Auto Correlation and its properties 
+Similarity between 2 Samples  
+Let 
+()Xt
+is WSSRP, 
+()Xt
+is observed 
+
+duration apart  
+ (1) 
+[   ( )   ()(  )
+XX
+E  X  t  X  tR+  =
+ 
+ (2) 
+(    )(  ) :
+XXXX
+RR− =
+Even  
+ (3) 
+(  )(0)
+XXXX
+RR
+ 
+ (4) 
+max
+{(  )}(0)
+XXXX
+RR==
+Maximum similarity  
+ (5) 
+0
+0
+(  )2(  )2(  )
+XXXXXX
+RdRdRd
+
+−−
+   =   =  
+
+ 
+ (6)  
+ (7)   
+ (8) 
+()Xt
+is power signal 
+    
+ (9) If 
+()Xt
+is ergodic and WSSRP, it has no periodic component  
+  
+[   ( )0
+X
+E  X  t=   
+ 
+  
+2
+||
+lim(  )lim(  )
+XXXXX
+RR
+→→
+  = =
+ 
+  If not ergodic but WSSRP then 
+2
+(0)[( )]
+XX
+RE X    t=
+,    
+2
+()
+XXX
+R 
+ 
+222
+()()
+(0)[()]
+XXXtXt
+REXt==+
+D.C power 
+of R.P
+A.C power 
+of R.P
+Total power 
+of R.P
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.40 
+Important point:  
+ 
+( )(  )X  tX
+   
+( )(   )X  tX   f
+ 
+ 
+(  )( )
+jt
+Xx t edt
+
+−
+−
+=
+
+  
+2
+(   )( )
+jft
+X   fx t edt
+
+−
+−
+=
+
+ 
+ 
+1
+( )(  )
+2
+jt
+x tXedt
+
+
+−
+=
+
+
+ 
+2
+( )(   )
+jft
+x tX   f  edt
+
+
+−
+=
+
+ 
+ 
+(0)( )Xx t  dt
+
+−
+=
+
+   
+(0)(   )xX   f  df
+
+−
+=
+
+ 
+ 
+1
+(0)(  )
+2
+xXd
+
+−
+= 
+
+
+  
+(0)( )Xx t  dt
+
+−
+=
+
+ 
+3.2. Parserval Theorem  
+     
+222
+()
+1
+( )|    (  ) ||    (   ) |
+2
+xt
+Ex   t  dtXdX   fdf
+
+−−−
+==   =
+
+
+ 
+ 
+ Energy spectral density 
+( )WSSRP, EngeryXt→
+ 
+       
+ 
+..
+[   ( )   ()](  )(  )
+FT
+XXXX
+E X  t  X  tRG+ =     ⎯⎯⎯→    
+ 
+           
+..
+(  )(   )
+FT
+XXXX
+RGf ⎯⎯⎯→
+ 
+    
+.
+ACF(   ( ))ESD[  ( )]
+FT
+X  tx t⎯⎯⎯
+ 
+      
+0
+(0)(  )2(  )
+XXXXXX
+GRdRd
+
+−
+=   =  
+
+ 
+ Zero freq. value of ESD = Area under ACF 
+.2
+()()|()|()
+FT
+XX
+xtXXG⎯⎯→=
+ESD
+2
+()()|()|()
+XX
+xtXfXfGf⎯⎯→=
+ESDof(t)x
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.41 
+      
+2
+[( )]
+Area under ESDG(  )
+1
+(0)(  )
+22
+XX
+XXXX
+E  Xt
+RGd
+
+
+−
+
+= =
+
+
+ 
+     
+(   )Area under ESDG(   )
+XXXX
+Gf  dff
+
+−
+=
+
+ 
+Energy Calculation :  
+      
+222
+1
+( )|    ( ) ||    (  ) ||    (   ) |
+2
+X
+E    tX  tdtXdX   fdf
+
+−−−
+==   =
+
+
+ 
+          
+1
+(  )(   )
+2
+XXXX
+GdGf   df
+
+−−
+=  =
+
+
+ 
+         
+(   )()
+XXXX
+GG =−
+ 
+Power spectral density – (PSD)  
+()Xt
+→ Power signal, WSSRP  
+     
+2
+1
+( )(  )lim|(  ) |
+PSD
+XXT
+T
+X  tSX
+T
+→
+⎯⎯→     =
+ 
+      
+2
+1
+( )(   )lim|(   ) |
+PSD
+XXT
+T
+X  tSfXf
+T
+→
+⎯⎯→=
+ 
+ (1) 
+[   ( )   ()](  )
+XX
+E  X  t  X  tR+  =
+   
+(  )(  )
+j
+XXXX
+SRed
+
+− 
+−
+ =
+
+ 
+ (2) 
+..
+ACF [   ( )]PSD[   ( )]
+FT
+X  tX  t⎯⎯→
+  
+  
+..
+()
+FT
+XXXX
+R⎯⎯→   
+    
+2
+(   )(  )
+jf
+XXXX
+SfRed
+
+−   
+−
+=
+
+ 
+ (3) 
+0
+(0)(  )2(  )
+XXXXXX
+SRdRd
+
+−
+=   =  
+
+ 
+  Zero freq. value of = Area under ACF  
+  PSD  
+ (4) 
+1
+(  )(  )(   )
+2
+jj
+XXXXXX
+RSedSf  edf
+
+
+−−
+ ==
+
+
+ 
+  
+1
+()
+2
+(0)
+()
+XX
+XX
+XX
+Sd
+R
+Sf  df
+
+−
+
+−
+
+
+
+
+
+=
+
+
+
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.42 
+ (5) 
+(  )(    ),(   )()
+XXXXXXXX
+RRSS =− =−
+ 
+ (6) Calculation of power  
+      
+2
+1Area under PSD
+()
+22
+[( )](0)
+(   )Area under PSD
+XX
+XX
+XX
+Sd
+E  X    tR
+Sf  df
+
+−
+
+−
+
+  =
+
+
+
+==
+
+
+=
+
+
+
+
+ 
+      
+2
+00
+1
+[( )](0)(  )2(   )
+XXXXXX
+E  X    tRSdSf  df
+
+== =
+
+
+ 
+Total power  
+     A.C. Power 
+22
+( ), D.C.Power( )
+X
+X  tt==
+ 
+Mean or Aug value  
+      
+0
+0
+1
+[   ( )](  )
+2
+XX
+E  X  tSd
++
+−
+= 
+
+
+ 
+       
+0
+0
+2
+()
+0
+0
+1
+()
+2
+[   ( )]
+()
+XX
+Xt
+XX
+Sd
+E  X  t
+Sf  df
++
+−
++
+−
+
+
+
+
+
+=    =
+
+
+→
+
+
+
+
+
+ 
+ Is non-zero only when impulse is not prelent at zero frequency 
+          
+0
+0
+2
+()
+0
+0
+11
+(  )(  )
+22
+(   )(   )
+XXXX
+Xt
+XXXX
+SdSd
+Sf   dfSf   df
+−
++
+−
++
+
+−
+
+−
+
+
+  +  
+
+
+
+=
+
+
++
+
+
+
+
+
+ 
+• If X (t) is real, PSD is also real.  
+• PSD is even.  
+• PSD is non-negative, 
+(  )    0;(   )    0
+XXXX
+SSf 
+ 
+ESD of Modulated Signal (Band Pass Signal)  
+      
+Base band R.P.
+( )(   )
+ESD
+XX
+X  tGf
+
+⎯⎯→
+ 
+   
+Band pass R.P.
+( )( ).cos 2
+cc
+Y  tX  t   Af t
+
+=
+   
+(   )[   ()()]
+2
+c
+cc
+A
+Y   fX   ffX   ff=+   +−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.43 
+ Or 
+2
+(   )   |   (   ) |
+ESD
+YY
+GfY  f⎯⎯→=
+ 
+  
+2
+( ).    sin 2(   )   |   (   ) |
+ESD
+ccYY
+X  t  Af tGfY  f  ⎯⎯→=
+ 
+  
+2
+(   )[()()]
+4
+c
+YYXXcXXc
+A
+GfGffGff=−   ++
+ 
+cm
+ff
+ 
+  
+2
+(  )(  )cos 2
+2
+c
+YXc
+A
+RRf T =
+ 
+PSD of Modulated Signal (Bandpass Signal)  
+()Xt→
+power single  
+       
+( )cos (2).   ( )(   )PSD
+ccYY
+Y  tAf t   X  tSf=→→
+ 
+         
+2
+|(   ) |
+(   )lim
+T
+YY
+T
+Yf
+Sf
+T
+→
+=
+ 
+         
+222
+|() ||() |
+(   )limlim
+4
+cTcTc
+YY
+TT
+AXffXff
+Sf
+TT
+→→
+
+−+
+
+=+
+
+
+
+ 
+      
+2
+(   )[()()]
+4
+c
+YYXXcXXc
+A
+SfSffSff=−   ++
+ 
+      
+2
+(  )(  )cos 2
+4
+c
+YYXXc
+A
+RRf = 
+ 
+ 
+      
+2
+(  )(  )cos
+2
+c
+YXc
+A
+RR =    
+   
+2
+(  )(  )cos
+2
+c
+YXc
+A
+RR =    
+ 
+      
+2
+(   )[()()]
+2
+c
+YXcXc
+A
+SfSffSff=−   ++
+ 
+2
+(   )[()()]
+4
+c
+YXcXc
+A
+SfSffSff=−   ++
+ 
+3.3. Cross Correlation  
+( ); WSSRP,   ( ) : WSSRPX  tY  t
+ 
+ 
+[   ( )  ()]( ,)(  )
+XYXY
+E  X  t Y  tRt tR+  =+  =
+ 
+ 
+[  ()   ( )](    )
+YX
+E Y  tX  tR+ =    −
+ 
+ 
+(  )(    )
+XYYX
+RR =    −
+ 
+• 
+(  )()
+XYYX
+RR     −
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.44 
+• 
+(  )(   )May/may not be
+XYXY
+RRf =→
+ 
+• 
+(  )(0)(0)
+XYXXYY
+RRR
+ 
+• 
+1
+|(  ) |(0)(0)
+2
+XYXXYY
+RRR =+
+ 
+Cross Covariance  
+ 
+(  )(  )
+XYXYX    Y
+CR =     − 
+ 
+ 
+(  )(  )
+YXYXY    X
+CR =     − 
+ 
+Cross Spectral Density  
+       
+.
+(  )(   )
+FT
+XYXY
+RSf ⎯⎯→
+ 
+       
+.
+(  )(   )
+FT
+YXYX
+RSf ⎯⎯→
+ 
+If RP X (t) and Y (t) are orthogonal-  
+      
+[   ( )  ()](  )    0(    )
+XYYX
+E  X  t Y  tRR+  = =  =    −
+ 
+      
+[  ( )   ()](  )    0(    )
+YXXY
+E Y  t  X  tRR+  =     =  =−
+ 
+ ➢ X(t) and Y(t) are uncorrelated and atleast one of them have zero mean-  
+  
+[   ( )]   0or   [  ( )]   0E  X  tE Y  t==
+ 
+  cov
+[   ( )  ()]   0X  t Y  t+  =
+ 
+  
+(  )(  )0
+XYXYX    Y
+CR = −  =
+ 
+  
+(  )    0
+XY
+R=
+ 
+  
+(  )(  )    0
+XYYX
+RR =     =
+ 
+ ➢  X(t) and Y(t) are independent R.P. and atleast one of them have zero mean.  
+  Cov 
+[   ( )  ()]   0X  t Y  t+  =
+ 
+  
+(  )(  )0
+XYXYX    Y
+CR = −  =
+ 
+  
+(  )    0
+XY
+R=
+ 
+  
+(  )    0(  )
+YXXY
+RR =  =
+ 
+Combination of WSSRP  
+       
+( )( )( )Z  tX  tY  t=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.45 
+          
+(  )(  )(  )(  )(  )
+ZZXXXYYXYY
+RRRRR = +              
+ 
+        
+(   )(   )(   )(   )(   )
+ZZXXYYXYYX
+SfSfSfSfSf=+
+ 
+If orthogonal [X (t) and Y (t)] then 
+      
+(  )(  )    0
+YXXY
+RR = =
+ 
+      
+(   )(   )    0
+YXXY
+SfSf==
+ 
+Transmission of WSSRP through in LTI system  
+         
+        
+
+()
+X
+E  X  t=
+   
+
+0
+( )(  )
+X
+E Y tH
+=
+=    
+ 
+          
+(0)
+YX
+H = 
+    
+If x(t) is zero mean WSSRP then y(t) is also zero mean WSSRP  
+     
+(  )(  )(  ) and(   )(   )   (   )
+XYXXXYXX
+RRhSfSf  H   f =    =
+
+ 
+     
+(  )(  )(    ) and(   )(   )   ()
+YXXXYXXX
+RRhSfSf  Hf =    −=−
+
+ 
+     
+(  )(  )(  )(    )
+YYXX
+RRhh =      −
+
+ 
+     
+( )(   )   (   )   ()
+YYXX
+StSf  H   f  Hf=−
+   if h(t) = real 
+       
+2
+PSDof O/PPSDof i/p
+(   )(   ) |    (   ) |
+YYXX
+SfSfH  f
+
+=
+   
+(   )()H  fHf=−
+ 
+Power of Y(t)  
+     
+22
+[( )](   )|    (   ) |(   )
+YYXX
+E Y   tSf  dfH  fSf  df
+
+−−
+==
+
+ 
+ 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.46 
+4 
+DIGITAL 
+COMMUNICATION 
+  
+4.1. Sampling  
+Sampling converts C.T.S into D.T.S, it retains analog or digital nature of signal. 
+ 
+( ) :Ct
+ Impulse Train – Instantaneous or Ideal sampling 
+( ) :Ct
+ Rectangular Pulse Train : Natural sampling or Flat Top sampling. 
+Ideal instantaneous sampling  
+ 
+     
+( )()  ()
+sss
+n
+m   tm  nTt    nT
+
+=−
+= −
+
+ 
+      
+( )(   ) |(  )m tM   fM=
+ 
+         
+(  )()
+sss
+n
+MfMn
+
+=−
+ =− 
+
+ 
+         
+(   )()
+sss
+n
+MffM   fnf
+
+=−
+=−
+
+ 
+ 1. If a low pass signal is sampled at 
+2
+sm
+ff
+ then it can be recovered from its samples, when 
+  
+(2)()
+smmcsm
+ffffff       −
+ 
+  
+()
+s
+PBG    T=
+ 
+  
+c
+f=
+ cut off free of ideal LPF at RX 
+ 2. 
+2,
+sm
+ff=
+ the sampled signal 
+()
+s
+mt
+can be recovered into 
+()mt
+if,  
+  
+(2)()
+smcm
+ffff=   =
+ Ideal LPF 
+  
+()
+s
+PBG    T=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.47 
+ 3. 
+2,
+sm
+ff
+ under sampling,  
+  
+:
+X
+T
+ Replace generation with ALIASING 
+  
+:
+X
+R
+ Recovery not possible 
+  ➢ ALIASING is overlapping of adjacent replica’s in sampled signal. 
+4.1.1. Low pass Sampling Theorem  
+A low pass sampling signal band limited to 
+max
+Hz,f
+ 
+can be sampled and recovered from its samples when and only when  
+ 
+max
+2
+s
+ff
+  at 
+X
+T
+   Proper LPF at 
+X
+R
+   
+ No Aliasing          Recovery  
+Nyquist Rate and Nyquist Internal  
+ Let 
+()mt
+ is lowpass signal bandlimited to 
+max
+f
+ Hz. 
+ 
+max
+2
+NY
+ff=
+     
+max
+11
+2
+NY
+NY
+T
+ff
+==
+     
+ 
+minmax
+(    )2minsampling rate which ensure to aliasing
+s
+ff=→
+ 
+ 
+( )( ) cos( )    ()
+ccm
+S  tm ttff=   =   +
+ 
+      
+(max)
+s
+f
+
+ 
+ 
+2()
+RcmNY
+Nfff=+   =
+ 
+ 
+1
+2()
+JNY
+cm
+NT
+ff
+==
++
+ 
+Combination of Two signals – 
+ 
+1max12max2
+( ),( )x  tff   x   tff→    →→    →
+ 
+  
+ 
+( ) :cos,sin
+mmmmm
+m t    At  Atf  →
+ 
+ 
+( ) :()0,    , 2    ,3
+ssss
+n
+c tt    nTfff
+
+=−
+  −    →
+
+ 
+ 
+( )( )  ( )    0,, 2, 3
+smsmsmsm
+m  tm t  c tfffffff==  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.48 
+Sampling of signal by using general carrier pulse train  
+ 
+( )(   ) or     (  )m tM  fM⎯⎯→
+ 
+ 
+( )(   )(),   (  )2()
+nsns
+nn
+c tc  fCfnfCCn
+
+=−=−
+⎯⎯→    =  − =   − 
+
+ 
+ 
+( )(   )(),(  )()
+ssnssns
+nn
+M   tMfC  M   fnfMC  Mn
+
+=−=−
+==− =− 
+
+ 
+ 
+       
+0
+Area in 
+s
+s
+T
+C
+T
+=
+ 
+ Recovery – 
+:
+X
+T
+ 
+2
+sm
+ff
+ 
+: LPF
+X
+R=
+ Proper 
+c
+f
+ 
+       
+( )( )y tm t=
+ 
+0
+1
+PBG
+C
+=
+ 
+ If 
+()ct
+ is rectangular pulse  
+ 
+ ➢ 
+()mt
+is lowpass – 
+  
+22
+( )( )   ( )(   )sin()
+sss
+n
+An
+m   tc t  m tMfCM   fnf
+aa
+
+=−
+
+=→=−
+
+
+
+ 
+  Recovery-
+(2)()
+smmcsm
+ffffff       −
+ 
+PBG of LPF 
+()yt
+ 
+1 C
+0
+m(t)  
+0
+1
+C
+ 
+M(t)  
+K 
+0
+()KC  m t
+ 
+  
+0
+Area in 
+s
+s
+T
+C
+T
+=
+ 
+  ➢ m(t) is sinusoidal – 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.49 
+      
+( )cos 2
+mmm
+m tAf  tf=  ⎯⎯→
+ 
+        
+( )    0,    , 2    ,
+ss
+c tff=
+ except  
+2
+Ka
+n=
+ 
+,0K    I  K
+ 
+      
+( )    0,, 2,
+smsmsm
+m   tfffff=  
+ 
+  If c(t) is Triangular-Frequency absent 
+n    Ka=
+  
+0,KK    I
+ 
+ ➢ Rest of the things same as Rectangular pulse 
+Bandpass Sampling : 
+m(t) is lowpass signal. 
+      
+2
+H
+s
+f
+f
+K
+=
+ 
+H
+HL
+f
+K
+ff
+=
+−
+      
+2
+H
+NRf=
+ 
+Previous Integer      
+   
+H
+f=
+Maximum frequency component of Bandpass signal  
+Natural Sampling  
+ m(t): Low pass sampling 
+ c(t):  Train of finite duration pulse or rectangular pulse 
+   
+(   )()
+sns
+n
+M    fC  M   fnf
+
+=−
+=−
+
+ 
+Flat Top Sampling  
+Instantaneous sampling followed by a filter. 
+ 
+      
+( )()  ()
+ss
+n
+y tm  nT   h t    nT
+
+=−
+=−
+
+ 
+Quantizer  
+ 
+ Discretizes amplitude axis, analog to digital signal. 
+  Dynamic Range of 
+maxmin
+( )    ()x txx=−
+ 
+  Q input :       Q : output : 
+ˆ
+()xt
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.50 
+ 
+       
+1.25    0( )    2.5
+ˆ
+()
+3.25   2.5( )    4
+xt
+xt
+xt
+
+
+=
+
+
+
+ 
+  ➢ Many to one circuit. 
+Uniform Quantizer  
+         
+11
+DR of 
+L
+mm
+Q
+LL
++
+−
+ ==
+ 
+ 
+123
+ =  = 
+ 
+ L =  Number of quantization level of Q. 
+Non uniform Quantizer  
+ 1.   
+1231iiL+
+ =       =      
+ 
+ 2.   
+1231iiL+
+              
+ 
+Quantizer Error –   
+ 
+ˆ
+( )(   )XQX    Q X⎯⎯→   ⎯⎯→  =
+ 
+ 
+Q.E.P 
+22
+[]
+QEQE   QE
+E  XxfqE  dqE
+
+−
+
+=
+
+
+  
+When PDF of QE is given. 
+      
+222
+ˆ
+ˆ
+()()(  )
+QEX
+E  XE    XXx    x    fx  dx
+
+−
+      
+=−=    −
+      
+
+  
+When PDF of R.V at input of Quantizer (X) is given. 
+(a) PDF is uniform  
+  
+2
+22
+2
+3
+12
+123
+121212
+QE
+E  XAAA
+
+
+
+=     +     +     +
+
+ 
+           
+2
+1
+12
+
+=
+ [Area of region in which step size is 1] + 
+2
+2
+12
+
+ [Area of region in which step size is 2] +  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.51 
+ If quantization is uniform  
+2
+2
+12
+QE
+EX
+
+
+=
+
+ 
+(b) PDF is stair case  
+22
+2
+12
+12
+1212
+QE
+E  XAA
+
+
+=     +     +
+
+ 
+(c) PDF is non uniform   
+22
+2
+12
+12
+1212
+QE
+E  XAA
+
+
+=++
+
+ 
+      
+2
+2
+Signal power[]
+QE
+EX
+SQNR
+Q  E  P
+EX
+==
+
+
+
+ 
+      
+10
+()10log
+dB
+SQNRSQNR=
+ 
+4.2. Pulse Transmission  
+1.   Rectangular Pulse  
+ 
+  ➢    Bandwidth of wired channel for 
+X
+T
+ of single pulse of duration 
+:
+b
+T
+ 
+   
+(BW)
+b
+R
+ 
+2.   Since pulse  
+ 
+  ➢   BW of wired channel for T
+X
+ of single 
+sinC
+pulse having zero cross over or integer multiple of T
+b
+. 
+   
+(BW)
+2
+b
+R
+
+ 
+   Tb: Bit interval
+ 
+   
+:
+b
+R
+ Bit rate → Bit/sec 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.52 
+  ➢    Minimum transmission BW of a wired channel for baseband transmission is 
+2
+b
+R
+=
+ 
+   Number of levels 
+2
+n
+L
+  
+max
+2
+n
+L=
+  
+   n is used to represent binary power quantization level. 
+M-ary Scheme  
+      
+2
+N
+M=
+ 
+ M  Number of different symbols of duration 
+b
+NT
+ each. 
+      
+:
+sb
+TNT=
+Symbol duration 
+      N =  Number of bits combined in binary sequence at a time  
+Pulse Code Modulation  
+ Bit rate,    
+ bits/sec
+bs
+Rnf=
+ 
+ 
+,
+22
+QE
+−
+    
+  
+2
+2
+()
+12
+Ey
+
+=
+ 
+ If Mid point Mapping is used. 
+      
+of signalof DRDRQ
+LL
+ ==
+ 
+ 
+2
+n
+L
+  
+22
+e
+Q
+−
+
+  
+max
+2
+e
+Q
+
+=
+    
+min
+of signal
+2
+n
+DR
+=
+ 
+        
+222
+[][](  )
+QEQEY
+PE  XE  yy  fy  dy===
+
+ 
+ When PDF of Q. Eis given. 
+     
+1
+2
+ˆ
+()(  )
+i
+i
+m
+L
+QNQEiX
+iL
+m
+PPx    xfx  dx
++
+=
+=    =−
+
+
+ 
+ When PDF of X is given. 
+ If 
+2
+,
+2    212
+eQE
+QUP
+− 
+
+==
+
+
+ 
+     
+2
+12
+s
+SQNRP=
+
+  
+ Bit Interval    
+1
+b
+b
+T
+R
+=
+ 
+ 
+B.W
+b
+R
+ → Rectangular Pulse 
+ 
+B.W
+2
+b
+R
+
+ → Since Pulse 
+ 
+min
+(B.W)(BW)
+2
+b
+PCM
+R
+==
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.53 
+Signal to Quantization Noise Power  
+ 
+()mt→
+ Single tone sinusoidal  
+ 
+( )cos
+mm
+m tAt=
+ 
+ 1. 
+2
+2
+()
+2
+m
+s
+A
+Pm   t==
+ 
+ 2. 
+2
+2
+2
+()
+3
+m
+s
+A
+Pm   t
+L
+==
+ 
+ 3. 
+2
+m
+A
+L
+=
+ 
+ 4. 
+2
+3
+2
+SQNRL=
+ 
+ 5. 
+10
+()(1.76   20log)
+dB
+SQNRL  dB=+
+ 
+ 6. 
+max
+3
+()4
+2
+n
+SQNR=
+ 
+ 7. 
+max
+()(1.76   6  )SQNRdBn  dB=+
+ 
+x(t) is uniformly distributed [–A
+m
+, A
+m
+]  
+ 1. 
+2
+3
+m
+s
+A
+P=
+ 
+ 2. 
+2
+2
+3
+m
+QE
+A
+P
+L
+=
+ 
+ 3. 
+2
+m
+A
+L
+=
+ 
+ 4. 
+2
+SQNR    L=
+ 
+ 5. 
+10
+()20log
+dB
+SQNRL=
+ 
+ 6. 
+()6  dB
+dB
+SQNRn
+ 
+ 7. 
+max
+()dB    6  dBSQNRn=
+ 
+Key point:  
+ 1.   
+2
+3
+2
+SQNRL=
+ 
+ 2.    
+max
+3
+()4
+2
+n
+SQNR=
+ 
+        If n 
+nk→
+ 
+        
+max
+()4
+k
+SQNR
+
+→
+ 
+bs
+Rnf=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.54 
+ 3.    
+max
+()(1.76   6  )SQNRn  dB=+
+  
+  
+nn   k→
+ 
+  
+max
+()6SQNRdB→
+ 
+ 4.     n given : 
+2
+n
+L=
+  
+ 5.
+     
+ 6.
+   
+ 7.    n calculation : 
+min
+n
+ 
+ 8.   Default 
+()mt=
+ Sinusoidal 
+Drawback of PCM  
+   
+2
+BW,
+212
+s
+QE
+nf
+P
+
+==
+ 
+   
+nLPQEBW ⎯⎯→  ⎯⎯→ ⎯⎯→     ⎯⎯→   
+ 
+   
+nLPQEBW ⎯⎯→  ⎯⎯→ ⎯⎯→     ⎯⎯→   
+ 
+4.3. DPCM (Differential Pulse Code Modulation)  
+4.3.1. PCM vs DPCM 
+ 1.     fix for Both Q – 
+   
+(BW)(BW)
+PCMDPCM
+
+ 
+   
+()()
+PCMDPCM
+SQNRSQNR=
+ 
+   D.R at input of Q of PCM is greater than DPCM. 
+ 2.     L fix for Both Q – 
+   
+(BW)(BW)
+PCMDPCM
+=
+ 
+   
+()()
+PCMDPCM
+SQNRSQNR
+ 
+ 3. In case of DPCM the difference between current sample and predicted value of current sample is Quantized, Encoded, 
+Line Coded and Wired 
+.
+Xed
+T
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.55 
+Delta Modulator  
+• The recovered signal is “stair-case” approximation of t
+Xed
+ original analog message signal. 
+• Stairs are added or substracted of sampling instance. 
+• Size of each stair is  = Step size of stairs 
+Tracking Error in DM. 
+1.    Slope overload Error  
+     
+max
+()
+s
+dm t
+dtT
+
+
+  Occurance of S.O.E 
+ ➢ To avoid SOE, 
+ 
+ by keeping 
+s
+T
+ constant such that – 
+  
+max
+()
+s
+d
+mt
+dtT
+
+
+   For sinusoidal 
+( )cos
+mn
+m tAt=
+ 
+  
+s
+m
+m
+f
+A
+
+
+
+ 
+2. Granular Error  
+ It occurs when  is large. 
+ ➢ To remove it → small 
+  If 
+,SOE
+G.E 
+
+ and vice versa. 
+SQNR in DM  
+        
+2
+2
+3
+QEQE
+PE  X
+
+
+==
+
+ 
+ 1. SQNR 
+2
+3
+ss
+QE
+PP
+P
+==
+
+  
+H
+f=
+ cut off frequency of LPF 
+ 2. 
+22
+33
+()
+ssss
+D
+mH
+PfPf
+SQNR
+ff
+=      =   
+
+ 
+ 3. 
+max
+()( )SQNRm t+
+ is sinusoidal + SOE avoid 
+2
+3
+80
+s
+m
+f
+f
+
+=
+
+
+ 
+ 4. 
+max
+[()   ]( )
+D
+SQNRm t+
+ is sinusoidal + SOE avoid 
+3
+3
+80
+s
+m
+f
+f
+
+=→
+
+
+ By default. 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.56 
+5 
+DIGITAL RECEIVER 
+ 
+5.1. Introduction 
+()Xt→
+ Deterministic signal process 
+()Nt→
+ random signal process 
+ 
+ 
+ 1. If but 1 is taxed → Receiver must recover but ‘1’. 
+ 2. If but 0 is taxed → Receiver must recover but ‘0’. 
+Output of Sampler: 
+    
+0101
+010
+0202
+1
+0
+X
+X
+SNT
+YSN
+SNT
++
+
+=   +   =
+
++
+
+   Channel noise is signal dependent 
+    
+010
+00
+020
+1
+0
+X
+X
+SNT
+YSN
+SNT
++
+
+=  +   =
+
++
+
+   Channel noise is signal independent 
+BER Calculation : 
+    
+101
+(1)(   ( ) :)(( ) : Reception)
+XX
+P   TP S   t   TP Stp==
+ 
+    
+202
+(0)(    ( ) :)(( ) : Reception)    (1)
+XX
+PTP S   t   TP Stp==  −
+ 
+At the input of decision device a condition R.V. is obtained  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.57 
+ 
+0
+Pdf
+N⎯⎯⎯→
+ 
+ 
+      
+      
+     
+ 
+:Y
+ Decide in favour of 1, or decides that bit 1 would have been Txed by Txer 
+ 
+:Y
+ Decide in favour of 0, or decides the bit 0 would have been Txed by Txer. 
+Average Bit Error Rate :  
+       
+       
+Problem Solving Technique: 
+Case 1: When PDF of Noise [noise R.V. at i/p of D.D] is given 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.58 
+ (a)  is given 
+          
+10
+(0)(1)
+01
+eXX
+XX
+PPT    PP   T    P
+TT
+    
+=+
+    
+    
+ 
+    
+0
+01
+010001
+1
+[  (0)]()()(    )
+0
+XN
+X
+S
+PP YTP SNP  NSfno dno
+T
+
+−
+
+= =+    =−    =
+
+
+
+ 
+    
+02
+0
+020002
+0
+[  (1)]()()(    )
+1
+S
+XN
+X
+PP Y    TP SNP NSfno dno
+T
+−
+−
+
+= =+    =−    =
+
+
+
+ 
+  (b) 
+calculate
+opt
+→
+, 
+mine
+P
+→ calculate 
+Steps 1 : 
+ 1. Identify conditional PDF of conditional R.V. from the noise R.V. pdf (pdf of No.) 
+      
+010
+020
+1
+0
+X
+X
+SNT
+Y
+SNT
++
+
+=
+
++
+
+ 
+ 2. Plot the conditional PDF one over another 
+ 3. Identify the overlapping or common region and decide range of  
+  
+12
+()    
+ 
+ 4. Choose any arbitrary  in the above range and calculate 
+()
+ee
+PP=
+ 
+ 5. 
+(  ) Vs
+e
+P
+ 
+  (i) 
+(  ) Vs
+e
+P
+ : Independent of  
+ 
+   (a) 
+12
+     →
+ optimum  is every 
+12
+(:)    
+ 
+   (b) 
+(min)e
+PA=
+ 
+  (ii) 
+(  ) Vs    :
+e
+P
+ Linear 
+ 
+   
+121opt
+  →  =
+ 
+   
+min
+(  )()
+eeopt
+PP   =  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.59 
+  (iii) 
+(  ) Vs    :Pe
+ Non linear 
+ 
+   
+min
+()
+eopte
+PP =   =
+ 
+  (iv) If no overlapping region b/w conditional PDF 
+   
+(  )    0
+e
+P =  →
+ BER is 0 
+Case 2: When PDF of conditional R.V. Y is gives at the input of the decision device 
+ 
+  (a) 
+10
+(0)(1)
+01
+eXX
+XX
+PPTPP   TP
+TT
+   
+=+
+   
+   
+ 
+   
+1
+(  (0))(  )
+00
+Y
+X
+XX
+f
+PP YTy dy
+TT
+
+
+
+= =
+
+
+
+ 
+   
+0
+[(1)](  )
+11
+Y
+X
+XX
+f
+PPTy dy
+TT
+
+−
+
+= =
+
+
+
+ 
+  (b)  Same as case 1 (b) 
+ 
+MAP Analysis (Maximum A posteriori Analysis) 
+• MAP receiver always calculate min 
+e
+P
+. 
+• Calculation of 
+using
+opt
+
+ 
+       
+(  )    0
+e
+d
+P
+d
+=
+
+ 
+MAP Analysis  
+       
+()0
+e
+d
+P
+d
+=
+
+opt
+min
+()
+ee
+PP==
+opt
+
+Given
+Calculate
+Calculate
+Calculate
+→
+e
+P→
+opt
+→
+min
+e
+P→
+1
+X
+T
+P
+Y
+
+
+
+"1"
+
+
+"0"
+0
+X
+T
+P
+Y
+
+
+
+(1)()
+1
+X
+X
+y
+PTfy
+T
+"1"
+
+
+"0"
+(0)()
+0
+X
+X
+y
+PTfy
+T
+y
+
+
+"1"
+"0"
+
+opt
+=
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.60 
+ML Analysis : (Maximum Likelihood Analysis )  
+ It is same as MAP analysis When 
+1
+(0)(1)
+2
+XX
+PTP   T==
+ 
+ If noise is independent of signal then PDF of conditional R.V at input of decision device will have. 
+      
+Key point : 
+(0)(1)
+XX
+PTP   T
+ 
+ 1. Noise is signal dependent/independent 
+minmax
+      
+, 
+  
+minmax
+2
+   +
+=
+ 
+  
+(0)(1)
+XX
+PTP   T
+ 
+opt
+  
+ 
+  
+(1)(0)
+XX
+P   TPT
+ 
+opt
+  
+ 
+ 2. If noise is signal dependent 
+   
+010
+020
+1
+0
+X
+X
+SNT
+Y
+SNT
++
+
+=
+
++
+
+ 
+  
+1
+(0)(1);
+2
+XXopt
+PTP   T==     = 
+ 
+  Only when Y is having Non uniform PDF. 
+  
+1
+(0)(1)
+2
+XX
+PTP   T=
+; 
+;   (0)(1)
+optXX
+P    TP   T  
+ 
+  
+;   (0)(1)
+optXX
+P    TP   T  
+ 
+When channel noise is Gaussian Random Process 
+          
+10
+(0)(1)
+01
+eXX
+XX
+PPTPP   TP
+TT
+
+
+=+
+
+
+    
+ 
+Method 1 : 
+     
+[0]
+1
+[  [0]]
+0[0]
+yX
+X
+XyX
+T
+PP YTQ
+TT
+−
+
+
+= =
+
+
+
+
+
+
+ 
+     
+(1)
+0
+1
+1[1]
+yX
+XyX
+T
+PQ
+TT
+−
+
+
+=−
+
+
+
+
+
+
+ 
+()
+0
+Y
+X
+f
+y
+T
+()
+1
+Y
+X
+f
+y
+T
+Same Width
+Same Height
++
+Shifted to different
+parameters
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.61 
+Method 2 : 
+     
+
+
+0
+0
+02
+020
+()
+1
+[0]
+0
+N
+X
+XN
+S
+PP  y    TP  SNQ
+T
+−    −
+
+
+= =+    =
+
+
+
+
+
+
+ 
+     
+
+
+0
+0
+01
+010
+()
+0
+[1]1
+1
+N
+X
+XN
+S
+PP  y   TP  SNQ
+T
+−   −
+
+
+= =+    = −
+
+
+
+
+
+
+ 
+ If PDF of noise at the input of D.D is given along with 
+
+– 
+     
+
+2
+1
+[0](  )
+00
+Y
+x
+XX
+fy
+PP  y    Ty dy    Q
+TT
+
+
+−
+
+
+= ==
+
+
+
+
+
+
+ 
+     
+
+2
+0
+[1](  )1
+11
+Y
+x
+XX
+fy
+PP  y   Ty dyQ
+TT
+
+−
+−
+
+
+= == −
+
+
+
+
+
+
+ 
+ 
+ optimum 
+ 1. Differentiation :  
+()
+e
+PQ=
+, 
+(  )    0
+eopt
+d
+P
+d
+ =  →
+
+ 
+ 2. Map Analysis :  
+(  )    0
+eopt
+d
+P
+d
+ =  →
+
+ 
+      
+2
+12
+12
+(0)
+ln
+2()(1)
+X
+opt
+X
+PT
+y
+PT
+ +
+
+
+  =+
+
+ −
+
+ 
+      Channel noise is Gaussian, signal and channel noise are independent 
+      
+min
+(  )()
+eeopte
+PPP =     =
+ 
+ 3. ML Analysis : 
+1
+(0)(1)
+2
+XX
+PTP   T==
+ 
+      
+12
+2
+opt
+ +
+=
+ 
+      
+12
+min
+|
+2
+e
+y
+PQ
+ −
+
+=
+
+
+
+ 
+Schwartz Inequality 
+    
+2
+22
+1212
+(   )(   )(   )(   )X    f  Xf  dfX    fdfXfdf
+
+−−−
+
+
+ 
+ 
+0max()()
+()
+stht
+PSEE=
+Max. signal power
+at sampling
+instance
+Signal energy
+at input of filter
+Energy of
+()ht
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.62 
+      
+2
+()
+()
+st
+ES  fdf
+
+−
+=
+
+ 
+     
+2
+()
+()
+ht
+H  fdfE
+
+−
+=
+
+ 
+ 
+     
+0
+2
+2
+0
+( )0
+( )(   )
+2
+Nt
+N
+PE  NtH  fdf
+
+−
+
+==
+
+
+ 
+       
+2
+0
+0( )
+()
+2
+ht
+N
+E  N    tE
+
+=
+
+ 
+       
+()
+max
+0
+()
+(/ 2)
+st
+E
+SNR
+N
+=
+ 
+         Only when 
+2
+(   )   [  (   )]*
+jfT
+H  fS  f  e
+
+=
+ 
+        
+max
+Energy of i/p pulse
+()at
+PSD of i/p white noise
+NSRt    T==
+ 
+For General Noise 
+        
+2
+(   )(   )*
+jfT
+H  fS  f  e
+
+
+=
+
+ 
+When      
+
+0
+0
+0
+( )( )
+max
+max
+()
+()
+S
+s  th t
+N
+N
+P
+EE
+SNR
+P
+Sf  df
+
+−
+
+==
+
+ 
+          
+0
+2
+(   )(   )(   )
+NN
+SfH   fSf=
+ 
+5.2. Optimum Filter 
+            
+2*2
+(   )(   )()
+jfTjfT
+H  feS    feSf
+−  −  
+==−
+ 
+        
+( )()h tS T    t=−
+ 
+ T = Sampling instance 
+    = Duration of incoming pulse 
+()ht
+WSSRP
+F.T.
+()
+W
+Rt
+()
+W
+Sf
+ACF
+0
+()Nt
+WSSRP
+F.T.
+0
+()
+N
+R
+0
+()
+N
+Sf
+ACF
+tT=
+()Wt
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.63 
+Unit impulse response of optimum filter 
+    Optimum filter = matched filter  Maximizes signal power at sampling instances. 
+Properties of MF  
+ S(t) is an energy pulse of duration T. 
+ 1. 
+( )()h tS T    t=−
+ 
+ 2. 
+( )()S th T    t=−
+ 
+ 3. 
+0
+( )(  )( )
+*
+S   tS Th t=
+ 
+ 4. 
+0
+( ),   ( ),( )S  t    h t    S   t
+ are energy signal 
+ 5. 
+0
+max
+( )( )( )
+Sh
+E   tE   tS   t==
+ 
+ 6. 
+max
+()SNR
+ at 
+0
+()
+(/ 2)
+s
+Et
+tT
+N
+==
+ 
+ 7. 
+12
+( )( )
+Ss
+E    tE    t
+ then 
+12
+PePe
+ 
+ 8. 
+2
+2
+0
+(   )(   )
+jfT
+S    fS  fe
+−
+=
+ 
+  
+2
+( )(   )(   )(   )
+s
+S tS  fS  fG   f=
+ 
+  
+..
+(  )(   )
+FT
+ss
+RG   f ⎯⎯→
+ 
+  
+
+..
+( )( )
+FT
+ACF  S tPSD  S t⎯⎯→
+ 
+  
+2
+..
+(  )(   )
+FT
+s
+RS  f ⎯⎯→
+ 
+  
+2
+..
+2
+00
+(  )()(   )(   )
+FT
+jfT
+s
+SRTS  feS    f
+−
+ =   −  ⎯⎯→=
+ 
+Matched Filter Output 
+     
+10
+00
+20
+( )( )    : 1
+( )( )( )
+( )( )   : 0
+X
+X
+a  tN   tT
+y tS   tN   t
+a   tN   tT
++
+
+=+=
+
++
+
+ 
+Channel Noise is White  
+    Let 
+1
+(0)(1)
+2
+XX
+PTP   T==
+ 
+     
+12
+min
+[]
+22
+y
+aa
+x
+PeQQ
+−
+
+
+==
+
+
+
+
+
+ 
+2
+x
+xQ
+
+
+
+
+ 
+Maximization of 
+2
+x
+ 
+     
+2
+12
+2
+max
+0
+(   )(   )
+(/ 2)
+S   fSfdf
+x
+N
+
+−
+−
+=
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.64 
+When     
+
+*
+2
+12
+(   )(   )(   )
+jfT
+H  fS   fS    f    e
+
+
+=−
+
+, 
+2
+12
+(   )(   )
+d
+ES   fS    fdf
+
+−
+=−
+
+ 
+       
+max
+0
+2
+d
+E
+x
+N
+=
+ 
+        
+12max
+0
+2
+( )()():
+d
+E
+h tS  T    tS   T    tx   x
+N
+=    −  −−  →=
+ 
+     
+12
+min
+|
+2
+e
+y
+aa
+PQ
+−
+
+=
+
+
+
+ 
+     
+min
+|
+2
+e
+x
+PQ
+
+=
+
+
+      
+max
+min   min
+|
+2
+e
+x
+PQ
+
+=
+
+
+ 
+    
+min   min
+0
+|
+2
+d
+e
+E
+PQ
+N
+
+=
+
+
+
+ 
+➢ Only when, 
+(0)(1)   1 / 2
+XX
+PTP   T==
+ 
+➢ AWGN, 
+opt
+→
+ 
+➢
+  M.F 
+For K noise R.V 
+     
+
+12
+min
+()
+|
+2
+e
+aa
+PQK
+
+−
+=
+
+
+
+ 
+    
+min   min
+0
+|
+2
+d
+e
+E
+PQK
+N
+
+=
+
+
+
+ 
+1. 
+ 
+      
+22
+( )4
+db
+Ed   t  dtA T
+
+−
+==
+
+ 
+    
+12
+( )( )( )d  tS   tS   t=−
+2A=
+ 
+        
+0
+b
+tT
+ 
+()ht
+.MF
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.65 
+      
+2
+0
+2
+b
+e
+AT
+PQ
+N
+
+
+=
+
+
+ 
+      
+0
+2()
+b  avg
+e
+E
+PQ
+N
+
+=
+
+
+
+ 
+     
+2
+()
+b  avgb
+EA T=
+ 
+      
+2
+bb
+EA T=
+ 
+2.  
+ 
+      
+0
+b
+e
+E
+PQ
+N
+
+=
+
+
+
+ 
+     
+()
+2
+b
+b  avg
+E
+E=
+ 
+      
+2
+0
+2
+b
+e
+AT
+PQ
+N
+
+
+=
+
+
+ 
+M-ary Base Bond Signaling  
+ 1. Bit rate : 
+b
+R
+ 
+ 2. Bit interval 
+1/
+bb
+TR==
+ 
+ 3. Symbol duration 
+sb
+TNT==
+ 
+ 4. Symbol rate or Baud or Baud rate 
+11
+b
+s
+sb
+R
+R
+TNTN
+=  =    =
+ 
+ 5. 
+X
+T
+ Bandwidth 
+()
+s
+BWR→
+ Rectangular, 
+()sin
+2
+s
+R
+BWC→
+ 
+  
+min
+1
+()
+22
+bs
+RR
+BW
+N
+
+==
+
+
+ 
+M-ary PAM (2-Any PAM)  
+ 1. 
+2, ()MN    M=
+, 
+1
+2
+( )0
+()
+( )0
+b
+b
+S   tAt    T
+st
+S   tAt    T
+= 
+
+=
+
+= 
+
+ NRZ coding. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.66 
+ 
+     
+min   min
+0
+|
+2
+d
+e
+E
+PQ
+N
+
+=
+
+
+
+ 
+           
+2
+12
+()
+d
+Ed=
+ 
+       
+2
+0
+2
+b
+e
+AT
+PQ
+N
+
+
+=
+
+
+ for NRZ 
+      
+2
+()
+s   avgb
+EA T=
+ 
+ 
+➢ Distance of each point from origin 
+Energy of that point=
+ 
+ 
+➢ Distance between two point 
+12
+Difference energyd==
+ 
+ 
+➢ 
+12
+()
+e
+dQP→    →  
+ 
+  
+2
+0
+2
+b
+e
+AT
+PQ
+N
+
+
+=
+
+
+ for RZ 
+Bandpass Sampling: 
+ (a) Binary ASK : (m-ary ASK), For ‘1’→ A, ‘0’, →0 
+       
+2
+00
+24
+db
+e
+EA T
+PQQ
+NN
+
+
+
+==
+
+
+
+   
+ 
+     
+2
+1   12   2
+1
+()
+22
+b
+b  avg
+AT
+Ep Ep  E
+
+=    +=  
+
+
+ 
+      
+0
+()
+b  avg
+e
+E
+PQ
+N
+
+=
+
+
+
+ 
+      
+22
+0
+cos
+4
+b
+e
+AT
+PQ
+N
+
+
+
+=
+
+
+ 
+  Correlator Based : 
+      
+2
+( )cos 2
+C
+s
+tf  t
+T
+  =
+ 
+      
+0
+s
+tT
+ 
+      
+"1"cos
+C
+At=
+ 
+0
+b
+tT
+ 
+      
+"0"   0=
+   
+0
+b
+tT
+ 
+2
+()St
+1
+()St
+0(,0)
+b
+AT−(,0)
+b
+AT
+()t
+12d
+dE=
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.67 
+ (b) BPSK :  
+0:    1
+()
+0:   0
+bX
+bX
+At    TT
+pt
+At    TT
+
+
+=
+
+− 
+
+→ Baseband 
+    
+cos 20:    1
+()
+cos(2)    0:   0
+CbX
+CbX
+Af  tt    TT
+st
+Af  tt    TT
+ 
+
+=
+
+  +     
+
+ 
+    
+2
+0
+b
+e
+AT
+PQ
+N
+
+
+=
+
+
+ 
+Orthonormal Basis Function  
+    
+2
+( )cos 2
+c
+b
+tf  t
+T
+  =
+ 
+0
+b
+tT
+ 
+    
+22
+0
+cos
+b
+e
+AT
+PQ
+N
+
+
+
+=
+
+
+ 
+    
+2
+12
+0
+2
+e
+d
+PQ
+N
+
+
+=
+
+
+ 
+ 
+M-Ary PSK (Quadrature PSK):  
+     
+4M=
+ 
+2
+( )cos  2
+kc
+S   tAf tK
+M
+
+
+=  +
+
+
+ 
+0,()
+ssb
+t    T    TNT =
+ 
+     
+2N=
+ 
+( )cos  2
+2
+kc
+S   tAf tK
+
+
+=  +
+
+
+  
+sb
+TN T=
+ 
+0,1, 2,3K=
+    
+min0
+2    sin
+2
+dd
+
+
+=
+
+
+      
+0
+2
+,
+s
+dE
+M
+
+= =
+ 
+       
+120
+2sin
+2
+dd
+
+
+=
+
+
+ 
+M-ary PSK  
+       
+(2   )
+N
+M=
+ 
+ 1. Bit Interval 
+,
+b
+T=
+Bit rate 
+,
+b
+R=
+symbol duration 
+()
+sb
+TNT=
+ 
+ 2. Baud rate or symbol rate 
+1
+b
+s
+s
+R
+R
+TN
+==
+ 
+12
+2
+2
+b
+T
+dA=
+2
+b
+T
+A
+2
+b
+T
+A
+0
+()St
+1
+()St
+2
+(t)cos
+c
+b
+t
+T
+=
+O
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.68 
+ 3. Bit energy 
+2
+2
+bb
+A
+ET=
+ 
+ 4. Symbol energy 
+sb
+ENE=
+ 
+ 5. Radius of constellation : 
+0s
+dE=
+ 
+ 6. Area of constellation circle 
+2
+0s
+dE=  =
+ 
+ 7. 
+min0
+2
+2    sin,
+2
+dd
+M
+
+  
+==
+  
+  
+ 
+Binary FSK   
+ 
+1
+2
+cos 2: 0:1
+()
+cos 2: 0: 0
+bX
+bX
+Af tt    TT
+SFSK  t
+Af  tt    TT
+     
+
+=
+
+     
+
+  
+12
+()ff
+ 
+ 
+Coherent BFSK 
+ 1. 
+1212
+0,HCF[,]    HCF[2(), 2()]
+bbb
+RmR   nRffff ===+−
+ 
+ 2. 
+(0)
+ 
+1212
+HCF[,]    HCF[(), 2()]
+bbb
+RmR   nRffff==+−
+ 
+ 3. Non-Coherent – 
+1212
+HCF[,]    HCF[(), ()]
+bbb
+RmR   nRffff==+−
+ 
+Condition for Orthogonality  
+  
+ 
+HCF[,]
+bbb
+RmR   nR=
+ 
+Non-Coherent FSK  
+ 
+12
+,
+ 
+ 
+1212
+(), ()
+bb
+ffmRffnR+   =−   =
+ 
+ 
+HCF(,)
+bbb
+RmR   nR=
+ 
+ ➢ 
+1
+()(1)
+2
+XX
+P OTP  T==
+ 
+ ➢ Channel Noise : White (AWGN) 
+BFSK
+BFSK
+Coherent
+8FSKNon Coherent
+Phase shift keying
+111
+222
+()cos();0
+()
+()cos();0
+b
+b
+StAttT
+St
+StAttT
+=+
+
+=
+
+=+
+
+11
+22
+()cos:0
+()
+()cos:0
+b
+b
+StAttT
+St
+StAttT
+=
+
+=
+
+=
+
+111
+222
+()cos()0
+()
+()cos()0
+b
+b
+StAttT
+St
+StAttT
+=+
+
+=
+
+=+
+
+Same phase
+Coherent FSK
+1212
+0(),()
+22
+bb
+mRnR
+dffff=+=−=
+1212
+0(),()
+bb
+dffmRffnR+=−=
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.69 
+ ➢ 
+opt
+
+ 
+ ➢  
+ 
+ 
+        
+2
+00
+22
+db
+EA T
+Pe    QQ
+NN
+
+
+
+==
+
+
+
+
+
+ 
+Orthogonal FSK : 
+        
+2
+0
+0.5
+b
+AT
+Pe    Q
+N
+
+
+=
+
+
+  
+Non-orthogonal FSK : 
+        
+2
+0
+0.6
+b
+AT
+Pe    Q
+N
+
+
+=
+
+
+ 
+        
+2
+2
+12
+00
+()
+22
+b
+AT
+d
+Pe    QQ
+NN
+
+
+
+
+==
+
+
+
+
+ 
+ 
+M-ary FSK  
+N bits are grouped together so that 
+2
+N
+M=
+ symbols or sinusoids of duration 
+sb
+TNT=
+ are generated having  
+➢ Same amplitude, same frequency, different frequency. 
+       
+k
+s
+n
+f
+T
+=
+ 
+011
+2
+2
+M
+ssss
+A
+EEET
+−
+
+=   =  ==    
+
+
+
+ 
+       
+sb
+TNT=
+  
+11
+b
+s
+sb
+R
+R
+TNTN
+=  =    =
+ 
+Filter Method 
+1
+|
+b
+fkT=
+2
+|
+b
+fmT=
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.70 
+  Scheme       Pe   For K 
+  BASK 
+⎯⎯→
+ 
+2
+0
+4
+b
+e
+AT
+PQ
+N
+
+
+=
+
+
+ 
+2
+0
+4
+b
+e
+KA T
+PQ
+N
+
+
+=
+
+
+ 
+  BPSK 
+⎯⎯→
+ 
+2
+0
+b
+e
+AT
+PQ
+N
+
+
+=
+
+
+ 
+2
+0
+b
+e
+KA T
+PQ
+N
+
+
+=
+
+
+ 
+  BFSK 
+⎯⎯→
+ 
+2
+0
+2
+b
+e
+AT
+PQ
+N
+
+
+=
+
+
+ 
+2
+0
+2
+b
+e
+KA T
+PQ
+N
+
+
+=
+
+
+ 
+      
+12
+0
+2
+e
+PQ
+N
+
+ −
+=
+
+
+  
+12
+0
+2
+QK
+N
+
+
+ −
+
+
+
+
+
+
+  
+      For K AWGN identical independent. 
+Amplitude phase shift keying (APSK) 
+      
+( )cos[2]
+iici
+S   trf  t=  +
+ 
+(0)
+s
+tT
+  
+0 to1iM=−
+ 
+ 
+sb
+TNT=
+ 
+Case 1: 
+i
+r=
+ constant 
+   
+i
+=
+ variable 
+Case 2: 
+i
+r=
+ variable  
+         
+i
+=
+ constant 
+  
+( )cos (2)M-Ary PSK
+( )cos (2)M-Ary ASK
+iici
+iici
+S   trf t
+S   trf t
+=  + →
+
+
+=  + →
+
+ 
+ 
+8 point APSK = 8 point QAM 
+  
+Fig. ASK   Fig. PSK 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.71 
+6 
+INFORMATION 
+THEORY 
+ 
+6.1. Introduction  
+Information in Event 
+()
+i
+Xx=
+    Base   Unit 
+[]log{}
+ibi
+I  Xxp  Xx=   = −=
+              2         Bits 
+            10          Decit 
+                                  e    Nat  
+6.1.1. Properties of Digital Information  
+ 1. 
+2
+[]log[]
+ii
+I  XxP  Xx=   = −=
+ 
+ 2. 
+222
+[][][][]
+i
+P  XxP  XxI  XxI  Xx=   =       =       =
+  
+ 3. 
+2
+[1]   log  1   0 bitsPX=  ==
+ 
+ 4. 
+2
+[0]log  0 bitsPX=  = −= 
+ 
+ 5. 
+0[]   1
+i
+P  Xx=   
+   0 bits 
+[]bits
+i
+I  Xx    =    
+ 
+ 6. For any event 
+[],  []   0
+ii
+Xx    I  Xx==   
+ 
+ 7. 
+
+212
+()    ()[][]
+i
+I   XxXxI  XxI  Xx=    =   =   =  +   =
+ 
+  Average information of source X = Entropy of source X 
+  
+2
+1
+[   ][]log[]
+M
+ii
+i
+H  XP  XxP  Xx
+=
+= −==
+
+bits/symbol  
+  
+2
+1
+[   ]log
+M
+ii
+i
+H  XPP
+=
+=−
+
+ 
+Case 1. All M events are equiprobable – 
+  
+2
+[   ]    logH  XM=
+ bits/symbol   Maximum entropy 
+Case 2. Out of M events only 1 event is certain. 
+  
+[   ]   0HX=
+ 
+   
+2
+0[   ]    logH  XM
+  
+1
+M
+P
+=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.72 
+    Information Rate – Symbol rate = r symbols/sec 
+        Entropy = H(X) bits/symbol 
+          Information Rate R = r H (X) bits/sec 
+  1. If 
+s
+rf=
+ and all event equiprobable, 
+2
+2  ,(   )   log
+n
+LH  XL==
+ 
+   
+s
+R    nf=
+ 
+Source Coding   
+ 1.   Reduces the redundancy of bits. 
+ 2.   Two types of source coding  
+  (a)  Fixed length source coding 
+      (b)   Variable length source coding  
+   (i)   Shannon Fano coding  
+   (ii)   Huffman coding 
+Key Point : 
+ (a)   Average code length 
+1
+K
+avgi   i
+i
+Ln p
+=
+==
+
+ 
+ (b) Entropy of source 
+()HX=
+ 
+ (c)   Code efficiency 
+()
+avg
+HX
+L
+=
+   
+   should be as high as possible. 
+ (d) Code redundancy  = (1 – ) 
+Discrete channel : A channel is called as discrete if X and Y are having finite size. 
+Memoryless channel : Each present output symbol depends on present input symbol. 
+        
+11
+22
+(/    )
+ji
+xy
+xP  yxy
+xy
+
+=   →→   =
+
+
+  
+Binary Channel : (2 input & 2 output) 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.73 
+Non Binary Channel :   
+ 
+Binary Channel :  
+ 
+*Sum of elements of row in channel matrix is always ‘1’. 
+Joint Channel Matrix  
+                 
+1
+y
+                         
+m
+y
+   
+      
+1111
+212
+1
+()()
+()()
+[   (  ;   )]
+()()
+m
+m
+nnnm
+nm
+xP  xyP  xy
+P  xyP  xy
+P  x  y
+xP  xyP  xy
+
+
+
+
+
+
+=
+
+
+
+
+ 
+          
+[   ()](   )
+Y
+P  xyP  X  P
+X
+
+=
+
+
+ 
+Condition Channel Matrix 
+      
+1
+11
+1
+1
+[
+m
+n
+m
+nn
+nm
+y
+y
+PP
+xx
+x
+y
+P
+x
+x
+y
+y
+PP
+xx
+
+
+     
+
+     
+     
+
+
+
+
+=
+
+
+
+
+     
+
+     
+
+     
+
+ 
+      
+[   (  )](   )
+Y
+P  yP  X  P
+X
+
+=
+
+
+ 
+      
+111211
+(   )()()()
+n
+P  yP  xyP  xyP  xy=   +   +  +
+ 
+       
+
+112
+1
+[  (  )](   ),   (    )(    )
+mn
+n
+P  yP x    P xP x
+
+
+=
+ 
+       
+11
+[   (  )][   (  )]
+mn
+nm
+Y
+P  yP  xP
+X
+
+
+
+
+=
+
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.74 
+  
+1
+11
+1
+m
+m
+nn
+nm
+y
+y
+PP
+xx
+y
+y
+PP
+xx
+
+
+     
+
+     
+     
+
+
+
+
+     
+
+     
+
+     
+
+ 
+Binary Non-symmetrical channel 
+ 
+Cross over probabilities are different 
+                 
+1
+y
+       
+2
+y
+  
+     
+1
+2
+1
+1
+x
+qq
+Y
+P
+x
+pp
+X
+−
+
+
+=
+
+
+−
+
+
+ 
+           
+12
+11
+12
+22
+22
+yy
+PP
+xx
+yy
+PP
+xx
+
+
+       
+
+       
+       
+
+=
+
+       
+
+       
+
+       
+
+ 
+ • 
+12
+(   )(    )   1P  xP  x+=
+ 
+ • 
+12
+(    )()   1P  yP  y+=
+ 
+ • 
+12
+12
+1
+yy
+PP
+xx
+       
++=
+       
+       
+ 
+ • 
+12
+22
+1
+yy
+PP
+xx
+       
++=
+       
+       
+ 
+ • 
+11121
+(   )()()P  yP  xyP  xy=       +
+ 
+ • 
+21222
+(    )()()P  yP  xyP  xy=       +
+ 
+Aposteriori Probabilities  
+        
+1
+1
+1
+1
+11
+()
+()
+y
+P  x   P
+x
+x
+P
+yP  y
+
+
+
+
+=
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.75 
+        
+2
+2
+2
+2
+22
+()
+()
+y
+P  x    P
+x
+x
+P
+yP  y
+
+
+
+
+=
+
+
+ 
+Map Analysis  
+ (a) At r
+0
+ : 
+        
+       
+ (b) At r
+1
+: 
+        
+       
+ 
+  ➢ After MAP application receiver will be optimum. 
+Probability of Correctness 
+        
+0001
+()()
+c
+PP mrP mr=  +
+ 
+        
+0
+1
+00
+00
+()()
+c
+r
+r
+PP m   PP m   P
+mm
+      
+=+
+      
+      
+ 
+        
+1
+ec
+PP=−
+ 
+Binary Symmetrical Channel 
+Cross over probabilities are same. 
+ ➢   
+1
+2
+x
+P
+y
+
+=
+
+
+ Probability that x
+1
+ was transmitted given than y
+2
+ received 
+0
+0
+m
+P
+r
+
+
+
+0
+m
+
+
+1
+m
+1
+0
+m
+P
+r
+
+
+
+0
+0
+0
+()
+r
+PmP
+m
+
+
+
+0
+m
+
+
+1
+m
+0
+1
+1
+()
+r
+PmP
+m
+
+
+
+0
+1
+m
+P
+r
+
+
+
+0
+m
+
+
+1
+m
+1
+1
+m
+P
+r
+
+
+
+1
+0
+0
+()
+r
+PmP
+m
+
+
+
+0
+m
+
+
+1
+m
+1
+1
+1
+()
+r
+PmP
+m
+
+
+
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.76 
+      
+12
+22
+1
+xx
+PP
+yy
+       
++=
+       
+       
+  
+      
+12
+11
+1
+xx
+PP
+yy
+       
++=
+       
+       
+ 
+Joint Entropy  
+       
+2
+11
+()(   ,) log(   ,)
+nm
+ijij
+ij
+H  XYP  x   yP  x   y
+==
+=−
+
+ 
+       
+
+2
+11
+()()()  log()()
+nm
+ijij
+ij
+H  XYP    XxYyP    XxYy
+==
+= −=     ==     =
+
+ 
+       
+()()H  XYH  YX=
+ 
+Conditional Entropy  
+ 
+ • Similarly can write 
+Y
+H
+X
+
+
+
+ 
+Important point : 
+ 1. 
+()(   )
+Y
+H  XYH  XH
+X
+
+=+
+
+
+ 
+ 2. 
+()(  )
+X
+H  XYH YH
+Y
+
+=+
+
+
+ 
+ 3. If X and Y statically, independent 
+()(   )(  )H  XYH  XH Y=+
+ 
+       
+(  ),(   )
+YX
+HH Y   HH  X
+XY
+    
+==
+    
+    
+ 
+  For B.S.C –  
+s
+C=
+ Channel capacity  
+        
+22
+1log(1) log  (1)
+s
+CPPPP= ++  −−
+ 
+        
+max
+{  (   ;   )}
+s
+CI  X  Y=
+ 
+       
+(   ;   )(  )
+Y
+I  X  YH YH
+X
+
+=−
+
+
+ 
+       
+(   ;   )(   )
+X
+I  X  YH  XH
+Y
+
+=−
+
+
+ 
+2
+11
+{()()}log
+nm
+i
+ij
+ij
+j
+XXx
+HPXxYyP
+YYy
+==
+
+=
+
+=−==
+
+
+=
+
+
+
+
+Conditional entropy of
+XY given 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.77 
+       
+2
+(   ,) log
+i
+ij
+i
+y
+Y
+HP  x   yP
+Xx
+
+
+= −
+
+
+
+
+ 
+        
+2
+log
+s
+Cn=
+ 
+  
+(   ;   )(   )I  X  YH  X=
+ loss less channel 
+Lossless Channel : 
+ 1. Single non zero element in each column. 
+ 2. Channel matric should be DMC type 
+ 3. Summation of each now must be 1. 
+ 4. 
+0
+X
+H
+Y
+
+=
+
+
+ 
+(   ;   )(   ),I  X  YH  X=
+ 
+maxmax2
+[   ;   ][   (   )]log
+s
+CI  X  YH  Xn===
+     
+ 
+n=
+ number of input symbol. 
+6.2. Average Mutual Information  
+      
+(   ;   )(   )
+X
+I  X  YI  XI
+Y
+
+=−
+
+
+ 
+     
+(   ;   )(   )
+Avg
+X
+I  X  YH  XH
+Y
+
+=−
+
+
+ bit/symbol 
+     
+(   ;   )(  )
+Avg
+Y
+I  X  YH YH
+X
+
+=−
+
+
+ 
+           
+(   ;   )(  ;    )I  X  YI  Y  X=
+ 
+          
+()
+2
+11
+|
+(   ;   ){   ,}log
+()
+nm
+ij
+ij
+i
+ij
+P  x    y
+I  X  YP  x   y
+Px
+==
+
+
+=
+
+
+
+ 
+          
+2
+(   ;   )(  ,   ) log
+()
+X
+Y
+XY
+X
+x
+f
+y
+I  X  Yfx  ydxdy
+fx
+
+−−
+
+
+
+
+
+
+=
+
+
+
+
+
+ 
+     
+(   ,)(    )
+i
+XYijXj
+j
+x
+Px   yP    y    P
+y
+
+=
+
+
+
+ 
+     
+(   ,)(   )
+j
+XYiji
+i
+y
+Px   yP  x   P
+x
+
+=
+
+
+ 
+ If R.VS are Independent then 
+(  ;  )    0I  x  y=
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.78 
+6.2.1. Channel Capacity 
+Maximum Average Mutual Information 
+      
+max
+{  (  ;   )}
+s
+CI  x  y=
+ 
+      
+22
+(  ;   )(  )log(1) log  (1)I  x  yH  YPPPP=++  −−
+ 
+      
+22
+1log(1) log  (1)
+s
+CPPPP= ++  −−
+ 
+B.S.C 
+P → Cross over probability 
+➢ Input are equiprobable. 
+Determine Channel : 
+1.   Number of rows in each row must be single. 
+ • In each row angle element must be 1. 
+ • Summation of each row will become 1. 
+ • 
+0,  (   ;   )(  )
+YY
+HI  X YH YH
+XX
+    
+==−
+    
+    
+ 
+  
+(   ;   )(  )I  X  YH  Y=
+ 
+  
+max2
+[   (  )]log
+s
+CH  Ym==
+ bit/symbol 
+Noise Less Channel : 
+1.   Deterministic + Lossless 
+ 
+4. 
+0,0
+XY
+HH
+YX
+    
+==
+    
+    
+ 
+5. 
+(   ;   )(   )(  )I  X  YH  XH Y==
+ 
+6. 
+maxmaxmax22
+[  (   ;   )][   (   )][   (  )]loglog
+s
+CI  X  YH  XH  ymn=====
+ bits/symbol 
+ m = n 
+Binary Erasure Channel  
+ 
+Each row  
+→
+Single element  
+Each column  
+→
+Single element  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.79 
+       
+(   ;   )    (1)    (   )I  X  YP  H  X=−
+ 
+        
+max
+[(   ;   )]
+s
+CI   X  Y=
+ 
+             
+2
+(1) logPn=−
+  
+2n=
+ for BEC 
+        
+(1)
+s
+CP=−
+ 
+ ➢   
+2
+2
+2
+1
+(   ;   )log    1
+2
+x
+s
+N
+CI  X  Y
+
+
+
+==+
+
+
+
+
+
+
+
+ Bits/symbol 
+  
+2
+0N
+NB=
+ 
+  (i) X is zero mean R.V 
+22
+[]
+x
+E XS= =
+ 
+  (ii) Noise is zero mean R.V   
+22
+[]
+N
+E NN=  =
+ 
+Channel Capacity of AWGN Channel  
+        
+2
+1
+log    1
+2
+s
+S
+C
+N
+
+=+
+
+
+ Bit/symbol 
+        
+2
+log    1
+S
+CB
+N
+
+=+
+
+
+ bit/sec 
+Channel capacity for AWGN  
+       
+Information
+Channel
+rate
+Capacity
+s
+CR
+ 
+• For X = zero mean R.V, 
+0
+NN  B=
+ 
+ 
+B→
+ 
+       
+0
+1.44
+s
+S
+C
+N
+=
+  Finite value  
+  For loss less transmission. 
+6.3. Continuous Source and Differential Entropy 
+X : DRV,  H(X) 
+2
+[]log{}
+ii
+i
+p x    xp  x    x= −==
+
+ 
+X : CRV,  H(X) = 
+2
+(  )log(  )
+x
+Fx xf   x dx
++
+−
+−
+
+→
+Differential entropy 
+Y : DRV,  H(Y) 
+2
+{}log{}
+jj
+j
+p  yyp  yy= −==
+
+ 
+Y : CRV,   H(Y) =
+2
+(  ) log(  )
+yy
+f    yf    y dy
+−
+−
+−
+
+ 
+→
+ Differential entropy 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.80 
+6.3.1. Channel capacity 
+(1) For error less | distortion less transmission  
+ (i) If all quantization level are not eauiprobable : 
+  
+CR
+ 
+  
+()C    rH  X
+ 
+  
+()
+S
+Cf  H  X
+ 
+ (ii) If all quantization level are eauiprobable :  
+  
+CR
+ 
+  
+()C    rH  X
+ 
+  
+2
+log
+s
+CfL
+ 
+  
+s
+Cnf
+ 
+  
+b
+CR
+ 
+(2) For AWGN channel- Y: GRV,    
+         Y = X + N,  Let X and N are independent  
+             
+222
+yxN
+ =  +
+ 
+        
+2
+2
+1
+(  )log  [2]
+2
+y
+H  ye=
+ 
+        
+22
+2
+1
+(y)log  [2  e[]    Maximum
+2
+NX
+H=   +
+ 
+       
+         
+2s
+C    Cf=
+ 
+ 
+2
+2
+2
+Bits
+log    1
+sec
+X
+N
+CB
+
+
+=+
+
+
+
+
+ 
+2
+0
+0
+PSDof white Noire
+2
+B.W of channel
+N
+NB
+N
+B
+=
+→
+→
+ 
+2
+2
+2
+1bits
+log1
+2symbol
+X
+S
+N
+C
+
+
+=+
+
+
+
+PX
+X 
+= Power of signal 
+P
+X
+ = Noise Power
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.81 
+ 
+2
+log  (1   SNR)
+Not in dB
+CB=+
+
+  
+2
+2
+XX
+NR
+N
+N
+P
+P
+
+  =   =
+
+ 
+ 
+2
+0
+log    1
+bb
+ER
+CB
+NB
+
+=+
+
+
+ 
+ 
+0
+1.44
+X
+P
+C
+N
+=
+  
+ For infinite Bandwidth 
+B→
+ 
+Information in bits | symbol 
+       
+00
+11
+00
+00000
+(    )(    )
+yy
+yy
+y
+HIPP  xIPP  x
+xxxxx
+                 
+=+
+                 
+                 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.82 
+7 
+MISCELLANEOUS 
+ 
+7.1. FDMA (Frequency Division Multiplexing) 
+ ➢ Multiple signals are multiplexed and simultaneously transmitted through channel.  
+  K = Number of signals are multiplexed  
+  B.W  K [B.W of modulation scheme] + (K – 1) [BW of guard Band] 
+  TDMA (Time division Multiplexing) 
+  T
+s
+ = Frame rate or sampling interval or time taken by commentator to completer its 1 rotation  
+  (Band limited to same freq.) 
+  
+sb
+TnTN=
+ 
+  
+sb
+TNnT=
+  N = Number of signals being multiplexed 
+      n = of bits/sample 
+      
+b
+T=
+1 Bit duration 
+         
+bs
+RNnf=
+ 
+     Speed of commentator 
+rotation
+60 rpm
+seocnd
+ss
+ff==  
+ 
+        
+min
+(BW)
+22
+bs
+RNnf
+==
+ 
+  ➢ When x number of synchronization 
+bits
+frame
+are added – (Band limited to same freq.) 
+         
+()
+sb
+TNn    x T=+
+   
+()
+bs
+RNn    x  f=+
+ 
+  ➢ 
+bit/frame :()
+b
+xTsNn    x T=+
+ 
+   
+bit/2frame :
+2
+b
+x
+xTsNnT
+
+=+
+
+
+ 
+  ➢ y% (Total of y%) synchronization bits are added –(Band limited to same freq.) 
+         
+%
+100
+sb
+Nn   y
+TNnT
+
+
+=+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.83 
+         
+%
+100
+bs
+Nn   y
+RNnf
+
+
+=+
+
+
+ 
+  ➢ When N signals are band limited to different freq. 
+         
+12
+......
+n
+bsss
+Rnfnfnf=   +   +
+ 
+   COMA (Code division Multiple Aces)  
+   Processing gain of CDMA 
+c
+h
+R
+G
+R
+
+=
+
+
+ 
+  ➢
+ Each user is assigned with unique code  
+Noise  
+(1) PSD of thermal noise is Gaussian in nature. Also known as Johnson noise 
+(2) Thermal Noise power 
+22
+4(V )  rms
+nnn
+PKTBR   V==   =
+ 
+ Thermal Noise voltage  
+        
+(    )rms4
+n
+VKTBR=
+ 
+        
+(    )rms
+(    )rms
+n
+n
+V
+I
+R
+=
+ 
+ ➢ Max. Power which could be deliver to amplifier = KTB 
+ ➢  Noise figure (F) or Noise factor 
+         
+10
+()   10logF  dBF=
+ 
+         
+1
+kTBN=
+ 
+         
+oia
+NN G    N=+
+a
+KTBG   N=+
+ 
+ 
+         
+()
+ia
+i
+N G    N
+F
+GN
++
+=
+ 
+         
+Output Noiseincluding Noisyamplifier
+F
+Output NoiseConsidering noiselessamplifier
+=
+ 
+         
+KBG
+e
+Na
+T=
+  
+/p
+/
+(SNR)
+1
+(SNR)
+i
+e
+op
+T
+F
+T
+== +
+ 
+         
+(1)
+e
+TfT=−
+ N
+0
+ (output Noise power) = KTBGF 
+         
+0
+()
+e
+NK BG T    T=+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.84 
+Cascaded Amplifier 
+ 
+Output Noise with noisy 
+21   12
+[(1)]
+r
+ampKTB FKTBF G  G=−  +
+ 
+        
+2
+1
+1
+1F
+FF
+G
+−
+=+
+ 
+        
+3
+2
+1
+11   2
+(1)
+1
+..........
+F
+F
+FF
+GG G
+−
+−
+=  +++
+ 
+        T
+e
+ (equivalent Temp.) 
+3
+2
+1
+11   2
+..........
+e
+e
+e
+T
+T
+T
+GG G
+=   +   ++
+ 
+       
+(30) dBmxdBWx=+
+ 
+Noise performance of Analog Signal 
+       
+0
+(SNR)
+SNR at theoutput of
+(SNR)(SNR)in m
+X
+i
+R
+FOM=== 
+ 
+For DSB-Se 
+1=
+ , 
+0
+00
+(),()
+22
+mm
+i
+PP
+SNRSNR
+N  BN  B
+==
+ 
+For DCB-FC 
+2
+m
+cm
+p
+Ap
+ ==→
++
+efficiency 
+For F.M 
+2
+2
+22
+33
+2
+4
+fm
+FM
+Kp
+B
+ ==  
+
+ (For sinusoidal) 
+For PM 
+2
+pm
+KP=
+2
+2
+PM
+
+=
+ (for sinusoidal) 
+Channel Coding 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.86 
+Linear Block Code  
+ 
+ modulo 2 sum → EXOR 
+ (1) 
+ (2)   
+ (3) Different data words (message word) with K bits = 2
+K
+ 
+ (4) Each data word will have m parity bits attached to generate 2
+K
+ code words. 
+ (5) Total no of arrangements with n bits at output of encoder will be →2
+n
+ out of which only 2
+K
+ code words are valid.  
+ (6) Rate efficiency = code efficiency = code rate = K / n 
+Hamming Weight  
+ Number of 1’s present in L, B,C  
+ C (7.4) 
+ Example: C : 1110001, H.W = 4 
+Hamming distance   
+ It represent bit change at respective position  
+    
+1 1 0 1 0 1 1 1
+0 1 1 1 0 1 0 1
+X
+Y
+=
+     
+=
+ 
+(  ,   )    3
+d  x y
+=
+  
+Minimum Hamming Distance (d
+min
+):  
+ Method  1 d
+min
+ = Min hamming weight of 2
+K
+ codes except codes having 0 weight. 
+ Combination: 2
+K
+C
+2
+crosscheck  
+ Method 2 
+min
+1
+d
+n   K
+  −  +
+ 
+ Method 3 “Minimum no of columns in parity check matrix [H] Which makes zero sum (module 2).” 
+Error detection L.B.C 
+   
+min
+1
+dt
++
+ can detect t errors 
+Error correction 
+min
+21
+dt
++
+ 
+ Code Generation at 
+11
+[   ][   ][   ]
+XnKK  n
+TCDGC   DG
+
+−==
+ 
+ 
+[]
+Kn
+G
+
+→
+Generator Matrix 
+ 
+[   ]
+[
+;   ]
+or[  ;
+]
+K  n
+K
+K  n
+K  K  n
+G
+I   p
+p I
+
+
+
+=
+ 
+k
+I
+=
+Identity Matrix of order K. 
+ Parity check Matrix – 
+()
+[   ]   [;]
+T
+nn  K   n
+HP    IK
+−
+=−
+ 
+      Or 
+ 
+()
+[   ]   [;]
+T
+n  Kn  K   n
+HIP
+−−  
+=
+ 
+ Note – [C] [H
+T
+] = 0 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Communication Systems  
+8.87 
+Correction at Receiver    
+ 
+cr
+→
+ 
+ 
+rC
+=
+ (No error) 
+ 
+rC
+ (Error) 
+ ➢
+ 
+ r will given 
+ ➢  Calculate syndrome : 
+[]
+T
+S    r H=
+ 
+ ➢
+ 
+Observe the syndrome: S matches with i
+th
+ row of 
+[]
+T
+H
+which Means i
+th
+ bit from left has error. 
+ Non systematic L.B.C 
+Hamming Code 
+ (1) It is a L.B.C 
+ (2) 
+min
+3
+d
+=
+ 
+ (3) Detect upto 2 bit error 
+ (4) Correct upto 1 bit error 
+ (5) K bit data, m bits parity 
+()
+n
+m   K
+  =   +
+bits code 
+ (6) Parity bit no. is calculated 
+2
+(
+1)
+m
+mK
+   +  +
+ 
+          
+?
+m
+=
+ 
+ (7) Placing of parity bits ate at 
+0
+1
+2
+2  , 2 , 2  ,........
+locations 
+Cyclic redundancy check code (CRC-Code) 
+ 
+Problem solving Technique:  
+ (i) d = K bits msg 
+ (ii) divisor polynomial 
+  
+3
+3
+2
+1
+0
+1
+(1011)
+x
+x
+x
+x
+x
++  + =  +   +  + →
+ 
+ Step 1. K msg  bits are given  
+   From (K + m) message bits 
+   
+m→
+addition of m zeros(append)  
+   ➢  Highest order of divisor polynomial (or) (number of bits in divisor polynomial)-1 
+ Step 2. Modulo 2 division 
+ 
+Library:-    https://smart.link/sdfez8ejd80if 
+PW Mobile APP:-   https://smart.link/7wwosivoicgd4 

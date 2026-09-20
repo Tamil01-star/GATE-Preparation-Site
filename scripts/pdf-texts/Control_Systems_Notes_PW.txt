@@ -1,0 +1,7962 @@
+=== FILE: Control_Systems_Notes_PW.pdf ===
+=== PAGES: 84 ===
+
+
+
+ControlControl
+SystemsSystems
+Control
+Systems
+
+Published By: 
+ 
+  Physics Wallah 
+ISBN: 978-93-94342-39-2 
+Mobile App: Physics Wallah (Available on Play Store) 
+  
+Website: www.pw.live 
+Email: support@pw.live 
+ 
+Rights 
+All  rights  will be  reserved  by  Publisher.  No  part  of  this  book  may  be  used  or  reproduced  in  any  manner 
+whatsoever without the written permission from author or publisher. 
+In the interest of student's community: 
+Circulation of soft copy of Book(s) in PDF or other equivalent format(s) through any social media channels, 
+emails,  etc.  or  any  other  channels  through  mobiles,  laptops  or  desktop  is  a  criminal  offence.  Anybody 
+circulating, downloading, storing, soft copy of the book on his device(s) is in breach of Copyright Act. Further 
+Photocopying of this book or any of its material is also illegal. Do not download or forward in case you come 
+across any such soft copy material. 
+ 
+Disclaimer 
+A team of PW experts and faculties with an understanding of the subject has worked hard for the books. 
+While  the  author  and  publisher  have  used  their  best  efforts  in  preparing  these  books.  The  content  has  been 
+checked for accuracy. As the book is intended for educational purposes, the author shall not be responsible for 
+any errors contained in the book. 
+The publication is designed to provide accurate and authoritative information with regard to the subject matter 
+covered. 
+This book and the individual contribution contained in it are protected under copyright by the publisher. 
+(This Module shall only be Used for Educational Purpose.) 
+
+ 
+ 
+ 
+Design Against Static Load 
+ 
+ 
+ 
+ 
+ 
+1. Block Diagram Representation and Signal Flow Graph ....................................................  4.1  –  4.7 
+2. Time Response Analysis  ...................................................................................................  4.8  –  4.26 
+3. Steady State Error and Routh Stability  ............................................................................  4.27  – 4.37 
+4. Root Locus  .......................................................................................................................  4.38  –  4.45 
+5. Frequency Response Analysis  ..........................................................................................  4.46  –  4.67 
+6. State Space Analysis  ........................................................................................................  4.68  –  4.74 
+7. Controller And Compensator  ..........................................................................................  4.75  –  4.81 
+CONTROL SYSTEMS 
+INDEX 
+GATE-O-PEDIA ELECTRICAL ENGINEERING 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Design Against Static Load 
+4.1 
+1 
+BLOCK DIAGRAM 
+REPRESENTATION AND SIGNAL 
+FLOW GRAPH 
+ 
+1.1. Introduction 
+ 
+1.  
+  
+2.  
+ Similarly if 
+( )( )then   ( )    step Responsex tAu ty t==
+ 
+    
+( )( )then   ( )    unit ramp Responsex tr ty t==
+ 
+    
+( )( )then   ( )   Ramp Responsex tAr ty t==
+ 
+Linear System:    
+           
+Time Invariant:    
+ 
+1.1.1.  Linear Time Invariant System   
+ 
+( )unit⎯⎯→ht
+Impulse Response of L.T.I  
+ 
+.
+( )(   )   frequency System
+FT
+h tH⎯⎯⎯→−
+ 
+ 
+.
+( )(  )   Transfer function of  LTI  Convolution
+FT
+h tH  S⎯⎯⎯→−
+ 
+ 
+( )( ) *  ( )Y  tX  th t=
+ 
+ Y (S) = X(S) H (S)  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.2 
+Standard LTI system  
+      
+1/.( )(  )
+()
+1/.( )(  )
+RCL T of  y tY  S
+HS
+SRCL T  of  x tX  S
+===
++
+ 
+Case 1:  T.F to differential equation  
+      
+(  )1/
+()
+(  )1/
+Y  SRC
+HS
+X  SSRC
+==
++
+ 
+      
+( )11
+( )( )
+dy t
+y tx t
+dtRCRC
++=
+ 
+Case 2: Differential eq. to T.F  
+     
+( )11
+( )( )
+dy t
+y tx t
+dtRCRC
++=
+ 
+       
+(0)(1 /)   (  )
+()
+1
+1/
+yRCS
+ys
+SRC
+s
+RC
+
+=+
++
++
+ 
+Case A Initial condition  = 0   (a) T.F can be calculated  
+     
+(  )(  ).   (  )Y  SX  S  H  S=
+  (b) output can be calculated by using  T.F 
+Case B Initial condition to 
+0
+  
+       
+(  )(  )   (  )Y  SX  S  H  S
+ 
+ (a) T.F can be calculated by putting initial condition = 0 
+ (b) Output can not be calculated .  
+ ➢ Regenerate initial condition to calculate output  
+Block Diagram Representation         
+➢ Used to represent a system .  
+➢ T.F can be calculated by forcing I.C = 0  
+ 
+ 
+( )(  ) inputr  tR  S⎯⎯→
+ 
+ 
+( )(  ) outputc tc  S⎯⎯→
+ 
+ 
+( )(  ) Transfet functiong  tC  S⎯⎯→
+ 
+Important Concepts  
+(1) Summer – It should have 2 or more then 2 inputs.  
+Symbol  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.3 
+(2) Take of points - single input and Multi output   
+ 
+ Used for input distributions  
+(3) Forward Gain - Direction always from input to output  
+ 
+Rules  
+Case 1 :  Summer and forward Gain  
+ Case A  
+ 
+ Case B    
+ 
+Case 2 : Take off points and forward gain  
+ Case A    
+ 
+ Case B    
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.4 
+Case 3 : Take off point and summer  
+ 
+ 
+Gain Connected in Parallel 
+(1)  Direction of flow should be from input to output from all the gains .  
+(2)  Summing block should be common.  
+(3)  Input should be common.         
+ 
+ 
+Gain Connected in Cascade 
+ 
+    
+12
+C
+GG
+R
+=
+ 
+Feedback –  
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.5 
+Negative Feedback  
+ 
+Problem solving Techniques -   
+(1)  Try to eliminate common node by using parallel paths .  
+(2)  Convert 3 input summer to Two , 2 input Summer  
+(3)  Try to bring two summers side by side by changing their inputs if required. 
+1.2. MIMO 
+(1)  T.F can not be calculated       
+ 
+(2)  
+2
+3
+1
+(   )  0
+1
+(   )  0
+()
+()
+RS
+RS
+CS
+RS
+=
+=
+ 
+Ratio parameter   
+(3)  
+1
+2
+2
+(   )  0
+3
+(   )  0
+()
+()
+RS
+RS
+CS
+RS
+=
+=
+ 
+Ratio parameter  
+ (iii)  Output can be calculated by super position . 
+  
+21
+1
+33
+2
+111
+13
+00
+0
+123
+00
+0
+12
+(  )(  )(  )
+(  )    ?(  )
+(  )(  )(  )
+(  )(  )
+RR
+R
+RR
+R
+C   SC   SC   S
+C   SH   S
+R  SR   SR   S
+H   SH   S
+==
+=
+==
+=
+==
+
+==
+ 
+  
+1112233
+(  )(  )(  )(  )(  )(  )(  )C  SR  S  H   SR   S  H   SR   S  H   S=++
+ 
+  Signal flow Graph  - Alternative Representation of a system . 
+(1)   Gain Block Representation                        
+ 
+(2)  Summer Block -  Represented by node , after Making it neutral.  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.6 
+   
+12
+NXX= −  −
+  
+1
+YN=
+ 
+2
+YN=
+ 
+(3)  Take off – Represented by a node.  
+ 
+Note : If take off point comes other summer both of them represented by same node, but if it comes before summer then two 
+nodes . 
+Input Node - Only outgoing branches  
+Initial Node  -  may have incoming and outgoing branches  
+1.                                             
+ 
+ 
+      R: input node    
+RX=
+ 
+      
+(    .   )
+C
+G  M G
+R
+=
+   R: Initial Node  
+                     X: Input Node  
+2.      
+ 
+ 
+C
+R
+→
+MG not allowed  R=HR+X 
+ R: initial node  
+ 
+→
+C
+X
+ MG allowed   X: input node  
+ 
+→
+R
+X
+MG allowed  
+Output node – Having only incoming branches, when this condition not present then forward drugging Fill above condition. 
+Forward Path - Path connecting input to output. 
+ 
+Direction from input to output. 
+ 
+Any node should not traversed twice. 
+ 
+Not in loop from.  
+Loop – A path which originate and terminate at same node  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.7 
+Macon Gain formula – used to calculate for  
+Limitations  
+ (1) 
+Output  Node
+Input  Node
+    (2)   
+Intermidiate  Node
+Input  Node
+ 
+      
+1
+n
+kk
+k
+p
+Y
+X
+=
+
+=
+
+
+ 
+ n = no of forward path from X to Y  
+  = 1-(sum of all loop gains ) + (sum of product of two non touching loop gain) (sum of product of 3 non touching loop 
+gains) 
+ 
+K
+=
+It is dependent on forward path 
+ 
+K
+=
+1- [sum  of  all  loop  gains  not  touching 
+th
+K
+ forward  path  ]  +  (sum  of  product  of  2  non  touching  loop  gains  not 
+touching 
+th
+K
+ Forword path) + -------------- 
+Steps : 
+(1) 
+.
+C
+MG
+R
+⎯⎯→
+Applicable     (2)  Calculate total no of  forward paths  
+(3)  Calculate all types of loops .     (4) Calculate  and 
+k 
+Note :  
+(1)  Self loop at initial (first ) node of unity /non unity can always be ignored . 
+(2)  Self loop at intermediate nodes having unity gain –  
+ (i) Result in inconsistent nodal equation 
+C
+R
+→
+,  
+ (ii) To obtain finite 
+C
+R
+such loops can be ignored . 
+ (3) MGF can not be applied between two intermediate node.   
+ 
+ 
+5
+5
+22
+?
+/
+y
+y
+R
+yyR
+
+
+=  =⎯⎯→
+
+
+
+
+calculate by MGF 
+Mapping of Block diagram to SFG  
+ Summer 
+⎯⎯→
+Node 
+ Take off 
+⎯⎯→
+Node  
+ Gain 
+⎯⎯→
+ Line 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.8 
+2 
+TIME RESPONSE ANALYSIS 
+ 
+2.1. Introduction 
+  
+     
+(  )1
+()
+(  )2
+N  SS
+TS
+D SS
++
+==
++
+          
+()
+()
+(  )(1)
+S
+N  Se
+TS
+D SS
+==
++
+ 
+  Pole – Zero format 
+12
+12
+()()
+()()
+N
+k  S    z    S    z
+S    Sp    Sp
+−+
+=→
+−+
+Root locus Nyquist  
+ Time constant from 
+12
+(1)(1)
+()
+(1)(1)
+N
+ab
+KSTST
+TS
+SSTST
+++
+=→
+++
+Bode , Nyquist  
+ 
+Open loop Transfer function 
+()
+()
+()
+CS
+TS
+RS
+=
+ 
+ 
+     C.L.T.F = 
+()
+()
+(  )    1
+C SG
+TS
+R SGH
+==
++
+ 
+C.L.S  May hare C.L.T.F or O.L.T.F 
+       
+O.L.T.F of C.L.S
+Y
+GH
+X
+==
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.9 
+2.1. Degree of T.F  
+
+ 
+Highest order of D(S) after pole zero cancellation. 
+     
+43
+(1)
+()
+(2)(1)(3)
+S
+TS
+S   SSS
++
+=
++    +   +
+ , degree = 8 
+Type of a system   
+(1) Defined for C.L.S only . 
+(2) To calculate Type of C.L.S , O.L.T.F or G(S) H(S) of C.L.S is used. 
+(3) Pole at origin in O.LT.F of C.L.S – Type 
+First order system  (O.L.S)  
+      
+(  )1
+()
+CS
+R SST
+=
+     
+ 
+ If       
+( )( ),(  ),   ( )( )
+AA
+r tA   tC  Sc tu t
+TST
+===
+ 
+      
+0
+( )()(  )( )()
+St
+oo
+AeA
+r tA   t    tC  Sc tu t    t
+TST
+−
+=−==   =−
+ 
+ 
+ If system delayed by to 
+()(  )
+o
+St
+o
+e
+h t    tH  S
+TS
+−
+−   ==
+ 
+ 
+(  ),
+o
+st
+Ae
+CS
+TS
+−
+=
+( )()
+o
+A
+C tu t    t
+T
+=−
+ 
+ 
+ 
+First order Close Loop System  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.10 
+ 
+ 
+0
+(d.c gain)
+(  )/
+()
+(  )1/
+s
+K
+C SK   T
+TS
+R SST
+=
+⎯⎯⎯→
+==
++
+ 
+ 
+I/P C(S) C(t) 
+( )( )r tA   t=
+ 
+/
+()
+1/
+AK   T
+CS
+ST
+=
++
+ 
+/
+( )( )
+tT
+AK
+C teu t
+T
+−
+=
+ 
+( )( )r tAU  t=
+ 
+11
+()
+1
+C SAK
+Ss
+
+=−
+
++
+
+ 
+( )1( )
+t
+T
+C tAeu t
+−
+
+=−
+
+
+ 
+ 
+1. Initial slope at t = 0 can be calculate from graph and can be equated to 
+0
+()
+t
+dc t
+dt
+=
+= 
+AK
+T
+ 
+2. Net input at summer = output approaches or settled . 
+Transient and Steady state Response –  
+    
+//
+( )    (1)  ( )   1
+t  Tt  T
+C teu te
+−−
+=  −= −
+ 
+    
+1
+( )   1Steady state Response (constant)Ct=→
+ 
+    
+/
+2
+( )Transient Response [exponential]
+tT
+C   te
+−
+= −   →
+ 
+    
+12
+( )   1 ,( )    0Lim c  tLim c   t
+tt
+==
+→→
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.11 
+Transient Response  
+It is part of total step Response which tend to 0, When large time frame is Considered 0.  
+ •  Tends to 0 as t
+→
+
+ 
+ •  To calculate transient response from D.E  
+0,   /0ICi   p=
+ 
+ •  Zero input response  
+Steady State Response  
+Part of total step response which remains after transient dies out .  
+ •  To calculate the steady state response from D.E = I.C = 0 and input 
+0
+ 
+ •  zero state response  
+   
+( )( )( )
+( )( )
+trss
+ss
+c tc   tc   t
+Lim c tc   t
+t
+=+
+=
+→
+ 
+Setting Time   
+ 
+ (1) 
+s
+t
+= Time required to settle in a predefined “Error Band”. 
+ (2) Error Band 
+=
+m% of input + d.c gain  
+ (3) 
+s
+t
+ = f (error band) 
+ (4) 
+s
+t
+ 
+
+ as error band 
+
+ 
+ (5) 
+s
+t
+→
+ for 0% error band.  
+Error Signal  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.12 
+     
+( )( )( )e tKr tc t=−
+ 
+     
+1
+( )( )( )e tr  tc t=−
+ 
+     
+()et=
+Error signal (unity f/b) 
+     
+/
+( )( )
+tT
+e tAkeu t
+−
+=
+ 
+•  Steady state error = final value of error signal = 
+( )    0Lime t
+t
+=
+→
+ 
+•  Time constant = 
+1
+Real part of dominant pole
+ 
+     
+1
+sec
+2
+T=
+ 
+ 
+•  3 dB band width of RC circuit 
+11
+rad/sec
+Time  constantRC
+==
+ 
+   
+/
+()
+1
+KT
+Ts
+S
+T
+=⎯⎯→
++
+   
+   Time constant =T  
+       
+3dB  BW  1 /rad /secT=
+ 
+Rise Time  
+ Time taken by step response of first order CLS to reach from 10% to 90% of its final value. 
+   
+42%
+s
+tT=
+ error band  
+   
+2.2
+r
+tT=
+  
+   
+0.693
+d
+tT=
+ 
+Second order system :  
+•  For first order system = one parameter = Time constant  
+• For 2
+nd
+ order 
+→
+  
+: damping ratio
+ 
+     
+n
+
+  : undamp natural frequency  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.13 
+      
+n
+=
+ damping tactor 
+2
+1
+n
+−=
+ Damped Natural frequency.  
+      
+d
+
+ 
+2nd order O.L.S :    
+ 
+2
+()
+(  )(2)
+n
+n
+CS
+R SS  S
+=
++
+
+
+ 
+0
+n
+    
+  
+−    
+ 
+2nd Order C.L.S  
+(1) 
+2
+22
+()
+01d.c  gain
+(  )2
+n
+nn
+CS
+S
+R SSs
+== →
+++
+
+   
+ 
+ 
+ (2) 
+2
+22
+()
+(  )2
+d.c gain = 0
+n
+nn
+K
+CS
+R SSs
+=
+++
+
+   
+       
+ (3) 
+2
+22
+()
+(  )2
+d.c  gain = 1
+n
+nn
+K
+CS
+R SSS    K
+=
+++
+
+
+       
+  
+2
+22
+'
+()
+2  '   ''
+n
+nn
+TS
+SS
+=
+++
+
+     
+ 
+'
+nn
+k=
+ 
+  
+'
+K
+=
+
+
+ 
+Non Standard second order s/s 
+ 
+ 
+ 
+2
+22
+(2)
+()
+()
+(  )2
+n
+nn
+S
+CS
+TS
+R SSS
++
+==
+++
+
+   
+Non Standard  T.F  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.14 
+ For std. 2
+nd
+ order C.L.T.F 
+
+ 
+.  .  .
+1
+OLTF
+C L T F
+OLTF
+=
++
+ 
+Important Points : 
+(1)  Damping ratio 
+()
+, dimensionless, represent decay of oscillation in output response . 
+(2)  Undamped natural frequency 
+()rad/sec,
+n
+→
+frequency of oscillation of output response, in absence of damping force,
+0
+n
+
+. 
+(3)  Damped  natural  frequency 
+2
+1rad/sec
+dn
+=−      
+frequency  of  output  response  oscillation,  when Damping  force  is 
+present, 
+0
+d
+
+. 
+ 
+ 
+Case 1:  
+01 (under damp)  ( )ct
+ 
+  (1)  
+ (2)   
+ (3)  
+Case 2 :  
+0 (undamp)=
+ 
+ (1)  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.15 
+ (2)  
+ (3)  
+Case 3 : 
+1=
+ critical damp system  
+ 
+Case 4 : 
+10
+  overdamp  
+• Output response does not oscillate and approaches constant parameter of input not in shortest possible time. 
+Case 5 : 
+10−   
+      
+ 
+Case 6 : 
+1=−
+    
+ 
+Case 7 : 
+1,1 −−  −
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.16 
+ 
+Under  Damped  System  
+ 
+➢ 
+2
+222
+(  )(  )
+01(  )
+21(  )   (  )(  )
+  ===
++++
+n
+nn
+G sN  s
+TS
+SSG s H  sD s
+
+
+   
+      
+➢  Characteristic equation 
+1(  )   (  )   0G S  H  S=  +=
+ 
+ 
+22
+20
+nn
+SS++   =   
+ 
+➢  Poles 
+22
+11
+nnnn
+Sj= −   − = −   −           
+ 
+➢  Complex poles, left half of S-plane. 
+➢  Time constant  
+1
+n
+T==
+
+         
+➢
+ 
+ 
+42%
+s
+tT=
+  Error Band  
+ 
+3    5%T=
+  Error Band  
+➢  
+cos=
+ 
+➢   Locus of poles = semi circle of radius 
+n
+
+  
+➢  Always stable.  
+Undamp System : 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.17 
+➢ 
+0=
+ 
+➢  
+22
+(  )   1(  )    (  )0
+n
+D sG  S  H  SS= +=   +   =
+      
+➢
+ 
+ Poles , 
+(purely imaginary)
+n
+Sj=
+ 
+➢  
+T=
+ 
+➢
+ 
+s
+t=
+ 
+➢  marginally stable (Non repeated poles on imaginary axis) 
+➢  Locus 
+→
+ circle of radius 
+n
+
+ 
+Critical Damp System : 
+ 
+➢  
+1=
+ 
+➢
+ 
+222
+(  )20()0
+nnn
+D SSSS=   ++   =+    =   
+ 
+➢  Poles  
+,
+nn
+S= −   −
+         
+➢  
+1
+n
+T=
+
+   
+➢  
+6for  2%
+s
+tT=
+ 
+➢  Always Stable  
+➢  Poles lies on circle of radius  
+n
+
+ 
+Over damp System : 
+ 
+➢  
+1   
+ 
+➢  
+22
+(  )20    ()()
+nn
+D SSSSS=   ++   =  =  ++   
+      
+➢  Poles = 
+2
+1
+nn
+−   −    
+  real poles  
+➢  
+1
+T
+
+=
+ 
+      
+42%
+s
+tT=
+ 
+➢
+ 
+ Always stable  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.18 
+ 
+Step Response of under damp system 
+ 
+( )( )r tAu t=
+ 
+ ➢ Error signal E(S) = R(S) - C(S) 
+ ➢ 
+2
+22
+()
+(2)
+n
+nn
+A
+CS
+S  SS
+=
+++
+
+   
+  
+2
+( )1sin(( )
+1
+n
+t
+d
+e
+C tAtu t
+−
+
+
+=   −+   →
+
+−
+
+
+
+
+
+ 
+      
+2
+1
+dn
+=−      
+ 
+         
+2
+1
+cos,    tan
+−
+==
+
+  
+
+ 
+ ➢  
+2
+( )sin()( )
+1
+n
+t
+d
+e
+e tAtu t
+−
+
+=+
+
+
+−
+
+
+
+
+ 
+ 
+ (1) 
+k
+t
+[Time Constant When 
+()C tA=
+] 
+d
+n
+t
+−
+=
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.19 
+ (2) 
+1
+1,
+d
+nt
+−
+==
+
+
+ Rise time  
+d
+t=
+
+
+ 
+  
+2
+2
+2
+d
+nt
+−
+==
+
+
+  Time instant of A  
+ 
+
+ 2
+nd
+ order rise time  
+
+ Time taken to reach from 0 to 100% of final value.  
+  
+1
+2
+cos
+1
+r
+n
+t
+−
+−
+=
+−
+
+
+  
+3.14
+radians
+
+
+=
+=
+ 
+(ii) Peak Overshoot and Peak undershot time : 
+ 
+Peak Time  
+1, 2,3
+d
+n
+tn
+
+==
+
+ 
+(1) 
+1(1)po
+d
+tt
+
+=   =    →
+
+First peak overshoot time 
+(2) 
+2(1)
+2
+pu
+d
+tt
+
+=   =    →
+
+ first peak undershoot time 
+(3) 
+3(2)
+3
+po
+d
+tt
+
+=   =    →
+
+2
+nd
+ peak overshoot time 
+(4) 
+()
+()
+21
+po  K
+d
+K
+t
+−
+=
+
+, K = 1,2 
+ K
+th 
+  peak overshoot time 
+(5) 
+()
+2
+pu  K
+d
+K
+t
+
+=
+
+ K = 1, 2 
+ K
+th
+ peak undershoot time 
+(6) At peak overshoot time 
+()
+0,
+dc t
+dt
+=
+ same for peak undershoot also  
+(7) At 1
+st
+ peak overshoot time value, output is maximum 
+()
+(1)max
+[  ( )]
+po
+c  t    tc t==
+ 
+(8) Time gap b/w two successive 
+..   is  2   /p o p ud→ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.20 
+(9) First peak undershoot time = time period of damped oscillation 
+(1)
+2
+puD
+d
+tT
+
+==
+
+ 
+(10) 
+( )( )
+SSt
+C tC tA
+=
+==
+ 
+(11) Output maxima 
+()
+2
+(21)
+1
+()
+11, 2
+K
+po  K
+C  tAeK
+−   −
+−
+
+
+=   +=
+
+
+ 
+(12) Output Minima 
+()
+()
+2
+(2   )
+11, 2
+1
+pu  K
+K
+C  tAeK
+
+−
+
+=   −=
+
+−
+
+ 
+ 
+(1) Maxima of 
+2
+1
+maxmax
+( )( )( )1C tC tC tAe
+−  −
+
+==   +
+
+
+ 
+(2) Peak overshoot = height of overshoot 
+()
+2
+(21)
+1
+()
+()
+K
+po  KSS
+C  tC tAe
+   −
+−
+−
+−=
+ 
+(3) Max. peak overshoot 
+2
+1
+max
+( )( )
+SS
+C tC tAe
+−  −
+=−=
+ 
+(4) Max. peak percentage overshoot - 
+2
+1
+max
+( )( )
+%100%100%
+()
+ss
+po
+ss
+C tC t
+Me
+Ct
+−  −
+−
+==
+ 
+(5) Graphical Relation  
+ 
+(i) 
+2
+1
+xAe
+−  −
+=
+ 
+ 
+2
+31
+zAe
+−   −
+=
+ 
+(ii) 
+2
+1
+100%100%
+x
+e
+A
+−  −
+=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.21 
+ (iii) 
+2
+31
+100%100%
+z
+e
+A
+−   −
+=
+ 
+(6) Minima of 
+()
+2
+1
+21
+min
+( )( )1
+pu
+C tC tC  tAe
+−   −
+
+→==   −
+
+
+ 
+(7) Peak undershoot = height of undershoot  
+()
+2
+(2   )   1
+()
+()
+K
+sspu  K
+C tC  tAe
+−−
+−=
+ 
+(8) Maxima peak overshoot 
+()
+2
+21
+1min
+( )( )( )
+sspuss
+C tC  tC tC tAe
+−   −
+−=−=
+ 
+(9) Maximum peak percentage undershoot 
+   
+2
+21
+min
+( )( )
+%100%100%
+()
+ss
+pu
+ss
+C tC t
+Me
+Ct
+−   −
+−
+==
+ 
+(10) Decay ratio 
+2
+21
+(2)(2)
+(1)(1)
+poPu
+popu
+MM
+e
+MM
+−   −
+===
+ 
+(11) 
+0(1)
+%%   %
+ppo
+MmM==
+ 
+   
+.1
+100
+m
+sp=
+ 
+   
+2
+22
+(ln   )
+.2
+(ln   )
+p
+s
+p
+=
++
+ 
+(12) 
+( )( ),  effective inputAr tAu t==
+ 
+(13) System dependent parameters  
+   
+(   )(  )
+(21)2
+,,,
+Krpo  Kpu  k
+dddd
+KKK
+tttt
+−    −− 
+====
+
+ 
+   
+2
+412
+4,,1,
+sdnD
+nnd
+tTTT
+
+=   ==     =   −   =
+
+ 
+ Total no. of cycle before oscillation dies out 
+s
+D
+t
+A
+T
+=
+ 
+ 
+0(   )(   )
+%,  %
+p    Kpu  K
+MM
+ 
+(14) Input Independent Parameters 
+ (i) 
+()Ct
+ 
+ (ii) 
+()
+poK
+Ct
+ 
+ (iii) 
+max
+()Ct
+ 
+ (iv) Peak overshoot 
+ (v) 
+()
+puK
+Ct
+ 
+ (vi) 
+()
+min
+Ct
+ 
+ (vii) Peak undershoot 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.22 
+ 
+  
+2
+22
+()
+(  )2
+n
+nn
+k
+Cs
+R sSS
+
+=
++   +
+ 
+  
+()
+ss
+C tAK=
+ 
+ ➢ System dependent parameters 
+→
+ No charge  
+ ➢ Input dependent parameters 
+AAK→
+ 
+Note : If 
+0
+( )()r tAu t    t→−
+ then all time formulas will be replaced by 
+()
+0
+tt−
+ 
+Step Response of undamped System 
+(1) 
+
+2
+22
+1
+(  )( )1   cos( )
+n
+n
+n
+AK
+C  sc tAku t
+ss
+
+
+=   =−   
+
++
+
+ 
+• From c(t) of underdamp   
+ 
+ • 
+4
+cos0 ,==    =
+s
+n
+t
+
+ 
+ • 
+, %100%==
+dnp
+M
+ 
+ • 
+,
+2
+=
+r
+n
+t
+
+
+ 
+ • 
+()
+(21)=−
+po  K
+n
+tK
+
+
+ 
+ • 
+2
+()=
+pu
+n
+k
+tk
+
+
+ 
+Step Response of critically damped s/s 
+     
+2
+2
+(  ),( )[1(1)]  ( )
+()
+n
+t
+n
+n
+n
+AK
+C  SC tAKet  u t
+SS
+−
+==−+
++
+
+
+
+
+ 
+➢ Output reaches to steady state without oscillation in short time.  
+Step response of overdamp s/s- 
+➢ 
+22
+1
+22
+12
+(  )(   )
+(2)()()
+nn
+nn
+AKAK
+C SCAK
+S  SSS  Sp    Sp
+
+=⎯⎯→⎯⎯→   =
+++++
+
+
+   
+ 
+  
+12
+012
+( )    []  ( )
+p tp t
+c taa ea eu t
+−−
+=   ++
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.23 
+ Rise time: 
+ (1) 0 to 100% of s. s value 
+→
+ underdamp and undamp system 
+ (2) 10 to 90% of s .s value
+→
+ critical and overdamp system  
+Locus 
+(1) Constant 
+
+ 
+ 
+(2) Constant 
+d
+
+ 
+ 
+ 
+ 
+ 
+(3) Constant 
+n
+
+ 
+ 
+(4) Constant time constant (setting time) 
+1
+n
+T=
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.24 
+ 
+Impulse Response of 2
+nd
+ order s/s 
+(1) Under damped system  
+01
+ 
+     
+()
+2
+( )sin( )
+1
+n
+t
+n
+d
+AK
+C tet  u t
+−
+=
+−
+
+
+
+
+ 
+             
+2
+1100
+4
+,   (peak time),, %
+rpsp
+ddn
+n
+tttM  e
+−
+−
+−
+===
+
+
+  
+
+ 
+(2) Undamp system 
+0=
+ 
+     
+( )sin
+nn
+C tAKt=      
+ 
+(3) Critically damped System 
+1=
+ 
+     
+2
+( )( )
+n
+t
+n
+C tAKteu t
+−
+=
+
+
+ 
+(4) Overdamped System 
+1   
+ 
+     
+12
+01
+()
+p tp  t
+C  ta ea e
+−−
+=+
+ 
+Dominant Pole Concept 
+    
+()()()()
+1234
+()
+()
+C  SM
+R SSpSpSpSp
+=
+++++
+ 
+➢ 
+1234
+,,p   p   p  p→
+ Magnitude of real part of pole 
+➢ 
+Smallest of 
+1,2341
+,,p  p   p   pp=
+ 
+➢ 
+ (i) 
+0
+2
+22
+1
+5
+S
+p
+Spp
+p
+=
+   +  ⎯⎯⎯→
+ 
+ (ii) 
+()
+0
+3
+33
+1
+5,
+S
+p
+Spp
+p
+=
++   ⎯⎯⎯→
+ 
+ (iii) 
+()
+0
+4
+44
+1
+5
+S
+p
+Spp
+p
+=
++   ⎯⎯⎯→
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.25 
+Cascading of 2
+nd
+ order under damped System 
+ 
+   
+2
+1
+22
+1
+IInd  order
+()
+1 /(  )
+(  )1 /(  )2
+n
+nn
+Cs
+TC  s
+R ssTC  sss
+==
++++
+
+   
+ 
+   S – I Ist order   S – II 
+   
+()
+2
+22
+1
+()
+3rd order
+1
+()
+2
+n
+nn
+Cs
+T
+Rs
+sss
+T
+=
+
++++
+
+
+
+   
+ 
+Case 1: 
+   
+22
+(  )(  )
+(  )2
+nn
+C sN  s
+R sss
+=
+++   
+ 
+ 
+    
+ 
+Case 2 : 
+ 
+    
+2
+(  )comparision of   ,allowed
+nn
+N  sk=→ 
+ 
+    
+32
+(  )(  )
+()
+C  sN  s
+R ssss   T
+=
++   +   +
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.26 
+Case 3:  
+ 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.27 
+3 
+STEADY STATE ERROR  
+AND ROUTH STABILITY 
+ 
+3.1.  Error  
+ 
+ 
+     
+( )( )( )e tr tb t=−
+amplitude error 
+System Error  
+(1)  Must tends to 0 as t 
+→
+ 
+(2)  
+()
+sys
+et=
+( )( )for   ( )( )r tc tr tAu t−=
+ 
+(3) 
+()
+sys
+et=
+( )( )for   ( )( )
+tt
+r tc t  dtr tA   t
+−−
+−=
+
+
+ 
+(4) 
+()
+sys
+et
+ 
+( )( )
+for    ( )( )
+dr tdc t
+r tAt  u t
+dtdt
+=−=
+ 
+Amplitude Error  
+       
+( )( )( )outpute tr tc t=   −   →
+ 
+Effective input at summer  
+   
+( )( )( )( )r tAu te tAu   c t==   −
+ 
+   r(t) = Atu(t)   e(t)= Atu(t) – c(t) 
+   
+22
+(  2)
+r(t) = ( )( )( )
+22
+At  uAt
+e tu tc t
++
+=−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.28 
+Calculation of amplitude error  
+(1)  
+( )(  )e t   or E  s
+at the output of summer.  
+(2) Steady state amplitude error  
+0
+( )(  )
+tS
+Lim e tLimSE S
+→→
+=→
+ will be finite only when all poles of 
+               SE(S) will be strictly on LHP. 
+ 
+0
+()
+1(  )
+SS
+S
+SR S
+eLim
+GS
+→
+=
++
+ 
+Steps : 
+(1) Identify feedback (unity) 
+(2) 
+0
+()
+1(  )
+S
+SR S
+ess    Lim
+GS
+→
+=
++
+ 
+(3) Pole location of 
+()
+1(  )
+SR S
+GS+
+ is strictly on L.H.P then perform calculation.  
+Steady state Error for different inputs. 
+Input Check e
+ss
+ 
+Au(t) 
+Poles of 
+1(  )
+A
+GS+
+ 
+1
+SS
+p
+A
+e
+K
+=
++
+ 
+Atu(t) 
+Poles of 
+(1(  ))
+A
+SG S+
+ 
+SS
+V
+A
+e
+K
+=
+ 
+2
+()
+2
+At
+ut
+ 
+Poles of 
+2
+(1(  ))
+A
+SG s+
+ 
+a
+A
+ess
+K
+=
+ 
+ 
+0
+()
+S
+Kp    LimG s
+→
+==
+Positional Error constant /coefficient  
+ 
+0
+()
+S
+Kv    Lim SG S
+→
+==
+ velocity Error constant / coefficient  
+ 
+2
+0
+()
+S
+Ka    Lim S  G S
+→
+=
+ Acceleration Error constant / coefficient 
+Effect of Type  
+Input 
+SS
+e
+ 
+ T-0 T-1 T-2 
+Au(t) Finite 0 0 
+Atu(t) 
+
+ 
+Finite 0 
+2
+()
+2
+At
+ut
+ 
+
+ 
+
+ 
+Finite 
+(1)  Finite steady error is independent of shift in input signal.  
+(2)  Steady state error can be undefined or 
+
+even if CLS is stable. 
+Error Analysis for Non unity f/b –  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.29 
+ 
+(1) 
+1
+( )( )( )e  tr tb t=   −   →
+ Can be shown in diagram  
+(2) 
+2
+( )( )( )e   tr tc t=   −   →
+ Can not be shown in diagram 
+(3) 
+3
+()et=
+ ref signal - 
+()ct
+ 
+ Ref signal = Value of c(t) due to which output of summer is 0. 
+ 
+Case : 1  
+  Error Signal =
+( )( )( )e tr tb t=−
+ 
+         
+00
+()
+()
+1(  )    (  )
+ss
+ss
+SR S
+eLim SE  SLim
+G  S  H  S
+→→
+==
++
+ 
+  Steps: (1) feedback – Non unity 
+→
+ error was shown in frequency .  
+    (2) 
+0
+()
+1(  )   (  )
+ss
+S
+SR S
+eLim
+G S  H  S
+→
+
+=
+
++
+
+ all poles must be in L.H.P 
+Case: 2 
+( )( )( )e tr tc t=−
+ 
+ 
+  
+0
+(  )[1(  )   (  )(  )]
+1(  )   (  )
+ss
+S
+SR SG S  H  SG S
+eLim
+G S  H  S
+→
++−
+=
++
+ 
+  Steps : 
+ (1) f/b 
+→
+Non unity 
+( )( )( )e tr tc t=−
+ 
+ (2) 
+00
+(  )[  (  )(  )]
+SS
+ess    LimSE SLimS R SC S
+→→
+==−
+ 
+ (3) All poles of SE(S) must be in L.H.P 
+Case: 3   
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.30 
+ 
+(   )(0)   (   )rHC =
+ 
+(0)
+H
+HK=
+ 
+(   )(   )
+ssf
+erc=   −  
+ 
+        
+()
+f
+rt=
+Value of C(t) due to which 
+( )    0qt=
+ 
+      
+()
+f
+r=
+Value of 
+()C
+ due  to which 
+(  )    0q=
+ 
+    
+0
+()
+[1(  )]
+ssH
+S
+H
+SR S
+eLimK   T  S
+K
+→
+=−
+  
+0
+()
+H
+S
+KH  S
+=
+=
+ 
+ Steps: (1) Non unity f/b,  
+( )    ref signal( )e tc t=−
+ 
+   (2) 
+0
+(  )(   )
+[1(  )](   )
+ssH
+s
+HH
+SR Sr
+eLimK  T  Sc
+KK
+→
+
+
+
+=−=−  
+
+
+
+ 
+    all poles must be in L.H.P 
+Note : 
+(  )(  )
+N
+H  SS   F  S=
+ 
+ 
+0
+()
+H
+S
+KLim F  S
+→
+=
+ 
+ 
+0
+()
+(1(  ))
+N
+ssH
+N
+s
+H
+SR S
+eLimK  T  S  S
+KS
+→
+=−
+ 
+Concept of Disturbance or Noise signal :  
+ 
+122
+1212
+11
+G GG
+CRD
+G G HG G H
+   
+=+
+   
+++
+   
+ 
+Error signal at output of 
+1
+,S   ER   CH=−
+12
+1212
+,
+11
+RD
+S   E    R   CHG H
+G G HG G H
+  
+−
+=  −   =+
+  
+++
+  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.31 
+Stead state error,
+0
+()
+ss
+s
+eLim SE S
+→
+=
+ 
+()
+2
+00
+1212
+for addition at s-2
+(  )(  )
+(  )    (  )
+1(  )(  )    (  )1(  )(  )    (  )
+due to input r(t)[desired input]due to undesired input
+at s-1d(t) or Noise or diturbance
+at S-2
++
+→→
+
+
+−
+=+
+
+++
+
+
+ss
+ss
+SR  SSD S
+eLimLimG   s  H  s
+G  S  G   S  H  SG  S  G   S  H  S
+ 
+➢ We can reduce 
+ss
+e
+ if 
+1
+G
+ should be as high as passible and  
+2
+G
+ as low as possible 
+Sensitivity of a parameter : 
+     
+K
+T
+S=
+ sensitivity of K w.r.t T 
+     
+(/    )
+(/   )
+K
+T
+KK
+S
+TT
+
+=
+
+ 
+Stability of  an LTI System : 
+(1) For an LTI S/S to be stable must follow BIBO criteria . 
+(2) Bounded (in amplitude) signal ; 
+( ),:X  tMM  
+finite No. X(t) is bounded signal  
+ 
+(3) LTI system 
+()ht→
+ 
+ Unit impulse response must be absolutely integrable  
+ 
+( )( )h t  dth t
+
+−
+→
+
+ 
+(4) For an LTI s/s to be stable ROC of H(s) must include 
+j
+ axis [ROC never include poles] 
+Conclusion :  
+Causal LTI system can be stable, it all poles of H(s) must be strictly on L. H. P 
+Location of poles in H(s) Stability 
+(1)   Repeated or Non – repeated poles on L.H.P Stable 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.32 
+(2)   Single pole at origin Marginal stable 
+(3)   Non repeated poles on 
+j
+ axis 
+Marginal stable 
+(4)   Multiple Non repeated poles on 
+j
+ axis  
+Marginal stable 
+(5)   Multiple poles on 
+j
+ axis 
+Unstable 
+(6)   Repeated poles on 
+j
+ axis 
+Unstable 
+(7)   Poles on R.H.P Unstable 
+(8)   No poles Stable 
+Imaginary vs image Location : 
+ 
+ Imaginary location (a), (b) image location (c), (d) 
+1
+st
+ Order Polynomial 
+ If all coefficient are same then roots will be in L.H. P 
+ D(S) = S +2 ,        D(S) 
+3S=− −
+ 
+ L. H. P   L. H. P 
+2
+nd
+  Order 
+ All coefficient having same sign and No coefficient  is zero, then all roots will be in LHP 
+ D(S) =  
+2
+22SS++
+ D(S)  
+2
+1SS= −  −  −
+ 
+ L.H.P    L. H. P 
+3
+rd
+ Order  
+ No missing power and all coefficient has same sign then – 
+ (A) All real roots in L. H. P 
+ (B) No comment on complex roots 
+R – H Table 
+     
+()
+(  )(  )
+()
+Ns
+T  sH  S
+Ds
+==
+ Root of  D(s) = Poles of T(s) 
+     
+65432
+0123456
+()D  sa sa aa sa sa sa s    a=    +    +    +    +    +   +
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.33 
+ 
+4
+s
+1   20   3
+1
+1
+a aa a
+b
+a
+−
+=
+   
+2
+b
+     0                 0          
+1   32   1
+1
+1
+b ab a
+c
+b
+−
+=
+ 
+ 
+3
+s
+      
+1
+c
+        
+2
+c
+           0     0            
+1   32   1
+1
+1
+b ab a
+c
+b
++
+=
+ 
+ 
+2
+s
+      
+1
+d
+         
+6
+a
+           0                 0              
+21   56   11
+cb aa a  c=−
+ 
+ 
+1
+s
+            
+1
+c
+          0             0                0  
+11   21   21
+dc bb c  c=−
+ 
+ 
+0
+s
+      
+6
+a
+          0             0                 0  
+1   21   6
+1
+1
+d cc a
+e
+d
+−
+=
+ 
+Key Point: 
+(1) If any now of RH table multiply or divided by + constant result remains same 
+(2) 1
+st
+ column elements have same sign 
+→
+ No roots in  
+(3) Any row becomes zero then roots will be at image location 
+(4) If all elements in 1
+st
+ column 
+→
+ same sign  + No row becomes zero 
+ Then all roots in LHP 
+(5) The no of sign changes in 1
+st
+ column = No of roots lying  in RHP 
+(6) If any power of s is missing then 
+ (i) 1 or more than 1 root may exist in RHP  
+  
+2
+(  )1
+Roots1
+D ss
+s
+=−
+= = 
+ 
+ (ii) Non repeated roots on 
+j
+ axis may exist  
+   
+2
+(  )1D sssj=  +   = 
+ 
+ (iii) Repeated roots may exist on 
+j
+ axis 
+ (iv) There may be complex roots 
+ (v) If only even power of s exist then root will be at image location. 
+ (vi) If only odd power of s exist then few roots will be at origin and remaining roots at image location 
+ (vii) In RH table 
+→
+ odd ROZ 
+→
+ some roots will be at image location 
+   
+
+ 
+ Sign of elements in 1
+st
+   
+→
+ Image location will be imaginary axis 
+ Column is same 
+ (viii) In RH table 
+→
+ No odd ROZ 
+→
+ No root at image location 
+      
+
+ 
+   No root at imaginary location 
+ 
+3.2. Root Calculation when Odd Row is never zero 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.34 
+For nth order polynomial 
+(1) Form 
+RH
+ Table 
+(2) Observe the first column 
+(3) 1
+st
+ column elements  
+Note : 
+ 
+ I.P – Inner product 
+ E. P – External Product 
+All coefficient should have same sign 
+ (1) IP > EP
+→
+ all roots in LHP 
+ (2)   
+ (3) 
+2  root RHP
+1 root LHP
+IP    EP=
+ 
+Special Cases 
+(1) 1
+st
+ element of row = 0 other elements non zero 
+ Ex. 
+432
+332ssss+  +   + +
+ 
+ 
+4
+3
+2
+1
+0
+33    2
+11    0
+02    0
+2
+00
+0
+s
+s
+sd
+d
+s
+d
+s
+→
+−
+   
+quantity
+222
+11
+0
+dve
+d
+dd
+ve
+=+
+−
+= −  = −
+=−
+ 
+ No odd row is zero, two sign changes  
+ 
+2.   .
+2.   .
+R H P
+L H P
+→
+→
+ 
+(2) If all element of odd row are zero 
+ (i) Few roots at image location 
+ (ii) Form auxiliary characteristic equation has been formed from the row just above the odd row 
+  
+(  )    0As=
+ 
+(3) Then 
+ 
+(  )(  )
+d
+A sB s
+ds
+=
+ 
+(4) Replace odd row of zeros with B(s) coefficients 
+(5) Roots of A(s)  = Roots of D(s), A(s) roots will be at image location A(s) is always a factor of D(s) 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.35 
+ 
+()
+(  )Remaining roots
+()
+Ds
+Ps
+As
+=→
+ 
+(6) Both location and exact value of roots can be calculated  
+If odd row becomes zero once: 
+(1) Roots of A(s) will be to image location and non-repeated in nature 
+(2) If A(s) is of 2
+nd
+ order and roots of A(s) is on 
+j
+ axis then roots will represent,  undamp natural frequency of 2
+nd
+ order 
+system 
+(3) 
+()
+(  )    0
+()
+Ds
+Ps
+As
+=    = →
+ Remaining roots 
+3.2.1. Odd Row becomes Zero Twice 
+(1)  
+(2) Roots of 
+2
+()As
+ will automatically be covered by 
+1
+()As
+ 
+(3) Roots of 
+1
+()As
+ will be image location 
+(4) 
+1
+()
+()
+()
+Ds
+Ps
+As
+=→
+Remaining roots  
+  
+()
+HighestNo. of sign changes
+No. of roots of D  s   on 
+ 2
+order AEbelow highest order AE
+Imaginary axis
+C
+    
+=− −
+    
+    
+ 
+ No. of roots of D(s) is RHP = No of sign charge in 1
+st
+ column   ..... (2) 
+ No. of roots of D(s) in LHP = order of D(s) – (i) – (ii) 
+Conditionally Stable : 
+ 
+  
+12
+variable,ConstentKK→→
+ 
+ ➢  Stability depends on 
+1
+K
+ or conditionally stable 
+ ➢  Use wavy curve 
+Marginally Stable : 
+ S – 1 form RH table 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.36 
+ S – 2 All sign should be same 
+ S – 3  Odd row become zero once. Non repeated roots on imaginary axis and system becomes marginally stables 
+Oscillating system with undamp natural frequency 
+ S – 1 form RH table 
+ S -2 All elements should be +ve 
+ S – 3  Odd row zero once Auxiliary  C.E. is of 2
+nd
+ order 
+Note : 
+➢ If polynomial has only even power the roots are symmetrical  about origin or image location. 
+➢ Random power of s missing then at least 1 root in RHP 
+Limitation of Routh: 
+ (1) Applicable to finite order polynomial only 
+ (2) 
+(  ), tan  , cosRH invalid
+s
+D  sess=→
+ 
+ (3) Coefficient of polynomial showed be constant  
+3.3. Transportation Lag System 
+ 
+T : delay time or log time 
+Common Mistake   
+      
+()
+sT
+T  se
+−
+=
+ 
+         
+1(Whenis very small)
+x
+exx
+−
+=−
+ 
+      
+(  )   10
+ST
+D sKe
+−
+= +=
+ 
+ Routh invalid, use basic root calculation approach  
+➢ Both polynomial and exponential present thin R.H. applicable  
+ 
+2
+2
+0
+(1)    0
+sT
+ss    Ke
+ss    KsT
+−
++ +=
++ +   −   =
+ 
+Shifting Of origin 
+➢ System 2 is more stable 
+ 
+Note : D(s) = s + 2 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.37 
+ 
+shifting the origin S = 0 to S = - 1 
+ 
+  
+0
+0
+11
+11
+Z
+Z
+Zs
+S
+Zs
+=
+=
++ ⎯⎯⎯→ =
+− ⎯⎯⎯→ = −
+ 
+Put  S = Z – 1 
+             D(s) = Z + 1 
+Note :  
+2
+(  )1D  sss=  + +
+ 
+ (1) How many roots are more negative than 
+0=
+ 
+
+ Roots in LHP R – H criteria in D(s) 
+ (2) How many roots are more +ve  than 
+0=
+ Roots in RHP R – H criteria in D(s) 
+ (3) How many roots have 
+0=
+ Roots on 
+j
+ axis R – H criteria on D(s)  
+ (4) How many roots are more negative than 
+1=−
+ 
+   Put S = Z – 1 
+   D(z) 
+→
+ R. H criteria 
+ No of roots in RHP in z plane 
+
+ No of roots having 
+1−
+ in s – plane  
+ No of roots in LHP in z plane 
+
+No of roots having 
+1−
+ in s – plane 
+ 
+ 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.38 
+4 
+ROOT LOCUS 
+ 
+4.1. Root Locus  
+Locus of roots of characteristic equation or Locus of zeros of characteristic equation or Locus of poles of closed loop system . 
+ D.R.L 
+
+ Direct root locus  
+ C.R.L 
+
+ Complementary root Locus  
+4.1.1. Angle and Magnitude Criteria 
+Case 1:   For D.R.L ,  C.E ,  KF(S) = 1 , K= +ve   constant  
+  
+(  )    1KF  S=
+ 
+  
+(  )    (21)KF  Sn=   +
+ 
+Case 2:  For C.R.L  KF(S) =1 
+  
+(  )    1KF  S=
+ 
+  
+(  )    2KF  Sn=
+ 
+G(S)H(S) K Feedback Locus  
+KF(S) 0<K<
+
+ -Ve D.R.L 
+-KF(S) 0<K<
+
+ -Ve C.R.L 
+KF(S) 0<K<
+
+ +Ve C.R.L 
+-KF(S) 0<K<
+
+ +Ve D.R.L 
+Rules to plot D.R.L  
+Rule  1 :  To plot D.R.L all the coefficient of S should be + ve. 
+Rule  2 :  Origination of D.R.L  
+ (1) DRL originate from open loop poles 
+ 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.39 
+ (2)   
+ 
+ (3) Open loop pole : finite Real – DRL branch will originate  from the open loop pole and move on the real axis in the 
+section D.R.L present .  
+ (4) Open  loop  pole  :  finite  complex – D.R.L  branch  will  originate  form  open  loop  pole  in  the  directions  of angle  of 
+departure  
+ (5) open loop pole present at 
+
+- D.R.L branch will originate from 
+
+by gazing the asymptotic lines given by angle of 
+asymptotes. 
+ (6) at open loop pole value of  K = 0 
+Rule 3 : Termination of D.R.L 
+ (1) Terminate at open loop zeros . 
+ (2)  
+ 
+ 
+ (3)  open loop zero : finite Real – Terminate at open loop zero by moving on the real axis in the section D.R.L exist .  
+ (4) open loop zero finite complex – DRL branch will terminate at open loop zero in the direction given by angle of 
+arrival.  
+ (5)  open loop zero at 
+
+- DRL branch will terminate at open loop zero by gazing angle of asymptotes. 
+ (6) Value of K at open loop zero is  
+  
+0KK  →  =
+ 
+  
+0KK−   →  =−
+ 
+Rule 4 :  Existence of D.R.L on Real axis.  
+  ➢ Segment of real axis where D.R.L exist  
+  ➢ Segment where DRL exist must hare “ ODD no of open loop poles zeros towards its night. 
+Rule 5 :  Identification of a point 
+o
+SS=
+ is  
+ (i) Part of root locus  
+ (ii) Poles of C.L.S  
+ (iii) Roots of C.E  
+ (iv) zeros of C.E 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.40 
+Case 1: S = S
+o
+ is real  
+ Method 1 check if 
+o
+SS=
+ is part of D.R.L  
+ Method 2 Angle sub started by all open loop poles and zeros towards desired point must be odd  
+     Multiple of 
+
+. 
+ Method 3 (i) put 
+0
+SS=
+ in CE , calculate K then if K is real and 
+0
+VeSS+    =
+ is part of D.R.L 
+           K is real and +ve 
+0
+SS=
+ is part of D.R.L   
+           K otherwise 
+0
+SS=
+is  not part of D.R.L. 
+ Method 4 verify magnitude and angle criteria at 
+0
+SS=
+  
+    D.R.L 
+(  )   (21)KF  Sn=   +
+ 
+    
+(  )    1KF  S=
+ 
+Case 2 : 
+0
+SS=
+ Complex.  
+ Method 1  fails  
+ Method 2,3,4 are applicable  
+Rule 6 : Calculation of K at 
+0
+SS=
+ (if 
+0
+SS=
+ is part of RL) 
+     
+()()
+(  )   (  )
+()()()
+K  S    a   S    b
+G S  H  S
+S    c   S    d   S    e
+++
+=
++    +    +
+0
+/
+K
+ve  f   b
+  
+−
+ 
+           
+123
+12
+,
+lp lp  lp
+K
+lz  lz
+=
+   
+ 
+Rule 7: Angle of asymptotes 
+Only for those branches which ether originate or terminate at 
+
+. 
+Formula : 
+(1) 
+0,0,1, 2,3,1P   ZnP   Z−     =−−  −  −
+  P = finite open loop poles  
+(2) 
+0
+(21)180
+()
+n
+If   P    Z
+n
+pz
+
++
+=
+−
+0
+(21)180
+()
+n
+ZP
+n
+zp
+
++
+=
+−
+ Z = finite open loop zeros   
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.41 
+Rules 8 :  Centroid 
+(i) Calculated When 
+PZ
+ 
+(ii) Needed only when A.O.A are calculated.  
+(iii) The A.O.A drown from a point on real axis known as centroid, (originating point of asymptotes) 
+(iv) All the asymptotic lines meets at common point on real axis know as centroid. 
+(v) Always present on real axis .  
+(vi) May or may not be part of R.C  
+(vii) Value of centroid 
+0,,veve→  =  +   −
+ 
+(viii) 
+formula
+pz
+pz
+
+  − 
+=
+−
+  
+:
+Real numbers  
+Rule 9:  Break point  
+(1) Where 2 or more then 2 poles of C.L.S coincides simultaneously . If is part of  R.L 
+Types :  
+(1)  Break  away point  
+ (1) 2 or more then 2 poles of C.L.S coincides .  
+ (2) After B.A.P  R.L Breaks into some parts and it can not remains on real axis. It moves into different parts in complex 
+conjugate location 
+ (3) BAP means shifting of R.L from real axis into complex conjugate Location. 
+ (4) At  BAP  k  achieves  max  value  for  which  root  remains  on  real  axis  if 
+K
+ then  R.L  moves  on  complex  conjugate 
+location  
+  
+0
+BAP
+KK
+: Root locus  is on real axis . 
+  
+BAP
+KK
+ Root locus on complex conjugate location.  
+(2)  Break In point  
+ (1) 2 or more then 2 poles of C.L.S coincides .  
+ (2) After  the  BIP  R.L  Breaks  into  some  parts  and  if  can  not  remain  on  complex  conjugate location  . If  move  on  into 
+different parts on real axis .  
+ (3)  BIP means shifting of root locus from complex conjugate location to real axis . 
+ (4) At  BIP  K  achieves  min  value  for  which  root  locus  is  on  real  axis  .  If 
+K
+ if remains  on  real  axis 
+0
+BIP
+KK      →
+ 
+complex conjugate location  
+  
+Real axis
+BIP
+KK→
+ 
+    S.1 from the CE 
+1(  )   (  )    0G S  H  S=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.42 
+  
+1(  )    0KF  S=
+ 
+     
+1
+()
+()
+KQ S
+FS
+= =
+ 
+   
+0, Possible Break point
+dk
+ds
+=
+ 
+  S.2 By 
+0,
+dk
+ds
+=
+   
+ 
+  S.3 If so is valid Break point .  
+  
+0
+: RealS
+    
+0
+2
+2
+0
+SS
+dK
+ds
+=
+
+
+
+
+ 
+  
+0
+(  )maxima  at.  .K    Q SSSB A P=→=  →
+ 
+  
+0
+2
+2
+0
+SS
+dk
+ds
+=
+
+
+
+
+ 
+  K = Q(S) 
+→
+Minima at 
+0
+..SSB I N=→
+  
+4.2. Properties of Break points  
+(1) At Break point ,RL branches from an angle of 
+0
+180
+n
+
+ with real axis where n is number of closed loop poles arriving or 
+departing from signal breakpoint on the real axis . 
+(2)  If 2 adjacent open loop poles on real axis and segment between them is part of DRL then there will be at least one BAP 
+between then . 
+(3) For 2 adjacent open zeros of OLS 
+→
+At least 1 BIP exist  
+(4) If 2 or more then 2 poles of OLS coincide at K = 0 this itself represent BAP .  
+ for K = 0 , OLP = CLP 
+(5) If 2 or more then 2 zeros coincide at 
+K=
+ then this itself becomes Break point for  
+ 
+,KOLZ    CLP= =
+ 
+Rule 10 : Angle of departure  
+➢  For complex OLP , given originating direction to Branch of DRL  
+ 
+0
+180[]
+dpz
+  =    −   −
+ 
+ 
+p
+=
+ Angle sustained by remaining OLP towards desired pole  
+ 
+z
+=
+ Angle  sustained by remaining all OLZ towards desired pole  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.43 
+Rule 11 : Angle of arrival 
+➢ For complex OLZ , gives terminating direction .  
+ 
+0
+180[]
+azp
+  =    −  −
+ 
+ 
+z
+=
+ Angle sustained by remaining OLZ toward desired OLZ  
+ 
+p
+d=
+ Angle sustained by  remaining  all OLP toward desired OLZ . 
+Rule 12 :  Intersection with j axis  
+➢ Identification of CLP on 
+j
+axis .  
+ S-1 From C.E and R.H table .  
+ S-2     
+ Odd Row 
+→
+ Zero and K = +ve and Root of AE on 
+j
+ axis → RL intersect 
+j
+ axis  
+Rules to PLOT a C.R.L  
+• Rule 1 – Same as DRL  
+• Rule 2 – Same  
+• Rule 3 – Same  
+• Rule 4 – Replace odd with Even  
+• Rule 5 – Identification of 
+0
+SS=
+on CRL  
+Case 1 : 
+0
+SS=
+is real  
+• Method-1  So is part of CRL  
+• Method -2 Angle by all OLP and zero are even multiple of 
+2n=
+ 
+• Method -3 
+1(  )   (  )   0Real and
+o
+SS
+G S  H  SKve
+=
+= ⎯⎯⎯→  =+
+ 
+• Method -4   
+0
+(  )1
+SS
+KF  S
+=
+=
+ 
+ 
+0
+(  )2
+SS
+KF  S
+=
+=
+ 
+Case 2 : 
+0
+SS=
+Complex  
+  M-1 Fall  
+  M-2 Angle by all OLP and OLZ should be 
+2n
+ 
+  M-3 
+0
+real and
+SS
+C  EKve
+=
+  ⎯⎯⎯→+
+  
+  M-4 
+0
+(  )    1,(  )2
+SS
+KF  SKF  Sn
+=
+=  =
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.44 
+Rule 6 : Angle of asymptotes  
+     
+P   ZP   Z
+ 
+    
+2
+n
+n
+PZ
+
+=
+−
+ 
+2
+n
+n
+PZ
+
+=
+−
+ 
+Rule 7 :  Same  
+Rule 8 :  Calculate K at 
+0
+,SS=
+if 
+0
+,SS=
+is part of C.R.L 
+Rule 9 :  Breakpoint  
+  S.1 – Same as DRL 
+  S.2 – Validate S = S
+0 
+by following C.R.L criteria 
+Rule 10: Angle of departure  
+     
+    
+ 
+Rule 11: Angle of arrival.  
+  
+0
+0()
+azp
+  =  −   −
+ 
+Rule 12: Same  
+  Note – RL always symmetrical about real axis  
+Few Important Result 
+(1) 
+()
+(  )   (  )
+()
+K  s   b
+G S  H  S
+sa
++
+=
++
+ 
+ Breakpoint =
+2
+bbab−    −
+ 
+ Radius of circle = 
+2
+bab−
+ 
+ Centre = (-b, 0) 
+(2) 
+()
+(  )   (  )
+()
+K  s   b
+G S  H  S
+S  s    a
+−−
+=
++
+ 
+ Breakpoint 
+2
+s    bbab =    +
+ 
+ Centre = (b, 0) 
+ Radius 
+2
+bab=+
+ 
+(3) 
+(  )   (  )
+()()
+KS
+G S  H  S
+S    a   S    b
+=
+−−
+ 
+ Breakpoint 
+sab = 
+ 
+ Centre = (0 , 0) 
+ Radius 
+ab=
+ 
+(4) 
+(4)    (  )   (  )
+()()
+KS
+G S  H  S
+S    a   S    b
+−
+=
+++
+ 
+ Breakpoint 
+sab = 
+ 
+ Centre = (0, 0) 
+ Radius = 
+ab
+ 
+(5) 
+2
+2
+()
+(  )   (  )
+()
+K  S    a
+G S  H  S
+Sb
++
+=
++
+ 
+ Centre 
+,0
+2
+ab
+
++
+
+=−
+
+
+
+
+ 
+ Radius 
+1
+2
+ab=−
+ 
+ Breakpoint , 
+,sa   b= − −
+ 
+ 
+  
+D.R.L C.R.L 
+0
+180()
+dpz
+  =    −   −
+ 
+0
+0()
+dpz
+  =  −   −
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.45 
+Note : 
+(1) 
+ 
+(2) 
+ 
+Min phase System : All polls and zeros must be in L.H.P  
+Non Minimum phase system : Which are not minimum phase  
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.46 
+5 
+FREQUENCY  
+RESPONSE ANALYSIS 
+ 
+5.1. Introduction 
+Test inputs : Sinusoidal input  
+   
+( )cos
+o
+x tAt=→
+ const frequency =
+o
+Sj=
+ 
+   
+00
+cos(  )( )() cos(())
+oo
+AtH  Sy tA H  jtH  j⎯⎯→⎯⎯→   =+
+ 
+   
+sin(  )( )() sin(()
+oooo
+AtH  Sy tA H  jtH  j⎯⎯→⎯⎯→   =+
+ 
+➢ Only 
+j
+ axis of S domain needed .  
+➢ Steady state output when a sinusoidal signal is applied –  
+ 
+
+0
+01
+( )[]
+o
+j    tjt
+SS
+t
+y tLim a ea e
+−
+→
+=+
+ 
+Few observations   
+     
+cos()(  )( )
+o
+AtH  Sy t+  ⎯⎯→⎯⎯→
+ 
+   
+0
+( )() cos(())[  ( )]
+ooSS
+y tA H  jtH  jy t=+  +→
+
+   
+ 
+   Replace With sin for sin i/p . 
+ 
+()Hj→
+Frequency response of an LTI S/S 
+ 
+()Hj→
+Magnitude 
+ 
+()Hj→
+ Phase Response  
+ 5.1.1. Frequency domain analysis of 1st order  
+ 
+     
+/
+()
+1/
+KT
+TS
+ST
+=
++
+ 
+          
+/
+()
+1/
+KT
+Tj
+jT
+
+
+=
++
+       
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.47 
+        
+1
+22
+/
+(),()tan
+1/
+KT
+T  jT  jT
+T
+−
+== −
++
+
+
+ 
+ 
+0
+()
+3.rad/sec
+2
+c
+Tj
+dB  BW−=
+ 
+5.1.2. Frequency domain analysis of 2nd Order System  
+        
+2
+2
+(  )01
+22
+n
+nn
+K
+TS
+ss
+=  
+++
+
+
+   
+ stability can be decided.  
+    
+1
+2
+2
+22
+2
+2
+22
+2/
+(),()tan
+1
+4
+n
+n
+nn
+K
+T  jT  j
+i
+−
+
+
+
+== −
+
+
+
+
+
+−
+
+
+−+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+Plot 1 
+ 
+For Resonant frequency  
+      
+()0
+d
+Tj
+d
+
+
+=
+ 
+2
+12
+rn
+=−  
+ 
+n
+→
+undamped Natural frequency  
+r
+→
+ Resonant frequency  
+d
+→
+Damped frequency 
+Resonant Peak  
+      
+2
+21
+r
+K
+M=
+−
+ 
+
+r
+ is real only when 
+1/   2
+ 
+for 
+1
+,
+2
+r
+
+does not exist  
+       
+2
+:0
+1   2: 01 /   2
+0
+:1 /   2
+n
+rn
+   =
+
+
+
+ =    −      
+
+
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.48 
+       
+2
+:0
+:   01 /   2
+21
+1
+:
+2
+r
+K
+M
+K
+
+
+=
+
+
+
+=  
+
+−
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+asifconstant
+rn
+→      
+ 
+ 
+if   is constant
+rn
+→    
+ 
+ 
+ (01/   2)
+r
+Mas→       
+ 
+       
+22   2
+(1   2   )(1   2   )1
+cn
+=−    +   −+  
+ 
+       
+242
+(1   2    )442
+cn
+=−    +−   +     
+ 
+ 
+as,constant
+cn
+→        
+ 
+ 
+Whenconstant
+cn
+is→  
+ 
+Bode Plot :  
+ 
+Exact frequency Analysis of a  system
+()TS
+: 
+ S-1 Put 
+0Sj
++
+=   +
+ 
+ S-2    
+()
+()()
+j   T   j
+T  jT  je
+
+
+
+=
+ 
+ S-3     Plot  
+()T  jVS→
+Exact Magnitude plot 
+  
+()T  jVS→
+ Exact phase plot  
+ ➢ Exact plots are non linear in shape ; drawn on normal graphs . 
+  Stability of T(S) 
+→
+ can be defined by plotting Bode plot of OLTF G(S)H(S). 
+Bode Plot:  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.49 
+Let OLTF is G(S)H(S) 
+1.  
+()   ()()SjG  jH  jT  j        ==
+ 
+2.  
+()   ()()G  j    H  jT  j   =
+ 
+ 
+1010
+20 log()   ()20 log()()   (
+dB
+G  j    H  jT  jG  j    H  j==      
+ 
+ 
+10
+Plot()   () vs logShould be linearG  j    H  j→   
+ 
+3.  
+0
+()    ()()G  jH   jT   j=     
+ 
+ Plot : 
+10
+()   ()  vs logG  jH   j→    
+This need not to be linear .  
+4.  
+ 
+ 
+10111022
+(log,)(log,)AM dBBM  dB
+ 
+ 
+10
+()logT  jdB VS→
+ Make sure it is linear.  
+ 
+21
+2
+10
+1
+()
+Slope
+de cadeOctave
+log
+MM
+dBdB
+−
+===
+
+
+
+
+
+ 
+ 
+ 
+ 
+linear
+()
+Non linear
+Tj
+ 
+ (7) 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.50 
+ 
+ 
+21
+2
+10
+1
+degreedegree
+decodeoctave
+log
+Sor
+
+
+
+−
+=
+
+
+
+ 
+ 
+206
+decode    octave
+dBdB+
++=
+ 
+Exact Plot -  
+(1)  Low frequency Range 
+10
+:   ()20log
+c
+dB
+T  jK  =
+ 
+Summary Table for  
+()
+p
+T  SKS=
+ 
+(  )   (  )G  S  H  S
+ 
+Initial slope 0 dB axis Int. 
+Slope at 
+→
+ 
+PHASE 
+K 0 dB / decode 
+
+ 
+0 dB/decode 
+0
+0
+ 
+Ks +20 dB/dec 
+1
+K
+=
+ 
++20 dB/dec 
+0
+90+
+ 
+2
+Ks
+ 
++40 dB/dec 
+1
+2
+1
+()K
+=
+ 
++40 dB/dec 
+0
+180+
+ 
+: ; ; ; : 
+p
+KS
+ 
++20p dB/dec 
+1
+1
+()
+P
+K
+=
+ 
++20 dB/dec 
+0
+90p+
+ 
+ 
+Summary table for 
+(  )   (  )
+p
+K
+G S  H  S
+S
+=
+ 
+G(S)H(S) Initials lobe 0dB axis Int . 
+Final slope  
+→
+ 
+Phase 
+K
+S
+ 
+-20dB / dec 
+
+=K 
+-20dB / dec 
+0
+90−
+ 
+2
+K
+S
+ 
+-40dB / dec 
+1
+2
+()K=
+ 
+-40dB / dec 
+0
+180−
+ 
+3
+K
+S
+ 
+-60dB/dec 
+1
+3
+()K=
+ 
+-60dB/dec 
+0
+270−
+ 
+: ; : : ; 
+p
+K
+S
+ 
+-20pd B/dec 
+1
+()
+p
+K=
+ 
+-20pdB/dec 
+0
+90p−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.51 
+Important Observation : 
+Slop of Initial line Initial Phase Type 
++20 p dB /dec 
+0
+90P+
+ 
+“0” 
++0dB/decode 
+0
+0
+ 
+“0” 
+-20dB / decade 
+0
+90−
+ 
+“1” 
+-40dB/decade 
+0
+180−
+ 
+“2” 
+-20p dB/decade 
+0
+90p−
+ 
+“p” 
+Steady state error from Bode plot – 
+Initial Line slope Information 
+ss
+e
+ 
+0dB / decade 
+10
+20log
+p
+AmpK=
+ 
+1
+p
+A
+K+
+ 
+-20dB/decade 
+0dB axis Intersection  
+v
+K=
+ 
+v
+A
+K
+ 
+-40dB/decade 
+0 dB axis Intersection  
+a
+K=
+ 
+a
+A
+K
+ 
+Exact Plot  
+(1) Low frequency Range 
+10
+:   ()20log
+c
+dB
+T  jK  =
+ 
+(2) Mid frequency Range 
+10
+:   ()20log3
+c
+dB
+T  jKdB  ==+
+ 
+(3) High frequency Range 
+1010
+:   ()20log20log
+c
+dB
+c
+T  jK
+
+   
+
+=+
+  
+G(S)H(S) Initial Line with slope 
+Change in slope at 
+c
+=
+ 
+error in mag. at 
+c
+=
+ 
+Slop at 
+→
+ 
+1
+c
+S
+K
+
+
++
+
+
+ 
+0dB /decade with mag 
+10
+20 LogK
+ 
++20 dB/dec +3dB +20dB / dec 
+2
+1
+c
+S
+K
+
+
++
+
+
+ 
+0dB /decade with mag 
+10
+20 LogK
+ 
++40dB/dec +6dB +40dB/dec 
+: 
+: 
+: 
+: 
+ 
+ 
+   
+1
+p
+c
+S
+K
+
+
++
+
+
+ 
+0dB /decade with mag 
+10
+20logK
+ 
++20pdB/dec +3pdB +20pdBdecade 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.52 
+G(S)H(S) Initial Line  
+With slope 
+Change in slope at 
+ = 
+c
+ 
+Error in Mag at  
+ = 
+c
+ 
+Slope at 
+ =  
+1
+c
+K
+S
+
+
++
+
+
+ 
+ 
+0dB/decade with 
+mag 20
+10
+logK
+ 
+ 
+–20dB/dec 
+ 
+–3dB 
+ 
+–20dB/dec 
+2
+1
+c
+K
+S
+
++
+
+
+
+ 
+ 
+0dB/decade with 
+mag 20
+10
+logK
+ 
+ 
+–40dB/dec 
+ 
+–6dB 
+ 
+–40dB/dec 
+1
+P
+c
+K
+S
+
+
++
+
+
+ 
+ 
+0dB/decade with 
+mag 20
+10
+logK
+ 
+ 
+–20pdB/dec 
+ 
+–3pdB 
+ 
+–20pdB/dec 
+➢  If magnitude plot given , then recovered T.F is not unique . 
+➢ If Bode magnitude and phase plot is given , then reordered T.F is unique 
+  
+Time constant from 
+          
+1
+()
+1
+Corner frequency
+TS
+S
+T
+=
+
++
+
+
+
+ 
+Approximation of T.F.   
+        
+55
+5  11
+5(20)(50)
+2050
+()
+55
+(10)(100)
+11
+10100
+SS
+TS
+SS
+
+++
+
+++
+
+==
+++
+
+++
+
+
+   
+ (i) 
+5(1)(1)
+010(  )5
+(1)(1)
+TS  ==
+ 
+ (ii) 
+5(1)(1)
+10(  )5
+(1)(1)
+TS===
+ 
+ (iii) 
+5(1)(1)50
+1020(  )
+5
+5
+(1)
+10
+TS  ==
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.53 
+ (iv) 
+5(1)(1)50
+20(  )
+5
+.1
+10
+TS
+S
+===
+ 
+ (v) 
+51
+5
+20
+2050(  )
+2
+.1
+10
+S
+TS
+S
+
+
+
+
+  ==
+
+
+
+ 
+ (vi) 
+5
+50(  )
+2
+TS==
+ 
+Similany  
+ How to calculate T.F from Bode plot – 0 dB / decode 
+→
+ K  
+ Step - 1 Identify initial slope 
+20pdB/decode
+p
+KS→
+ 
+             
+20pdB/decode/
+p
+KS−→
+ 
+ Step - 2  Identify corner frequency (where slope changes change in slop = (final – Initial) slope 
+   
+1
+201,20
+1
+p
+p
+c
+c
+s
+SpSp
+S
+
+
+
+ = ++ = −
+
+
+
++
+
+
+ 
+ Step -3 For calculation of K  
+   M-1 Approximation  
+   M-2  (i)  If initial line is 0dB/de code = 
+10
+20 logKM=
+ 
+     (ii)  If slope is there  
+      Magnitude at 
+1N= ⎯⎯→
+(magnitude of initial line) 
+10
+20logKN=
+ 
+      Bode plot of  
+2
+22
+(  )   (  )?
+2
+n
+nn
+K
+G S  H  S
+SS
+==
+++
+
+   
+ 
+ Case - 1  Critical damping 
+()
+1=
+ 
+   
+2
+(  )   (  )
+1
+n
+K
+G S  H  S
+S
+=
+
++
+
+
+
+    
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.54 
+ Case – 2 Overdamped 
+(1)
+ 
+   
+12
+(  )   (  )
+11
+K
+G  S  H  S
+SS
+
+=
+
+++
+
+
+   
+  
+ Case -3 Underdamp 
+()
+01
+ 
+ (1) 
+1
+0
+2
+
+     (2) 
+1
+2
+=
+ 
+ 
+ (3) 
+1
+1
+2
+
+     
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.55 
+ Case-4: 
+0=
+ 
+ 
+Important Points : 
+(1) Calculation of unknown frequency  
+ 
+ 
+5.2. Nyquist Stability and Plot 
+➢  Contour (closed curve in S – plane) or  (specified region in s plane) encircles  
+ encircles (contains) m poles of Q(S) strictly inside if .  
+      
+
+ 
+ Q(S) plot in Q(S) plane encircles origin (0,0) m times. 
+➢ Contour in splane passes through one or more pole of 
+()S
+ 
+ Q(S) plot in Q(S) plane remain open curve. Hence poles do not contribute in encirclement of origin.  
+➢ Contour in s-plane encircle m zeros of Q(S) strictly inside it  
+     
+Same  durection
+ 
+ Q(S) plot in Q(S) plane encircles the origin m times. 
+➢ Contour in s plane has m zero on the boundary of the contour  
+     
+
+ same sense  
+ (i) Q(S) plot in Q(S) plane is closed. 
+ (ii) Q(S) plot crosses origin m times.  
+ (iii)  Such zeros do not contribute in encirclement of origin  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.56 
+ 5.2.1. Rules of mapping from S plane to Q(S) Plane 
+     
+()
+()
+()
+NS
+QS
+DS
+=
+,   C contour in S plane 
+ 
+C
+P
+= No of poles of Q(S) present strictly inside C,  
+ 
+C
+Z
+ = No of Zeros.  
+ N = No . of encirclement of origin by Q(S) plot. 
+  
+Limitation  
+(a) If pole of Q(S) lies on boundary of C 
+(b)  If  zero of Q(S) lies on boundary of C 
+Important Points : 
+(1)  Principle of argument  
+ 
+➢ If 
+C
+P=
+ Pole inside Contour,  
+C
+Z=
+  zero inside contour , Q(S) plot in Q(S) plane  
+ (i) 
+()
+CC
+PZQ S→
+ plot in Q(S) plane encircles the origin (0,0) 
+()
+CZ
+PP−
+time in direction opposite to the contour in 
+S plane. 
+ (ii) 
+cc
+PZ→
+Encircle origin 
+()
+CC
+ZP−
+time in same direction .  
+ (iii)  
+CC
+PZ=→
+ Does not encircle origin .  
+(2) Rules of Mapping  
+ valid for T.F 
+()
+()
+()
+NS
+QS
+DS
+=
+ 
+ 
+(  )(  )(  )
+()
+(  )(  )
+N  SAD SBH  S
+A   BQ SAB
+D SD S
++
++=  +=
+ 
+ (i) Let T.F =
+()
+()
+()
+NS
+QS
+DS
+=
+ 
+  
+C
+P=
+ No of poles of Q(S) inside contour . 
+  
+C
+Z=
+ No of Zeros of Q(S) inside contour 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.57 
+  N = No of encirclement of (0,0) by Q(S) plot.  
+  N = +ve , if C and Q(S) has opposite direction  
+  N =  - ve , if C and Q(S) has same direction  
+ (ii) Let T.F is A + BQ(S) 
+  N = 
+CZ
+PP−
+ 
+  
+C
+P→
+No . of poles of T(S) inside contour 
+  
+C
+Z→
+No. of zero . 
+  
+N→
+ No. of encirclement of  (0,0) by A+BQ(S) plot . 
+ (iii)  If A+BQ(S) plot encircle origin then Q(S) plot will encircle 
+,0
+A
+B
+
+−
+
+
+. 
+     Or  
+  If Q(S) plot encircles (-A/B,0) then A+BQ(S) plot will encircle (0,0) 
+Nyquist 
+ If  
+()
+(  )   (  )
+()
+NS
+G S  H  S
+DS
+=
+ 
+ 
+(  )(  )
+1(  )   (  )
+()
+N  SD S
+G S  H  S
+DS
++
++=
+ 
+ 
+(  )(  )
+(  )   (  )
+()
+AD SBH  S
+A   BG S  H  S
+DS
++
++=
+ 
+ ➢ Poles of T.F 
+(  )   (  )A   BG S  H  S+
+ will be same as T.F G(S)H(S). 
+ ➢ Zeros of 
+1(  )   (  )G S  H  S+=
+Root of 
+
+1(  )   (  )G S  H  S+
+ = Poles of CLS 
+ ➢  Poles of 
+1(  )   (  )G S  H  S+=
+ Poles of G(S)H(S)  
+ Case 1   
+ 
+ Fixed : Clockwise 
+ Rule of Mapping : let TF is 
+(  )   (  )
+CC
+G S  H  SNPZ  =  −
+ 
+ N = No of encirclement of (0,0) by G(S)H(S) plot in G(S)H(S) plane.  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.58 
+  
+ 
+C
+P=
+No of poles of G(S)H(S) lying inside contour in S plane .  
+     OR 
+ No of poles of G(S)H(S) lying in right side plane 
+Ct
+PP=
+ 
+ 
+C
+Z=
+ No of zero of G(S)H(S) lying inside contour in S plane . 
+     OR 
+ No of zeros of G(S)H(S) lying in RHP 
+Ct
+ZZ=
+ 
+    
+NPZ
+++
+=−
+ 
+ For OLS to be stable 
+0
+C
+P=
+ 
+ Case 2   
+ 
+ Rule of Mapping : Let T.F is 
+(  )(  )
+1(  )   (  )
+()
+N  SD S
+G S  H  S
+DS
++
++=
+ 
+       
+CC
+NPZ=−
+ 
+ N = No of encirclement of (0,0) by 1+GH plot in 1+GH plane .  
+     OR 
+ No of encirclement of (-1,0) by GH plot in GH plane .  
+ 
+C
+P=
+no of poles of 
+[1(  )   (  )]G S  H  S+
+lying in R.H.P  
+     OR 
+ No of poles of G(S)H(S) lying in 
+Ct
+PP=
+ 
+ 
+C
+Z=
+ no of zeros of [1+G(S)H(S)] lying in RHP. 
+     OR 
+ No of poles of closed loop system lying in R.H.P.  
+Ct
+ZZ→
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.59 
+Note: After Nyquist modified the mapping Rule . 
+  (i) S plane contour : Entire R.H.P. 
+  (ii) Plot of G(S)H(S) is needed only  
+   ➢ Stability of all the T.F. of type A+BG(S)H(S) can be determined. 
+   ➢ Also stability of C.L.S can be determined by applying N.S.C. in 
+1(  )   (  )G S  H  S
+. 
+    S plane contour 
+→
+ Entire R.H.P. : “NYQUIST CONTOUR “  
+Nyquist Contour : “Contour containing entire R.H.P.” 
+5.2.2. “Types Of Nyquist Contour” 
+    
+ 
+()
+(  )   (  )
+()
+NS
+G S  H  S
+DS
+=
+
+ 
+Should not have any pole or zero on 
+j
+ axis 
+Nyquist Contour 
+ [I]:  
+0Sj=  
+ 
+ [II]:  
+θ
+== 
+j
+Srer
+ 
+   
+22
+
+
+−−
+
+ 
+   
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.60 
+2. 
+()
+(  )   (  )
+()
+NS
+G S  H  S
+DS
+=→
+ It has poles or zeros at origin  
+ 
+(I) 
+Sj=
+  
+0  
+ 
+(II) 
+10
+s    re=
+  
+r=
+ 
+(III) 
+Sj=−
+  
+o  
+ 
+(IV) 
+10
+Sre=
+  r → 0  
+/ 2/ 2       −     +
+ 
+3. 
+()
+(  )   (  )
+()
+NS
+G S  H  S
+DS
+=⎯⎯→
+It has poles and zeros on 
+j
+ axis. 
+ 
+Note:  
+      
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.61 
+N.S.C.  for various T.F.  Let Nyquist contour is clockwise: 
+Case 1 : N.S.C. for T.F. G(S)H(S) 
+  
+++
+=−NPZ
+ 
+  
+N=
+ number of encirclement of (0,0) by GH plot in GH plane  
+   
+  P
++
+ = Number of poles of GH lying in RHP 
+  Z
++
+ = Number of zeros of GH lying in RHP 
+  For TF GH to be stable : P
++
+ = 0 
+Case 2 : N. S. C. for T.F. 1 + G(s)H(s) 
+  N = P
++
+ – Z
++
+ 
+  N = Number of encirclement of (0, 0) by 1 + GH plot in 1 + GH plane 
+       Or 
+  No. of encirclement of (–1, 0) by GH plot in GH plane 
+  P
++
+ = Number of poles of 1 + GH lying in R.H.P. 
+       Or 
+  Number of poles of GH lying in R.H.P 
+  Z
++
+ = Number of zeros of 1 + GH lying in RHP 
+       Or 
+  Number of poles of 
+1
+G
+GH+
+ (C.L.S) lying in RHP 
+  (i) For TF 1 + GH to be stable 
+0
++
+⎯⎯→  =P
+ 
+  (ii) For closed loop system 
+1
+G
+GH
+
+
++
+
+ to be stable 
+0
++
+⎯⎯→  =Z
+ 
+ Case 3: N.S.C. for T.F. 1 –  G(s)H(s) 
+  N = P
++
+ – Z
++
+                                                                                
+  N = Number of encirclement of (0,0) by 1 -  GH plot in 1- GH plane 
+      Or 
+  Number of encirclement of (1,0) by GH plot in GH plane 
+  P
++
+ = Number of poles of 1- GH lying in RHP  
+      Or 
+  Number of poles of GH lying in RHP 
+  Z
++
+ = Number of zeros of 1 – GH lying in RHP 
+      Or 
+  Number of poles of 
+1
+G
+GH+
+ (C.L.S.) lying in R.H.P. 
+  (i) For TF 1 - GH to be stable 
+0
++
+⎯⎯→  =P
+ 
+  (ii) For C.L.S.
+1
+G
+GH
+
+
+−
+
+ to be stable 
+0
++
+⎯⎯→  =Z
+ 
+Case 4 : N.S.C. for T.F. 4 + 3 G(s)H(s) 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.62 
+  
+++
+=−NPZ
+                                                                                
+  N = Number of encirclement of (0,0) by 4 + 3GH plot in 4 + 3 GH plane 
+      Or 
+  Number of encirclement of 
+4
+,0
+3
+−
+
+
+
+  by GH plot in GH plane 
+  P
++
+ = Number of poles of 
+43GH+
+ lying in RHP  
+       Or 
+  No. of poles of GH lying in RHP 
+  Z
++
+ = Number of zeros of 
+43GH+
+lying in RHP 
+       Or 
+  Number of poles of 0 system 
+43
+G
+GH+
+ lying in R.H.P. 
+Case 5 : N.S.C. for T.F. 
+(  )   (  )A   BG s  H  s+
+ 
+  
+++
+=−NPZ
+                                                                                
+  N = Number of encirclement of (0,0) by 
+A   BGH+
+plot in 
+A   BGH+
+ plane 
+       Or 
+  Number of encirclement of 
+,0
+−
+
+
+
+A
+B
+  by GH plot in GH plane 
+  P
++
+ = Number of poles of 
+A   BGH+
+ lying in RHP  
+       Or 
+  Number of poles of GH lying in RHP 
+  Z
++
+ = Number of zeros of 
+A   BGH+
+lying in RHP 
+       Or 
+  Number of poles of 0 system 
+G
+A   BGH+
+ lying in R.H.P. 
+5.3. Problem Solving Approach 
+1. Flow Chart 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.63 
+Plotting Nyquist Plot 
+Assumptions 
+ (1) Nyquist contour is clockwise. 
+ (2) Does not contain pole or zero on j axis. 
+ (3) Mapping on G(s) H(s) plane  
+Prequisite 
+ (1) Rang of 
+→−  +
+ 
+ (2) Consider generalized Nyquist contour 
+ 
+ Closing of Nyquist Plot 
+  (i)  
+()()
+0(  ) :0tosjT  s   T   jT   j
+++++
+=   →     ⎯⎯→
+ 
+  (ii) 
+()()
+Re(  ) :tosjT  s   T   jT   j
++−+−
+=→    ⎯⎯→
+ 
+  (iii) 
+()()
+0(  ) :to0sjT  s   T   jT   j
+−−−−
+=   →     ⎯⎯→
+ 
+  (iv) 
+()()
+Re00(  ) :0to0sjT  s   T   jT   j
+−+−+
+=→      ⎯⎯→
+ 
+  Nyquist Contour    Nyquist plat 
+ (3) 
+  (i) 
+0sj
+++
+=   
+ 
+  (ii) 
+Reto(C W)
+22
+j
+sR
+
+
+
+−
+=→  →+
+ 
+  (iii) 
+0sj
++−
+=      
+  
+  (iv) 
+Re0toA.C.W
+22
+j
+sR
+
+
+=→   →−
+ 
+ (4) 
+to:CW
+22
+to:ACW
+22
+
+
+
+
++−
+→
+−+
+−→
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.64 
+ (5) 
+1
+()
+1
+segment   1
+1
+()
+1
+Ts
+s
+sj
+Tj
+j
+
+
+
+=
++
+−=
+=
++
+ 
+Case 1: 
+1
+()
+1
+=
++
+Tj
+j
+
+
+ 
+  
+1
+2
+1
+(),()tan
+1
+−
+== −
++
+T  jT  j
+
+ 
+  
+0
++
+=
+  
+()
+01Tj
++
+=
+  
++
+=
+  
+()
+0Tj=
+ 
+  
+()
+0
+00Tj
++
+=
+    
+()
+0
+90Tj=−
+ 
+Case 2: 
+()
+1
+1
+Tj
+j
+
+
+=
++
+ 
+  
+()
+0
+1
+001   1  0
+10
+Tj
+j
+
+++
++
+=== = 
++
+ 
+    
+()()
+0
+01 ,00T   jT   j
+++
+=   =
+ 
+  
+()
+0
+11
+090
+1
+Tj
+jj
+
++
+++
+=     ==    = −
++     
+ 
+  ➢ Mapping of segment I on 
+(  )   (  )G s  H  s
+plane is polar plot. 
+  ➢ Mapping of segment III on 
+(  )   (  )G s  H  s
+Inverse polar plot 
+   Inverse polar plot = error image of polar plot w.r.t. horizontal axis keeping the same flow direction 
+Step to Draw Polar Plot  
+(1)  Put 
+()  0SjT   jt
++
+=       
+ 
+(2)  
+11
+(  0  )T   jM
++
+=
+ 
+ 
+22
+()T   jM
++
+  =   
+ 
+(3)  Rationalise  
+
+()   ReImT  jTjT=+
+ 
+Nyquist Plot  
+ S-1 Draw pole – zero diagram on S plane and select proper contour.  
+ S-2 Map segment I of Contour and draw polar plot . 
+ S-3 Map segment II of contour and draw the respective mapping (generally circle). 
+ S-4 Map segment III of contour and draw inverse polar plot . 
+ S-5 Map segment IV of contour and draw respective mapping (generally circle) . 
+All Pass System/filter  
+Poles and zeros are at mirror image w.r. to 
+j
+axis .  
+(1)
+()
+1
+S
+T  SK
+S
+−
+=
++
+ 
+➢
+ 
+Nyquist plot of all pass filter is always circle, with radius K and center (0,0). 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.65 
+ 5.3.1. Closing of Nyquist Plot from Polar Plot  
+Case 1  If OLTF contains n no. of poles at origin .  
+ ➢  
+()()Gand G+−
+ will be connected by 
+O
++
+ radius circle (short circle) 
+ ➢  
+() and().
++−
+→G OG OO C
+ 
+ ➢  To close this 
+n
+ clockwise encirclement is performed from 
+() to    ()G OG O
+−+
+ 
+Case 2 If Type of OLS = 0, and order of zero is greater then of pole .  
+ ➢
+ 
+(0  ) and    (0  )   short circuitGG
+−+
+
+ 
+ ➢ 
+() and().
++−
+  GGO C
+ 
+ ➢ 
+()mn−
+ clockwise encirclement from 
+()()Gto G
++−
+
+. 
+Case 3 Type of OLS = 0, order of zero 
+
+ order of pole  
+ ➢ 
+(0  ) and    (0  ).GGS C
+−+
+
+ 
+ ➢ 
+() and   ().GGS C
++−
+  
+ 
+Gain Margin – Phase Margin   
+ Minimum Phase System : All poles and zero must be on L.H.P 
+ ➢
+ 
+Poles and zeros at origin or 
+j
+ axis are allowed  
+ Non Minimum Phase System : Which are not minimum .  
+ ➢  All poles in L.H.P , few zeros in RHP 
+→
+Type A  
+ ➢  All zero in LHP few poles are in RHP 
+→
+ Type B  
+Gain Margin   
+(1) Can determine stability  
+(2) Amount of gain 
+1
+K
+that is needed to multiplied in OLTF such that corresponding C.L.S becomes stable .  
+(3) Amount of gain (in dB) that need to be added in OLTF such that corresponding C.L.S becomes marginally stable . 
+Phase Margin   
+(1) Can determine stability  
+(2) Amount of phase angle that is needed to added in of G(S)H(S) such that C.L.S become Marginally stable  
+ 5.3.2. Mathematical calculation of G.M  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.66 
+S-2   Put 
+Sj=
+ and determine range of 
+
+ 
+  Contour 1: 
+0  
+ 
+(  )()
+Sj
+T  ST  j
+
+
+=
+=
+ 
+  Contour 2: 
+0  
+ 
+S-3   
+0
+()180Tj= −
+ 
+  Solve and calculate 
+
+, possible phase crossover frequency . 
+S-4  Validation of 
+
+ 
+  
+(i)
+is real and +ve   (i) n (ii) 
+pc
+=
+ 
+  (ii) 
+0
+()180Tj= −
+ 
+S-5  At 
+()
+PCPC
+T  jM ==
+ 
+   Gain Margin =
+1
+M
+ 
+Note: (1) If No valid 
+PC
+
+then G.M will be either 
+dB ordB+−
+, depending on nature of OLS and absolute stability 
+of CLS .  
+  (2) 
+dB  ordBGM= +−
+represent absolute stable / unstable nature . 
+Method 2 
+ S-1 Put 
+Sj=
+ and find range of 
+
+ 
+ S-2  
+()()() :
+I
+T  sjTR  jjT   j=   =+
+Rationalize 
+ S-3 
+()    0
+I
+Tj=
+ Possible 
+pc
+
+ 
+ S-4 validity 
+()
+Realand +ve(())
+pcpc
+TR  jve==−
+ 
+ S-5 
+()
+PC
+T  jM=
+,  
+1
+.GM
+M
+=
+ 
+Note : If 
+pc
+
+is invalid 
+→
+same procedure as Method 1.  
+Note:   G.M cannot be 0 or 
+
+ in ratio 
+C.L.T.F O.L.T.F GM(dB) PM in degree  
+Stable unstable  Min phase system  +ve (dB) 
+-ve(dB) 
++ve in degree 
+-ve  in degree 
+Stable unstable  Non Minimum 
+Type –A 
++ve(dB) 
+-ve(dB) 
++ve in dgree 
+-ve  in degree 
+Stable unstable  Non Minimum  
+Type – B 
+-ve (dB) 
++ve(dB) 
+-ve in degree 
++ve  in degree 
+Mathematical calculation of phase Margin– 
+Given T(S) 
+ S-1 
+Sj=
+ and range of 
+
+ 
+ S - 2 
+()    1Tj=
+ passible : gain crossover frequency 
+()
+g
+c
+ 
+ S-3  Validity : 
+→
+Real and +ve 
+ S-4 P.M =
+0
+()   180
+gc
+Tj+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.67 
+Note : 
+(1) Changes in 
+pc
+
+ 
+(2) Change gain margin   Introduction of Transportation log  
+       
+
+ 
+     (1) 
+gc
+
+remain same 
+     (2) PM changes  
+     (3) PM 
+
+, so stability 
+
+ 
+Shortcut for G.M   
+(  )(  )   (  )T  SG S  H  S=
+ 
+➢  Let K Multiplied in 
+(  )   (  ),   (  )   (  ),G S  H  SK G S  H  S→
+ So that roots of 
+1(  )   (  )KG S  H  S+
+ represents Marginal Stability  
+➢  S-1 from Routh table  
+ S-2   ODD Row  LAST Row   G.M 
+   Invalid  
+→
+  Invalid  
+→
+  
+/+ −
+ 
+   Invalid  
+→
+  valid   
+→
+  finite 
+   Valid  
+→
+  Invalid   
+→
+  finite  
+   Valid  
+→
+  valid  
+→
+  Absured case 
+ S-3   Valid Odd Rows : 
+   Odd row = 0 , K= +ve , A.E roots are non repeated on 
+j
+ axis then 
+1
+KGM=
+in ratio and roots of 
+PC
+AE→
+ 
+ S-4  Valid last Row : 
+   Last Row = 0 
+   
+0KveK=+  →   
+ 
+G.M and P.M from Nyquist  
+G.M  (1)  
+0
+?()180
+pc
+Tj=  =−
+  [Nyq plot must cross –ve real axis 
+→
+pc
+
+exist] 
+  (2)  
+11
+.
+()length on negative real axis tiee
+PCPC
+GM
+Tj
+==
+ 
+Phase Margin –  
+ (i) 
+()    1
+gcgc
+Tj→=
+ 
+  Nyquist plot intersects unity radius circles then 
+gc
+
+ exist . 
+ (ii) 
+0
+()   180
+ge
+PMT  j=+
+ 
+  
+()from+ve real axis
+gc
+Tj→
+                              
+For OLS : Min phase 
+  G.M (in dB) PM in degree C.L.S 
+1
+KK=
+ 
+pcgc
+   
+ 
++ve (dB) 
+0
+ve+
+ 
+Stable 
+2
+KK=
+ 
+pcgc
+   
+ 
+0 (dB) 
+0
+0
+ 
+M.S 
+3
+KK=
+ 
+pcgc
+   
+ 
+- ve (dB) 
+0
+ve−
+ 
+Unstable 
+  
+  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.68 
+6 
+STATE SPACE ANALYSIS 
+ 
+6.1. Introduction 
+Single I/P single output Input 
+()ut→
+ 
+ 
+     
+1/
+(  ),  .0
+1/
+==
++
+RC
+H  sI C
+sRC
+ 
+           
+( )11
+( )( )+=→
+dy t
+y tu t
+dtRCRC
+ initial condition not zero 
+     
+1
+( )( )=→y tx  t
+ stable variable (A parameter across memory element) 
+               
+1
+()
+()=
+dy t
+xt
+dt
+ 
+ 
+11
+1
+11
+State equation
+( )( )( )
+( )( )
+Output  equation
+−
+→
+=+
+=
+
+x  tx  tu t
+RCRC
+y tx  t
+ 
+ 
+
+
+1
+1
+11
+( )( )( )
+( )[1]( )[0]   [  ( )]
+−
+      
+=+
+      
+      
+=+
+XX
+XX
+X
+XX
+x  tx tu t
+RCRC
+y tx  tu t
+ 
+State Model of above system 
+ 
+
+( )[   ][  ( )]   [   ][  ( )]
+Mathematical Representating of a physical system
+[  ( )]   [   ][  ( )]   [   ][  ( )]
+
+=+
+
+=+
+
+x tA   x tB   u t
+y tC   x tD  u t
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.69 
+For MIMO System 
+State Equation 
+     
+111
+222
+111
+( )( )( )
+( )( )( )
+( )( )( )
+
+
+         
+  
+         
+  
+         
+  
+=+
+         
+  
+         
+  
+  
+         
+nnl
+n  nn  l
+nnl
+x  tx  tu  t
+x   tx   tu   t
+AB
+x   tx   tu  t
+ 
+Output Equation 
+    
+111
+022
+111
+( )( )( )
+( )( )( )
+( )( )( )
+
+
+          
+  
+          
+  
+          
+  
+=+
+          
+  
+          
+  
+  
+          
+nnl
+n  nm  l
+mnl
+y  tx  tu  t
+y   tx   tu   t
+CD
+y   tx   tu  t
+ 
+      
+
+
+111
+1
+11
+( )( )( )
+( )[   ]( )[   ]    [  ( )]
+
+
+
+=+
+=+
+nn  nnn  ll
+m  nm  ll
+mn
+x tAx tBu t
+y tCx tDu t
+ 
+State Model Representation from DE 
+    
+32
+32
+( )3( )6    ( )
+7  ( )    6  ( )+++=
+d  y td  y tdy t
+y tu t
+dtdtdt
+ 
+output ,input→ →y
+  
+Let 
+1
+( )( )y tx  t=
+, 
+2
+232
+2
+()
+( )( )( ),( )( )====
+d  y t
+dy tx   txi tx   tx   t
+dt
+ 
+            
+3
+3
+3
+()
+()=
+d  y t
+xt
+dt
+ 
+Then solve question  
+    
+
+111
+222
+333
+( )( )
+( )( )and   ( )   [   ]( )( )
+( )( )
+        
+        
+=+=+
+        
+        
+        
+x  txx  t
+x   tA   xB u ty tC   x   tDu t
+x   txx   t
+ 
+From Transfer function  
+   Let T.F is T(S) 
+32
+3210
+432
+3210
+()+   +  +
+=
++   +    +   +
+b c dc sc s    c
+sa sa sa s    a
+ 
+Case 1 : Controllable canonical from  
+   
+11
+22
+33
+0123
+44
+0100
+0
+0010
+0
+()
+0001
+0
+0
+    
+
+
+    
+
+
+    
+
+
+=+
+    
+
+
+    
+
+
+−  −  −  −
+
+
+    
+xx
+xx
+u
+xx
+aaaa
+xx
+ 
+   
+1
+2
+0123
+3
+4
+[  ]   [][0][  ]
+
+
+
+=+
+
+
+
+x
+x
+yC  C   C   Cu
+x
+x
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.70 
+Note :  
+1. No of state variable = Highest order of 
+r
+D
+ 
+2. Coefficient of highest order of 
+r
+D
+should be 1. 
+Case 2 :  Observable canonical from  
+   X = AX + BU 
+   Y = CX + DU 
+   
+[   ][   ], [   ][   ],[   ][   ]===
+TTT
+OCFCCFOCFCCFOCFCCF
+AABCCB
+ 
+Case 3 :   Diagonal canonical form  
+   
+3
+124
+1234
+()
+()    ()    ()    ()
+=+++
+++++
+b
+bbb
+TS
+s    ps    ps    ps    p
+ 
+   
+11
+22
+33
+44
+000
+000
+[]
+000
+000
+−
+     
+     
+−
+     
+=
+     
+−
+     
+−
+     
+pK
+pK
+AB
+pK
+pK
+1234
+111
+222
+333
+444
+[   ]   [    ,,,]=
+=
+=
+=
+=
+Cm  m   m   m
+bK m
+bK m
+bK m
+bK m
+ 
+Case 4 :  Jordan Canonical form  
+Extension of D.C.F when poles are repeated. 
+    
+3
+124
+234
+1112
+()
+()    ()()()
+=+++
+++++
+b
+bbb
+TS
+s    ps    ps    ps    p
+ 
+     
+1
+1
+1
+2
+000
+000
+[]
+000
+000
+−
+
+
+−
+
+=
+
+−
+
+
+p
+p
+A
+p
+p
+ Jordan Block  
+From S.F.G  
+1. Summing Node    
+ 
+2. Take off Node      
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.71 
+3. Potential of a node      
+ 
+  
+1   12   23   3
+4
+Na xa xa x
+Za N
+=   +    +
+=
+ 
+4.  Integrator Block 
+ 
+ 
+5.  Integrator SFG      
+ 
+No of integrator = No of state variable  
+Important : 
+   
+
+11
+Solution of state variableSolution of  state Variable due
+due to non zero I.Cto input.
+(  )[]   [   (0  )]   []   [   ][   (  )]
+−−−
+=   −+   −X  SSIAXSIAB  U  S
+ 
+State Transition Matrix – (S.T.M) 
+(a) S.T.M  in S-domain = 
+1
+[]
+−
+−SIAn   n
+ 
+(b) S.T.M  in time domain = 
+AT
+nxn
+[  (t)] or [e]
+ 
+  
+L.T
+1
+nn
+[  (t)][ST   A]
+−
+
+⎯⎯→   −
+ 
+ 6.1.2. Properties of STM 
+[]   [  ( )]=
+At
+et
+ 
+(1) 
+[]   [  (0)]   [  ]=    =
+Ao
+nxn
+eI
+ 
+(2) 
+0
+()
+=
+
+
+
+=
+
+
+
+
+
+At
+nxn
+t
+de
+A
+dt
+ 
+(3) 
+
+1
+(   )( )
+−
+
+ −  = 
+
+tt
+ 
+(4) 
+
+1212
+()( )    ( )  +   =   tttt
+ 
+(5) 
+
+( )(    )
+
+    = 
+
+K
+tKt
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.72 
+(a) Homogeneous State equation 
+( )[   ][  ( )]
+
+=
+
+X  tA   x t
+ 
+Sol. 
+
+1
+(  )(0  )
+−
+−
+
+=−
+
+X  sSI    AX
+ 
+  
+1
+( )(0   )   or [  ( )]   [  ( )][  (0  )]
+−−
+   
+== 
+   
+AT
+x texx tt    x
+ 
+  
+
+
+1
+()
+−
+  =−tILT   SIA
+ 
+(b) Non Homogeneous state equation 
+( )[   ][  ( )]   [   ][  ( )]
+
+=+
+
+X  tA   x tB  u t
+ 
+ 
+=+XAXBU
+ 
+Sol. 
+
+1
+(  )(0  )[  ( )]*[   ][  ( )]X  SSIAxtB   u t
+−
+−
+
+=   −+
+
+ 
+Solution of y(t) 
+[  ( )]   [   ][   ( )]   [   ][  ( )]=+y tC   X  tD  u t
+ 
+ 
+
+(  )[  ][   (  )]   [   ][   (  )]=+Y  SC   X  SD  U  S
+ 
+ 
+
+
+11
+[  (  )]   [   ][  (0  )][   ][   (  )][   ][   (  )]
+−−
+−
+=−+   −+Y  SCSIAxSIAB  U  SD  U  S
+ 
+  
+
+
+1
+1
+Zero State Response
+Zero Input Response
+Total Response
+[  (  )]   [   ][  (0  )][]   [   ]   [   ] [   (  )]
+−
+−−
+=−+−+Y  SC   SIAxC   SIABD    U  S
+  
+For 2 Input 2 Output 
+     
+11
+22
+and
+        
+        
+        
+YU
+YU
+ 
+For 1 Input and 1 Output 
+       
+
+1
+()
+[   ][   ]   [   ]
+()
+YS
+C   SIABD
+US
+−
+
+=−+
+
+ 
+    
+(0  )0x
+−
+
+=
+
+ 
+    
+[]   Poles of the system    eigen values of matrix ASIA−  ==
+()DS=
+ 
+      
+[   ][][   ]   [   ]
+()
+()
+C adj SIA  BD  SIA
+YS
+U  SSIA
+−+−
+=
+−
+ 
+Controllability and observability 
+     
+2
+=+
+=+
+XAXBU
+YCXDU
+ 
+Square matrixA→
+ 
+   
+A→
+ 
+   
+Rank of  matrix(   )AA→=
+ 
+   
+nn→
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.73 
+Method 1 
+Kalman Test  
+• Controllability 
+(1) 
+
+21
+Square
+:::
+Rectangular
+−
+
+=−−−−−
+
+n
+C
+QB  AB  A  BAB
+ 
+(2) 
+()
+: Rectangular,(  )Controllable    =  →
+CC
+QQA
+ 
+             
+()
+(  )Uncontrollable      →
+C
+QA
+ 
+• Observability 
+(1) 
+
+()
+()
+1
+2
+0
+::............
+−
+
+=
+
+
+n
+TT    TTTT
+QCA  CAT    CAC
+ 
+(2) 
+0
+: SquareQ
+ 
+  
+0
+0   Non observable=Q
+ 
+  
+0
+0   observableQ
+ 
+(3) 
+()
+0
+: Rectangular,(  )Observable    =  →
+C
+QQA
+ 
+     
+()
+(  )Not observable      →
+C
+QA
+ 
+Method 2 
+ If A is diagonal Matrix with distinct diagonal  
+  
+1112
+1
+2122
+2
+3
+12
+4
+000
+000
+::
+000
+000
+
+
+
+
+
+
+
+=+⎯⎯→
+
+
+
+
+
+
+nn
+nn
+bb
+d
+bb
+d
+XX
+d
+bb
+d
+They should not be all zero (Controllable) 
+  
+11121
+21222
+[]
+−−−−
+
+=+
+
+−−−−
+
+n
+n
+CCC
+YXU
+CCC
+ 
+They should not be all zero (observable) 
+Method 3  
+Gilbert Test 
+Upper Triangular Matrix 
+• UTM having Jordan block 
+• Jordan block is used when E.V are repeated 
+  
+112
+23
+3
+They all Should not be zero
+0
+00
+⎯⎯→
+
+
+
+
+
+daa
+da
+d
+ 
+Lower Triangular Matrix 
+  
+1
+12
+133
+Should not be  all zero
+00
+0
+⎯⎯→
+
+
+
+
+
+d
+ad
+aad
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.74 
+Method 4 
+• Controllable Canonical form 
+  
+012
+0100
+0010
+
+
+
+
+==
+
+
+
+
+−   −   −
+
+
+AB
+aaab
+ 
+• O.C.F 
+  
+0
+1
+2
+00
+[   ]1   0[   ]   [   ,   0,   0]
+01
+−
+
+
+=−=
+
+
+−
+
+a
+AaCC
+a
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.75 
+7 
+CONTROLLER AND 
+COMPENSATOR 
+ 
+7.1. Introduction 
+(1) Phase lead compensator 
+ 
+    
+11
+=TR C
+ 
+          
+()
+21   1
+11
+12
+12
+1
+()
+1
++
+=
+
+++
+
++
+
+RSR C
+TS
+SR C
+RR
+RR
+ 
+ 
+()
+2
+12
+1
+1
+(  )11
+1
++
+= =
++ +
+ST
+R
+TS
+S  TRR
+ 
+ Pole, 
+1
+=−
+
+S
+T
+ 
+ Zero, 
+1
+=−S
+T
+ 
+ 
+ 7.1.1. Zero Dominant Compensator 
+Phase 
+()
+11
+tan   ()   tan
+−−
+=  −TT
+ 
+ Max. value of phase,  
+(   )    0  =
+
+d
+d
+ 
+ Max
+max
+11
+tan
+2
+−
+ =   =
+T
+ 
+  
+max
+1
+sin
+1
+−
+=
++
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.76 
+• Behave as HPF 
+• Decrease gain of system 
+• Increase steady state error 
+• Increase 
+,
+gc
+BW
+ 
+• Increase P.M, improve relative stability 
+• Increase 
+Mr decreases
+% Mp decreases
+
+ 
+• 
+n
+ increases, t
+s
+ decreases 
+• Improve or reduces the transient region 
+• Increase the speed of system 
+Phase log Compensator  
+ 
+11
+112
+1
+()
+1()
++
+=
+++
+SR C
+TS
+SC   RR
+ 
+1
+()
+1
+
++
+=
+
++
+
+ST
+TS
+ST
+         
+     
+12
+11
+1
+11
+,,1,
++
+−−
+==   =
+
+RR
+STR C
+TTR
+ 
+ 
+• Pole dominant  
+• 
+11
+tantan
+−−
+= −    TT
+ 
+• 
+1
+=
+
+m
+T
+ 
+• 
+1
+sin1
+1
+
+−
+  = 
+
++
+
+m
+ 
+• LPF  
+• Gain remains constant 
+•  
+• Reduces 
+B.W reduced→
+gc
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.77 
+• Reduces P.M 
+→
+ Relative stability decrease  
+• 
+and→   
+pr
+MM
+ 
+• 
+,    →  
+ns
+t
+ 
+• Increases transient region, speed of operation decreases. 
+Lead – Log Compensator  
+ 
+            
+11
+22
+(1)   (1)
+(  ).
+(1)  (1)
+ ++
+=
+++
+STST
+TS
+STST
+ 
+    
+11   2211
+''==TR CTR  C
+      
+    
+2
+12
+=
++
+R
+RR
+ 
+12
+1
+''
+'
++
+=
+RR
+R
+     
+ 
+12
+TT
+ 
+➢  B.P.F 
+LAG – LEAD Compensator  
+   
+(1)(1)
+()
+(1)(1)
+ 
++ +
+=
+ 
+++
+ 
+STST
+TS
+STST
+  
+12
+11
+
+TT
+ 
+      
+21
+log
+TT
+ 
+ 
+• Band Reject filter 
+Controllers 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.78 
+7.2. Proportional Controller 
+ 
+T.F of controller:   
+()
+()
+=
+P
+YS
+K
+XS
+ 
+    H (S) = 1 
+    
+()
+2
+()
+2
+
+=
++ 
+n
+n
+GS
+SS
+ 
+       
+'
+,'
+
+ = =
+nnp
+p
+K
+K
+ 
+          
+2
+
+
+=
+
+
+
+ss
+pn
+A
+e
+K
+ 
+Effects 
+(1) 
+ss
+e
+ reduces if  
+1
+P
+K
+ 
+(2) 
+constont,constant, stability same==
+ns
+t
+ 
+(3) 
+, %,,     
+Pdr
+Mt
+ 
+7.2.1. Integral Controller 1st order 
+ 
+T.F
+()
+()
+==
+i
+K
+YS
+X  SS
+ 
+• Increases type of system by 1 
+• 
+ss
+e
+ for same input becomes 0. 
+• It makes 
+1   order CLS to M.S
+2    order CLS to unstable
+→
+st
+nd
+ 
+Proportional Integral Controller 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.79 
+   
+()
+()
+=+
+i
+P
+K
+YS
+K
+X  SS
+ 
+ If 
+1=
+P
+K
+ 
+()
+1
+()
+=+
+i
+K
+YS
+X  SS
+ 
+No. of oscillations
+SluggishTransiend region becomes pronounced
+→   →  →
+
+
+ns
+t
+ 
+Derivative Controller 
+ 
+• Derivative Controller reduces type of system by 1 
+• 
+
+ss
+e
+ for same input 
+• Transient region reduced 
+Proportional Derivative Controller (P –D) 
+ 
+    
+1
+1
+=
+=   +    ⎯⎯⎯→ +
+P
+K
+Pdd
+Y
+KK  SK  S
+X
+ 
+• It reduces 
+%,   ,
+Psr
+M   t   t
+ 
+• It improves: relative stability and transient region 
+PID Controller 
+  Transfer function 
+=   +   +
+i
+PD
+K
+KSK
+S
+ 
+• Improves stability and decreases 
+ss
+e
+ 
+•  Increases type and decreases 
+ss
+e
+ 
+Mathematical Modelling 
+ Mechanical system   
+⎯→
+ Electrical system 
+ Translational System (Mass Damper System) 
+(1) Mass 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRICAL HANDBOOK 
+Control Systems 
+4.80 
+(2) Damper 
+ 
+ 
+ 
+     
+()()
+2121
+=−   =−
+d
+FBxxB  vv
+dt
+ 
+(3) Spring 
+ 
+Rotational System 
+(1) Inertia 
+ 
+   
+2
+2
+
+=
+d
+TJ
+dt
+J : Moment of Inertia 
+(2) Damper 
+ 
+   
+()
+21
+21
+
+
+=   −  =−
+
+
+dd
+TBB
+dtdt
+ 
+(3) Spring  
+ 
+Force voltage – force Current  
+Given 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Control Systems 
+4.83 
+Network 
+ 
+Force voltage Analogy  
+=
+dQ
+I
+dt
+ 
+ 
+2
+2
+1
+=++
+Ld  QRdQ
+VQ
+dtdtC
+ 
+   
+2
+2
+=+    +
+x
+Md  xBdx
+FK
+dtdt
+ 
+   
+1
+→
+→
+→⎯→
+→
+→
+FV
+xQ
+MLvI
+K
+BR
+C
+ 
+Force current Analogy 
+ 
+   
+=
+dQ
+V
+dt
+ 
+2
+2
+11
+=++
+d  QdQ
+ICQ
+dtR  stL
+ 
+1/
+1/
+→
+→
+→
+→
+→
+FI
+MC
+BR
+KL
+xQ
+  Voltage 
+→
+  Velocity  
+ 
+ 
+PW Mobile APP: https://smart.link/7wwosivoicgd4  

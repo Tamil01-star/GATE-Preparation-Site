@@ -1,0 +1,3428 @@
+=== FILE: Analog_Electronics_Notes_PW.pdf ===
+=== PAGES: 39 ===
+
+
+
+AnalogAnalog
+ElectronicsElectronics
+Analog
+Electronics
+
+Published By: 
+ 
+  Physics Wallah 
+ISBN: 978-93-94342-39-2 
+Mobile App: Physics Wallah (Available on Play Store) 
+  
+Website: www.pw.live 
+Email: support@pw.live 
+ 
+Rights 
+All  rights  will be  reserved  by  Publisher.  No  part  of  this  book  may  be  used  or  reproduced  in  any  manner 
+whatsoever without the written permission from author or publisher. 
+In the interest of student's community: 
+Circulation of soft copy of Book(s) in PDF or other equivalent format(s) through any social media channels, 
+emails,  etc.  or  any  other  channels  through  mobiles,  laptops  or  desktop  is  a  criminal  offence.  Anybody 
+circulating, downloading, storing, soft copy of the book on his device(s) is in breach of Copyright Act. Further 
+Photocopying of this book or any of its material is also illegal. Do not download or forward in case you come 
+across any such soft copy material. 
+ 
+Disclaimer 
+A team of PW experts and faculties with an understanding of the subject has worked hard for the books. 
+While  the  author  and  publisher  have  used  their  best  efforts  in  preparing  these  books.  The  content  has  been 
+checked for accuracy. As the book is intended for educational purposes, the author shall not be responsible for 
+any errors contained in the book. 
+The publication is designed to provide accurate and authoritative information with regard to the subject matter 
+covered. 
+This book and the individual contribution contained in it are protected under copyright by the publisher. 
+(This Module shall only be Used for Educational Purpose.) 
+
+ 
+ 
+ 
+Design Against Static Load 
+ 
+ 
+ 
+ 
+ 
+1. Diode Circuits & Applications ...........................................................................................  7.1  –  7.4 
+2. Zener Diodes Regulator Circuit .........................................................................................  7.5  –  7.6 
+3. BJT Biasing  And Region of Operation ..............................................................................  7.7  – 7.8 
+4. Low Frequency BJT Amplifier ...........................................................................................  7.9  –  7.16 
+5. MOSFET Amplifier with Biasing  .......................................................................................  7.17  –  7.25 
+6. Feedback Amplifiers  ........................................................................................................  7.26  –  7.30 
+7. Operational Amplifiers  ....................................................................................................  7.31  –  7.36 
+ANALOG ELECTRONICS 
+INDEX 
+GATE-O-PEDIA ELECTRONICS AND COMMUNICATION ENGINEERING 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Design Against Static Load 
+7.1 
+1 
+DIODE CIRCUITS 
+& APPLICATIONS 
+ 
+ 
+1.1. Diode 
+• A two terminal semiconductor device with PN junction is called a diode 
+• A  PN junction diode  is  a  two  terminal  device  formed  by  doping  with acceptor  and  dopant  impurities  at  different 
+regions. 
+ 
+1.2. VI Characteristics 
+• In ideal condition, a diode works as a short circuit at during forward bias and open circuit during reverse bias, i.e. like 
+an ideal switch 
+• In practical condition a diode works as low resistance, and high resistance at reverse bias, i.e. like a practical switch. 
+              
+  Ideal Characteristics  Practical Characteristics 
+1.2.1. Application of Diode in Clipper circuit 
+• The Circuit clips a portion of the input signal 
+• On the basis of which part the circuit clips, the circuit is named as Positive or Negative clipper 
+• A series or shunt clipper is named according to the placement of diode in the circuit. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.2 
+Positive Clipper 
+Clips positive portion of the input signal. 
+        
+   Series Clipper Shunt Clipper 
+    
+  Response Transfer Characteristics 
+Negative Clipper 
+Clips negative portion of the input signal. 
+ 
+  Series Clipper Shunt Clipper 
+ 
+  Response Transfer Characteristics 
+Application of Diode in Clamper Circuit 
+• A clamper circuit clamps or adds a DC shift to the input signal. 
+• Based on the polarity of shift, a Positive or Negative clamper is named. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.3 
+Positive Clamper Circuit 
+Adds a positive DC shift to the input signal. 
+ 
+Negative Clamper Circuit 
+Adds a negative DC shift to the input signal. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Note:  For  Proper  functioning  of  clamper  circuit, time  constant  of  circuit  should  be  much  greater  than  time  period  of  input 
+signal (R
+L
+C >> T)  
+1.3. Application of Diode in Peak Detector 
+A peak detector detects the peak of the input signal. 
+Positive Peak Detector 
+Detects the positive peak of input signal. 
+ 
+Negative Peak Detector 
+Detects the negative peak of input signal 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.4 
+1.4. Application of Diode in Voltage Doubler 
+• Voltage doubler gives the output as double of the input signal. 
+• A level shifter or clamper followed by a peak detector gives a Voltage Doubler 
+ 
+  R
+L
+C >> T 
+1.5. Application of Diode in Voltage Multiplier 
+Using multiple stages of a set of a clamper and peak detector gives voltage multiplier, also called as Cockroft-Walton Voltage 
+Multiplier. 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.5 
+2 
+ZENER DIODES  
+REGULATOR CIRCUIT 
+ 
+2.1.  Zener Diode VI Characteristics 
+• A "reverse biased" diode blocks current in the reverse direction, but will suffer from premature breakdown or damage if 
+the reverse voltage applied across it is too high. 
+• Zener  Diode  are  basically  the  same  as  the  standard  PN  junction  diode  but  are  specially  designed  to  have  a  low 
+predetermined Reverse Breakdown Voltage that takes advantage of this high reverse voltage. 
+ 
+Zener Diode in Forward Bias: 
+Works same as a normal PN diode i.e short circuit ideally and a low resistance practically. 
+Zener Diode in Reverse Bias: 
+1. V < V
+Z
+ , works as a normal PN diode in reverse bias i.e open circuit ideally and a high resistance practically. 
+2. V > V
+Z
+, works as a voltage regulator i.e becomes a source of constant voltage for the connected load. 
+Forward
+Current
+Forward
+Bias
+Region
+Forward Bias
++V
+F
+V
+F
+0.3 – 0.7v
+"Zener" Breakdown
+Region
+Reverse
+Current
+I
+Z
+(min)
+I
+Z
+(max)
+–I
+R
+Reverse Bias
+–V
+R
+–V
+Z
+Constant
+Zener Voltage
++I
+F
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.6 
+Ideal Zener Diode  
+ 
+ 
+Practical Zener Diode 
+ 
+Operating Conditions for Zener diode to maintain break down characteristics: 
+1. Current through Zener diode,  
+(knee)(max)
+
+ZZ
+II    I
+ 
+2. The magnitude of open circuit reverse voltage across the Zener diode should be greater than or equal to V
+Z
+.  
+• I
+Z
+ (knee) is the minimum current required for the Zener diode to work as a voltage regulator 
+• I
+Z 
+(max)  is  the  maximum  current  the  Zener diode  can  operate  without  damaging  the  device.  It  is  specified  by 
+manufacturer. 
+Zener Diode as Voltage Regulator 
+Zener Diodes are used to produce a stabilised voltage output with low ripple under varying load current conditions. 
+ 
+ 
+Output voltage :    
+0
+Zener voltage
+z
+VV==
+ 
+• Input current : 
+0i
+in
+VV
+I
+R
+−
+=
+  
+• Source resistance : 
+0i
+ZL
+VV
+R
+II
+−
+=
++
+ 
+• Zener power dissipation : 
+(max)(max)ZZZ
+PIV=
+  
+Note: Zener diodes can also be connected together in series along with normal silicon diodes to produce a variety of different 
+reference voltage output values 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.7 
+3 
+BJT BIASING  
+AND REGION OF OPERATION 
+ 
+3.1 Operating Region of BJT 
+ 
+where, J
+E
+ = Base-Emitter Junction 
+  J
+C
+ = Collector-base Junction  
+Normal Active Region 
+In this region, J
+E
+ operating in forward bias while J
+C
+ operating in reverse bias. It is used as amplifier. 
+Saturation Region 
+Both J
+E
+ and J
+C
+ are operating in forward bias and is used as switch (ON). 
+Cut-OFF Region 
+Both J
+E
+ and J
+C
+ are operating in reverse bias and is used as switch (OFF). 
+Reverse Active Region 
+In this region, J
+E
+ in reverse bias and J
+C
+ in forward bias. It is used as attenuator. 
+Some Standard values for npn transistor.   
+ Si Ge 
+V
+BE
+ (Active Region) 0.7 V 0.2 
+V
+BE
+ (Saturation region) 0.8 V 0.3 V 
+V
+CE
+ (Saturation region) 0.2 V 0.1 V 
+V
+BE
+ (Cut-off region) 0 V – 0.1 V 
+ 
+Note : If nothing is mentioned then we will assume transistor is silicon type.  
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.8 
+3.2. Different Methods used to Identify Operating Region of BJT 
+Method-I 
+Assume transistor in Saturation Region 
+1. I
+C
+  I
+B
+ 
+2. V
+CE
+ = V
+CE
+(sat) 
+3. I
+B(min)
+ = 
+(sat)
+
+C
+dC
+I
+ (
+dC
+ = h
+fe
+) 
+4. If I
+B
+  I
+B
+ (min) then transistor will work in saturation region otherwise in active region. 
+Method-II 
+Assume transistor in active region. 
+1. I
+C
+ = 
+dc
+ I
+B
+ 
+2. I
+E
+ = I
+C
+ + I
+B
+ = (I + 
+dc
+)I
+B
+ 
+3. For active region = 
+0transistor
+0transistor
+
+
+
+
+
+CB
+CB
+Vfor  npn
+Vfor   pnp
+ 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.9 
+4 
+LOW FREQUENCY 
+BJT AMPLIFIER 
+ 
+4.1. Amplifiers 
+ 
+4.1. Small Signal Modelling of BJT 
+1. h-parameter modelling: 
+ 
+   
+111  112   2
+1
+221  122   2
+111121
+22222
+= + 
+= + 
+    Vh  Ih  V
+Vh
+   h
+hI
+Ihh
+Vh  V
+V
+ I
+      
+=
+      
+      
+  
+ 
+2
+1
+11
+1
+0
+ input impedance 
+=
+===
+i
+V
+V
+hh
+I
+ 
+1
+1
+12
+2
+0
+ = reverse voltage gain 
+=
+==
+r
+I
+V
+V
+hh
+ 
+V
+1
+V
+2
+I
+1
+I
+2
+h
+parameter
+1
+h
+22
+hV
+122V
+1
++
+–
+I
+1
+h
+11
+I
+2
+hI
+211
+V
+2
++
+–
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.10 
+2
+2
+1
+ 0
+2
+ 
+1
+=
+ forward current gain  ===
+f
+V
+I
+hh
+I
+ 
+1
+2
+220
+2
+0
+ output admittance 
+=
+===
+I
+I
+hh
+V
+ 
+2. Approximated h-model 
+ 
+ 
+2. r
+e
+ modelling 
+ 
+3. r
+
+ modelling 
+ 
+Relation between small signal modelling parameters 
+1. 
+
+=  =
+ie
+hrr
+ 
+2. 
+=
+f
+h
+ 
+3. 
+0
+0
+1
+/=  == 
+ACQ
+rVI
+h
+ if no early effect 
+1
+h
+0
+h
+i
+i
+b
+i
+c
+h
+f
+C
+i
+b
+E
+i
+e
+B
+h-parameter model
+r
+0
+r
+e
+i
+b
+i
+c
+C
+i
+b
+E
+i
+e
+B
+r Model
+e
+r
+0
+r
+
+i
+b
+i
+c
+C
+gV
+m
+E
+i
+e
+B
+r Model
+
+pi-Model
++
+–
+V
+
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.11 
+4. 
+
+=
+bm
+ig  V
+ 
+ 
+
+=
+mb
+g   r  i
+ 
+ 
+=   
+me   b
+gr i
+ 
+ 
+=   
+me   b
+gr i
+ 
+ ⇒ 
+1
+=
+m
+e
+g
+r
+ 
+ r
+e
+ = emitter dynamic resistance 
+ 
+.
+
+=
+T
+e
+EQ
+V
+r
+I
+ 
+Note: Practically r
+0
+ = 0, and 1/h
+0
+ = , if not mentioned explicitly. 
+4.2.  Procedure of AC analysis 
+Step 1: Do the mid frequency analysis 
+(a) 
+12
+,,→
+ccE
+c   c   c
+ short circuit 
+  
+,,→
+TDsh
+CCC
+Open circuit 
+(b) all DC independent voltage source → Short circuit 
+  All independent current source = open circuit 
+Step 2:  Replace BJT with small signal equivalent.      
+Internal Performance Parameter of an Amplifier 
+1. Current Gain (A
+i
+) = – I
+2 
+/ I
+1
+ 
+2. Input Resistance (R
+i
+) = V
+1
+/I
+1
+ 
+3. Voltage Gain (A
+v
+) = V
+2
+/V
+1
+ 
+4. Output Resistance (R
+o
+) = 1/Output Admittance (1/y
+o
+) = I
+2
+ /V
+2
+ | V
+S 
+= 0 
+CE Amplifier without R
+E
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.12 
+Parameter Current Gain Input Resistance Voltage Gain Output Resistance 
+h-model 
+
+=−
+lfe
+Ah
+ 
+
+=
+iie
+Rh
+ 
+
+
+
+=
+L
+Vl
+i
+R
+AA
+R
+ 
+
+=
+LLC
+RRR‖
+ 
+0
+
+=R
+ 
+r
+e
+ model 
+
+= −
+l
+A
+ 
+
+
+
+==
+i
+m
+Rr
+g
+ 
+
+
+
+
+−
+=     =
+LL
+Vl
+i
+RR
+AA
+Rr
+ 
+
+
+−
+= −=
+L
+VmL
+e
+R
+Ag  R
+r
+ 
+
+=
+LLC
+RRR‖
+ 
+
+00
+
+=  == 
+A
+A
+C
+V
+RrV
+I
+ 
+
+00
+
+=  =    =
+A
+RrV
+ 
+CE Amplifier with R
+E
+ 
+ 
+Parameter Current Gain Input Resistance Voltage Gain Output Resistance 
+h-model 
+
+=−
+lfe
+Ah
+ 
+()
+1
+
+=  +  +
+iiefeE
+RhhR
+ 
+
+
+
+=
+L
+Vl
+i
+R
+AA
+R
+ 
+
+
+−
+
+L
+V
+E
+R
+A
+R
+ 
+
+=
+LCL
+RRR‖
+ 
+0
+
+=R
+ 
+r
+e
+ model 
+
+= −
+l
+A
+ 
+(1)
+
+
+=  +  +
+iE
+RrR
+ 
+
+
+
+=
+L
+Vl
+i
+R
+AA
+R
+ 
+(1)
+
+
+
+−−
+=
++  +
+LL
+V
+EE
+RR
+A
+rRR
+ 
+
+(1)
+
++
+E
+Rr
+ 
+
+=
+LCL
+RRR‖
+ 
+
+0
+
+==
+A
+RV
+ 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.13 
+CC Amplifier 
+ 
+Parameter Current Gain Input Resistance Voltage Gain Output Resistance 
+h-model 
+1
+
+=+
+lfe
+Ah
+ 
+()
+1
+
+=  +  +
+iiefeL
+RhhR
+ 
+1
+
+
+
+=
+lL
+V
+i
+AR
+A
+R
+ 
+
+=
+LEL
+RRR‖
+ 
+ 
+0
+1
+
+
++
+=
++
+Sie
+fe
+Rh
+R
+h
+ 
+Effective source
+impedance
+S
+R
+
+=
+ 
+r
+e
+ model 
+1
+
+= +
+l
+A
+ 
+(1)
+
+
+=  +  +
+iL
+RrR
+ 
+(1)
+1.0
+(1)
+
+
+
+
++
+=
++  +
+L
+V
+L
+R
+A
+rR
+ 
+
+=
+LEL
+RRR‖
+ 
+ 
+0
+ If 
+1
+
+
+
+
++
+=
++
+S
+S
+Rr
+RrR
+ 
+0
+1
+
+
+=
++  
+rr
+R
+ 
+0
+1
+
+
+==
+
+m
+r
+R
+g
+ 
+ 
+CB Amplifier  
+ 
+Parameter Current Gain Input Resistance Voltage Gain Output Resistance 
+h-model 
+1
+1
+
+=
++
+fe
+l
+fe
+h
+A
+h
+ 
+1
+
+=
++
+ie
+i
+fe
+h
+R
+h
+ 
+
+
+
+=
+lL
+V
+i
+AR
+A
+R
+ 
+
+=
+LC
+RR
+ 
+0
+
+=R
+ 
+r
+e
+ model 
+1
+1
+
+
+=
++
+l
+A
+ 
+1
+1
+
+
+      =
++  
+i
+m
+rr
+R
+g
+ 
+1
+1/
+
+
+
+==
+L
+VmL
+m
+R
+Ag  R
+g
+ 
+
+=
+LC
+RR
+ 
+
+0
+
+==
+A
+RV
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.14 
+Cascade Amplifier (Multistage Effect) 
+ 
+1. 
+()
+1
+01
+ f ,
+Lsa
+RR   R
+ 
+ 
+()
+1
+2
+=
+Li
+Rf   R
+ 
+2. 
+()
+2
+12
+,
+sLi
+Rf   R    R
+ 
+ 
+()
+201
+=
+s
+Rf   R
+ 
+3. R
+i
+ [cascade] = R
+i
+ (1
+st
+ stage) 
+4. o/p R
+0 
+(cascade) = R
+0N
+ (last stage) 
+5. A
+v
+ = A
+v1
+ × A
+v2
+ × A
+v3
+ × ...... A
+N
+ 
+ (for proper impedance matching) 
+6. A
+I
+ = A
+i1 
+× A
+i2
+ × A
+i3
+ × ...... A
+iN
+ 
+ (for proper impedance matching) 
+Loading Effect                                                         
+           Loading Effect  
+ 
+1. The decrease in the gain of first stage due to low value of input impedance of second stage is called Loading effect 
+2. Loading effect occurs in BJT amplifiers, and not in JFET and MOSFET amplifiers because they have a very high 
+input impedance. 
+Cascode Amplifier 
+• A combination of CE followed by CB is referred as Cascode amplifier 
+• CE acts as input stage and CB acts as output stage. 
+123n
+S
+R
+1
+L
+R
+1S
+R
+2
+L
+R
+2S
+R
+3n
+S
+R
+V
+0
+i
+R
+1
+R
+1
+0i
+R
+2
+R
+2
+0
+i
+R
+3
+n
+i
+R
+R
+L
+L
+R
+2
+O/p
+v
+A
+1
+L
+R
+1
+v
+A
+2
+i
+R
+2
+i
+R
+1
+I/p
+i
+A
+1
+i
+A
+2
+amp
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.15 
+• Cascode amplifier can amplify both voltage and current 
+• Also known as direct coupled amplifier because output of CE configuration is directly connected to input of CB 
+configuration. 
+ 
+ 
+Cascode Amplifier Parameters 
+1. Transconductance (g
+m
+) = A
+I
+[CB] ×  g
+m
+[CE] 
+2. Input Impedance (R
+i
+) = R
+i
+ [CE] 
+3. Output Impedance (R
+O
+) = R
+O
+ [CB] 
+4. Current Gain (A
+I
+) = A
+I
+ [CB] × A
+I
+ [CB] > A
+I
+ [CE] 
+5. Voltage Gain (A
+V
+) = A
+V
+ [CB] × A
+V
+ [CE] > – A
+V
+ [CB] 
+Darlington Pair 
+• Series combination of two CC configurations. 
+• Also referred as direct coupled amplifier 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.16 
+ 
+4. Circuit diagram of Darlington pair -   
+ 
+Darlington Amplifier Parameters 
+1. Transconductance (g
+m
+) = A
+i
+ [2
+nd
+ stage] × g
+m
+[1
+st
+ stage]  
+2. Input Impedance (R
+i
+) = R
+i
+ [1
+st
+ stage] 
+3. Output Impedance (Ro) = R
+O
+ [2
+nd
+ stage] 
+4. Current Gain (A
+i
+) = A
+i
+ [1
+st
+ stage] × A
+i
+ [2
+nd
+ stage]  
+5. Voltage Gain (A
+v
+) = 1 
+ 
+  
+~
+CC
+CC
+V
+0
+I
+0
+R
+L
+C
+1
+(Direct
+coupling)
+B
+2
+E
+1
+E
+2
+V
+i
+B
+1
+c
+I
+1
+b
+I
+1
+b
+I
+2
+C
+2
+e
+I
+2
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.17 
+5 
+MOSFET 
+AMPLIFIER WITH BIASING 
+ 
+5.1. MOSFET 
+ 
+• Source : terminal through which majority charge carrier enters into the SC bar.  
+• Drain : terminal through which majority charge carriers leaves the SC bar.  
+• Channel: path between source & drain by which majority carrier travel from source to drain 
+• Gate : Terminal to control the flow of charge carrier from source to drain 
+Symbol :  
+   or   
+• P-channel Enhancement type MOSFET : 
+                 
+or
+   
+• N-channel Enhancement type MOSFET. 
+B
+S
+D
+D
+B
+S
+G
+B
+S
+D
+D
+B
+S
+G
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.18 
+Channel Current 
+The current flowing from source to drain via the channel. It is a function of aspect ratio of MOSFET and applied voltages 
+V
+GS
+, and V
+DS
+. 
+()
+2
+1
+22
+
+=  −−
+
+
+DS
+DnoxGSTHDS
+v
+W
+ICvvv
+L
+ 
+Trans Conductance :     
+It is a figure of merit indicates that how well a transistor convert the voltage to the current 
+    
+const.
+D
+mDS
+GS
+I
+gV
+V
+
+==
+
+ 
+In cut-off Region: 
+MOSFET works as an OFF switch. 
+   V
+GS 
+ <  V
+T
+ 
+   I
+D     
+=  0 
+In Triode Region: 
+MOSFET works as a resistor 
+ V
+GS 
+  >  V
+T
+ 
+ V
+DS    
+>  (V
+GS
+ – V
+T
+) 
+  
+   
+()
+2
+1
+22
+
+=  −−
+
+
+DS
+DnGSTHDS
+v
+W
+ICoxvvv
+L
+ 
+      
+(const.)
+D
+DSmnDS
+GS
+I
+W
+VgCoxv
+VL
+
+==   =
+
+ 
+In Saturation region : 
+MOSFET works as on ON switch 
+V
+GS  
+>> V
+T
+ 
+DSGSTH
+vvv=−
+ 
+              
+
+2
+sat
+1
+2
+DnoxGSTH
+W
+ICvv
+L
+=  −
+ 
+and          
+
+mnoxGSTH
+W
+gCvv
+L
+=−
+ 
+          
+2
+D sat
+m
+GSTH
+I
+g
+vv
+=
+−
+ 
+          
+2
+mnoxD
+W
+gCI
+L
+
+=
+
+
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.19 
+MOSFET Biasing 
+• Biasing is a process of applying the operating point of device. 
+• Three operating regions. 
+ Cut-off         V
+GS
+ < V
+T
+  
+ Linear:         
+|–
+GSTDSGST
+VV    VVV
+   
+ Saturation:   
+|–
+GSTDSGST
+VV    VVV
+ 
+• There are three types of biasing  
+(1) Fixed bias 
+(2) Drain to base bias 
+(3) Potential divider bias 
+1.  Fixed Bias Configuration:  
+by kVL 
+  V
+G
+ – V
+GS
+ – I
+D
+R
+S
+ = 0 
+  V
+GS
+ = V
+G
+ – I
+D
+R
+S 
+Assume operating in saturation mode 
+Find I
+D
+ from standard drain current equation 
+kVL in output loop 
+ 
+0
+DDD   DDSD   s
+VI   RVI   R−−   −=
+ 
+ V
+DS
+   =   V
+DD
+ – I
+D
+ (R
+D
+ + R
+S
+) 
+Now checks VDS & V
+GS
+ – V
+T
+ condition for saturation. 
+True → assumption correct 
+False → assumption false, assume linear & solve again. 
+2. Drain to Gate Bias 
+As  V
+DS 
+= V
+GS 
+  V
+DS
+ > V
+GS
+ – V
+T 
+MOS biased in saturation region. 
+Applying KVL                                     V
+DD
+ – I
+D
+R
+D
+ – V
+DS 
+= 0
+ 
+ 
+  V
+DS
+ = V
+DD
+ – I
+D
+R
+D 
+as saturation, I
+D
+ = 
+
+2
+GST
+k  VV−
+ 
+ 
+I
+D
+R
+D
+V
+DD
+I
+D
+R
+S
+V
+GS
++
+–
+V
+G
+R
+D
+V
+DD
+I
+D
+V
+GS
++
+–
+V
+DS
+0
++
+–
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.20 
+3. Potential Divider Bias 
+By voltage division   
+2
+12
+
+=
++
+DD
+G
+VR
+V
+RR
+ 
+  I
+S 
+= I
+D 
+  V
+GS 
+= 
+–
+GD   S
+VI   R
+ 
+  V
+DS
+ = 
+()
+DDDDS
+VIRR−+
+ 
+Assume saturation, I
+D 
+= 
+
+2
+GST
+k  VV−
+ find I
+D
+, V
+GS
+, V
+DS
+   
+V
+DS
+ > V
+GS
+ – V
+T
+ saturation. 
+otherwise assume active. 
+Small Signal (or) AC Analysis 
+ 
+If no channel length modulation ( = 0). 
+  V
+A 
+= 
+1
+;===
+=
+
+A
+ds
+o
+D
+V
+r
+r
+I
+ 
+(a) RC Coupled amplifier with Coupling Capacitor 
+ 
+R
+D
+V
+DD
+R
+S
+R
+1
+R
+2
+V
+S
+R
+S
+C
+S
+R
+L
+C
+S
+I
+o
+R
+DL
+ || R
+V
+o
+I
+D
+g
+m
+V
+GS
+S
+R
+S
+V
+S
+I
+S
+V
+GS
+S
+I
+S
+R R
+12
+ ||
++
+–
+V
+GS
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.21 
+1. 
+12
+||
+GS
+S
+V
+I
+RR
+=
+ 
+2. 
+0
+=−
+m   GS
+Ig  V
+ 
+3. 
+
+12
+||=−
+Im
+AgR    R
+ 
+4. 
+12
+[||]
+ins
+RRR    R=+
+ 
+5. 
+inSS
+VIR=
+ 
+6. 
+0
+(||)
+m  GSDL
+Vg  VRR=−
+ 
+7. 
+0
+12
+in
+(||)
+[||]
+mDL
+V
+S
+Vg    RR
+AR    R
+VR
+=   = −
+ 
+8. 
+out
+(Load open)
+D
+RR=
+     
+(b) RC coupled amplifier without bypass capacitor: 
+ 
+  i
+o 
+= 
+m  gs
+gv−
+ 
+  V
+o 
+= 
+[||]−
+LDm   gs
+RRg  V
+ 
+  R
+in
+ = 
+12
+[||]
+x
+RRR+
+ 
+  Vx = 
+gsm  gs   s
+Vg  V  R+
+ 
+   = 
+(1)
+m   sgs
+g  R  V+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.22 
+  V
+x
+ = 
+12
+122
+||
+(||)
+RR
+R    RR+
+ 
+  Vx = 
+12
+12
+||
+(1)
+||
+x
+m   sgs
+R    RR
+g  R  V
+RR
++
+
++
+
+
+ 
+  Voltage gain = 
+o
+s
+V
+V
+ 
+Current Mirror 
+• It copies the ref current flowing at the input of the system to the output. 
+• It is also known as practical current source. 
+• It is designed by using IC technology. 
+ 
+  V
+GS1 
+= V
+GS2
+ = V
+GS
+  
+  I
+ref
+ = 
+2
+1
+1
+()
+2
+x   oxGST
+W
+CVV
+L
+
+−
+
+
+ ...(1) 
+  I
+out
+ = 
+2
+2
+1
+()
+2
+
+−
+
+
+x   oxGST
+W
+CVV
+L
+ ...(2) 
+  
+out
+ref
+I
+I
+ = 
+2
+1
+(    /  )
+(    /  )
+WL
+WL
+   
+as now output current is independent of output resistance, if 
+outref
+12
+      
+=→    =
+      
+      
+WW
+II
+LL
+  
+MOS Current Steering Circuit:  
+ 
+I
+out
+M
+2
+M
+1
++
+–
+V
+GS2
+V
+GS1
+V
+ref
+I
+ref
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.23 
+T
+1
+ and T
+2
+ are in current mirror. 
+  
+2
+D
+I
+ = 
+2
+ref
+1
+(    /  )
+(    /  )
+WL
+I
+WL
+
+
+
+ 
+T
+1
+ and T
+3
+ are in current mirror. 
+  
+3
+D
+I
+ = 
+3
+ref
+1
+(    /  )
+(    /  )
+WL
+I
+WL
+
+
+
+ 
+T
+4
+ and T
+5
+ are in current mirror → pMOS  
+  
+5
+D
+I
+ = 
+43
+55
+44
+(    /  )(    /  )
+(    /  )(    /  )
+DD
+W  LW  L
+II
+W  LW  L
+
+=
+
+
+ 
+5.2. MOSFET Amplifiers  
+Common Source MOSFET Amplifier without R
+S
+ and its AC Equivalent circuit 
+                   
+ (a) CS MOSFET amplifier without R
+S 
+(b) AC equivalent of CS MOSFET amplifier without R
+S
+  
+Common Source MOSFET Amplifier with R
+S
+ and its AC Equivalent circuit 
+ 
+Fig. (a) CS MOSFET amplifier with R
+S
+ 
+DD
+V
+0
+VD
+S
+G
+D
+R
+S
+R
+C
+L
+R
+C
+S
+V
+'
+i
+R
+0
+'R
+0
+V
+0
+'R
+L
+R
+D
+R
+mgs
+gV
+D
+D
+I
+S
+'
+i
+R=
+gs
+V
+0
+g
+I=
+s
+V
+S
+G
+0
+r
+0
+VD
+S
+G
+D
+R
+DD
+V
+S
+R
+L
+R
+C
+S
+V
+'
+i
+R
+0
+'R
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.24 
+ 
+Fig. (b) AC equivalent of CS MOSFET amplifier with R
+S
+ 
+Common Drain MOSFET Amplifier and its AC Equivalent circuit 
+               
+ (a) CD MOSFET amplifier (n-channel enhancement)  (b) AC equivalent of CD MOSFET amplifier 
+ 
+Common Gate MOSFET Amplifier and its AC Equivalent circuit 
+ 
+Fig. (a) CG MOSFET amplifier (n channel enhancement) 
+0
+V
+0
+'R
+L
+R
+D
+R
+mgs
+gV
+D
+D
+I
+S
+G
+'
+i
+R=
+gs
+V
+0
+g
+I=
+s
+V
+S
+s
+R
+0
+r
+0
+V
+D
+S
+G
+S
+V
+DD
+V
+S
+R
+C
+L
+R
+'
+i
+R
+0
+'R
+mgs
+gV
+D
+D
+I
+S
+G
+'
+i
+R=
+gs
+V
+0
+g
+I=
+s
+V
+S
+s
+R
+0
+I
+L
+R
+0
+V
+0
+r
+0
+'R
+0
+VD
+S
+G
+D
+R
+DD
+V
+S
+R
+L
+R
+C
+S
+V
+'
+i
+R
+0
+'R
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.25 
+ 
+Fig. (b) AC equivalent of CG MOSFET amplifier 
+ 
+MOSFET Amplifiers AC Parameters 
+ 
+  
+0
+V
+0
+'R
+L
+R
+D
+R
+mgs
+gV
+D
+D
+I
+G
++
+–
+gs
+V
+S
+'
+i
+R
+in
+I
+s
+V
+D
+I
+0
+r
+s
+R
+S
+AC 
+parameter 
+CS without R
+S
+  CS with R
+S
+   Common drain  Common Gate  
+Input 
+resistance 
+'0==
+
+
+ig
+RI
+ 
+'0
+ig
+RI= =
+
+
+ 
+'=
+i
+R
+ 
+1
+'
+i
+m
+R
+g
+ 
+Output 
+resistance 
+00
+'[0]=    Rr
+ 
+00
+1
+'[0]
+
+=   ==
+
+
+
+D
+Rr
+I
+ 
+00
+'(1)=  +  +
+S
+RrR
+ 
+0
+'[if0]=     =    = 
+d
+Rr
+ 
+0
+1
+'
+m
+R
+g
+ 
+00
+'(1)=  +    +
+S
+RrR
+ 
+00
+'[if0]=     =   = Rr
+ 
+Voltage 
+gain 
+'"=−
+Vm   L
+Ag   R
+ 
+0
+("||||)=
+LDL
+RrRR
+ 
+0
+'
+'
+'(1)
+−
+=
++  +    +
+L
+V
+LS
+R
+A
+RrR
+ 
+('||)=
+LDL
+RRR
+ 
+'
+'
+1'
+=
++
+mL
+V
+mL
+gR
+A
+gR
+ 
+(')=
+LsL
+RRR
+ 
+'"=
+Vm   L
+Ag  R
+ 
+0
+("||||)=
+LDL
+RrRR
+ 
+Current 
+gain 
+Does not exist 
+0A
+
+=
+
+g
+I
+ Does not exist 
+0A
+
+=
+
+g
+I
+ 
+Does not exist 
+0A
+
+=
+
+g
+I
+ 
+'   1.0=
+I
+A
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.26 
+6 
+FEEDBACK 
+AMPLIFIERS 
+ 
+6.1. Introduction 
+6.1. Feedback 
+It is a process of taking sample from output and mix with input. 
+ 
+According to type of mixing two types of feedback. 
+I.   Negative Feedback 
+If sample gets subtracted from supply. 
+ 
+1. Overall Gain: 
+  A
+F 
+= 
+1
+A
+A+
+ 
+gain reduced by (1 + A) 
+if A  >> 1        
+1
+f
+A=
+
+ 
+2. Bandwidth: 
+  Gain × B.W. = Constant 
+  (B.W.)
+f
+ = (BW) (1 + A)  
+so, bandwidth increased by (1 + A)  
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.27 
+3. Noise and Distortion 
+without feedback: 
+  V
+o 
+= AV
+i
+ + V
+N
+ + V
+o
+ 
+with Feedback 
+  V
+o 
+= 
+()
+soND
+A VVVV−   +   +
+ 
+  V
+o
+ = 
+111
+sN
+D
+AVV
+V
+AAA
+++
++    +    + 
+ 
+Hence, noise and distortion reduced by (1 + A)  
+4. Frequency Response: 
+ 
+5. Gain Sensitivity: 
+  S
+g
+ = 
+/
+/
+fff
+f
+A   AA
+A
+A AAA
+
+=
+
+ 
+   = 
+1
+1
+AA
+A
+AA
+A
+
+
+
+
+   + 
+
+
+
++
+
+ 
+   = 
+2
+(1)1
+(1)
+1
+(1)
+AA
+A
+A
+A
++  − 
+
++ =
+
++
++
+
+ 
+6. Desensitivity 
+  D = 
+1
+(1)
+g
+A
+S
+=  + 
+ 
+II. Positive Feedback 
+If sampled signal gets added with input then it is called as positive feedback. 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.28 
+ 
+(a) Gain: 
+  A
+f 
+= 
+oii
+sifii
+XX AX A
+XXXXA  X
+==
+−− 
+ 
+  X
+o
+ = 
+1
+S
+A
+X
+A
+
+
+−
+
+ 
+ 
+1
+=
+−
+F
+A
+A
+A
+ practically |A| < 1. 
+Effects: 
+1. Reduces bandwidth of system. 
+2. Increase noise, as well as distortion of system. 
+Negative feedback amplifiers classificed into 4-types. 
+1. Series Series Feedback 
+2. Series Shunt Feedback 
+3. Shunt Series Feedback 
+4. Shunt Shunt Feedback 
+6.2. Classification of Amplifier 
+In the feedback amplifier 
+ 
+A Mixter Network  
+ 
+  Voltage Mixing Current Mixing 
+  V
+i
+ = V
+s
+ – V
+f
+ I
+i
+ = I
+s
+ – I
+f
+ 
+  R
+i
+ increase R
+in
+ decrease  
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.29 
+B-Sampling Network 
+ 
+  Voltage Sampling  Current Sampling 
+  R
+o
+ decrease R
+o
+ increase 
+ (1) Series-Shunt Feedback: (Voltage Amplifiers)  
+ 
+Observations: 
+  Gain = 
+1
+V
+V
+A
+A+
+ 
+  Bandwidth = 
+
+1
+V
+BWA+
+ 
+  (R
+in
+)f = 
+[1]
+iV
+RA+
+ 
+  (R
+o
+)f = 
+1
+o
+V
+R
+A+
+ 
+(2) Shunt-Shunt Feedback : (Trans-resistance Amplifiers) 
+ 
+Gain: 
+  I
+f  
+= V
+o
+  
+  I
+in
+ = 
+()
+s
+fo
+sin
+R
+IV
+RR
+−   
++
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.30 
+  V
+o
+ = 
+L
+M   in
+Lo
+R
+RI
+RR
+
+
++
+
+ = 
+S
+L
+m
+LoSin
+R
+R
+R
+RRRR
+
+
+
+
+++
+ 
+ = 
+()   ()
+mso
+Rf  IV−
+ 
+  
+[1()]
+om
+VR+
+ = 
+S    ms
+IR
+ 
+   = 
+1
+oms
+sms
+VR
+IR
+=
++
+ 
+Observations: 
+1.  Gain (R
+m
+)
+f
+ = 
+1
+ms
+ms
+R
+R+
+ decreased. 
+2.  
+()
+if
+R
+ = 
+1
+i
+ms
+R
+R+
+ decreased 
+3.  (R
+o
+)
+f
+ = 
+1
+o
+ms
+R
+R+
+ decreased. 
+3. Series-Series Feedback Current Series Feedback (Trans-Conductance Amplifier) 
+ 
+Observations: 
+1. 
+1
+oms
+sms
+IG
+VG
+=
++
+ 
+2. 
+()(1)
+in   finm
+RRG=    +  
+ 
+3. 
+(    )(1)
+o   fom
+RRG=   +  
+ 
+4. Shunt-Series Feedback : (Current Amplifier) 
+ 
+Observations: 
+1. 
+1
+o
+I
+sI
+I
+A
+IA
+=
++
+ 
+2. 
+()
+1
+in
+in   f
+I
+R
+R
+A
+=
++
+ 
+3. 
+00
+(    )[1]
+fI
+RRA=   +  
+  
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.31 
+7 
+OPERATIONAL 
+AMPLIFIERS 
+ 
+ 
+7.1. Op-amp 
+A difference amplifier (amplifies the difference between two inputs) 
+        
+where, 
+12
+=−
+d
+VVV
+ 
+Op-amp Characteristics/Parameters 
+1. Open Loop Voltage Gain 
+o
+i
+V
+A
+V
+
+=
+
+
+:  The internal gain of op-amp without any feedback.  
+Ideally = ; Practically = very high 
+2. Gain Bandwidth Product (GBW): Unity gain bandwidth product i.e. GBW = 1 refers to be behavior that the gain 
+reduces at the same rate as frequency increases. 
+3. Input Resistance 
+i
+i
+i
+V
+R
+I
+
+=
+
+
+: It is the internal input impedance of the op-amp. 
+Ideally =  ; practically = very high 
+4. Output Resistance 
+o
+o
+o
+V
+R
+I
+
+=
+
+
+: Ideally = 0 ; practically = very small 
+5. CMRR (Common Mode Rejection Ratio) :  Metric used to quantify the ability of the device to reject common-mode 
+signals. 
+Ideally CMRR is infinite, Practically very high. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.32 
+   
+CMRR
+d
+c
+A
+A
+=
+ 
+   CMRR in dB 
+dBdB
+20 log()(    )
+d
+dc
+c
+A
+AA
+A
+==−
+ 
+6. Slew Rate :  
+The maximum rate of change in output voltage per unit of time 
+      
+00
+maxmaxmax
+max
+ii
+CL
+i
+dVdVdVdV
+SRA
+dtdVdtdt
+===   
+ 
+Non-Idealities in Op-amp 
+• Offset voltage (V
+OS
+): If the two transistors are not perfectly matched, an offset will show up as a non-zero DC offset 
+at the output.  
+• Bias current (I
+bias
+): The transistor inputs actually do draw some current. The bias current is defined to be the average 
+of the currents of the two inputs. 
+• Offset current (I
+OS
+): The difference between the input bias currents.  
+Ideal Op-amp Characteristics 
+Parameter Symbol Ideal 
+Open loop voltage A 
+ 
+Unity gain frequency F
+unity
+ (GBW) 
+ 
+Input resistance R
+in
+ 
+ 
+Output resistance R
+out
+ Zero 
+Input bias current I
+bias
+ Zero 
+Input offset current I
+in(OS)
+ Zero 
+Input offset voltage V
+in(OS)
+ Zero 
+Slew rate S
+R
+ 
+ 
+Common mode rejection ration CMRR 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.33 
+7.2. Common Op-amp Circuits 
+Comparator 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Non Inverting Op-amp 
+ 
+0
+2
+1
+1
+V
+s
+V
+R
+A
+VR
+
+=   =  +
+
+
+ 
+Inverting Op-amp 
+ 
+             
+0
+2
+1
+v
+s
+V
+R
+A
+VR
+−
+==
+ 
+푉
+0
+=푉
+푠푎푡
+   ;  푉
+푖
+>푉
+푅
+ 
+푉
+0
+=−푉
+푠푎푡
+   ;  푉
+푖
+<푉
+푅
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.34 
+Voltage Follower 
+ 
+0S
+VV=
+ 
+Non Inverting Summing Amplifier 
+ 
+2
+0123
+1
+1
+()  1
+3
+R
+VVVV
+R
+
+=    +  ++
+
+
+ 
+Inverting Summer 
+ 
+3
+12
+0
+123
+f
+V
+VV
+VR
+RRR
+
+= −+   +
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.35 
+Difference/Subtractor 
+ 
+4122
+021
+3411
+RRRR
+VVV
+RRRR
+
+      
++
+=−
+
+      
++
+      
+
+ 
+Integrator Circuit 
+Ideal Integrator 
+Practical Integrator 
+ 
+0
+1
+s
+f
+VV dt
+RC
+=−
+
+ 
+ 
+   
+/
+1
+f
+o
+Sff
+RR
+V
+VsR C
+−
+=
++
+ 
+Differentiator Circuit      
+Ideal Differentiator 
+Practical Differentiator  
+ 
+0fin
+d
+VR  CV
+dt
+=−
+ 
+ 
+1
+f
+o
+S
+sR C
+V
+VsRC
+−
+=
++
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Analog Electronics 
+7.36 
+Schmitt Trigger 
+               
+22
+1
+2
+1
+2
+,
+satsat
+UTLT
+VRVR
+VV
+RRRR
+−
+==
+++
+ 
+Hysteresis Curve: 
+ 
+           
+2
+12
+2
+HUTLT
+sat
+H
+VVV
+VR
+V
+RR
+=−
+=
++
+  
+ 
+ 
+For more questions, kindly visit the library section: Link for web: https://smart.link/sdfez8ejd80if  
+PW Mobile APP: https://smart.link/7wwosivoicgd4  

@@ -1,0 +1,12262 @@
+=== FILE: Electromagnetic_Field_Theory_Notes_PW.pdf ===
+=== PAGES: 105 ===
+
+
+
+ElectromagneticElectromagnetic
+Field TheoryField Theory
+Electromagnetic
+Field Theory
+
+Published By: 
+ 
+  Physics Wallah 
+ISBN: 978-93-94342-39-2 
+Mobile App: Physics Wallah (Available on Play Store) 
+  
+Website: www.pw.live 
+Email: support@pw.live 
+ 
+Rights 
+All  rights  will be  reserved  by  Publisher.  No  part  of  this  book  may  be  used  or  reproduced  in  any  manner 
+whatsoever without the written permission from author or publisher. 
+In the interest of student's community: 
+Circulation of soft copy of Book(s) in PDF or other equivalent format(s) through any social media channels, 
+emails,  etc.  or  any  other  channels  through  mobiles,  laptops  or  desktop  is  a  criminal  offence.  Anybody 
+circulating, downloading, storing, soft copy of the book on his device(s) is in breach of Copyright Act. Further 
+Photocopying of this book or any of its material is also illegal. Do not download or forward in case you come 
+across any such soft copy material. 
+ 
+Disclaimer 
+A team of PW experts and faculties with an understanding of the subject has worked hard for the books. 
+While  the  author  and  publisher  have  used  their  best  efforts  in  preparing  these  books.  The  content  has  been 
+checked for accuracy. As the book is intended for educational purposes, the author shall not be responsible for 
+any errors contained in the book. 
+The publication is designed to provide accurate and authoritative information with regard to the subject matter 
+covered. 
+This book and the individual contribution contained in it are protected under copyright by the publisher. 
+(This Module shall only be Used for Educational Purpose.) 
+
+ 
+ 
+ 
+Design Against Static Load 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Co-ordinate System  .........................................................................................................  9.1  –  9.5 
+2. Vector Calculus  ................................................................................................................  9.6  –  9.21 
+3. Maxwell Equation   ...........................................................................................................  9.22  –  9.38 
+4. Electromagnetic Wave   ....................................................................................................  9.39  – 9.66 
+5. Transmission Line  ............................................................................................................  9.67  –  9.79 
+6. Waveguide   ......................................................................................................................  9.80  –  9.87 
+7. Antenna   ..........................................................................................................................  9.88  –  9.102 
+ELECTROMAGNETIC 
+FIELD THEORY 
+INDEX 
+GATE-O-PEDIA ELECTRONICS & COMMUNICATION ENGINEERING 
+
+ 
+ 
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Design Against Static Load 
+9.1 
+1 
+CO-ORDINATE 
+SYSTEM 
+1.1. Introduction 
+1. Vector : It has magnitude and direction. In addition, it follows Vector Law of Addition. 
+ e.g. :- Electric field, Magnetic Field, Force etc. 
+ 
+2. Scalar : It has magnitude and no direction. It does not follow Vector Law of Addition. 
+ eg :– Current, Distance, Potential etc. 
+ 
+3.  Tensor : It has magnitude and direction. It does not follow Vector Law of Addition. It shows different values in different 
+directions at the same point. 
+ e.g.:– Conductivity, Resistivity, Refractive Index. 
+ 
+4. Unit Vector:  It is the vector which has unit magnitude and directed along increasing direction of parameters. 
+ 
+1.2. Equation of line in 3-dimentional 
+  
+111
+212121
+x    xy    yz    z
+constant
+xxyyzz
+−−−
+===
+−−−
+ 
+Or   
+222
+212121
+x    xy    yz    z
+constant
+xxyyzz
+−−−
+===
+−−−
+ 
+Equation of Plane In 3-Dimentional. 
+           
+ax   by    cz    d+  +  =
+ 
+ Eg.    
+345xy+=
+ 
+ Equation of line in two-dimensional. However, equation of plane in three-dimensional. 
+1. X = Constant. 
+ (a) A plane is parallel to Y and Z-axis. 
+ (b) Y and Z-axis is tangential component. 
+ (c) X axis is normal component. 
+2. Y = Constant. 
+ (a) A plane is parallel to X and Z-axis. 
+ (b) X and Z axis is tangential component. 
+ (c) Y axis is normal component  
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.2 
+    
+3. Z = Constant 
+ (a) A plane is parallel to X and Y-axis. 
+ (b) X and Y-axis is tangential components. 
+ (c) Z axis is normal components. 
+1.2.1. Cross Product 
+ 
+ 
+sinA   B   AB 
+  
+  
+
+ Outward direction (Anticlockwise) 
+ 
+  
+sinB   A   AB 
+  
+ 
+       
+
+Inward direction 
+ 
+ 
+     
+123
+123
+ˆ   ˆ   ˆ
+xyz
+aaa
+A   Baaa
+bbb
+=
+ 
+1.2.2. Dot Product 
+     
+1 12  23  3
+A  B   a ba ba b=   +    +
+ 
+1. Projection of B along Vector 
+A
+ 
+ 
+2. Projection of vector 
+B
+along Vector 
+A
+. 
+ 
+3. Projection of vector 
+B
+perpendicular to Vector 
+A
+. 
+ 
+ˆ
+(   cos  )
+r
+ABBA
+⊥
+=  − 
+. 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.3 
+Point Conversion 
+1. Cartesian to cylindrical 
+  
+221
+,tan,
+Y
+XYZZ
+X
+−
+
+=+      =    =
+
+
+ 
+2. Cylindrical to Cartesian 
+  
+cosX=   
+, 
+sinY=  
+,  Z = Z 
+ 
+3. Cartesian to spherical 
+  
+222
+rxyz=    +   +
+ 
+  
+1
+222
+cos
+z
+xyz
+−
+
+
+=
+
+++
+
+ 
+  
+1
+tan
+y
+x
+−
+
+=
+
+
+ 
+4. Spherical to Cartesian 
+  
+sin   cosxr=       
+ 
+  
+sin   sinyr=     
+ 
+  
+coszr=
+ 
+ 
+5. Cylindrical to Spherical 
+  
+22
+,rz=  +
+1
+22
+cos,
+z
+z
+−
+
+
+ = = 
+
++
+
+ 
+6. Spherical to Cylindrical  
+  
+sin  ,,cosrz    r =      =   =    
+. 
+Unit vector Conversion 
+1. Cartesian to Cylindrical 
+   
+ˆ
+ˆ
+cossin0
+ˆˆ
+sincos0
+001
+ˆ
+ˆ
+x
+y
+z
+z
+a
+a
+aa
+a
+a
+
+
+
+
+
+
+
+
+
+= −  
+
+
+
+
+
+
+
+
+
+ 
+2. Cylindrical to Cartesian 
+   
+ˆ
+ˆ
+cossin0
+ˆˆ
+sincos0
+001
+ˆ
+ˆ
+x
+y
+z
+z
+a
+a
+aa
+a
+a
+
+
+
+
+  −  
+
+
+
+
+=    
+
+
+
+
+
+
+
+
+
+ 
+3. Cartesian to Spherical 
+   
+ˆ
+ˆ
+sin   cossin   sincos
+ˆˆ
+cos   coscos   sinsin
+ˆ
+sincos0
+ˆ
+r
+x
+y
+z
+a
+a
+aa
+a
+a
+
+
+
+
+     
+
+
+
+
+=           −  
+
+
+
+
+
+
+−  
+
+
+
+ 
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.4 
+4. Spherical to Cartesian 
+   
+ˆ
+ˆ
+sin   coscos   cossin
+ˆˆ
+sin   sincos   sincos
+ˆ
+cossin0
+ˆ
+z
+x
+r
+y
+a
+a
+aa
+a
+a
+
+
+
+
+        −  
+
+
+
+
+=       
+
+
+
+
+
+
+−  
+
+
+
+
+ 
+5. Spherical to Cylindrical. 
+   
+ˆ
+ˆ
+sincos0
+ˆˆ
+001
+ˆ
+cossin0
+ˆ
+z
+r
+a
+a
+aa
+a
+a
+
+
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+  −  
+
+
+
+
+ 
+6. Cylindrical to Spherical 
+   
+ˆ
+ˆ
+sin0cos
+ˆˆ
+cos0sin
+ˆ
+010
+ˆ
+r
+z
+a
+a
+aa
+a
+a
+
+
+
+
+
+
+
+
+
+
+=    −  
+
+
+
+
+
+
+
+
+
+ 
+ 
+1.3. Differential Length, Area and Volume 
+ Parameter Coefficient 
+u v w h
+1
+ h
+2
+ h
+3
+ 
+x y z 1 1 1 
+   
+z 1 
+ 
+1 
+r 
+
+ 
+
+ 
+1 r 
+sinr
+ 
+1. Differential Length 
+It is a vector quantity and directed along tangential direction. 
+In general form. 
+   
+123
+ˆˆˆ
+uvwdl    h duah dvah dwa=++
+ 
+(a) Cartesian co-ordinate system. 
+   
+ˆ    ˆ    ˆ
+xyzdl    dxadyadza=   +   +
+ 
+(b) Cylindrical Co-ordinate system. 
+   
+ˆˆ    ˆ
+zdl    d  ad  adza=   +   +
+ 
+(c) Spherical co-ordinate system. 
+   
+ˆˆˆ
+sinrdl    drard  ard  a=   +    +    
+ 
+2. Differential Area  
+ 
+ˆ
+nd sdsa=
+ 
+  
+ˆ
+naunit normal to the surface=
+ 
+  
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.5 
+It is a vector quantity and directed normal to the surface. 
+In general Form 
+   
+2   31   31   2
+ˆˆˆ
+uvvd S    h h dvdwah h dudwah h dudva=++
+ 
+(a) Cartesian co-ordinate system. 
+   
+ˆˆˆ
+xyzd S    dydxadxdzadxdya=++
+ 
+(b) Cylindrical co-ordinate system. 
+   
+ˆˆˆ
+zd Sd  dzad  dzad  d  a=    +    +  
+ 
+(c) Spherical co-ordinate system3. 
+   
+2
+ˆˆˆ
+sinsinrd S    rd  d  ardrd  ardrd  a    =++
+ 
+3.  Differential Volume  
+In general form 
+    
+1   2   3
+dv    h h h dudvdw=
+ 
+(a) Cartesian co-ordinate system :– 
+   
+dv    dxdydz=
+ 
+(b) Cylindrical co-ordinate system :– 
+   
+dvd  d  dz=  
+ 
+(c) Spherical co-ordinate system. 
+    
+2
+sindv    rdrd  d   =
+ 
+1.3.1. Position Vector 
+(a) Cartesian co-ordinate system 
+        
+   
+ˆ
+ˆˆ
+rxi    yj    zk=  +  +
+ 
+ 
+ 
+ 
+ 
+(b) Cylindrical Co-ordinate system. 
+   
+ˆˆ
+z
+raza
+
+=+
+ → ‘Z’ is an axis 
+   
+ˆˆ
+y
+raya
+
+=+
+ → ‘Y’ is an axis 
+   
+ˆˆ
+x
+raxa
+
+=+
+ → ‘X’ is an axis 
+(c) Spherical Co-ordinate system : 
+   
+ˆ
+r
+rra=
+ 
+(d) Position vector in 2D  
+   
+()()
+2121
+ˆˆˆ
+–' 'xyaxx   ayy   aZ  axis=    =   −+→
+
+
+ 
+   
+()()
+2121
+ˆˆˆ
+–'  'yzayy   azz   aX  axis=    =   −+→
+
+
+ 
+   
+()()
+2121
+ˆˆˆ
+–' 'xzaxx   azz   aY  axis=    =   −+→
+
+
+ 
+  
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.6 
+2 
+VECTOR  CALCULUS  
+ 
+2.1. Introduction 
+I.  Differential Form 
+1. Gradient of scalar function 
+2.  Divergence. 
+3. Curl. 
+4. Laplacian operator. 
+II.  Integral Form 
+1. Open line integration 
+  (a) Path independent 
+  (b) Path dependent 
+2. Closed Line integration. 
+3. Closed Surface integration. 
+4. Volume integration. 
+Gradient of scalar function ‘f’: – 
+1. Definition: It is a vector quantity which gives maximum rate of change of scalar function ‘f’ and is directed normal to 
+surface ‘f’ or scalar function ‘f’. 
+      
+max
+ˆ
+n
+df
+fa
+dl
+=
+ 
+2. Formulae: 
+      
+123
+111
+ˆˆˆ
+uvw
+fff
+faaa
+h    uhvhw
+
+ =++
+
+ 
+ (a) Cartesian Co-ordinate system. 
+      
+ˆˆˆ
+xyz
+fff
+faaa
+xyz
+
+ =++
+
+ 
+ (b) Cylindrical Co-ordinate system. 
+      
+1
+ˆˆˆ
+z
+fff
+faaa
+z
+
+
+ =++
+        
+ 
+ (c) Spherical Co-ordinate system. 
+      
+11
+ˆˆˆ
+sin
+r
+fff
+faaa
+rrr
+
+
+ =++
+ 
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.7 
+3. Physical Significance: 
+ (a) Maximum rate of change of scalar function ‘f’ will be given by gradient of scalar function ‘f’. 
+      
+max
+df
+f
+dl
+=
+ 
+ (b) To find directional derivate. 
+      
+ˆ
+..D Df  A=
+ 
+ (c) It gives unit normal on surface. 
+      
+ˆ
+n
+f
+a
+f
+
+=
+
+ 
+ (d) To find angle between the surfaces. 
+ (e) 
+Af=
+ 
+      
+' '  Scalar function of  vecto  Afr
+ 
+4. Properties of Gradient 
+ (a) 
+()
+fgfg  +  = +
+ 
+ (b) 
+()
+fgf   g    g   f   =  + 
+ 
+ (c) 
+2
+fg   ff    g
+g
+g
+
+ − 
+=
+
+
+ 
+5. Application: 
+ (a) 
+ˆ
+rra=
+ 
+ (b) 
+3
+1r
+r
+r
+−
+
+=
+
+
+  
+(c) 
+()()
+2nn
+rnrr
+−
+=
+ 
+ (d)  
+()
+2
+r
+lnr
+r
+=
+ 
+ 
+ (e)  
+()
+2
+1
+ˆ
+2rrlnrra
+r
+
+   +   =   +
+
+
+ 
+ (f)  
+()
+()
+2
+ˆ
+2   lnrr  lnrrr  a=   +
+ 
+ (h) 
+ 
+24
+2
+ˆ
+r
+lnrrrlnr
+a
+rr
+−
+     
+=
+     
+     
+ 
+Divergence: 
+1. Definition: It gives total outward flux per unit volume. 
+       
+0
+.
+.
+lim
+A dS
+A
+→
+=
+
+
+ 
+ (a) 
+ ..  Divergence at anApoi  t
+  
+ (b) 
+        .Divergence iAdn a rangSe
+
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.8 
+ (c) 
+()
+ .A  dSA  dDivergence theorem
+
+=       
+    
+ 
+2. Formulae: 
+     
+()()
+()
+2  31  3
+12
+1  2  3
+1
+uv
+w
+h h Ah h A
+h h  A
+A
+h h huvw
+
+
+
+  =++
+
+
+
+ 
+  
+(a) Cartesian Co-ordinate System 
+     
+xyzAAA
+A
+xyz
+      
+  =   +   +
+      
+  
+ (b) Cylindrical Co-ordinate System. 
+()()
+1
+zAA
+A
+A
+z
+
+
+      
+
+  =+   +
+
+           
+
+ 
+(c) Spherical Co-ordinate system. 
+ 
+   
+()
+()()
+2
+2
+sin
+sin
+1
+sin
+rrA
+rArA
+A
+r
+r
+
+
+
+
+
+  =++
+
+
+
+
+
+ 
+3. Physical Significance: 
+ It gives outward flux. 
+ Outward Flux ≠ 0 (a)
+ Inward Flux = 0 
+Net Flux ≠ 0  
+  
+0A
+ 
+ 
+ 
+ 
+(b)  Outward Flux = 0 
+  Inward Flux ≠ 0 
+Net Flux ≠ 0  
+ 
+0A
+  
+ 
+ 
+(c)  Outward Flux  
+  = Inward Flux  
+Net Flux = 0  
+ 
+0A=
+  
+ 
+ 
+ 
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.9 
+ 
+(d)  Outward Flux < Inward Flux  
+Net Flux ≠ 0  
+ 
+0A
+  
+(e)  Outward Flux > Inward Flux  
+Net Flux ≠ 0  
+0A
+ 
+ 
+(f)  Outward Flux = 0 
+Inward Flux = 0 
+Net Flux = 0  
+0A=
+ 
+4. Properties 
+ (a) 
+()
+A    BAB   +   =  +
+ 
+ (b) 
+ 
+()()
+()
+f  AfAAf=     +   
+ 
+ (c) 
+ 
+()
+()
+2
+fAAf
+A
+f
+f
+   −   
+
+=
+
+
+ 
+5. Application 
+ (a) 
+3r=
+ 
+ (b) 
+()
+()
+1
+ˆ
+2
+nn
+rr  anr
+−
+=  +
+ 
+Curl: 
+1. Definition: 
+0
+ˆ
+lim
+S
+A dl
+An
+S
+→
+  =
+
+
+ 
+ Curl gives total Motive Force due to 
+A
+per unit area. And it is directed normal to the rotatory plane. 
+ (a) 
+A
+= Curl at a point 
+ (b) 
+A dl
+
+ = Curl in a range 
+ (c) 
+A dl
+
+ = 
+()
+A   dS
+
+⟹ Stoke’s theorem 
+2. Formulae:  
+123
+1  2  3
+123
+ˆˆˆ
+1
+uvw
+uvw
+h ah ah a
+A
+h h huvw
+h Ah  Ah A
+
+  =
+
+ 
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.10 
+(a) Cartesian Co-ordinate system 
+ˆ   ˆ   ˆ
+xyz
+xyz
+aaa
+A
+xyz
+AAA
+      
+  =
+      
+ 
+ (b)   Cylindrical Co-ordinate System. 
+ˆ    ˆ   ˆ
+1
+z
+z
+aaa
+A
+z
+AAA
+
+
+
+      
+  =
+     
+
+ 
+ (c)   Spherical Co-ordinate system 
+2
+ˆ   ˆˆ
+sin
+1
+sin
+sin
+r
+r
+arara
+A
+r
+r
+ArArA
+
+
+
+   
+  =
+   
+
+
+ 
+ 
+3. Physical Significance: – It gives rotation. 
+ 
+ 
+0A  
+  (a) 
+ 
+0A=
+ 
+  
+ 
+ 
+ 
+  
+ 
+0A  =
+ 
+(b)
+ 
+0A
+ 
+ 
+ 
+ 
+ 
+0A  =
+ (c)               
+0A
+ 
+ 
+  
+ 
+ 
+ 
+0A  
+ 
+(d)
+ 
+0A
+ 
+ 
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.11 
+4. Properties: 
+ (a) 
+()
+A    BAB  +   =  +
+ 
+ (b) 
+()()
+()
+f  AfAAf=    −   
+ 
+ (c) 
+()
+()
+2
+fAAf
+A
+f
+f
+  +   
+
+    =
+
+
+ 
+Mixed Product: 
+1. Scalar Product: 
+ (a)   
+()()()
+A   B   CB   C    AC   A   B  =  =
+ 
+  
+()
+123
+123
+123
+aaa
+A   B   Cbbb
+ccc
+=
+ 
+ (b)  
+()
+00A   B   CA B C
+
+   =  =
+
+ 
+  
+Thenare independent vectors and they do not lie in a single plane.,&A B    C  
+ 
+(c) Volume of parallelepiped  
+ 
+()
+A   B   C
+ 
+2. Vector Product: 
+       
+()()()
+AB   CA C  BA B  C    =−
+ 
+3. Mixed product with Del operator. 
+ (a) 
+()
+fDoesnot exist   =
+ 
+ (b) 
+()
+2
+ff    =
+ 
+ (c) 
+()
+0f    =
+ 
+ (d) 
+()
+Aexist    =
+ 
+ (e) 
+()
+Adoes not exist    =
+ 
+ (f) 
+()
+Adoes not exist    =
+ 
+ (g) 
+()
+Adoes not exist   =
+ 
+ (h) 
+()()
+2
+AAA   =    −
+ 
+ (i) 
+()
+0A   =
+ 
+Some Important Identities   
+1. 
+()
+fgfg  +  = +
+ 
+2. 
+()
+fgf   g    g   f   =  + 
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.12 
+3. 
+2
+fg   ff    g
+g
+g
+
+ − 
+=
+
+
+ 
+4. 
+()
+A    BAB   +   =  +
+ 
+5. 
+()
+fAfA    A    f=    +  
+ 
+6. 
+()
+2
+fAA    f
+A
+f
+f
+   −  
+
+=
+
+
+ 
+7. 
+()()
+()
+A   BA   BB   A     = − 
+ 
+8. 
+()
+A    BAB  +   =  +
+ 
+9. 
+()()
+()
+f  AfAAf=    −   
+ 
+10. 
+()
+()
+2
+fAAf
+A
+f
+f
+  +   
+
+    =
+
+
+ 
+11. 
+()
+2
+ff   =
+ 
+12. 
+()
+0f   =
+ 
+13. 
+()
+0A   =
+  
+14. 
+()()
+2
+AAA   =    −
+ 
+Laplacian Operator: 
+1. Laplacian operator with scalar function ‘f’ 
+      
+()
+2
+ff  = 
+ 
+               
+2  31  31  2
+3
+12
+1  2  3
+1
+h hh hh h
+f
+ff
+hw
+huhv
+h h huvw
+
+
+   
+
+
+
+
+
+
+   
+
+
+      
+
+=++
+
+
+
+
+
+ 
+ (a) Cartesian co-ordinate system 
+222
+2
+222
+fff
+f
+xyz
+
+  =    +    +
+    
+ 
+(b) Cylindrical co-ordinate system. 
+     
+222
+2
+2222
+11ffff
+f
+z
+    
+  =    +++
+ 
+    
+ 
+(c) Spherical co-ordinate system :– 
+()
+222
+2
+222222
+21cot1
+sin
+fffff
+f
+r   rr
+rrr
+r
+ 
+  =    +    +++
+
+
+
+ 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.13 
+Note: When scalar function ‘f’is function of ‘r’ only. Then,  
+()
+()()
+2
+2
+2
+1
+df   rd   f   r
+fr
+rdr
+dr
+=+
+ 
+ (d) (i) 
+()
+22
+1
+nn
+rn  nr
+−
+   =   +
+  
+(ii) 
+2
+2
+r
+r
+=
+ 
+  (iii) 
+2
+1
+0
+r
+
+=
+
+
+   
+(iv) 
+2
+2
+1
+lnr
+r
+=
+ 
+2. Laplacian operator with vector 
+A
+ 
+     
+222
+2
+222222
+123
+111AAA
+A
+huhVhw
+
+  =++
+
+ 
+ (a) Cartesian co-ordinate system. 
+     
+222
+2
+222
+AAA
+A
+xyz
+
+  =    +    +
+        
+ 
+ (b) Cylindrical co-ordinate system 
+     
+222
+2
+2222
+1AAA
+A
+z
+    
+  =    ++
+       
+ 
+ (c) Spherical co-ordinate system. 
+     
+()
+222
+2
+22222
+11
+sin
+AAA
+A
+rr
+r
+
+  =    ++
+
+
+ 
+Some Important points: 
+ (a) 
+ˆ
+rra=
+ 
+ (b) 
+3r=
+ 
+ (c) 
+0r  =
+ 
+ (d) 
+2
+2
+r
+r
+=
+ 
+ (e) 
+2
+0r=
+ 
+ (f) 
+()
+()
+ˆ
+r
+df   r
+f   ra
+dr
+=
+ 
+ (g) 
+()
+()()
+2
+2
+2
+2
+df   rd   f   r
+fr
+r    dr
+dr
+=+
+ 
+ (h) 
+0A=
+ then 
+A
+is solenoidal and diversion less. 
+ (i) 
+0A  =
+ then 
+A
+is irrational, conservative and path independent vector. 
+ (j) 
+2
+0 =
+ (Laplacian Equation). 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.14 
+2.3. Path dependent open Line Integral. 
+1. 
+P dl
+
+ 
+ Condition for path dependent open Line Integral is given as. 
+0×P
+ 
+ Then the above integrals will be solved using parameterization process. 
+ Example: 
+ The Line Integral of the Vector Field 
+ 
+5(32  )
+22
+F=  xzi+   x  +  y  j+x  zk
+ along a path from (0, 0, 0) to (1, 1, 1) parameterized by (t, t
+2
+, t) is ...... 
+ Solution: 
+  x = t ⇒ dx = dt 
+  y = t
+2
+ ⇒ dy = 2tdt 
+ 
+z
+= t ⇒ 
+dz
+= dt 
+ 
+5(32  )
+22
+F  dl=xzdx +x  +  y dy+  x  zdz
+       
+ 
+    
+111
+2223
+000
+5(32   )(2=t  dt+t  +  ttdt)+   t dt
+    
+ 
+    
+5   10    1    20   33   53
+4.41
+3441212
++
+= +  +  ==  =
+ 
+2. 
+P dl
+
+ 
+ Condition for path independent open Line Integral is given by   
+0×P=
+ 
+ So, open line integral is performed through straight line. 
+ Question: 
+ As shown in the figure, C is the arc from the point (3, 0) to the point (0, 3) on the circle x
+2
+ + y
+2
+ = 9. The value of the 
+integral. 
+22
+(2    )(2)
+C
+yyx dxxy   x   dy++   +
+
+ 
+ is ....... 
+ 
+ Solution: 
+ Method I: - Basic Method 
+   x
+2
+ + y
+2
+ = 9 
+    x = 
+2
+9y−
+, y = 
+2
+9x−
+ 
+ Since, the curve lies in 1
+st
+ quadrant of xy plane. Hence, 
+
+ 
+  
+GATE WALLAH ELECTRONICS AND COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory 
+9.15 
+    x = 
+2
+9y−
+, y = 
+2
+9x−
+ 
+    
+(
+)
+(
+)
+03
+2222
+30
+(9)   2929(9)Ixx    x  dxyyydy
+
+=   −   +−+−+  −
+
+
+
+= 0 
+ Method II: - Parameterization Process. 
+                  x
+2
+ + y
+2
+ = 9 ⇒ x = 3cos, y = 3sin 
+    x = 3 to 0 ⇒  = 0 to 
+2
+
+ 
+    y = 0 to 3 ⇒  = 0 to 
+2
+
+ 
+                                   
+03
+22
+30
+(2    )(2)Iyyx dxxy   x   dy=+++
+
+ 
+                                    
+22
+22
+00
+3(9sinθ 18sinθ cosθ)( sinθdθ) 3  (9cos θ 18sinθcosθ)(cosθdθ)
+
+=+−++
+
+ = 0 
+ Method III: - To check path independent or dependent. 
+   
+22
+(2    )(2)yyx dxxy   x   dy++   +
+
+ 
+     
+()()
+22
+(2   )(2   )xyxyyyx axxy adxa    dya=++  ++
+
+ 
+     
+P dl=
+
+ 
+                               
+22
+220
+xyzaaa
+VP
+xyz
+yxyxy   x
+
+=
+
+++
+ 
+     = (0 – 0)
+xa
+– (0 – 0)
+ya
++ (2x + 2y – 2y – 2x)
+za
+ 
+     = 0
+xa
++ 0
+ya
++ 0
+za
+=
+0
+ 
+ 
+ So, the open line integral will be through straight line. 
+              
+30
+3   0    0   3
+xy−−
+=
+−−
+⇒ x = -y + 3 ⇒ y = 3 – x  
+     
+22
+(2    )(2)Iyxy dxxy   x   dy=    ++    +
+
+ 
+ 
+03
+22
+30
+(3)2  (3)2(3)(3)xxx   dxy  yydy
+
+−   +    −+−   +  −
+
+
+ = 0 
+  
+ Method IV: 
+ Open line integral is not performed through curve ‘C’ but through along x-axis and then along y-axis.
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+9.16 
+Electromagnetic Field Theory 
+ 
+ Along x-axis, y = 0, x = 3 to 0, dx ≠ 0, dy = 0 
+       
+()
+22
+1
+(0)202  (0)0Ixdxxx
+
+=+      ++
+
+
+ = 0 
+ Along y-axis, x = 0, y = 0 to 3, dx = 0, dy ≠ 0 
+      
+()
+30
+22
+2
+03
+2  (0)0(0)2(0)Iyyy  dy
+
+=+++
+
+
+ = 0 
+ ∴        I = I
+1
+ + I
+2
+ = 0 + 0 = 0 
+3. 
+A dl
+
+= closed line integral 
+ To solve above integral, we use closed line integral or open surface integral. 
+                    
+()
+A dlA   ds=  
+   
+ 
+ Question: 
+ Consider the line integral 
+()
+C
+xdy    ydx−
+
+ 
+ The integral being taken in a counter clock-wise direction over the closed curve ‘C’ that forms the boundary of the 
+region ‘R’ shown in the figure below. The region ‘R’ is the area enclosed by the union of a 2 × 3 rectangle and a 
+semicircle of radius 1. The line integral evaluates to – 
+ 
+ 
+ Solution: 
+ Method I: Using closed line integral 
+ Path 1.   x = 1 to 4, y = 1, dx ≠ 0, dy = 0 
+    
+4
+1
+1
+1
+y
+Iy dx
+=
+=−
+
+ = –3 
+ Path 2.   Along semicircle centre = (4, 2) 
+                                      (x – 4)
+2
+ + (y – 2)
+2
+ = (1)
+2
+  
+         x = cos + 4, y = sin + 2 
+     y = 1 to 3 ⇒ 2 + sin = 1 to 3 
+    sin  = -1 to 1 ⇒  = 
+to
+22
+
+−
+ 
+    x = 4 + cos ⇒ dx = -sind 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.17 
+    y = 2 + sin ⇒ dy = cosd 
+    
+2
+2
+2
+(4   cos  ) (cos)(2   sin  ) (  sin)Idd
+
+
+      
+−
+=+−   +−
+
+ 
+       
+222
+2
+222
+4cos2sinIddd
+
+
+  
+−−−
+=++
+    
+= 8 +  
+ Path 3. 
+    x = 4 to 1, y = 3, dx ≠ 0, dy ≠ 0 
+    
+1
+3
+3
+4
+y
+Iy dx
+=
+=−
+
+ = 3 × 3 = 9 
+ Path 4. 
+    x = 1, y = 3 to 1, dx = 0, dy ≠ 0 
+       
+1
+4
+1
+3
+x
+Ix dy
+=
+=
+
+ = -2 
+ ∴    I = I
+1
+ + I
+2
+ + I
+3
+ + I
+4
+ 
+      = – 3 + ( + 8) + 9 – 2 =  + 12  
+ Method 2: - Using Stoke’s theorem or Green’s theorem 
+                                                    
+()
+A dlA   ds=  
+   
+ 
+                       
+()() ()xyxyxdy   ydxyaxadxadya−    =  −   ++
+
+ 
+        
+xyAya    xa=−   +
+ 
+                                     
+0
+xyzaaa
+A
+xyz
+yx
+
+  =
+
+−
+ 
+            = [1 – (-1)]
+za
+= 2
+za
+ 
+ Since, the given curve line in XY plane. Hence differential area will be written as 
+     
+0
+z
+z
+d s   dx dy a
+=
+=
+ 
+   
+()  ()xyxyy ax adx ady a−   ++
+
+ 
+     
+22zza   dx dy adx dy==
+
+ 
+      = 2 (Area of Curve) 
+      = 2 (Area of rectangle + Area of semicircle) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.18 
+ 
+     
+2
+(1)
+2  2  312
+2
+
+
+
+=    += +
+
+
+ 
+Note: As we have seen that open surface integral is simpler method than closed line integral. So, we generally 
+use Stoke’s or Green theorem to solve closed line integral. 
+ 
+4. Closed Surface Integral or volume integrals. 
+   
+()
+A d sA  d
+
+=
+    
+ 
+ ⇒  Divergence theorem 
+  Volume integral is easier than closed surface integral. 
+ Question: 
+ Consider a closed surface S surrounding a volume V. If 
+r
+ is the position vector of a point inside S, with 
+n
+ the unit 
+normal on ‘S’, the value of the integral 
+5r  nds
+
+ is ....... 
+(A) 3 V      (C)  10 V    
+(B) 5 V      (D)  15 V 
+ Solution: 
+  Method I: - Assuming closed as a cuboid (cartesian co-ordinate system). 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.19 
+ 
+ 
+5.r  d s
+
+ 
+ =
+5().
+x
+xa
+xi   y j   zk   dy dz a
+=
+++
+
++
+()
+0
+5().
+x
+x
+xi   y j   zk   dy dza
+=
++  +−
+
++ 
+5    ().
+y
+yb
+xi   y j   zk   dx dz a
+=
+++
+
+ 
+ + 
+()
+0
+5().
+y
+y
+xi   y j   zk   dx dza
+=
++  +−
+
++ 
+5    ().
+z
+zc
+xi   y j   zk   dx dy a
+=
+++
+
++ 
+()
+0
+5().
+z
+z
+xi   y j   zk   dx dya
+=
++  +−
+
+ 
+ =
+00
+5
+bc
+xa
+x dy dz
+=
+
+–
+00
+0
+5
+bc
+x
+x dy dz
+=
+
++
+00
+5
+ac
+yb
+y dx dz
+=
+
+–
+00
+0
+5
+ac
+y
+y dx dz
+=
+
++
+00
+5
+ab
+zc
+z dx dy
+=
+
+–
+00
+0
+5
+ab
+z
+z dx dy
+=
+
+ 
+ = 5abc – 0 + 5abc – 0 + 5abc – 0 = 15abc = 15V 
+  
+ Method II: - Assuming closed surface as a cylinder (cylindrical co-ordinate system). 
+  
+ 
+ 
+5r  d s
+
+ 
+ = 
+5    ()
+z
+a
+azad   dz a
+
+
+ 
+=
++
+
++
+0
+5    ()  ()
+zz
+z
+azad   d   a  
+=
++−
+
++
+5    ()  ()
+zz
+zh
+azad   d   a
+
+  
+=
++
+
+ 
+ = 
+2
+2
+00
+5
+h
+a
+d   dz
+
+
+
+=
+
++
+2
+00
+5
+a
+zh
+z d   d
+
+   
+=
+
+–
+2
+00
+0
+5
+a
+z
+z d   d
+
+   
+=
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.20 
+ = 5 a
+2
+2h
+ 
++ 5h 
+2
+2
+a
+2 – 0 
+ = 10a
+2
+h + 5a
+2
+h = 15a
+2
+h = 15V 
+ Method III: - Assuming closed surface as a sphere (Spherical co-ordinate system). 
+  
+ 
+  
+5r  d s
+
+ = 
+2
+2
+θ=0   0
+R
+5()  (    sinθdθ    )
+rr
+r
+rard   a
+
+
+
+=
+=
+
+ 
+   = 5R
+3
+(2) (2) = 20R
+3
+ 
+   = 
+3
+4
+15
+3
+R
+
+
+
+ 
+   = 15V 
+ Method IV: - Consider a cuboid as volume. 
+   
+()
+55
+V
+Ir  d sr   dv==  
+
+ 
+   
+r   xi   y j   zk=  +  +
+ 
+                                                  
+xyz
+r
+xxz
+    
+  =  +  +
+
+ 
+   = 1 + 1 + 1 =3 
+       
+()
+5
+V
+Ir  dv=
+
+ 
+   = 5 × 3
+v
+dv
+
+ 
+   = 
+000
+15
+abc
+dx dy dz
+  
+ 
+   = 15abc 
+ Method V: - consider a cylindrical as volume. 
+    
+z
+raza
+
+=+
+ 
+  
+1()(0)()
+.
+z
+r
+z
+ 
+    
+
+    
+  =+    +
+
+
+
+ 
+   = 
+1
+(20)
+
+++
+ = 3 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.21 
+    
+()
+5
+v
+Ir  dv=
+
+ 
+   = 
+()
+5
+v
+r  dv
+
+ 
+   = 5 × 3 
+2
+000
+ah
+d   d   dz
+
+  
+  
+ 
+   = 15 (a
+2
+h) 
+   = 15V 
+ Method VI: - Consider a spherical as volume. 
+   
+r
+r   ra=
+, 
+2
+2
+1(    sinθ r)
+00
+sinθ
+r
+r
+rr
+
+
+  =+ +
+
+
+
+= 3 
+   
+(5  )
+v
+Ir  dv=
+
+ 
+   = 
+2
+2
+000
+15sinθ
+R
+rdr d   d
+
+
+  
+ 
+   = 
+3
+4
+15
+3
+R
+
+
+
+ 
+   = 15V 
+ 
+Note: 
+(a) In all three-co-ordinate system, closed surface integration in spherical co-ordinate is easier. 
+(b) Volume integral is easier than closed surface integration. 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.22 
+3 
+MAXWELL 
+EQUATION 
+ 
+3.1. Type of Medium 
+(A) Free space/air. 
+• Volume charge density (
+v
+) = 0 
+• Conductivity (σ) = 0 (perfect insulator) 
+• Dipole moment (P) ≠ 0 
+• Displacement current density (J
+d
+) ≠ 0 
+• 
+-9-12
+o
+1
+=×10  F/m = 8.85×10    F/m
+36π
+  =
+ 
+• 
+-7
+o
+μ = μ = 4π×10  H/m
+ 
+• 휖
+r
+ = 1, μ
+r
+ = 1 
+(B) Lossless Dielectric/perfect dielectric: - 
+• Dielectric is a type of insulator in which it has dipole. 
+• Perfect dielectric means perfect insulator. 
+• 휌
+v
+= 0, 
+• Conductivity of dielctric (σ
+d
+) = 0 
+• Dipole moment (P) ≠ 0 
+• Displacement current (J
+d
+) ≠ 0 
+• 
+0
+=
+r
+  
+ 
+• μ = μ
+o 
+μ
+r
+ 
+• In general 휖
+r
+ > l and μ
+r
+ = l (Non-magnetic). 
+(C) Lossy Dielectric/Imperfect dielectric: - 
+• 휌
+v
+ = 0 
+• σ
+d 
+≠ 0 (It gives conductor loss) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.23 
+• 
+0
+=
+r
+  
+ 
+• μ = μ
+o 
+μ
+r
+ 
+• In general 휖
+r
+ > l and μ
+r
+ = l (Non-magnetic). 
+• Dipole moment (P) ≠ 0 
+• J
+d
+ ≠ 0 (due to dipoles) 
+• Conduction current density (J
+c
+) ≠ 0 
+→ due to conductivity of lossy dielectric 
+• 
+d
+σ
+1
+< Low loss dielectric
+100
+
+
+ 
+• 
+d
+σ
+1
+< <100 Medium-loss dielectric
+100
+
+
+ 
+• 
+d
+σ
+100 -loss dielectricHigh
+
+
+
+ 
+ 
+    but 
+s 
+≠ o (surface charge density). 
+(D) Conductor: 
+• 휌
+v
+ = 0, σ
+c
+ ≠ 0 (Very high) 
++
+–
++
+–
++
+–
++++
++++
++++
++++
++++
+Uncharged Dielectric 
+
+v
+  o
+=
+Charged Dielectric 
++
++
++
++
++
++
++
++
++
++
+Uncharged Conductor Charged Conductor 
+
+
+v
+  o
+
+v
+  o
+=
+
+v
+  o
+=
++
+e
+–
++
+e
+–
++
+e
+–
++
+e
+–
++
+e
+–
++
+e
+–
++
+e
+–
++
+e
+–
++
+e
+–
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.24 
+• σ
+c
+ = conductivity of conductor. 
+• Conductor is very high loss dielectric. 
+• Perfect conductor: - σ
+c
+ = ∞ (Very-very high) 
+eg: - Gold, Silver etc. 
+• Good conductor: - σ
+c
+ = very high 
+eg: - Brass, conductor etc. 
+• Poor conductor: - σ
+c
+ = high 
+eg: - Aluminium 
+3.2. Types of Conductors  
+(A) Perfect Electric Conductor (PEC) 
+   E = 0, H = maximum 
+(B) Perfect Magnetic Conductor (PMC) 
+   E = maximum, H = 0 
+(C) Super Conductor 
+  E = 0, H = 0 
+3.3 Properties of Medium 
+ε, μ & σ are known as consecutive property. 
+(A) Linear: If consecutive property of any medium does not depends upon strength of field, then that medium is linear. 
+ σ, μ, ε ≠ f (E, H) → Linear Medium σ, μ, ε = f (E, H) → Non-Linear Medium   
+ 휖
+r
+ = 5 → Linear   
+23
+.....Non-Linear
+10    1023    20319
+r
+EEH
+ =  +++   
+ 
+(B) Homogeneous  Medium: If  consecutive  property  of  any  medium  does  not  depends  on  the  point  in  space,  them  that 
+medium is homogeneous. 
+  휖
+r
+ = 5 → Homogeneous 
+  휖
+r
+ = 10x (x + 9) → Inhomogeneous 
+  휖
+r
+ = f (10f + 1) → Inhomogeneous 
+ 휖
+r
+, μ
+r
+, σ = f (x, y, z, δ, φ, z r, θ, φ) → Inhomogeneous  
+ 휖
+r
+, μ
+r
+, σ ≠ f (x, y, z, δ, φ, z r, θ, φ) → Inhomogeneous  
+(C) Isotropic  Medium: If  consecutive  property  of  any  medium  does  not  depends  upon  direction,  them  that  medium  is 
+isotropic. 
+ Case I:  Isotropic Medium 
+  
+D=,=3
+r
+E   
+ 
+ 
+()
+()
+ˆˆ
+ˆˆ    ˆ
+D=3,3
+oxyzoxyz
+ED i    D  j   D kE i    E  j    E k    +   +    =++
+ 
+ 
+0
+3,3,3
+xoxyyzoz
+DE   DE    DE= = = 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.25 
+ Since Er is same in all direction. Hence medium is isotropic. 
+  
+3   0   0
+0   3   0
+0   0   3
+o
+DxEx
+DyE    Ey
+DzEz
+        
+        
+=
+        
+        
+        
+ 
+                       ↳ Scalar Matrix → Isotropic Medium 
+Case II: Uni-isotropic Medium 
+  
+3   0   0
+0   4   0
+005
+xx
+yoy
+zz
+DE
+DE
+DE
+    
+
+    
+
+=
+    
+
+    
+
+
+    
+       
+                        ↳ Diagonal Matrix 
+  D
+x
+ = 3휖
+o
+E
+x
+, D
+y 
+= 4휖
+o
+E
+y
+, D
+z 
+= 5휖
+o
+E
+z
+ 
+Case III: Anisotropic Medium 
+  
+234
+5   7   9
+6    3   1
+xx
+yoy
+zz
+DE
+DE
+DE
+    
+
+    
+
+=
+    
+
+    
+
+
+    
+ 
+  D
+x
+ = 2휖
+o
+E
+x
+ + 3휖
+o
+E
+y
+ + 4휖
+o
+E
+z
+ 
+  D
+y
+ = 5휖
+o
+E
+x
+ + 7휖
+o
+E
+y
+ + 9휖
+o
+E
+z 
+  D
+z
+ = 6휖
+o
+E
+x
+ + 3휖
+o
+E
+y
+ + 휖
+o
+E
+z 
+Note: All homogeneous are isotropic and all isotropic are homogeneous. 
+     
+HI
+  
+(D)  Non-Dispersive: - If  consecutive  property  of  any  medium  does  not  depend  upon  frequency  then  that  medium  is  non-
+dispersive. 
+     σ = 2 → Non-dispersive 
+ σ = 5휔휖 → dispersive 
+3.4. Electric Gauss Law 
+Total electric flux through closed surface is equal to algebraic sum of charges enclosed. 
+enc
+D ds =Q
+
+ 
+(a) 
+v
+Point Form of Gauss lawD  =  →
+ 
+(b) 
+()
+v
+D ds =D  dvdv=
+   
+ 
+Gauss theorem or divergence theorem 
+(c) 
+D ds   Total Flux through Closed Surface.
+
+ 
+(d) 
+ds   Total number of electric field lines.E
+
+ 
+(e) Gaussian surface must be closed. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.26 
+ 
+(f) Gaussian surface may be irregular/regular. 
+ 
+ 
+(g) The charge will be placed anywhere inside the Gaussian surface. 
+ 
+(h) When charge is placed outside the Gaussian surface. 
+ 
+(i) Q
+enc
+ ≡ algebraic sum of the charges enclosed. 
+ 
+Q
+enc
+ = q
+1
+– q
+2
++ q
+3
+− q
+4
+ 
+(j) Total flux through closed surface 
+(i) 
+ 
+(ii)
+ 
+ 
+ = q
+q
+q
+q
+ = q = q = q
+q
+at center 
+ = q
+q
+Anywhere
+ = q
+Just outside
+ = q
+outside
+ = o
+Just outside
+ = o
+(outward flux = inward flux)
+q
+5
+q
+1
+-q
+2
+-q
+4
+q
+3
+-q
+6
+q
+at center 
+ = q
+outside
+ = o
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.27 
+ (iii)
+  
+(iv)
+ 
+ 
+ (v)  
+ 
+(vi) 
+ 
+(k) Total flux through cube, when charge is placed at 
+  
+ (i) 
+    
+(ii)
+  
+ (iii)
+    
+(iv)
+ 
+ 
+(l) Flux through the plane 
+ 
+(m)  Flux through infinite length plane 
+  
+q
+Just inside
+ = q
+q
+Anywhere inside
+ = q
+q
+Just outside
+ = o
+at the Surface
+q
+2
+ =
+q
+ = q
+(Flux through one cube).
+q
+q
+2
+ =
+(Flux through one cube).
+q
+q
+8
+ =
+(Flux through one cube).
+q
+q
+4
+ =
+(Flux through one cube).
+b
+q
+6
+ =
+b
+b/2
+q
+q
+2
+ =
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.28 
+3.5. Magnetic Gauss Law 
+Total magnetic flux through any closed surface is zero. 
+   
+ds   0B=
+
+ 
+(a) 
+Point form = 0B
+  
+(b) 
+Integralformd   = 0Bs
+ 
+(c)  
+3.6. Electric Field Conservative/KVL. 
+  
+.dl    0,0EE=    =
+
+ 
+Work done in a closed path is zero. 
+ 
+.dl0E=
+
+
+
+0E=
+
+Irrotational
+Path independent
+Does not exist in a closed loop
+Conservative
+KVL
+ 
+3.7. Ampeare Circuital Law 
+Total magneto motive force in a loop is equal to algebraic sum of current enclose. 
+enc
+.dl    I,.HHJ=      =
+
+ 
+(a) If loop is closed in anticlockwise or counter clockwise direction, then 
+(i) Outward current is taken as positive. 
+(ii) Inward current is taken as negative. 
+(b) If loop is closed in clockwise direction then 
+(i) Inward current is taken as negative. 
+(ii) Outward current is taken as positive. 
+(c)   
+.d=0Bs
+
+
+
+.0B=
+
+Divergericeless
+Solenoidal
+Magnetic monopole does not exist
+Originating and terminating
+point are not defined
+10A
+5A
+95A
+.
+–10 5 5
+H dl    Ienc
+A
+=
+
+=   + =
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.29 
+(d) 
+ 
+.
+–20–10 10
+enc
+H dl    I
+A
+=
+
+==
+ 
+(e) 
+ 
+.–3 –  –2
+enc
+H dl    II   II=   ==
+
+ 
+3.8. Maxwell Equation in Statics 
+Integral Form    Point Form 
+(a) 
+enc
+.  l    QDd=
+
+   
+v
+D  =
+ 
+Electric Gauss Law 
+(b) 
+.dl    0E=
+
+   
+0E  =
+ 
+Electric field conservative 
+(c) 
+.0B d s=
+
+   
+0B  =
+ 
+Magnetic Gauss Law 
+(d)  
+enc
+.IH dl=
+
+   
+H=J
+ 
+Ampeare Circuital Law 
+3.9.  Maxwell Equation in Ideal and Practical Medium 
+  Ideal Practical 
+(a)  
+enc
+D.ds=Q
+
+ 
+✓ ✓ 
+(b)  
+v
+D=
+ 
+✓  
+(c) 
+Qenc
+ds =E
+
+є
+ 
+✓  
+20A
+10A
+30A
+II
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.30 
+(d) 
+v
+=E
+
+
+є
+ 
+✓  
+(e) 
+0E dl=
+
+ 
+✓ ✓ 
+(f) 
+=0E
+ 
+✓ ✓ 
+(g) 
+0D dl=
+
+ 
+✓  
+(h) 
+=0D
+ 
+✓  
+(i) 
+ds = 0B
+
+ 
+✓ ✓ 
+(j) 
+=0B
+ 
+✓ ✓ 
+(k) 
+ds = 0H
+
+ 
+✓  
+(l) 
+H = 0
+ 
+✓  
+(m) 
+enc
+HIdl=
+
+ 
+✓ ✓ 
+(n) 
+H = J
+ 
+✓ ✓ 
+(o) 
+enc
+IB dl=
+
+ 
+✓  
+(p) 
+=JB
+ 
+✓  
+• Ideal Medium: Linear, Homogeneous, and Isotropic 
+• Practical Medium:  Non-linear, Inhomogeneous and an isotropic. 
+3.10.  Maxwell Equation in Different types of Medium 
+(a)   Charge Free Medium 
+Q = 0, 휌
+L
+= 0, 휌
+s
+= 0, 휌
+v
+ = 0 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.31 
+• 
+ds = 0D
+
+ 
+=0D
+ 
+• 
+0E dl=
+
+ 
+=0E
+ 
+• 
+ds = 0B
+
+ 
+=0B
+ 
+• 
+enc
+IH  dl=
+
+ 
+=JH
+ 
+(b)   Current Free Medium 
+   I = 0, K = 0, J = 0 
+• 
+D ds    Qenc=
+
+ 
+v
+D  =
+ 
+• 
+E.dl    0=
+
+ 
+E0  =
+ 
+• 
+B ds    0=
+
+ 
+0B=
+ 
+• 
+H.dl    0=
+
+ 
+H0  =
+ 
+(c)  Source Free Medium 
+  Q = 0, 휌
+L
+ = 0, 휌
+S
+ = 0, 휌
+V
+ = 0 
+  I = 0, K = 0, J = 0 
+• 
+D ds    0=
+
+ 
+0D=
+ 
+• 
+E dl    0=
+
+ 
+E0  =
+ 
+• 
+B ds    0=
+
+ 
+0B=
+ 
+• 
+H  dl    0=
+
+ 
+H0  =
+ 
+3.11.  To Find Unknowns of 푬
+⃗⃗ 
+, 푯
+⃗⃗⃗ 
+ & V. 
+(a) 
+0Unknownof BB  = →
+ 
+(b) 
+0Unknown of EE  =  →
+ 
+(c) 
+2
+V   0Unknown of V   =  →
+ 
+(d) 
+V
+D = 
+ 
+(e) 
+JH= 
+ 
+3.12. Continuity Equation/KCL 
+• It gives flow of charge in a medium. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.32 
+• Continuity Equation in point form. 
+v
+J
+t
+−
+=
+
+ 
+ 
+• Continuity Equation in integral form 
+  
+J  ds
+v
+dv
+t
+
+
+
+=−
+
+
+
+
+ 
+• KCL 
+ 
+At node 
+  
+0
+i
+I=
+
+ 
+.J   0
+KCL
+J.ds   0
+  =
+=
+
+ 
+• Equation of flow of charge in a medium 
+ 
+ (a) 
+V
+vo
+t
+e
+
+−
+
+  =
+    (b) 
+SSo
+t
+e
+
+−
+
+ =
+ 
+ (c) 
+LLo
+t
+e
+
+−
+
+ =
+    (d) 
+o
+Q = Q  e
+t
+−
+
+ 
+ Where 
+
+
+= τ (Relaxation time constant) 
+ 
+v
+o
+J
+I
+4
+I
+5
+I
+2
+I
+1
+I
+3
+
+v
+v
+o
+v
+v
+o
+t = t
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.33 
+ 
+• Flow of charge in conductor. 
+σ is very high 
+So, τ (Relaxation time constant) = 0 
+Hence, 
+V
+vo
+0
+t
+e
+
+
+
+−
+=
+ 
+ 
+Very fast flow of charge in a conductor. So, charge does not reside inside conductor. 
+• Flow of charge inside insulator. 
+σ
+d
+ = 0 (very low) 
+So, τ (Relaxation time constant) = ∞ 
+   
+V
+vovo
+t
+e
+
+−
+
+  ==
+ 
+ 
+There is no flow of charge inside perfect insulator. 
+3.13. Laplace’s Equation/Poisson Equation 
+(a)   Poisson Equation in point form 
+(i) For Ideal Medium 
+2
+V
+V=
+
+
+−
+
+ 
+(ii) For Practical Medium 
+()
+()
+V
+.V   =   −
+ 
+()
+()()
+2
+VV
+V  +.=
+
+      −
+ 
+(b)   Laplace Equation 
+δ
+V 
+→ Free space/air/vacuum/uncharged/ dielectric/conductor/singular charge distribution/cavity/source free medium charge 
+free medium. 
+2
+V   0Laplacian Equation  =  
+ 
+  
+v
+o
+v
+t
+v
+o
+v
+t
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.34 
+3.14.  Difference between Laplacian & Poisson Equation 
+Laplace’s Equation Poisson Equation 
+(a) 
+2
+V0=
+ 
+(i) 
+V
+2
+V
+
+
+−
+=
+ 
+(b) 
+222
+222
+0
+VVV
+xyz
+
++    +    =
+        
+ 
+(ii) 
+V
+222
+222
+VVV
+xyz
+
+
+−
+
++    +    =
+        
+ 
+(c) Complementary function (iii) Complementary function + Particular integral 
+(d) Unique solution and follow uniqueness theorem (iv) Does not follow uniqueness theorem 
+(e) Linear Equation (v) Non- Linear Equation 
+(f) Homogeneous Equation (vi) Non- Homogeneous Equation 
+3.15. Magnetic Force 
+  
+()
+m
+FBIl=
+ 
+l
+≡ length of wire and directed along current direction. 
+3.16. Magnetic Energy Density 
+  
+2
+2
+11
+.
+222
+m
+B
+B HH
+
+===
+ 
+  
+1
+J .A
+2
+m
+=
+ where 퐴
+ 
+ ≡ Magnetic vector potential 
+3.17. Faraday’s Law 
+(a) Faraday’s 1
+st
+ Law (Qualitative Analysis): 
+When magnetic field lines cuts conductor, then an electromotive force will be developed, which is known as induced 
+electromotive force. 
+(b) Faraday’s 2
+nd
+ Law (Quantitative Analysis): - 
+The induced electromotive force is directly proportional to time rate of charge of flux. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.35 
+  
+Faraday's Law
+dm
+e
+dt
+
+
+ 
+(C) Faradays and Lenz’s Law in integral form 
+ 
+B
+E dlds
+t
+
+=−
+
+    
+ 
+(d) Faraday’s and Lenz’s Law in point form 
+B
+E
+t
+
+  = −
+
+ 
+(e)  
+• 
+Magnetic Flux
+m
+=
+ 
+N    Number of turns=
+ 
+l    length of solenoid=
+ 
+Magnetic flux due to one turn
+m
+=
+ 
+A = cross-sectional area of solenoid 
+(f) 
+• l = (N-1)d 
+• 
+NI
+H
+l
+=
+ 
+• 
+NI
+BH =
+l
+
+=
+ 
+• 
+NIA
+m
+BA
+l
+
+==
+ 
+• 
+()
+Weber
+m
+LI=
+ 
+• 
+2
+m
+d
+N  A   didI
+eL
+dtldtdt
+
+
+−
+−
+
+=== −
+
+
+ 
+• 
+dI
+V = - e = + L 
+dt
+ 
+(g) Toroid 
+ 
+a 
+b
+dm
+e
+dt
+
+=−
+Lenz’s
+  Law
+Faraday’s
+   Law
+l
+II
+A
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.36 
+• 
+2
+ab
+r
++
+=
+ 
+• 
+2lr=
+ 
+• 
+NI
+H = 
+2πr
+ 
+• 
+NI
+2πr
+BH
+
+==
+ 
+• 
+NIA
+2πr
+m
+
+
+
+=
+
+
+ 
+• 
+2
+NA
+I = LI
+2πr
+mm
+N
+
+
+
+==
+
+
+
+ 
+• 
+m
+d
+V =     e = + 
+dt
+dI
+L
+dt
+
+−=
+ 
+• 
+2
+NA
+L=
+2πr
+
+ 
+Lorentz’s Force 
+• 
+()
+net
+F     = q
+in
+V    BqE+
+ 
+• 
+in
+E    = BV
+ 
+• 
+e = BVL  sin
+  
+ 
+()
+.eV    B   l=
+ 
+3.18. Modified Ampere’s Circuital Law: 
+(a) Conduction current: - It is due to flow of electron. It is due to conductivity. 
+• Since, conductivity of conductor is very high. Hence, conduction current is very high. 
+• Since, conductivity of dielectric is very low. Hence, conduction current is very low. (Leakage Current) 
+(b) Displacement current: - It is due to rotation of dipoles. 
+• Since, number of dipoles inside conductor is very low. Hence, displacement current is very low. 
+• Since, number of dipoles inside dielectric is very high. Hence, displacement current is very high. 
+(c) 
+Conductor Dielectric 
+I
+c
+ ≫I
+d
+ I
+c
+ ≪I
+d
+ 
+ 
+V
+ur
+
+B
+ur
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.37 
+(d) Ampeare’s circuit law is modified by maxwell 
+enc
+IIn staticsH  dl=
+
+  
+cd
+I   + IIn time varryingH  dl=
+
+ 
+(e) Modified Ampeare’s circuital low in integral low 
+cd
+I   + IH  dl=
+
+ 
+(f) Modified Ampeare’s circuital law in point form 
+cd
+JJH  =  +
+ 
+(g) 
+c
+J
+= Conduction current density = 
+E
+ 
+J
+d
+DE
+tt
+
+
+==
+
+= Displacement current density 
+(h)                                 
+c
+c
+IJ  .ds=
+
+ 
+d
+I
+e
+dt
+
+=
+Time rate of change of electric flux per unit time. 
+(i) 
+22
+cd
+JJJ=+
+ 
+tan
+c
+d
+J
+J
+=
+ 
+I = I
+c
+ + I
+d
+ 
+(j)   
+()
+cd
+E
+HJJEjw   E
+t
+
+  =  +  = +   = +  
+
+ 
+(k)    
+E
+H  dlEds
+t
+
+
+=+
+
+
+
+    
+
+()
+jE ds   =+
+
+ 
+3.19. Maxwell’s Equation in time Varying Fields  
+(a) 
+enc
+QD  ds=
+
+ (i) 
+V
+D=
+ 
+ Electric Gauss Law 
+(b)  
+0B  ds=
+
+ (ii) 
+0B=
+ 
+
+J
+d
+J
+J
+c
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.38 
+ Magnetic Gauss Law 
+(c)  
+B
+E  dlds
+t
+
+=−
+
+
+ (iii)  
+B
+Ejw  H
+t
+
+
+  = −   = −
+
+ 
+ Faraday’s and Lenz’s Law 
+(d) 
+H
+c
+d
+dlII=+
+
+ (iv)  
+()
+E
+HEjw    E
+t
+       
+
+  =   +    =  +
+
+  
+ Modified Ampeare Circuital  
+3.20. Magnetic Vector Potential and Magnetic scaler Potential 
+(a) Magnetic scalar potential: - 
+  
+J = 0 
+Volume current density = 0 
+         
+m
+0VHH  =    =−
+ 
+     
+m
+VH . dl=−
+
+→ Magnetic scalar potential 
+(b) Magnetic Vector Potential 
+• 
+AB= 
+  (
+A    Magnetic Vector Potential
+) 
+• 
+A
+4
+I dl
+R
+
+
+=
+
+ 
+• 
+A
+4R
+kds
+
+=
+
+ 
+• 
+Jdv
+A
+4R
+
+
+=
+
+ 
+• 
+()
+A dlA.Magentic flux
+m
+dsB ds=   ==   =
+    
+ 
+• 
+()
+2
+AA =   J    −
+ 
+(a)   
+In staticsA    0=
+ 
+2
+A =J   −
+ 
+(b)   In time varying 
+()
+2
+2
+A
+(    A)
+t
+
+    =
+
+ 
+ 
+2
+2
+2
+A
+A J
+t
+
+   −    = −
+
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.39 
+4 
+ELECTROMAGNETIC 
+WAVE 
+ 
+4.1. Time Harmonic Equation 
+(a) Lossless Medium 
+   
+22
+22
+222
+1
+P
+HH
+HH
+tvt
+
+   =   =
+
+ 
+   
+22
+22
+222
+1
+P
+EE
+EE
+tvt
+
+   =       =
+
+ 
+Where, 
+P
+v=
+Phase velocity in a medium. 
+(b) Lossy Medium 
+   
+2
+2
+2
+EE
+E
+t
+t
+
+   =   +
+
+
+ 
+   
+2
+2
+2
+HH
+H
+t
+t
+
+   =   +
+
+
+ 
+Loss :  
+EH
+,
+tt
+
+
+
+   
+ 
+Harmonic :  
+22
+22
+EH
+,
+tt
+
+
+
+   
+ 
+4.2.  Wave Equation/Helmholtz Equation/Telegraph Equation 
+(a) Lossy Medium 
+    
+222
+EE,HH  =      =   
+ 
+          
+()
+jj =   + Є
+ 
+          
+j =+ 
+ 
+          
+Neper
+ attenuation constant 
+m
+
+
+
+
+ 
+          
+radian
+ Phase constant 
+m
+
+
+
+
+ 
+           
+1
+ Propagation constant 
+m
+
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.40 
+(b) Lossless medium 
+     
+()
+22
+0EE  −    =
+ 
+    
+()
+22
+0HH   −    =
+ 
+   
+0j,, =   =  = 
+ 
+4.3.  Equation of Electric Field and Magnetic Field 
+● 
+0
+zj  z   j  t
+x
+E    E eeea
+−  −    
+= 
+ (Complex Form) 
+● 
+0
+zj  z   j  t
+y
+H    H  eeea
+−  −    
+=
+(Complex Form) 
+● 
+0
+cos()
+z
+x
+E    E etz a
+−
+= −
+ 
+● 
+0
+cos()
+z
+y
+H    H  etz a
+−
+= −
+ 
+● 
+0
+Amplitude of Electric Field
+V
+E
+m
+
+=
+
+
+ 
+● 
+Neper
+ttenuation constantA
+m
+
+=
+
+
+ 
+● 
+ttenuation Factor
+z
+eA
+−
+=
+ 
+● 
+0
+A
+Amplitude of Magnetic FieldH
+m
+
+=
+
+
+ 
+● 
+2
+Phase Constant/Wave Number
+
+ =   
+
+ 
+4.4. Intrinsic Impedance/Wave Impedance. 
+● It relates conversion from Electric Field to Magnetic Field or vice versa. 
+● It is impeadance offered by medium during conversion Electric Field to Magnetic Field or vice versa. 
+● η ≡ Intrinsic Impedance (Ω)  
+Lossy Medium 
+     
+00
+00
+||
+||
+EE
+Ejj
+Hjj
+HH
++−
++−
+−
+
+=    =    ====
+   +    + 
+ 
+Lossless Medium 
+     
+       
+=   =   =
+      
+ 
+Derivation of Intrinsic Impeadance. 
+     
+0
+0
+Wave travelling in +z direction
+z    j   t
+x
+z    j   t
+y
+E    E  eea
+HH  eea
++ −   
++ −   
+
+=
+
+
+=
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.41 
+(a) 
+()()
+Modified Ampeare Circuit    LawHjEal  = + 
+ 
+   
+0
+0
+E
+j
+H
++
++
+
+=
++ 
+ 
+(b) 
+HjH  =− 
+ (Faraday’s + Lenz’s Law) 
+   
+0
+0
+E
+j
+H
++
++
+
+=
+
+ 
+  
+0
+0
+ Wave travelling in -z direction.
+z    j   t
+x
+z    j   t
+y
+E    E  e   ea
+HH  e   ea
+−    
+−    
+
+=
+
+
+=
+
+
+ 
+(a) 
+ (Faraday's + Lenz's Law)EjH  =− 
+ 
+   
+0
+0
+E
+j
+H
+−
+−
+−
+
+=
+
+ 
+(b) 
+()HjE  = + 
+ 
+   
+0
+0
+(Modified Ampeare circuital Law)
+E
+j
+H
+−
+−
+−
+
+=
++ 
+ 
+ 
+4.5. Phase Velocity and Group Velocity 
+ 
+(a) Phase Velocity: The velocity which is along the propagation direction and defined at single frequency. 
+      
+pp
+va
+
+=
+
+ 
+(b) Group Velocity: The velocity which is along the propagation direction and defined for multiple frequency. 
+      
+gp
+d
+va
+d
+
+=
+
+ 
+* 
+p
+a
+ unit vector directed along propagation direction. 
+ 
+(c) Phase Velocity and Group Velocity in Dispersive and Non-Dispersive Medium. 
+  
+Dispersive Non-Dispersive 
+(a) 
+()
+p
+vf=
+ 
+ Phase velocity depends upon frequency of operation. 
+(a) 
+()
+p
+vf
+ 
+ Phase velocity does not depend upon frequency of 
+ operation. 
+(b) 
+pg
+vv
+ (b) 
+pg
+vv=
+ 
+(c) 
+ (NOT)
+ (c)   
+
+ 
+(d)  (d)  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.42 
+(d) 
+1
+p
+g
+p
+p
+v
+v
+dv
+vd
+=
+
+−
+
+ 
+(i) 
+()
+0
+p
+pgp
+dv
+vfvv
+d
+      =   =
+
+ 
+(ii) 
+()
+p
+vf=
+ 
+ 
+Case I:  
+0
+p
+gp
+dv
+vv
+d
+   
+
+ 
+Case II: 
+0
+p
+gp
+dv
+vv
+d
+   
+
+ 
+ 
+(e) ● ∝ = 0 ⇒ Lossless and Distortionless. 
+  
+● ∝ = Constant ⇒ Lossy and Distortionless. 
+   
+● ∝ = 5ω ⇒ Lossy and Distortive. 
+  
+● ∝ = 0 ⇒ Lossless, ∝ = f(ω) ⇒ Distortive 
+ ∝ ≠ 0 ⇒ Lossy, ∝ ≠ f(ω) ⇒ Distortionless 
+ 
+* All lossline medium is distortionless medium but all distortionless medium is not lossless medium. 
+ 
+4.6. Wave Parameters of Different Medium 
+ 
+ 
+ 
+Free Space or Air Lossless or Perfect 
+Dielectric 
+Lossy or Imperfect 
+dielectric 
+High Loss or Conductor 
+훼 
+0 0 
+2
+d
+
+
+
+ 
+c
+f 
+ 
+ Lossless and Distortionless Lossless and 
+Distortionless 
+Lossy and Distortionless Lossy and Distortive 
+훽 
+000
+ =  
+ 
+0rr
+ =   
+ 
+0rr
+ =   
+ 
+C
+f 
+ 
+ Non-Dispersive Non-Dispersive Non-Dispersive Dispersive 
+
+ 
+0
+0
+2
+=
+
+ 
+0
+2
+rr
+
+
+=
+
+
+ 
+0
+2
+rr
+
+
+=
+
+
+ 
+2
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.43 
+p
+v
+ 
+0
+00
+1
+C=
+
+ 
+0
+1
+rr
+C
+=
+    
+ 
+0
+1
+rr
+C
+=
+    
+ 
+2
+C
+
+
+ 
+g
+v
+ 
+p
+v
+ 
+p
+v
+ 
+p
+v
+ 
+2
+p
+v
+ 
+.
+pg
+vv
+ 
+2
+0
+C
+ 
+2
+0
+rr
+C
+
+ 
+2
+0
+rr
+C
+
+ 
+4
+C
+
+
+ 
+
+ 
+()
+0
+0
+120377   Resistive
+
+=    =
+
+ 
+()
+120
+377   Resistive
+r
+r
+r
+r
+
+
+=       =
+
+
+
+ 
+()
+1.5
+= R+jX
+2
+Complex and Inductive
+d
+j
+
++
+
+
+ 
+()
+22
+Complex and Inductive
+SS
+CC
+jRjX
+
++=   +
+
+ 
+ 
+4.7. Wave in Space 
+(a)  
+xyz
+xyz
+aaa=   +   +
+ 
+  
+222
+xyz
+=  + +
+ 
+(b)  
+2222
+1111
+xyz
+=   +   +
+         
+ 
+(c)  
+2222
+1111
+xyz
+pppp
+VVVV
+=    +    +
+ 
+ 
+4.8.  Tangent Loss 
+(a) Lossless medium (σ = 0) 
+   
+d
+E
+HJjE
+t
+
+  =   =   = 
+
+ 
+             
+0r
+jE=  
+ 
+Where
+r
+
+is real quantity. 
+(b) Lossy medium 
+   
+cd
+LossStorage
+HJJ
+
+  =   +
+ 
+   
+0
+0
+()()
+r
+HjEjjE
+
+  = +   =   −
+
+ 
+   
+*
+00r
+HjE  =   
+ 
+   
+*
+r
+=
+Complex form of relative permittivity 
+   
+*'"
+0
+rrrr
+jj
+
+ = −  = −
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.44 
+Where 
+'
+rr
+ =
+ gives storage 
+   
+"
+0
+r
+
+=
+
+ gives loss 
+(c) Tangent Loss or Loss Tangent 
+    
+Loss
+tan
+Storage
+c
+d
+J
+J
+ =   =
+ 
+    
+''
+'
+0
+tan
+cc
+r
+ddr
+r
+JI
+JI
+
+
+ =   =   ==
+ 
+
+ 
+(d) Tangent Loss related to network Circuit. 
+(i) 
+tan
+R
+CCC
+V
+RP
+XVQ
+ =   =   =
+ 
+  
+(ii) 
+tan
+R
+LLL
+V
+RP
+XVQ
+=   =   =
+ 
+  
+(iii) 
+C
+YGjB=+
+ 
+tan
+C
+R
+CCC
+X
+I
+GP
+BRQI
+=   =   =   =
+ 
+ 
+(iv) 
+L
+YGjB=−
+ 
+tan
+LR
+LLL
+XI
+GP
+BRQI
+ =   =   =   =
+ 
+ 
+ 
+(e) 
+()yjjj=+ =   + 
+ 
+2 = 
+ 
+222
+ − = 
+ 
+    
+22
+2
+tan
+
+ =   =
+
+ −
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.45 
+(f) 
+Intrinsic Impeadance
+j
+j
+
+=
++ 
+ 
+1
+tan
+2
+2
+−
+
+
+
+−
+
+
+
+=
+ 
+()
+cot  2
+
+
+   =
+
+ 
+()
+tan  2
+
+
+   =
+
+ 
+()
+tantan  2
+
+    =
+ 
+()
+22EH
+
+=  =   −
+ 
+4.9. Skin depth and Depth of Penetration. 
+      Skin depth ⇒ μm to cm 
+               Depth of Penetration ⇒ cm to m. 
+     
+()
+0
+decreases
+Constant.
+with distance
+cos
+z
+x
+EE etz  a
+−
+= −
+ 
+ 
+ 
+(a) Skin Depth: The distance at which the amplitude of electric field becomes 
+1
+e
+ times of its initial value. 
+    
+0
+00
+1
+1
+zd
+d
+E
+EE  edd
+e
+=
+−
+⎯⎯⎯→=    =   =
+
+ 
+1
+Skin depth     =
+
+ 
+ For high loss medium or conductor, attenuation constant is very high (10
+6
+ to 10
+8
+).  
+Hence, 
+
+ is very small (μm). So, it is called as skin depth. 
+ 
+Electric field remains at the surface of conductor. It will not penetrate inside conductor. 
+0z=
+1
+z
+
+=
+
+O
+E
+O
+E
+e
+1
+
+=
+Z
+z
+o
+Ee
+−
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.46 
+    
+2
+C
+f
+
+ = =   =   
+
+ 
+    
+;
+2
+SSSS
+C
+RjXRX
+
+=   +=   =
+
+  
+ 
+    
+1111
+2
+p
+CS
+C
+V
+R
+f
+
+ =  =  ==   =   =
+      
+ 
+ 
+(b) Depth of Penetration: 
+For Low Lossy medium, attenuation constant is very low. Hence, electric field penetrates very high to that medium. 
+    
+2
+d
+
+
+=
+
+ 
+    
+2
+d
+
+=
+
+ 
+ 
+(c) Lossless and Perfect Dielectric: 
+    
+00
+d
+ =  = 
+Depth of penetration = ∞. 
+ 
+(d) Perfect Conductor 
+    
+c
+ =    =  
+Skin depth = 0 
+ 
+(e) Surface Resistance 
+It is found at high frequency. 
+    
+2
+S
+C
+R
+
+=
+
+ 
+ 
+,
+2
+dcac
+C
+l
+RR
+A
+
+==
+
+ 
+ Relation between Neper and dB Scale. 
+Attenuation Factor = AF = 
+d
+e
+−
+ 
+    
+1010
+.   |20log20log
+d
+dB
+A Fede
+−
+=−=  
+8.68d dB=
+ 
+    
+.|
+Neper
+8.68
+dB
+AF
+dB
+dmm
+      
+= +   =
+      
+      
+ 
+1Neper    8.68dB=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.47 
+4.10. Angle of Wave Impedance or Intrinsic Impedance. 
+     
+1
+90tan
+2
+−
+
+
+
+−
+
+
+
+=
+ 
+       
+E
+EH
+H
+
+=     =  −
+ 
+(a) Lossless Dielectric / Free Space / Air 
+    
+00
+
+=  =
+ 
+0EHEH −  =  =
+ 
+Hence, Phase of Electric Field and Magnetic Field have same. 
+ 
+(b) Conductor / High Loss Medium 
+    
+45
+
+ =  
+ 
+45EH −  =  
+ 
+Hence, Electric Field leads Magnetic Field by 
+4
+
+ 
+Magnetic Field lags Electric Field by 
+4
+
+ 
+(c) Low Loss / Medium Loss Dielectric 
+045
+
+   
+ 
+4.11. Pointing Vector 
+(a) Propagation Loss =
+()
+.E   H   d S−
+
+ 
+ 
+ 
+(b) Conductor Loss or  Ohmic Loss
+()
+2
+E    dv−   
+
+ 
+ 
+(c) 
+()
+em
+v
+dv
+t
+
+
+
+ +
+
+
+
+
+()
+2
+•
+Sv
+E   Hd SE  dv= −− 
+
+ 
+The above equation represents flow of Electromagnetic energy in any medium. 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.48 
+(d) Poynting Vector 
+2
+Watt
+EH
+m
+
+
+
+
+ 
+Instantaneous Poynting Vector 
+( )( )( )P tE tH t   =   
+ 
+Instantaneous Power Density 
+( )( )E tH t
+ 
+Complex Poynting Vector 
+( )( )E tH t
+ 
+(e) 
+Re(  )   Re(  )   Re(   )PEH=
+ 
+Re(  )P
+Real part of Poynting Vector 
+(f) Average Poynting Vector. 
+()
+avg
+P
+ 
+(i) Lossy Medium 
+   
+|   |,
+rms
+rms
+E
+H
+ ==
+ Complex + inductive 
+           
+00
+,
+zz
+rmsrms
+EE eHH  e
+−−
+==
+ 
+           
+2
+00
+cos
+2
+z
+avg
+p
+EH
+Pea
+−
+
+=
+ 
+2
+2
+0
+cos
+2 |   |
+z
+p
+E
+ea
+−
+
+=
+
+ 
+        
+2
+2
+0
+||
+cos
+2
+z
+p
+H
+ea
+−
+
+
+=
+ 
+cos
+p
+rmsrms
+EHa
+
+=
+ 
+         
+2
+cos
+||
+rms
+p
+E
+a
+
+=
+
+  
+2
+|   |cos
+p
+rms
+Ha
+
+= 
+ 
+(ii) Lossless Medium 
+()
+0,0,0
+
+ =   =   =
+ 
+            
+22
+0000
+222
+avg
+ppp
+E  HEH
+Paaa
+
+===
+
+2
+2
+rms
+ppp
+rmsrmsrms
+E
+EHaaHa=== 
+
+ 
+(iii) 
+()
+1
+Re*
+2
+avg
+PE   H=
+ 
+ 
+(iv)  Power (W) =
+()
+•   Watt
+avg
+Pd S
+
+ 
+ Total Power 
+()()
+0
+•   Watt
+avg
+WPd S=
+
+ 
+(v) 
+,   ,   ,   ,,
+2
+p
+EVf
+
+→   =
+
+               
+ 
+,   ,   ,   ,,
+2
+p
+HVf
+
+→   =
+
+               
+ 
+2  ,,,,,
+p
+PVf
+
+→        =
+
+ 2    2   0.5        
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.49 
+4.12. Polarization of Electromagnetic Wave 
+ 
+(a) Horizontal Polarization 
+()
+0
+cos
+x
+E    Etz  a= −
+ 
+ 
+Electric field is propagating in (z) direction and oriented or polarized in (x) direction. 
+(b) Vertical Polarization. 
+     
+()
+()
+0
+cos
+x
+E    Etya= +  −
+ 
+Electric field is propagating in (-y) direction and oriented or polarized in (-x) direction. 
+ 
+ 
+(c) Linear Polarization. 
+()()
+12
+coscos
+xy
+E    Etz  aEtz  a= −    + −
+ 
+Wave is linearly Polarized in X and Y, propagating in +z direction. 
+Tilt angle
+()
+
+:- The angle subtend by Electromagnetic Wave at z = 0, t = 0 with 
+X – Axis ≡ (XY Plane) 
+Y – Axis ≡ (YZ Plane) 
+Z – Axis ≡ (ZX Plane) 
+2
+1
+tan
+E
+E
+=
+ 
+Linear Circular 
+Elliptical
+PolarizationPolarizationPolarization
+Horizontal 
+Vertical 
+Linear
+Right circular (RCP)
+Left circular (LCP)
+REP
+LEP
+Polarization
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.50 
+ 
+(d) Circular Polarization 
+()
+12
+,90EE=   =  
+ 
+Step 1. Thumb represent direction of Propagation. 
+Step 2. Remaining Finger gives rotation. 
+Step 3. Right hand gives Right Circular Polarization where as Left hand gives Left Circular Polarization. 
+(i) Right Circular Polarization 
+()()
+00
+cossin
+xy
+E    Etz  aEtz  a= −    + −
+ 
+()()
+00
+0cossin
+xy
+ZE    Et  aEt  a=   =   +
+ 
+0
+0
+x
+tE    E  a=   =
+ 
+0
+4
+y
+T
+tEE  a=    =
+ 
+0
+2
+x
+T
+tEE  a=    = −
+ 
+0
+3
+4
+y
+T
+tEE  a=     = −
+ 
+0
+x
+t    TE    E  a=    =
+ 
+ 
+ 
+E
+2
+-E
+2
+E 
+1
+-E
+1
+t = 0 
+t = T
+x
+y
+P
+
+θ
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.51 
+(ii) Left Circular Polarization. 
+   
+()()
+00
+cossin
+xy
+E    Etz  aEtz  a= −    − −
+ 
+   
+0
+0
+x
+tE    E  a=   =
+ 
+   
+0
+4
+y
+T
+tEE  a=    = −
+ 
+   
+0
+2
+x
+T
+tEE  a=    = −
+ 
+   
+0
+3
+4
+y
+T
+tEE  a=     =
+ 
+ 
+(e) Elliptical Polarization  
+12
+90 ,  180EE=             
+ 
+12
+,180EE           
+ 
+12
+90EE    =     
+ 
+(i) Right Elliptical Polarization 
+()
+12
+EE
+   
+   
+()()
+12
+cossin
+xy
+E    Etz  aEtz  a= −    + −
+ 
+ 
+ 
+x 
+y 
+RPE
+t=0
+3T
+t=
+4
+T
+t=
+2
+P
+
+=
+T
+t
+4
+-E
+1
+E
+1
+E
+2
+-E
+2
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.52 
+ 
+(ii) Left Elliptical Polarization 
+()
+12
+EE
+ 
+()()
+12
+cossin
+xy
+E    Etz  aEtz  a= −    − −
+ 
+ 
+4.13. Normal Incidence 
+ 
+ 
+x 
+y 
+RPE
+t=0
+3T
+t=
+4
+T
+t=
+2
+P
+
+=
+T
+t
+4
+-E 
+1
+E
+1
+E
+2
+-E 
+2
+x 
+y 
+t=0
+3T
+t=
+4
+T
+t=
+2
+=
+T
+t
+4
+-E
+1
+E
+1
+E
+2
+-E
+2
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.53 
+(a) Formulae 
+(i) 
+EH
+  = −
+ 
+(ii) 
+1
+EE
+  = + 
+ 
+(ii) 
+11
+HHE
+  = +   = −
+ 
+(iv) 
+00
+,
+ti
+ti
+ti
+
+ =  = 
+
+ 
+ 
+(v) 
+ti
+E
+ti
+ −
+=
+ +
+ 
+(vi) 
+tiit
+E
+tiit
+  −  
+=
+  +  
+ 
+ 
+Non-Magnetic Material 
+1
+it
+ = =
+ 
+(vii) 
+it
+E
+it
+ − 
+=
+ + 
+ 
+(viii) 
+it
+rE
+it
+ −
+   =
+ +
+  
+(ix) 
+1
+ti
+E
+ti
+r
+
+
+
+−
+     =
++
+
+ 
+(x) 
+1
+ti
+ti
+PP
+PE
+PP
+r
+VV
+V
+VV
+−
+  =
++
+
+  
+(xi) 
+1
+ti
+ti
+E
+r
+
+
+
+−
+  =
++
+
+  
+(xii) 
+it
+it
+rE
+nn
+n
+nn
+−
+    =
++
+ 
+(n =Refractive Index)   
+Magnetic – Magnetic Material 
+1
+ti
+ = =
+ 
+ 
+(xiii) 
+ti
+E
+ti
+
+
+−
+=
++
+ 
+(xiv) 
+ti
+rE
+ti
+
+
+
+−
+      =
++
+ 
+(xv) 
+1
+it
+E
+it
+r
+
+
+
+
+−
+   =
++
+ 
+(xvi) 
+1
+it
+it
+PP
+PE
+PP
+r
+VV
+V
+VV
+
+−
+  =
++
+ 
+ 
+(xvii) 
+ti
+ti
+rE
+
+
+
+−
+      =
++
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.54 
+(xviii)  
+ti
+ti
+rE
+nn
+n
+nn
+
+−
+      =
++
+ 
+(xix) 
+2
+PP
+rEi
+= − 
+ 
+(xx) 
+(
+)
+2
+P1P
+tEi
+= −  − 
+ 
+(b)   Representation of electric field and Magnetic field. 
+   
+()
+ˆ
+cos
+ioix
+EEwtz  a=−
+ 
+()
+ˆ
+cos
+rE   oix
+EEwtz  a=+
+ 
+   
+()
+ˆ
+cos
+tE   otx
+EEwtz  a=−
+ 
+()
+ˆ
+cos
+ioiy
+HHwtz  a=−
+ 
+   
+()
+ˆ
+cos
+rHoiy
+HHwtz  a=+
+ 
+()
+ˆ
+cos
+tHoty
+HHwtz  a=−
+ 
+ 
+ 
+ 
+(c) When wave travels from rarer to denser medium. 
+ 
+• 
+()
+ititr
+nnn    
+ 
+• 
+00
+it
+EHE
+it
+ − 
+  =    = −  
+ + 
+ 
+•
+00
+rr
+E
+ii
+EE
+EE
+=     
+E
+r
+ & E
+i
+ are of opposite sign. 
+• 
+00
+rr
+H
+ii
+HH
+HH
+=       
+ H
+r
+ & H
+i
+ are of same sign. 
+E
+i
+H
+i
++Z
+E
+r
+H
+r
+–Z
+E
+t
+H
+t
+ 
++Z
+X 
+Z
+Y 
+
+iii i 
+,,, 
+
+tttt 
+,,, 
++ z
+H
+i
+H
+t
+E
+t
+E
+r
+H
+r
+E
+i
+E
+i
+E
+t
+rarer
+denser
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.55 
+(d) When wave travels from denser to rarer medium. 
+ 
+• 
+()
+ititr
+nnn   
+ 
+•  
+00
+it
+EHE
+it
+ − 
+  =     = −  
+ + 
+ 
+•  
+00
+rr
+E
+ii
+EE
+EE
+=     
+E
+r
+ & E
+i
+ are of same sign. 
+    
+00
+rr
+H
+ii
+HH
+HH
+=       
+H
+r
+ & H
+i
+ are of opposite sigh. 
+(e) Range of Reflection and Transmission coefficient. 
+•  
+
+1,1 −
+ 
+•  
+
+0, 2
+ 
+(f) When wave travels from air to conductor. 
+ 
+• 
+r
+io
+r
+
+=
+
+ 
+ 
+to
+c
+j
+j
+
+
+
+=
++
+ 
+Since 
+c
+
+ is very high. Hence 
+t
+
+value will be in the range of milli ohm. 
+• 
+it
+
+ 
+•  
+11
+ti
+EHE
+ti
+
+
+−
+ == −   = − =
++
+ 
+•  
+10   &12
+EEHH
+= +  == +  =
+ 
+•  
+1
+r
+ri
+i
+E
+EE
+E
+= −   = −
+ 
+•  
+00
+t
+t
+i
+E
+E
+E
+=   =  →
+Minima 
+H
+i
+H
+t
+E
+t
+E
+i
+rarer
+denser
+E
+r
+air
+n
+i
+n
+t
+conductor
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.56 
+•  
+1
+r
+ri
+i
+H
+HH
+H
+=    =
+ 
+•  
+22
+t
+ti
+i
+H
+HH
+H
+=   =    →
+Maxima 
+•  Reflected and Incident Electric Field are out of phase. 
+•  Electric Field at the surface of conductor is ‘0’ (minima). 
+•  Magnetic Field at the surface is maximum. 
+•  Hence, Electric Field and Magnetic Field on the surface of conductor is having 90° phase difference, 
+  i.e. Electric Field at the surface of conductor lags Magnetic Field at the surface of conductor by 90°. 
+• Inside Conductor, Electric Field leads Magnetic Field by
+4
+
+. 
+• 
+ri
+PP=−
+ 
+•  
+0
+t
+P=
+ 
+(g) Effect of polarization during normal incidence 
+ 
+4.14. Oblique Incidence 
+ 
+ 
+ 
+(I) Parallel Polarization (A) Perpendicular polarization 
+(II) Vertical  (B) Horizontal 
+(III) P - polarization  (C) S - polarization 
+Horizontal
+Vertical
+Linear
+RCP
+LCP
+REP
+LEP
+Horizontal
+Vertical
+Linear
+RCP
+LCP
+REP
+LEP
+Horizontal
+Vertical
+Linear
+LCP
+RCP
+LEP
+REP
+H
+i
+E
+i
+E
+i
+H
+i
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.57 
+(a) Snell’ law:  
+ 
+(i) 
+sinsinLossless Medium
+rttiii
+   =   →
+ 
+ Non-magnetic 
+1
+it
+==
+ 
+(ii)  
+sinsin
+ttii
+= 
+  (iii) 
+sinsin
+rttii
+          =
+ 
+(iv)  
+sinsin
+1
+ti
+ti
+r
+
+
+
+    =
+
+  (v) 
+sinsin
+1
+ti
+P
+ptpi
+r
+V
+VV
+
+    =
+
+ 
+(vi)  
+sinsin
+1
+ti
+ti
+r
+
+
+
+    =
+
+ (vii) 
+sinsin
+rttii
+nnn  =
+ 
+Magnetic – Magnetic 
+1
+it
+ = =
+ 
+ 
+sinsin
+iitt
+         =
+ 
+(viii)  
+sinsin
+riitt
+                  =
+ (ix) 
+sinsin
+1
+it
+it
+r
+
+
+
+
+=
+ 
+(x)  
+sinsin
+1
+it
+it
+P
+PP
+r
+V
+VV
+
+
+=
+   
+(xi)  
+sinsin
+riitt
+                  =
+ 
+(xii)  
+sinsin
+riitt
+nnn    =
+ 
+4.15. Parallel/Vertical/P-Polarization 
+ 
+A 
+BIncident
+plane t = 0
+
+i
+Refracted
+plane t = t
+0
+C
+,,0,
+i
+iiiP
+uV=
+,,0,
+t
+tttP
+uV=
+D
+H
+r
+
+i
+
+i
+
+t
+i
+r
+
+i
+
+
+ˆ
+pi
+a
+i
+
+
+i
+r
+
+ˆ
+pi
+a
+ˆ
+pt
+a
+t
+
+t
+r
+
+H
+t
+H
+i
+E
+t
+E
+r
+E
+ix 
+y 
+z
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.58 
+• 
+ˆ
+ˆ
+i
+rxi    zk=+
+ 
+• 
+ˆ
+ˆ
+r
+rxi    zk=−
+ 
+• 
+ˆ
+ˆ
+t
+rxi    zk=+
+ 
+• 
+ˆ
+ˆ
+ˆ
+sincos
+i
+Pii
+aik=+
+ 
+• 
+ˆ
+ˆ
+ˆ
+sincos
+r
+Pii
+aik=−  
+ 
+• 
+ˆ
+ˆ
+ˆ
+sincos
+t
+Ptt
+aik=+  
+ 
+• 
+ˆ
+ˆ
+sincos
+iiiii
+ik           =+ 
+ 
+• 
+ˆ
+ˆ
+sincos
+riiii
+ik           =+ 
+ 
+• 
+ˆ
+ˆ
+sincos
+ttttt
+ik           =+
+ 
+• 
+o
+c
+iii
+
+=
+  
+• 
+o
+c
+ttt
+
+=
+ 
+• 
+i
+io
+i
+
+=
+
+  
+• 
+t
+to
+t
+
+=
+
+ 
+Summary: 
+(a) 
+HE
+  = −
+  
+(b) 
+11
+HHE
+= +  = −
+ 
+(c) 
+()
+cos
+1
+cos
+i
+EE
+t
+
+
+
+
+=  +
+
+
+ 
+(d) 
+coscos
+coscos
+ttii
+E
+ttii
+        
+        
+−
+=
++
+ 
+(e) 
+coscos
+coscos
+tititi
+E
+tititi
+    
+    
+−   
+=
++   
+ 
+For non-magnetic (훍
+i
+ = 훍
+t
+ = 1) 
+(f) 
+secsec
+secsec
+iitt
+E
+iitt
+
+
+− 
+=
++ 
+ 
+(g) 
+secsec
+secsec
+iitt
+rE
+iitt
+    −   
+   =
+    +   
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.59 
+(h) 
+coscos
+1
+coscos
+ttii
+E
+ttii
+r
+        
+
+        
+−
+     =
++
+
+ 
+(i) 
+coscos
+1
+coscos
+ti
+ti
+PtPi
+P
+PtPi
+r
+VV
+V
+VV
+
+
+−
+
++
+
+ 
+(j) 
+coscos
+1
+coscos
+ttii
+E
+ttii
+r
+        
+
+        
+−
+     =
++
+
+ 
+(k) 
+coscos
+coscos
+ttii
+rE
+ttii
+nn
+n
+nn
+
+
+−
+   =
++
+ 
+For Magnetic medium 
+()
+1
+it
+ = =
+ 
+(l) 
+coscos
+coscos
+ttii
+E
+ttii
+         
+          
+−
+=
++
+ 
+(m) 
+coscos
+coscos
+ttii
+rE
+ttii
+   
+
+   
+−
+     =
++
+ 
+(n) 
+secsec
+1
+secsec
+iitt
+E
+iitt
+r
+        
+
+        
+
+−
+ =
++
+ 
+(o) 
+secsec
+1
+secsec
+it
+it
+PiPt
+PE
+PiPt
+r
+VV
+V
+VV
+
+
+
+−
+   =
++
+ 
+(p) 
+coscos
+coscos
+ttii
+rE
+ttii
+        
+
+        
+−
+     =
++
+ 
+(q) 
+coscos
+coscos
+ttii
+rE
+ttii
+nn
+n
+nn
+
+
+
+−
+     =
++
+ 
+(r)  Representation of Electric Field and Magnetic Field 
+()
+ˆ
+ˆ
+cossin
+ii
+jr
+jwt
+ioii
+EEik  ee
+
+
+−
+=− 
+ 
+ 
+ˆ
+ˆ
+i
+rxi    zk=+
+  
+ 
+()()
+sincos
+i    iiiii
+rxz      =+
+ 
+()
+0
+ˆ
+ˆ
+cossin
+r
+j   r r
+jwt
+rEii
+EEik  ee
+
+
+−
+=+
+ 
+()
+0
+ˆ
+ˆ
+cossin
+tt
+jr
+jwt
+rEtt
+EEik  ee
+
+
+−
+=−
+ 
+ii
+jr
+jwt
+o
+i
+i
+E
+Hee
+
+
+−
+=
+ 
+rr
+jr
+jwt
+o
+rH
+i
+E
+Hee
+
+
+−
+
+=
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.60 
+tt
+jr
+jwt
+o
+tH
+i
+E
+Hee
+
+
+
+−
+
+=
+
+
+ 
+(s)  Power Density 
+2
+2
+2
+0
+ˆˆ
+,
+22
+ir
+Eo
+iPrP
+ii
+E
+E
+PaPa
+
+
+==
+ 
+(
+)
+2
+2
+cos
+ˆ
+1
+cos2
+t
+io
+iEP
+ti
+E
+Pa
+
+
+
+=  − 
+
+
+
+ 
+(
+)
+22
+r
+Pcos
+P
+1
+cos
+ti
+EE
+iit
+PP
+
+
+
+= =  − 
+
+
+ 
+(t) When electromagnetic wave travels from air to conductor. 
+ 
+r
+iot
+rc
+jw
+jw
+
+
+  
+
+==
++
+ 
+ Since, 
+c
+
+is very high. Hence, 
+t
+
+value will be found in the range of milli ohm. 
+ 
+i
+
+>>>
+t
+
+ 
+ 
+coscos
+1
+coscos
+ttii
+E
+ttii
+        
+        
+−
+ == −
++
+ 
+1
+HE
+  = −  =
+  
+10  &12
+EEHH
+  = +  == +  =
+ 
+10  &12
+EEHH
+= +  == +  =
+ 
+1
+r
+ri
+t
+E
+EE
+E
+= −   = −
+ 
+00
+r
+t
+t
+E
+EMinima
+E
+=   = →
+ 
+1
+r
+ri
+i
+H
+HH
+H
+=    =
+ 
+22
+t
+ti
+i
+H
+HHMaxima
+H
+=   =   →
+ 
+Reflected and Incident Electric Field are out of phase.  
+ Hence, Electric Field and Magnetic Field or the surface of conductor is having 90° phase difference. 
+     i.e. Electric Field at the surface of conductor lags Magnetic Field at the surface of conductor by 90°. 
+Inside conductor, Electric Field leads magnetic field by 
+4
+
+ 
+0
+rit
+PPP=−=
+ 
+air
+
+i
+conductor
+
+i
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.61 
+4.16. Perpendicular polarization/Horizontal polarization/S-Polarization 
+ 
+•
+ˆ
+ˆ
+i
+rxi    zk=+
+ 
+•
+ˆ
+ˆ
+r
+rxi    zk=−
+ 
+•
+ˆ
+ˆ
+t
+rxi    zk=+
+ 
+•
+ˆˆ
+ˆ
+sincos
+i
+Pii
+alk=+
+ 
+•
+ˆ
+ˆ
+ˆ
+sincos
+r
+Pii
+aik=−  
+ 
+•
+ˆ
+ˆ
+ˆ
+sincos
+t
+Ptt
+aik=+  
+ 
+•
+ˆ
+ˆ
+sincos
+iiiii
+ik           =+ 
+ 
+•
+ˆ
+ˆ
+sincos
+riiii
+ik           =+ 
+ 
+•
+ˆ
+ˆ
+sincos
+ttttt
+ik           =+
+ 
+•
+o
+c
+iii
+
+=
+ 
+•
+o
+c
+ttt
+
+=
+ 
+•
+i
+io
+i
+
+=
+
+ 
+•
+t
+to
+t
+
+=
+
+ 
+Summary: 
+(a) 
+HE
+  = −
+  
+(b) 
+()
+cos
+1
+cos
+i
+HH
+t
+
+
+
+
+=  +
+
+
+ 
+(c) 
+1
+EE
+= + 
+ 
+(d) 
+secsec
+secsec
+ttii
+E
+ttii
+    −   
+=
+    +   
+ 
+(e)  
+secsec
+secsec
+tititi
+E
+tititi
+    
+    
+−   
+=
++   
+ 
+H
+r
+
+i
+
+i
+
+t
+i
+r
+
+i
+
+
+ˆ
+pi
+a
+i
+
+
+i
+r
+
+ˆ
+pi
+a
+ˆ
+pt
+a
+t
+
+
+t
+r
+
+H
+t
+H
+i
+E
+t
+E
+r
+E
+i
+x y 
+z
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.62 
+For Non-Magnetic (휇
+i
+ = 휇
+t
+ = 1) 
+(f) 
+coscos
+coscos
+iitt
+E
+iitt
+
+
+− 
+=
++ 
+ 
+(g)  
+coscos
+coscos
+iitt
+rE
+iitt
+        
+
+        
+−
+   =
++
+ 
+(h) 
+secsec
+1
+secsec
+ttii
+E
+ttii
+r
+        
+
+        
+−
+     =
++
+
+ 
+(i) 
+secsec
+1
+secsec
+ti
+ti
+PtPi
+PE
+PtPi
+r
+VV
+V
+VV
+
+
+−
+   =
++
+
+ 
+(j) 
+secsec
+1
+secsec
+ttii
+E
+ttii
+r
+        
+
+        
+−
+     =
++
+
+ 
+(k) 
+coscos
+coscos
+iitt
+rE
+iitt
+nn
+n
+nn
+
+
+−
+   =
++
+ 
+For magnetic medium 
+()
+1
+it
+ = =
+ 
+(l) 
+secsec
+secsec
+ttii
+E
+ttii
+          
+          
+−
+=
++
+ 
+(m) 
+secsec
+seccos
+ttii
+rE
+ttii
+   
+
+   
+−
+     =
++
+ 
+(n) 
+coscos
+1
+coscos
+iitt
+E
+iitt
+r
+        
+
+        
+
+−
+ =
++
+ 
+(o) 
+coscos
+1
+coscos
+ii
+ii
+PiPt
+PE
+PiPt
+r
+VV
+V
+VV
+
+
+
+−
+   =
++
+ 
+(p) 
+secsec
+secsec
+ttii
+rE
+ttii
+        
+
+        
+−
+     =
++
+ 
+(q) 
+secsec
+secsec
+ttii
+rE
+ttii
+nn
+n
+nn
+
+
+
+−
+     =
++
+ 
+(r)   Representation of Electric Field and Magnetic Field 
+ 
+ˆ
+ii
+jr
+jwt
+ioy
+EE  eea
+−
+=
+ 
+ 
+ˆ
+rr
+jr
+jwt
+rEoy
+EE  eea
+−
+=
+ 
+ 
+ˆ
+tt
+jr
+jwt
+tEoy
+EE  eea
+
+
+−
+=
+ 
+ 
+()
+ˆ
+ˆ
+cossin
+ii
+jr
+jwt
+o
+iii
+i
+E
+Hik  ee
+
+
+
+−
+=   −+ 
+ 
+ 
+()
+ˆ
+ˆ
+cossin
+rr
+jr
+jwt
+o
+rEii
+i
+E
+Hik  ee
+
+
+
+−
+=−−
+ 
+ 
+()
+ˆ
+ˆ
+cossin
+tt
+jr
+jwt
+o
+tHtt
+i
+E
+Hik  ee
+
+
+
+−
+=−+
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.63 
+(s)  Power Density 
+ 
+2
+0
+ˆ
+2
+i
+iP
+i
+E
+Pa
+
+=
+ 
+ 
+2
+2
+ˆ
+2
+t
+Eo
+rP
+i
+E
+Pa
+
+
+=
+ 
+ 
+(
+)
+2
+2
+ˆ
+1
+2
+t
+o
+tEP
+t
+E
+Pa
+
+=  − 
+ 
+ 
+(
+)
+22
+r
+Pcos
+P
+1
+cos
+ti
+EE
+iit
+PP
+
+
+
+= =  − 
+
+
+ 
+(t)   When electromagnetic wave travels from air to conductor. 
+ 
+ 
+r
+io
+r
+u
+=
+
+ 
+ 
+to
+c
+jwu
+jw
+
+
+=
++
+ 
+Since, 
+c
+
+is very high. Hence, 
+t
+
+value will be found in the range of milli ohm. 
+it
+
+   
+   
+secsec
+1
+secsec
+ttii
+E
+ttii
+        
+        
+−
+ == −
++
+ 
+1
+HE
+   = −  =
+ 
+10
+EE
+= +  =
+ 
+()
+cos2cos
+1
+coscos
+ii
+EE
+tt
+
+
+
+
+=  +=
+
+
+ 
+1
+r
+ri
+i
+E
+EE
+E
+= −   = −
+ 
+00
+t
+t
+i
+E
+EMinima
+E
+=   = →
+ 
+1
+r
+ri
+i
+H
+HH
+H
+=    =
+ 
+2cos2cos
+coscos
+tii
+ti
+itt
+H
+HHMaxima
+H
+
+
+
+=   =→
+
+
+ 
+ Reflected and Incident Electric Field are out of phase. 
+ Electric Field at the surface of conductor is ‘0’ (Minima). 
+air
+
+i
+conductor
+
+i
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.64 
+ Magnetic Field at the surface is maximum. 
+ Hence, Electric Field and Magnetic Field on the surface of conductor is having 90° phase difference. 
+ Electric Field at the surface of conductor lags Magnetic Field at the surface of conductor by 90°. 
+ Inside conductor, Electric Field loads Magnetic Field by 
+4
+
+. 
+ri
+PP=−
+ 
+0
+t
+P=
+ 
+4.17. Critical angle and total integral reflection (TIR) 
+When wave travels from denser to rarer medium, then at some angle, the electromagnetic wave starts gazing or travelling along 
+the surface. So that angle is known as critical angle. 
+   
+
+i
+ < 
+c
+ 
+Transmission + Reflection 
+
+i
+ = 
+c
+ 
+Wave travels along the surface 
+
+i
+ > 
+c
+ 
+No Transmission + Only Reflection 
+(TIR) 
+• 
+ic
+>
+  
+t
+=
+ Imaginary angle or does not exist. 
+ 
+• In general medium 
+sin
+tt
+c
+ii
+
+=
+
+ 
+• In non-magnetic medium 
+sin
+t
+c
+i
+
+=
+
+ 
+• In magnetic medium 
+sin
+t
+i
+
+=
+
+ 
+Attenuation during transmission
+(Evancent Mode)
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.65 
+4.18. Brewster’s Angle 
+       
+iB
+ = 
+ 
+• No Reflection only Transmission 
+• The angle of incidence at which Electromagnetic wave is only transmitted but not reflected. 
+Case I :  For Non-magnetic Medium 
+ • 
+sinsin
+iBtt
+    =    
+ 
+ • at 
+E
+,0,1
+iBE
+ =    =   =  
+ 
+ • For S-polarization 
+iB
+ = 
+ (does not exist) 
+ • For P-Polarization, 
+iB
+ = 
+ exists. 
+     
+tan
+t
+B
+i
+
+=
+
+ 
+ 
+ 
+ 
+ 
+Perpendicular Polarization
+S - Polarization
+Horizontal Polarization
+(Unpolarized wave)
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.66 
+ • 
+tan
+t
+B
+i
+
+=
+
+,  For P-Polarization only, not for S-Polarization. 
+ • 
+90
+Bt
+ +  =  
+ i.e., Reflected and Transmitted wave are perpendicular to each other. 
+Case II : For General Medium 
+ • 
+sinsin
+iiBttt
+     =     
+ 
+ • For S-polarization, 
+()
+()
+22
+sin
+tiitt
+B
+iit
+  −  
+=
+  −
+ 
+ • For P-Polarization, 
+()
+()
+22
+sin
+ittit
+B
+iti
+  −  
+=
+ −  
+ 
+ • For general medium, Brewster’s angle will exist for both S-and P-Polarization 
+ • Their Brewster’s angles are different for same medium. 
+ • For non-magnetic medium Brewster’s angle will exist for S-polarization. Whereas it will not exist for P- 
+  polarization. 
+4.19. Difference between Brewster’s angle and Critical angle. 
+ Critical Angle Brewster’s Angle 
+(a) 
+ic
+   →
+ Total internal reflection 
+(a) 
+iB
+ =  →
+ Brewster’s Angle 
+(b)  
+ic
+   →
+ Many angle 
+(b) 
+iB
+ =  →
+ Only one angle 
+(c) 
+(d) 
+Only Reflection No Transmission. 
+Wave should travel from denser to rarer medium 
+(c) 
+(d) 
+Only Transmission No Reflection 
+No constrain for EM wave transmission 
+(e) 
+sin
+t
+c
+i
+
+=
+
+ 
+(e) 
+tan
+t
+B
+i
+
+=
+
+ 
+(f) 
+Critical angle exist for both P-polarization and S-
+polarization. 
+(f) 
+For non-magnetic medium, Brewster’s angle exist 
+only for S-polarization only 
+(g) 
+1,0 = =
+ 
+(g) 
+0,1 =  =
+ 
+ 
+❑❑❑ 
+ 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.67 
+5 
+TRANSMISSION LINE 
+ 
+5.1. Introduction 
+ 
+• 
+()
+()
+()
+dV  z
+Rj   L  I  z
+dz
+−
+=   + 
+ 
+• 
+()
+()
+()
+dI  z
+Gj   C  V  z
+dz
+−
+=   + 
+ 
+2
+2
+2
+2
+2
+2
+()
+()
+Wave equation.
+()
+()
+d  I  z
+y   I  z
+dz
+VI
+d  V  z
+y V  z
+dz
+
+•=
+
+
+−
+
+
+•=
+
+
+ 
+2
+22
+22
+2
+22
+22
+(  ,  )1(  ,  )
+Time harmonic Equation.
+(   )1(  ,  )
+p
+p
+d  I  z td  I  z t
+V
+dzdt
+d  V  ztd  V  z t
+V
+dzdt
+
+
+
+•=
+
+
+
+   
+
+
+
+
+•=
+
+
+
+
+
+ 
+Here, V
+p
+ = phase velocity. 
+1. Transmission Line Parameter: 
+(a) R = Resistance per unit length 
+ (i) It is distributed along the transmission line.  
+ (ii) It is due to conductor loss.  
+ (iii) It is in series.  
+ (iv) It gives attenuation in the voltage.  
+––
+++
+I(z, t)RzLz
+I(z +z,t)
+V(z, t)
+V(z +z,t)
+Cz
+Cz
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.68 
+(b) G = Conductance per unit length. 
+(i) It is distributed in between the transmission line.  
+(ii) It is due to dielectric loss.  
+(iii) It is in parallel. 
+(iv) It gives attenuation in the current.  
+(c) L = Inductance per unit length.  
+(i) It is distributed along the transmission line. 
+(ii) It is due to storage of magnetic field.  
+(iii) It is in series.  
+(iv) It gives phase shift in voltage.  
+(d) C = Capacitance per unit length. 
+(i) It is distributed in between the transmission line. 
+(ii) It is due to storage of electric field.  
+(iii) It is in parallel. 
+(iv) It gives phase shift in current. 
+(e) 
+RVL
+GIC
+
+
+⎯⎯  ⎯⎯→
+⎯⎯  ⎯⎯→
+  
+(f) LC = 
+E
+ 
+(g) 
+Gd
+CE
+
+=
+ 
+(h)  
+(i)  
+ Semi-Infinite Parallel Plate Co-axial cable Twin wire 
+R 
+2Rs
+W
+ 
+22
+RaRs
+ab
++
+
+ 
+2
+2
+Rs
+r
+ 
+C 
+WE
+d
+ 
+2
+ln
+E
+b
+a
+
+
+
+
+ 
+ln
+E
+d
+r
+
+
+
+
+ 
+L 
+d
+W
+
+ 
+2
+ln
+2
+b
+a
+
+
+
+
+
+ 
+2
+ln
+2
+d
+r
+
+
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.69 
+G 
+d
+W
+d
+
+ 
+2
+ln
+d
+b
+a
+
+
+
+
+ 
+2
+ln
+d
+d
+r
+
+
+
+
+ 
+Z
+o
+ 
+d
+EW
+
+
+
+
+
+
+
+
+ 
+60
+ln
+r
+r
+b
+a
+
+
+
+
+
+ 
+120
+ln
+x
+r
+d
+r
+
+
+
+
+
+ 
+2. Intrinsic Impedance: - 
+(a) Z
+o
+ = 
+00
+00
+w
+VV
+Rj   LRj   L
+Gj   CGj   C
+II
++−
++−
+−
+++ 
+====
++ + 
+ 
+(b) It is defined at every point of transmission line. 
+(c) It is independent from length of the transmission line. 
+(d) Z
+0
+ = depends upon 
+d
+, 
+c
+, ,  (medium) and geometry of transmission line. 
+3. Lossless Transmission Line: 
+   R = 0 → Perfect conductor → 
+c
+ →  
+   G = 0 → Perfect dielectric → 
+d
+ = 0 → tan  = 0 
+(a) γ = 
+()()Rj  L  Gj  L+     + 
+ = 
+()()Rj   L  Gj   LjLC+     +   = 
+ 
+ = 0  Lossless and Distortionless 
+ = 
+LC
+  Non-Dispersive 
+ = 
+0rr
+LC    =  =   
+ 
+(b)  = 
+0
+rr
+
+
+ 
+(c) V
+p
+ = 
+11
+o
+rr
+c
+LC
+==
+    
+ 
+(d) V
+g
+ = 
+1
+LC
+ 
+(e) V
+p
+ . V
+g
+ = 
+2
+0
+1
+rr
+c
+LC
+=
+
+ 
+(f) Z
+o
+ = 
+L
+C
+ 
+(g) , , , V
+p
+, V
+g
+ → Medium dependent 
+Z
+0
+ → medium and geometry depend 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.70 
+4. Distortionless Transmission Line 
+  LG = RC 
+(a) 
+L
+RG    G
+C
+ ==
+ → Lossy and Distortionless 
+0rr
+LC=    =  =   
+ → Non-dispersive 
+(b) 
+11
+o
+P
+rr
+c
+V
+LC
+===
+    
+ 
+(c) V
+g
+ = 
+1
+LC
+ 
+(d) V
+p
+. V
+g
+ =  
+1
+LC
+ = 
+2
+o
+rr
+c
+
+ 
+(e) Z
+o
+ = 
+RL
+GC
+=
+ 
+5. Some important formulae 
+ (a) 
+0
+0
+v
+L
+L
+L
+ZZ
+ZZ
+−
+ = =
++
+ 
+ (b) 
+0
+0
+L
+I
+L
+ZZ
+ZZ
+−
+=
++
+ 
+ (c) 
+()
+2
+0
+0
+jx
+L
+x
+L
+ZZ
+e
+ZZ
+−
+−
+=
++
+ 
+ (d) Z(x) = 
+()
+0
+()
+1
+1
+x
+x
+Z
+
++
+
+
+−
+
+ 
+ (e) 
+0
+()
+0
+()
+()
+x
+Z  xZ
+Z  xZ
+−
+=
++
+ 
+ (f) Z(x) Z
+0
+ = 
+0
+0
+tan (    )
+tan (    )
+L
+L
+ZjZx
+ZjZx
+
++
+
++
+
+(For lossless Tx-line) 
+ (g) 2(x) = 
+()
+()
+()
+0
+tan
+For lossy Tx-line
+tan
+LO
+oL
+ZZnx
+Z
+ZZnx
+
+
+
++
+
+
++
+
+ 
+6. Impedance: 
+ (a) Z
+OC
+ = –jZ
+o
+ cot l 
+ (b) Z
+SC
+ = jZ
+o
+ tan l 
+ (c) Z
+OC
+ . Z
+SC
+ = (Z
+o
+)
+2
+ 
+ (d) For Z
+L
+ = Z
+0
+, Z
+in
+ = Z
+0
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.71 
+Length Z
+SC
+ Z
+OC
+ 
+4
+Ol
+
+
+ 
+Inductive Capacitive 
+42
+l
+
+
+ 
+Capacitive Inductive 
+3
+24
+l
+
+
+ 
+Inductive Capacitive 
+3
+4
+l
+
+  
+ 
+Capacitive Inductive 
+ (e)  
+Series Resonance Parallel Resonance 
+Z
+SC
+ Z
+OC
+ Z
+SC
+ Z
+OC
+ 
+2
+n
+l
+
+=
+ 
+(21)
+4
+n
+l
++
+=
+ 
+(21)
+4
+n
+l
++
+=
+ 
+2
+n
+l
+
+=
+ 
+2l
+n
+=
+ 
+4
+(21)
+l
+n
+=
++
+ 
+4
+(21)
+l
+n
+=
++
+ 
+2l
+n
+=
+ 
+2
+p
+o
+nV
+f
+l
+=
+ 
+(21)
+4
+p
+o
+nV
+f
+l
++
+=
+ 
+(21)
+4
+p
+o
+nV
+f
+l
++
+=
+ 
+2
+p
+o
+nV
+f
+l
+=
+ 
+(f) 
+2
+(21)1
+4
+o
+in
+in
+LL
+Z
+n
+lZZ
+ZZ
++
+=   =      =
+ impedance in version 
+(g)  Normalised Impedance 
+ Input impedance 
+in
+in
+o
+Z
+Z
+Z
+=
+ 
+ Normalised load impedance 
+L
+L
+o
+Z
+Z
+Z
+=
+ 
+(h) 
+2
+inL
+n
+lZZ
+
+=      =
+ 
+(i) 
+59
+,,, ...
+888
+l
+     
+=
+ 
+ 
+Lo
+ino
+oL
+ZjZ
+ZZ
+ZjZ
+
++
+=
+
++
+
+ 
+(j) 
+3711
+,,, ...
+888
+l
+     
+=
+ 
+ 
+Lo
+ino
+oL
+ZjZ
+ZZ
+ZjZ
+
+−
+=
+
+−
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.72 
+5.2. VSWR 
+SWR : Standing wave ratio 
+ 
+ 
+Case I: Z
+L
+ = 0  Short Circuit 
+1. 
+00
+00
+0
+1   1||   1,
+0
+j
+L
+L
+L
+ZZZ
+Le
+ZZZ
+
+
+−−
+=== − =      =   = 
+++
+ 
+2. V
+max
+ = V
+f 
+(1 + 
+L
+) = 2V
+f
+ 
+ V
+min
+ = V
+f 
+(1 – 
+L
+) = 0 
+3. V
+SWR
+ = 
+1   ||
+1   ||
+L
+L
++
+=
+−
+ 
+4. Z
+max
+ = 
+(2)(21)
+44
+nn +  +  
+=
+
+ 
+ Z
+max
+ = 
+3579
+,,,,, ...
+4    4444
+        
+ 
+   
+  1
+st
+ Maxima 
+5. Z
+min
+ = 
+((21))(1)
+42
+nn+  +      +  
+=
+
+ 
+ Z
+min
+ =  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.73 
+6.  
+Case II: Z
+L
+ < Z
+0
+ 
+1. 
+0
+0
+||
+01
+L
+j
+L
+L
+L
+K
+ZZ
+KKeK
+ZZ
+
+
+=
+−
+ == −  =  
+ = 
++
+ 
+2. V
+max
+ = V
+f
+(1 + K) < 2V
+f
+ 
+ V
+min
+ = V
+f
+(1 – K) > 0 
+3. V
+SWR
+ = 
+1
+1
+K
+K
++
+−
+ 
+4. Z
+max
+ = 
+(2)(21)
+44
+nn +  +  
+=
+
+ 
+ Z
+max
+ = 
+35
+,,, ...
+4    44
+    
+ 
+5. Z
+min
+ = 
+((21))
+42
+nn+   +     
+=
+
+ 
+ Z
+min
+ = 
+3
+0,    ,   ,, 2  , ...
+22
+
+
+ 
+6.  
+  
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.74 
+Case III: Z
+L
+ > Z
+0
+ 
+1. 
+0
+0
+||
+,   01
+0
+L
+L
+L
+L
+K
+ZZ
+KK
+ZZ
+
+=
+−
+ ==    
+=
++
+ 
+2. V
+max
+ = V
+f
+(1 + K) < 2V
+f
+ = V
+f
+ (1 – K) > 0 
+3. V
+SWR
+ = 
+1
+1
+K
+K
++
+−
+ 
+4. Z
+max
+ = 
+(20)
+42
+nn +     
+=
+
+ 
+ Z
+max
+ = 
+3
+0,    ,   ,, 2  , ...
+22
+
+
+ 
+5. Z
+min
+ = 
+(2)(21)
+44
+nn +  +  
+=
+ 
+ Z
+min
+ = 
+35
+,,, ...
+4    44
+    
+ 
+6.
+ 
+ 
+Case IV:  
+L
+ =   Open circuit 
+1. 
+00
+00
+1/
+1||   1,0
+1/
+LL
+LL
+LL
+ZZZZ
+ZZZZ
+
+−−
+ ===     =   =
+++
+ 
+2. V
+max
+ = 
+(1   ||)   2
+fLf
+VV+   =
+ 
+ V
+min
+ = 
+(1   ||)   0
+fL
+V−   =
+ 
+3. 
+1   ||
+1   ||
+L
+SWR
+L
+V
++
+==
+−
+ 
+4. Z
+max
+ = 
+(20)
+42
+nn +     
+=
+
+ 
+ Z
+max
+ = 
+3
+0,    ,   ,, 2  , ...
+22
+
+
+ 
+5. Z
+min
+ = 
+((21)0)(21)
+44
+nn+   +  +  
+=
+
+ 
+ Z
+min
+ = 
+35
+,,, ...
+4    44
+    
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.75 
+ 6.
+    
+ 
+1. Distance between two successive maxima = /2 
+ Distance between two successive minima = /2 
+ Distance between two successive maxima & minima = /4 
+2.  
+V I Z Z 
+Maximum Minimum Maximum 
+Z
+max
+ =  
+(2)
+4
+n
+
+ +   
+
+ 
+Minimum Maximum Minimum Z
+min
+ = 
+((21))
+4
+n
+
++   +   
+
+ 
+ 
+3. (a) Complete matched or matched 
+     
+1   ||
+0,1
+1   ||
+L
+L
+L
+VSWR
++
+ ===
+−
+ 
+ (b) Complete mismatched 
+     
+1   ||
+||  1,
+1   ||
+L
+L
+L
+VSWR
++
+  ===
+−
+ 
+  For example: S/C, O/C, pure inductive, pure resistive. 
+ (c) Mismatched: 
+     –1 < 
+L
+ < 1     1 < VSWR <  
+4. VSWR  [1, ) 
+       [–1, 1] 
+5. (z) = 
+L
+ e 
+–j2fz
+ = 
+(2   )
+||||
+jjfz
+jZ
+LL
+eee
+
++  −
+−
+= 
+ 
+ Magnitude of reflection coefficient does not depend on distance. But phase of reflection coefficient depends upon 
+distance. 
+     VSWR = 
+1   ||
+1   |   (   ) |
+1   |   (   ) |    1   ||
+L
+L
+Z
+Z
++
++
+=
+− − 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.76 
+ VSWR does not depends upon distance. 
+6.  
+                  
+7.      
+8. (a) In case of maxima at load, Z
+L
+ > Z
+0
+. 
+     
+()
+||
+()
+LOLO
+LL
+LOLO
+ZZZZ
+ZZZZ
+−−
+ =   =
+++
+ 
+             VSWR = 
+1   ||
+1   ||
+LL
+LO
+Z
+Z
++
+=
+−
+ 
+ (b) In case of minima at load (Z
+L
+ < Z
+O
+) 
+     
+0
+LO
+L
+LO
+ZZ
+ZZ
+−
+ =
++
+ 
+               
+||
+OL
+LL
+OL
+ZZ
+ZZ
+−
+  = − =
++
+ 
+             
+1   ||
+1   ||
+O
+L
+LL
+Z
+VSWR
+Z
++
+==
+−
+ 
+                     
+1   ||
+1
+||
+1   ||1
+L
+L
+L
+VSWR
++
+−
+==   =
+− +
+ 
+  
+12. In ideal case, matched  |
+L
+| = 0, VSWR = 1 
+ In practical case, matched  1 ≤ VSWR  2. 
+Z
+L
+ = 
+ZZ
+L
+ > 
+0
+ZZ
+L
+ = 
+0
+ZZ
+L
+ < 
+0
+Z
+L
+ = 0
+VSWR = 
+Maxima at load  = ,   = 1Z
+LL
+Minima at load   = 0,   = –1Z
+LL
+VSWR = finite = 
+Maxima at load   > ,   =        ,   || = ZZVSWR
+LOLL
+L
+O
+Z
+Z
+Minima at load   < ,   =        ,   ||  ZZVSWR
+LOLL
+–
+O
+L
+Z
+Z
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.77 
+Scattering Matrix: 
+In Y, Z, h, g parameter, open circuit and short circuit conditions are required. But in transmission line, short and open circuit 
+cannot be achieved throughout the transmission line. 
+So, S-parameter concept is introduced in microwave devices. 
+ S-parameter for coupler. 
+ 
+(a) When V
+1
++
+ = 0  Port (1) matched 
+      
+0
+1
+1
+12
+2
+V
+V
+S
+V
++
+=
+−
++
+=
+ 
+ S
+12
+ = Transmission coefficient at port (2) due to port (2) when port (1) matched. 
+  = Reverse voltage gain 
+      S
+22
+ = 
+1
+2
+0
+2
+V
+V
+V
++
+−
++
+=
+ 
+ S
+22
+ = Reflection coefficient at port (2) due to port (1) when port (1) matched 
+  = Output reflection coefficient 
+(b) When 
+2
+V
++
+ = 0  Port (2) matched 
+      S
+11
+ = 
+2
+1
+1
+0V
+V
+V
++
+−
++
+=
+ 
+Tx. line
+1
+Tx. line
+2
+Coupier
+Coupier
+Port
+1
+Port
+2
+V
+1
++
+V
+1
+–
+V
+2
++
+V
+2
+–
+V
+1
++
+V
+1
+–
+V
+2
+–
+V
+2
++
+S
+21
+S
+12
+S
+11
+S
+22
+S S
+1112
+ 
+  SS
+2113
+V
+1
+–
+V
+1
++
+V
+2
++
+V
+2
+–
+1111122
+2211222
+VSVSV
+VSVSV
+−++
+−++
+=+
+=+
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.78 
+ S
+11
+ = Reflection coefficient at port (1) due to port (1) when port (2) is matched 
+  = Input reflection coefficient 
+     S
+21
+ = 
+2
+2
+2
+0V
+V
+V
++
+−
++
+=
+ 
+ S
+21
+ = Transmission coefficient at port (2) due to port (1) when port (2) is matched 
+  = Forward voltage gain 
+      
+1. S
+11
+ = 
+1
+ = 
+1
+1
+inO
+inO
+ZZ
+ZZ
+−
++
+ 
+2. S
+21
+ = 
+1
+ = 1 + 
+1
+ 
+3. S
+22
+ = 
+1
+ = 
+2
+2
+inO
+inO
+ZZ
+ZZ
+−
++
+ 
+4. S12 =  
+2
+ = 1 + 
+2
+ 
+(a) For Symmetry 
+           
+12
+inin
+ZZ=
+ 
+           
+1122
+SS=
+ 
+(b) For reciprocal 
+     Forward gain = Reverse gain 
+             
+1221
+SS=
+ 
+For Lossless: 
+ 
+For lossless device 
+     
+112
+irt
+PPP=+
+    
+12
+12
+1
+rt
+ii
+PP
+PP
+=+
+  1 = |S
+11
+|
+2
+ + |S
+21
+|
+2
+ 
+     
+222
+irt
+PPP=+
+   1 = |S
+22
+|
+2
+ + |S
+12
+|
+2
+ 
+For lossy device: 
+     
+112
+22
+1121
+||||1
+irt
+PPPSS   +   +
+ 
+     
+222
+22
+2212
+||||1
+irt
+PPPSS   +   +
+ 
+P
+i
+1
+P
+r
+1
+P
+t
+2
+P
+t
+1
+P
+t
+2
+P
+i
+2
+11
+11
+1121
+,
+rt
+ii
+PP
+SS
+PP
+==
+21
+22
+2212
+,
+tt
+ii
+PP
+SS
+PP
+==
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.79 
+For Amplifier 
+     
+112
+22
+1121
+||||1
+irt
+PPPSS   +   +
+ 
+     
+221
+22
+1112
+||||1
+irt
+PPPSS   +   +
+ 
+For Lossless 
+     S*S = I 
+    
+**
+11211112
+**
+2122
+1222
+10
+01
+SSSS
+SS
+SS
+
+
+
+=
+
+
+
+
+
+
+
+ 
+    
+22**
+112111  1221   22
+2**
+122212   1122   21
+||||10
+Unitar propertyzero property
+||||  10
+SSS   SS   S
+SSS   SS   S
+
++=+=
+→→
+
+
++    =+=
+
+ 
+1. Return loss at port (1) = – 20 log
+10 
+|S
+11
+| 
+2. Return loss at port (2) = – 20 log
+10 
+|S
+22
+| 
+3. Gain at port (2) = 20 log
+10 
+|S
+21
+| 
+4. Gain at port (1) = 20 log
+10 
+|S
+12
+| 
+5. Intertion loss at port (1) = 
+2
+11
+10
+2
+11
+()
+20log
+1  ||
+S
+S
+
+−
+
+
+−
+
+ 
+ Intertion loss at port (2) = 
+2
+22
+10
+2
+22
+()
+20log
+1  ||
+S
+S
+
+−
+
+
+−
+
+ 
+❑❑❑ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.80 
+6 
+WAVEGUIDE 
+ 
+6.1.  Introduction 
+• Waveguide directs the wave in one direction 
+  
+•   
+     
+(1) Analysis of propagation constants. 
+(a)  
+22
+czc
+ffj   = −   −
+ 
+(b) 
+0
+cz
+ff=   =
+ 
+No Propagation only Oscillation  
+ 
+ (c) 
+22
+0
+czc
+ff   =  − 
+ Only Propagation occurs. 
+x
+Rectangular waveguide.
+a
+b
+y
+X direction
+Y direction
+Z direction 
+Standing wave
+Standing wave
+Propagating wave
+sin
+(min)
+sin
+(min)
+E
+cos
+(max)
+cos
+(max)
+H
+z
+jz
+e
+−
+z
+jz
+e
+−
+x
+Rectangular 
+Resonator.
+a
+b
+y
+X direction
+Y direction
+Z direction 
+Standing wave
+Standing wave
+Standing wave
+Min.
+Min.
+Max.
+E
+Max.
+Max.
+Min.
+H
+c
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.81 
+2. (a) 
+&
+cc
+ff  
+ Attenuation, Evancent mode. 
+ (b) 
+,&
+cc
+ff= = 
+ Only Attenuation 
+ (c) 
+&
+cc
+ff  
+ Propagation  
+ 
+(3) Transmission Line:  
+ 
+ It will act as a low pass filter. It will behave like an all pass filter within Frequency range.   
+(4) Resonator: 
+ 
+ It will act as a band pass filter. 
+(5) Cut-off frequency and Cut-off wavelength. 
+     
+22
+0
+2
+c
+rr
+C
+mn
+f
+ab
+
+      
+=+
+
+      
+
+
+      
+
+ 
+     
+2
+2
+2
+rr
+c
+mn
+ap
+
+=
+
+
++
+
+
+
+
+ 
+(6) 
+x
+ = Wavelength in X-direction. 
+ 
+y
+=
+ Wavelength in Y-direction. 
+ 
+z
+=
+ Wavelength in Z-direction 
+ 
+g
+=
+ Guided wavelength 
+     = Operating wavelength. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.82 
+      
+gz
+ = 
+ 
+• 
+22
+,
+xy
+ab
+mn
+ = =
+ 
+• 
+cos
+zg
+
+ =  =
+
+ 
+• 
+222
+111
+cg
+=+
+      
+ 
+•  = tilt angle  
+• 
+sin
+ccc
+c
+f
+f
+
+
+=   =   =   =
+      
+ 
+• 
+,,cos
+xyz
+mn
+ab
+
+ =     =    =     
+ 
+• 
+22
+sin
+cxy
+ =  + =  
+. 
+(7) Phase velocity and group velocity.   
+     
+p
+V=
+ phase velocity inside waveguide 
+     
+g
+V=
+ group velocity inside waveguide 
+     
+p
+V=
+ phase velocity in free space 
+     
+g
+V=
+ group velocity in free space 
+ • 
+,cos
+cos
+p
+pgp
+V
+VVV==
+
+ 
+ for 
+c
+ff
+ 
+ • 
+0
+p
+rr
+C
+V=
+
+ 
+ • 
+2
+0
+1
+c
+pc
+P
+c
+c
+ff
+Vff
+V
+ff
+f
+f
+=
+= =
+=
+
+−
+
+
+                                  
+                        
+               
+ 
+ 
+ • 
+2
+0
+.
+Pg
+rr
+C
+VV=
+
+ 
+p
+V
+V
+g
+f = fc
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.83 
+ • Inside waveguide, 
+PP
+VV
+ 
+ • Inside waveguide, 
+gP
+VV
+ 
+ • At very high frequency, 
+PgP
+VVV==
+ 
+(8) Intrinsic Impedance: 
+ • 
+TEM
+=
+ Wave Impedance in free space or TEM wave. 
+ • 
+TE
+=
+ Wave Impedance in TE mode 
+ • 
+TM
+=
+ Wave Impedance in TM mode 
+ • 
+0
+r
+TEM
+r
+
+   = 
+
+ 
+ •  
+ 
+ 
+ • 
+TETEM
+   
+ 
+ • At very high frequency, 
+TETEM
+  = 
+ 
+ 
+
+TE
+– jx
+
+2
+1
+TEM
+c
+c
+ff
+f
+f
+
+
+
+−
+
+
+(Capacitive)
+Open circuit (Parallel resonance)
+
+TM
+jx
+
+2
+1
+c
+TEM
+f
+f
+
+−
+
+
+ff < 
+c
+ff = 
+c
+Inductive
+Short circuit (series resonance)
+ff > 
+c
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.84 
+ 
+ • 
+TMTEM
+   
+ 
+ • At very high frequency, 
+TMTEM
+  = 
+ 
+ • 
+22
+0
+.
+r
+TETMTEM
+r
+
+
+    =    = 
+
+
+
+ 
+ • 
+cos
+TEM
+TE
+
+=
+
+  
+c
+ff
+ 
+ • 
+()
+cos
+TMTEM
+  = 
+ 
+c
+ff
+ 
+(9) Some Important Terms  
+ (i) Dominant mode: The mode which has lowest cut-off frequency and highest cut-off wavelength, is known as 
+dominant mode. 
+   For a > b → TE
+10
+ dominant mode → 
+0
+2
+c
+C
+f
+a
+=
+ 
+   For a < b → TE
+01
+ dominant mode → 
+0
+2
+c
+C
+f
+b
+=
+ 
+   For c > a > b → TE
+101
+ dominant mode → 
+22
+0
+11
+2
+r
+rr
+C
+f
+ac
+     
+=+
+     
+
+     
+ 
+   For c > b > a → TE
+011
+ dominant mode → 
+22
+0
+11
+2
+r
+rr
+C
+f
+bc
+     
+=+
+     
+
+     
+ 
+ (ii) Single mode frequency operation 
+  (a) For 
+00
+22
+22
+CC
+a    bfba
+ab
+  →        →    
+ 
+  (b) For 
+00
+22
+22
+CC
+a    bfab
+ba
+  →        →    
+ 
+ (iii) Non-Existence Mode: 
+  The mode which does not exist. 
+  (a) Rectangular waveguide: 
+   TEoo, TMoo, TMon, TMmo 
+  (b) Rectangular resonator  
+   TEooo, TEmoo, TEono, TEmno, TEoop, TMooo, TMoop, TMmop, TMmoo, TMono, TMonp 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.85 
+ (iv) Existence Mode: 
+  The mode which exist 
+  (a) Rectangular waveguide 
+   TEon, TEmo, TEmn, TMmn 
+  (b) Rectangular resonator: 
+   TEonp, TEmop, TEmnp, TMmno, TMmnp 
+ (v) Evanescent Mode: 
+  The mode which exist but operating frequency is less than cutt-off frequency. 
+ (vi) Degenerate Mode: 
+   Two modes have same cutt-off frequency 
+   These modes are existance mode 
+   These modes exist in a square waveguide (a = b) and cubic resonator (a = b = c). 
+  e.g. TEmn  TEnm, TEon  TEmo 
+   TMmn  TMnm,  
+   TEmop  TEonp  TEpom  TEopm. 
+ (vii) TEM mode: 
+   The mode which has no cutt-off frequency is known as TEM mode. 
+   TEoo, TMoo, TEooo, TMooo are TEM mode 
+ 
+ 
+ 
+ 
+ 
+• Rectangular 
+Circular Co-axial Twin-wire 
+• 
+Single conductor Single conductor Double conductor 
+Double conductor 
+• 
+c
+fo
+ 
+c
+fo
+ 
+c
+fo=
+ 
+c
+fo=
+ 
+• 
+TEM does not exist TEM does not exist TEM exist 
+TEM exist 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.86 
+  Semi-infinite parallel plate waveguide 
+  f
+c
+ = 0 
+  TEM exist 
+(viii) Attenuation Constant in Rectangular Waveguide and Circular Waveguide. 
+ 
+  This graph is valid for all modes of rectangular and circular waveguide except TE
+01
+ mode in circular waveguide. 
+ 
+  TE
+01
+ mode of circular waveguide has lowest cutt-off frequency 
+(10) Open circuit voltage: 
+  For a > b → TE
+10
+ mode is dominant 
+ 
+ 
+  
+0OC
+VE b=
+ 
+  For a < b → TE
+01
+ mode is dominant 
+ 
+  
+0OC
+VE a=
+ 
+b
+E
+O
+a
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.87 
+(11) Electric Field Pattern: 
+ (a)  
+    
+    
+   
+(b) TM mode : 
+       
+ 
+  
+X
+Y
+TE
+10
+X
+Y
+TE
+20
+X
+Y
+TE
+11
+X
+Y
+TE
+21
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.88 
+7 
+ANTENNA 
+ 
+6.1. Antenna and its Radiation Pattern. 
+• Antenna: It is a device which converts electrical signal into EM wave & EM wave into electrical signal. 
+• Some Important terms related to antenna. 
+⮚ W
+o
+: Total Radiated Power (Watt) 
+⮚ P
+rad
+ or P
+av
+: Time average power density or time average poynting vector or Radiated power density (Watt/m
+2
+) 
+⮚ U(θ, φ): Radiated power Intensity or Radiation Pattern (Watt/steradian) 
+⮚ Ω
+eff
+: effective solid angle (Steradian) 
+⮚ θ
+E
+: Half power beam width or elevation angle. (radian) 
+⮚ φ
+H
+ or θ
+H
+: Half power beam width or azimuthal angle. (radian) 
+⮚ D or G
+D
+: Directive Gain 
+⮚ D
+o
+ = Maximum directive gain or directivity. 
+⮚ G
+P
+: Power gain 
+⮚ G
+Po
+: Maximum Power gain. 
+⮚ e
+c
+: efficiency due to conductor loss. 
+⮚ e
+d
+: efficiency due to dielectric loss. 
+⮚ e
+cd
+: efficiency due to conductor and dielectric loss. 
+⮚ e
+r
+: efficiency due to reflection 
+⮚ R
+r
+: Radiation Resistance (Ω) 
+⮚ R
+l
+: Loss Resistance (Ω) 
+⮚ P
+in
+: Direct of transmitting Antenna. 
+⮚ 
+ˆ
+t
+ρ
+: Direct on transmitting Antenna. 
+⮚ 
+ˆ
+r
+ρ
+: Direction of receiving Antenna. 
+⮚ PLF: Polarization Loss Factor 
+⮚ A
+eff
+: Effective Aperture Area (m
+2
+) 
+⮚ L
+phy
+: Physical length (m) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.89 
+⮚ l
+eff
+ or l
+av
+: Effective length or average length (m) 
+⮚ V
+OC
+: Open circuit Voltage (Volt) 
+1. Solid Angle  
+ (a)  dΩ = sinθdθdφ 
+ (b)  Ω
+sphere
+ = 4π 
+ (c)  Ω
+eff
+ = θ
+E
+ × θ
+H
+ →  Non-uniform cone 
+   = θ
+2
+E
+ → Uniform cone 
+ (d)1 Steradian  = 1 radian × 1 radian 
+              
+2
+2
+(180 )
+3282.8
+
+
+==
+ 
+2. Radiated Power Density: 
+        
+2
+ˆˆ
+ˆ
+2
+rms
+avradprmsrmsp
+oo
+p
+E
+PPaEH    a
+EH
+a
+
+=   ==   
+=
+ 
+  The strength of EM wave transmitted by the antenna which depends upon distance (r) and direction (θ, φ) is radiated 
+power density. 
+3. Radiated Power Intensity: 
+        
+Watt
+(  ,   )
+Steradian
+dW
+U
+d
+
+
+=
+
+
+
+ 
+• 
+0
+rad
+dW
+P
+dS
+=
+ 
+• 
+2
+sin
+orad
+WP    rd  d=
+
+  
+ 
+• 
+(  ,  )
+o
+dW
+U
+d
+=
+
+
+ 
+• 
+(  ,  ) sin
+o
+WUd  d      =
+
+ 
+4. Isotropic Antenna: 
+(a) It is point size antenna. 
+(b) It is ideal Antenna. 
+(c) It is reference Antenna. 
+(d) It is reference Antenna 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.90 
+ 
+(e) W
+o
+ = Total power radiated by isotropic 
+(f) Ω
+sphere
+ = 4
+
+Steradian 
+(g) 
+(  ,   )
+4
+o
+o
+W
+U  =
+
+ 
+(h)      
+(i) D
+o
+ = 1, 
+0
+1
+P
+G=
+, e
+cd
+ = 1, e
+r
+ = 1, e
+t
+ = 1 
+5. Directive Gain And Directivity 
+ 
+• 
+Radiation Pattern of general antenna
+Radiation Pattern of isotropic antenna
+D=
+ 
+• 
+(  ,   )4(  ,   )4(  ,   )
+(  ,   )(  ,  )sin
+oo
+UUU
+D
+UWUd  d
+
+           
+===
+       
+ 
+• For General Antenna → U(θ, φ) = U
+o
+(θ, φ) 
+• 
+max
+max
+4(  ,  ) |
+(  ,   )
+o
+o
+U
+DD
+U
+==
+   
+
+ 
+• 0 ≤ D ≤ D
+o
+, D
+o
+ ≥ 1
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.91 
+• 
+44
+ Non-uniform conical beam
+o
+effEH
+D=    =→
+
+
+
+ 
+          
+2
+4
+ Uniform conical beam
+E
+
+
+=→
+ 
+• D = f
+1
+(θ, φ) → directional antenna. 
+• D = f
+1
+(θ) or f
+1
+(φ) → Omnidirectional Antenna. 
+• D = K = constant → All directional antenna. 
+6. R
+L 
+= Loss Resistance 
+    
+22
+,,
+2
+SS
+SL
+c
+RR
+wu
+RRRl
+WW
+
+===
+
+
+
+ 
+ 
+  
+  
+7.   Efficiency: 
+ 
+•
+ e
+c
+ = 1 (Perfect conductor)
+ 
+•
+ 
+(Good or Poor Conductor)
+r
+c
+rL
+R
+e
+RR
+=→
++
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.92 
+•
+ e
+d
+ = 1 → Perfect dielectric
+ 
+•
+ 0 < e
+c
+ < 1 → Conductor loss
+ 
+•
+ 0 < e
+d
+ < 1 → Dielectric loss
+ 
+•
+ e
+r
+ = (
+2
+)
+ 
+•
+ 
+()
+2
+  1
+r
+e=−
+ 
+•
+ e
+r
+ = 1 → Perfectly matched
+ 
+• 0 < e
+r
+ < 1 → Mismatched 
+• e
+r
+ = 0 → Perfectly mismatched 
+•
+ 
+r
+cdcd
+rL
+R
+ee   e
+RR
+=    =
++
+ 
+•
+ 
+()
+2
+1
+r
+tcdr
+rL
+R
+eee
+RR
+=    =− 
++
+ 
+•
+ W
+0
+ = e
+t
+ P
+in 
+•
+ G
+Po
+ = e
+t
+ D
+o 
+•
+ D
+o
+|
+dB
+ = log
+10 
+D
+o 
+•
+ 
+10
+10 log
+oo
+PP
+dB
+GG=
+ 
+•
+ PLF|
+dB
+ = 10log
+10
+ PLF
+ 
+8. Parabolic Antenna 
+•
+ 
+2
+4
+effo
+AD=
+
+
+ 
+•
+ 
+2
+(PLF)
+4
+effo
+AD
+
+=
+
+ 
+ 
+• Area efficiency = 
+eff
+phy
+A
+A
+ 
+• 
+2
+2
+o
+PtoA   t
+d
+Ge  De  e
+
+==
+
+
+
+
+ 
+• 
+2
+6.5Gain of parabolic antenna
+o
+P
+d
+G
+
+=→
+
+
+
+ 
+• First Null Beam width = FNBW = 
+0
+70
+d
+
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.93 
+• Half Power Beam width = HPBW = 
+0
+58
+d
+
+
+
+
+ 
+ Cassegrain Antenna 
+(a) A Horn antenna is used as feed antenna. 
+(b) A secondary reflector which is hyperbolic in Shape. 
+(c) A primary reflector which is paraboloid 
+9. Polarization Loss Factor (PLF): 
+      
+ˆ
+t
+
+ = Direction of transmitting Antenna 
+      
+ˆ
+r
+
+ = Direction of receiving Antenna 
+                 
+2
+ˆˆ
+PLF   ||
+tr
+=
+ 
+  
+O-Polarization 
+Received = 100%, Loss = 0% 
+X-Polarization 
+Received = 0%, Loss = 100% 
+T
+x 
+R
+x 
+T
+x 
+R
+x 
+H H H V 
+V V V H 
+    
+RCP LCP RCP RCP 
+LCP RCP LCP LCP 
+LEP REP REP REP 
+REP LEP REP REP 
+10. Friis Formulae: 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.94 
+• f λ = V
+P
+ 
+• 
+t
+tt
+t
+W
+e
+P
+=
+ 
+• 
+r
+tr
+r
+P
+e
+W
+=
+ 
+• G
+t
+ = e
+tt
+ D
+t
+ 
+• G
+r
+ = e
+tr
+ D
+r
+ 
+• 
+2
+|   ||
+rtt
+e= − 
+ 
+• 
+2
+|   ||
+rrr
+e= − 
+ 
+• 
+1
+2
+ino
+t
+ino
+ZZ
+ZZ
+−
+=
++
+ 
+• 
+2
+2
+ino
+r
+ino
+ZZ
+ZZ
+−
+=
++
+ 
+• 
+t
+dt
+tt
+r
+c
+rL
+R
+e
+RR
+=
++
+ 
+• 
+dr
+rr
+c
+rrLr
+R
+e
+RR
+=
++
+ 
+• 
+ttcdtrt
+ee    e=
+ 
+• 
+trcdrrr
+ee    e=
+ 
+• 
+2
+ˆˆ
+PLF = ||
+tr
+
+ 
+• 
+2
+4
+ett
+AD
+
+
+=
+ 
+• 
+2
+4
+err
+AD
+
+
+=
+ 
+• Power density at the receiving antenna due to transmitting Antenna when transmitting antenna is isotropic = 
+2
+4
+t
+W
+R
+ 
+• Power density at the receiving antenna due to transmitting antenna when transmitting antenna is not isotropic = 
+2
+4
+tt
+WD
+R
+ 
+• Power density of the receiving antenna in terms of Electric field = 
+2
+rms
+E
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.95 
+• where D
+o 
+= 1 (Isotropic) 
+•            D
+o 
+= 1.5 (dipole antenna) 
+•            D
+o
+ = 1.63 (l = λ/2 → half wave dipole). 
+• Power Received 
+   
+222
+4
+tterteter
+r
+W D AW A  A
+W
+RR
+==
+ 
+⮚ 
+()()
+22
+2
+1  ||1  ||   PLF
+(4)
+ttrrt
+rr
+rtr
+rtLtrrLr
+P D DR
+R
+P
+RRRRR
+
+
+=− − 
+
+
+++
+
+
+ 
+⮚ 
+2
+4
+ttr
+r
+P G F
+P
+R
+=
+
+
+
+
+
+ 
+Link Formulae 
+   
+10
+4
+||||20 log
+r   dBt   dBt   dBr   dB
+R
+PPGG
+
+
+
+=++−
+
+
+ 
+⮚ 
+10
+4
+Path Loss = 20log
+R
+
+
+
+
+
+ 
+⮚ 
+222
+34
+64
+tt
+r
+WD
+P
+R
++
+=
+
+
+ 
+σ
+2
+ = Cross-Sectional area of object. 
+ 
+11. Dipole Antenna 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.96 
+ 
+12. Types Of Dipole Antenna 
+ 
+(a) Infinitesimal dipole antenna/Hertzian dipole. 
+       
+50
+dl
+
+
+ 
+(b) Small dipole antenna/short dipole antenna 
+       
+5010
+l
+
+
+ 
+(c) Large dipole antenna 
+       
+10
+l
+
+
+ 
+13. Current Distribution In Dipole Antenna 
+(a) 
+ 
+ 
+(b) Small/Short dipole Antenna 
+ 
+  
+2
+(   )10
+2
+2
+10
+2
+o
+o
+Zl
+I  ZIZ
+l
+Zl
+IZ
+l
+
+=    +−    
+
+
+
+=    −  
+
+
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.97 
+(c)  Large dipole Antenna: 
+ 
+2
+(   )sin1,0
+2
+2
+sin10
+2
+o
+o
+Zl
+I  ZIKZ
+l
+Zl
+IKZ
+l
+
+
+=+−    
+
+
+
+
+
+
+=−  
+
+
+
+
+ 
+14. 
+(a) r > R
+1
+ → Near field 
+(b) R
+1
+ < r < R
+2
+ → Fresnel’s region. 
+(c) r > R
+2
+ → Far field. 
+(d) 
+2
+3
+12
+2
+0.63,
+l
+l
+RR
+
+==
+ 
+(e) The distance at which radiation field and inductive field. 
+  
+1
+2
+rr
+
+
+
+= →  =
+ 
+15. Far Field of Hertizian Dipole Antenna 
+       
+ˆ
+(sin   )(  )()
+4
+jr
+o
+I dl
+Ej    ea
+r
+
+
+   
+
+−
+=
+ 
+       
+ˆ
+(sin   )()
+4
+jr
+o
+I dl
+Hjea
+r
+
+
+
+
+−
+=
+ 
+       
+E
+H
+
+
+=
+ 
+(a) U(θ, φ) = Ksin
+2
+θ → Omnidirectional antenna. 
+(b) 
+2
+2
+80Radiation Resistance.
+r
+dl
+R
+
+=  →
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.98 
+(c) 
+2
+3
+sinDirective Gain.
+2
+D=→
+ 
+(d) 
+3
+Directivity
+2
+o
+D=→
+ 
+16. Radiation Resistance 
+(a) Hertzian dipole Antenna 
+   
+2
+2
+80
+r
+dl
+R
+
+
+=
+
+
+ 
+(b) Small dipole antenna. 
+   
+2
+2
+20
+r
+l
+R
+
+
+=
+
+
+ 
+(c) Half wave dipole antenna. 
+   R
+r
+ = 73 Ω 
+   Z
+in
+ = (73 + j42.5) Ω 
+   D
+o
+ = 1.63 
+(d) Quarter water dipole Antenna. 
+   Z
+in 
+= (36.5 + j21.25) Ω 
+   D
+o
+ = 3.26 
+ 
+.
+(e)  
+73
+2
+r
+lR
+
+=  →  =  
+ 
+   
+36.5
+4
+r
+lR
+
+=  →  =    
+ 
+   
+18.25
+8
+r
+lR
+
+=  →  =
+ 
+   
+2
+2
+2
+5
+16
+20
+1664
+r
+lR
+
+
+
+
+
+
+=   →  ==
+
+
+
+ 
+(f) Hertzian monopole antenna. 
+    
+(g) Small/Short Monopole Antenna 
+    
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.99 
+(g) Grounded Antenna 
+ 
+(i)  Hertzian Grounded dipole antenna 
+      
+2
+2
+2160
+rr
+dl
+RR
+
+
+
+
+==
+
+
+ 
+(j) Hertzian Grounded monopole antenna 
+      
+2
+2
+280
+rr
+dl
+RR
+
+
+
+
+==
+
+
+ 
+(k) Small/short Grounded dipole Antenna 
+      
+2
+2
+240
+rr
+l
+RR
+
+
+
+==
+
+
+ 
+(l) Small/Short Grounded monopole antenna. 
+  
+    
+2
+2
+220
+rr
+l
+RR
+
+
+
+==
+
+
+ 
+(m) Folded Antenna (n-fold) 
+  
+2
+rr
+Rn R
+
+=
+ 
+  
+radiation resistance due to    fold
+r
+Rn
+
+=
+ 
+  R
+r
+ = radiation resistance due to one fold 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.100 
+17. Radiation Pattern: 
+(a) Hertzian Dipole/small dipole 
+ 
+• 
+3
+,
+22
+M
+
+=
+ 
+• θ
+N
+ = 0, π 
+• 
+HPP
+357
+,,,
+4    444
+      
+=
+ 
+• 
+HPBW, ie.,
+222
+HE
+
+  =    =
+ 
+• 
+2
+4
+eff
+
+=
+ 
+• 
+22
+2
+4
+eff
+eff
+A
+
+==
+
+
+ 
+• F
+NBW
+ = π   i.e. F
+NBW
+ = 2(HPBW) 
+ 
+(b) Two element array of antenna 
+ 
+     
+||    2cos
+2
+Po
+EE
+
+
+=
+
+
+ 
+         
+cosBd=+ 
+ 
+• 
+,0
+2
+d
+
+=    =
+   
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.101 
+4
+Number of Lobes = 2
+d
+
+=
+ 
+• 
+,
+2
+d
+
+=    = 
+ 
+4
+Number of lobes = 2
+d
+
+=
+ 
+• d = λ, ∝ = 0 
+4
+Number of lobes = 4
+d
+
+=
+ 
+• d = λ, α = π 
+4
+Number of lobes = 4
+d
+
+=
+ 
+• 
+,
+22
+d
+
+=    =
+ 
+4
+Number of lobes = 2
+d
+
+=
+ 
+• 
+,
+42
+d
+
+=    =
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Electromagnetic Field Theory  
+9.102 
+4
+Number of lobes = 1
+d
+
+=
+   
+• 
+,
+42
+d
+
+=    = −
+ 
+4
+Number of lobes = 1
+d
+
+=
+ 
+  
+• d = 2λ, α = 0 
+4
+Number of lobes = 8
+d
+
+=
+ 
+4
+Note:-Number of lobes = 
+d
+
+ 
+(c)  N-element Linear array 
+      
+sin
+2
+||
+sin
+2
+Po
+N
+EE
+
+
+
+
+
+=
+
+
+
+ 
+(d) Vertical Grounded dipole antenna. 
+ Number of Lobes = 
+2
+1
+h
++
+
+ 
+ h = distance of dipole antenna from Ground. 
+ 
+(e) Horizontal Grounded dipole antenna 
+ Number of Lobes = 
+2h
+
+ 
+ h = distance of dipole antenna from ground. 
+ 

@@ -1,0 +1,9169 @@
+=== FILE: Signals_and_Systems_Notes_PW.pdf ===
+=== PAGES: 79 ===
+
+
+
+SignalsSignals
+andand
+SystemsSystems
+Signals
+and
+Systems
+
+Published By: 
+ 
+  Physics Wallah 
+ISBN: 978-93-94342-39-2 
+Mobile App: Physics Wallah (Available on Play Store) 
+  
+Website: www.pw.live 
+Email: support@pw.live 
+ 
+Rights 
+All  rights  will be  reserved  by  Publisher.  No  part  of  this  book  may  be  used  or  reproduced  in  any  manner 
+whatsoever without the written permission from author or publisher. 
+In the interest of student's community: 
+Circulation of soft copy of Book(s) in PDF or other equivalent format(s) through any social media channels, 
+emails,  etc.  or  any  other  channels  through  mobiles,  laptops  or  desktop  is  a  criminal  offence.  Anybody 
+circulating, downloading, storing, soft copy of the book on his device(s) is in breach of Copyright Act. Further 
+Photocopying of this book or any of its material is also illegal. Do not download or forward in case you come 
+across any such soft copy material. 
+ 
+Disclaimer 
+A team of PW experts and faculties with an understanding of the subject has worked hard for the books. 
+While  the  author  and  publisher  have  used  their  best  efforts  in  preparing  these  books.  The  content  has  been 
+checked for accuracy. As the book is intended for educational purposes, the author shall not be responsible for 
+any errors contained in the book. 
+The publication is designed to provide accurate and authoritative information with regard to the subject matter 
+covered. 
+This book and the individual contribution contained in it are protected under copyright by the publisher. 
+(This Module shall only be Used for Educational Purpose.) 
+
+ 
+ 
+ 
+Design Against Static Load 
+ 
+ 
+ 
+ 
+ 
+1. Basic Signals and Systems  ................................................................................................  3.1  –  3.22 
+2. Continuous Time Fourier Series  ......................................................................................  3.23  –  3.33 
+3. Fourier Transform  ...........................................................................................................  3.34  – 3.41 
+4. Laplace Transform ............................................................................................................  3.42  –  3.50 
+5. Z Transform  .....................................................................................................................  3.51  –  3.60 
+6. DTFT   ................................................................................................................................  3.61  –  3.64 
+7. Sampling  ..........................................................................................................................  3.65  –  3.68 
+8. Miscellaneous  ..................................................................................................................  3.69  –  3.76 
+SIGNAL AND SYSTEMS 
+INDEX 
+GATE-O-PEDIA ELECTRONICS & COMMUNICATION ENGINEERING 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Design Against Static Load 
+3.1 
+1 
+BASIC SIGNALS 
+AND SYSTEMS 
+ 
+ 
+1.1. Introduction 
+1.1.1. Continuous Time Signal 
+When independent variable is it continuous in time 
+Discrete Time Signal: 
+• Obtained from CTS by uniform sampling given a 
+     
+S
+tnT=
+ 
+     
+()()
+SSS
+x  nTf   nTa   nTb=   
+ 
+         
+()()
+S
+SS
+ab
+x  nf   nTn
+TT
+=  
+ 
+ Continuous Time Signal 
+( )    &x t   vt
+ 
+ 
+On D.V. 
+(1) Amplitude:   Given x(t) vs t,  plot Ax(t) vs t every vertical axis parameter is multiplied by A 
+(2) Amplitude Reversal: Given x(t)  vs t, plot   
+()x t  vs t−
+ Take mirror image w. r. to horizontal axis 
+(3) Modulus - |x(t)| vs t 
+ ➢  Retain graph above horizontal axis. 
+ ➢ Take the mirror image of graph below horizontal axis. 
+ (1)  Addition or subtraction of dc value 
+  Plot 
+()x tA vs t
+ 
+  
+( )Shift upx tA+→
+ 
+  
+( )Shift downx tA−→
+ 
+ Operation on independent variable:  
+Let x(t)
+ is given  
+ Every operation on t only    
+()
+0
+0t
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.2 
+(1) Time Shifting - Plot 
+()
+00
+xor   ()t   tx t   t−+
+ 
+ 
+()
+0
+&x  t   t    vt−→
+Shift x(t) vs to unit rightward 
+ (Delay) 
+ 
+()
+0
+&x  t   t    vt+→
+ Shift x(t) vs t to unit leftward 
+ (Advance) 
+(2) Time scaling Plot x(at) vs t  a > 0 
+ Divide time axis by a 
+(3) Time Reversal Plot x(-t) v & t 
+ Mirror image w.r. to vertical axis  
+ Natural : Time shifting 
+→
+ Time scaling 
+→
+ Time Reversal 
+1.1.1. Standard Signals: 
+(1) Unit impulse 
+ 
+   
+( )    00
+( )0
+( )1
+tt
+tt
+t  dt
+
+
+
+
+−
+=
+=   =
+=
+
+  
+   
+0
+0
+00
+( )00
+( )1
+t
+tt
+t  dt
++
+−
+
+
+
+
+==  →
+
+
+=
+
+
+
+
+
+ 
+Properties 
+(1) 
+( )(   ) :tt=−
+ Even signal    
+(2) 
+()
+o
+tt
+ Not even signal    
+(3) 
+1
+(   )( )btt
+b
+=
+     
+(4) 
+1
+()( )btt
+b
+−=
+−
+  
+(5) 
+1
+()
+c
+bt    ct
+bb
+
+−  +  =−
+
+−
+
+
+   
+(6) 
+1
+()
+c
+bt    ct
+bb
+
+
+−  −  =+
+
+−
+
+ 
+(7) 
+1
+()
+c
+bt    ct
+bb
+
+
+−  =−
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.3 
+(8) 
+1
+()
+c
+bt    ct
+bb
+
+
++  =+
+
+
+ 
+(9) 
+()
+[  ( )]
+()
+i
+i
+i
+tt
+gt
+gt
+−
+=
+
+
+  where 
+i
+t
+ is root of 
+( )    0gt=
+ 
+(10) 
+( )  ( )(0)  ( )
+0
+x ttxt
+t
+=
+
+=
+    
+(11) 
+( )  ( )(0)( )
+bb
+aa
+x tt  dtxt  dt=
+
+ 
+Unit step signal:     
+1:0
+()
+0 :0
+t
+ut
+t
+
+
+=
+
+
+
+ 
+Property:     
+   
+ 
+(1)(   )( )u atu t=
+ 
+(2) 
+2  (   )   1(   )u atSgn at−=
+ 
+Unit Ramp signal :   
+00
+( )( )
+10
+t
+r ttu tt
+t
+
+
+==
+
+
+
+ 
+ 
+   
+(   )( )r  atar t=
+        
+   
+()
+b
+r  at    bar  t
+a
+
++  =    +
+
+
+     
+   
+()
+b
+r    at    bart
+a
+
+−  +  =   − +
+
+
+ 
+    Impulse     Ramp 
+   (1) divide by a     Divide by a  
+          
+
+       
+    Horizontal axis      
+   (2) Divide by a    multiplied by a           
+         (Area)        (Slope) 
+          
+
+ 
+    Vertical axis  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.4 
+Unit Parabola Signals: 
+      
+2
+( )( )
+2
+t
+p tu t=
+    
+ 
+ 
+    
+///
+( )( )( )( )
+d  dtd  dtd  dt
+p tr tu tt⎯⎯⎯→   ⎯⎯⎯→   ⎯⎯⎯→
+ 
+    
+( )( )( )( )
+ttt
+dtdtdt
+tu tr tp t
+−−−
+
+⎯⎯⎯→   ⎯⎯⎯→   ⎯⎯⎯→
+ 
+Gate pulse or Rectangular Pulse : 
+ 
+(i) 
+/2
+()
+0else
+A    tT
+xt
+
+
+=
+
+
+ 
+(ii) 
+()
+22
+TT
+x tAu  tAu  t
+            
+=+   −−
+            
+            
+ 
+(iii) 
+()
+( )rect/
+amplitudeduration
+x tAt   T=
+
+  
+Triangular Pulse : 
+ 
+(i) 
+1:
+()
+0:else
+t
+AtT
+xt
+T
+
+
+−
+
+
+=
+
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.5 
+(ii) 
+()
+peak    duration / 2
+t
+x tA tri
+T
+
+=
+
+
+
+  
+(iii) 
+(1/   )0
+( )0
+(1/   )0
+At   TT    t
+x tAt
+At   Tt    T
++−  
+
+
+==
+
+
+− 
+
+ 
+(iv) 
+2
+( )()( )()
+AAA
+x tr t    Tr tr t   T
+TTT
+=+  −+−
+ 
+SINC Function     
+sinsin()
+sinsin   (    )
+tK   t
+ctc Kt
+tK   t
+==
+
+
+ 
+ # 
+sin
+sin
+ataat
+c
+btb
+
+=
+
+
+
+  # 
+sin
+sin
+tt
+c
+t
+
+=
+
+
+ 
+ Properties of 
+sin  ( )ct
+- 
+ (1) 
+0
+sin
+limsin  ( )   lim1   sin  (0)
+t
+t
+c tc
+t
+→
+== =
+
+
+ 
+ (2) 
+sin
+lim sin  ( )    lim0
+tt
+t
+ct
+t
+→→+
+==
+
+
+ 
+ (3) 
+sin  (   )    sin  ( )c   tc t−=
+ Even graph  
+  
+sin   (   )sin
+()
+tt
+tt
+
+
+−
+=
+−
+ 
+ (4) 
+,1t    nn    I  n=   = 
+ 
+  
+02nn    = 
+ 
+ (5) 
+sin  ( )   12   sin  ( )c tc t  dt
+
+−−
+=
+
+ 
+ (6) 
+sin  (    )1 /c Kt  dtK
+
+−
+=
+
+ 
+ (7) 
+2
+sin    ( )1c   t  dt
+
+−
+=
+
+ 
+ (8) 
+2
+1
+sin    ()c   Kt  dt
+K
+
+−
+=
+
+ 
+Sampling Function: 
+ 
+sinsinsin
+( ),(),[   ]
+tKtata
+Sa tSa  KtSa at
+tKtbtb
+===
+ 
+ 
+sin
+( )sin
+tt
+Sa tc
+t
+
+==
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.6 
+Properties:  
+ (1) 
+0
+lim( )   1
+t
+Sa t
+→
+=
+   
+ (2) 
+lim( )    0
+t
+Sa t
+→
+=
+   
+ (3) 
+(   )( )Sa   tSa t−=
+ 
+ (4) Zero crossover - 
+,t    n    n   I=
+ 
+0n
+  
+ (5) 
+()Sa t  dt
++
+−
+=
+
+   
+ (6) 
+2
+()Sa   t  dt
+
+−
+=
+
+ 
+Signum Function: 
+    
+10
+( )00
+10
+t
+Sgn tt
+t
+
+
+
+==
+
+
+−
+
+    
+ 
+ Sgn (Sgn (Sgn t)) = Sgn(t)  
+ 
+( )    2  ( )   1
+t
+Sgn tu t
+t
+=− =
+ 
+Discrete Time Signal:  
+    
+Natural DTS
+()
+Converted DTS
+DTS→
+  
+Important Points:  
+ (1) 
+
+0
+(  )1, 2,3
+n
+xn
+=
+=
+
+  Finite duration  
+ (2) 
+
+(  )1, 2,3xn=−−−−−
+
+  Infinite duration + Right sided 
+ (3) 
+
+(  )3, 2,1
+0
+xn
+n
+= −−−−
+
+=
+ Infinite duration + left sided 
+ (4) 
+
+(  )3,3,2,1,4,4xn= −−−−−− →
+  Duration infinite 
+  # 
+0
+0
+()Left
+()Right
+x n   n
+x n   n
+−→
++→
+ # 
+()x    n VS  n−→
+Mirror image about vertical axis. 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.7 
+Time Scaling:   plot 
+()x an  VS  n
+ 
+ Case 1.   
+0
+1(  )1, 2,3, 4 ,5,6,7,9
+n
+ax n
+
+−
+
+
+=
+
+
+
+ Decimation ,  
+   
+
+(2  )2, 4,6,8xn
+
+=
+ 
+ Case 2. 
+
+1(  )1, 2,3, 4ax n
+
+=
+ 
+   
+
+1  0  2  0  3  0  4
+2
+n
+x
+
+=
+
+
+ 
+ ➢ Interpolation of zero  
+Unit Impulse Signal : 
+   
+1  :0
+0   :0
+n
+n
+
+=
+
+=
+
+
+
+     
+ 
+Properties: 
+(1)[][  ]:nn−=
+Even  
+(2)[    ][  ]ann=
+  
+(3)[][(/   )]
+b
+an   ba n   b   an
+a
+
+
+−  +  =  −   −=   −
+
+
+ 
+(4)(  )  (  )(0)  (  )
+0
+x nnxn
+n
+=
+=
+ 
+000
+(5)(  )  ()(   )  ()x nn   nx nn   n−   =−
+ 
+(6)(  )  ()
+bb
+x nan   bxn
+aa
+
+       
+−  +  =−
+
+
+       
+ 
+(7)(  )(  )(  )nnn        −−−− =
+ 
+(8)[  ][]   2  [  ]nnn    +  −  =
+ 
+(9)[  ][]   0nn−  −  =
+ 
+(10)(   )   1
+K
+K
+
+=−
+=
+
+ 
+2
+1
+(11)(   )
+n
+Kn
+K
+=
+
+ 
+12
+if    [   ] lies between
+0  else where
+KnKn
+ 
+22
+11
+(12)(  )  ()
+nn
+n   nn   n
+bb
+x nan   bxn
+aa
+
+=−
+      
+−  +  =−
+      
+      
+
+ 
+(   /   )
+0
+x b   a
+  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.8 
+Unit Step Signal: 
+ 
+ 
+Analogy
+(1)(  )(1)    (1)
+(   )(1)
+n
+u nu    n
+u    tu    n
++  − −  =
+− ⎯⎯⎯→  − −
+ 
+(2)(  )  (1)    0u n u    n− −  =
+ 
+2   :0
+(3)[  ][]
+1  :0
+n
+u nu   n
+n
+=
+
++  −  =
+
+
+
+ 
+(4)(  )()(  )u nu    nn  −  =
+ 
+(5)(  )(1)   1u nu    n+  − −  =
+ 
+   
+0
+(  )[](  )[   ][  ][  ][1]
+n
+KK
+u  nn    Ku  nKnu nu n
+
+==−
+=−==    −   −
+
+ 
+ 
+Unit Ramp Sequence: 
+    
+0
+(  )[1]
+K
+r nu n   K
+
+=
+=−  −
+
+      
+    
+1
+(  )[   ]
+n
+K
+r nu K
+−
+=−
+=
+
+   
+Even /odd | N.E.N.O: 
+(1) Even - 
+(   )( )x   tx t−=
+    
+           
+()(  )x    nx n−=
+   
+ graph , must be symmetrical about the vertical axis. 
+ 
+0
+( )2( )x t  dtx t  dt
+
+−−
+=
+
+ 
+0
+0
+=
+
+ 
+( ),   (  ),sin  ( ),   ,
+cos  ,  sin
+Egtnc t   t
+tt
+−
+ 
+(2) Odd Signal,  
+(   )( )x   tx t−  = −
+ Graph Must be Symmetrical about origin. 
+   
+()(  )x    nx n−  = −
+ 
+ Eg- 
+sin  ,  sgn( ),  , 1 /  ,    ,  sintt   tt   nn
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.9 
+   
+( )0,(  )    0
+n
+x t  dtx n
+
+
+=−
+−
+==
+
+
+ 
+(3) Neither Even nor odd –  
+ Eg- 
+( ),  ( ) ,  (  ) ,   (2) ,   (2)u t   r t    u ntn−−
+ 
+  
+( )(    )
+()
+2
+e
+x tx    t
+xt
++−
+=
+ , 
+(  )()
+()
+2
+e
+x nx    n
+xn
++−
+=
+ 
+  
+0
+( )(    )
+()
+2
+x tx    t
+xt
+−−
+=
+ , 
+0
+(  )()
+()
+2
+x nx    n
+xn
+−−
+=
+ 
+11
+( ) |    (  )x  t    x   n
+ 
+22
+( ) |(  )x   t    x   n
+ 
+12
+xx
+ 
+12
+|xx
+ 
+E E E E 
+E 0 0 0 
+0 E 0 0 
+0 0 E E 
+Conjugate Symmetry : 
+ (1) Even Conjugate 
+ (2) 
+*
+(    )( )x    tx   t−=
+  
+( ) :xt
+Even Conjugate 
+
+Re 
+[  ( )]xt=
+Even 
+  
+*
+()(  )x    nx   n−=
+  
+(  ) :Im[  ( )]   oddx nx t=
+ 
+  
+( ) |   (  )complexx t    x n→
+ 
+Conjugate Anti Symmetry : 
+ (1) odd conjugate  
+ (2) 
+*
+*
+(    )( )
+( ) |   (  ) complex
+()(  )
+x    tx   t
+x t    x n
+x    nx   n
+
+−  = −
+
+−  = −
+
+
+ 
+Periodic & Non periodic Signal : 
+For continuous time signal – 
+(1) Graph must repeat itself from 
+to−  +
+:- 
+t− 
+ 
+(2) 
+000
+()()( )x t    Tx tTx t+   =   −   =
+ 
+ To = Smallest duration = fundamental Time period  
+ To = +ve and constant , integer or non integer , rational or Irrational 
+Complex Exponential  
+   
+0
+()
+0
+0
+2
+( ),T
+jt
+x tAe
++
+==
+
+
+
+ 
+   
+00
+0
+2
+cos()AtT+=
+
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.10 
+1
+()xt
+ 
+2
+()xt
+ 
+12
+( )( )( )x tx  tx   t=+
+ 
+12
+()x tx x=
+ 
+P P ? ? 
+N NP NP NP 
+NP P NP NP 
+NP NP NP NP 
+ 
+Continuous time sinusoids or complex exponential are always individually periodic (irrespective of 
+0
+
+) 
+The linear combination of above may or may not be period 
+ 
+Periodicity of Liner combination of C.T sinusoidal –  
+12
+3
+12
+3
+112233
+22
+2
+( )cos ()sin ()cos()
+
+
+==
+=
+=  ++   ++   −+
+TT
+T
+x tA   BtCtDt
+
+
+
+
+         
+  
+S-1 
+123
+,,T   T   T
+ 
+S-2 
+11
+23
+:   ,:( )
+TT
+RRx t
+TT
+is periodic. 
+S-3 
+0123
+LCMof Numeratar
+(   ,   ,   )
+HCFof Denominator
+==TLCM  T  T  T
+ 
+()
+0123
+0
+2HCF of
+,,
+LCM of
+r
+r
+N
+HCF
+D
+
+  
+
+=   ==
+ 
+1101
+KK th=
+ Harmonic  
+2202th
+KK=
+ 
+330
+K=
+ 
+Discrete Tie Periodic signal : 
+Fundamental Time period – Minimum no of samples Which repeats itself 
+    
+0
+()(  )x n    nx n+=
+ 
+➢ 
+000
+0,,,NNNve  N    = +=
+ Integer  
+0
+N
+ cannot be negative 
+➢ Discrete time sinusoids and complex exponential are not individually periodic always  
+ Steps – 
+0
+(  )cos()x nAn=+
+ 
+ S-1  
+0
+2
+N
+
+
+=
+ 
+R:periodic
+IR:Non periodic
+ 
+ S-2  
+0
+FTP    NN    r=   =  
+ (r is smallest integer which makes 
+0
+N
+ integer) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.11 
+Periodicity of under combination of discrete time signal – 
+x
+1
+ x
+2
+ 
+ x
+1
+  x
+2
+ 
+P P P 
+P NP NP 
+NP P NP 
+NP NP NP 
+ 
+  
+00
+0
+12
+3
+112233
+(  )(1)cos()cos()sin()
+n
+NN
+N
+x nABnCnDn
+
+
+=++  ++   ++        
+ 
+  
+123
+000
+(,,)
+o
+NLCM  N    NN=
+ 
+Note: 
+C.T.S D.T.S 
+0
+()x tT→
+ 
+0
+()x  nT=
+ 
+0
+()
+T
+x    at    b
+a
+−  +  =
+ 
+0
+()P checkx    an   bT−  +  →  =
+ 
+P   NP    NP=
+ 
+P   NP    NP=
+ 
+NP should not be constant NP should not be constant  
+ 
+➢  
+0
+(  )cos[]
+S
+x nAT   n=
+ 
+    
+0
+2
+RationalN
+
+=→
+
+, 
+0
+2
+Rational
+s
+T
+→
+
+
+, 
+0
+Rational
+s
+T
+T
+→
+ 
+ Orthogonal – If inner product of two Signal is zero  
+    
+*
+12
+( ).    ( )0x  t   x   t  dt
+
+−
+=
+
+, 
+0
+*
+12
+( )    ( )
+T
+x  t  x   t  dt
+
+
+,  
+*
+12
+(  )   (  )    0
+n
+x  n x   n
+
+=−
+=
+
+ 
+    
+0
+*
+12
+(  )   (  )    0
+nN
+x  n x   n
+=  
+=
+
+ 
+Energy ,   Power,   NENP: 
+(1) N.E.N.P
+()
+()
+xt
+xn
+→→
+ at any signal value of t/n 
+(2) Energy signal – Must have finite energy for infinite possible duration . 
+     
+(Joules)
+sec
+watt
+E
+P
+T
+
+=
+finite
+Infinite
+0=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.12 
+     
+ ➢ Formula -  
+2
+()
+x
+Ex tdt
+
+−
+=
+
+, 
+2
+()
+x
+n
+Ex n
+
+=−
+=
+
+  
+ ➢ 
+2
+2
+( )( )x tx   t=
+  for real value of 
+()xt
+. 
+ ➢ If   
+12
+( )( )( )x tx  tx   t=+
+ 
+  
+12
+**
+1212
+( )   ( )( )   ( )
+xxx
+EEEx  t  x   t  dtx   t  x   t  dt
+
+−−
+=   +   ++
+
+ 
+                                                
+12
+12
+Ifandare ortho gonal
+xxx
+xx
+EEE
+
+=+
+ 
+Note :  Signal     Energy  
+  
+()xt
+  
+⎯⎯→
+  
+x
+E
+ 
+  
+0
+()x t    t−
+ 
+⎯⎯→
+  
+x
+E
+ 
+  
+()xt−
+  
+⎯⎯→
+  
+x
+E
+ 
+  
+()x at
+  
+⎯⎯→
+  
+x
+E
+a
+ 
+  
+()x    at    b−+
+ 
+⎯⎯→
+  
+x
+E
+a
+ 
+  
+()Kx    at    b−   −  +
+⎯⎯→
+  
+2
+x
+E
+K
+a
+ 
+Discrete time Energy Signal: 
+     
+2
+()
+x
+n
+Ex n
+
+=−
+=
+
+ 
+2
+2
+(  )(  )  for    (  ) realx nx   nx n=
+ 
+     
+12
+**
+1212
+(  )   (  )(  )   (  )
+xxx
+nn
+EEEx  n x   nx   n x   n
+
+=−=−
+=   +   ++
+
+ 
+Average Value  
+    
+()
+()
+xt
+xn
+ is periodic 
+0
+0
+T
+N
+0
+0
+1
+0
+00
+11
+( )( )   ,   (  )(  )
+N
+T
+n
+x  tx t  dt  x  nx n
+TN
+−
+=
+→=
+
+
+ 
+    
+()
+()
+xt
+xn
+is non periodic 
+/2
+/2
+/2
+/2
+1
+(  )lim(  ) /,   ( )    lim( )
+T
+nN
+NT
+nN
+T
+x  nx n   N    x  tx t  dt
+T
++
+=
+→→
+=−
+−
+
+    ==
+
+
+
+
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.13 
+Power Signal 
+ 
+  Periodic (T
+0
+ / N
+0
+)  Non Periodic 
+
+0
+2
+Avrage  value of  x(t)
+2
+0
+1
+( )/ ( )
+x
+T
+Px tdt    MSVx    t
+T
+
+
+==
+
+ 
+/2
+22
+/2
+1
+lim( )( )
+T
+x
+T
+T
+Px tdtx t
+T
+→
+−
+==
+
+ 
+0
+0
+00
+Energy of 1 T  of   ( )
+xT
+x
+E
+xt
+P
+TT
+==
+ 
+ 
+     
+12
+/ 2/ 2
+**
+1212
+/2
+2
+1
+lim( )    ( )lim( )    ( )
+TT
+xxx
+TT
+T
+T
+PPPx  t  x   t  dtx   t  x   t  dt
+T
+→→
+−
+−
+=   +   ++
+
+  for non periodic  
+If  
+1
+()xt
+and 
+2
+()xt
+are orthogonal 
+→
+12
+xxx
+PPP=+
+ 
+Properties for Periodic Signal: 
+(1) Power signal has finite Energy. 
+     
+finite
+E
+P
+T
+→
+=
+→
+ 
+(2) 
+2
+()Kx    at    bK   P−   −  +  = −
+ 
+(3) 
+0
+2
+0
+00
+1
+()
+T
+ET
+Pxx tdt
+TT
+==
+
+ 
+Discrete Time Power Signal: 
+x(n)  is power signal  
+   x(n) is non periodic signal - 
+2
+1
+lim(  )
+(21)
+N
+x
+N
+nN
+Px n
+N
+→
+=−
+=
++
+
+ 
+              
+0
+0
+N
+x
+E
+P
+N
+=
+ 
+Causal non causal ant Causal: 
+(a) Causal signal 
+( )    0  for0x tt=
+ 
+ 
+[  ]   0 for0,1x nnn=     −
+ 
+ Part of graph for –ve value of time = 0 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.14 
+(b) Non causal – Which is not causal  
+ 
+(c) Anti causal 
+→
+ 
+( )    00
+(  )    00
+x tt
+x nn
+=
+=
+  Graph should be zero for +ve value of time including 0 
+ 
+[  ]causalun−
+        Anti causal 
+→
+Non causal  
+ 
+[1]un−−
+ - Anti causal  
+ 
+[]un−
+     - Non causal  
+➢ 
+()xt
+( )finiteIntegrable
+( )finiteAbsolutely  integrable
+x t  dt
+x t   dt
+
+−
+
+−
+→→
+→→
+
+
+ 
+➢ 
+(  )    finitesummable
+n
+xn
+
+=−
+=→
+
+ 
+ 
+(  )finiteAbsolutely summable.
+n
+xn
+
+=−
+=→
+
+ 
+ Bounded Signal – x(t)  is Bounded 
+ 
+()
+(finite)
+x tMt   −   
+ 
+ 
+()
+(finite)
+x tMt   −   
+ 
+ 
+Excos  / sin , sgn( ),   ( ),,0,   [  ]
+at
+ttt   u t    dc ean
+−
+−
+ 
+Static and Dynamic System : 
+ Static – output should depends only on present value  of input  
+ 
+2
+( )    sin[  ( )],   ( )( )Exy tx ty tx   t−==
+ 
+ Dynamic – Not static 
+ 
+( )    Even [  ( )],   ( )( ),   ( )(  )
+t
+d
+Exy tx ty tx t   y txd
+dt
+−
+−===
+
+
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.15 
+Causal and Non causal : 
+• Causal – output at any instant of time depends on either input at same instant of time or input at past instant of time. 
+     (OR) 
+• Output depends on past or present values of input. 
+• Non causal – which is not causal. 
+• Anti causal – output depends on future value of input value  
+Linear – Non liner: 
+ Linear equation : 
+y    mx   c=+
+ 
+ Non linear  : 
+2
+,sin   , cosyxxx=
+ 
+ linear system : Additivity + Homogeneity 
+ S.1  
+12
+11
+( )( )
+( )( )
+( )( )
+S
+S
+x ty t
+y  ty   t
+x  ty  t
+⎯⎯→
+→    +
+⎯⎯→
+ ...(i) 
+ S.2  
+22123
+( )( )( )( )( )
+S
+x   ty   tx  tx   ty   t⎯⎯→        +⎯⎯→
+ ...(ii) 
+ Equation (i) = equation (ii) 
+ S.3  
+4
+( )( )
+S
+A x ty   t⎯⎯→
+ ...(iii) 
+   
+( )    ?A y t=
+ ...(iv) 
+ equation (iii) = equation (iv) 
+→
+ Homogeneity is satisfied  
+Time variant and Invariant : 
+      
+00
+()/()x t    tS   Sy t    t−  ⎯⎯→⎯⎯→   −
+ 
+Identity definition of system. 
+     
+( )( )
+S
+x ty t⎯⎯→
+ 
+    
+11
+( )( )x  ty  t⎯⎯→
+ 
+    
+10
+( )()x  tx t    t=−
+ 
+    
+1
+( )    ?  ______ (i)yt=
+ 
+S-3  Mathematical  exp. 
+0
+[](iii)y t    t−  −−−−
+ 
+equation (i) = equation (ii)  Time Invariant  
+Invertible and Non Invertible:  
+Invertible – There must be a one to one mapping between the input and output . 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.16 
+S-1 Replace x and y . 
+S-2 Obtain y completely in terms of x  
+ S-3  
+ ➢  Inverse System may or may not be Invertible . 
+Stable and Unstable : 
+Stable S/S – Bounded input – Bounded output. 
+( ) /   (  )x tx n
+is Bounded –  
+   
+finite
+( );x tMt
+→
+     − 
+ 
+   
+(  );x nMt   − 
+ 
+ Ex- 
+( )(  )
+( )(  )(  )
+sinusoidal   sinusoidal
+x tx n
+dcdc
+u tu nn
+→
+→
+→
+ 
+Then y(t) must be bounded 
+  
+()
+()
+y tN
+y nN
+   
+   
+ finite 
+➢ Finite 
+→
+ time duration 
+ Bounded 
+→
+ Amplitude / Magnitude 
+1.2. Continuous Time LTI System 
+ 
+Convolution Integral : 
+     
+( ) *  ( )(  )  ()(  )  ()x th txh tdxh td   
+
+−−
+=−    =−
+
+ 
+Properties Convolution : 
+(1) 
+**A  B   B   A=
+ 
+(2) Cumulative:  
+( ) *  ( )( ) *  ( )x th th tx t=
+ 
+(  )  ()xh td
+
+−
+=−
+
+  
+( )( ) *  ( )
+Convolution operator
+y tx th t=
+→
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.17 
+(3) Distributive:  
+
+1212
+( ) *( )( )( ) *   ( )( ) *   ( )x th  th  tx th  tx th  t+=+
+ 
+(4) Associative: 
+
+1212
+( ) *( ) *   ( )( ) *   ( ) *   ( )x th  th  tx th  th  t=
+ 
+(5) 
+12
+( )( ) *  ( )y tx th tA    AA=  =  
+ 
+(6) 
+() *  ()[]x t    ah t    by t    a   b−−  =   − −
+ 
+(7) 
+(   ) *  (   )(   )x   th   ty   t−    − =  −
+ 
+(8) 
+1
+(   ) *  (   )(   )x ath aty at
+a
+=
+ 
+(9) 
+( ) *( )( )Ax tBh tABy t=
+ 
+(10) 
+( )( )( )
+nmm   n
+nmm   n
+d  x td  h tdy t
+dtdtdt
++
++
+ 
+
+ 
+ 
+ 
+Standard Result : 
+(1) 
+( ) *   ( )( )x ttx t=
+ 
+(2) 
+() *   ()()x t    at    bx t    a   b−−  =   − −
+ 
+(3) 
+( ) *   ( )( )ttt       =
+ 
+(4) 
+( ) *   ( )( )ttt−−−−−− =   
+ 
+(5) 
+() *   ()()t    at    bt    a   b−−  =   − −
+ 
+(6) 
+( ) *  ( )(  )
+t
+x t    u txd
+−
+=
+
+ 
+(7) 
+( ) *  ( )( )tu tu t=
+ 
+(8) 
+( ) *  ( )( )u tu tr t=
+ 
+(9) 
+() *  ()()u t    au t    br t    a   b−−  =   − −
+ 
+(10) 
+( )( )( )u tr tp t=
+ 
+(11) 
+2
+()
+() *  ()()()
+2
+−−
+−−  =   − −  =− −
+t    a   b
+u t    ar t   bp t    a   bu t    a   b
+ 
+(12)  
+(13)     
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.18 
+Differential of a Signal : 
+ 
+ x(t)  Slope Dx(t)dt → Slope 
+ 
+ 
+ 
+0S=   ⎯⎯→
+ 
+ 
+Part of time axis 
+ 
+Sm= +   ⎯⎯→
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+S= +  ⎯⎯→
+ 
+ 
+ 
+Upward Impulse 
+1
+A=
+ 
+ 
+ 
+ 
+ 
+ 
+S= − ⎯⎯→
+ 
+ 
+ 
+Downward Impulse 
+2
+A=−
+ 
+Integration: 
+( ),   ( )x t   y t
+ 
+    
+RunningIntegratio
+( )( )
+Area of   ( ) fromupto t
+t
+y tx t  dt
+xt
+−
+==
+−
+
+ 
+Convolution Method : 
+Method (1) 
+( ) *  ( )(  )
+t
+x t    u txd
+−
+=      
+
+ 
+Method (2) Rectangular pulse 
+Same duaration (Triangle)
+Different duration (Trapezoidal)
+→
+ 
+Method (3) 
+
+( )(1)(1)
+t
+y tx tx tdt
+−
+=+  +   −
+
+ 
+Method (4) Timeline Method 
+     
+( )( ) *  ( )(  )  ()y tx th txh td
+
+−
+==       −  
+
+ 
+  S -1 Given : 
+( )  and    ( )x th t
+ 
+  S – 2 
+(  ) and   ()xh t−
+ 
+  S – 3 Make time line of 
+(  )and   ()xvsh tvs   −   
+ 
+  S – 4 Vary 
+t
+ and determine the integration 
+Method (5) Graphical Method 
+     
+( )( ) *  ( )(  )  ()y tx th txh td
+
+−
+==       −  
+
+ 
+1
+A
+
+
+
+
+
+2
+A
+
+
+
+
+
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.19 
+  S -1 Given : 
+( )  andand( )x tvs th t  vs  t
+ 
+  S – 2 
+(  )and   (  )xvs thvs   
+ 
+  S – 3 
+()h tvs−   
+ 
+   
+foldRight Shift
+by t
+(  )(  )()hvshvsh tvs   ⎯⎯→    ⎯⎯⎯⎯→  −  
+ 
+  S – 4 Vary 
+t
+ and calculate integration 
+Note: Before solving the problem of convolution decide the range of convolution 
+1.2.1. Discrete Time L.T.I. System 
+     
+(  )(  )(  )(  ) *  (  )x nh ny nx n    h n⎯⎯→⎯⎯→   =
+ 
+     
+(  )(  ) *  (  )(   )  ()
+K
+y nx nh nx  K  h n    K
+
+=−
+==−
+
+ 
+(  ) :hn
+ unit impulse response of D. T LTI system 
+   Or 
+Mathematical representation of D. T LTI system 
+   Or 
+D.T LTI system parameter 
+    
+(  ) *  (  )(   )  ()(  )
+K
+x nnx Kn   Kx n
+
+=−
+  =  −   =
+
+ 
+    
+(  ) *  (  )(   )  ()(   )
+n
+KK
+x n    u nx K u n   Kx K
+
+=−=−
+=−   =
+
+ 
+Standard Result : 
+(1) 
+()()()
+1212
+*n   nn   nn   nn  −     −   =  −  −
+ 
+(2) 
+()()()
+1212
+*x  n   nn   nx  n   nn−     −   =   −  −
+ 
+(3) 
+()()()
+*1   (  )u  n    u  nnu n=+
+ 
+(4) 
+()()()()
+() *111u nu  nr  nnu  n++ =   +++  =  ++++++
+ 
+Method Of Discrete Time Convolution: 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.20 
+Basic Methods : 
+(1) By using standard Method 
+(2) Time line Method : 
+(  )(   )  ()
+K
+y nx K  h n   K
+
+=−
+−
+
+ 
+ 
+S.1(   ),  ()x K   h n    K−
+ 
+ S. 2  vary n and calculate summation . 
+(3) Graphical Method: 
+(  )(   )  ()
+K
+y nx K  h n   K
+
+=−
+=−
+
+ 
+ S.1  x (1) VS K 
+ S.2 
+foldRight
+shift by n
+(   )()()h K  VS Kh    K  VS Kh n   K  VS K⎯⎯→  −⎯⎯⎯⎯→   −
+ 
+ S.3 very n and calculation summation . 
+ 
+(  ),(  ),   (  )1x nl    h nm  y nl    m=== +  −
+ 
+Tabulation  
+ 
+    
+( )(  )  ()y txh td
+
+−
+=      −  
+
+(above system behaves as non causal system)
+(above system behaves as casual system).
+t
+t
+
+
+ 
+For  an LTI system to be causal system: 
+ 
+()    0h tt− = 
+ 
+ 
+()    00( )    0,for0h tttph tt− =−  − ==
+ 
+ 
+(  )    00h  pp=
+ 
+ 
+( )    00h tt=
+ 
+ 
+()    0   ;;1h n   Kn    Kn    K−   =  −
+ 
+ 
+()    0   ;0   ;1(  )    0 for0h n    Kn    Kn    Kh nn−   =−  −   −=
+ 
+ 
+(  )    0    ;0    ;1h  ppp= −
+   n  – 1 
+ 
+(  )    0   ;0  ;1h nnn= −
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.21 
+Stability of LTI System : 
+ 
+( )( )( )x th ty t⎯⎯→    ⎯⎯→
+ 
+ Let 
+()x tM  
+ 
+ 
+()x tM−   
+ 
+ 
+( )(  )y tM hdN
+
+−
+  
+
+ 
+ 
+finite
+()NM  hd
+
+
+−
+=  
+
+: finite
+(  )finite
+N
+hd
+
+−
+  →
+
+ 
+For discrete : 
+   
+(  )(   )y  nM  h  KN →
+  
+()x n   KM−
+ 
+   
+(   )finite,(   )finiteN    Mh Kh K
+
+−−
+=→→
+
+ 
+Note : 
+( ) :( )(   ) : stablesystemwhen0
+at
+atat
+h t   ee   u te  u   ta
+−
+−
+=+   −
+ 
+ 
+(  ) :(  )[1]
+n
+nn
+h n   aa u na  u   n
+−
+=+    − −
+ stable system when |a| < 1 
+1.3. Static and Dynamic System 
+For an L.T.I system to be static the unit impulse response 
+( ) /   (  )h th n
+must be an impulse signal. 
+Invertible and Non Invertible system– 
+   
+1
+()
+( )( )( )( )( )
+I
+yt
+x th th  ty tx t⎯⎯→    ⎯⎯⎯→⎯⎯→   =
+ 
+   
+1
+( )   [  ( ) *  ( )]y  tx th t=
+ 
+   
+1
+()
+( )( ) *    ( )( ) *[  ( ) *    ( )]
+II
+St
+y ty  th   tx th  th   t==
+ 
+   y(t) = x(t)  
+    
+1
+( ) *    ( )( )(  )
+()
+II
+h th   tS  tH   S
+HS
+=    =
+ 
+➢ For discrete 
+1
+()
+()
+I
+Hz
+Hz
+=
+ 
+➢ Unit step Response : 
+()
+( )( )
+ds t
+s th t
+dt
+=
+ unit impulse Response  
+➢ Unit impulse Response : 
+( )(  )(  )
+t
+h thds
+−
+      =  
+
+ unit step response  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.22 
+For discrete :  
+ Unit step - 
+(  ),   (  )(1)(  ) :s n   s ns nh n−   −  =
+ unit impulse response    
+ Unit Impulse - 
+(  ),(   )[  ]
+n
+K
+h nh Ks n
+=−
+=
+
+unit step response  
+LTI System in Cascaded : 
+ 
+     
+()x thtyt⎯⎯→  ⎯⎯→
+ 
+     
+123
+( ) *    ( ) *    ( )ht    h  th   th  t=
+ 
+LTI System in Cascaded: 
+     
+12
+( )( )( )( )x th  th  ty t⎯⎯→⎯⎯→⎯⎯→
+ 
+     
+12
+( )( ) *    ( )( )x th  th  ty t⎯⎯→⎯⎯→
+ 
+ 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.23 
+2 
+CONTINUOUS TIME 
+FOURIER SERIES 
+ 
+2.1. Introduction1 
+     
+0
+( )sinx tAt=
+0
+Sinusoidal
+PeriodicC→
+ 
+Fourier series is the representation of time domain non sinusoidal periodic signal as the weighted sum of harmonically related 
+, mutually orthogonal sinusoids . 
+2.1.1. Trigonometric Fourier Series: 
+ 
+    
+000
+1
+( )[(cos)   (   sin)]
+FSnn
+n
+xtaantbn    t
+
+=
+=  +  +
+
+ 
+        
+0
+0
+2
+T
+
+=
+
+        
+0
+,,
+nn
+a   a   b→
+Trigonometric Fourier series coefficient  
+   
+0
+0
+0
+00
+000
+()
+area( ) in
+1
+()
+T
+T
+x t  dt
+of  x tT
+aax t  dt
+TTT
+=  =
+
+
+ 
+a
+0
+ D.C value or avg value or mean value of x(t)  
+    
+0
+00
+0
+2
+( )cos() :1
+n
+T
+ax tn    t dt    f  nn
+T
+=   =      
+
+ 
+    
+0
+00
+0
+2
+( )sin():1
+n
+T
+bx tn    t dt    g  nn
+T
+=   =      
+
+ 
+x(t)  a
+0 
+a
+n
+ b
+0
+ 
+Real Real Real Real 
+Purely Imaginary  P.I P.I P.I 
+Complex Complex  Complex Complex 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.24 
+    
+nn
+nn
+aa
+bb
+−
+−
+=
+=−
+           
+1n
+ 
+    
+00
+1
+( )cos[]
+nn
+n
+x trrnt
+
+=
+=  + −
+
+ 
+Polar from of T.F.S. 
+•  
+0
+r→
+dc component of time domain nonsinusoidal periodic signal x(t). 
+• frequency of 
+dc
+ component = 0Hz 
+• Amplitude = r
+0
+ 
+• Power = 
+2
+0
+r
+ 
+• rms value = r
+0
+ 
+ 
+0
+cos()
+th
+KK
+rKtK −  →
+ Harmonic of time domain nonsinusoidal periodic signal . 
+ ➢ Frequency of K
+th
+ harmonic = K
+0
+ rad/sec , Kf
+0
+ Hz 
+ ➢ Amplitude of K
+th
+ harmonic 
+22
+KKK
+rab=  =    +
+ 
+ ➢ rms value of K
+th
+ harmonic =
+/2
+k
+r
+ 
+ ➢ MSV value of or power of K
+th
+ harmonic = 
+2
+2
+K
+r
+ 
+    
+0101202303
+( )cos()cos(2)cos(3)    _____
+FS
+Xtrrtrtrt=  + − + −  + −  +
+ 
+  
+    
+2
+22
+2
+22
+3
+12
+0
+( )___
+2223
+FS
+r
+rr
+A
+xtr=  +  +  +  +    =
+   Parseval Theorem  
+How to calculate absent harmonic in Time domain nonsinusoidal periodic signal: 
+00
+1,ST−
+ 
+0
+2,    ,
+nn
+Sa   a   b−
+ 
+22
+00
+3,1
+nnn
+Sra   rab  n−==   +   
+ 
+S – 4  find value of n for which 
+0
+n
+r=
+ 
+  
+0
+th
+K
+rK=
+ harmonic is absent . 
+Complex or Exponential Fourier series –  x(t) is real . 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.25 
+     
+0
+()
+jnt
+n
+n
+x tC e
+
+
+=−
+=
+
+ 
+     
+0
+000
+0
+1
+()
+T
+Cx t  dt    ar a
+T
+==  =
+
+ 
+     
+0
+0
+0
+1
+()
+n
+jt
+n
+T
+Cx t en
+T
+−
+=−  
+
+ 
+(1) 
+:1
+22
+nn
+n
+ab
+Cjn=  −
+ 
+(2) 
+:1
+22
+nn
+n
+ab
+Cjn
+−
+=  +
+ 
+(3) 
+00
+Ca=
+ 
+(4) 
+*
+nn
+CC
+−
+=
+ 
+(5) 
+:1
+2
+n
+n
+r
+Cn=
+ 
+ 
+1
+tan:1
+n
+n
+n
+b
+Cn
+a
+−
+
+  = −
+
+
+ 
+(6) 
+:1
+2
+n
+n
+r
+Cn
+−
+=
+ 
+ 
+1
+tan:1
+n
+n
+n
+b
+Cn
+a
+−
+−
+
+   =
+
+
+ 
+(7) 
+nn
+CC
+−
+=→
+ Magnitude spectrum : Even  
+(8) 
+nn
+CC
+−
+  = −   →
+ Phase spectrum :  Odd  
+      
+11
+CC=−
+ 
+Note: As Long as x(t) is real .  
+ 
+0
+Even
+n
+C   vs n→ →
+ 
+       
+0
+Odd
+n
+C   vs n →    →
+ It may looklike even when 
+n
+C
+is multiple of . 
+ (6)   absent frequency – If 
+0,0
+nn
+CC==
+ 
+ 
+→
+ n
+th
+ harmonic will be absent. 
+ (7)   Amplitude of K
+th
+ harmonic : 
+22
+2
+KKKK
+rabC=    +   =
+ 
+         rms value of K
+th
+ harmonic : 
+2
+2
+K
+K
+r
+C=
+ 
+         Power of K
+th
+ harmonic : 
+2
+2
+2
+2
+K
+K
+r
+C=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.26 
+ 
+Numerical : 
+Type 1 – validity of Trigonometric Fourier series and calculation of harmonies – 
+• Procedure Check the periodicity of given signal 
+ 
+• Given exp is valid F.S  
+• Given exp is not valid F.S  
+• Calculate harmonics 
+Type 2 – Calculation of complex F.S.C of sinusoid or combination of sinusoidal : 
+ S.1 Calculate    
+0
+
+0
+012
+2/
+(    ,, ______)
+T
+HCF
+
+ = 
+ 
+ S.2 Write x(t) in exponential from . 
+ S.3  
+0
+()
+jnt
+n
+x tC e
+
+=
+ replace 
+0
+ 
+ S.4 Compare S.2 and S.3   
+➢  Calculation of T.F.S coefficient when sinusoids are mentioned-  
+ S-1 Calculate 
+o
+
+ 
+ S-2  Calculate the harmonics 
+11
+22
+o
+o
+K
+K
+
+
+=
+=
+ 
+ S-3 Final values of 
+,
+nn
+ab
+ 
+Type 3 – Questions based on properties of Fourier series w.r.t complex F.S.C 
+ 1. Linearity- 
+12
+( )( )( )
+nn
+nnn
+Cd
+g tAx  tBx   tgACBd
+
+=+⎯→  =    +
+ 
+ 2. Time shifting property - 
+00
+0
+( )()
+jnt
+FSC
+nn
+g  tx t    tdeC
+
+=   +  ⎯⎯→  =
+ 
+     
+()
+n
+Cx t⎯⎯→
+ 
+   
+00
+()
+,
+nnnn
+xt
+gCgCn   t
+
+=      =  −
+ 
+ 3. Time Reversal - 
+0
+()
+FSC
+nn
+x tCC   vs n⎯⎯→  
+ 
+   
+00
+0
+()()
+( )(   )
+nnn
+g  nfn
+g tx   tgCg  vs n
+−
+
+=−
+=  − ⎯⎯→=   
+
+
+   
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.27 
+   
+ 
+ 
+ 4. Time Scaling –  
+0
+,( )
+FSC
+onno
+Tx tCC   vs   n⎯⎯→  
+ 
+   
+0
+00
+,()   ( )(   )()
+FSC
+nn
+T
+ag tx atCC  vs n a
+a
+
+
+=    ⎯⎯→  
+
+
+ 
+Time domain  Frequency Domain 
+Compression 
+⎯→
+ 
+Expansion 
+Expansion 
+⎯→
+ 
+Compression 
+ 5. Complex conjugate –  
+   
+,( )
+FSC
+oono
+Tx tC    vsn⎯⎯→
+ 
+   
+*
+,:   ( )* ( )
+FSC
+oonnno
+Tg  txtgCg   vs n
+−
+=⎯⎯→  =   
+ 
+()xt
+ 
+n
+C
+ 
+ 
+Real                      
+⎯⎯→
+ 
+Conjugate symmetry 
+*
+,
+nnnnnn
+CCCCCC
+−−−
+  =      =      =−
+ 
+Imaginary            
+⎯⎯→
+ 
+Conjugate Summitry 
+*0
+,180
+nnnnnn
+CCCCCC
+−−−
+  =−      =      =−   
+ 
+Conjugate            
+⎯⎯→
+ 
+Symmetry 
+Real 
+ 
+ 
+Conjugate anti      
+⎯⎯→
+ 
+Symmetry 
+Imaginary 
+ 
+ 
+x(t) C
+n
+ 
+R  E R  E 
+R  O I  O 
+I  E I  E 
+I  O R  O 
+ (6) Multiplication by complex exponential function. 
+       
+,( )
+FSC
+oonno
+Tx tCC   vs  n⎯⎯→  ⎯⎯→
+ 
+   
+( )( )
+o
+jm    t
+nn   mno
+g  tex tgCg   vs  n
+−
+=⎯→  =
+
+
+ 
+   
+( )( )
+o
+jm    t
+nn   mno
+g  tex tgCg   vs  n
+−
++
+=⎯→  =
+
+
+ 
+()xt
+ 
+n
+C
+ 
+E E 
+0 0 
+NENO NENO 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.28 
+ (7) Differentiation :   
+0
+,:   ( )
+FSC
+onno
+Tx tCC   vs  n⎯⎯→  
+ 
+       
+3
+3
+3
+()
+,:()
+ooon
+d  x t
+TjnC
+dt
+⎯→
+ 
+ (8) Integration Property :  
+,:  ( )
+FSC
+oonno
+Tx tCC   vs n⎯⎯→  
+ 
+       
+000
+0
+,:  ( )(  )
+t
+FSC
+n
+nn
+C
+Tg txdgg   vs n
+jn
+  
+
+−
+=⎯⎯→=  =
+
+ 
+ (9) Periodic convolution - 
+12
+( ) and( )x  tx   t
+are both periodic with some time period To. 
+   
+1212
+( ) *    ( )(  )    ()
+o
+T
+x  tx   txx   td  =−
+
+ 
+ Multiplication in time domain : 
+      
+001
+,( )
+n
+Tx  tC→
+ 
+      
+002
+,( )
+n
+Tx   td→
+ 
+   
+12
+Tabular Method
+( )( )( )*
+nnn
+g tx  t    x   tgCd
+⎯⎯→
+=        ⎯→  =
+ 
+Type 4 – Symmetry : 
+ (a) Even :- Even in 
+000000
+,,,
+2   22222
+T   TTTTT
+oror
+++−−
+  
+
+−−−
+  
+
+
+  
+ 
+ (b) Odd :- odd in 
+00
+,
+22
+TT−
+
+
+
+ 
+ (c) Half wave symmetry . 
+ (a) Odd HWS - 
+0
+()
+2
+T
+x  tx t
+
+   = −
+
+
+ 
+ (b) Even HWS - 
+0
+()
+2
+T
+x  tx t
+
+=
+
+
+ 
+ Effect of symmetry on T.F.S Coefficients . 
+ Case 1: x(t) is even  
+    
+0
+a
+0
+0
+=
+
+ but 
+0
+n
+b=
+ always , 
+:
+n
+a
+ will not be zero for all value of n. 
+   ➢ dc value may or may not be present. 
+   ➢ Harmonic of cosine decided by 
+n
+a
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.29 
+   ➢ All sine harmonics are absent. 
+   ➢ Frequency – 0HZ 
+→
+decide by 
+n
+a
+ 
+➢ Other frequency 
+→
+decide by 
+n
+a
+ 
+ Case 2: x(t) is odd  
+    
+0
+0 ,0,
+nn
+aab==→
+will not be zero always. 
+   ➢ dc is absent, all cosine harmonics absent, sine harmonic decided by 
+n
+a
+ 
+   ➢ 
+0HZabsent→
+ 
+    Other frequency 
+→
+decided by 
+n
+a
+ 
+ Case 3: x(t) is HWS- 
+    
+0
+/2
+0
+/2
+0
+0    foreven
+4
+( ) cos: odd
+o
+o
+n
+T
+o
+T
+a
+an
+x tnt dt  n
+T
+−
+=
+=
+=
+
+
+0
+0
+/2
+0
+0
+/2
+0   : even
+4
+( )sin
+n
+T
+n
+T
+bn
+bx tt dt
+T
+−
+=
+=+
+
+
+ 
+   ➢ dc is absent  
+   ➢ all even harmonic of sine / cosine are absent. 
+   ➢ all odd harmonic of sine /cosine are present . 
+   ➢ 0HZ: absent and 
+000
+,3   ,5fff
+−−−−−−−−
+ will be present . 
+ Case 4:  x(t) is Even + HWS (odd)  
+    
+0
+0,0: even
+0: odd
+n
+n
+aan
+an
+==
+
+0
+nn
+b=
+ 
+   ➢ dc absent  
+   ➢ all harmonic of sine and even harmonic of cosine are absent. 
+   ➢ all odd harmonic of cosine are present. 
+   ➢ OHZ 
+→
+ absent , 
+000
+,3   ,5prestentfff−−−
+ 
+ Case 5: x(t) is odd +HWS 
+    
+0
+00   :even
+n
+abn==
+ 
+    
+00: odd
+nnn
+abn=  
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.30 
+   ➢ dc absent  
+   ➢ all harmonic of cosine and even harmonic  of sine 
+→
+absent . 
+   ➢ odd harmonic of sine will be present. 
+   ➢ 0HZ 
+→
+ absent , 
+000
+,3   ,5presensfff→
+ 
+Fourier Transform: 
+       
+.
+( )(   )
+FT
+x tX⎯⎯→
+ 
+     
+/2
+/2
+(   )( ),(   )( )
+To
+j   tj   t
+To
+To
+Xx t edt   Xx t edt
+
+
+
+−−
+−−
+==
+
+ 
+        
+0
+/2
+0
+2
+()( )
+o
+o
+T
+jnt
+To
+Tl
+Xnx t  edt
+−
+−
+=
+
+
+
+ 
+       
+.
+( )(  )(  )(   )   .
+BLTS    j
+LT
+x tX  SX  SxF T
+=
+⎯⎯→⎯⎯⎯→
+
+
+ 
+     
+(  )( )ROCis part of  ROC.
+st
+X  Sx t e  dtsj
+
+−
+=⎯⎯→=
+
+
+ 
+        Property 
+( )(   ) thenx tx=   ⎯⎯→
+ 
+ 
+(1)()(   )
+(2)()(   )
+j   to
+o
+j   to
+x t    teX
+x t    toeX
+−
+−=
++=
+
+
+
+
+( )(  )
+()(  )
+()(  )
+o
+o
+St
+o
+St
+x tX  s
+x t    teX  s
+x t    toe   X  s
+−
+⎯→
+−  ⎯→
++  ⎯→
+ 
+ (1) 
+.
+( )1
+FT
+t  ⎯⎯→
+ 
+ (2)   
+ (3)  
+ (4) 
+.
+1
+()
+LI
+ut
+s
+⎯⎯→
+ 
+ (5) 
+2
+1
+()tu t
+s
+⎯→
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.31 
+ (6) 
+1
+!
+()
+n
+n
+n
+t  u t
+s
++
+⎯→
+ 
+ (7) 
+0
+0
+22
+0
+sin( )t  u t
+s
+
+⎯→
++
+ 
+ (8) 
+0
+22
+0
+cos( )
+s
+t  u t
+s
+⎯→
++
+ 
+Important Observation : 
+ (1)  
+(2)  
+ (3)  
+    
+    
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.32 
+    
+      
+Type 6: Parseval Theorem 
+   
+( ) :xt
+ Power signal, which is periodic with F.T.P 
+0
+T
+ absolute or Exact power 
+( ) :xt
+  
+      
+0
+2
+0
+1
+()
+x
+T
+Px   t  dt
+T
+=
+
+  (If  
+()xt
+ is real)  
+           
+0
+2
+0
+1
+()
+T
+x tdt
+T
+=
+
+ 
+      
+22
+2
+0
+1
+22
+nn
+x
+n
+ab
+Pa
+
+=
+
+=  ++
+
+
+
+ 
+Note: 
+()
+FSC
+n
+x tC⎯⎯→
+ 
+ (1) 
+2
+xn
+n
+PC
+
+=−
+=
+
+ 
+ (2) 
+0
+( )(0)
+n
+jn    tj   C
+nn
+nn
+x tC exC  e
+
+
+=−=−
+=
+
+ 
+ Drichlet’s condition -  Only sufficient condition not necessary  
+ 
+Statement : 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.33 
+(1) Any nonsinusoidal time domain periodic signal can always be Exactly written as weighted sum of Harmonically related 
+naturally orthogonal sinusoids is not completely true.  
+(2) Fourier series a nonsinusoidal time domain periodic signal converges at all points on the nonsinusoidal time domain 
+periodic signal is not Exactly True. 
+(3) The Fourier series representation of T.D. non sinusoidal periodic signal converge at ALMOST all the points on time 
+domain non sinusoids periodic signal, except at the point of discontinuity   
+x(t) : N.S. + P Fourier Series 
+Continuous in Amplitude 
+⎯⎯→
+ 
+Fourier Series converges at all points 
+Discontinuous in Amplitude
+⎯⎯→
+ 
+Fourier Series converges at almost all the point except the point of discontinue                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+ 
+ 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.34 
+3 
+FOURIER TRANSFORM 
+ 
+3.1. Continuous Time Fourier Transform 
+• 
+()xt
+ is non periodic signal 
+• 
+.
+( )(   )
+FT
+x tX⎯⎯→  
+ 
+• 
+2
+(  )( )or(   )( )
+j  tjft
+Xx t edtX  fx t edt
+
+− −  
+−−
+ ==
+
+ 
+• 
+(  )(  )X = 
+ 
+• 
+()
+1
+(   )2(   )
+2
+X   fff=     =   
+
+ 
+Note :  For applying F.T formula 
+()xt
+ should be N.P and absolutely integrable. 
+ 
+ 
+ 
+.
+( )(   )
+FT
+x tX⎯⎯→  
+ 
+ 
+volt/(rad/sec)
+1
+( )(  )rad/sec
+2
+jt
+x tXe    d
+
+
+−
+=→
+
+
+ 
+ 
+2
+volt/Hz
+( )(   )
+jft
+volt
+x tX  f  edf
+
+
+−
+
+=
+
+ 
+ 
+(  )(  )(  )
+j
+XXe    x =      
+ 
+ 
+(   )(   )(   )
+j
+X  fX  f   e    x  f=
+ 
+x(t) Formula of F.T F.T Exist  
+Energy Applicable Yes (always)  
+Power Not Applicable Always Exist 
+Limited sense⎯⎯→
+ 
+NENP except 
+()t
+ Not applicable No  
+()t
+ 
+Applicable Always Exist 
+2
+(  )( ),   (   )( )
+j  tjft
+Xx t edt  X  fx t edt
+
+− −  
+−−
+ ==
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.35 
+Properties  
+(1) Linearity 
+     
+11
+22
+( )(   )
+(   )(   )
+x  tX
+x    fX
+⎯→   
+⎯→   
+ 
+    
+1212
+( )( )(   )(   )(   )(   )g  tAx  tBx    fGAXBX=+⎯→   = +
+ 
+ Time shift -  
+( )(   )x tX⎯→
+ 
+    
+2
+0
+()(   )(   )
+oo
+j   tjf t
+x t    teXeX   f
+−−
+−  ⎯→=
+
+
+ 
+    
+2
+0
+()(   )(   )
+oo
+j   tjft
+x t    teXeX   f
+
++  ⎯→=
+ 
+ ➢ Does not affect the magnitude . 
+ ➢ 
+()()()()
+(   )cos,(   )sin
+22
+x t    ax t    ax t    ax t    a
+XaXa
+j
+        
+−  +   ++  −   −
+⎯→⎯→
+ 
+  
+()()()()
+(   )cos(2)   ,(   )sin(2)
+22
+x t    ax t    ax t    ax t    a
+X  fa  fX  fa  f
+j
+
+−  +   −+  −   −
+⎯→⎯→
+ 
+Frequency Shifting  
+( )(   )x tX⎯→
+ 
+    
+()
+0
+0
+()
+jt
+ex tX⎯→    −
+
+
+ 
+    
+0
+0
+( )()
+jt
+ex tX
+
+
+−
+⎯→    +
+ 
+    
+00
+0
+()()
+cos( )
+2
+XX
+t x t
+    
+
+−   +    +
+⎯→
+ 
+    
+00
+0
+()()
+sin( )
+2
+XX
+t x t
+j
+−   −    +
+⎯→
+  
+
+ 
+    
+00
+0
+()()
+cos 2( )
+2
+X   ffx  ff
+f tx t
+−   +   +
+⎯→
+ 
+    
+00
+0
+()()
+sin 2( )
+2
+X   ffX   ff
+f tx t
+j
+
+−   −    +
+⎯→
+ 
+Modulation Property  
+( )(   )x tX   f⎯⎯→
+ 
+    
+00
+0
+()()
+cos 2( )
+2
+X   ffX   ff
+f t x t
+−   +    +
+⎯→
+ 
+    
+00
+0
+()()
+sin 2( )
+2
+X   ffx  ff
+f t x t
+j
+−   −   +
+⎯→
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.36 
+ Time Reversal   
+( )(   )
+(    )()
+x tX
+x    tX
+
+
+⎯→
+− ⎯→  −
+( )(   )
+(   )()
+x tX   f
+x   tXf
+⎯→
+− ⎯→  −
+ 
+  
+ Time Scaling   
+( )(   )
+1
+()
+x tX
+x atX
+aa
+⎯→
+
+⎯→
+
+
+
+
+( )(   )
+1
+()
+x tX   f
+f
+x atX
+aa
+⎯→
+
+⎯→
+
+
+ 
+ Differentiation Property: 
+     
+( )(   )x tX⎯→
+ 
+     
+()
+(   )valid only when   ( )    0
+dx t
+j   Xx t
+dt
+⎯→⎯⎯→=
+ 
+     
+()
+(2)   (   )
+dx t
+j   f   X   f
+dt
+⎯→
+ 
+ If  
+()
+( )    0,   ( )then(   )F.T of [   ]
+G
+x tx tKXK
+j
+
+
+
+==+
+ 
+ (1) 
+.
+( )1
+FT
+t⎯⎯→
+ 
+ (2) 
+()()
+cos()
+2
+t    at    a
+a
+
+
+−  +   +
+=
+ 
+ (3) 
+()()
+sin()
+2
+t    at    a
+a
+j
+
+
++  −   −
+=
+ 
+ (3) One sided exponential , 
+( )( ) ,0
+at
+x te    u t   a
+−
+=
+ 
+     
+1
+()
+()
+X
+aj
+
+
+=
++
+ 
+        
+1
+( )(   )
+()
+at
+x te  u   t
+aj
+=   − ⎯→
+−
+ 
+ (4) Two sided exponential  = 
+22
+2
+( )(   )
+at
+a
+x teX
+a
+−
+=   ⎯→=
++
+
+
+ 
+ (5) 
+( )( )
+at
+x tesgn t
+−
+=
+  
+22
+2
+0,(   )
+j
+aX
+a
+−
+  ⎯→=
++
+
+
+
+ 
+ (6) Multiplication - 
+()
+()
+dx
+tx tj
+d
+
+
+=+
+ 
+     
+1
+!
+[( )]
+()
+nat
+n
+n
+t   e   u t
+aj
+−
++
+=
++
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.37 
+ (7) Even Triangular pulse:–  
+ 
+  Fourier Transform of power signal (Type II) 
+      or 
+  Periodic + Non periodic  
+  ➢ Formula not applicable , properties applicable . 
+  ➢ Limitedly defined F.T  so can . not be calculated by L.T. 
+  ➢ Obtained by limiting Type 1 signal. 
+   (1) 
+.
+12(   )
+FT
+ ⎯⎯→
+ 
+    
+.
+1(   )
+FT
+f⎯⎯→
+ 
+   (2) 
+()
+[   (   ).  (  ( ))]
+dx t
+jXF T  x  t
+dt
+⎯→−
+ 
+   (3) 
+000
+cos()()t         ⎯→−   +−
+ 
+     or 
+            
+00
+11
+()()
+22
+ffff−   ++
+ 
+   (4) 
+000
+sin[  ()()]t
+j
+
+       ⎯→−   −   +
+ 
+       or  
+     
+00
+1
+[  ()()]
+2
+ffff
+j
+−   −   +
+ 
+ Duality  
+.
+( )(   )
+FT
+x tX⎯⎯→
+  
+.
+( )(   )
+FT
+x tX   f⎯⎯→
+ 
+   
+.
+( )2()
+FT
+X  tx⎯⎯→    −
+ 
+.
+( )()
+FT
+X  txf⎯⎯→  −
+ 
+ Steps : 
+  (1) Identify the 
+()xt
+and try to obtain 
+()X
+ from 
+()xt
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.38 
+  (2) If step 1 fails then  
+    
+( )(   )
+t
+x tG
+
+
+=
+⎯⎯⎯→
+ 
+     or  
+    
+( )(   )
+t
+x tG
+
+
+=
+=
+ 
+  (3) 
+.
+( )(   )
+FT
+g  tG⎯⎯→
+ 
+   
+.
+( )2()
+FT
+G tg⎯⎯→    −
+ 
+Important Result: 
+   
+.
+sin
+FT
+at
+t
+
+⎯⎯→
+
+
+    
+   
+2
+.
+sin
+FT
+at
+t
+
+⎯⎯⎯→
+
+
+   
+ (1)  
+ (2) 
+sin
+or( ) or sin  ( )
+at
+sa tc t
+t
+⎯→
+     
+ (3)  
+ (4)  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.39 
+Area Property: 
+ (1) 
+(   )( )
+jt
+Xx t edt
+
+
+
+−
+−
+=
+
+ 
+  
+0
+(   )( )Xx t  dt
+
+
+
+=
+−
+=
+
+ 
+  Area of  
+0
+( )( ).(   )x tx tF T   X
+
+
+
+=
+−
+⎯⎯→
+
+ 
+ (2) (i)   Area of 
+(   )(   )2(0)XXdx     
+
+−
+==
+
+ 
+  (ii) 
+0
+( )(   )
+t
+x tX   f  df
+
+=
+−
+=
+
+ 
+  Convolution 
+11
+( )(   )x  tX⎯→
+ 
+    
+22
+( )(   )x   tX⎯→
+ 
+    
+.
+1212
+( ) *    ( )(   )(   )
+FT
+x  tx   tXX⎯⎯→
+ 
+Note: A sin c 
+1
+(    )*   sin  (    )sin  (   )t    BctABc  kt
+m
+
+=
+
+
+
+ 
+max (   ,   )m=
+ 
+          
+min (   ,   )K=
+ 
+ Multiplication in time domain  
+ 
+
+121212
+11
+( ).    ( )(   ) *(   )(  )()
+22
+x  t   x   tXXXXd
+
+−
+⎯→=−
+
+       
+
+ 
+  
+121212
+( ) .( )(   ) *(   )(  )()x  tx   tX   fX    fXX    fd
+
+−
+⎯→=−
+
+  
+ 
+  Integration Property – 
+  
+1(   )
+(  )( ) *  ( )(   )(   )(0)  (   )
+t
+X
+xdx tu tXX
+jj
+−
+
+=⎯→+=+
+
+
+
+
+        
+
+ 
+  Complex conjugate - 
+**
+* ( )(   )  or()xtXXf⎯→−
+ 
+Important table: 
+x(t) 
+X() 
+Even  Even  
+Odd  Odd  
+NENO NENO 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.40 
+x(t) 
+X() 
+Real  Conjugate symmetry 
+Imaginary  Conjugate anti symmetry  
+Conjugate Symmetry  Real 
+Conjugate anti symmetry  Imaginary  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Parseval’s Energy Theorem – 
+ (1) 
+1
+( )  ( )(   )   ()(   )   ()
+2
+x t  h t  dtXHdX   f  Hf  df
+
+−−−
+=−=−
+
+      
+
+ 
+ (2) 
+2
+1
+( )(   )   ()(   )   ()
+2
+x   t  dtXXdX   f  Xf  df
+
+−−−
+=−=−
+
+      
+
+ 
+ (3) 
+***
+1
+( )   ( )(   )(   )(   )(   )
+2
+x t  h   t  dtXHdX   f  H    f  df
+
+−−−
+==
+
+     
+
+ 
+ (4) 
+***
+1
+( )   ( )(   )(   )(   )(   )
+2
+x t  x   t  dtXXdX   f   X    f  df     
+
+
+−−−
+==
+
+ 
+ F.T  of  Gaussian Pulse  
+   
+2
+t
+e    dt
+
+−
+−
+=
+
+  
+2
+2
+4
+at
+a
+ee
+a
+
+
+−
+−
+⎯→
+ 
+       
+22
+tf
+ee
+−−
+⎯→
+ 
+ LTI System  
+    
+( )( )( )( ) *  ( )
+(   )(   )(   )
+x th ty tx th t
+XHY
+⎯⎯→    ⎯⎯→   =
+ 
+  
+(  )(  )(  )YHX=   
+ 
+  
+(   )(   )(   )YXH    =    +
+  
+  ➢ 
+222
+11
+(   )(   )(   )
+22
+y
+EydHXd
+
+−−
+==
+
+      
+
+ 
+x(t) 
+X() 
+RE RE 
+RO IO 
+IE IE 
+IO RO 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.41 
+   = 
+222
+(   )(   )(   )Y  fdfH  fX   fdf
+
+−−
+=
+
+ 
+   Eigen values and eigen function –  
+   Eigen function of LTI S/S 
+()
+()
+xt
+LTI
+hty t⎯⎯⎯→  ⎯⎯→   =
+   
+   
+()
+0
+0
+( )(  )( )
+o
+S tS t
+x teH  Sy te   H  S=   ⎯⎯→⎯⎯→   =
+ 
+   
+()
+00
+0
+( )(   )( )
+j    tj    t
+x teHy teH=   ⎯⎯→⎯⎯→   =
+
+
+ 
+   
+()
+000
+eigen value
+cos( )(   )( )cos
+even
+Ath tHy tAt  H⎯⎯→    →⎯⎯→   =
+ 
+   
+()
+000
+sin( )(   )( )sinAth tHy tAt H⎯⎯→   ⎯⎯→   =    
+ 
+ 
+    
+ 
+ 
+   
+()()()()
+000
+cos( )cosAth tHAtH+  ⎯⎯→    ⎯⎯→+         
+ 
+   
+()()()()
+000
+sin( )sinAth tHAtH+  ⎯⎯→    ⎯⎯→+         
+ 
+   
+()
+()
+()
+()()
+()
+()()
+()
+Real
+000
+0
+0
+000
+not an eigen function
+cos
+cos
+()
+sin
+sin
+A HtH
+At
+h tH
+At
+A HtH
+
++  +
++
+⎯⎯→   ⎯⎯→
++
++  +
+  
+
+
+
+  
+ 
+Case 1 
+()ht
+is even / 
+()H
+ is even  
+  ➢ Both A sin 
+()
+o
+t+
+, A cos 
+()
+o
+t+
+will be eigen function with same eigen value  
+   
+()
+o
+H
+ not  necessarily real . 
+Case 2 
+()ht
+is real and even 
+  ➢ A 
+0
+sin()t+
+ and A 
+0
+cos()t+
+are eigen function with same real eigen value 
+0
+()H
+ 
+Case 3  
+()ht
+ is real . 
+  ➢ A 
+0
+cos()t+
+and A 
+0
+sin()t+
+is not an eigen function. 
+  
+()ht
+ 
+()H
+ 
+R  E R  E 
+R  O I  O 
+I  E I  E 
+I  O R O 
+()Kx t
+eigen value of  LTI System
+Real or complex or 1
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.42 
+4 
+LAPLACE 
+TRANSFORM 
+ 
+4.1. Introduction 
+Bilateral T.F 
+(  )( ).  [  ( )]
+stt
+X  Sx t e   dt    F T  x t e
+
+
+−−
+−
+==
+
+ 
+Unilateral T.F 
+0
+(  )( )
+st
+X  Sx t  e   dt
+−
+
+−
+=
+
+ 
+Note: for 
+()XS
+to be finite or for 
+()XS
+to converge  
+1( )
+t
+Sx t  e
+−
+−
+ must be absolutely integrable . 
+  
+( )finite
+t
+x t edt
+
+
+−
+−
+→
+
+ 
+S – 2 
+(  )( )
+st
+X  Sx t  e   dt
+
+−
+−
+=
+
+ 
+  
+
+
+0
+..
+0
+0
+1
+(  )When  Re
+( )( )
+(  )When  Re
+o
+st
+B L T
+X  sS
+SS
+x te    u t
+X  sS
+−
+
+= −
+
++
+=⎯⎯→
+
+
+= −
+
+
+
+ 
+ ➢ 
+
+0
+0
+1
+( )(  )ROC : ReRe
+o
+St
+eu tX  SSS
+SS
+−
+⎯→== −
++
+ 
+  Pole : 
+0
+SS=−
+         
+
+0
+ReReRHPSS−
+ 
+  
+0
+0
+1
+( )(  )
+St
+e   u tX  S
+SS
+⎯→=
+−
+ 
+  Pole : 
+0
+SS=
+         
+
+0
+ReReSS=
+ 
+  RHP       
+
+0
+ReReSS
+ 
+  
+
+0
+0
+1
+(   ):ReRe
+Sto
+e   u   tROCSS
+SS
+−    − ⎯→
+−
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.43 
+Properties 
+  (1) Linearity  - 
+111
+( )(  ):x  tX   SROC   R⎯→
+ 
+     
+222
+( )(  ):x   tX   SROC  R⎯→
+ 
+   Case 1   
+121212
+( )( )( )(  )(  )(  ) ::g  tAx  tBx   tG  SAX   SBX   S    ROC  RR=+⎯→=+
+ 
+      
+..
+..
+Double sided
+R S R
+L S S
+→
+→
+→
+ 
+ Case 2: 
+1212
+( )( )( )(  )(  )(  )g  tAx  tBx   tG  SAX   SBX   S=+⎯→=+
+ 
+   Finite duration + absolutely  ROC – entire S plane 
+Inferable too    
+  (2) Time Shifting -  
+1
+( )(  ):
+BLT
+x tX  SROC   R⎯⎯→
+ 
+      
+1
+()(  ):
+o
+st
+o
+x t    teX  SROC   R
+−
+−  ⎯→
+  
+      
+1
+()(  ):
+o
+st
+o
+x t    te   X  SROC   R−  ⎯→
+ 
+  (3) Multiplication with complex exponential 
+      
+( )(  ): Re[  ]x tX  SROCS⎯→
+ 
+      
+
+00
+( )(): Re
+o
+St
+e   x tX  S   SROCS   S⎯→   −−
+ 
+      
+
+00
+( )(): Re
+o
+St
+ex tX  S    S   ROCS    S
+−
+⎯→   ++
+ 
+  ➢   B.L.T  always have associated ROC with them . 
+Properties of R.O.C 
+ (1) R.O.C may or may not include zeros of x(s). 
+ (2) R.O.C can not includes poles of  x(s) 
+  be cause 
+()
+p
+X  S    S=   ⎯⎯→
+ ROC is either (1) Right ward of pole  
+         (2) Left ward of pole  
+         (3) Bounded between poles  
+ (3) If 
+()xt
+ is absolutely integrable then ROC of X(s) must include 
+j
+ axis. 
+ (4) 
+()xt→
+ finite duration + absolutely integrable . ROC of  X(s) will be entire s plane  
+  
+()
+−  +
+ 
+  (i) Impulse signal  
+  (ii) finite duration + finite amplitude 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.44 
+ (5) 
+( ).  .x t  is R S S
+(  ) does not exist even for single value of
+(  ) exist then ROC will be right of  right most pole
+XS
+If  X  S
+
+ 
+ (6) 
+( ) is L.S.Sxt
+ 
+(  ) does not exist even for single value of
+(  ) exist then ROC is left of  the left most pole.
+XS
+If  X  S
+
+ 
+ (7) 
+( ) is B.S.Sxt
+(  ) does not exist even for single value of
+If(  ) exist then ROC will be in strip formboundedbetween poles.
+XS
+XS
+
+ 
+Some Important Results: 
+ (1) 
+( )1ROC:entire S planet⎯⎯→
+ 
+ (2) 
+1
+()ut
+S
+⎯⎯→
+   
+
+Re0S
+ 
+ (3) 
+1
+()ut
+S
+−  − ⎯⎯→
+   
+
+Re0S
+ 
+ (4) 
+1
+()
+at
+e    u t
+Sa
+−
+⎯⎯→
++
+  
+
+ReSa−
+ 
+ (5) 
+1
+()
+at
+e  u t
+Sa
+⎯⎯→
+−
+  
+
+ReSa
+ 
+ (6) 
+1
+()
+at
+e   u    t
+Sa
+−
+−    − ⎯⎯→
++
+  
+
+ReSa−
+ 
+ (7) 
+22
+2
+at
+a
+e
+aS
+−
+⎯⎯→
+−
+   
+
+ReaSa− 
+ 
+ (8) 
+0
+1
+()
+o
+jt
+eu t
+Sj
+−
+⎯⎯→
++
+
+
+  
+
+: Re0S
+ 
+ (9) 
+22
+0
+cos( )
+o
+S
+t u t
+S
+⎯⎯→
++
+
+
+ 
+
+ROC: Re0S
+ 
+ (10) 
+0
+0
+22
+0
+sin( )t u t
+S
+⎯⎯→
++
+
+
+
+ 
+
+ROC: Re0S
+ 
+  
+..
+0
+22
+0
+()
+cos( )
+()
+B L T
+at
+Sa
+etu t
+Sa
+−
++
+⎯⎯→
+++
+
+
+Re{}   0Sa+
+ 
+  
+..
+0
+0
+22
+0
+sin( )
+()
+B L T
+at
+etu t
+Sa
+−
+⎯⎯→
+++
+
+
+
+Re{}   0Sa+
+ 
+  Time Reversal - 
+( )(  )x tX  S⎯→
+
+: ReROCS
+ 
+    
+(    )()x    tXS− ⎯→  −
+ 
+
+: ReROCS−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.45 
+ Multiplication by t  
+( )(  )x tX  S⎯→
+ 
+    
+1
+!
+()
+n
+n
+n
+t  u t
+S
++
+⎯→
+
+: Re0ROCS
+ 
+    
+( )(  )
+d
+tx tX  S
+ds
+⎯⎯→−
+ 
+ 
+    
+( )sin [  ( )()]x tAt u tu t=−   −
+ 
+    
+2
+(1)
+()
+1
+S
+Ae
+XS
+S
+−
++
+=
++
+ ROC : entire S plane . 
+Laplace Transform of Causal Periodic Signal : 
+ 
+     
+( )( )()(2  )x tp tp t   Tp tT=    +   −  +   −   −−−
+ 
+     
+()
+()
+1
+ST
+PS
+XS
+e
+−
+=
+−
+ only when 
+0
+ 
+ Time Scaling   
+( )(  )
+BLT
+x tX  S⎯⎯→
+ 
+: Re[  ]ROCS
+ 
+     
+1
+()
+BLT
+S
+x atX
+aa
+
+⎯⎯→
+
+
+ 
+: Re
+S
+ROC
+a
+
+
+
+ 
+ Divide by T property 
+( )(  )x tX  S⎯→
+  
+ROC : Re(  )S
+ 
+     
+()
+()
+xt
+X  S  ds
+t
+
+−
+⎯→
+
+ 
+ROC : Re[  ]S
+ 
+Inverse Laplace Transform: 
+ (1) 
+(. )
+1
+()
+()
+at
+at
+e   u  t
+Sa
+e   u t
+−
+−
++
+−
+  
+When    Re{  }
+When    Re{  }
+Sa
+Sa
+−
+−
+ 
+ (2) 
+2
+()
+1
+()
+()
+at
+at
+te   u t
+Sa
+te   u    t
+−
+−
++
+−−
+ 
+Re{  }
+Re{  }
+Sa
+Sa
+−
+−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.46 
+ (3) 
+()
+1
+()
+ut
+S
+ut−−
+   
+Re{  }   0
+Re{  }   0
+S
+S
+
+
+ 
+ (4) 
+0
+0
+22
+0
+0
+sin( )
+sin(   )
+t u t
+S
+t u   t
+
+
++
+−     −
+ 
+Re{  }   0
+Re{  }   0
+S
+S
+
+
+ 
+ (5) 
+0
+22
+0
+0
+cos( )
+cos(   )
+t u t
+S
+S
+t u    t
+
++
+−      −
+ 
+Re{  }   0
+Re{  }   0
+S
+S
+
+
+ 
+Important Tables: 
+ (1) Table 1 : X(S) : Rational/ Irrational 
+  ROC is known and x(t) to be calculated 
+ROC x(t) 
+R. H. P    
+⎯⎯→
+ 
+R. S. S 
+ 
+L. H. P
+⎯⎯→
+ 
+L. S.S 
+STRIP
+⎯⎯→
+ 
+B.S.S 
+ (2) Table 2 : X(S): Rational/ Irrational  
+   Nature of x(t) is known and ROC to be decided.  
+x(t) ROC 
+R. S. S R. H. P     
+L. S.S L. H. P 
+B.S.S STRIP 
+ (3) Table 3 :  X(S): Rational  
+  ROC is known and x(t) to be calculated 
+ROC x(t) 
+R. H. P    
+⎯⎯→
+ 
+Causal 
+ 
+L. H. P
+⎯⎯→
+ 
+Anti causal 
+STRIP
+⎯⎯→
+ 
+Non causal 
+(causal + Anti causal) 
+ (4) Table 4 X(S):   Rational  
+  Nature of  x(t)is known and ROC is to be decided 
+x(t) ROC 
+Causal R. H. P     
+Anti causal L. H. P 
+Non causal STRIP 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.47 
+Note : (1) If ROC is entire s plane then x(t) will be finite duration finite amplitude 
+  (2) If X(S) is irritation then always calculate x(t) to check causal, anti-causal non causal nature. 
+   
+()
+no.of non repeated
+complex conjugate
+poles
+No. of  R.O.C    No of I.L.Tno of  non Repeated Realpoles1
+2
+
+
+
+
+
+==++
+ 
+LTI System  
+   
+12
+(  ) :(  ) :(  )X  S    RH  S    RY  S⎯⎯→⎯⎯→
+
+12
+12
+.   .ROC
+Exist
+(  )(  )   (  )ROC :
+D N ERR
+Y  SX  S  H  SRR
+→= 
+=
+ 
+Differentiation in time domain . 
+   
+..
+1
+( )(  ):
+B L T
+x tX  SROC   R⎯⎯⎯→
+ 
+   
+..
+1
+()
+(  ): at leas
+B L T
+dx t
+SX  SROCt R
+dt
+⎯⎯⎯→
+ 
+ Integration in time domain . 
+   
+()
+t
+xd
+−
+  ⎯⎯→
+
+ 
+   
+
+1
+( ) *  ( )
+Re0
+x tu t
+RS
+⎯⎯→
+
+
+1
+..
+()
+:Re0
+D N E
+XS
+ROC  RS
+S
+ 
+
+ 
+ Stability of an LTI system – for an LTI system to be stable 
+ (1) 
+()ht
+ must be absolutely integrable 
+ (2) For 
+()ht
+must be absolutely integrable, 
+()HS
+must include 
+j
+ axis. 
+ Causality of an LTI system-  
+ (1) 
+()ht
+ must be causal signal . 
+ (2) For an LTI system having rational H(S) : ROC of  H(S) must be right of right most pole. 
+  Anti causal of an LTI system - 
+()ht
+⎯⎯→
+anti causal  
+  ROC of rational 
+()HS⎯⎯→
+Left of left most pole  
+  Non causality of an LIT system - 
+()ht⎯⎯→
+Non casual  
+  For rational 
+(  ):ROCmust bein stripform.HS
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.48 
+  Causal and stable - 
+()HS
+ rational 
+→
+All the poles of 
+()HS
+must be in left hand side S plane  
+  
+()HS
+Irrational 
+→
+ (ROC include 
+j
+ axis) 
+()ht
+ is causal . 
+  Anti causal and Stable  
+()HS
+ rational : All poles of 
+()HS
+must be strictly on right half side of S – plane. 
+  
+()()
+(  )IrrationalROC include jω axis  ()is anti causalH  Sh t
+ 
+  Non casual and stable - 
+()HS
+ rational : Poles of 
+()HS
+must be located on either side of 
+j
+ axis  
+  
+()HS
+ Irrational : (ROC  includes 
+j
+ axis) (
+()ht
+is non causal)  
+Important Table  
+  (1) H(S) : Rational     
+     
+ 
+   
+  (2) 
+LTI System  ROC 
+Causal RHP 
+Anti causal LHP 
+Non causal STRIP 
+   Unilateral L.T 
+0
+(  )( )No ROC exist
+St
+X  Sx t  e    dt
+−
+
+−
+=
+
+ 
+   
+
+( )( )  ( )ULT   x tBLT   x t  u t=
+ 
+Properties of ULT 
+(1) Differentiation property  
+     
+()
+(  )(0  )
+ULT
+dx t
+SX  Sx
+dt
+−
+⎯⎯→−
+ 
+     
+2
+2
+2
+( )(0  )
+(  )(0  )
+ULT
+d  x tdx
+S  X  SSx
+dtdt
+−
+−
+⎯⎯→−−
+ 
+(2) Integration Property – 
+     
+0
+()
+()
+()
+t
+xd
+XS
+xd
+SS
+−
+
+−
+⎯→+
+
+
+
+
+ 
+ROC LTI  System 
+R.H.P Causal 
+L.H.P Anti causal 
+STRIP Non  causal 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.49 
+(3) Time Shift –  
+    
+0
+0
+()(  )
+st
+ULT
+Causal
+x  t    teX  s
+−
+
+−  ⎯⎯→
+ 
+(4) Convolution: 
+( )( ) *  (1)(1)x tu tu tr t=+  =   +
+ 
+    
+2
+111
+()XS
+SSS
+=    =
+ 
+Linear constant coefficient differential equation – 
+A  D.E will represent a liner system if and only if   
+   (i) No higher power of  x(t) and its derivative and y(t) and its derivative are allowed. 
+ (ii) No product term of x(t) and y(t) and their derivatives are allowed. 
+ (iii) No addition of constant term 
+Transfer function by ULT   
+    
+(  )(  )(  )X  SH  SY  S⎯⎯→⎯⎯→
+ 
+    
+()
+()
+()
+YS
+HS
+XS
+=
+ 
+ If initial conditions are zero: 
+(1) T.F can be calculated  
+(2) 
+()yt
+can be calculated from T.F 
+(3) If initial condition not zero – T.F can be calculated but 
+()
+yt
+can not be calculated from T.F. 
+Types of Responses : 
+Case 1.  
+Transient Response
+( )    0( )(  )( )(  )
+Zero input Response
+I.C  0
+ZIR
+x th tH  sy tys
+
+= ⎯⎯→    →⎯⎯→   =
+
+
+ 
+  
+Steady state Response
+( )    0( )(  )( )(  )
+Zero  State  Response
+I.C = 0
+ZSR
+x th tH  Sy tYS
+
+  ⎯⎯→    ⎯⎯→   =
+
+ 
+  
+1
+( )( )(  )( ) :x th tH  Sy  t⎯⎯→   ⎯⎯→
+Poles of input forced Response, 
+  
+( )( )(  )( ):x th tH  Sy t⎯⎯→   ⎯⎯→
+  Poles of system Natural Response, 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.50 
+Initial value Theorem on ULT –  
+(1) Applicable only when x(t) is causal. 
+(2) Helps in calculation of initial value 
+(0  )x
++
+not initial condition 
+(0  )x
+−
+ 
+      
+()
+()
+()
+Ns
+Xs
+Ds
+=
+ 
+Note: while applying I.V.T common factors in N(S) and D(S) must be cancelled out . 
+   
+lim   ( )lim(  )
+S
+to
+x tSX  S
++
+→
+→
+=
+( )is casual
+()
+rr
+xt
+x sDN→
+ 
+4.2. Final value Theorem  
+(1) Applicable only when x(t) is casual . 
+(2) While applying F.V.T common factor must cancelled out. 
+    
+0
+lim  ( )   lim(  )
+tS
+x tSX  S
+→→
+=
+ 
+Case : 1.  If all poles of 
+()SX  S
+ lies strictly in LHP . 
+  (i) Final value is finite  
+  (ii) FVT applicable  
+Case : 2. If poles location of is 
+()SX  S
+as shown below .  
+ 
+  (i) Final value is indeterminate. 
+  (ii) FVT is not applicable. 
+Case : 3. In all other cases 
+  (i) Final value is 
+
+ 
+  (ii) F.V.T is not applicable 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.51 
+5 
+Z TRANSFORM 
+5.1. Introduction 
+• Z domain signal 
+• 
+()
+()
+()
+NZ
+XZ
+XZ
+=
+ 
+ 
+Laplace Tx Z.T 
+Sj=+
+ 
+j
+Zre
+
+=
+ 
+:PointS    ajb=+
+ 
+: Point
+o
+j
+o
+Zr e
+
+=
+ 
+Re[  ]:sa=
+Line parallel to 
+j
+axis 
+:
+o
+Zr=
+Circle concentric to unity circle 
+1Z=
+ 
+
+Re:Sa
+Region parallel to 
+j
+axis 
+o
+Zr
+Region concentric to unity circle. 
+Relation between Z.T and L.T 
+     
+(  )(  )
+n
+n
+Y  zx n z
+
+−
+=−
+=
+
+ 
+s
+st
+Ze=
+ 
+       
+s
+T
+Ze
+
+=
+ 
+     
+s
+ZT=
+ 
+Mapping  
+0
+ 
+Left Half of s plane  
+01Z
+ 
+Family of circles having radius less then 1. 
+0
+ 
+Right half of s plane  
+1Z  
+ 
+Family of circles having radius greater then 1.  
+0=
+ 
+j
+ axis 
+1Z=
+ 
+Unity circle  
+ 
+ (1) Vertical line in s plane 
+→
+ A circle in A.C.W in Z-plane  
+ (2) Left half side of s plane 
+→
+ Inside unity circle in Z-plane  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.52 
+ (3) Left side nature 
+→
+ ln ward nature in Z – plane  
+ (4) Right hand side of s plane – outside of unity circle in z – plane   
+ (5) Right side nature 
+→
+ outside nature in z- plane.  
+ (6) 
+j
+ axis mapped onto unity circle.  
+ (7) origin in s plane is mapped 
+1
+ST
+ze==
+ 
+Important Analogy  
+ C.T signal           D.T Signal  
+ u(t)    u(n) 
+ u(-t)   u(-n-1) 
+()
+at
+e    u t
+−
+  
+()
+n
+a  u  n
+ 
+ 
+()
+at
+e    u  t
+−
+−
+  
+(1)
+n
+a u    n−   − −
+ 
+ 
+ B.Z.T 
+  
+0
+0
+(   )    (  )
+n
+Z
+zu n
+ZZ
+⎯⎯→
+−
+  
+0
+:ROC   ZZ
+ 
+  
+0
+0
+(   )    (1)
+n
+Z
+zu    n
+ZZ
+−− −  ⎯→
+−
+ 
+0
+:ROC   ZZ
+ 
+ (1) 
+(  ):
+n
+Z
+a u nROC   Za
+Za
+⎯→
+−
+ 
+ (2) 
+1
+(  ):
+1
+n
+Z
+a   u nROC   Z
+a
+Z
+a
+−
+⎯→
+
+−
+
+
+ 
+ (3) 
+()    (  ):
+()
+n
+Z
+a   u nROC   Za
+Za
+−⎯→ −
+−−
+ 
+ (4) 
+1
+()(  ):
+1
+n
+Z
+au nROC   Z
+a
+Z
+a
+−
+−⎯→
+−
+−
+
+−
+
+
+ 
+ (5) 
+(1):
+()
+n
+Z
+a u    nROC   Za
+Za
+−   − −  ⎯→
+−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.53 
+ (6) 
+1
+(  )(1):
+1
+n
+Z
+au    nROC   Z
+a
+Z
+a
+−
+−− −  ⎯→
+
+−
+
+
+ 
+ (7) 
+()    (1):
+()
+n
+Z
+a   u    nROC   Za
+Za
+− −    − −  ⎯→ −
+−−
+ 
+ (8) 
+1
+()    (1):
+1
+n
+Z
+a   u    nROC   Z
+a
+Z
+a
+− −    − −  ⎯→
+−
+−
+
+−
+
+
+ 
+ (9) 
+(  ):1
+(1)
+Z
+u nROC   Z
+Z
+⎯→
+−
+ 
+ (10) 
+(1):1
+(1)
+Z
+u    nROC   Z
+Z
+− − −  ⎯→
+−
+ 
+Properties 
+ (1) Linearity:  
+11
+(  )(  )x   nX   z⎯→
+ 
+1
+:ROC   R
+  
+    
+22
+(  )(  )x   nX    z⎯→
+ 
+2
+:ROC   R
+ 
+  Case :1  
+
+1212
+(  )(  )(  )   ()..   .g nAx  nBx   nRRZ TD N E=+=
+ 
+    L.S.S            
+
+
+ 
+    R.S.S    
+12
+(   ) exist(  )(  )X  ZAX   zBX   z+
+ 
+    B.S.S 
+  Case:2 
+1212
+.
+(  )(  )(  )(  )(  )(  )
+ROC:entire z plane except
+F D   Abs
+g  nAx  nBx   nG  zAX   zBX   z
++
+=+⎯⎯→    =+
+ 
+ (2) Time Shifting:  
+1
+(  )(   ):x nX  ZROC   R⎯→
+ 
+     
+1
+(1)(   ):    ,except possibly
+0  or
+inclusion/declusion.
+x nZX  ZROC  R
+ZZ
++  ⎯→
+== 
+ 
+ (3) Multiplication by complex exponential: 
+  
+(  )(  ):x nX  ZROC   Z⎯→
+ 
+  
+0
+00
+(  ):
+n
+ZZ
+Z  x nXROC
+ZZ
+
+⎯→
+
+
+ 
+  
+(  ),1
+1
+Z
+u nZ
+Z
+=
+−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.54 
+  
+()
+0
+(  )1
+o
+n
+j
+j
+Z
+eu nZ
+Ze
+
+
+⎯→
+−
+ 
+  
+2
+0
+2
+0
+cos
+cos(  ):1
+2   cos1
+o
+ZZ
+n u nROC   Z
+ZZ
+
+
+
+−
+⎯→
+−+
+ 
+  
+0
+0
+2
+0
+sin
+sin(  )1
+2   cos1
+Z
+n u nZ
+ZZ
+
+
+
+⎯→
+−+
+ 
+  
+2
+0
+0
+22
+0
+cos
+cos(  )
+2    cos
+n
+Zaz
+an u nZa
+Zaza
+
+
+
+−
+⎯→
+−+
+ 
+  
+0
+22
+0
+sin
+sin(  )
+2
+n
+o
+az
+an u nZa
+Zaz casa
+
+
+
+⎯→
+−+
+ 
+Properties of ROC 
+ (1) ROC may or may not include zeros of x(z). 
+ (2) Will not include poles of x(z). 
+ (3) If x(n) absolutely summable 
+→
+ROC of x(z) includes unity circle. 
+ (4) 
+()
+(  )ROC of  X  Z  ,  will be entire Z plane 
+F.D      Absexcept possibly = 0 AND / OR         
+xn
+ZZ
+⎯⎯→
++= 
+  
+ (5) 
+X(z) may not exist,even for signal Value of  Z
+(  )is   .  .
+If  X(z):exist, ROC will inside the innermost circle
+having radius formed by magnitude of innermost non - zero pole
+x nL S S
+ 
+ (6) 
+(   )may not exist, even for signal value of 
+(  ) is L.S.S
+If    (   ) : exist, ROC will inside the innermost circle having 
+radius formed by magnitude of innermost non - zero pole
+X  ZZ
+xn
+XZ
+ 
+ (7) 
+(   )may not exist, even for signal value of /
+(  ) is B.S.S
+If    (   ) : exist, ROC will be in form of ring 
+bounded by magnitude of finite/non zero poles
+X  ZZ    r
+xn
+XZ
+ 
+Time Scaling  
+  
+(  )(  ):x nX  ZROC   Z⎯→
+ 
+  
+():
+KK
+n
+xX  ZROC   Z
+K
+
+⎯→
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.55 
+Area or Summation property- 
+  
+(  )( )
+st
+X  Sx t  e   dt
+
+−
+−
+=
+
+ 
+  
+(0)XS=
+( )when0is part of  ROC
+, when S = 0 is not part of ROC
+x t  dtS
+
+−
+=
+
+
+ 
+ 
+ ➢ 
+()
+n
+Z
+a u nZa
+Za
+→
+−
+ 
+  
+1
+2
+()
+()
+n
+Z
+na   u nZa
+Za
+−
+→
+−
+ 
+Multiplication by n  
+  
+()
+(  ): ROC-Remains Same
+dx  z
+nx nz
+dz
+⎯→−
+ 
+ ➢ 
+2
+()
+()
+n
+az
+na u nza
+za
+=
+−
+ 
+        Or  
+  
+(1)
+n
+na u  n−
+ 
+ ➢ 
+2
+1
+2
+(1)(1)
+()
+n
+az
+na    u nza
+za
++
+++  ⎯→
+−
+ 
+         Or  
+  
+1
+(1)(  )
+n
+na    u  n
++
++
+ 
+ ➢ 
+()
+()
+n
+z
+a u nza
+za
+⎯→
+−
+ 
+  
+1
+2
+()
+:
+1!()
+n
+na   u nz
+za
+za
+−
+⎯→
+−
+ 
+  
+3
+4
+(1)(2)(  )
+:
+3!()
+n
+n nna    u nz
+za
+za
+−
+−−
+⎯→
+−
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.56 
+Analogy between L.T and Z. T 
+  
+1
+(1) analogySz
+−
+−
+ 
+  
+equivalent
+ST
+ze=
+ 
+Inverse Z.T  
+Table 1 X(Z) : Rational , ROC Known and x(n) to be Calculated  
+ROC 
+()xn
+ 
+Outside outmost finite pole  R.S.S 
+Inside Innermost nonzero pole L.S.S 
+Ring from, bounded by non zero and finite poles   B.S.S 
+ Table 2 X(Z) : Rational x(n) is given and ROC is to be decided . 
+x(n)  R.O.C 
+R.S.S Outside outermost finite pole 
+L.S.S Inside Innermost nonzero pole 
+B.S.S Ring from bounded by finite non zero pole 
+ Table 3 : X(Z) : Rational nature of ROC known and x(n) to be calculated . 
+ROC x(n) 
+Outside outermost finite pole, including 
+Z=
+ 
+Causal  
+Inside Innermost non zero pole, including 
+0Z=
+ 
+Anti casual  
+Ring form bounded by non zero and finite pole  Non causality  
+ Table 4 : X(Z) : Rational  
+  
+  
+ 
+ 
+ 
+ Methods to calculate I.Z.T  
+  
+(   )    (   ) /    (   )X  ZDD Z=
+ 
+ (1) By Long division 
+  (i) 
+(   )(   )D ZN  Z
+ 
+  (ii) 
+()xn
+casual :    (   ),    (   )decreasing  power of    .
+Anticausal:   (   ),    (   )Increasing power of   .
+N  Z    D ZZ
+N  Z    D ZZ
+→
+→
+ 
+x(n) R.O.C 
+Casual  
+Outside outermost finite pole including 
+Z=
+ 
+Anti causal  
+Inside innermost non – zero pole including 
+0Z=
+ 
+Non causal  Ring from bounded by finite and non zero pole . 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.57 
+ (2) Partial fraction 
+  (i) 
+(   ) :XZ
+pole – zero cancellation .  
+  (ii) Plot Pole diagram and obtain all possible ROC. 
+  (iii) Perform partial fraction of 
+()XZ
+Z
+
+
+
+ if needed and calculate I.Z.T for each ROC. 
+Convolution Property:  
+  
+1
+(  )(   )x nX  Z   R
+ 
+  
+2
+(  )(   )h nH  Z   R
+ 
+  y(n)=x(n)*h(n) 
+
+12
+(  )   .   .RRY  Z  D N E⎯⎯→=
+ 
+  
+
+12
+(  )(  )   (  )RRy zX  z H  Z=
+ 
+  ROC : 
+12
+RR
+ 
+Accumulation 
+     
+(  )(   ) :x nX  Z    ROC    R⎯→−
+ 
+ Case 1. 
+(  ) *  (  )x n    u n
+ 
+    
+()
+1
+()
+[   ]:1
+(1)
+n
+K
+xz
+x KROC  Rz
+Z
+−
+=−
+⎯→
+−
+
+ 
+ Case 2. 
+(  )    0,xn=
+ 
+0
+or
+1
+n
+n
+
+−
+   
+1
+0
+(  ) *  (  )
+()
+[   ][   ]
+(1)
+1
+nn
+KK
+x nu n
+Xz
+x Kx K
+Z
+n
+−
+=−=
+=⎯→
+−
+−
+
+ 
+Generalized eigen function for D.T   LTI s/s- 
+ D.T LTI system : exponential 
+()
+0
+n
+Z
+ 
+    
+00
+eigen functionscalar eigen value
+(  )(  )(  )(   )
+nn
+o
+x nZh ny nzH  z
+
+=⎯⎯→⎯⎯→    =
+Real
+Complex
+ 
+    
+00
+()
+(  )[   ]
+o
+nK
+K
+Hz
+y  nzh K  Z
+
+−
+
+=−
+=
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.58 
+Important Table:  
+ x(n) ROC 
+R.S.S + causal 
+Outside outermost finite pole including 
+Z=
+ 
+Finite duration  +  causal  
+Entire Z plane including 
+Z=
+and possibly including 
+0Z=
+ 
+L.S.S  +  Anti causal  
+Inside Innermost +Non zero pole including 
+0Z=
+ 
+Finite duration  + Anti causal  
+Entire Z plane including 
+0Z=
+  
+R.S.S + Non causal  
+Outside outmost finite pole , including 
+Z=
+ 
+L.S.S + Non Causal  
+Inside innermost non zero pole not including 
+0Z=
+ 
+B.S.S  +  Non causal  Ring from bounded by finite & Non zero pole. 
+Finite duration + Non causal 
+Entire Z plane not including 
+0Z=
+&
+Z=
+ 
+Stability of an LTI S/S. 
+ 
+()hn→
+must be absolutely summable 
+ ROC 
+→
+ will include unity circle. 
+Causality: 
+ 
+()hn→
+Must be causal signal  
+ ROC 
+→
+Either outside of outmost pole including 
+Z=
+or entire Z plane including 
+Z=
+ 
+Anti Causality : 
+ 
+()hn→
+Anti causal  
+ ROC 
+→
+ Either inside the innermost pole or entire z plane including 
+0Z=
+ 
+Non Causality: 
+ 
+()hn→
+non causal  
+ 
+()HZ→
+Has finite and  non zero poles      
+RSS    NC
+LSS    NC
+BSS    NC
++
+→+
++
+ 
+ 
+()HZ→
+ Does not have any finite – non zero pole.  ROC entire Z plane not including 
+0&ZZ==
+ 
+ Causal + Stable – All poles must be strictly inside unity circle H(Z) has finite and non zero pole, if not then decide based 
+on common portion of ROC [causal  stable] 
+Anti causal + Stable 
+ H(Z) finite and non zero pole 
+⎯⎯→
+ All the poles must be strictly outside unity circle. 
+ H(Z) does not have finite and non zero pole 
+⎯⎯→
+ (ROC of Stable)  (ROC of anti causal) 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.59 
+Unilateral Z. T 
+ 
+(  )(   )x nX  Z⎯→
+ 
+ 
+0
+[   ](  )
+n
+n
+X  Zx n Z
+
+−
+=
+=
+
+ 
+ 
+
+(  )(  )  (  )UZT  x nBZT  x n u n=
+ 
+ (1) 
+1
+1
+Z
+Z
+⎯⎯→
+−
+ 
+ (2) 
+2
+2
+n
+Z
+Z
+⎯⎯→
+−
+ 
+ (3) 
+2
+0
+0
+2
+0
+cos
+cos
+2   cos1
+UZT
+ZZn
+n
+ZZn
+−
+  ⎯⎯⎯→
++  +
+ 
+Properties of UZT 
+ (1) Time Shifting 
+  
+1
+(1)(   )(  1)x nZ   X  Zx
+−
+−  ⎯→+  −
+ 
+  
+21
+(2)(   )(  1)(  2)x nZ   X  ZZ   xx
+−−
+−  ⎯→+−  +  −
+ 
+ Types of Response 
+  
+(  )(  )(  )   ZIR
+.0
+x nh ny n
+IC
+⎯⎯→⎯⎯→
+
+ 
+  
+()
+(  )(  )   ZSR
+0
+I.C = 0
+xn
+h ny  n⎯⎯→⎯⎯→
+
+ 
+ If y(n) is only due to input 
+
+ Forced Response y(n) is only due to system pole 
+
+ Natural response 
+Transfer function 
+  If I.C = 0 
+  
+()
+()
+()
+YZ
+Hz
+XZ
+=
+ 
+Note :  
+(1) I.C = 0 
+ (a) H(z) can be calculated. 
+ (b) Y(n) can be calculated from T.F 
+ (2) 
+.0IC
+ 
+ (a) H(z) can be calculated  
+ (b) Y(n) can not be calculated from T.F 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.60 
+ 
+Initial Value Theorem  Final Value Theorem  
+0
+lim  (  )    lim    (  )
+nZ
+x nX  z
+→→
+=
+ 
+Valid only when  
+(1) 
+()xn
+ is casual 
+D
+rr
+N
+ 
+(2) 
+(  )(   ) /    (   )X  zN  ZD Z=
+ 
+1
+1
+lim  (  )    lim(1)   (   )
+nZ
+x nZX  Z
+−
+→→
+=−
+ 
+1
+lim  (  )   lim(1)   (   )
+nZ
+x nZX  Z
+→→
+=−
+ 
+Valid it (a) x(n) is causal 
+(b) all the poles of 
+1
+(1)   (  ) or (1)   (  )zX  zzX  z
+−
+−−
+ 
+Should strictly be inside unity circle   
+ 
+Note: Before using this theorem , common factors must be cancelled out in 
+()XZ
+. 
+Multiplication by n  
+       
+()
+()
+dX  z
+nx nz
+dz
+⎯→−
+ 
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.61 
+6 
+DTFT 
+6.1. Introduction 
+Important Table: 
+Time domain  Frequency domain  
+Continuous 
+Discrete 
+Periodic 
+Non  Periodic   
+Non Periodic  
+Periodic  
+Discrete  
+Continuous  
+ 
+Transform  Time domain  Frequency domain  
+C.T.F.S 
+C.T.F.T 
+DTFS 
+DTFT 
+C + P 
+C + Np 
+D + p 
+D + Np 
+Discrete + Np 
+C + Np 
+D + p 
+C + p 
+     
+()(  )
+jj   n
+n
+X  ex n e
+
+−
+−
+=
+
+
+ well defined DTFT, calculates from B.Z.T at unity circle  
+• For well defined DTFT to converge 
+()xn
+must be absolutely summable. 
+For well defined DTFT 
+ (a) Includes all energy signal . 
+ (b) Formula of DTFT applicable  
+ (c) Properties of DTFT applicable . 
+ (d) 
+()
+j
+Xe
+
+will be defined for each and every value of 
+.
+ 
+Limitedly defined DTFT 
+ (a) Includes all power signal  
+ (b) Formula not applicable .  
+ (c) properties applicable. 
+ (d) 
+()
+j
+Xe
+
+ will be 
+⎯⎯→
+ for any one value of . 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.62 
+Note: 
+()
+j
+Xe
+
+is periodic with 
+,    −   
+ 
+  
+1
+(  )()
+2
+jj   n
+x nX  eed
+−
+=
+
+
+
+
+
+
+ 
+  
+1
+()
+1
+n
+j
+a u n
+ae
+−
+⎯→
+−
+ When  
+1a
+ 
+  
+1
+()
+1
+j
+j
+Xe
+ae
+
+−
+⎯→
+−
+  periodic with 
+2
+ 
+DTFT of signals  
+  
+➢ 
+sin
+()
+DTFT
+c
+n
+xn
+n
+
+
+=⎯⎯→
+      
+  Only valid when 
+c
+
+ 
+ ➢ 
+2
+sin
+()
+c
+n
+xn
+n
+
+
+
+=
+
+
+    
+  
+2
+c
+
+
+ 
+Properties of DTFT : 
+ (1) Linearity - 
+1212
+(  )(  )()()
+jj
+Ax  nBx   nAx  eBX   e+⎯→+
+
+ 
+ (2) Time shifting  
+0
+()()
+o
+jn
+j
+x n    neX  e
+
+
+−
+−   ⎯→
+ 
+     
+0
+()()
+o
+jn
+j
+x n    neX  e+   ⎯→
+
+
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.63 
+ (3) Frequency shifting  
+  
+()
+(  )()
+oo
+jnj
+ex nX  e
+ −
+⎯→
+ 
+  
+()
+(  )()
+oo
+jnj
+ex nX  e
+ −+
+⎯→
+ 
+  
+cos[  ()()]
+ooo
+n                 ⎯→−   ++    −    
+ 
+  
+
+sin()()
+ooo
+n
+j
+
+              ⎯→−   −   +   −    
+ 
+  
+()
+(  1)    (  )(  )()()
+nj   njj
+x nex nx eXe
+−
+−=⎯→⎯→  −
+ 
+ 
+ (4) Time Reversal - 
+()
+()()() *
+jj
+x    nx eX    e
+−
+−  ⎯→=
+
+ 
+ (5) Complex conjugate - 
+()
+**
+* (  )() *()
+jj
+xnXeX   e
+−
+⎯→=
+
+ 
+x(n)  
+X(e
+j
+) 
+E 
+O 
+NENO 
+E 
+O 
+NENO 
+    
+x(n)  
+X(e
+j
+) 
+R+E R+E 
+R+O I+O 
+I+E I+E 
+I+O R+O 
+ 
+x(n)  
+X(e
+j
+) 
+Real  C.S 
+I  C.A.S  
+C.S Real  
+C.A.S  I 
+(1) Time Expansion - 
+()
+jK
+n
+xX  e
+K
+
+
+⎯→
+
+
+ 
+ 1
+st
+ difference or successive difference – 
+ 
+(  )(1)(1)   ()
+jj
+x nx neX  e
+−
+−   −  ⎯→ −
+
+ 
+ 
+1
+(  )(   )
+(1)
+DTFT
+j
+un
+e
+
+     
+−
+⎯⎯→+−    
+−
+ 
+   or 
+ 
+1
+(2)
+(1)
+j
+K
+K
+e
+
+   
+
+−
+=−
+−+
+−
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.64 
+ Multiplication with n - 
+(  )()
+j
+d
+nx njX  e
+d
+⎯→+
+
+
+ 
+ Convolution - 
+(  )(  )(  )()()    ()
+jjj
+y nx nh ny eX  eH  e
+
+=       ⎯→=
+ 
+ 6.1.1. Parseval Energy Theorem 
+(1) 
+1
+(  )  (  )()   ()
+2
+jj
+n
+x n h nX  eH  ed
+
+
+
+
+
+
+−
+=−
+−
+=
+
+
+ 
+(2) 
+**
+1
+(  )   (  )()()
+2
+jj
+n
+x n h   nX  eH   ed
+
+
+
+
+
+
+=−
+−
+=
+
+
+ 
+(3) 
+1
+(  )  (  )()   ()
+2
+jj
+n
+x n  x nX  eX  ed
+
+−
+=−
+−
+=
+
+
+
+
+
+
+
+ 
+(4) 
+2
+*
+1
+(  )   (  )()
+2
+j
+n
+x n x   nX  ed
+
+
+
+
+
+
+=−
+−
+=
+
+
+ 
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.65 
+7 
+SAMPLING 
+ 
+7.1.  Introduction  
+Instantaneous sampling in time domain: 
+     
+( )( )  ( )
+s
+m   tm t  c t=
+ 
+     
+( )( )()
+ss
+n
+m  tm tt    nT
+
+=−
+=   −
+
+
+ 
+1
+S
+s
+T
+f
+=
+ 
+ 
+:
+s
+T
+sampling interval  
+ 
+:
+s
+f
+Sampling frequency  
+Instantaneous sampling in frequency domain  
+        
+( )(   )m tM⎯→
+ 
+    
+( )()()
+Sss
+nn
+m tt    nTfMn
+
+=−=−
+−   ⎯→−
+
+  
+ 
+        
+( )(   )m tM   f⎯→
+ 
+    
+( )()()
+SSS
+nn
+m tt    nTfM  fnf
+
+=−=−
+−   ⎯→−
+
+ 
+Spectral analysis of Instantaneous Frequency  
+     
+2
+()()
+SS
+S
+t    nTn
+T
+−   ⎯→−
+
+
+   
+ 
+            
+()()
+SSS
+nn
+t    nTffnf
+
+=−=−
+−   ⎯→−
+
+ 
+If 
+2:
+Sm
+ff−
+oversampling  
+Tx : No aliasing PBG = T
+S
+  
+Rx: practical LPF , Ideal LPF with  
+mcsm
+ffff    −
+ 
+Recovery - 
+(2)    ()
+SmmCSm
+ffffff     −
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.66 
+ If 
+2:
+Sm
+ff=
+ critical sampling  
+ Tx : Aliasing on verge (No aliasing) 
+ Rx : Ideal LPF with 
+()
+sm
+ff=
+& PBG =
+S
+T
+ 
+ Recovery - 
+()()
+2
+SmCm
+ffff==
+ 
+ Case 3: 
+2
+Sm
+ff
+ under sampling  
+   Tx : Aliasing  
+   Rx : Recovery not possible. 
+Low Pass Sampling Theorem– 
+A lowpass signal bandlimited to 
+m
+f   Hz
+ can be sampled and reconstructed form its samples if and only  
+ If 
+2()
+SmmcSm
+ffffff     −
+ 
+ Sampling rate.
+2
+sm
+ff
+ 
+ Nyquist rate = minimum sampling rate 
+      
+min
+(    )2
+Sm
+ff=
+ 
+     Nyquist interval 
+min
+11
+(   )2
+s
+sm
+T
+ff
+==
+ 
+()mt
+ 
+NY
+f
+ 
+sin   ( )ct
+ 
+1Hz
+ 
+sin  (   )c at
+ 
+a Hz
+ 
+sin(   )
+K
+c    at
+ 
+Ka Hz
+ 
+sin  (   )   sin  (   )c atc bt+
+ 
+(,)Max  aHz bHz
+ 
+sin  (   )   sin  (   )c atc bt
+ 
+()a   b Hz+
+ 
+sin  (   ) *sin  (   )c atc bt
+ 
+min(,)aHz bHz
+ 
+sin  ( )
+d
+ct
+dt
+ 
+1Hz 
+sin  (  )
+t
+cd
+−
+
+ 
+1Hz 
+Sampling using general carrier pulse train– 
+     
+( )(   )m tM   f⎯→
+ 
+      
+( )(   )()
+ns
+n
+c tC  fCfnf
+
+=−
+⎯→    =−
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.67 
+     
+(   )()
+sns
+n
+M    fC M  fnf
+
+−
+=−
+
+ 
+    If 
+(2)    ()
+smmcsm
+ffffff    −
+ 
+L.P.F(P.B.G) y(t) 
+1 
+0
+()cmt
+ 
+1/
+o
+C
+ 
+()mt
+ 
+L 
+0
+()L C m t
+ 
+When c(t) is rectangular pulse train – 
+     
+22
+sin
+n
+A
+Cc  n
+aa
+
+
+=
+
+
+
+
+ 
+       
+22
+(   )sin()
+Ss
+n
+An
+M    fcfnf
+aa
+
+=−
+        
+=−
+        
+        
+
+
+ 
+Sampling of Sinusoidal Signal: 
+Note: 
+2
+sm
+ff
+ Recovery is possible through BPF  
+  
+2
+sm
+ff
+ Recovery not possible through BPF 
+Calculation of Frequency: 
+ (i) 
+( )cos 2
+mm
+m tAf  t=
+ 
+  
+( ) :Ct
+ Impulse train with period 
+0,    , 2   ,3   ,
+Ssss
+Tfff→−−−
+ 
+  
+( )( )  ( )0
+s
+m   tm t  c tfm=⎯⎯→   
+0
+0
+m
+m
+f
+f
++
+−
+same  
+      
+sm
+ff
+ 
+sm
+sm
+ff
+ff
++
+−
+ 
+      
+2
+sm
+ff
+ 
+2
+2
+sm
+sm
+ff
+ff
++
+−
+ 
+ (ii) 
+112212
+( )cos 2cos 2,m tAf tAf tf   f=+⎯⎯→
+ 
+  
+()Ct=
+Impulse train , 
+0,    2   ,3
+sss
+fff
+ 
+  
+12
+00ff
+ 
+  
+12ss
+ffff
+ 
+  
+12
+22fsffsf
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.68 
+ (iii) 
+( )cos 2
+mmm
+m tAf  tf=⎯⎯→
+ 
+ 
+  
+( )    0,, 2,3
+Smsmsmsm
+m   tfffffff= 
+ 
+ (iv) 
+( )cos 2
+m
+m tAmf  t=
+ 
+  
+ 
+ 
+       
+sm
+ff
+ 
+       
+2
+sm
+ff
+ 
+       
+3
+sm
+ff
+ 
+Band pass sampling  
+ 
+ 
+2
+H
+S
+f
+f
+K
+
+ 
+H
+HL
+f
+K
+ff
+
+=
+
+−
+
+ 
+
+GIF→
+ 
+ 
+Nyauist rate    2
+H
+f=
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.69 
+8 
+MISCELLANEOUS 
+  
+8.1. DFT (Disrete Fourier Transform) 
+        
+discrete in timeContinuous in frequency
+(  )()
+DTFT
+j
+x nX  e
+
+
+⎯⎯→
+ 
+DFT: 
+ Discrete in time + discrete in frequency .  
+      
+(  )(   )
+DFT
+x nX  K⎯⎯→
+ 
+ (i) x(n) periodic with length n .  
+ (ii) x(K) periodic with length K  
+ (iii) Information of one period of either 
+(  ) or(   )x nX  K
+will be given .  
+  N point 
+()xn
+is given calculate 
+n
+point X(K) 
+  
+1
+0
+2
+(   )(  )
+N
+j
+n
+X  Kx n eKn
+N
+
+−
+−
+=
+
+=
+
+
+
+  
+0,1, 2,1KN=−−−  −
+ 
+  
+(  )(   )
+DFT
+x nX  K⎯⎯→
+ 
+  
+2
+1
+0
+1
+(  )(   )0,1, 2,1
+N
+jKn
+N
+K
+x nX  K  enN
+N
+
+
+−
+
+
+=
+==−−−  −
+
+ 
+  
+(   )(  )
+IDFT
+x  Kx n⎯⎯→
+ 
+ Twiddle factor:    
+2
+j
+N
+N
+We
+
+−
+=
+ 
+0
+1
+N
+W=
+ 
+1N
+nN
+WW
++
+=
+ 
+()n   lNn
+NN
+WW
++
+=
+ 
+2A
+j
+N
+N
+We
+−
+=
+ 
+1
+N
+N
+W=
+ 
+2
+N
+n
+n
+NN
+WW
++
+=−
+ 
+1
+lNN
+NN
+WW==
+ 
+1*
+NN
+WW
+−
+=
+ 
+/2
+1
+N
+N
+W=−
+ 
+n   Nn
+NN
+WW
++
+=
+ 
+(2    1)
+2
+1
+N
+l
+N
+W
++
+=−
+ 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.70 
+Matrix Method : 
+• DFT:  
+[   (   )]   [][  (  )]
+n
+N
+X  KWx n=
+ 
+• IDFT:    
+1*
+11
+[  (  )][]  [   (   )][] [   (   )]
+nn
+NN
+x nWX  KWX  K
+NN
+−
+==
+ 
+ 2 point DFT / IDFT   (N=2) 
+       
+00
+22
+01
+22
+(0)(0)11(0)
+(1)(1)11(1)
+Xxx
+WW
+Xxx
+WW
+
+             
+==
+
+             
+−
+             
+
+ 
+       
+00
+01
+(0)(0)
+1
+(1)(1)
+2
+NN
+NN
+xX
+WW
+xX
+WW
+−−
+−−
+
+       
+=
+
+       
+       
+
+ 
+ 3 point DFT / IDFT  N=3 
+       
+12
+33
+21
+33
+(0)111(0)
+(1)1(1)
+(2)1(2)
+Xx
+XWWx
+XWWx
+          
+          
+=
+          
+          
+          
+ 
+       
+12
+33
+24
+33
+(0)111(0)
+1
+(1)1(1)
+3
+(2)1(2)
+xx
+xWWx
+xWWx
+−−
+−−
+          
+          
+=
+          
+          
+          
+ 
+ 4 point DFT / IDFT  N=4 
+       
+(0)1111(0)
+(1)11(1)
+(2)1111(2)
+(3)11(3)
+xx
+xjjx
+xx
+xjjx
+         
+         
+−   −  +
+         
+=
+         
+−−
+         
++   −  −
+         
+ 
+       
+(0)1111(0)
+(1)11(1)
+1
+(2)1111(2)
+4
+(3)11(3)
+xX
+xjjX
+xX
+xjjX
+           
+           
++   −  −
+           
+=
+           
+−−
+           
+−−
+           
+ 
+ ➢ If 
+(  )()circlex nx    n=  −  →
+ 
+  
+
+()()
+
+(  )(  )DFT   DFT   x nNNx n ⎯⎯→
+
+ 
+  
+
+()
+4
+(  )(  )DFT   DFT   DFT   DFT  x nNx n
+
+
+  =
+
+
+
+
+
+
+
+ 
+ ➢ If 
+()(   )XKX  K−=
+ 
+  
+4
+1
+[[[[  (   )]]]][   (   )]IDFT  IDFT  IDFT  IDFT  x  KX  K
+N
+
+=
+
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.71 
+ ➢ 
+1
+2
+0
+1
+(   )(  )
+N
+Kn
+N
+K
+X  Kx n W
+N
+−
+−
+=
+=
+
+ 
+  If 
+(  )()x nx    n=−
+ 
+  
+()
+2
+43
+(  )(  )
+[(  (  ))]
+x nx n
+DFT  DFT  x nN
+NN
+
+==
+
+
+ 
+Properties of DFT: 
+ (1) Linearity:  
+1212
+(  )(  )(   )(   )Ax  nBx   nAX   KBX   K+⎯→+
+ 
+ (2) Periodicity:  
+()(  )x n    Nx n+=
+ 
+     
+()(   )X  K    NX  K+=
+ 
+ (3) Time Reversal: 
+[  (  )][   (   )]
+NN
+x nX  K⎯→
+ 
+     
+(  ())(   ())
+NN
+x    nXK−   ⎯→   −
+ 
+     
+()()x  N    nX  NK−  ⎯→−
+ 
+ (4) Circular frequency shift  
+(  )(   )x nX  K⎯→
+ 
+      
+2
+()
+(  )(  ())
+jl  n
+N
+MODN
+ex nx K    l
+
+
+
+
+⎯→    −
+ 
+ 
+ Complex conjugate property  
+(  )(   )x nX  K⎯→
+ 
+      
+* (  )* ()xnXK⎯→    −
+ 
+      
+()
+2
+*(  )(())*()
+MODN
+MODN
+x    nXKXN    K⎯→   −=−
+ 
+x(n) X(K) 
+R+E R+E 
+R+O I+O 
+I+E I+E 
+I+O R+O 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.72 
+x(n) X(K) 
+Real C.S 
+Image CAS 
+C.S Real 
+C.A.S Img. 
+Circular convolution 
+ Case 1: Column Method   
+
+1
+(  ),  ,  ,x  na b c d=
+ 
+      
+
+2
+(  ),  ,  ,x   np q r s=
+ 
+      
+
+12
+(  )(  ) *   (  ),   ,  ,x nx  n    x   n   ==
+ 
+      
+a    dcbp
+b    a    dcq
+cb    a    dr
+dcb    as
+     
+     
+     
+=
+     
+     
+     
+
+
+
+
+ 
+ Case 2: Row Method 
+    
+[   ,   ,  ,   ]   [&]
+a    bc    d
+da    bc
+pqr
+c    da    b
+bc    da
+   
+
+
+
+=
+
+
+
+ 
+ ➢ 
+1212
+(  )(  )(   )(   )
+DFT
+x  nx   nX   K  X   K⎯⎯→
+ 
+  
+2
+(  )(  )(   )
+DFT
+x nx nX    K    ⎯⎯→
+ 
+Multiplication in time domain: 
+    
+
+1212
+1
+(  ).   (  )(   )(   )
+DFT
+x  n  x   nX   KX   K
+N
+⎯⎯→
+ 
+            
+
+2
+1
+(  )(   )(   )
+DFT
+x   nX  KX  K
+N
+⎯⎯→
+ 
+Parseval’s Theorem 
+ (1) 
+11
+1212
+00
+1
+(  )   (  )(   )(   )
+NN
+nK
+x  n x   nX   K  X   K
+N
+−−
+==
+=
+
+ 
+ (2) 
+11
+**
+1212
+00
+1
+(  )   (  )(   )(   )
+NN
+nK
+x  n x   nX   K  X   K
+N
+−−
+==
+=
+
+ 
+ (3) 
+11
+2
+00
+1
+(  )(   )   ()
+NN
+nK
+x   nX  K  XK
+N
+−−
+==
+=−
+
+   
+11
+2
+00
+1
+(  )(   )
+NN
+nK
+x nX  K
+N
+−−
+==
+=
+
+ 
+ (4) 
+11
+**
+00
+1
+(  )   (  )(   )(   )
+NN
+nK
+x n x   nX  K  X   K
+N
+−−
+==
+=
+
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.73 
+Time Expansion 
+ ➢ N point  
+
+int
+..
+(  )(   )
+N po
+D F T
+x nX  K⎯⎯→
+ 
+  2N point 
+
+2int
+..
+(   ),    (   )
+2
+N po
+DFT
+n
+xX  K   X  K
+
+⎯⎯→
+
+
+ 
+ ➢ N     point: 
+
+(   )(  )
+IDFT
+X  Kx n⎯⎯→
+ 
+  2N   point: 
+
+1
+(  ),  (  )
+22
+IDFT
+K
+Xx n   x n
+
+⎯⎯→
+
+
+ 
+Discrete Time Fourier Series 
+  
+1
+0
+Periodic N
+2
+()
+N
+jn
+K
+K
+x nC  eK
+N
+
+−
+
+=
+
+=
+
+
+
+ 
+  
+1
+0
+12
+()
+N
+jn
+K
+n
+Cx n eK
+NN
+
+−
+−
+=
+
+=
+
+
+
+ 
+  
+()
+K
+XK
+C
+N
+=
+  
+K   NK
+CC
++
+=
+ 
+  
+()
+(  )(   )
+DFT
+K
+N   x nX  KN  C⎯⎯→=
+ 
+  
+
+2(  ),  (  )22  2
+22
+K
+C
+K
+N    x n   x nXN
+
+
+⎯→=
+
+
+
+
+ 
+ 
+Drawback of DFT Calculation : 
+       
+1
+0
+(   )(  )
+N
+Kn
+n
+n
+X  Kx n W
+−
+=
+=
+
+ 
+ 
+N  Point  DFT
+22
+Complex multiplication4Real Multiplication 
+(1) Complex(42) Real
+NN
+N  NN    N
+⎯⎯→
+−→−
+ 
+    addition  additions 
+DIT algorithm in FFT : 
+ 4 point DFT : 
+
+(  )(  ),  (1),  (2),  (3)x nx o  xxx=
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.74 
+ 
+ ➢ 
+3
+0
+(   )(  )
+Kn
+N
+n
+X  Kx n W
+=
+=
+
+ 
+  
+3
+1
+44
+0
+(1)(  )[  (0)(2)][  (1)(3)]
+n
+n
+Xx n WxxW   xx
+=
+==    −    +−
+
+ 
+  
+
+(  )0,1,2,3xn=
+ 
+ 
+ 
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.75 
+ 6 point DFT : 
+
+(  )(0),  (1),  (2),  (3),  (4),  (5)x nxxxxxx=
+ 
+ 
+       
+5
+6
+0
+(   )(  )
+Kn
+n
+X  Kx n W
+=
+=
+
+ 
+       
+5
+12
+666
+0
+(1)(  )[  (0)(3)]   (  (1)(4))(  (2)(5))
+n
+n
+Xx n WxxxxWxxW
+=
+==    −    +    −+−
+
+ 
+Summary: 
+ 
+Radix 2Radix Non   2
+Symmuse formula
+Butlerflyto generate Butterfly
+−
+
+ 
+DIF algorithm  
+ 
+  
+
+ 
+ 
+GATE WALLAH ELECTRONICS & COMMUNICATION HANDBOOK 
+Signals & Systems 
+3.76 
+6 point DIF :  
+ 
+For Radix N Butterfly for calculation of N point DFT 
+• No of stages = 
+2
+log
+N
+ 
+• No of Butterfly in each stage 
+/2
+N
+=
+ 
+• Total no. of Butterflies 
+2
+log
+2
+N
+N
+=
+ 
+• Total no of complex multiplication 
+2
+log
+2
+N
+N
+=
+ 
+• Total number of complex addition 
+2
+log
+NN
+=
+ 
+ 
+ 
+     
+For more questions, kindly visit the library section: Link for web: https://smart.link/sdfez8ejd80if  
+PW Mobile APP: https://smart.link/7wwosivoicgd4  
