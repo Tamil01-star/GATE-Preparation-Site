@@ -9,6 +9,10 @@ export interface Subject {
   description: string;
   iconName: string;
   order: number;
+  officialSyllabusSection?: string;
+  pdfHandbookUrl?: string;
+  pdfHandbookTitle?: string;
+  pdfHandbookPages?: number;
 }
 
 export interface Unit {

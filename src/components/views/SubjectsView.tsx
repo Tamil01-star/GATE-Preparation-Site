@@ -9,7 +9,8 @@ import {
   Plus,
   Star,
   Sparkles,
-  HelpCircle
+  HelpCircle,
+  Download
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { ProgressBar } from '../common/ProgressBar';
@@ -76,6 +77,32 @@ export const SubjectsView: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Master Handbook PDF banner */}
+          {currentSubject.pdfHandbookUrl && (
+            <div className="mt-4 pt-4 border-t border-brand-soft dark:border-surface-borderDark flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-brand-light/60 dark:bg-surface-dark/40 p-3.5 rounded-xl">
+              <div className="flex items-center gap-2.5">
+                <FileText className="text-brand-dark dark:text-brand-primary flex-shrink-0" size={18} />
+                <div>
+                  <div className="text-xs font-bold text-slate-800 dark:text-slate-100">
+                    {currentSubject.pdfHandbookTitle || `${currentSubject.name} Master Handbook`}
+                  </div>
+                  <div className="text-[11px] text-slate-500">
+                    Complete official Physics Wallah handbook covering all units with formula derivations and solved examples.
+                  </div>
+                </div>
+              </div>
+              <a
+                href={currentSubject.pdfHandbookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-brand-dark text-white hover:bg-brand-hover text-xs font-semibold shadow-xs whitespace-nowrap self-start sm:self-auto"
+              >
+                <Download size={13} />
+                <span>Download Handbook PDF</span>
+              </a>
+            </div>
+          )}
 
           {/* Navigation Tabs inside Subject (Section 14) */}
           <div className="flex items-center gap-2 mt-6 pt-4 border-t border-brand-soft dark:border-surface-borderDark overflow-x-auto">
@@ -373,16 +400,38 @@ export const SubjectsView: React.FC = () => {
               </div>
 
               {/* Action Button */}
-              <div className="mt-5 pt-3 border-t border-brand-soft dark:border-surface-borderDark">
-                <ProgressBar percentage={percentage} showLabel={false} size="sm" className="mb-3" />
+              <div className="mt-5 pt-3 border-t border-brand-soft dark:border-surface-borderDark space-y-2">
+                <ProgressBar percentage={percentage} showLabel={false} size="sm" className="mb-2" />
 
-                <button
-                  onClick={() => navigateTo('subject-detail', { subjectId: subject.id })}
-                  className="w-full py-2.5 rounded-xl bg-brand-dark hover:bg-brand-hover text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm"
-                >
-                  <span>Open Subject</span>
-                  <ArrowRight size={14} />
-                </button>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => navigateTo('subject-detail', { subjectId: subject.id })}
+                    className="py-2 px-3 rounded-xl bg-brand-dark hover:bg-brand-hover text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+                  >
+                    <span>Open Module</span>
+                    <ArrowRight size={13} />
+                  </button>
+
+                  {subject.pdfHandbookUrl ? (
+                    <a
+                      href={subject.pdfHandbookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-2 px-3 rounded-xl bg-brand-soft dark:bg-brand-dark/30 hover:bg-brand-soft/80 text-brand-dark dark:text-brand-primary border border-brand-border dark:border-surface-borderDark text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <Download size={13} />
+                      <span>Handbook PDF</span>
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => navigateTo('notes', { subjectId: subject.id })}
+                      className="py-2 px-3 rounded-xl bg-brand-light dark:bg-surface-dark text-slate-600 dark:text-slate-300 text-xs font-medium flex items-center justify-center gap-1.5"
+                    >
+                      <FileText size={13} />
+                      <span>Notes</span>
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           );

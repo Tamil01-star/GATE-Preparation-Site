@@ -11,7 +11,9 @@ import {
   Circle,
   HelpCircle,
   Calculator,
-  Plus
+  Plus,
+  Download,
+  ExternalLink
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { Topic, Unit, Subject } from '../../types';
@@ -90,6 +92,39 @@ export const SyllabusView: React.FC = () => {
             <Plus size={14} />
             <span>Add / Modify Topics</span>
           </button>
+        </div>
+      </div>
+
+      {/* Official GATE 2027 ECE Syllabus Banner */}
+      <div className="bg-gradient-to-r from-brand-dark to-brand-primary/90 text-white rounded-2xl p-5 shadow-academic flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="space-y-1">
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white/20 text-white text-[11px] font-bold uppercase tracking-wider backdrop-blur-xs">
+            Official GATE 2027 Syllabus (IIT Madras)
+          </div>
+          <h2 className="text-lg font-bold">Electronics & Communication Engineering (EC)</h2>
+          <p className="text-xs text-brand-light/90 max-w-2xl leading-relaxed">
+            Strictly structured according to the official syllabus published by IIT Madras for GATE 2027. Covers all 8 core technical sections and mandatory General Aptitude.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center gap-2.5 flex-shrink-0">
+          <a
+            href="/syllabus/EC_GATE2027_Syllabus.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white text-brand-dark font-bold text-xs shadow hover:bg-brand-light transition-colors"
+          >
+            <Download size={15} />
+            <span>Download Official Syllabus PDF</span>
+          </a>
+          <a
+            href="https://gate2027.iitm.ac.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-semibold text-xs border border-white/20 transition-colors"
+          >
+            <ExternalLink size={15} />
+            <span>Official GATE Portal</span>
+          </a>
         </div>
       </div>
 
@@ -316,6 +351,18 @@ export const SyllabusView: React.FC = () => {
 
           {/* Action CTAs */}
           <div className="pt-4 border-t border-brand-soft dark:border-surface-borderDark space-y-2">
+            {selectedSubject?.pdfHandbookUrl && (
+              <a
+                href={selectedSubject.pdfHandbookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-2.5 rounded-xl bg-brand-soft dark:bg-brand-dark/30 hover:bg-brand-soft/80 text-brand-dark dark:text-brand-primary border border-brand-border dark:border-surface-borderDark text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+              >
+                <Download size={14} />
+                <span>Download {selectedSubject.name} Master Handbook (PDF)</span>
+              </a>
+            )}
+
             <button
               onClick={() => navigateTo('notes', { topicId: selectedTopic.id, subjectId: selectedTopic.subjectId })}
               className="w-full py-2.5 rounded-xl bg-brand-dark hover:bg-brand-hover text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm"

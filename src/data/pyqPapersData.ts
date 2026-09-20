@@ -170,5 +170,223 @@ export const INITIAL_PAPERS: QuestionPaper[] = [
       { type: 'MCQ', count: 41 },
       { type: 'NAT', count: 24 }
     ]
+  },
+  {
+    id: 'paper-ec-2018',
+    year: 2018,
+    paperCode: 'EC',
+    paperName: 'GATE 2018 Electronics & Communication Engineering (IIT Guwahati)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2018.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 43 },
+      { type: 'NAT', count: 22 }
+    ]
+  },
+  {
+    id: 'paper-ec-2017',
+    year: 2017,
+    paperCode: 'EC',
+    paperName: 'GATE 2017 Electronics & Communication Engineering (IIT Roorkee)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2017.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 45 },
+      { type: 'NAT', count: 20 }
+    ]
+  },
+  {
+    id: 'paper-ec-2016',
+    year: 2016,
+    paperCode: 'EC',
+    paperName: 'GATE 2016 Electronics & Communication Engineering (IISc Bengaluru)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2016.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 44 },
+      { type: 'NAT', count: 21 }
+    ]
+  },
+  {
+    id: 'paper-ec-2015',
+    year: 2015,
+    paperCode: 'EC',
+    paperName: 'GATE 2015 Electronics & Communication Engineering (IIT Kanpur)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2015.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 46 },
+      { type: 'NAT', count: 19 }
+    ]
+  },
+  {
+    id: 'paper-ec-2014',
+    year: 2014,
+    paperCode: 'EC',
+    paperName: 'GATE 2014 Electronics & Communication Engineering (IIT Kharagpur)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2014.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 48 },
+      { type: 'NAT', count: 17 }
+    ]
+  },
+  {
+    id: 'paper-ec-2013',
+    year: 2013,
+    paperCode: 'EC',
+    paperName: 'GATE 2013 Electronics & Communication Engineering (IIT Bombay)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2013.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 65 }
+    ]
+  },
+  {
+    id: 'paper-ec-2012',
+    year: 2012,
+    paperCode: 'EC',
+    paperName: 'GATE 2012 Electronics & Communication Engineering (IIT Delhi)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2012.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 65 }
+    ]
+  },
+  {
+    id: 'paper-ec-2011',
+    year: 2011,
+    paperCode: 'EC',
+    paperName: 'GATE 2011 Electronics & Communication Engineering (IIT Madras)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2011.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 65 }
+    ]
+  },
+  {
+    id: 'paper-ec-2010',
+    year: 2010,
+    paperCode: 'EC',
+    paperName: 'GATE 2010 Electronics & Communication Engineering (IIT Guwahati)',
+    totalQuestions: 65,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2010.pdf',
+    subjectDistribution: [
+      { subjectName: 'General Aptitude', marks: 15, questionCount: 10 },
+      { subjectName: 'Engineering Mathematics', marks: 13, questionCount: 8 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 72, questionCount: 47 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 65 }
+    ]
+  },
+  {
+    id: 'paper-ec-2009',
+    year: 2009,
+    paperCode: 'EC',
+    paperName: 'GATE 2009 Electronics & Communication Engineering (IIT Roorkee)',
+    totalQuestions: 60,
+    totalMarks: 100,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2009.pdf',
+    subjectDistribution: [
+      { subjectName: 'Engineering Mathematics', marks: 15, questionCount: 10 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 85, questionCount: 50 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 60 }
+    ]
+  },
+  {
+    id: 'paper-ec-2008',
+    year: 2008,
+    paperCode: 'EC',
+    paperName: 'GATE 2008 Electronics & Communication Engineering (IISc Bengaluru)',
+    totalQuestions: 85,
+    totalMarks: 150,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2008.pdf',
+    subjectDistribution: [
+      { subjectName: 'Engineering Mathematics', marks: 20, questionCount: 12 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 130, questionCount: 73 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 85 }
+    ]
+  },
+  {
+    id: 'paper-ec-2007',
+    year: 2007,
+    paperCode: 'EC',
+    paperName: 'GATE 2007 Electronics & Communication Engineering (IIT Kanpur)',
+    totalQuestions: 85,
+    totalMarks: 150,
+    durationMinutes: 180,
+    pdfUrl: '/papers/EC2007.pdf',
+    subjectDistribution: [
+      { subjectName: 'Engineering Mathematics', marks: 20, questionCount: 12 },
+      { subjectName: 'Core ECE Technical Subjects', marks: 130, questionCount: 73 }
+    ],
+    questionTypes: [
+      { type: 'MCQ', count: 85 }
+    ]
   }
 ];
