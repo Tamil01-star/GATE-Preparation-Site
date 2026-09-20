@@ -27,9 +27,6 @@ export const SyllabusView: React.FC = () => {
     notes,
     formulas,
     questions,
-    userProgress,
-    markTopicCompleted,
-    markTopicRevision,
     navigateTo,
     setTopicImportance
   } = useApp();
@@ -64,8 +61,6 @@ export const SyllabusView: React.FC = () => {
   const topicNotes = notes.filter(n => n.topicId === selectedTopic.id);
   const topicFormulas = formulas.filter(f => f.topicId === selectedTopic.id);
   const topicQuestions = questions.filter(q => q.topicId === selectedTopic.id);
-  const isCompleted = userProgress.completedTopicIds.includes(selectedTopic.id);
-  const isRevisionReady = userProgress.revisionCompletedTopicIds.includes(selectedTopic.id);
 
   return (
     <div className="space-y-6 max-w-7xl mx-auto">
@@ -142,7 +137,6 @@ export const SyllabusView: React.FC = () => {
               const isSubjExpanded = expandedSubjects[subject.id] ?? false;
               const subjectUnits = units.filter(u => u.subjectId === subject.id);
               const subjectTopics = topics.filter(t => t.subjectId === subject.id);
-              const subjectCompletedCount = subjectTopics.filter(t => userProgress.completedTopicIds.includes(t.id)).length;
 
               return (
                 <div
@@ -166,7 +160,7 @@ export const SyllabusView: React.FC = () => {
 
                     <div className="flex items-center gap-3 text-xs">
                       <span className="text-[11px] text-slate-500">
-                        {subjectCompletedCount}/{subjectTopics.length} done
+                        {subjectTopics.length} Topics
                       </span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-brand-primary/20 text-brand-dark dark:text-brand-primary font-bold">
                         {subjectUnits.length} Units
@@ -204,7 +198,6 @@ export const SyllabusView: React.FC = () => {
                               <div className="p-2 pl-6 space-y-1.5 bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-surface-borderDark">
                                 {unitTopics.map(topic => {
                                   const isSelected = selectedTopic.id === topic.id;
-                                  const topicDone = userProgress.completedTopicIds.includes(topic.id);
 
                                   return (
                                     <div
@@ -217,20 +210,7 @@ export const SyllabusView: React.FC = () => {
                                       }`}
                                     >
                                       <div className="flex items-center gap-2">
-                                        <button
-                                          onClick={(e) => {
-                                            e.stopPropagation();
-                                            markTopicCompleted(topic.id);
-                                          }}
-                                          className="text-slate-400 hover:text-brand-dark"
-                                          title={topicDone ? 'Mark as incomplete' : 'Mark as completed'}
-                                        >
-                                          {topicDone ? (
-                                            <CheckCircle2 size={15} className="text-brand-dark dark:text-brand-primary fill-brand-primary/20" />
-                                          ) : (
-                                            <Circle size={15} />
-                                          )}
-                                        </button>
+                                        <div className="w-1.5 h-1.5 rounded-full bg-brand-primary flex-shrink-0" />
                                         <span>{topic.title}</span>
                                       </div>
 
@@ -265,19 +245,9 @@ export const SyllabusView: React.FC = () => {
               <span className="text-xs font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
                 Selected Topic Overview
               </span>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => markTopicCompleted(selectedTopic.id)}
-                  className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold transition-colors ${
-                    isCompleted
-                      ? 'bg-brand-primary text-slate-900'
-                      : 'bg-brand-soft text-brand-dark hover:bg-brand-primary/30'
-                  }`}
-                >
-                  <CheckCircle2 size={13} />
-                  <span>{isCompleted ? 'Completed' : 'Mark Complete'}</span>
-                </button>
-              </div>
+              <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-brand-soft dark:bg-brand-dark/30 text-brand-dark dark:text-brand-primary font-bold">
+                {selectedSubject?.code}
+              </span>
             </div>
 
             {/* Hierarchy Path Badge */}

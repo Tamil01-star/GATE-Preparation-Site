@@ -375,5 +375,517 @@ export const INITIAL_NOTES: Note[] = [
         fileUrl: '/notes/Digital_Electronics_Notes_PW.pdf'
       }
     ]
+  },
+
+  // SECTION 4: Analog Circuits Note
+  {
+    id: 'note-ana-301',
+    topicId: 'top-ana-301',
+    unitId: 'unit-analog-3',
+    subjectId: 'subj-analog',
+    title: 'Op-Amp Linear & Non-Linear Circuits, Active Filters, Oscillators & Miller Compensation',
+    lastUpdated: '2026-09-19',
+    topicIntroduction: 'Analog Circuits represents one of the most critical problem-solving sections in GATE ECE. Key examination topics focus on negative and positive feedback operational amplifier circuits, virtual ground/short concepts, finite open-loop gain and input offset voltages, Schmitt triggers with hysteresis thresholds, active Butterworth filter transfer functions, Barkhausen criteria for harmonic oscillators, and Miller dominant-pole frequency compensation for closed-loop stability.',
+    coreConcepts: [
+      'Ideal vs Practical Op-Amp Parameters: Ideal Op-Amp has infinite open-loop gain (A_OL = ∞), infinite input impedance (R_in = ∞), zero output impedance (R_out = 0), infinite bandwidth, and infinite CMRR. Under negative feedback, V_+ ≈ V_- (virtual short).',
+      'Inverting & Non-Inverting Closed-Loop Gain: Inverting configuration: A_v = -R_f / R_1; Non-inverting configuration: A_v = 1 + R_f / R_1. If open-loop gain A is finite, non-inverting gain becomes A_v = (1 + R_f/R_1) / [1 + (1 + R_f/R_1)/A].',
+      'Integrator & Differentiator Limits: Ideal inverting integrator has transfer function H(s) = -1 / (s R C), acting as a low-pass filter with DC gain infinity (requires parallel shunt resistor R_f to prevent saturation). Ideal differentiator has H(s) = -s R C, acting as a high-pass filter (susceptible to high-frequency noise).',
+      'Schmitt Trigger & Positive Feedback: When feedback is applied to the non-inverting terminal, the circuit exhibits hysteresis. Upper trigger point: V_UTP = [R1/(R1+R2)]·V_sat+ + [R2/(R1+R2)]·V_ref; Lower trigger point: V_LTP = [R1/(R1+R2)]·V_sat- + [R2/(R1+R2)]·V_ref. Hysteresis width V_H = V_UTP - V_LTP.',
+      'Barkhausen Criteria for Oscillations: For sustained harmonic oscillations at frequency ω_0: (1) Loop gain magnitude |A·β| = 1; (2) Total loop phase shift ∠(A·β) = 0° or 360°.',
+      'Miller Frequency Compensation: Inserting capacitor C_c across high-gain inverting stage creates pole splitting: dominant pole shifts to lower frequency ω_p1 ≈ 1 / (g_m2 R1 R2 C_c), while non-dominant pole moves to high frequency ω_p2 ≈ g_m2 / C_L, ensuring phase margin ≥ 45° for unity-gain stability.'
+    ],
+    importantDefinitions: [
+      {
+        term: 'Slew Rate (SR)',
+        definition: 'The maximum rate of change of output voltage that an op-amp can produce: SR = max(|dv_out/dt|). To avoid distortion for sinusoidal output V_m sin(ωt), f_max = SR / (2π V_m).'
+      },
+      {
+        term: 'Common-Mode Rejection Ratio (CMRR)',
+        definition: 'CMRR = |A_d / A_cm|, usually expressed in dB as 20 log10(|A_d / A_cm|). Measures the amplifier ability to amplify difference signal while rejecting common-mode noise.'
+      },
+      {
+        term: 'Phase Margin (PM)',
+        definition: 'PM = 180° + ∠(Aβ)|_{ω = ω_gc}, evaluated at gain crossover frequency where |Aβ| = 1. System is stable if PM > 0; optimal transient response typically requires PM ≈ 60°.'
+      }
+    ],
+    detailedExplanation: [
+      '1. Precision Diode & Superdiode Circuits:\nConventional diodes fail to rectify signals below cut-in voltage V_γ (~0.7V). Placing diode in Op-Amp feedback loop reduces effective cut-in voltage to V_γ / A_OL ≈ 0.7V / 10^5 ≈ 7 μV, enabling precise rectification of millivolt signals.',
+      '2. Active Filter Realizations (Sallen-Key Architecture):\nFirst-order low-pass active filter: H(s) = - (R_f / R_1) / (1 + s R_f C_f). Second-order low-pass Sallen-Key topology yields standard transfer function H(s) = K ω_0^2 / (s^2 + (ω_0/Q)s + ω_0^2), where Q = 1/√2 = 0.707 gives maximally flat Butterworth response with -40 dB/decade roll-off.',
+      '3. Transistor Small-Signal Amplifier Miller Effect:\nIn Common-Emitter / Common-Source amplifiers, capacitance C_gd (or C_μ) bridging input and output is magnified at the input by factor (1 - A_v) = (1 + |A_v|): C_in,Miller = C_gd(1 + |A_v|). This severely reduces the amplifier high-frequency 3-dB cutoff bandwidth.'
+    ],
+    importantFormulas: [
+      {
+        name: 'Finite Open-Loop Gain Non-Inverting Op-Amp Formula',
+        formula: 'A_{CL} = \\frac{1 + \\frac{R_f}{R_1}}{1 + \\frac{1 + R_f/R_1}{A_{OL}}}',
+        explanation: 'Closed-loop gain formula when Op-Amp internal gain A_OL is finite.'
+      },
+      {
+        name: 'Full-Power Bandwidth (Slew Rate Limit)',
+        formula: 'f_{max} = \\frac{SR}{2\\pi V_{omax}}',
+        explanation: 'Maximum frequency permissible for undistorted sinusoidal output of peak amplitude V_omax.'
+      },
+      {
+        name: 'Miller Input Capacitance Formula',
+        formula: 'C_{in,M} = C_{gd} \\cdot (1 - A_v) = C_{gd} \\cdot (1 + |A_v|)',
+        explanation: 'Miller theorem equivalent input capacitance across high-gain inverting amplifier stage.'
+      },
+      {
+        name: 'Wien Bridge Oscillator Frequency & Gain Condition',
+        formula: 'f_0 = \\frac{1}{2\\pi R C}, \\quad \\frac{R_f}{R_1} \\ge 2',
+        explanation: 'Conditions for Barkhausen loop gain Aβ = 1 at resonance for sustained sinusoidal oscillations.'
+      }
+    ],
+    importantDiagrams: [
+      {
+        title: 'Inverting Schmitt Trigger Transfer Curve',
+        description: 'Bistable transfer curve plotting V_out versus V_in showing upper threshold V_UTP and lower threshold V_LTP with counter-clockwise hysteresis loop.',
+        caption: 'Figure 4.1: Hysteresis loop provides superior noise immunity in noisy digital-threshold detection.'
+      }
+    ],
+    shortcutsAndTricks: [
+      'Virtual Ground Rule of Thumb: Only valid when negative feedback exists AND op-amp output is not saturated (i.e. -V_EE < V_out < +V_CC). Never apply virtual ground to Schmitt triggers!',
+      'Op-Amp Output Resistance with Feedback: Closed-loop output resistance R_out,CL = R_out,OL / (1 + A_OL·β), dramatically reducing practical output impedance.',
+      'Offset Voltage Output Shift: Output error voltage due to input offset voltage V_os is ALWAYS V_out,error = V_os · (1 + R_f / R_1), regardless of inverting or non-inverting configuration!'
+    ],
+    commonMistakes: [
+      'Mistake 1: Applying virtual ground V_+ = V_- to positive feedback circuits (Schmitt triggers, multivibrators). The non-inverting terminal is NOT at the same voltage as inverting terminal!',
+      'Mistake 2: Forgetting that real op-amp output saturation levels V_sat+ and V_sat- are approximately 1-2V below supply rails V_CC and -V_EE in non-rail-to-rail chips.'
+    ],
+    gateLevelPoints: [
+      'GATE Trap: When calculating bandwidth of op-amp circuits, Gain-Bandwidth Product (GBW) is constant: GBW = A_CL · BW = f_T. Increasing closed-loop gain directly shrinks circuit bandwidth.',
+      'CMRR evaluation: Given CMRR in dB, first convert to linear ratio CMRR = 10^(CMRR_dB / 20) before calculating error voltage: V_out = A_d V_d + A_cm V_cm = A_d [V_d + V_cm / CMRR].'
+    ],
+    quickRevisionSummary: [
+      'Ideal Op-Amp: Rin = ∞, Rout = 0, A_OL = ∞. Neg feedback -> V+ = V-.',
+      'Inverting: -Rf/R1. Non-inverting: 1 + Rf/R1.',
+      'Slew Rate: f_max = SR / (2π V_m). CMRR = |Ad / Acm|.',
+      'Schmitt Trigger: V_UTP / V_LTP determined by positive feedback divider.',
+      'Barkhausen: |Aβ| = 1 and ∠Aβ = 0° or 360°. Wien bridge: f0 = 1/(2πRC), Rf/R1 ≥ 2.'
+    ],
+    uploadedFiles: [
+      {
+        id: 'file-analog-pw',
+        fileName: 'Analog_Electronics_Notes_PW.pdf',
+        fileType: 'PDF',
+        size: '3.30 MB',
+        subject: 'Analog Circuits',
+        unit: 'Section 4: Analog Circuits',
+        topic: 'Op-Amp Circuits & Active Filters',
+        subtopic: 'Complete 39-page Master Textbook',
+        title: 'Physics Wallah Analog Electronics GATE Handbook',
+        uploadDate: '2026-09-18',
+        fileUrl: '/notes/Analog_Electronics_Notes_PW.pdf'
+      }
+    ]
+  },
+
+  // SECTION 6: Control Systems Note
+  {
+    id: 'note-ctrl-201',
+    topicId: 'top-ctrl-201',
+    unitId: 'unit-ctrl-2',
+    subjectId: 'subj-control',
+    title: 'Control System Stability Analysis: Routh-Hurwitz, Nyquist Criterion, Bode Plots & Compensators',
+    lastUpdated: '2026-09-19',
+    topicIntroduction: 'Control Systems is one of the highest scoring and most mathematically rigorous sections in GATE ECE. Key concepts include Mason’s gain formula for Signal Flow Graphs, time-domain transient specifications for second-order underdamped systems, steady-state error analysis and error coefficients, Routh-Hurwitz stability criterion and special cases, root-locus construction rules, Nyquist stability criterion based on Cauchy’s argument principle, Bode plots with gain/phase margins, state-space canonical forms, and phase-lead/phase-lag compensator design.',
+    coreConcepts: [
+      'Mason’s Gain Formula: Overall transfer function T = ∑ (P_k · Δ_k) / Δ, where P_k is forward path gain, Δ = 1 - ∑ L_1 + ∑ L_2 - ∑ L_3 + ..., and Δ_k is the cofactor of the k-th forward path.',
+      'Second-Order System Dynamics: Standard char equation s^2 + 2ζω_n s + ω_n^2 = 0. Peak overshoot %M_p = e^{-πζ / √(1-ζ^2)} × 100%. Settling time t_s = 4 / (ζω_n) (2% tolerance) or 3 / (ζω_n) (5% tolerance). Peak time t_p = π / (ω_n √(1-ζ^2)).',
+      'Steady-State Error: e_ss = lim_{s→0} s·R(s) / [1 + G(s)H(s)]. Position error constant K_p = lim_{s→0} G(s)H(s); Velocity error constant K_v = lim_{s→0} s G(s)H(s); Acceleration error constant K_a = lim_{s→0} s^2 G(s)H(s).',
+      'Routh-Hurwitz Criterion: Number of sign changes in the first column of the Routh array equals the number of closed-loop poles in the Right Half of the s-Plane (RHP). Row of zeros indicates symmetric roots about origin (jω poles or quadrantal roots).',
+      'Nyquist Stability Criterion: N = P - Z, where N is clockwise encirclements of (-1 + j0), P is number of open-loop poles in RHP, and Z is number of closed-loop poles in RHP. For closed-loop stability, Z MUST equal 0, so N = -P (or P counter-clockwise encirclements).',
+      'State Space Representation: ẋ(t) = A x(t) + B u(t), y(t) = C x(t) + D u(t). Transfer function G(s) = C(sI - A)^{-1}B + D. State transition matrix Φ(t) = e^{At} = L^{-1}{(sI - A)^{-1}}.'
+    ],
+    importantDefinitions: [
+      {
+        term: 'Gain Margin (GM) & Phase Margin (PM)',
+        definition: 'Gain Crossover Frequency (ω_gc): frequency where |G(jω)H(jω)| = 1. Phase Crossover Frequency (ω_pc): frequency where ∠G(jω)H(jω) = -180°. GM = 1 / |G(jω_pc)H(jω_pc)| = -20 log10|G(jω_pc)| dB. PM = 180° + ∠G(jω_gc)H(jω_gc).'
+      },
+      {
+        term: 'Kalman Controllability & Observability',
+        definition: 'System is completely state controllable if controllability matrix Q_c = [B  AB  A^2B ... A^{n-1}B] has rank n. System is completely observable if observability matrix Q_o = [C^T  A^T C^T ... (A^T)^{n-1} C^T]^T has rank n.'
+      }
+    ],
+    detailedExplanation: [
+      '1. Root Locus Construction Rules:\n- Number of branches = max(P, Z). Symmetry about real axis.\n- Real axis segments: a point lies on root locus if total number of open-loop poles and zeros to its right is ODD.\n- Asymptotes angle: θ_k = (2k + 1)·180° / (P - Z). Centroid: σ_A = (∑ Real(Poles) - ∑ Real(Zeros)) / (P - Z).\n- Breakaway points: dK/ds = 0 where K = -1 / G(s)H(s).',
+      '2. Lead vs Lag Compensator Design:\n- Phase-Lead Compensator G_c(s) = (s + 1/τ) / (s + 1/(ατ)) with α < 1: Adds positive phase lead φ_max = sin^{-1}((1 - α)/(1 + α)) at ω_m = 1/(τ√α). Increases bandwidth, speeds up transient response, improves phase margin.\n- Phase-Lag Compensator G_c(s) = (s + 1/τ) / (s + 1/(βτ)) with β > 1: Increases low-frequency gain, drastically improves steady-state accuracy without altering transient response.'
+    ],
+    importantFormulas: [
+      {
+        name: 'Percentage Peak Overshoot Formula',
+        formula: '\\%M_p = e^{-\\frac{\\pi \\zeta}{\\sqrt{1-\\zeta^2}}} \\times 100\\%',
+        explanation: 'Directly relates damping ratio ζ to maximum transient peak overshoot.'
+      },
+      {
+        name: 'Nyquist Encirclement Law',
+        formula: 'N = P - Z \\implies Z = P - N = 0 \\quad (\\text{for stability})',
+        explanation: 'Relates open-loop RHP poles P, encirclements N of (-1, j0), and closed-loop RHP poles Z.'
+      },
+      {
+        name: 'Transfer Function from State Matrices',
+        formula: 'G(s) = C(sI - A)^{-1}B + D = \\frac{C \\cdot \\text{adj}(sI - A) \\cdot B}{\\det(sI - A)} + D',
+        explanation: 'Closed-form transfer function evaluation from continuous state-space matrices.'
+      },
+      {
+        name: 'Lead Compensator Maximum Phase Lead',
+        formula: '\\sin(\\phi_{max}) = \\frac{1 - \\alpha}{1 + \\alpha}, \\quad \\omega_{max} = \\frac{1}{\\tau \\sqrt{\\alpha}}',
+        explanation: 'Calculates required pole-zero separation ratio α for desired phase margin boost.'
+      }
+    ],
+    importantDiagrams: [
+      {
+        title: 'Bode Plot Margins & Crossover Frequencies',
+        description: 'Bode magnitude and phase curves showing Gain Crossover Frequency (ω_gc), Phase Crossover Frequency (ω_pc), Gain Margin (GM) and Phase Margin (PM).',
+        caption: 'Figure 6.1: For stable minimum-phase systems, ω_gc < ω_pc with positive GM (dB) and PM.'
+      }
+    ],
+    shortcutsAndTricks: [
+      'Second-Order Underdamped ζ Shortcut: If %Mp = 16.3%, ζ ≈ 0.5. If %Mp = 4.3%, ζ ≈ 0.707. If %Mp = 10%, ζ ≈ 0.6.',
+      'Steady-State Error Matrix: Type 0 system has finite error for Step input; Type 1 system has zero error for Step and finite error for Ramp input; Type 2 system has zero error for Step and Ramp, finite error for Parabolic input.',
+      'State Transition Matrix Invariant: Φ(0) = I (Identity matrix), and [Φ(t)]^{-1} = Φ(-t).'
+    ],
+    commonMistakes: [
+      'Mistake 1: Confusing Nyquist encirclement direction. Standard convention: N is POSITIVE for CLOCKWISE encirclements of (-1 + j0). If Nyquist contour is traversed clockwise, N = P - Z.',
+      'Mistake 2: Forgetting that a row of zeros in the Routh array means you MUST construct the auxiliary polynomial A(s) from the previous row and differentiate dA(s)/ds to continue.'
+    ],
+    gateLevelPoints: [
+      'GATE Trap: If open-loop transfer function has pole at origin (1/s), the Nyquist contour must detour around the origin via small semicircle s = ε e^{jθ} with θ ranging from -90° to +90°, mapping to a massive semicircle at infinity.',
+      'Eigenvalues of system matrix A are identically the poles of closed-loop transfer function: det(sI - A) = 0.'
+    ],
+    quickRevisionSummary: [
+      'Mason Gain: T = ∑ P_k Δ_k / Δ. Peak overshoot: %Mp = exp(-πζ/√(1-ζ²)) * 100.',
+      'Settling time (2%): ts = 4 / (ζ ωn). Steady-state error: ess = lim s R(s) / (1 + GH).',
+      'Routh criterion: Sign changes in 1st column = RHP poles.',
+      'Nyquist: N = P - Z. Stability requires Z = 0.',
+      'Lead compensator: adds positive phase, speeds up response; Lag: increases low-freq gain, cuts steady-state error.'
+    ],
+    uploadedFiles: [
+      {
+        id: 'file-control-pw',
+        fileName: 'Control_Systems_Notes_PW.pdf',
+        fileType: 'PDF',
+        size: '4.67 MB',
+        subject: 'Control Systems',
+        unit: 'Section 6: Control Systems',
+        topic: 'Time & Frequency Response & Stability',
+        subtopic: 'Complete 84-page Master Textbook',
+        title: 'Physics Wallah Control Systems GATE Handbook',
+        uploadDate: '2026-09-18',
+        fileUrl: '/notes/Control_Systems_Notes_PW.pdf'
+      }
+    ]
+  },
+
+  // SECTION 7: Communications Note
+  {
+    id: 'note-comm-301',
+    topicId: 'top-comm-301',
+    unitId: 'unit-comm-3',
+    subjectId: 'subj-comm',
+    title: 'Digital Passband Modulation (BPSK/QPSK/QAM), Matched Filter Detection & Information Theory',
+    lastUpdated: '2026-09-19',
+    topicIntroduction: 'Communication Systems is a foundational pillar of GATE ECE, spanning both statistical analog systems and advanced digital physical layer techniques. Key tested areas include wide-sense stationary (WSS) random processes, white Gaussian noise (AWGN) filtering, analog modulation (AM, DSB-SC, SSB, FM Carson’s rule, superheterodyne receivers), information entropy and Shannon-Hartley channel capacity, pulse code modulation (PCM) quantization SNR, matched filter impulse response maximizing peak output SNR, constellation geometric representation, bit error rate (BER) derivations for BPSK/QPSK/QAM, and linear block error-correcting codes.',
+    coreConcepts: [
+      'Shannon Channel Capacity Theorem: C = B · log_2(1 + S/N) bits/sec, where B is channel bandwidth and S/N is signal-to-noise power ratio. As bandwidth B → ∞, channel capacity approaches finite limit: C_∞ = (S / N_0) · log_2(e) ≈ 1.442 · (S / N_0).',
+      'Information Entropy: Source entropy H(X) = - ∑ P(x_i) log_2 P(x_i) bits/symbol. For M equiprobable symbols, entropy attains maximum H_max = log_2(M).',
+      'Pulse Code Modulation (PCM) & Quantization: Uniform quantizer step size Δ = (V_max - V_min) / 2^n. Quantization noise power N_q = Δ^2 / 12. Output Signal-to-Quantization-Noise Ratio: (SNR)_dB = 1.76 + 6.02·n dB. Each added bit improves SNR by approx 6 dB!',
+      'Matched Filter Detection: For signal s(t) corrupted by AWGN with PSD N_0/2, optimum filter impulse response maximizing output SNR at sampling instant T is h(t) = k · s*(T - t). Maximum output peak SNR is (S/N)_out,max = 2 E_s / N_0, which depends purely on signal energy E_s and noise spectral density N_0, completely independent of signal waveshape!',
+      'Passband Constellation & Bit Error Probability (BER): BPSK: P_e = Q(√(2 E_b / N_0)); QPSK: Bit error rate P_b = Q(√(2 E_b / N_0)) (identical to BPSK with double the spectral efficiency!); BFSK (coherent): P_e = Q(√(E_b / N_0)) (requires 3 dB more power than BPSK).',
+      'Nyquist Criterion for Zero ISI: For zero Inter-Symbol Interference (ISI), overall equivalent channel response must satisfy ∑ P(f + k/T_s) = T_s. Minimum theoretical bandwidth is B_min = R_s / 2 (Nyquist bandwidth). With raised-cosine roll-off factor α (0 ≤ α ≤ 1), required transmission bandwidth is B = (1 + α) R_s / 2.'
+    ],
+    importantDefinitions: [
+      {
+        term: 'Wide-Sense Stationary (WSS) Random Process',
+        definition: 'A random process X(t) whose mean is constant for all time E[X(t)] = μ, and whose autocorrelation R_XX(t1, t2) depends solely on time difference τ = t1 - t2: R_XX(τ) = E[X(t) X(t + τ)].'
+      },
+      {
+        term: 'Wiener-Khinchin Theorem',
+        definition: 'For a WSS random process, the Power Spectral Density S_XX(f) and autocorrelation function R_XX(τ) form a Fourier transform pair: S_XX(f) = ∫ R_XX(τ) e^{-j 2π f τ} dτ.'
+      },
+      {
+        term: 'Gaussian Q-Function',
+        definition: 'The tail probability of the standard normal distribution N(0, 1): Q(x) = (1/√(2π)) ∫_x^∞ e^{-u^2 / 2} du. Useful approximation: Q(x) ≈ (1 / (x√(2π))) e^{-x^2 / 2} for large x.'
+      }
+    ],
+    detailedExplanation: [
+      '1. Superheterodyne Receiver & Image Frequency:\nLocal oscillator frequency is chosen as f_LO = f_s + 2·f_IF (high-side tuning). The image frequency is f_img = f_s + 2·f_IF. Image Rejection Ratio (IRR) is governed by RF pre-selector filter selectivity: IRR = √(1 + Q^2 ρ^2) where ρ = (f_img/f_s) - (f_s/f_img).',
+      '2. FM Modulation Index & Carson’s Bandwidth:\nInstantaneous frequency f_i(t) = f_c + k_f m(t). Frequency deviation Δf = k_f · max|m(t)|. Modulation index β = Δf / f_m. Carson’s Bandwidth Rule: BW_FM = 2(Δf + f_m) = 2(β + 1)f_m. For Narrowband FM (β << 1), BW ≈ 2 f_m; For Wideband FM (β >> 1), BW ≈ 2 Δf.',
+      '3. Linear Block Codes (n, k):\nGenerator matrix G (k × n) generates codewords c = m · G. Parity check matrix H ((n - k) × n) satisfies G · H^T = 0. Syndrome vector s = r · H^T detects and locates transmission errors. Minimum Hamming distance d_min detects up to (d_min - 1) errors and corrects up to ⌊(d_min - 1)/2⌋ errors.'
+    ],
+    importantFormulas: [
+      {
+        name: 'Shannon Channel Capacity Formula',
+        formula: 'C = B \\log_2\\left(1 + \\frac{S}{N}\\right) = B \\log_2\\left(1 + \\frac{S}{N_0 B}\\right)',
+        explanation: 'Maximum error-free information transmission rate over an AWGN channel.'
+      },
+      {
+        name: 'PCM Quantization Signal-to-Noise Ratio',
+        formula: '(\\text{SNR})_{q,\\text{dB}} = 1.76 + 6.02 \\cdot n \\quad \\text{dB}',
+        explanation: 'Quantization SNR for full-scale sinusoidal input with n-bit encoding.'
+      },
+      {
+        name: 'Matched Filter Peak Output SNR',
+        formula: '(\\text{SNR})_{out,max} = \\frac{2 E_s}{N_0}',
+        explanation: 'Maximum achievable output SNR at decision instant for AWGN noise PSD N0/2.'
+      },
+      {
+        name: 'BPSK & QPSK Bit Error Rate',
+        formula: 'P_b = Q\\left(\\sqrt{\\frac{2E_b}{N_0}}\\right) = \\frac{1}{2} \\text{erfc}\\left(\\sqrt{\\frac{E_b}{N_0}}\\right)',
+        explanation: 'Exact bit error probability for coherent BPSK and QPSK passband transmission.'
+      }
+    ],
+    importantDiagrams: [
+      {
+        title: 'QPSK Constellation & Decision Boundaries',
+        description: 'Constellation diagram showing 4 signal points in 2-dimensional I-Q orthonormal basis with Gray coding (00, 01, 11, 10) and quadrant decision boundaries.',
+        caption: 'Figure 7.1: QPSK transmits 2 bits per symbol while maintaining exact bit error probability of BPSK.'
+      }
+    ],
+    shortcutsAndTricks: [
+      'PCM Bandwidth Shortcut: PCM bit rate R_b = n · f_s. Minimum transmission bandwidth BW_min = R_b / 2 = n · f_s / 2. If sampled at Nyquist rate f_s = 2 f_m, then BW_min = n · f_m.',
+      'AWGN Noise Power through Filter: Total noise power at output of filter H(f) is P_N = ∫_{-∞}^∞ (N_0 / 2) |H(f)|^2 df = N_0 · B_N, where B_N is noise equivalent bandwidth.',
+      'DSB-SC vs Standard AM Power: Total power in standard AM is P_t = P_c (1 + μ^2 / 2). Efficiency η = μ^2 / (2 + μ^2). Maximum efficiency for 100% modulation (μ = 1) is only 33.3%!'
+    ],
+    commonMistakes: [
+      'Mistake 1: Confusing one-sided and two-sided noise spectral density. In GATE, if noise PSD is given as N_0/2, it is TWO-SIDED. If given as N_0, it is ONE-SIDED.',
+      'Mistake 2: Mixing cyclic frequency f (Hz) and angular frequency ω (rad/s) in Wiener-Khinchin theorem: S_XX(f) = ∫ R(τ) e^{-j 2π f τ} dτ requires no 1/(2π) prefactor, whereas S_XX(ω) requires careful scaling.'
+    ],
+    gateLevelPoints: [
+      'GATE Trap: Shannon capacity limit as B → ∞ is NOT infinite! lim_{B→∞} C = (S/N_0) · log2(e) = 1.442 (S/N_0). This represents the ultimate power-limited capacity boundary.',
+      'Hamming (7, 4) Code: n = 7, k = 4, parity bits = 3. Minimum distance d_min = 3, correcting exactly 1 bit error per block.'
+    ],
+    quickRevisionSummary: [
+      'Capacity: C = B log2(1 + S/N). As B → ∞, C → 1.442 S/N0.',
+      'Entropy: H(X) = -∑ p log2 p. Uniform M-ary: H = log2 M.',
+      'PCM: SNR = 1.76 + 6.02n dB. Bit rate Rb = n fs.',
+      'Matched Filter: h(t) = s*(T - t). Peak SNR = 2 Es / N0.',
+      'BER: BPSK/QPSK Pb = Q(√(2Eb/N0)); BFSK Pb = Q(√(Eb/N0)). Carson: BW = 2(Δf + fm).'
+    ],
+    uploadedFiles: [
+      {
+        id: 'file-comm-pw',
+        fileName: 'Communication_Systems_Notes_PW.pdf',
+        fileType: 'PDF',
+        size: '3.69 MB',
+        subject: 'Communications',
+        unit: 'Section 7: Communications',
+        topic: 'Digital Communications & Info Theory',
+        subtopic: 'Complete 89-page Master Textbook',
+        title: 'Physics Wallah Communication Systems GATE Handbook',
+        uploadDate: '2026-09-18',
+        fileUrl: '/notes/Communication_Systems_Notes_PW.pdf'
+      }
+    ]
+  },
+
+  // SECTION 8: Electromagnetics Note
+  {
+    id: 'note-emft-101',
+    topicId: 'top-emft-101',
+    unitId: 'unit-emft-1',
+    subjectId: 'subj-emft',
+    title: 'Maxwell’s Equations, Plane Wave Propagation, Transmission Lines & Antenna Parameters',
+    lastUpdated: '2026-09-19',
+    topicIntroduction: 'Electromagnetics (EMFT) covers the physical wave dynamics governing high-frequency signals in modern electronics and communications. Central examination topics cover Maxwell’s four fundamental equations, dielectric and magnetic boundary conditions, uniform plane wave propagation in lossless and lossy media, wave polarization determination, skin depth and attenuation, transmission line equations with reflection coefficient Γ and VSWR, quarter-wave transformer matching, rectangular waveguide TE/TM cutoff modes, and basic antenna parameters (radiation resistance, directivity, effective aperture).',
+    coreConcepts: [
+      'Maxwell’s Four Equations: (1) Gauss’s Law for Electrostatics: ∇ · D = ρ_v; (2) Gauss’s Law for Magnetism: ∇ · B = 0; (3) Faraday’s Law of Induction: ∇ × E = -∂B/∂t; (4) Ampere-Maxwell Law: ∇ × H = J + ∂D/∂t (where ∂D/∂t is displacement current density).',
+      'Electromagnetic Boundary Conditions: (1) Tangential E-field is continuous: E_{1t} = E_{2t}; (2) Tangential H-field discontinuity equals surface current: n̂ × (H_1 - H_2) = K (for dielectrics with K = 0, H_{1t} = H_{2t}); (3) Normal D-field discontinuity equals surface charge: D_{1n} - D_{2n} = ρ_s; (4) Normal B-field is continuous: B_{1n} = B_{2n}.',
+      'Wave Propagation & Intrinsic Impedance: Propagation constant γ = α + jβ = √(jωμ(σ + jωε)). Lossless medium (σ = 0): α = 0, β = ω√(με), intrinsic impedance η = √(μ/ε) (approx 377 Ω or 120π Ω in free space). Good conductor (σ >> ωε): α = β = √(π f μ σ), skin depth δ = 1/α = 1 / √(π f μ σ).',
+      'Wave Polarization: Determined by trajectory of the electric field vector E(z, t) in plane transverse to propagation: Linear (components in-phase or 180° out of phase), Circular (equal orthogonal amplitudes with ±90° phase difference), or Elliptical (general case).',
+      'Transmission Line Equations & Reflection Coefficient: Characteristic impedance Z_0 = √((R + jωL)/(G + jωC)). For lossless line, Z_0 = √(L/C). Reflection coefficient at load: Γ_L = (Z_L - Z_0) / (Z_L + Z_0). Voltage Standing Wave Ratio: VSWR = (1 + |Γ|) / (1 - |Γ|), with 1 ≤ VSWR < ∞.',
+      'Quarter-Wave Transformer & Impedance Inversion: Line of length l = λ/4 transforms load impedance to input impedance Z_in = Z_0^2 / Z_L. Used for impedance matching between two real impedances Z_in and Z_L by setting transformer impedance Z_0 = √(Z_in · Z_L).'
+    ],
+    importantDefinitions: [
+      {
+        term: 'Poynting Vector',
+        definition: 'Represents instantaneous directional energy flux density of an electromagnetic wave: S = E × H (W/m²). Time-average power density for time-harmonic fields is P_avg = 0.5 · Re(E × H*).'
+      },
+      {
+        term: 'Skin Depth (δ)',
+        definition: 'The penetration depth at which the amplitude of an electromagnetic wave inside a conductor attenuates to 1/e (~36.8%) of its surface value: δ = 1 / √(π f μ σ).'
+      },
+      {
+        term: 'Cutoff Frequency in Rectangular Waveguide',
+        definition: 'The minimum frequency below which wave propagation cannot occur for TE_mn or TM_mn mode: f_{c,mn} = (c / 2) · √((m/a)^2 + (n/b)^2), where a and b are broad and narrow wall dimensions.'
+      }
+    ],
+    detailedExplanation: [
+      '1. Rectangular Waveguide Dominant Mode (TE_10):\nFor dimensions a > b, dominant mode with lowest cutoff frequency is TE_10: f_{c,10} = c / (2a). Guide wavelength λ_g = λ_0 / √(1 - (f_c/f)^2) > λ_0. Phase velocity v_p = c / √(1 - (f_c/f)^2) > c, while group velocity v_g = c · √(1 - (f_c/f)^2) < c, satisfying v_p · v_g = c^2.',
+      '2. Antenna Radiation Properties & Directivity:\nHertzian Dipole (length dl << λ): Radiation resistance R_rad = 80π^2 (dl / λ)^2 Ω; Directivity D = 1.5 (1.76 dBi). Half-Wave Dipole (length l = λ/2): Radiation resistance R_rad ≈ 73 Ω; Directivity D = 1.64 (2.15 dBi). Effective aperture A_e = (λ^2 / 4π) · D.'
+    ],
+    importantFormulas: [
+      {
+        name: 'Maxwell’s Equations (Differential Form)',
+        formula: '\\nabla \\cdot \\mathbf{D} = \\rho_v, \\quad \\nabla \\cdot \\mathbf{B} = 0, \\quad \\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t}, \\quad \\nabla \\times \\mathbf{H} = \\mathbf{J} + \\frac{\\partial \\mathbf{D}}{\\partial t}',
+        explanation: 'Complete electrodynamic field equations in time-varying media.'
+      },
+      {
+        name: 'Transmission Line Input Impedance Formula',
+        formula: 'Z_{in}(l) = Z_0 \\left[\\frac{Z_L + j Z_0 \\tan(\\beta l)}{Z_0 + j Z_L \\tan(\\beta l)}\\right]',
+        explanation: 'Input impedance looking into a lossless transmission line of length l terminated in Z_L.'
+      },
+      {
+        name: 'Quarter-Wave Matching Formula',
+        formula: 'Z_{0,\\text{match}} = \\sqrt{Z_{in} \\cdot Z_L}',
+        explanation: 'Characteristic impedance of a λ/4 section required to match load Z_L to input Z_in.'
+      },
+      {
+        name: 'Friis Transmission Equation',
+        formula: '\\frac{P_r}{P_t} = G_t G_r \\left(\\frac{\\lambda}{4\\pi R}\\right)^2',
+        explanation: 'Free-space path loss power transfer between transmitting and receiving antennas.'
+      }
+    ],
+    importantDiagrams: [
+      {
+        title: 'Uniform Plane Wave E and H Field Alignment',
+        description: 'Transverse Electromagnetic (TEM) wave propagating in +z direction with orthogonal E-field along x-axis and H-field along y-axis such that E × H points along z.',
+        caption: 'Figure 8.1: In TEM waves, E, H, and propagation vector k form a right-handed orthogonal triad.'
+      }
+    ],
+    shortcutsAndTricks: [
+      'Short-Circuited Line (Z_L = 0): Z_in = j Z_0 tan(βl). For l < λ/4, acts purely as an inductor L_eq = (Z_0 tan(βl))/ω. For λ/4 < l < λ/2, acts as a capacitor!',
+      'Open-Circuited Line (Z_L = ∞): Z_in = -j Z_0 cot(βl). For l < λ/4, acts purely as a capacitor C_eq = 1 / (ω Z_0 cot(βl)).',
+      'Distance Between Voltage Maxima on Transmission Line: Separation between two adjacent V_max (or V_min) is exactly λ/2; separation between adjacent V_max and V_min is λ/4.'
+    ],
+    commonMistakes: [
+      'Mistake 1: Confusing wave propagation velocity v_p with group velocity v_g in waveguides. Phase velocity can exceed speed of light c, but group velocity carrying information is strictly v_g ≤ c.',
+      'Mistake 2: Forgetting that TM_00, TM_10, and TM_01 modes CANNOT exist in rectangular waveguides! The lowest order TM mode is TM_11.'
+    ],
+    gateLevelPoints: [
+      'GATE Trap: Brewster Angle θ_B: Angle of incidence where reflection coefficient is ZERO. Occurs ONLY for parallel polarization: tan(θ_B) = √(ε_2 / ε_1). For perpendicular polarization, Brewster angle does not exist in non-magnetic media!',
+      'Smith Chart: One complete rotation around the Smith chart (360° on chart) corresponds to a physical line length of λ/2 (180° electrical length).'
+    ],
+    quickRevisionSummary: [
+      '∇·D = ρ, ∇·B = 0, ∇×E = -∂B/∂t, ∇×H = J + ∂D/∂t.',
+      'Intrinsic impedance in vacuum η0 = 120π ≈ 377 Ω. Lossless: β = ω√(με).',
+      'Skin depth δ = 1/√(π f μ σ). Good conductor: α = β = 1/δ.',
+      'Reflection coeff Γ = (ZL - Z0)/(ZL + Z0). VSWR = (1 + |Γ|)/(1 - |Γ|).',
+      'Quarter-wave: Zin = Z0² / ZL. TE10 cutoff: fc = c / (2a).'
+    ],
+    uploadedFiles: [
+      {
+        id: 'file-emft-pw',
+        fileName: 'Electromagnetic_Field_Theory_Notes_PW.pdf',
+        fileType: 'PDF',
+        size: '10.41 MB',
+        subject: 'Electromagnetics',
+        unit: 'Section 8: Electromagnetics',
+        topic: 'Maxwell’s Equations & Uniform Plane Waves',
+        subtopic: 'Complete 105-page Master Textbook',
+        title: 'Physics Wallah Electromagnetic Field Theory GATE Handbook',
+        uploadDate: '2026-09-18',
+        fileUrl: '/notes/Electromagnetic_Field_Theory_Notes_PW.pdf'
+      }
+    ]
+  },
+
+  // SECTION 0: General Aptitude Note
+  {
+    id: 'note-apt-101',
+    topicId: 'top-apt-101',
+    unitId: 'unit-apt-1',
+    subjectId: 'subj-aptitude',
+    title: 'Quantitative Aptitude, Numerical Computation, Probability & Spatial Reasoning',
+    lastUpdated: '2026-09-19',
+    topicIntroduction: 'General Aptitude carries 15 mandatory marks across all GATE disciplines, offering the highest return on study investment. Key question types focus on numerical computation (percentages, profit-loss, work-rate, speed-time-distance, ratios), permutations & combinations, combinatorial probability, data interpretation from multi-axis charts, English grammar/vocabulary deduction, and 2D/3D spatial reasoning (mirror reflections, pattern folding, and rotation).',
+    coreConcepts: [
+      'Percentages & Profit-Loss: Cost Price (CP), Selling Price (SP). Profit % = (SP - CP)/CP × 100%. Successive discounts d1 and d2 yield net discount D_net = d1 + d2 - (d1 · d2)/100%.',
+      'Time, Speed and Distance (TSD): Distance = Speed × Time. Relative speed: moving in opposite directions -> S_rel = S1 + S2; moving in same direction -> S_rel = |S1 - S2|. Average speed for equal distance legs = 2·S1·S2 / (S1 + S2) (Harmonic Mean).',
+      'Work and Rate: If A completes a work in D_A days and B in D_B days, their combined 1-day work is 1/D_A + 1/D_B, completing the job together in (D_A · D_B) / (D_A + D_B) days.',
+      'Permutations & Combinations: Arrangements of r items from n: ^n P_r = n! / (n - r)!. Selections of r items from n: ^n C_r = n! / [r! (n - r)!]. Circular permutations of n distinct objects: (n - 1)!.',
+      'Combinatorial Probability: P(A ∪ B) = P(A) + P(B) - P(A ∩ B). Conditional probability P(A|B) = P(A ∩ B) / P(B). Bayes’ Rule calculates posterior probabilities based on prior evidence.',
+      'Spatial Reasoning Principles: 2D plane reflections across arbitrary mirrors, rotating cubes in 3D, unfolding cardboard nets of polyhedra, and identifying matching isometric views.'
+    ],
+    importantDefinitions: [
+      {
+        term: 'Harmonic Mean for Average Speed',
+        definition: 'When equal distances are traversed at different speeds v1, v2, ..., vn, the true average speed is the Harmonic Mean of speeds, NOT the arithmetic mean: v_avg = n / (∑ 1/v_i).'
+      },
+      {
+        term: 'Spatial Invariance',
+        definition: 'Properties of shapes (angles, collinearity, side ratios) that remain invariant under rigid body translations and rotations in 2D and 3D space.'
+      }
+    ],
+    detailedExplanation: [
+      '1. Data Interpretation Mastery:\nExtracting trends from grouped bar charts, pie charts, and radar graphs. For percentage change questions: % Change = ((Final - Initial) / Initial) × 100%. When analyzing pie charts, total central angle 360° corresponds to 100% of total data value (1% = 3.6°).',
+      '2. English Grammar & Critical Verbal Deductions:\nSubject-verb agreement, conditional clauses (Type 1, 2, 3), misplaced modifiers, and logical syllogisms (All A are B, Some B are C). Identifying unstated assumptions versus logically required deductions.'
+    ],
+    importantFormulas: [
+      {
+        name: 'Successive Percentage Change Formula',
+        formula: '\\Delta\\% = a + b + \\frac{a \\cdot b}{100}\\%',
+        explanation: 'Calculates net effect of two consecutive percentage changes a% and b%.'
+      },
+      {
+        name: 'Average Speed for Equal Distance Segments',
+        formula: 'v_{\\text{avg}} = \\frac{2 v_1 v_2}{v_1 + v_2}',
+        explanation: 'Harmonic mean formula preventing arithmetic mean error on round-trip questions.'
+      },
+      {
+        name: 'Combinations Formula',
+        formula: '^n C_r = \\frac{n!}{r!(n - r)!}, \\quad ^n C_r = ^n C_{n-r}',
+        explanation: 'Number of ways to choose r items out of n items without regard to order.'
+      },
+      {
+        name: 'Bayes’ Posterior Probability Theorem',
+        formula: 'P(A_i | B) = \\frac{P(B | A_i) P(A_i)}{\\sum_{j=1}^k P(B | A_j) P(A_j)}',
+        explanation: 'Calculates reverse conditional probability from forward condition.'
+      }
+    ],
+    importantDiagrams: [
+      {
+        title: 'Cube Unfolding Net to 3D Polyhedron',
+        description: 'Standard T-shaped and cross-shaped 6-face cube unfoldings showing adjacent and opposing face relationships.',
+        caption: 'Figure 0.1: Opposite faces in standard cube net are separated by exactly one intervening face.'
+      }
+    ],
+    shortcutsAndTricks: [
+      'Cube Opposite Faces Trick: In an unfolded cube net, faces situated in the same row or column separated by exactly one square are ALWAYS opposite each other in the folded 3D cube!',
+      'Calendar Shortcut: Odd days count: Normal year = 1 odd day (365 = 52 weeks + 1 day); Leap year = 2 odd days. Century years are leap only if divisible by 400.',
+      'Clock Angle Formula: Angle between hour hand and minute hand at H hours and M minutes is θ = |30·H - 5.5·M| degrees.'
+    ],
+    commonMistakes: [
+      'Mistake 1: Computing average speed as (v1 + v2)/2 for a round trip. Arithmetic mean is ONLY valid if equal TIME is spent at each speed, NOT equal distance!',
+      'Mistake 2: Confusing permutations (order matters) with combinations (order does not matter).'
+    ],
+    gateLevelPoints: [
+      'GATE Aptitude Trap: In spatial reasoning paper folding questions, trace holes punched in folded corners backward step by step, reflecting about fold lines in reverse sequence.',
+      'Vocabulary Questions: Look for contrast signal words (although, despite, whereas, however) to deduce opposite meanings in sentence completion.'
+    ],
+    quickRevisionSummary: [
+      'Net % change = a + b + ab/100. Average speed = 2 v1 v2 / (v1 + v2).',
+      'Work: Combined time = (A·B) / (A + B).',
+      'nCr = n! / (r! (n - r)!). Clock angle = |30H - 5.5M|.',
+      'Cube nets: 1 intervening square = opposite faces.',
+      '15 Marks = 5 Qs of 1-mark + 5 Qs of 2-marks.'
+    ],
+    uploadedFiles: [
+      {
+        id: 'file-apt-pw',
+        fileName: 'General_Aptitude_Notes_PW.pdf',
+        fileType: 'PDF',
+        size: '727 KB',
+        subject: 'General Aptitude',
+        unit: 'Section 0: General Aptitude',
+        topic: 'Quantitative Aptitude & Numerical Reasoning',
+        subtopic: 'Complete 28-page Master Textbook',
+        title: 'Physics Wallah General Aptitude GATE Handbook',
+        uploadDate: '2026-09-18',
+        fileUrl: '/notes/General_Aptitude_Notes_PW.pdf'
+      },
+      {
+        id: 'file-quant-pw',
+        fileName: 'Quantitative_Aptitude_Handbook.pdf',
+        fileType: 'PDF',
+        size: '2.24 MB',
+        subject: 'General Aptitude',
+        unit: 'Section 0: General Aptitude',
+        topic: 'Quantitative Aptitude & Formulas',
+        subtopic: 'Complete Quantitative Formula Handbook',
+        title: 'Quantitative Aptitude Comprehensive Handbook',
+        uploadDate: '2026-09-18',
+        fileUrl: '/notes/Quantitative_Aptitude_Handbook.pdf'
+      }
+    ]
   }
 ];

@@ -58,9 +58,18 @@ export const FormulaSheetsView: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
+          <a
+            href="/notes/Formula_Cheat_Sheet_347_Formulas.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-brand-dark hover:bg-brand-hover text-white text-xs font-semibold shadow-xs"
+          >
+            <Download size={13} />
+            <span>Download 347-Formula Cheat Sheet (PDF)</span>
+          </a>
           <span className="text-xs font-mono font-semibold px-3 py-1.5 rounded-lg bg-brand-soft dark:bg-brand-dark/30 text-brand-dark dark:text-brand-primary">
-            {formulas.length} Total Invariants
+            {formulas.length} Invariants
           </span>
         </div>
       </div>

@@ -13,7 +13,6 @@ import {
   Download
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { ProgressBar } from '../common/ProgressBar';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 
 export const SubjectsView: React.FC = () => {
@@ -23,7 +22,6 @@ export const SubjectsView: React.FC = () => {
     topics,
     notes,
     questions,
-    userProgress,
     navigateTo,
     routeParams
   } = useApp();
@@ -41,8 +39,6 @@ export const SubjectsView: React.FC = () => {
     const subjectTopics = topics.filter(t => t.subjectId === currentSubject.id);
     const subjectNotes = notes.filter(n => n.subjectId === currentSubject.id);
     const subjectQuestions = questions.filter(q => q.subjectId === currentSubject.id);
-    const completedCount = subjectTopics.filter(t => userProgress.completedTopicIds.includes(t.id)).length;
-    const percentage = subjectTopics.length > 0 ? (completedCount / subjectTopics.length) * 100 : 0;
     const importantTopics = subjectTopics.filter(t => t.importance !== 'Normal');
 
     return (
@@ -69,12 +65,10 @@ export const SubjectsView: React.FC = () => {
               </p>
             </div>
 
-            <div className="min-w-[200px] p-4 rounded-xl bg-brand-light dark:bg-surface-dark border border-brand-soft dark:border-surface-borderDark text-right">
-              <div className="text-xs font-medium text-slate-500 mb-1">Subject Completion</div>
-              <ProgressBar percentage={percentage} size="md" />
-              <div className="text-[11px] text-slate-400 mt-1">
-                {completedCount} of {subjectTopics.length} topics finished
-              </div>
+            <div className="min-w-[200px] p-4 rounded-xl bg-brand-light dark:bg-surface-dark border border-brand-soft dark:border-surface-borderDark text-right space-y-1">
+              <div className="text-xs font-bold text-brand-dark dark:text-brand-primary uppercase tracking-wider">Subject Academic Hub</div>
+              <div className="text-xs text-slate-700 dark:text-slate-200 font-semibold">{subjectUnits.length} Units &bull; {subjectTopics.length} Topics</div>
+              <div className="text-[11px] text-slate-500">{subjectNotes.length} Notes &bull; {subjectQuestions.length} Solved PYQs</div>
             </div>
           </div>
 
@@ -187,7 +181,6 @@ export const SubjectsView: React.FC = () => {
                     {unitTopics.map(topic => {
                       const hasNotes = notes.some(n => n.topicId === topic.id);
                       const qCount = questions.filter(q => q.topicId === topic.id).length;
-                      const isDone = userProgress.completedTopicIds.includes(topic.id);
 
                       return (
                         <div
@@ -339,9 +332,6 @@ export const SubjectsView: React.FC = () => {
           const subjectTopics = topics.filter(t => t.subjectId === subject.id);
           const subjectNotes = notes.filter(n => n.subjectId === subject.id);
           const subjectQuestions = questions.filter(q => q.subjectId === subject.id);
-          const completedCount = subjectTopics.filter(t => userProgress.completedTopicIds.includes(t.id)).length;
-          const percentage = subjectTopics.length > 0 ? (completedCount / subjectTopics.length) * 100 : 0;
-
           return (
             <div
               key={subject.id}
@@ -353,7 +343,7 @@ export const SubjectsView: React.FC = () => {
                     {subject.code}
                   </span>
                   <span className="text-xs font-semibold text-brand-dark dark:text-brand-primary">
-                    {Math.round(percentage)}% done
+                    {subjectUnits.length} Units &bull; {subjectTopics.length} Topics
                   </span>
                 </div>
 
@@ -399,17 +389,15 @@ export const SubjectsView: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Button */}
+              {/* Action Buttons */}
               <div className="mt-5 pt-3 border-t border-brand-soft dark:border-surface-borderDark space-y-2">
-                <ProgressBar percentage={percentage} showLabel={false} size="sm" className="mb-2" />
-
                 <div className="grid grid-cols-2 gap-2">
                   <button
-                    onClick={() => navigateTo('subject-detail', { subjectId: subject.id })}
+                    onClick={() => navigateTo('notes', { subjectId: subject.id })}
                     className="py-2 px-3 rounded-xl bg-brand-dark hover:bg-brand-hover text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors shadow-xs"
                   >
-                    <span>Open Module</span>
-                    <ArrowRight size={13} />
+                    <FileText size={13} />
+                    <span>Open Notes</span>
                   </button>
 
                   {subject.pdfHandbookUrl ? (
@@ -424,13 +412,28 @@ export const SubjectsView: React.FC = () => {
                     </a>
                   ) : (
                     <button
-                      onClick={() => navigateTo('notes', { subjectId: subject.id })}
+                      onClick={() => navigateTo('formulas', { subjectId: subject.id })}
                       className="py-2 px-3 rounded-xl bg-brand-light dark:bg-surface-dark text-slate-600 dark:text-slate-300 text-xs font-medium flex items-center justify-center gap-1.5"
                     >
-                      <FileText size={13} />
-                      <span>Notes</span>
+                      <span>Formulas</span>
                     </button>
                   )}
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-[11px]">
+                  <button
+                    onClick={() => navigateTo('subject-detail', { subjectId: subject.id })}
+                    className="py-1.5 px-2.5 rounded-lg bg-slate-50 dark:bg-surface-dark hover:bg-brand-light text-slate-600 dark:text-slate-300 font-medium flex items-center justify-center gap-1 border border-brand-soft"
+                  >
+                    <span>Syllabus Breakdown</span>
+                  </button>
+                  <button
+                    onClick={() => navigateTo('question-bank', { subjectId: subject.id })}
+                    className="py-1.5 px-2.5 rounded-lg bg-slate-50 dark:bg-surface-dark hover:bg-brand-light text-brand-dark dark:text-brand-primary font-medium flex items-center justify-center gap-1 border border-brand-soft"
+                  >
+                    <span>Solve PYQs</span>
+                    <ArrowRight size={11} />
+                  </button>
                 </div>
               </div>
             </div>

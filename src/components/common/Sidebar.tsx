@@ -24,13 +24,8 @@ export const Sidebar: React.FC = () => {
     navigateTo,
     isMobileNavOpen,
     setMobileNavOpen,
-    bookmarks,
-    topics,
-    userProgress
+    bookmarks
   } = useApp();
-
-  const completedTopicsCount = userProgress.completedTopicIds.length;
-  const totalTopics = topics.length;
 
   const navItems: {
     id: AppRoute;
@@ -38,20 +33,16 @@ export const Sidebar: React.FC = () => {
     icon: LucideIcon;
     badge?: string | number;
   }[] = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'syllabus', label: 'GATE Syllabus', icon: FolderTree },
-    { id: 'subjects', label: 'Subjects', icon: BookOpen },
-    { id: 'notes', label: 'Notes', icon: FileText },
-    { id: 'pyq', label: 'Previous Year Papers', icon: Clock },
-    { id: 'question-bank', label: 'Question Bank', icon: HelpCircle },
-    { id: 'formulas', label: 'Formula Sheets', icon: FileSpreadsheet },
-    { id: 'important-topics', label: 'Important Topics', icon: Star },
-    { id: 'revision', label: 'Revision', icon: Sparkles },
-    { id: 'practice', label: 'Practice Mode', icon: HelpCircle },
-    { id: 'progress', label: 'Progress', icon: BarChart3, badge: `${completedTopicsCount}/${totalTopics}` },
-    { id: 'bookmarks', label: 'Bookmarks', icon: Bookmark, badge: bookmarks.length },
-    { id: 'search', label: 'Search', icon: Search },
-    { id: 'admin', label: 'Settings & Admin', icon: Settings }
+    { id: 'dashboard', label: 'Academic Hub', icon: LayoutDashboard },
+    { id: 'syllabus', label: 'Official Syllabus', icon: FolderTree },
+    { id: 'subjects', label: 'Subjects & Modules', icon: BookOpen, badge: 9 },
+    { id: 'notes', label: 'Subject Notes & Books', icon: FileText, badge: '9 Subjects' },
+    { id: 'formulas', label: 'Formula Repository', icon: FileSpreadsheet, badge: '347 Formulas' },
+    { id: 'pyq', label: 'PYQ Papers (2007–25)', icon: Clock, badge: '19 Years' },
+    { id: 'question-bank', label: 'Question-Wise Solutions', icon: HelpCircle },
+    { id: 'bookmarks', label: 'Saved Bookmarks', icon: Bookmark, badge: bookmarks.length > 0 ? bookmarks.length : undefined },
+    { id: 'search', label: 'Global Search', icon: Search },
+    { id: 'admin', label: 'Settings & Uploads', icon: Settings }
   ];
 
   return (

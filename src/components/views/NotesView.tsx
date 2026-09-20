@@ -27,28 +27,33 @@ export const NotesView: React.FC = () => {
     units,
     subjects,
     questions,
-    userProgress,
-    markTopicCompleted,
     navigateTo,
     routeParams
   } = useApp();
+
+  // Selected subject state: default from routeParams or active note
+  const [selectedSubjectId, setSelectedSubjectId] = useState<string>(
+    routeParams.subjectId || 'subj-math'
+  );
+
+  // Subject notes list
+  const currentSubjectNotes = notes.filter(n => n.subjectId === selectedSubjectId);
 
   // Find targeted note
   let activeNote = notes.find(n => n.id === routeParams.noteId);
   if (!activeNote && routeParams.topicId) {
     activeNote = notes.find(n => n.topicId === routeParams.topicId);
   }
-  if (!activeNote) {
-    activeNote = notes[0];
+  if (!activeNote || activeNote.subjectId !== selectedSubjectId) {
+    activeNote = currentSubjectNotes[0] || notes[0];
   }
 
   const topic = topics.find(t => t.id === activeNote?.topicId) || topics[0];
-  const unit = units.find(u => u.id === topic.unitId) || units[0];
-  const subject = subjects.find(s => s.id === topic.subjectId) || subjects[0];
-  const isCompleted = userProgress.completedTopicIds.includes(topic.id);
+  const unit = units.find(u => u.id === topic?.unitId) || units[0];
+  const subject = subjects.find(s => s.id === (activeNote?.subjectId || selectedSubjectId)) || subjects[0];
 
   // Filter related questions
-  const relatedQuestions = questions.filter(q => q.topicId === topic.id);
+  const relatedQuestions = questions.filter(q => q.topicId === topic?.id);
 
   // Find next and previous notes
   const currentIndex = notes.findIndex(n => n.id === activeNote?.id);
@@ -66,10 +71,65 @@ export const NotesView: React.FC = () => {
         items={[
           { label: 'Notes', route: 'notes' },
           { label: subject.name, route: 'subject-detail', params: { subjectId: subject.id } },
-          { label: `Unit ${unit.unitNumber}` },
-          { label: topic.title }
+          { label: unit ? `Unit ${unit.unitNumber}` : 'Textbook Notes' },
+          { label: activeNote.title }
         ]}
       />
+
+      {/* Subject Selector Tab Bar */}
+      <div className="bg-surface-light dark:bg-surface-cardDark rounded-2xl p-3 border border-brand-border dark:border-surface-borderDark shadow-academic">
+        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 px-1">
+          Select Subject Notes
+        </div>
+        <div className="flex items-center gap-2 overflow-x-auto pb-1">
+          {subjects.map(s => {
+            const isSelected = s.id === selectedSubjectId;
+            return (
+              <button
+                key={s.id}
+                onClick={() => {
+                  setSelectedSubjectId(s.id);
+                  const firstNote = notes.find(n => n.subjectId === s.id);
+                  if (firstNote) {
+                    navigateTo('notes', { subjectId: s.id, noteId: firstNote.id });
+                  }
+                }}
+                className={`flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                  isSelected
+                    ? 'bg-brand-dark text-white shadow-sm ring-2 ring-brand-primary'
+                    : 'bg-brand-light dark:bg-surface-dark text-slate-600 dark:text-slate-300 hover:bg-brand-soft border border-brand-border dark:border-surface-borderDark'
+                }`}
+              >
+                <span>{s.name}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Subject Master Handbook Download Banner */}
+      {subject.pdfHandbookUrl && (
+        <div className="bg-gradient-to-r from-brand-dark to-brand-hover text-white rounded-2xl p-5 shadow-academic flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-md bg-white/20 text-white text-[10px] font-bold uppercase tracking-wider">
+              {subject.code} Official Master Handbook
+            </div>
+            <h3 className="text-base font-bold">{subject.pdfHandbookTitle || `${subject.name} Complete Handbook`}</h3>
+            <p className="text-xs text-brand-light/90 max-w-2xl">
+              Complete official Physics Wallah handbook ({subject.pdfHandbookPages} pages) with full mathematical derivations, circuit schematics, and solved examples.
+            </p>
+          </div>
+          <a
+            href={subject.pdfHandbookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white text-brand-dark font-bold text-xs shadow hover:bg-brand-light transition-colors whitespace-nowrap self-start sm:self-auto"
+          >
+            <Download size={14} />
+            <span>Download Master PDF</span>
+          </a>
+        </div>
+      )}
 
       {/* Action Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-brand-border dark:border-surface-borderDark no-print">
@@ -83,9 +143,9 @@ export const NotesView: React.FC = () => {
           </button>
           <div>
             <span className="text-[11px] font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              GATE Digital Textbook
+              GATE Digital Textbook Note
             </span>
-            <div className="text-xs text-slate-400">Official syllabus mapped note</div>
+            <div className="text-xs text-slate-400">Section Reference & Comprehensive Derivations</div>
           </div>
         </div>
 
@@ -99,23 +159,12 @@ export const NotesView: React.FC = () => {
           />
 
           <button
-            onClick={() => markTopicCompleted(topic.id)}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
-              isCompleted
-                ? 'bg-brand-primary text-slate-900'
-                : 'bg-brand-soft text-brand-dark hover:bg-brand-primary/30'
-            }`}
-          >
-            <CheckCircle2 size={14} />
-            <span>{isCompleted ? 'Topic Completed' : 'Mark as Done'}</span>
-          </button>
-
-          <button
             onClick={handlePrint}
-            className="p-2 rounded-lg bg-brand-light dark:bg-surface-cardDark text-slate-600 dark:text-slate-300 hover:bg-brand-soft transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-light dark:bg-surface-cardDark text-slate-600 dark:text-slate-300 hover:bg-brand-soft transition-colors text-xs font-semibold"
             title="Print or Save as PDF"
           >
-            <Printer size={16} />
+            <Printer size={15} />
+            <span>Print Notes</span>
           </button>
         </div>
       </div>

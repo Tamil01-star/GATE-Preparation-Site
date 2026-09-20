@@ -357,6 +357,24 @@ export const INITIAL_UNITS: Unit[] = [
     title: 'Transmission Lines, Waveguides & Antennas',
     description: 'Transmission line equations, characteristic impedance, impedance matching, S-parameters, Smith chart. Rectangular and circular waveguides, optical fibers, dipole & monopole antennas, linear arrays.',
     order: 2
+  },
+
+  // SECTION 0: General Aptitude (Mandatory 15 Marks)
+  {
+    id: 'unit-apt-1',
+    subjectId: 'subj-aptitude',
+    unitNumber: 1,
+    title: 'Quantitative & Numerical Aptitude',
+    description: 'Data interpretation (bar charts, pie charts, graphs), numerical computation, percentages, ratios, powers, exponents, logarithms, permutations & combinations, series, mensuration, geometry, elementary statistics and probability.',
+    order: 1
+  },
+  {
+    id: 'unit-apt-2',
+    subjectId: 'subj-aptitude',
+    unitNumber: 2,
+    title: 'Verbal, Analytical & Spatial Aptitude',
+    description: 'Verbal: English grammar, vocabulary, reading comprehension. Analytical: Logic deduction, syllogism, analogy, numerical relations. Spatial: Transformation of 2D & 3D shapes, folding, paper cutting, mirror reflection.',
+    order: 2
   }
 ];
 
@@ -674,6 +692,40 @@ export const INITIAL_TOPICS: Topic[] = [
     subtopics: ['Transmission line equations, characteristic impedance Z0, propagation constant', 'Reflection coefficient Γ, Standing Wave Ratio (SWR / VSWR)', 'Input impedance of lossy and lossless lines, quarter-wave transformer', 'Smith chart basics and impedance matching (single stub)', 'S-parameters of two-port microwave networks', 'Rectangular waveguide TE and TM modes, cutoff frequency, guide wavelength', 'Optical fiber numerical aperture and V-number', 'Radiation resistance, directive gain, directivity of Hertzian dipole, half-wave dipole, and linear arrays'],
     importance: 'High Priority',
     overview: 'High-frequency guided wave propagation, transmission line matching, microwave waveguide modes, and antenna radiation patterns.',
+    order: 1
+  },
+
+  // SECTION 0: General Aptitude Topics
+  {
+    id: 'top-apt-101',
+    unitId: 'unit-apt-1',
+    subjectId: 'subj-aptitude',
+    title: 'Quantitative Aptitude & Numerical Reasoning',
+    subtopics: [
+      'Data interpretation: charts, graphs, tables and histograms',
+      'Numerical computation: ratios, proportions, percentages, averages',
+      'Powers, exponents, logarithms and series progressions (AP, GP)',
+      'Permutations, combinations and combinatorial probability',
+      'Mensuration, geometry and elementary trigonometry'
+    ],
+    importance: 'High Priority',
+    overview: 'High-scoring quantitative problem solving covering essential arithmetic, algebraic, geometric, and data analysis concepts for the mandatory 15-mark General Aptitude section.',
+    order: 1
+  },
+  {
+    id: 'top-apt-201',
+    unitId: 'unit-apt-2',
+    subjectId: 'subj-aptitude',
+    title: 'Analytical, Verbal & Spatial Reasoning',
+    subtopics: [
+      'Logical deduction, syllogism and inference validation',
+      'Analogy, numerical relations and sequencing patterns',
+      'English grammar, sentence completion and critical reading comprehension',
+      'Spatial reasoning: 2D and 3D shape transformations, rotation and reflection',
+      'Paper folding, cutting and assembling spatial patterns'
+    ],
+    importance: 'High Priority',
+    overview: 'Verbal comprehension, structural logical deduction, and spatial pattern transformation required across all GATE papers.',
     order: 1
   }
 ];
