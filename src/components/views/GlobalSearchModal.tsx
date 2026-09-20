@@ -4,10 +4,9 @@ import {
   X,
   FileText,
   HelpCircle,
-  Calculator,
+  FileSpreadsheet,
   FolderTree,
-  ChevronRight,
-  Sparkles
+  ChevronRight
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 
@@ -20,199 +19,173 @@ export const GlobalSearchModal: React.FC = () => {
     formulas,
     topics,
     subjects,
+    units,
     navigateTo
   } = useApp();
 
   const [query, setQuery] = useState('');
 
-  // Multi-entity search across notes, questions, formulas, topics (Section 13)
   const searchResults = useMemo(() => {
     if (!query.trim()) return [];
     const q = query.toLowerCase();
 
     const results: {
       id: string;
-      category: 'Note' | 'Question' | 'Formula' | 'Topic';
+      category: 'Notes' | 'Formulae' | 'PYQ' | 'Topic';
       title: string;
-      subtitle: string;
-      snippet: string;
       action: () => void;
     }[] = [];
 
-    // Search Notes
+    const getPath = (subjectId: string, unitId: string, topicId: string) => {
+      const s = subjects.find(s => s.id === subjectId)?.name || '';
+      const t = topics.find(t => t.id === topicId)?.title || '';
+      return `${s} ? ${t}`;
+    };
+
+    // Topics & Subjects
+    topics.forEach(t => {
+      if (t.title.toLowerCase().includes(q)) {
+        const s = subjects.find(sub => sub.id === t.subjectId)?.name || '';
+        results.push({
+          id: `top-${t.id}`,
+          category: 'Topic',
+          title: `Syllabus ? ${s} ? ${t.title}`,
+          action: () => {
+            setSearchModalOpen(false);
+            navigateTo('notes', { subjectId: t.subjectId, topicId: t.id });
+          }
+        });
+      }
+    });
+
+    // Notes
     notes.forEach(note => {
-      const matchInTitle = note.title.toLowerCase().includes(q);
-      const matchInIntro = note.topicIntroduction.toLowerCase().includes(q);
-      const matchInExp = note.detailedExplanation.some(e => e.toLowerCase().includes(q));
-      if (matchInTitle || matchInIntro || matchInExp) {
+      if (
+        note.title.toLowerCase().includes(q) ||
+        note.topicIntroduction.toLowerCase().includes(q) ||
+        note.detailedExplanation.some(e => e.toLowerCase().includes(q)) ||
+        note.coreConcepts.some(c => c.toLowerCase().includes(q))
+      ) {
         results.push({
           id: `note-${note.id}`,
-          category: 'Note',
-          title: note.title,
-          subtitle: `Textbook Note &bull; Updated ${note.lastUpdated}`,
-          snippet: note.topicIntroduction.slice(0, 120) + '...',
+          category: 'Notes',
+          title: `Notes ? ${getPath(note.subjectId, note.unitId, note.topicId)}`,
           action: () => {
             setSearchModalOpen(false);
-            navigateTo('note-detail', { noteId: note.id, topicId: note.topicId });
+            navigateTo('notes', { subjectId: note.subjectId, topicId: note.topicId });
           }
         });
       }
     });
 
-    // Search Questions
-    questions.forEach(question => {
-      const matchInText = question.questionText.toLowerCase().includes(q);
-      const matchInConcept = question.conceptTested.toLowerCase().includes(q);
-      const matchInExp = question.detailedExplanation.toLowerCase().includes(q);
-      if (matchInText || matchInConcept || matchInExp) {
+    // Formulas
+    formulas.forEach(f => {
+      if (f.formulaName.toLowerCase().includes(q) || f.latex.toLowerCase().includes(q)) {
         results.push({
-          id: `q-${question.id}`,
-          category: 'Question',
-          title: `${question.sourcePaper} &bull; Q${question.questionNumber} (${question.type}, ${question.marks}M)`,
-          subtitle: `Concept: ${question.conceptTested}`,
-          snippet: question.questionText.slice(0, 120) + '...',
+          id: `form-${f.id}`,
+          category: 'Formulae',
+          title: `Formulae ? ${f.formulaName}`,
           action: () => {
             setSearchModalOpen(false);
-            navigateTo('question-detail', { questionId: question.id });
+            navigateTo('formulas', { subjectId: f.subjectId });
           }
         });
       }
     });
 
-    // Search Formulas
-    formulas.forEach(formula => {
-      const matchInName = formula.formulaName.toLowerCase().includes(q);
-      const matchInLatex = formula.latex.toLowerCase().includes(q);
-      const matchInUse = formula.whenToUse.toLowerCase().includes(q);
-      if (matchInName || matchInLatex || matchInUse) {
+    // Questions (PYQ)
+    questions.forEach(qItem => {
+      if (
+        qItem.questionText.toLowerCase().includes(q) ||
+        qItem.conceptTested.toLowerCase().includes(q) ||
+        (qItem.detailedExplanation && qItem.detailedExplanation.toLowerCase().includes(q)) ||
+        (qItem.steps && qItem.steps.some(s => s.toLowerCase().includes(q)))
+      ) {
         results.push({
-          id: `form-${formula.id}`,
-          category: 'Formula',
-          title: formula.formulaName,
-          subtitle: `${formula.chapterTitle} &bull; ${formula.latex}`,
-          snippet: formula.whenToUse,
+          id: `q-${qItem.id}`,
+          category: 'PYQ',
+          title: `PYQ ${qItem.year} ? Question ${qItem.questionNumber}`,
           action: () => {
             setSearchModalOpen(false);
-            navigateTo('formulas', { topicId: formula.topicId, subjectId: formula.subjectId });
-          }
-        });
-      }
-    });
-
-    // Search Topics
-    topics.forEach(topic => {
-      const matchInTitle = topic.title.toLowerCase().includes(q);
-      const matchInSub = topic.subtopics.some(s => s.toLowerCase().includes(q));
-      if (matchInTitle || matchInSub) {
-        results.push({
-          id: `top-${topic.id}`,
-          category: 'Topic',
-          title: topic.title,
-          subtitle: `GATE Syllabus Topic &bull; ${topic.importance}`,
-          snippet: topic.overview,
-          action: () => {
-            setSearchModalOpen(false);
-            navigateTo('syllabus', { topicId: topic.id });
+            navigateTo('question-detail', { questionId: qItem.id });
           }
         });
       }
     });
 
     return results;
-  }, [query, notes, questions, formulas, topics, setSearchModalOpen, navigateTo]);
+  }, [query, notes, questions, formulas, topics, subjects, navigateTo, setSearchModalOpen]);
 
   if (!isSearchModalOpen) return null;
 
-  const categoryBadges = {
-    Note: 'bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-300',
-    Question: 'bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-300',
-    Formula: 'bg-brand-soft text-brand-dark dark:bg-brand-dark/30 dark:text-brand-primary',
-    Topic: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300'
-  };
-
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-start justify-center p-4 sm:p-6 sm:pt-20">
-      <div className="w-full max-w-2xl bg-surface-light dark:bg-surface-cardDark rounded-2xl shadow-2xl border border-brand-border dark:border-surface-borderDark overflow-hidden flex flex-col max-h-[80vh]">
-        {/* Search Input Bar */}
-        <div className="p-4 border-b border-brand-soft dark:border-surface-borderDark flex items-center gap-3">
-          <Search size={18} className="text-brand-dark dark:text-brand-primary" />
+    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-start justify-center p-4 pt-[10vh]">
+      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-brand-border overflow-hidden flex flex-col max-h-[80vh] animate-in slide-in-from-top-4 duration-200">
+        <div className="p-4 border-b border-brand-border flex items-center gap-3 bg-brand-light/30">
+          <Search size={20} className="text-brand-dark" />
           <input
-            type="text"
             autoFocus
+            type="text"
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder="Search across questions, answers, notes, topics, formulas..."
-            className="w-full bg-transparent text-sm font-medium text-slate-800 dark:text-slate-100 placeholder-slate-400 outline-hidden"
+            placeholder="Search notes, formulas, previous year questions, solutions..."
+            className="flex-1 bg-transparent border-none outline-none text-brand-text font-medium placeholder-slate-400"
           />
           <button
             onClick={() => setSearchModalOpen(false)}
-            className="p-1 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+            className="p-1 rounded-lg text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors"
           >
             <X size={18} />
           </button>
         </div>
 
-        {/* Quick Sample Search Suggestions */}
-        {!query && (
-          <div className="p-6 text-xs text-slate-500 space-y-3">
-            <div className="font-semibold uppercase text-slate-400 text-[10px] tracking-wider">
-              Popular Search Queries
+        <div className="flex-1 overflow-y-auto p-2 bg-white">
+          {query.trim() === '' ? (
+            <div className="p-8 text-center text-slate-400 flex flex-col items-center">
+              <Search size={32} className="mb-3 opacity-20" />
+              <p className="text-sm font-semibold">Start typing to search the library...</p>
+              <p className="text-xs mt-1">Search across syllabus, notes, formulas, and PYQs</p>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {['Flip-Flop', 'Setup Time', 'Fourier Transform', 'Eigenvalues', 'Cayley-Hamilton', 'Parseval', 'Multiplexer', 'Johnson Counter'].map(term => (
+          ) : searchResults.length === 0 ? (
+            <div className="p-8 text-center text-slate-500">
+              <p className="text-sm font-semibold">No results found for "{query}"</p>
+            </div>
+          ) : (
+            <div className="space-y-1">
+              <div className="px-3 pt-2 pb-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                Search Results ({searchResults.length})
+              </div>
+              {searchResults.map(res => (
                 <button
-                  key={term}
-                  onClick={() => setQuery(term)}
-                  className="px-2.5 py-1 rounded-lg bg-brand-light dark:bg-surface-dark border border-brand-soft hover:border-brand-primary text-slate-700 dark:text-slate-300 font-medium transition-colors"
+                  key={res.id}
+                  onClick={res.action}
+                  className="w-full text-left p-3 rounded-xl hover:bg-brand-light border border-transparent hover:border-brand-border transition-all flex items-center justify-between group"
                 >
-                  {term}
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-white border border-brand-border flex items-center justify-center shrink-0">
+                      {res.category === 'Notes' && <FileText size={14} className="text-brand-dark" />}
+                      {res.category === 'PYQ' && <HelpCircle size={14} className="text-brand-dark" />}
+                      {res.category === 'Formulae' && <FileSpreadsheet size={14} className="text-brand-dark" />}
+                      {res.category === 'Topic' && <FolderTree size={14} className="text-brand-dark" />}
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-brand-text flex items-center gap-2">
+                        {res.title.split('?').map((part, i, arr) => (
+                          <React.Fragment key={i}>
+                            <span className={i === arr.length - 1 ? 'text-brand-dark' : 'text-slate-500'}>
+                              {part.trim()}
+                            </span>
+                            {i < arr.length - 1 && <ChevronRight size={12} className="text-slate-300" />}
+                          </React.Fragment>
+                        ))}
+                      </h4>
+                    </div>
+                  </div>
+                  <ChevronRight size={16} className="text-slate-300 group-hover:text-brand-primary" />
                 </button>
               ))}
             </div>
-          </div>
-        )}
-
-        {/* Results Stream */}
-        {query && (
-          <div className="overflow-y-auto p-3 space-y-2 flex-1">
-            {searchResults.length === 0 ? (
-              <div className="p-8 text-center text-xs text-slate-400">
-                No matching study material found for &ldquo;{query}&rdquo;.
-              </div>
-            ) : (
-              searchResults.map(res => (
-                <div
-                  key={res.id}
-                  onClick={res.action}
-                  className="p-3.5 rounded-xl hover:bg-brand-soft/50 dark:hover:bg-brand-dark/20 border border-transparent hover:border-brand-primary/40 cursor-pointer transition-all flex items-start justify-between gap-3 group"
-                >
-                  <div className="space-y-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <span className={`text-[10px] px-2 py-0.2 rounded-full font-bold ${categoryBadges[res.category]}`}>
-                        {res.category}
-                      </span>
-                      <span className="text-xs font-bold text-slate-800 dark:text-slate-100 truncate">
-                        {res.title}
-                      </span>
-                    </div>
-                    <div className="text-[11px] text-brand-dark dark:text-brand-primary font-medium truncate">
-                      {res.subtitle}
-                    </div>
-                    <div className="text-xs text-slate-500 line-clamp-2">
-                      {res.snippet}
-                    </div>
-                  </div>
-                  <ChevronRight size={16} className="text-slate-400 group-hover:text-brand-dark dark:group-hover:text-brand-primary flex-shrink-0 mt-2" />
-                </div>
-              ))
-            )}
-          </div>
-        )}
-
-        {/* Footer Hint */}
-        <div className="px-4 py-2.5 bg-slate-50 dark:bg-surface-dark border-t border-brand-soft dark:border-surface-borderDark text-[11px] text-slate-400 flex items-center justify-between">
-          <span>{searchResults.length} results matching</span>
-          <span>Press <kbd className="px-1 py-0.5 rounded bg-white dark:bg-surface-cardDark border font-mono text-[10px]">Esc</kbd> to close</span>
+          )}
         </div>
       </div>
     </div>

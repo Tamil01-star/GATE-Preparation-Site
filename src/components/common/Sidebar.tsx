@@ -1,19 +1,13 @@
 import React from 'react';
 import {
   LayoutDashboard,
-  BookOpen,
-  FolderTree,
   FileText,
+  FileSpreadsheet,
   Clock,
   HelpCircle,
-  FileSpreadsheet,
-  Star,
-  Sparkles,
-  BarChart3,
   Search,
   Settings,
   X,
-  Bookmark,
   LucideIcon
 } from 'lucide-react';
 import { useApp, AppRoute } from '../../context/AppContext';
@@ -24,25 +18,19 @@ export const Sidebar: React.FC = () => {
     navigateTo,
     isMobileNavOpen,
     setMobileNavOpen,
-    bookmarks
   } = useApp();
 
   const navItems: {
     id: AppRoute;
     label: string;
     icon: LucideIcon;
-    badge?: string | number;
   }[] = [
-    { id: 'dashboard', label: 'Academic Hub', icon: LayoutDashboard },
-    { id: 'syllabus', label: 'Official Syllabus', icon: FolderTree },
-    { id: 'subjects', label: 'Subjects & Modules', icon: BookOpen, badge: 9 },
-    { id: 'notes', label: 'Subject Notes & Books', icon: FileText, badge: '9 Subjects' },
-    { id: 'formulas', label: 'Formula Repository', icon: FileSpreadsheet, badge: '347 Formulas' },
-    { id: 'pyq', label: 'PYQ Papers (2007–25)', icon: Clock, badge: '19 Years' },
-    { id: 'question-bank', label: 'Question-Wise Solutions', icon: HelpCircle },
-    { id: 'bookmarks', label: 'Saved Bookmarks', icon: Bookmark, badge: bookmarks.length > 0 ? bookmarks.length : undefined },
-    { id: 'search', label: 'Global Search', icon: Search },
-    { id: 'admin', label: 'Settings & Uploads', icon: Settings }
+    { id: 'dashboard', label: 'Home', icon: LayoutDashboard },
+    { id: 'notes', label: 'Notes', icon: FileText },
+    { id: 'formulas', label: 'Formulae', icon: FileSpreadsheet },
+    { id: 'pyq', label: 'Previous Year Papers', icon: Clock },
+    { id: 'question-bank', label: 'Question Solutions', icon: HelpCircle },
+    { id: 'search', label: 'Global Search', icon: Search }
   ];
 
   return (
@@ -57,41 +45,37 @@ export const Sidebar: React.FC = () => {
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed top-0 left-0 bottom-0 w-64 bg-surface-light dark:bg-surface-dark border-r border-brand-soft dark:border-surface-borderDark z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${
+        className={`fixed top-0 left-0 bottom-0 w-64 bg-surface-light border-r border-brand-border z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${
           isMobileNavOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
         }`}
       >
         {/* Brand Header */}
-        <div className="h-16 flex items-center justify-between px-5 border-b border-brand-soft dark:border-surface-borderDark">
+        <div className="h-16 flex items-center justify-between px-5 border-b border-brand-border bg-brand-light/30">
           <button
             onClick={() => navigateTo('dashboard')}
-            className="flex items-center gap-2.5 text-left group"
+            className="flex items-center gap-2.5 text-left group w-full"
           >
-            <div className="w-9 h-9 rounded-xl bg-brand-dark text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:bg-brand-hover transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-brand-dark text-white flex items-center justify-center font-bold text-sm shadow-sm group-hover:bg-brand-hover transition-colors shrink-0">
               G
             </div>
-            <div>
-              <div className="text-sm font-bold tracking-tight text-brand-dark dark:text-slate-100 flex items-center gap-1.5">
-                GATE PREP
-                <span className="text-[10px] bg-brand-primary text-slate-900 font-semibold px-1.5 py-0.2 rounded">
-                  PORTAL
-                </span>
+            <div className="overflow-hidden">
+              <div className="text-xs font-bold tracking-tight text-brand-dark flex items-center gap-1.5 truncate">
+                GATE KNOWLEDGE LIBRARY
               </div>
-              <div className="text-[11px] text-slate-500 font-medium">Personal Study System</div>
             </div>
           </button>
 
           <button
             onClick={() => setMobileNavOpen(false)}
-            className="md:hidden p-1.5 text-slate-400 hover:text-slate-600 rounded-lg"
+            className="md:hidden p-1.5 text-slate-400 hover:text-slate-600 rounded-lg shrink-0"
           >
             <X size={18} />
           </button>
         </div>
 
         {/* Navigation Items */}
-        <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
-          <div className="px-3 pb-2 text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+        <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1 bg-white">
+          <div className="px-3 pb-2 text-[10px] font-bold uppercase tracking-widest text-slate-400">
             Navigation Menu
           </div>
 
@@ -99,8 +83,7 @@ export const Sidebar: React.FC = () => {
             const Icon = item.icon;
             const isActive =
               currentRoute === item.id ||
-              (item.id === 'subjects' && currentRoute === 'subject-detail') ||
-              (item.id === 'notes' && currentRoute === 'note-detail') ||
+              (item.id === 'notes' && (currentRoute === 'subjects' || currentRoute === 'subject-detail' || currentRoute === 'note-detail')) ||
               (item.id === 'pyq' && currentRoute === 'pyq-paper') ||
               (item.id === 'question-bank' && currentRoute === 'question-detail');
 
@@ -108,57 +91,37 @@ export const Sidebar: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => navigateTo(item.id)}
-                className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-all ${
+                className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                   isActive
-                    ? 'bg-brand-soft text-brand-dark font-semibold border-l-3 border-brand-dark dark:bg-brand-dark/20 dark:text-brand-primary dark:border-brand-primary'
-                    : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-surface-cardDark hover:text-brand-dark dark:hover:text-brand-primary'
+                    ? 'bg-brand-soft text-brand-dark border-l-4 border-brand-dark shadow-sm'
+                    : 'text-slate-600 hover:bg-slate-50 hover:text-brand-dark'
                 }`}
               >
-                <div className="flex items-center gap-2.5">
+                <div className="flex items-center gap-3">
                   <Icon
                     size={16}
-                    className={isActive ? 'text-brand-dark dark:text-brand-primary' : 'text-slate-400 group-hover:text-brand-dark'}
+                    className={isActive ? 'text-brand-dark' : 'text-slate-400 group-hover:text-brand-dark'}
                   />
                   <span>{item.label}</span>
                 </div>
-
-                {item.badge !== undefined && (
-                  <span
-                    className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono font-medium ${
-                      isActive
-                        ? 'bg-brand-primary/30 text-brand-dark dark:text-brand-primary'
-                        : 'bg-slate-100 dark:bg-surface-borderDark text-slate-500'
-                    }`}
-                  >
-                    {item.badge}
-                  </span>
-                )}
               </button>
             );
           })}
         </nav>
-
-        {/* Official Portal Quick Link Box at Bottom */}
-        <div className="p-3 border-t border-brand-soft dark:border-surface-borderDark">
-          <div className="bg-brand-light dark:bg-surface-cardDark p-3 rounded-xl border border-brand-border dark:border-surface-borderDark text-xs">
-            <div className="font-semibold text-brand-dark dark:text-brand-primary flex items-center justify-between">
-              <span>GATE 2027 Portal</span>
-              <span className="text-[10px] bg-brand-primary/20 text-brand-dark px-1.5 py-0.5 rounded">
-                IITM
-              </span>
-            </div>
-            <p className="text-[11px] text-slate-500 mt-1 leading-snug">
-              Official updates, notification, and application portal.
-            </p>
-            <a
-              href="https://gate2027.iitm.ac.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2.5 block text-center py-1.5 text-xs font-semibold text-white bg-brand-dark hover:bg-brand-hover rounded-lg transition-colors"
-            >
-              Open IITM Portal ↗
-            </a>
-          </div>
+        
+        {/* Settings at bottom */}
+        <div className="p-3 border-t border-brand-border bg-white">
+             <button
+                onClick={() => navigateTo('admin')}
+                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
+                  currentRoute === 'admin'
+                    ? 'bg-brand-soft text-brand-dark border-l-4 border-brand-dark shadow-sm'
+                    : 'text-slate-600 hover:bg-slate-50 hover:text-brand-dark'
+                }`}
+              >
+                <Settings size={16} className={currentRoute === 'admin' ? 'text-brand-dark' : 'text-slate-400'} />
+                <span>Uploads & Settings</span>
+             </button>
         </div>
       </aside>
     </>

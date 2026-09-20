@@ -4,23 +4,24 @@
 
 @layer base {
   :root {
-    --brand-primary: #78C99A;
-    --brand-dark: #26734D;
-    --brand-light: #F1FBF5;
+    --brand-primary: #A8DDB5;
+    --brand-dark: #3D8B5A;
+    --brand-light: #EAF7ED;
     --brand-card: #FFFFFF;
-    --brand-border: #E2ECE6;
-    --brand-text: #1E2E25;
-    --brand-muted: #5C7164;
+    --brand-border: #A8DDB5;
+    --brand-text: #173B27;
+    --brand-muted: #3D8B5A;
   }
 
+  /* Force light theme always */
   .dark {
-    --brand-primary: #78C99A;
-    --brand-dark: #A3E0BC;
-    --brand-light: #0F1713;
-    --brand-card: #18241E;
-    --brand-border: #2A3C32;
-    --brand-text: #EAF2ED;
-    --brand-muted: #8EA898;
+    --brand-primary: #A8DDB5;
+    --brand-dark: #3D8B5A;
+    --brand-light: #EAF7ED;
+    --brand-card: #FFFFFF;
+    --brand-border: #A8DDB5;
+    --brand-text: #173B27;
+    --brand-muted: #3D8B5A;
   }
 
   body {
@@ -41,30 +42,21 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C4E2D0;
+  background: #A8DDB5;
   border-radius: 9999px;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: #2D4236;
-}
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #78C99A;
+  background: #3D8B5A;
 }
 
 /* Math formula display box */
 .math-formula-box {
-  background: #F4FAF6;
-  border: 1px solid #D0EADB;
+  background: #FFFFFF;
+  border: 1px solid #A8DDB5;
   border-radius: 8px;
   padding: 1rem 1.25rem;
   font-family: 'JetBrains Mono', monospace;
-}
-
-.dark .math-formula-box {
-  background: #142019;
-  border-color: #2D4236;
 }
 
 /* Hide print elements during print */

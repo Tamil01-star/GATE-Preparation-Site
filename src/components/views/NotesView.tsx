@@ -1,24 +1,14 @@
 import React, { useState } from 'react';
 import {
   FileText,
-  Printer,
-  Bookmark,
-  CheckCircle2,
   ChevronRight,
-  ArrowLeft,
-  ArrowRight,
-  AlertTriangle,
-  Lightbulb,
-  HelpCircle,
-  Clock,
-  Sparkles,
-  Download,
-  FileDown,
-  Paperclip
+  BookOpen,
+  FolderTree,
+  ExternalLink,
+  ChevronDown,
+  AlertTriangle
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { Breadcrumbs } from '../common/Breadcrumbs';
-import { BookmarkButton } from '../common/BookmarkButton';
 
 export const NotesView: React.FC = () => {
   const {
@@ -26,467 +16,239 @@ export const NotesView: React.FC = () => {
     topics,
     units,
     subjects,
+    formulas,
     questions,
-    navigateTo,
-    routeParams
+    routeParams,
+    navigateTo
   } = useApp();
 
-  // Selected subject state: default from routeParams or active note
-  const [selectedSubjectId, setSelectedSubjectId] = useState<string>(
-    routeParams.subjectId || 'subj-math'
-  );
-
-  // Subject notes list
-  const currentSubjectNotes = notes.filter(n => n.subjectId === selectedSubjectId);
-
-  // Find targeted note
-  let activeNote = notes.find(n => n.id === routeParams.noteId);
-  if (!activeNote && routeParams.topicId) {
-    activeNote = notes.find(n => n.topicId === routeParams.topicId);
-  }
-  if (!activeNote || activeNote.subjectId !== selectedSubjectId) {
-    activeNote = currentSubjectNotes[0] || notes[0];
+  const [expandedUnits, setExpandedUnits] = useState<Record<string, boolean>>({});
+  
+  // Resolve active subject
+  const activeSubjectId = routeParams.subjectId || subjects[0]?.id;
+  
+  // Resolve active topic (or default to first topic of active subject)
+  let activeTopicId = routeParams.topicId;
+  if (!activeTopicId) {
+    const subjUnits = units.filter(u => u.subjectId === activeSubjectId);
+    if (subjUnits.length > 0) {
+      const subjTopics = topics.filter(t => t.unitId === subjUnits[0].id);
+      if (subjTopics.length > 0) activeTopicId = subjTopics[0].id;
+    }
   }
 
-  const topic = topics.find(t => t.id === activeNote?.topicId) || topics[0];
-  const unit = units.find(u => u.id === topic?.unitId) || units[0];
-  const subject = subjects.find(s => s.id === (activeNote?.subjectId || selectedSubjectId)) || subjects[0];
+  const activeTopic = topics.find(t => t.id === activeTopicId);
+  const activeSubject = subjects.find(s => s.id === activeSubjectId);
+  const activeNote = notes.find(n => n.topicId === activeTopicId);
+  const topicFormulas = formulas.filter(f => f.topicId === activeTopicId);
+  const topicQuestions = questions.filter(q => q.topicId === activeTopicId);
 
-  // Filter related questions
-  const relatedQuestions = questions.filter(q => q.topicId === topic?.id);
-
-  // Find next and previous notes
-  const currentIndex = notes.findIndex(n => n.id === activeNote?.id);
-  const prevNote = currentIndex > 0 ? notes[currentIndex - 1] : null;
-  const nextNote = currentIndex < notes.length - 1 ? notes[currentIndex + 1] : null;
-
-  const handlePrint = () => {
-    window.print();
+  const toggleUnit = (unitId: string) => {
+    setExpandedUnits(prev => ({ ...prev, [unitId]: !prev[unitId] }));
   };
 
   return (
-    <div className="space-y-6 max-w-5xl mx-auto">
-      {/* Breadcrumbs */}
-      <Breadcrumbs
-        items={[
-          { label: 'Notes', route: 'notes' },
-          { label: subject.name, route: 'subject-detail', params: { subjectId: subject.id } },
-          { label: unit ? `Unit ${unit.unitNumber}` : 'Textbook Notes' },
-          { label: activeNote.title }
-        ]}
-      />
-
-      {/* Subject Selector Tab Bar */}
-      <div className="bg-surface-light dark:bg-surface-cardDark rounded-2xl p-3 border border-brand-border dark:border-surface-borderDark shadow-academic">
-        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 px-1">
-          Select Subject Notes
+    <div className="flex h-[calc(100vh-4rem)] bg-white overflow-hidden animate-in fade-in duration-300">
+      
+      {/* LEFT PANE: Subject Navigation */}
+      <div className="w-72 flex-shrink-0 border-r border-brand-border bg-brand-light/30 flex flex-col h-full overflow-hidden">
+        {/* Subject Selector */}
+        <div className="p-4 border-b border-brand-border">
+          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 block">
+            Select Subject
+          </label>
+          <select 
+            value={activeSubjectId}
+            onChange={(e) => navigateTo('notes', { subjectId: e.target.value })}
+            className="w-full p-2 text-sm bg-white border border-brand-border rounded-lg outline-none text-brand-text font-bold"
+          >
+            {subjects.map(s => (
+              <option key={s.id} value={s.id}>{s.name}</option>
+            ))}
+          </select>
         </div>
-        <div className="flex items-center gap-2 overflow-x-auto pb-1">
-          {subjects.map(s => {
-            const isSelected = s.id === selectedSubjectId;
+
+        {/* Units and Topics Tree */}
+        <div className="flex-1 overflow-y-auto p-3 space-y-1">
+          {units.filter(u => u.subjectId === activeSubjectId).map(unit => {
+            const unitTopics = topics.filter(t => t.unitId === unit.id);
+            const isExpanded = expandedUnits[unit.id] ?? true;
+            
             return (
-              <button
-                key={s.id}
-                onClick={() => {
-                  setSelectedSubjectId(s.id);
-                  const firstNote = notes.find(n => n.subjectId === s.id);
-                  if (firstNote) {
-                    navigateTo('notes', { subjectId: s.id, noteId: firstNote.id });
-                  }
-                }}
-                className={`flex-shrink-0 px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
-                  isSelected
-                    ? 'bg-brand-dark text-white shadow-sm ring-2 ring-brand-primary'
-                    : 'bg-brand-light dark:bg-surface-dark text-slate-600 dark:text-slate-300 hover:bg-brand-soft border border-brand-border dark:border-surface-borderDark'
-                }`}
-              >
-                <span>{s.name}</span>
-              </button>
+              <div key={unit.id} className="mb-2">
+                <button
+                  onClick={() => toggleUnit(unit.id)}
+                  className="flex items-center justify-between w-full p-2 text-left hover:bg-brand-soft rounded-lg group transition-colors"
+                >
+                  <div className="flex items-center gap-2 overflow-hidden">
+                    <FolderTree size={14} className="text-brand-dark shrink-0" />
+                    <span className="text-xs font-bold text-brand-text truncate">
+                      {unit.title}
+                    </span>
+                  </div>
+                  {isExpanded ? (
+                    <ChevronDown size={14} className="text-slate-400" />
+                  ) : (
+                    <ChevronRight size={14} className="text-slate-400" />
+                  )}
+                </button>
+                
+                {isExpanded && (
+                  <div className="ml-4 pl-3 mt-1 border-l border-brand-border space-y-0.5">
+                    {unitTopics.map(topic => (
+                      <button
+                        key={topic.id}
+                        onClick={() => navigateTo('notes', { subjectId: activeSubjectId, topicId: topic.id })}
+                        className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors truncate ${
+                          activeTopicId === topic.id
+                            ? 'bg-brand-primary/20 text-brand-dark border border-brand-primary/30'
+                            : 'text-slate-500 hover:text-brand-text hover:bg-brand-soft'
+                        }`}
+                      >
+                        {topic.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             );
           })}
         </div>
       </div>
 
-      {/* Subject Master Handbook Download Banner */}
-      {subject.pdfHandbookUrl && (
-        <div className="bg-gradient-to-r from-brand-dark to-brand-hover text-white rounded-2xl p-5 shadow-academic flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="space-y-1">
-            <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-md bg-white/20 text-white text-[10px] font-bold uppercase tracking-wider">
-              {subject.code} Official Master Handbook
-            </div>
-            <h3 className="text-base font-bold">{subject.pdfHandbookTitle || `${subject.name} Complete Handbook`}</h3>
-            <p className="text-xs text-brand-light/90 max-w-2xl">
-              Complete official Physics Wallah handbook ({subject.pdfHandbookPages} pages) with full mathematical derivations, circuit schematics, and solved examples.
-            </p>
-          </div>
-          <a
-            href={subject.pdfHandbookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white text-brand-dark font-bold text-xs shadow hover:bg-brand-light transition-colors whitespace-nowrap self-start sm:self-auto"
-          >
-            <Download size={14} />
-            <span>Download Master PDF</span>
-          </a>
-        </div>
-      )}
-
-      {/* Action Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-brand-border dark:border-surface-borderDark no-print">
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => navigateTo('syllabus')}
-            className="p-2 rounded-lg bg-brand-light dark:bg-surface-cardDark text-brand-dark dark:text-brand-primary hover:bg-brand-soft transition-colors"
-            title="Return to Syllabus"
-          >
-            <ArrowLeft size={16} />
-          </button>
-          <div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              GATE Digital Textbook Note
-            </span>
-            <div className="text-xs text-slate-400">Section Reference & Comprehensive Derivations</div>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <BookmarkButton
-            type="note"
-            refId={activeNote.id}
-            title={activeNote.title}
-            subtitle={`${subject.name} â†’ ${topic.title}`}
-            showText={true}
-          />
-
-          <button
-            onClick={handlePrint}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-light dark:bg-surface-cardDark text-slate-600 dark:text-slate-300 hover:bg-brand-soft transition-colors text-xs font-semibold"
-            title="Print or Save as PDF"
-          >
-            <Printer size={15} />
-            <span>Print Notes</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Main Textbook Document Container */}
-      <article className="bg-surface-light dark:bg-surface-cardDark rounded-3xl p-6 sm:p-10 border border-brand-border dark:border-surface-borderDark shadow-academic space-y-10">
-        {/* Title Header */}
-        <div className="space-y-3 pb-8 border-b border-brand-soft dark:border-surface-borderDark">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs font-mono font-bold px-2.5 py-1 rounded bg-brand-soft dark:bg-brand-dark/30 text-brand-dark dark:text-brand-primary">
-              {subject.code}
-            </span>
-            <span className="text-xs font-semibold text-slate-500">
-              {subject.name} &bull; Unit {unit.unitNumber}: {unit.title}
-            </span>
-            <span className="ml-auto text-[11px] text-slate-400">
-              Last updated: {activeNote.lastUpdated}
-            </span>
-          </div>
-
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50 tracking-tight">
-            {activeNote.title}
-          </h1>
-
-          <div className="flex items-center gap-3 text-xs text-slate-500 pt-2">
-            <span>Importance: <strong className="text-brand-dark dark:text-brand-primary">{topic.importance}</strong></span>
-            <span>&bull;</span>
-            <span>Subtopics: <strong>{topic.subtopics.length}</strong></span>
-          </div>
-        </div>
-
-        {/* Section 1: Topic Introduction */}
-        <section className="space-y-3">
-          <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-            <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">1</span>
-            <h2>Topic Introduction</h2>
-          </div>
-          <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed bg-brand-light/60 dark:bg-surface-dark p-5 rounded-2xl border border-brand-border dark:border-surface-borderDark">
-            {activeNote.topicIntroduction}
-          </p>
-        </section>
-
-        {/* Section 2: Core Concepts */}
-        <section className="space-y-3">
-          <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-            <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">2</span>
-            <h2>Core Concepts</h2>
-          </div>
-          <div className="space-y-2">
-            {activeNote.coreConcepts.map((concept, idx) => (
-              <div key={idx} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300 p-3 rounded-xl bg-slate-50/70 dark:bg-surface-dark/60 border border-slate-100 dark:border-surface-borderDark">
-                <span className="w-2 h-2 rounded-full bg-brand-primary mt-2 flex-shrink-0" />
-                <span className="leading-relaxed">{concept}</span>
+      {/* RIGHT PANE: Content Viewer */}
+      <div className="flex-1 h-full overflow-y-auto bg-white p-6 md:p-10 scroll-smooth">
+        {activeTopic ? (
+          <div className="max-w-4xl mx-auto space-y-10 pb-20">
+            
+            {/* Header */}
+            <div>
+              <div className="flex items-center gap-2 text-xs font-bold text-brand-dark uppercase tracking-wider mb-3">
+                <span>{activeSubject?.name}</span>
+                <ChevronRight size={12} />
+                <span>{activeTopic.title}</span>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Section 3: Important Definitions */}
-        {activeNote.importantDefinitions.length > 0 && (
-          <section className="space-y-3">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">3</span>
-              <h2>Important Definitions</h2>
+              <h1 className="text-3xl font-black text-brand-text">
+                {activeTopic.title}
+              </h1>
+              {activeTopic.overview && (
+                <p className="text-slate-500 mt-3 text-sm leading-relaxed">
+                  {activeTopic.overview}
+                </p>
+              )}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {activeNote.importantDefinitions.map((def, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-brand-light/40 dark:bg-surface-dark border border-brand-soft dark:border-surface-borderDark">
-                  <div className="text-xs font-bold text-brand-dark dark:text-brand-primary">{def.term}</div>
-                  <div className="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">{def.definition}</div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
 
-        {/* Section 4: Detailed Explanation */}
-        <section className="space-y-3">
-          <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-            <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">4</span>
-            <h2>Detailed Explanation & Analysis</h2>
-          </div>
-          <div className="space-y-4 text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-normal">
-            {activeNote.detailedExplanation.map((para, idx) => (
-              <div key={idx} className="p-5 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-surface-borderDark whitespace-pre-line leading-loose">
-                {para}
-              </div>
-            ))}
-          </div>
-        </section>
+            {/* Note Content Section */}
+            {activeNote ? (
+              <div className="space-y-8">
+                
+                {/* 1. Theory & Notes */}
+                <section>
+                  <h2 className="text-xl font-bold text-brand-text flex items-center gap-2 mb-4 pb-2 border-b border-brand-border">
+                    <FileText size={20} className="text-brand-dark" />
+                    Structured Notes
+                  </h2>
+                  <div className="prose prose-sm prose-slate max-w-none text-slate-600">
+                    <p className="font-semibold text-brand-text mb-4">{activeNote.topicIntroduction}</p>
+                    
+                    <h4 className="font-bold text-brand-text mt-6 mb-2">Core Concepts</h4>
+                    <ul className="list-disc pl-5 space-y-2">
+                      {activeNote.coreConcepts.map((c, i) => <li key={i}>{c}</li>)}
+                    </ul>
 
-        {/* Section 5: Important Formulas */}
-        {activeNote.importantFormulas.length > 0 && (
-          <section className="space-y-3">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">5</span>
-              <h2>Important Formulas & Governing Laws</h2>
-            </div>
-            <div className="space-y-3">
-              {activeNote.importantFormulas.map((f, idx) => (
-                <div key={idx} className="math-formula-box">
-                  <div className="text-xs font-bold text-brand-dark dark:text-brand-primary mb-1">
-                    {f.name}
+                    {activeNote.detailedExplanation.map((exp, i) => (
+                      <div key={i} className="mt-6 whitespace-pre-wrap">{exp}</div>
+                    ))}
                   </div>
-                  <div className="text-base font-mono font-semibold text-slate-900 dark:text-slate-50 py-1">
-                    {f.formula}
-                  </div>
-                  <div className="text-xs text-slate-500 mt-1">
-                    {f.explanation}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
+                </section>
 
-        {/* Section 6: Important Diagrams */}
-        {activeNote.importantDiagrams.length > 0 && (
-          <section className="space-y-3">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">6</span>
-              <h2>Important Architectural Diagrams</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {activeNote.importantDiagrams.map((diag, idx) => (
-                <div key={idx} className="p-5 rounded-2xl bg-brand-light/50 dark:bg-surface-dark border border-brand-border dark:border-surface-borderDark text-center">
-                  <div className="text-xs font-bold text-slate-800 dark:text-slate-100 mb-2">{diag.title}</div>
-                  {/* Clean SVG schematic representation */}
-                  <div className="h-36 bg-white dark:bg-surface-cardDark rounded-xl border border-brand-soft dark:border-surface-borderDark flex items-center justify-center p-4">
-                    <div className="w-full max-w-xs text-left p-3 rounded-lg bg-brand-soft/30 border border-brand-primary/30 font-mono text-[11px] text-brand-dark dark:text-brand-accent">
-                      <div className="font-bold border-b border-brand-primary/20 pb-1">Master Stage [CLK=1] &rarr; Slave Stage [CLK=0]</div>
-                      <div className="text-[10px] text-slate-500 mt-1">Inputs: J, K, CLK &rarr; Outputs: Q, Q_bar</div>
-                      <div className="text-[9px] text-emerald-600 mt-0.5">&bull; Zero race condition &bull; Isolated feedback</div>
+                {/* 2. Formulae */}
+                {topicFormulas.length > 0 && (
+                  <section>
+                    <h2 className="text-xl font-bold text-brand-text flex items-center gap-2 mb-4 pb-2 border-b border-brand-border">
+                      <BookOpen size={20} className="text-brand-dark" />
+                      Important Formulae
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {topicFormulas.map(f => (
+                        <div key={f.id} className="math-formula-box shadow-sm">
+                          <div className="text-xs font-bold text-slate-500 mb-2 uppercase">{f.formulaName}</div>
+                          <div className="text-lg font-black text-brand-dark my-2 tracking-wider">{f.latex}</div>
+                          <div className="text-[11px] text-slate-500 mt-2">{f.whenToUse}</div>
+                        </div>
+                      ))}
                     </div>
-                  </div>
-                  <p className="text-[11px] text-slate-500 mt-2 italic">{diag.caption}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
+                  </section>
+                )}
 
-        {/* Section 7: Shortcuts & Tricks */}
-        {activeNote.shortcutsAndTricks.length > 0 && (
-          <section className="space-y-3">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">7</span>
-              <h2>Shortcuts / Tricks (Time Savers)</h2>
-            </div>
-            <div className="space-y-2">
-              {activeNote.shortcutsAndTricks.map((trick, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3.5 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200/50 dark:border-emerald-900/30 text-xs text-slate-700 dark:text-slate-300">
-                  <Lightbulb size={16} className="text-emerald-600 dark:text-emerald-400 mt-0.5 flex-shrink-0" />
-                  <span className="leading-relaxed">{trick}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
+                {/* 3. Important Points / Tricks */}
+                {activeNote.shortcutsAndTricks.length > 0 && (
+                  <section>
+                    <h2 className="text-xl font-bold text-brand-text flex items-center gap-2 mb-4 pb-2 border-b border-brand-border">
+                      <AlertTriangle size={20} className="text-brand-dark" />
+                      Important Points & Shortcuts
+                    </h2>
+                    <div className="bg-brand-light border border-brand-border rounded-xl p-5 space-y-3">
+                      {activeNote.shortcutsAndTricks.map((trick, i) => (
+                        <div key={i} className="text-sm font-semibold text-brand-text flex items-start gap-2">
+                          <span className="text-brand-primary mt-0.5">•</span>
+                          <span>{trick}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
 
-        {/* Section 8: Common Mistakes */}
-        {activeNote.commonMistakes.length > 0 && (
-          <section className="space-y-3">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">
-              <span className="w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center text-xs">8</span>
-              <h2>Common Mistakes & Exam Traps</h2>
-            </div>
-            <div className="space-y-2">
-              {activeNote.commonMistakes.map((mistake, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3.5 rounded-xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200/50 dark:border-amber-900/30 text-xs text-slate-700 dark:text-slate-300">
-                  <AlertTriangle size={16} className="text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
-                  <span className="leading-relaxed">{mistake}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
+                {/* 4. Related PYQs */}
+                {topicQuestions.length > 0 && (
+                  <section>
+                    <h2 className="text-xl font-bold text-brand-text flex items-center gap-2 mb-4 pb-2 border-b border-brand-border">
+                      <FileText size={20} className="text-brand-dark" />
+                      Related PYQs
+                    </h2>
+                    <div className="space-y-4">
+                      {topicQuestions.map(q => (
+                        <div key={q.id} className="border border-brand-border rounded-xl p-5 bg-white hover:border-brand-primary transition-colors cursor-pointer" onClick={() => navigateTo('question-detail', { questionId: q.id })}>
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="text-xs font-bold text-brand-dark bg-brand-light px-2 py-1 rounded">
+                              {q.sourcePaper}
+                            </span>
+                            <span className="text-xs text-slate-400 font-semibold">{q.type} - {q.marks} Mark</span>
+                          </div>
+                          <p className="text-sm font-semibold text-slate-700">{q.questionText}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
 
-        {/* Section 9: GATE-Level Points */}
-        {activeNote.gateLevelPoints.length > 0 && (
-          <section className="space-y-3">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">9</span>
-              <h2>GATE-Level High-Yield Points</h2>
-            </div>
-            <div className="space-y-2">
-              {activeNote.gateLevelPoints.map((pt, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-brand-light dark:bg-surface-dark border border-brand-border dark:border-surface-borderDark text-xs text-slate-700 dark:text-slate-300">
-                  <Sparkles size={15} className="text-brand-dark dark:text-brand-primary mt-0.5 flex-shrink-0" />
-                  <span>{pt}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Section 10: Related PYQs */}
-        <section className="space-y-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">10</span>
-              <h2>Related Previous Year Questions</h2>
-            </div>
-            <button
-              onClick={() => navigateTo('question-bank', { topicId: topic.id })}
-              className="text-xs font-semibold text-brand-dark dark:text-brand-primary hover:underline"
-            >
-              Solve in Question Bank &rarr;
-            </button>
-          </div>
-
-          <div className="space-y-2">
-            {relatedQuestions.slice(0, 3).map(q => (
-              <div
-                key={q.id}
-                onClick={() => navigateTo('question-detail', { questionId: q.id })}
-                className="p-3.5 rounded-xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-surface-borderDark hover:border-brand-primary cursor-pointer transition-all flex items-center justify-between text-xs"
-              >
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="font-bold text-brand-dark dark:text-brand-primary">{q.sourcePaper}</span>
-                    <span className="text-slate-400">&bull;</span>
-                    <span className="font-mono text-slate-500">Q{q.questionNumber} ({q.type}, {q.marks}M)</span>
-                  </div>
-                  <div className="text-slate-700 dark:text-slate-300 font-medium mt-1 line-clamp-1">{q.questionText}</div>
-                </div>
-                <ChevronRight size={16} className="text-slate-400 flex-shrink-0" />
+                {/* 5. Original Document Link */}
+                {activeNote.uploadedFiles && activeNote.uploadedFiles.length > 0 && (
+                  <section className="pt-6">
+                    <a 
+                      href={activeNote.uploadedFiles[0].fileUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-3 bg-brand-dark hover:bg-brand-hover text-white rounded-xl font-bold text-sm transition-colors shadow-md shadow-brand-primary/20"
+                    >
+                      <ExternalLink size={16} />
+                      View Original Subject Document
+                    </a>
+                  </section>
+                )}
+                
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Section 11: Practice Questions */}
-        <section className="space-y-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-              <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">11</span>
-              <h2>Practice Questions</h2>
-            </div>
-            <button
-              onClick={() => navigateTo('practice', { topicId: topic.id, subjectId: subject.id })}
-              className="text-xs font-semibold text-brand-dark dark:text-brand-primary hover:underline"
-            >
-              Start Timed Practice Test &rarr;
-            </button>
-          </div>
-          <div className="p-4 rounded-xl bg-brand-light dark:bg-surface-dark border border-brand-border dark:border-surface-borderDark text-xs text-slate-600 dark:text-slate-300 flex items-center justify-between">
-            <span>Timed interactive practice mode is available for this topic with real-time scoring and solutions.</span>
-            <button
-              onClick={() => navigateTo('practice', { topicId: topic.id, subjectId: subject.id })}
-              className="px-3 py-1.5 rounded-lg bg-brand-dark text-white font-semibold hover:bg-brand-hover transition-colors whitespace-nowrap"
-            >
-              Launch Practice
-            </button>
-          </div>
-        </section>
-
-        {/* Section 12: Quick Revision Summary */}
-        <section className="space-y-3">
-          <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-dark dark:text-brand-primary">
-            <span className="w-6 h-6 rounded-full bg-brand-soft dark:bg-brand-dark/30 flex items-center justify-center text-xs">12</span>
-            <h2>Quick Revision Summary (Flashcard View)</h2>
-          </div>
-          <div className="p-5 rounded-2xl bg-brand-soft/60 dark:bg-brand-dark/20 border border-brand-primary/30 space-y-2">
-            {activeNote.quickRevisionSummary.map((sum, idx) => (
-              <div key={idx} className="flex items-start gap-2.5 text-xs text-brand-dark dark:text-slate-200">
-                <span className="font-bold">&bull;</span>
-                <span className="leading-relaxed">{sum}</span>
+            ) : (
+              <div className="text-center py-20 bg-brand-light rounded-2xl border border-dashed border-brand-primary">
+                <p className="text-brand-dark font-semibold">No structured notes found for this topic yet.</p>
               </div>
-            ))}
+            )}
+            
           </div>
-        </section>
-
-        {/* Attached / Uploaded Note Files (Section 8) */}
-        {activeNote.uploadedFiles && activeNote.uploadedFiles.length > 0 && (
-          <section className="space-y-3 pt-4 border-t border-brand-soft dark:border-surface-borderDark">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500">
-              <Paperclip size={14} />
-              <span>Attached Document Files & Notes</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {activeNote.uploadedFiles.map(file => (
-                <div key={file.id} className="p-3 rounded-xl bg-white dark:bg-surface-dark border border-brand-border dark:border-surface-borderDark flex items-center justify-between text-xs">
-                  <div>
-                    <div className="font-semibold text-slate-800 dark:text-slate-200">{file.title}</div>
-                    <div className="text-[10px] text-slate-400 mt-0.5">{file.fileName} &bull; {file.size} &bull; {file.fileType}</div>
-                  </div>
-                  <a
-                    href={file.fileUrl || '#'}
-                    download
-                    className="p-1.5 rounded-lg bg-brand-soft text-brand-dark hover:bg-brand-primary/30 transition-colors"
-                    title="Download Note File"
-                  >
-                    <Download size={14} />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-      </article>
-
-      {/* Bottom Prev / Next Navigation */}
-      <div className="flex items-center justify-between pt-4 border-t border-brand-border dark:border-surface-borderDark no-print">
-        {prevNote ? (
-          <button
-            onClick={() => navigateTo('notes', { noteId: prevNote.id, topicId: prevNote.topicId })}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-surface-cardDark border border-brand-border dark:border-surface-borderDark text-xs font-medium text-slate-700 dark:text-slate-200 hover:border-brand-primary transition-colors"
-          >
-            <ArrowLeft size={14} />
-            <span>Prev: {prevNote.title.split(' ')[0]} {prevNote.title.split(' ')[1] || ''}</span>
-          </button>
-        ) : <div />}
-
-        {nextNote && (
-          <button
-            onClick={() => navigateTo('notes', { noteId: nextNote.id, topicId: nextNote.topicId })}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white dark:bg-surface-cardDark border border-brand-border dark:border-surface-borderDark text-xs font-medium text-slate-700 dark:text-slate-200 hover:border-brand-primary transition-colors"
-          >
-            <span>Next: {nextNote.title.split(' ')[0]} {nextNote.title.split(' ')[1] || ''}</span>
-            <ArrowRight size={14} />
-          </button>
+        ) : (
+          <div className="flex h-full items-center justify-center text-slate-400">
+            Select a topic from the sidebar to view notes.
+          </div>
         )}
       </div>
     </div>

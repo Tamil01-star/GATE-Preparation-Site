@@ -9,20 +9,32 @@ export default {
     extend: {
       colors: {
         brand: {
-          light: '#F1FBF5',
-          primary: '#78C99A',
-          dark: '#26734D',
-          hover: '#1e5c3e',
-          accent: '#A3E0BC',
-          soft: '#E4F6EB',
+          light: '#EAF7ED',    
+          primary: '#A8DDB5',  
+          dark: '#3D8B5A',     
+          hover: '#2a6340',
+          text: '#173B27',     
+          soft: '#EAF7ED',
         },
         surface: {
           light: '#FFFFFF',
-          dark: '#141E18',
+          dark: '#FFFFFF',     
           card: '#FFFFFF',
-          cardDark: '#1A2920',
-          border: '#E2ECE6',
-          borderDark: '#283B30'
+          cardDark: '#FFFFFF',
+          border: '#A8DDB5',
+          borderDark: '#A8DDB5'
+        },
+        slate: {
+          900: '#173B27',
+          800: '#173B27',
+          700: '#1c4930',
+          600: '#276844',
+          500: '#3D8B5A',
+          400: '#75b58c',
+          300: '#A8DDB5',
+          200: '#c5e8ce',
+          100: '#EAF7ED',
+          50: '#f4fbf5',
         }
       },
       fontFamily: {
@@ -30,8 +42,8 @@ export default {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace']
       },
       boxShadow: {
-        'academic': '0 2px 8px -2px rgba(38, 115, 77, 0.06), 0 4px 16px -4px rgba(38, 115, 77, 0.08)',
-        'academic-hover': '0 4px 12px -2px rgba(38, 115, 77, 0.12), 0 8px 24px -4px rgba(38, 115, 77, 0.1)',
+        'academic': '0 2px 8px -2px rgba(61, 139, 90, 0.08), 0 4px 16px -4px rgba(61, 139, 90, 0.1)',
+        'academic-hover': '0 4px 12px -2px rgba(61, 139, 90, 0.15), 0 8px 24px -4px rgba(61, 139, 90, 0.12)',
       }
     },
   },
