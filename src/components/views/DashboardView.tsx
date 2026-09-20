@@ -17,17 +17,17 @@ export const DashboardView: React.FC = () => {
     <div className="space-y-6 pb-12 animate-in fade-in duration-500">
       
       {/* Title & Subtitle */}
-      <div className="bg-surface-light rounded-3xl p-8 border border-brand-border shadow-academic text-center">
+      <div className="bg-surface-light dark:bg-surface-cardDark rounded-3xl p-8 border border-brand-border dark:border-surface-borderDark shadow-academic text-center">
         <h1 className="text-3xl font-black text-brand-text tracking-tight mb-2">
           GATE Knowledge Library
         </h1>
-        <p className="text-sm font-semibold text-brand-dark uppercase tracking-widest flex items-center justify-center gap-3">
+        <p className="text-sm font-semibold text-brand-dark dark:text-brand-primary uppercase tracking-widest flex items-center justify-center gap-3">
           <span>Notes</span>
-          <span>&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <span>Formulae</span>
-          <span>&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <span>Previous Year Questions</span>
-          <span>&bull;</span>
+          <span className="text-slate-400">&bull;</span>
           <span>Solutions</span>
         </p>
       </div>
@@ -43,22 +43,22 @@ export const DashboardView: React.FC = () => {
           <div
             key={card.id}
             onClick={() => navigateTo(card.id as any)}
-            className="bg-surface-light rounded-2xl p-6 border border-brand-border shadow-academic hover:shadow-academic-hover cursor-pointer transition-all flex flex-col items-center text-center group"
+            className="bg-surface-light dark:bg-surface-cardDark rounded-2xl p-6 border border-brand-border dark:border-surface-borderDark shadow-academic hover:shadow-academic-hover hover:border-brand-primary dark:hover:border-brand-primary cursor-pointer transition-all flex flex-col items-center text-center group"
           >
-            <div className="w-12 h-12 rounded-2xl bg-brand-light text-brand-dark flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-12 h-12 rounded-2xl bg-brand-light dark:bg-surface-dark text-brand-dark dark:text-brand-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <card.icon size={24} />
             </div>
             <h3 className="font-bold text-brand-text mb-1">{card.label}</h3>
-            <p className="text-xs text-slate-500">{card.desc}</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">{card.desc}</p>
           </div>
         ))}
       </div>
 
       {/* Subjects */}
-      <div className="bg-surface-light rounded-2xl p-6 border border-brand-border shadow-academic space-y-4">
-        <div className="flex items-center justify-between pb-3 border-b border-brand-border">
+      <div className="bg-surface-light dark:bg-surface-cardDark rounded-2xl p-6 border border-brand-border dark:border-surface-borderDark shadow-academic space-y-4">
+        <div className="flex items-center justify-between pb-3 border-b border-brand-border dark:border-surface-borderDark">
           <h2 className="text-sm font-bold uppercase tracking-wider text-brand-text flex items-center gap-2">
-            <BookOpen size={16} className="text-brand-dark" />
+            <BookOpen size={16} className="text-brand-dark dark:text-brand-primary" />
             <span>Subjects</span>
           </h2>
         </div>
@@ -67,28 +67,28 @@ export const DashboardView: React.FC = () => {
           {subjects.map(subject => (
             <div
               key={subject.id}
-              className="bg-white rounded-xl p-4 border border-brand-border hover:border-brand-dark transition-colors flex flex-col h-full"
+              className="bg-white dark:bg-surface-dark rounded-xl p-4 border border-brand-border dark:border-surface-borderDark hover:border-brand-dark dark:hover:border-brand-primary transition-colors flex flex-col h-full"
             >
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-bold px-2 py-1 bg-brand-light text-brand-dark rounded-md border border-brand-border">
+                  <span className="text-[10px] font-bold px-2 py-1 bg-brand-light dark:bg-brand-dark/20 text-brand-dark dark:text-brand-primary rounded-md border border-brand-border dark:border-surface-borderDark">
                     {subject.code}
                   </span>
                 </div>
                 <h3 className="text-sm font-bold text-brand-text mb-1">{subject.name}</h3>
-                <p className="text-xs text-slate-500 line-clamp-2">{subject.description}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">{subject.description}</p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-brand-border grid grid-cols-2 gap-2 text-[11px] font-semibold">
+              <div className="mt-4 pt-3 border-t border-brand-border dark:border-surface-borderDark grid grid-cols-2 gap-2 text-[11px] font-semibold">
                 <button
                   onClick={() => navigateTo('notes', { subjectId: subject.id })}
-                  className="py-1.5 px-2 rounded-lg bg-brand-light hover:bg-brand-primary text-brand-dark transition-colors flex items-center justify-center gap-1"
+                  className="py-1.5 px-2 rounded-lg bg-brand-light dark:bg-surface-cardDark hover:bg-brand-primary dark:hover:bg-brand-primary/20 text-brand-dark dark:text-brand-primary transition-colors flex items-center justify-center gap-1 border border-transparent dark:border-surface-borderDark"
                 >
                   <FileText size={12} /> Notes
                 </button>
                 <button
                   onClick={() => navigateTo('formulas', { subjectId: subject.id })}
-                  className="py-1.5 px-2 rounded-lg bg-brand-light hover:bg-brand-primary text-brand-dark transition-colors flex items-center justify-center gap-1"
+                  className="py-1.5 px-2 rounded-lg bg-brand-light dark:bg-surface-cardDark hover:bg-brand-primary dark:hover:bg-brand-primary/20 text-brand-dark dark:text-brand-primary transition-colors flex items-center justify-center gap-1 border border-transparent dark:border-surface-borderDark"
                 >
                   <FileSpreadsheet size={12} /> Formulae
                 </button>
@@ -99,15 +99,15 @@ export const DashboardView: React.FC = () => {
       </div>
 
       {/* Previous Year Papers */}
-      <div className="bg-surface-light rounded-2xl p-6 border border-brand-border shadow-academic space-y-4">
-        <div className="flex items-center justify-between pb-3 border-b border-brand-border">
+      <div className="bg-surface-light dark:bg-surface-cardDark rounded-2xl p-6 border border-brand-border dark:border-surface-borderDark shadow-academic space-y-4">
+        <div className="flex items-center justify-between pb-3 border-b border-brand-border dark:border-surface-borderDark">
           <h2 className="text-sm font-bold uppercase tracking-wider text-brand-text flex items-center gap-2">
-            <Clock size={16} className="text-brand-dark" />
+            <Clock size={16} className="text-brand-dark dark:text-brand-primary" />
             <span>Previous Year Papers</span>
           </h2>
           <button
             onClick={() => navigateTo('pyq')}
-            className="text-xs font-semibold text-brand-dark hover:underline flex items-center gap-1"
+            className="text-xs font-semibold text-brand-dark dark:text-brand-primary hover:underline flex items-center gap-1"
           >
             <span>View All Papers</span>
             <ChevronRight size={14} />
@@ -119,9 +119,9 @@ export const DashboardView: React.FC = () => {
             <div
               key={p.id}
               onClick={() => navigateTo('pyq-paper', { paperYear: p.year })}
-              className="p-3 rounded-xl bg-brand-light border border-brand-border hover:border-brand-dark hover:bg-brand-primary/20 cursor-pointer transition-all text-center group"
+              className="p-3 rounded-xl bg-brand-light dark:bg-surface-dark border border-brand-border dark:border-surface-borderDark hover:border-brand-dark dark:hover:border-brand-primary hover:bg-brand-primary/20 dark:hover:bg-brand-dark/30 cursor-pointer transition-all text-center group"
             >
-              <div className="text-sm font-bold text-brand-text">
+              <div className="text-sm font-bold text-brand-text group-hover:text-brand-dark dark:group-hover:text-brand-primary">
                 {p.year}
               </div>
             </div>
