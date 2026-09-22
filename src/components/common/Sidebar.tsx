@@ -45,12 +45,12 @@ export const Sidebar: React.FC = () => {
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed top-0 left-0 bottom-0 w-64 bg-surface-light dark:bg-surface-dark border-r border-brand-border dark:border-surface-borderDark z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${
+        className={`fixed top-0 left-0 bottom-0 w-64 bg-surface-light dark:bg-surface-dark dark:bg-surface-dark border-r border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark z-50 flex flex-col transition-transform duration-300 ease-in-out md:translate-x-0 ${
           isMobileNavOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
         }`}
       >
         {/* Brand Header */}
-        <div className="h-16 flex items-center justify-between px-5 border-b border-brand-border dark:border-surface-borderDark bg-brand-light/30 dark:bg-brand-dark/10">
+        <div className="h-16 flex items-center justify-between px-5 border-b border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark bg-brand-light/50 dark:bg-surface-dark/30 dark:bg-brand-dark/10">
           <button
             onClick={() => navigateTo('dashboard')}
             className="flex items-center gap-2.5 text-left group w-full"
@@ -59,7 +59,7 @@ export const Sidebar: React.FC = () => {
               G
             </div>
             <div className="overflow-hidden">
-              <div className="text-xs font-bold tracking-tight text-brand-dark dark:text-brand-primary flex items-center gap-1.5 truncate">
+              <div className="text-xs font-bold tracking-tight text-brand-dark dark:text-brand-primary dark:text-brand-primary flex items-center gap-1.5 truncate">
                 GATE KNOWLEDGE LIBRARY
               </div>
             </div>
@@ -74,7 +74,7 @@ export const Sidebar: React.FC = () => {
         </div>
 
         {/* Navigation Items */}
-        <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1 bg-white dark:bg-surface-dark">
+        <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1 bg-white dark:bg-surface-cardDark dark:bg-surface-dark">
           <div className="px-3 pb-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">
             Navigation Menu
           </div>
@@ -93,14 +93,14 @@ export const Sidebar: React.FC = () => {
                 onClick={() => navigateTo(item.id)}
                 className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                   isActive
-                    ? 'bg-brand-soft text-brand-dark border-l-4 border-brand-dark shadow-sm dark:bg-brand-dark/20 dark:text-brand-primary dark:border-brand-primary'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-surface-cardDark hover:text-brand-dark dark:hover:text-brand-primary'
+                    ? 'bg-brand-soft text-brand-dark dark:text-brand-primary border-l-4 border-brand-dark shadow-sm dark:bg-brand-dark/20 dark:text-brand-primary dark:border-brand-primary'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-surface-cardDark hover:text-brand-dark dark:text-brand-primary dark:hover:text-brand-primary'
                 }`}
               >
                 <div className="flex items-center gap-3">
                   <Icon
                     size={16}
-                    className={isActive ? 'text-brand-dark dark:text-brand-primary' : 'text-slate-400 group-hover:text-brand-dark dark:group-hover:text-brand-primary'}
+                    className={isActive ? 'text-brand-dark dark:text-brand-primary dark:text-brand-primary' : 'text-slate-400 group-hover:text-brand-dark dark:text-brand-primary dark:group-hover:text-brand-primary'}
                   />
                   <span>{item.label}</span>
                 </div>
@@ -110,16 +110,16 @@ export const Sidebar: React.FC = () => {
         </nav>
         
         {/* Settings at bottom */}
-        <div className="p-3 border-t border-brand-border dark:border-surface-borderDark bg-white dark:bg-surface-dark">
+        <div className="p-3 border-t border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark bg-white dark:bg-surface-cardDark dark:bg-surface-dark">
              <button
                 onClick={() => navigateTo('admin')}
                 className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                   currentRoute === 'admin'
-                    ? 'bg-brand-soft text-brand-dark border-l-4 border-brand-dark shadow-sm dark:bg-brand-dark/20 dark:text-brand-primary dark:border-brand-primary'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-surface-cardDark hover:text-brand-dark dark:hover:text-brand-primary'
+                    ? 'bg-brand-soft text-brand-dark dark:text-brand-primary border-l-4 border-brand-dark shadow-sm dark:bg-brand-dark/20 dark:text-brand-primary dark:border-brand-primary'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-surface-cardDark hover:text-brand-dark dark:text-brand-primary dark:hover:text-brand-primary'
                 }`}
               >
-                <Settings size={16} className={currentRoute === 'admin' ? 'text-brand-dark dark:text-brand-primary' : 'text-slate-400'} />
+                <Settings size={16} className={currentRoute === 'admin' ? 'text-brand-dark dark:text-brand-primary dark:text-brand-primary' : 'text-slate-400'} />
                 <span>Uploads & Settings</span>
              </button>
         </div>

@@ -120,16 +120,16 @@ export const GlobalSearchModal: React.FC = () => {
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-start justify-center p-4 pt-[10vh]">
-      <div className="w-full max-w-2xl bg-surface-light dark:bg-surface-cardDark rounded-2xl shadow-2xl border border-brand-border dark:border-surface-borderDark overflow-hidden flex flex-col max-h-[80vh] animate-in slide-in-from-top-4 duration-200">
-        <div className="p-4 border-b border-brand-border dark:border-surface-borderDark flex items-center gap-3 bg-brand-light/30 dark:bg-surface-dark/50">
-          <Search size={20} className="text-brand-dark dark:text-brand-primary" />
+      <div className="w-full max-w-2xl bg-surface-light dark:bg-surface-cardDark rounded-2xl shadow-2xl border border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark overflow-hidden flex flex-col max-h-[80vh] animate-in slide-in-from-top-4 duration-200">
+        <div className="p-4 border-b border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark flex items-center gap-3 bg-brand-light/50 dark:bg-surface-dark/30 dark:bg-surface-dark/50">
+          <Search size={20} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />
           <input
             autoFocus
             type="text"
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search notes, formulas, previous year questions, solutions..."
-            className="flex-1 bg-transparent border-none outline-none text-brand-text font-medium placeholder-slate-400"
+            className="flex-1 bg-transparent border-none outline-none text-slate-800 dark:text-slate-100 font-medium placeholder-slate-400"
           />
           <button
             onClick={() => setSearchModalOpen(false)}
@@ -159,20 +159,20 @@ export const GlobalSearchModal: React.FC = () => {
                 <button
                   key={res.id}
                   onClick={res.action}
-                  className="w-full text-left p-3 rounded-xl hover:bg-brand-light dark:hover:bg-surface-dark border border-transparent hover:border-brand-border dark:hover:border-surface-borderDark transition-all flex items-center justify-between group"
+                  className="w-full text-left p-3 rounded-xl hover:bg-brand-light/50 dark:bg-surface-dark dark:hover:bg-surface-dark border border-transparent hover:border-brand-soft dark:border-surface-borderDark dark:hover:border-surface-borderDark transition-all flex items-center justify-between group"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-white dark:bg-surface-dark border border-brand-border dark:border-surface-borderDark flex items-center justify-center shrink-0">
-                      {res.category === 'Notes' && <FileText size={14} className="text-brand-dark dark:text-brand-primary" />}
-                      {res.category === 'PYQ' && <HelpCircle size={14} className="text-brand-dark dark:text-brand-primary" />}
-                      {res.category === 'Formulae' && <FileSpreadsheet size={14} className="text-brand-dark dark:text-brand-primary" />}
-                      {res.category === 'Topic' && <FolderTree size={14} className="text-brand-dark dark:text-brand-primary" />}
+                    <div className="w-8 h-8 rounded-lg bg-white dark:bg-surface-cardDark dark:bg-surface-dark border border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark flex items-center justify-center shrink-0">
+                      {res.category === 'Notes' && <FileText size={14} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />}
+                      {res.category === 'PYQ' && <HelpCircle size={14} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />}
+                      {res.category === 'Formulae' && <FileSpreadsheet size={14} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />}
+                      {res.category === 'Topic' && <FolderTree size={14} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />}
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-brand-text flex items-center gap-2">
+                      <h4 className="text-sm font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
                         {res.title.split('?').map((part, i, arr) => (
                           <React.Fragment key={i}>
-                            <span className={i === arr.length - 1 ? 'text-brand-dark dark:text-brand-primary' : 'text-slate-500 dark:text-slate-400'}>
+                            <span className={i === arr.length - 1 ? 'text-brand-dark dark:text-brand-primary dark:text-brand-primary' : 'text-slate-500 dark:text-slate-400'}>
                               {part.trim()}
                             </span>
                             {i < arr.length - 1 && <ChevronRight size={12} className="text-slate-300 dark:text-slate-600" />}

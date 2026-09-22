@@ -46,19 +46,19 @@ export const NotesView: React.FC = () => {
   };
 
   return (
-    <div className="flex h-[calc(100vh-4rem)] bg-white dark:bg-surface-dark overflow-hidden animate-in fade-in duration-300">
+    <div className="flex h-[calc(100vh-4rem)] bg-white dark:bg-surface-cardDark dark:bg-surface-dark overflow-hidden animate-in fade-in duration-300">
       
       {/* LEFT PANE: Subject Navigation */}
-      <div className="w-72 flex-shrink-0 border-r border-brand-border dark:border-surface-borderDark bg-brand-light/30 dark:bg-surface-cardDark flex flex-col h-full overflow-hidden">
+      <div className="w-72 flex-shrink-0 border-r border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark bg-brand-light/50 dark:bg-surface-dark/30 dark:bg-surface-cardDark flex flex-col h-full overflow-hidden">
         {/* Subject Selector */}
-        <div className="p-4 border-b border-brand-border dark:border-surface-borderDark">
+        <div className="p-4 border-b border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark">
           <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 block">
             Select Subject
           </label>
           <select 
             value={activeSubjectId}
             onChange={(e) => navigateTo('notes', { subjectId: e.target.value })}
-            className="w-full p-2 text-sm bg-white dark:bg-surface-dark border border-brand-border dark:border-surface-borderDark rounded-lg outline-none text-brand-text font-bold"
+            className="w-full p-2 text-sm bg-white dark:bg-surface-cardDark dark:bg-surface-dark border border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark rounded-lg outline-none text-slate-800 dark:text-slate-100 font-bold"
           >
             {subjects.map(s => (
               <option key={s.id} value={s.id}>{s.name}</option>
@@ -79,8 +79,8 @@ export const NotesView: React.FC = () => {
                   className="flex items-center justify-between w-full p-2 text-left hover:bg-brand-soft dark:hover:bg-brand-dark/20 rounded-lg group transition-colors"
                 >
                   <div className="flex items-center gap-2 overflow-hidden">
-                    <FolderTree size={14} className="text-brand-dark dark:text-brand-primary shrink-0" />
-                    <span className="text-xs font-bold text-brand-text truncate">
+                    <FolderTree size={14} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary shrink-0" />
+                    <span className="text-xs font-bold text-slate-800 dark:text-slate-100 truncate">
                       {unit.title}
                     </span>
                   </div>
@@ -92,15 +92,15 @@ export const NotesView: React.FC = () => {
                 </button>
                 
                 {isExpanded && (
-                  <div className="ml-4 pl-3 mt-1 border-l border-brand-border dark:border-surface-borderDark space-y-0.5">
+                  <div className="ml-4 pl-3 mt-1 border-l border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark space-y-0.5">
                     {unitTopics.map(topic => (
                       <button
                         key={topic.id}
                         onClick={() => navigateTo('notes', { subjectId: activeSubjectId, topicId: topic.id })}
                         className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors truncate ${
                           activeTopicId === topic.id
-                            ? 'bg-brand-primary/20 dark:bg-brand-dark/30 text-brand-dark dark:text-brand-primary border border-brand-primary/30 dark:border-brand-primary/20'
-                            : 'text-slate-500 dark:text-slate-400 hover:text-brand-text hover:bg-brand-soft dark:hover:bg-surface-borderDark'
+                            ? 'bg-brand-primary/20 dark:bg-brand-dark/30 text-brand-dark dark:text-brand-primary dark:text-brand-primary border border-brand-primary/30 dark:border-brand-primary/20'
+                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:text-slate-100 hover:bg-brand-soft dark:hover:bg-surface-borderDark'
                         }`}
                       >
                         {topic.title}
@@ -115,18 +115,18 @@ export const NotesView: React.FC = () => {
       </div>
 
       {/* RIGHT PANE: Content Viewer */}
-      <div className="flex-1 h-full overflow-y-auto bg-white dark:bg-surface-dark p-6 md:p-10 scroll-smooth">
+      <div className="flex-1 h-full overflow-y-auto bg-white dark:bg-surface-cardDark dark:bg-surface-dark p-6 md:p-10 scroll-smooth">
         {activeTopic ? (
           <div className="max-w-4xl mx-auto space-y-10 pb-20">
             
             {/* Header */}
             <div>
-              <div className="flex items-center gap-2 text-xs font-bold text-brand-dark dark:text-brand-primary uppercase tracking-wider mb-3">
+              <div className="flex items-center gap-2 text-xs font-bold text-brand-dark dark:text-brand-primary dark:text-brand-primary uppercase tracking-wider mb-3">
                 <span>{activeSubject?.name}</span>
                 <ChevronRight size={12} />
                 <span>{activeTopic.title}</span>
               </div>
-              <h1 className="text-3xl font-black text-brand-text">
+              <h1 className="text-3xl font-black text-slate-800 dark:text-slate-100">
                 {activeTopic.title}
               </h1>
               {activeTopic.overview && (
@@ -142,14 +142,14 @@ export const NotesView: React.FC = () => {
                 
                 {/* 1. Theory & Notes */}
                 <section>
-                  <h2 className="text-xl font-bold text-brand-text flex items-center gap-2 mb-4 pb-2 border-b border-brand-border dark:border-surface-borderDark">
-                    <FileText size={20} className="text-brand-dark dark:text-brand-primary" />
+                  <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2 mb-4 pb-2 border-b border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark">
+                    <FileText size={20} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />
                     Structured Notes
                   </h2>
                   <div className="prose prose-sm prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-300">
-                    <p className="font-semibold text-brand-text mb-4">{activeNote.topicIntroduction}</p>
+                    <p className="font-semibold text-slate-800 dark:text-slate-100 mb-4">{activeNote.topicIntroduction}</p>
                     
-                    <h4 className="font-bold text-brand-text mt-6 mb-2">Core Concepts</h4>
+                    <h4 className="font-bold text-slate-800 dark:text-slate-100 mt-6 mb-2">Core Concepts</h4>
                     <ul className="list-disc pl-5 space-y-2">
                       {activeNote.coreConcepts.map((c, i) => <li key={i}>{c}</li>)}
                     </ul>
@@ -163,15 +163,15 @@ export const NotesView: React.FC = () => {
                 {/* 2. Formulae */}
                 {topicFormulas.length > 0 && (
                   <section>
-                    <h2 className="text-xl font-bold text-brand-text flex items-center gap-2 mb-4 pb-2 border-b border-brand-border dark:border-surface-borderDark">
-                      <BookOpen size={20} className="text-brand-dark dark:text-brand-primary" />
+                    <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2 mb-4 pb-2 border-b border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark">
+                      <BookOpen size={20} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />
                       Important Formulae
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {topicFormulas.map(f => (
                         <div key={f.id} className="math-formula-box shadow-sm">
                           <div className="text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase">{f.formulaName}</div>
-                          <div className="text-lg font-black text-brand-dark dark:text-brand-primary my-2 tracking-wider">{f.latex}</div>
+                          <div className="text-lg font-black text-brand-dark dark:text-brand-primary dark:text-brand-primary my-2 tracking-wider">{f.latex}</div>
                           <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-2">{f.whenToUse}</div>
                         </div>
                       ))}
@@ -182,13 +182,13 @@ export const NotesView: React.FC = () => {
                 {/* 3. Important Points / Tricks */}
                 {activeNote.shortcutsAndTricks.length > 0 && (
                   <section>
-                    <h2 className="text-xl font-bold text-brand-text flex items-center gap-2 mb-4 pb-2 border-b border-brand-border dark:border-surface-borderDark">
-                      <AlertTriangle size={20} className="text-brand-dark dark:text-brand-primary" />
+                    <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2 mb-4 pb-2 border-b border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark">
+                      <AlertTriangle size={20} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />
                       Important Points & Shortcuts
                     </h2>
-                    <div className="bg-brand-light dark:bg-brand-dark/10 border border-brand-border dark:border-brand-dark/30 rounded-xl p-5 space-y-3">
+                    <div className="bg-brand-light/50 dark:bg-surface-dark dark:bg-brand-dark/10 border border-brand-soft dark:border-surface-borderDark dark:border-brand-dark/30 rounded-xl p-5 space-y-3">
                       {activeNote.shortcutsAndTricks.map((trick, i) => (
-                        <div key={i} className="text-sm font-semibold text-brand-text flex items-start gap-2">
+                        <div key={i} className="text-sm font-semibold text-slate-800 dark:text-slate-100 flex items-start gap-2">
                           <span className="text-brand-primary mt-0.5">•</span>
                           <span>{trick}</span>
                         </div>
@@ -200,15 +200,15 @@ export const NotesView: React.FC = () => {
                 {/* 4. Related PYQs */}
                 {topicQuestions.length > 0 && (
                   <section>
-                    <h2 className="text-xl font-bold text-brand-text flex items-center gap-2 mb-4 pb-2 border-b border-brand-border dark:border-surface-borderDark">
-                      <FileText size={20} className="text-brand-dark dark:text-brand-primary" />
+                    <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2 mb-4 pb-2 border-b border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark">
+                      <FileText size={20} className="text-brand-dark dark:text-brand-primary dark:text-brand-primary" />
                       Related PYQs
                     </h2>
                     <div className="space-y-4">
                       {topicQuestions.map(q => (
-                        <div key={q.id} className="border border-brand-border dark:border-surface-borderDark rounded-xl p-5 bg-white dark:bg-surface-cardDark hover:border-brand-primary dark:hover:border-brand-primary transition-colors cursor-pointer" onClick={() => navigateTo('question-detail', { questionId: q.id })}>
+                        <div key={q.id} className="border border-brand-soft dark:border-surface-borderDark dark:border-surface-borderDark rounded-xl p-5 bg-white dark:bg-surface-cardDark dark:bg-surface-cardDark hover:border-brand-primary dark:hover:border-brand-primary transition-colors cursor-pointer" onClick={() => navigateTo('question-detail', { questionId: q.id })}>
                           <div className="flex items-center justify-between mb-3">
-                            <span className="text-xs font-bold text-brand-dark dark:text-brand-primary bg-brand-light dark:bg-brand-dark/20 px-2 py-1 rounded">
+                            <span className="text-xs font-bold text-brand-dark dark:text-brand-primary dark:text-brand-primary bg-brand-light/50 dark:bg-surface-dark dark:bg-brand-dark/20 px-2 py-1 rounded">
                               {q.sourcePaper}
                             </span>
                             <span className="text-xs text-slate-400 font-semibold">{q.type} - {q.marks} Mark</span>
@@ -227,7 +227,7 @@ export const NotesView: React.FC = () => {
                       href={activeNote.uploadedFiles[0].fileUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-3 bg-brand-dark dark:bg-brand-primary hover:bg-brand-hover dark:hover:bg-brand-primary/90 text-white dark:text-brand-dark rounded-xl font-bold text-sm transition-colors shadow-md shadow-brand-primary/20"
+                      className="inline-flex items-center gap-2 px-5 py-3 bg-brand-dark dark:bg-brand-primary hover:bg-brand-hover dark:hover:bg-brand-primary/90 text-white dark:text-brand-dark dark:text-brand-primary rounded-xl font-bold text-sm transition-colors shadow-md shadow-brand-primary/20"
                     >
                       <ExternalLink size={16} />
                       View Original Subject Document
@@ -237,8 +237,8 @@ export const NotesView: React.FC = () => {
                 
               </div>
             ) : (
-              <div className="text-center py-20 bg-brand-light dark:bg-surface-cardDark rounded-2xl border border-dashed border-brand-primary/50">
-                <p className="text-brand-dark dark:text-brand-primary font-semibold">No structured notes found for this topic yet.</p>
+              <div className="text-center py-20 bg-brand-light/50 dark:bg-surface-dark dark:bg-surface-cardDark rounded-2xl border border-dashed border-brand-primary/50">
+                <p className="text-brand-dark dark:text-brand-primary dark:text-brand-primary font-semibold">No structured notes found for this topic yet.</p>
               </div>
             )}
             
